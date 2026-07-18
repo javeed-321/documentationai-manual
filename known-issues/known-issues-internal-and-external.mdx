@@ -1,0 +1,32 @@
+---
+title: "Known Issues (Internal and External)"
+description: "A combined view of known ARMOR DSPM issues visible to both internal teams and customers."
+---
+
+## Overview
+
+This page lists issues that are known to both internal teams and customers. Each row records the area, the impact, a workaround, and status. Internal-only detail lives on [Known Issues (Internal)](/known-issues/known-issues-internal); the customer-facing view is on [Known Issues (External)](/known-issues/known-issues-external).
+
+<Callout kind="alert">
+  A known issue is a confirmed defect with a planned fix. If a behavior is by design, see [Expected Behaviour](/known-issues/expected-behaviour) instead.
+</Callout>
+
+## Open issues
+
+| ID | Area | Impact | Workaround | Status |
+|----|------|--------|-----------|--------|
+| KI-101 | Warehouse connector | Column sampling can miss very wide tables | Reduce sample scope per scan | In progress |
+| KI-102 | Dashboard | Risk tier counts lag by up to five minutes | Refresh the view | Investigating |
+| KI-108 | Classification | Scanned image PDFs are not yet OCR classified | Provide a text layer | Planned |
+
+## Severity key
+
+| Severity | Meaning | Target |
+|----------|---------|--------|
+| High | Blocks a core workflow | Fix in the current cycle |
+| Medium | Degrades experience | Fix in an upcoming release |
+| Low | Minor or cosmetic | Scheduled opportunistically |
+
+<Callout kind="info">
+  Fixed issues move to the release notes in [What's New](/whats-new/todo). Check there to confirm whether an issue you hit has already shipped a fix.
+</Callout>

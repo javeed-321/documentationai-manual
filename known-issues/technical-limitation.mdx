@@ -1,0 +1,37 @@
+---
+title: "Technical Limitation"
+description: "Current hard boundaries of ARMOR DSPM that are by design rather than defects."
+---
+
+## Overview
+
+A technical limitation is a boundary of the platform as it exists today. Unlike a [known issue](/known-issues/known-issues-external), a limitation is not a defect and does not have a bug fix; it may be lifted by a future capability instead.
+
+<Callout kind="alert">
+  Plan around these boundaries. Treating a limitation as a bug leads to tickets that cannot be resolved as filed.
+</Callout>
+
+## Current limitations
+
+| Area | Limitation | Notes |
+|------|-----------|-------|
+| Scale | 5,000,000 assets per connector per day | Split very large sources across connectors |
+| Formats | No OCR for image-only files | A text layer is required for classification |
+| Residency | Tenant region is fixed after provisioning | Changing region requires a migration |
+| API | 600 classify requests per minute per tenant | Bursts receive a `429` with `Retry-After` |
+
+## Working within the limits
+
+<ExpandableGroup>
+  <Expandable title="Scaling beyond one connector" default-open="false">
+    Partition sources by bucket, repository, or region and assign each partition its own connector. Findings converge in a single catalog.
+  </Expandable>
+
+  <Expandable title="Handling image-only documents" default-open="false">
+    Run your existing OCR step before ARMOR scans, so the file carries a text layer the inference engine can read.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info">
+  Several limitations are candidates for removal. Watch [Future Capabilities](/future-capabilities/todo) and the [Roadmap](/roadmap/roadmap-april-2026-march-2027).
+</Callout>

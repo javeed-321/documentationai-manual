@@ -1,0 +1,53 @@
+---
+title: "Functional User Guide"
+description: "A day-to-day guide for reviewers working ARMOR DSPM findings and remediation queues."
+---
+
+## Overview
+
+This guide is for the people who work findings every day. It shows how to read the risk dashboard, triage a finding, and record an outcome. No administrator access is required.
+
+<Callout kind="info">
+  You need reviewer access to at least one workspace. If your dashboard is empty, ask an administrator to assign you a workspace.
+</Callout>
+
+## The risk dashboard
+
+<Image src="https://blob-cdn.documentation.ai/org-a44f305a-09d8-4c5e-881d-266f10a97ab9/doc-cf10994c-9d0c-4d1f-9715-964f4486fcf5/1784122756105-m9ju0rhrqua-armor-powered-by-seclore-horizontal-purple.svg?rasterize-bypass=true" width="640" height="120" alt="Placeholder image standing in for the ARMOR DSPM risk dashboard screenshot" />
+
+<Callout kind="tip">
+  The image above is a placeholder for the documentation showcase. Replace it with a real dashboard screenshot before publishing.
+</Callout>
+
+## Triage a finding
+
+<Steps>
+  <Step title="Open the Critical queue" icon="gauge" title-type="h3">
+    Start with the highest tier. Critical means sensitive data is broadly reachable right now.
+  </Step>
+
+  <Step title="Read the finding" icon="file-search" title-type="h3">
+    Check the label, the Sensitivity and Exposure breakdown, and the rationale that explains why the asset was flagged.
+  </Step>
+
+  <Step title="Decide an action" icon="list-checks" title-type="h3">
+    Reduce sharing scope, apply a protection policy, or mark the finding as expected behavior with a note.
+  </Step>
+
+  <Step title="Record the outcome" icon="check" title-type="h3">
+    Log what you did. The finding history feeds your audit trail and reporting.
+  </Step>
+</Steps>
+
+## Triage outcomes
+
+| Outcome | When to use it | Effect |
+|---------|----------------|--------|
+| Remediated | You reduced exposure or applied a control | Finding closes, exposure drops |
+| Accepted risk | Exposure is justified and approved | Finding closes with a documented reason |
+| Expected behavior | The finding is by design | Finding is suppressed for that pattern |
+| Needs help | You cannot resolve it alone | Escalates to an administrator |
+
+<Callout kind="alert">
+  Do not mark a Critical finding as expected behavior without an approver. See the [Expected Behaviour](/known-issues/expected-behaviour) page for the difference between expected behavior and a real exposure.
+</Callout>

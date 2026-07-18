@@ -1,0 +1,42 @@
+---
+title: "What's New"
+description: "Release notes and changelog for ARMOR DSPM."
+---
+
+## Overview
+
+This is the ARMOR DSPM changelog. The most recent releases appear first. For what is coming next, see the [Roadmap](/roadmap/roadmap-april-2026-march-2027).
+
+<Callout kind="info">
+  Dates use `YYYY-MM-DD`. Breaking changes are tagged so you can find them quickly.
+</Callout>
+
+<Update label="2026-07-10" description="v1.3.0" tags={["New Feature"]}>
+  ### Explainable rationale improvements
+
+  - Findings now show a per-dimension breakdown for Content, Context, and Intent
+  - Rationale text is clearer for reviewers working the Critical queue
+  - Minor performance gains on large document repositories
+</Update>
+
+<Update label="2026-06-26" description="v1.2.0" tags={["New Feature"]}>
+  ### General availability
+
+  - Auto-discovery and classification on connection
+  - Sensitivity and Exposure risk tiers in the dashboard
+  - Classification-driven protection policies
+</Update>
+
+<Update label="2026-05-20" description="v1.1.0" tags={["Improvement", "Breaking Change"]}>
+  ### Category alignment API change
+
+  - New alignment rule format with an optional `sensitivity-override`
+  - Breaking: the legacy `category_map` field is removed; migrate to alignment rules
+  - Added the on-change scan mode in preview
+
+  **Migration:** replace `category_map` entries with alignment rules described in [Category and Data Type Alignment](/fundamentals-and-functionality/fundamentals/category-and-data-type-alignment).
+</Update>
+
+<Callout kind="tip">
+  Subscribe your team to release notes so breaking changes never arrive as a surprise.
+</Callout>

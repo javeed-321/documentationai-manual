@@ -1,0 +1,29 @@
+---
+title: "Expected Behaviour"
+description: "Behaviors that are working as designed in ARMOR DSPM, and why they happen."
+---
+
+## Overview
+
+This page explains behaviors that look surprising but are working as designed. If you see one of these, no action is needed beyond understanding why it happens.
+
+<Callout kind="info">
+  Expected behavior is not a defect and not a limitation. It is ARMOR doing exactly what it should.
+</Callout>
+
+## Common expected behaviors
+
+| Behavior | Why it happens |
+|----------|----------------|
+| A low-sensitivity file appears as Critical | High Exposure can outweigh low Sensitivity |
+| The same data type gets different labels | Context weights it differently per workspace |
+| Only some assets re-scan after a change | ARMOR re-evaluates just the affected assets |
+| Rationale text differs between runs | Explanations are generated; labels stay stable |
+
+## Why risk can surprise you
+
+Risk is Sensitivity combined with Exposure, so a broadly shared file can rank above a tightly held one. This is intentional and it is what keeps the Critical queue focused on real exposure. See [Understanding Risk](/fundamentals-and-functionality/fundamentals/understanding-risk-sensitivity-and-exposure).
+
+<Callout kind="tip">
+  Before filing a ticket, check whether the behavior is listed here or on [Technical Limitation](/known-issues/technical-limitation). It saves everyone a round trip.
+</Callout>

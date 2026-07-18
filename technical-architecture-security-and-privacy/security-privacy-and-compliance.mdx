@@ -1,0 +1,51 @@
+---
+title: "Security, Privacy & Compliance"
+description: "How ARMOR DSPM protects data and which security and compliance frameworks it supports."
+---
+
+## Overview
+
+ARMOR DSPM is designed to run in regulated environments. This page summarizes how the platform protects data, how it handles privacy, and which frameworks it aligns to. For general product background see the [Seclore data-centric security platform](https://www.seclore.com/data-security-platform/).
+
+<Callout kind="danger">
+  Never paste real credentials, API keys, or production secrets into support tickets or shared documents. ARMOR classifies secrets, but it cannot un-share one that has already leaked.
+</Callout>
+
+## Data protection
+
+- **In transit:** all connector and API traffic is encrypted with TLS 1.2 or higher.
+- **At rest:** catalog metadata is encrypted with tenant-scoped keys.
+- **Minimization:** connectors send normalized content for inference and retain only the metadata required for classification and risk.
+
+<Callout kind="alert">
+  Data residency is configured at tenant provisioning time and cannot be changed afterward without a migration. Confirm the region before you connect production sources.
+</Callout>
+
+## Compliance frameworks
+
+| Framework | How ARMOR helps |
+|-----------|-----------------|
+| GDPR | Discovers and classifies regulated PII, supports residency controls |
+| HIPAA | Identifies health records and restricts exposure paths |
+| PCI DSS | Detects payment card data and flags broad reachability |
+| SOC 2 | Provides audit-ready evidence of discovery and governance |
+
+## Frequently asked security questions
+
+<ExpandableGroup>
+  <Expandable title="Does ARMOR store my documents?" default-open="true">
+    No. Connectors extract and normalize content for inference. ARMOR retains classification labels, metadata, and risk scores, not full document copies.
+  </Expandable>
+
+  <Expandable title="Who can see classification results?" default-open="false">
+    Access is role based. Reviewers see findings for their assigned workspaces; administrators manage policy and connectors. All access is logged.
+  </Expandable>
+
+  <Expandable title="How is data residency enforced?" default-open="false">
+    Residency is bound to the tenant region and to per data-type rules in category alignment. Regulated PII can be pinned to an approved region.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  With residency configured and connectors deployed, you have an audit-ready record of what sensitive data exists, where it lives, and how exposed it is.
+</Callout>

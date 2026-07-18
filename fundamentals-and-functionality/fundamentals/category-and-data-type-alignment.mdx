@@ -1,0 +1,60 @@
+---
+title: "Category and Data Type Alignment"
+description: "How ARMOR DSPM maps detected data types into business categories that drive policy and risk."
+---
+
+## Overview
+
+A **data type** is what ARMOR detects (a credit card number, a source file, a health record). A **category** is what the business cares about (Financial, Intellectual Property, Regulated PII). Alignment is the mapping between the two. Good alignment means every detected data type rolls up into a category that a policy can act on.
+
+<Callout kind="info">
+  Data types are detection primitives. Categories are business language. Alignment is where the two meet, and it is where most tuning happens.
+</Callout>
+
+## Default alignment
+
+| Data type | Category | Default sensitivity |
+|-----------|----------|---------------------|
+| Payment card number | Financial | High |
+| National ID | Regulated PII | High |
+| Source code with secrets | Intellectual Property | High |
+| Contract draft | Legal | Medium |
+| Internal wiki page | Operational | Low |
+
+## Aligning by workspace
+
+Different parts of the business weigh the same data type differently. Use tabs below to see how alignment shifts by team.
+
+<Tabs>
+  <Tab title="Finance" icon="banknote">
+    Payment and forecast data are Financial with High sensitivity. Exposure to any external identity escalates the tier immediately.
+  </Tab>
+
+  <Tab title="Engineering" icon="code">
+    Source code and credentials are Intellectual Property. Public repository visibility is treated as high Exposure by default.
+  </Tab>
+
+  <Tab title="HR" icon="users">
+    Employee records are Regulated PII. Alignment enforces regional data-type rules so residency is respected.
+  </Tab>
+</Tabs>
+
+## Defining an alignment rule
+
+An alignment rule connects one detected data type to one category with an optional sensitivity override.
+
+<ParamField path="data-type" param-type="string" required="true" deprecated="false">
+  The detected data type to align, for example `payment-card-number` or `source-secret`.
+</ParamField>
+
+<ParamField path="category" param-type="string" required="true" deprecated="false">
+  The business category the data type rolls up into, for example `Financial` or `Intellectual Property`.
+</ParamField>
+
+<ParamField path="sensitivity-override" param-type="string" required="false" deprecated="false">
+  Optional override applied when the workspace context warrants a higher or lower baseline. Accepts `low`, `medium`, or `high`.
+</ParamField>
+
+<Callout kind="tip">
+  Keep the number of categories small. A dozen well-chosen categories are easier to govern than fifty overlapping ones.
+</Callout>

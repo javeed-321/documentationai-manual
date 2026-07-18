@@ -1,0 +1,59 @@
+---
+title: "Architecture"
+description: "Deployment topologies and component-level architecture for ARMOR DSPM."
+---
+
+## Overview
+
+This page describes the ARMOR DSPM component architecture and the topologies teams commonly deploy. Use it alongside the [Technical Briefing](/technical-architecture-security-and-privacy/technical-briefing) for the data flow and API detail.
+
+## Component architecture
+
+```mermaid
+graph TD
+    subgraph Customer environment
+      C1[Connectors]
+    end
+    subgraph ARMOR tenant
+      E1[Inference engine]
+      E2[Catalog]
+      E3[Risk engine]
+      E4[API gateway]
+    end
+    C1 --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> E4
+    E4 --> U[Dashboards, SIEM, ticketing]
+```
+
+## Deployment topologies
+
+<Tabs>
+  <Tab title="Single region" icon="map-pin">
+    Connectors and tenant share one region. Simplest to operate and the default for teams with a single residency requirement.
+  </Tab>
+
+  <Tab title="Multi region" icon="globe">
+    Connectors run in each data region and stream to a residency-appropriate tenant. Used when regulated data must stay in jurisdiction.
+  </Tab>
+
+  <Tab title="Hybrid" icon="server">
+    On-premises connectors reach internal sources while cloud connectors cover SaaS and cloud stores. Findings converge in one catalog.
+  </Tab>
+</Tabs>
+
+## Connector sizing reference
+
+Size a connector by the volume it must scan. The snippet is a starting point, not a guarantee.
+
+```yaml title="connector-sizing.yaml"
+sizing:
+  small:   { assets_per_day: 100000,  vcpus: 2,  memory_gb: 8 }
+  medium:  { assets_per_day: 1000000, vcpus: 4,  memory_gb: 16 }
+  large:   { assets_per_day: 5000000, vcpus: 8,  memory_gb: 32 }
+```
+
+<Callout kind="info">
+  These are illustrative figures for the documentation showcase. Validate sizing against your own repositories during a pilot.
+</Callout>

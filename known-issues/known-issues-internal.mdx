@@ -1,0 +1,36 @@
+---
+title: "Known Issues (Internal)"
+description: "Internal-only known issues for ARMOR DSPM, including diagnosis notes and owners."
+---
+
+## Overview
+
+This page is for internal teams. It includes diagnosis notes, owners, and detail that is not shared with customers. For the public view, see [Known Issues (External)](/known-issues/known-issues-external).
+
+<Callout kind="alert">
+  Internal only. Do not paste rows from this page into customer-facing tickets or documents.
+</Callout>
+
+## Open internal issues
+
+| ID | Area | Owner | Severity | Status |
+|----|------|-------|----------|--------|
+| KI-101 | Warehouse connector | Platform | High | In progress |
+| KI-104 | Inference engine | ML | Medium | Investigating |
+| KI-109 | Billing metering | Backend | Low | Triaged |
+
+## Diagnosis notes
+
+<ExpandableGroup>
+  <Expandable title="KI-101 wide-table sampling" default-open="false">
+    Sampling caps per table can skip columns on very wide warehouse tables. Fix in progress raises the cap and adds adaptive sampling. Track against the warehouse connector milestone.
+  </Expandable>
+
+  <Expandable title="KI-104 rationale variance" default-open="false">
+    Rationale text can vary between runs on borderline assets. Labels are stable; only the generated explanation differs. Investigating a deterministic rationale mode.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">
+  Keep owners and status current. A stale internal known-issues page erodes trust faster than an incomplete one.
+</Callout>

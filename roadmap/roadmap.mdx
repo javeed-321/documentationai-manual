@@ -1,0 +1,55 @@
+---
+title: "Roadmap (April 2026 to March 2027)"
+description: "Planned, in-progress, and shipped ARMOR DSPM capabilities for the April 2026 to March 2027 cycle."
+---
+
+## Overview
+
+This roadmap covers the April 2026 to March 2027 cycle. Items move left to right as they progress. Dates are planning targets and can change; nothing here is a commitment.
+
+<Callout kind="info">
+  Shipped items also appear in [What's New](/whats-new/todo) with release notes. Early ideas live in [Future Capabilities](/future-capabilities/todo).
+</Callout>
+
+## Delivery board
+
+<Board title="ARMOR DSPM roadmap">
+  <BoardColumn title="Planned" color="3" icon="check-circle">
+    <BoardCard title="AI-reachability graph" description="Show which sensitive data is reachable by AI systems" due-date="2026-12-01" />
+    <BoardCard title="Bulk remediation actions" description="Act on a whole risk tier at once" due-date="2027-01-15" />
+    <BoardCard title="Custom category templates" description="Share category taxonomies across tenants" due-date="2027-02-01" />
+  </BoardColumn>
+
+  <BoardColumn title="In Development" color="5" icon="play-circle">
+    <BoardCard title="Warehouse connector" description="Native discovery for cloud data warehouses" due-date="2026-09-30" />
+    <BoardCard title="Explainable rationale v2" description="Richer per-dimension explanations" due-date="2026-10-15" />
+  </BoardColumn>
+
+  <BoardColumn title="Shipped" color="4" icon="rocket">
+    <BoardCard title="On-change scanning" description="Re-scan assets when they change" />
+    <BoardCard title="GCP tenant support" description="Deploy tenants on Google Cloud Platform" />
+  </BoardColumn>
+</Board>
+
+## Recent milestones
+
+<Update label="2026-06-26" description="ARMOR DSPM general availability" tags={["Milestone"]}>
+  ### ARMOR DSPM is generally available
+
+  - Auto-discovery and classification on connection
+  - Sensitivity and Exposure risk model
+  - AWS and GCP tenant support with data-residency controls
+
+  See the [launch announcement](https://www.prnewswire.com/news-releases/seclore-launches-armor-dspm-to-secure-the-data-behind-ai---delivering-value-in-hours-not-months-302797895.html) for background.
+</Update>
+
+<Update label="2026-05-01" description="Preview" tags={["Preview"]}>
+  ### On-change scanning preview
+
+  - Connectors re-scan assets when their content changes
+  - Reduces time to detect newly exposed sensitive data
+</Update>
+
+<Callout kind="tip">
+  Want to influence the roadmap? File a request through the [FAQ Requests Tracker](/faqs/faq-requests-tracker) and it will be triaged with the planning team.
+</Callout>

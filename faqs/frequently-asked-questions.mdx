@@ -1,0 +1,50 @@
+---
+title: Frequently Asked Questions (FAQs)
+description: >-
+  Answers to the most common questions about ARMOR DSPM discovery,
+  classification, risk, and setup.
+---
+## Overview
+
+These are the questions teams ask most often when they start with ARMOR DSPM. If your question is not here, submit it through the [FAQ Requests Tracker](/faqs/faq-requests-tracker).
+
+<Callout kind="tip" collapsed="false">
+  New to ARMOR? Read the [Product Briefing](/fundamentals-and-functionality/functionality/product-briefing) first; many answers below build on it.
+</Callout>
+
+## General
+
+<ExpandableGroup>
+  <Expandable title="How quickly do I see results after connecting a source?" default-open="true">
+    Discovery and classification start automatically after the first successful connection, so the first findings usually appear within hours, not weeks.
+  </Expandable>
+
+  <Expandable title="How is ARMOR different from a traditional DSPM tool?" default-open="false">
+    Traditional tools stop at discovery. ARMOR adds the Semantic Triad and a Sensitivity plus Exposure risk model, so findings are ranked by business impact rather than raw count.
+  </Expandable>
+
+  <Expandable title="Does ARMOR store copies of my documents?" default-open="false">
+    No. Connectors extract and normalize content for inference. ARMOR keeps labels, metadata, and risk scores, not full document copies. See [Security, Privacy & Compliance](/technical-architecture-security-and-privacy/security-privacy-and-compliance).
+  </Expandable>
+</ExpandableGroup>
+
+## Classification and risk
+
+<ExpandableGroup>
+  <Expandable title="What is the Semantic Triad?" default-open="false">
+    It is the combination of Content, Context, and Intent that ARMOR uses to classify an asset. See [AI-Based Document Classification](/fundamentals-and-functionality/fundamentals/ai-based-document-classification).
+  </Expandable>
+
+  <Expandable title="Why is a low-sensitivity file marked Critical?" default-open="false">
+    Risk combines Sensitivity with Exposure. A moderately sensitive file that is broadly reachable can outrank a highly sensitive file that is locked down. See [Understanding Risk](/fundamentals-and-functionality/fundamentals/understanding-risk-sensitivity-and-exposure).
+  </Expandable>
+
+  <Expandable title="Can I correct a wrong classification?" default-open="false">
+    Yes. Adjust category alignment or the confidence threshold, and affected assets are re-scored. Only affected assets are re-evaluated.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false">
+  Still stuck? Check [Known Issues](/known-issues/known-issues-internal-and-external) and [Expected Behaviour](/known-issues/expected-behaviour) before opening a ticket.
+</Callout>
+

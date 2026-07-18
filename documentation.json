@@ -1,154 +1,237 @@
 {
-  "name": "Starter Kit",
+  "name": "ARMOR DSPM Docs",
+  "title": "ARMOR DSPM Documentation Portal",
+  "template": "classic",
+  "initialRoute": "home",
+  "logo-light": "https://blob-cdn.documentation.ai/org-a44f305a-09d8-4c5e-881d-266f10a97ab9/doc-cf10994c-9d0c-4d1f-9715-964f4486fcf5/1784122756105-m9ju0rhrqua-armor-powered-by-seclore-horizontal-purple.svg?rasterize-bypass=true",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-2bf7abec-585f-44a8-a79e-12ad8c6b6311/doc-5326b432-f0ae-4374-bef0-e4b11407b58d/1784208818214-9ijj39v1waa-armor-powered-by-seclore-horizontal-purple-21.png?fm=auto&auto=compress%2Cformat",
+  "logo-small-light": "https://blob-cdn.documentation.ai/org-a44f305a-09d8-4c5e-881d-266f10a97ab9/doc-cf10994c-9d0c-4d1f-9715-964f4486fcf5/1784122696680-gf9b0e56j8v-armor-logo-horizontal-purple.svg?rasterize-bypass=true",
+  "logo-small-dark": "https://blob-cdn.documentation.ai/org-a44f305a-09d8-4c5e-881d-266f10a97ab9/doc-cf10994c-9d0c-4d1f-9715-964f4486fcf5/1784122696680-gf9b0e56j8v-armor-logo-horizontal-purple.svg?rasterize-bypass=true",
+
   "colors": {
     "light": {
-      "brand": "#F97316"
+      "brand": "#4A28C3",
+      "heading": "#1A1524",
+      "text": "#4A4658"
     },
     "dark": {
-      "brand": "#FDBA74"
+      "brand": "#B7A0F5",
+      "heading": "#F5F3FA",
+      "text": "#B9B4C7"
     }
   },
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
-        "icon": "book",
+        "tab": "Home",
+        "icon": "house",
+        "path": "home",
+        "show-sidebar": false,
+        "show-toc": false
+      },
+      {
+        "tab": "Guides",
+        "icon": "book-open",
         "groups": [
           {
-            "group": "Start Here",
-            "icon": "rocket",
+            "group": "Fundamentals and Functionality",
+            "icon": "layers",
+            "expandable": true,
+            "pages": [
+              {
+                "group": "Fundamentals",
+                "icon": "lightbulb",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "AI-Based Document Classification in ARMOR DSPM",
+                    "path": "fundamentals-and-functionality/fundamentals/ai-based-document-classification"
+                  },
+                  {
+                    "title": "Product Demo Video",
+                    "path": "fundamentals-and-functionality/fundamentals/product-demo-video"
+                  },
+                  {
+                    "title": "ARMOR AI Inference Engine Concept Notes",
+                    "path": "fundamentals-and-functionality/fundamentals/armor-ai-inference-engine-concept-notes"
+                  },
+                  {
+                    "title": "Understanding Risk: Sensitivity and Exposure in Risk",
+                    "path": "fundamentals-and-functionality/fundamentals/understanding-risk-sensitivity-and-exposure"
+                  },
+                  {
+                    "title": "Category and Data Type Alignment",
+                    "path": "fundamentals-and-functionality/fundamentals/category-and-data-type-alignment"
+                  }
+                ]
+              },
+              {
+                "group": "Functionality",
+                "icon": "shapes",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Product Briefing",
+                    "path": "fundamentals-and-functionality/functionality/product-briefing"
+                  },
+                  {
+                    "title": "Feature Overview",
+                    "path": "fundamentals-and-functionality/functionality/feature-overview"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Technical Architecture, Security & Privacy",
+            "icon": "shield-check",
+            "expandable": true,
             "pages": [
               {
                 "title": "Introduction",
-                "path": "introduction",
-                "icon": "home"
+                "path": "technical-architecture-security-and-privacy/introduction"
               },
               {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
+                "title": "Technical Briefing",
+                "path": "technical-architecture-security-and-privacy/technical-briefing"
               },
               {
-                "title": "Components",
-                "path": "components",
-                "icon": "code"
+                "group": "Architecture",
+                "icon": "network",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "TODO: sub-pages not yet captured",
+                    "path": "technical-architecture-security-and-privacy/architecture/todo"
+                  }
+                ]
+              },
+              {
+                "title": "Security, Privacy & Compliance",
+                "path": "technical-architecture-security-and-privacy/security-privacy-and-compliance"
               }
             ]
           },
           {
-            "group": "Components",
-            "icon": "layers",
+            "group": "User and Technical Guides",
+            "icon": "book-open-check",
+            "expandable": true,
             "pages": [
               {
-                "title": "Images",
-                "path": "components/images",
-                "icon": "image"
+                "group": "Setup, Configuration & Administration",
+                "icon": "settings",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "TODO: sub-pages not yet captured",
+                    "path": "user-and-technical-guides/setup-configuration-and-administration/todo"
+                  }
+                ]
               },
               {
-                "title": "Cards",
-                "path": "components/cards",
-                "icon": "square"
-              },
-              {
-                "title": "Code",
-                "path": "components/code",
-                "icon": "code"
-              },
-              {
-                "title": "Callouts",
-                "path": "components/callouts",
-                "icon": "message-square"
-              },
-              {
-                "title": "Steps",
-                "path": "components/steps",
-                "icon": "list-ordered"
-              },
-              {
-                "title": "Tabs",
-                "path": "components/tabs",
-                "icon": "columns"
+                "group": "Functional User Guide",
+                "icon": "user-cog",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "TODO: sub-pages not yet captured",
+                    "path": "user-and-technical-guides/functional-user-guide/functional-user-guide/todo"
+                  }
+                ]
               }
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
-        "icon": "code",
+        "tab": "Roadmap",
+        "icon": "map",
+        "groups": [],
+        "path": "roadmap",
+        "show-sidebar": false,
+        "show-toc": false,
+        "content-width": "wide"
+      },
+      {
+        "tab": "Release Notes",
+        "icon": "package",
         "groups": [
           {
-            "group": "Overview",
-            "icon": "file-text",
+            "group": "What's New",
+            "icon": "megaphone",
+            "expandable": true,
             "pages": [
               {
-                "title": "Authentication",
-                "path": "authentication",
-                "icon": "lock"
+                "title": "TODO: sub-pages not yet captured",
+                "path": "whats-new/todo"
               }
             ]
           },
           {
-            "group": "Sample Endpoints",
-            "openapi": "openapi.yaml"
+            "group": "Released Documents",
+            "icon": "file-check",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "TODO: sub-pages not yet captured",
+                "path": "released-documents/todo"
+              }
+            ]
           }
         ]
       },
       {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
+        "tab": "FAQs & Support",
+        "icon": "life-buoy",
+        "path": "faqs/overview",
+        "show-sidebar": false,
+        "show-toc": false,
+        "groups": [
           {
             "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
+            "icon": "circle-help",
+            "expandable": true,
             "pages": [
               {
-                "title": "Documentation Source",
-                "path": "help-center/faq/getting-started"
+                "title": "Frequently Asked Questions (FAQs)",
+                "path": "faqs/frequently-asked-questions"
+              },
+              {
+                "title": "FAQ Requests Tracker",
+                "path": "faqs/faq-requests-tracker"
               }
             ]
           },
           {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
+            "group": "Known Issues, Technical Limitation and Expected Behaviour",
+            "icon": "triangle-alert",
+            "expandable": true,
             "pages": [
               {
-                "title": "Page Missing in Sidebar",
-                "path": "help-center/troubleshooting/install-error"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
+                "title": "Known Issues (Internal and External)",
+                "path": "known-issues/known-issues-internal-and-external"
+              },
               {
-                "title": "Create Your First Page",
-                "path": "help-center/guides/setup-project"
+                "title": "Known Issues (Internal)",
+                "path": "known-issues/known-issues-internal"
+              },
+              {
+                "title": "Known Issues (External)",
+                "path": "known-issues/known-issues-external"
+              },
+              {
+                "title": "Technical Limitation",
+                "path": "known-issues/technical-limitation"
+              },
+              {
+                "title": "Expected Behaviour",
+                "path": "known-issues/expected-behaviour"
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Changelog",
-            "path": "changelog",
-            "icon": "history"
           }
         ]
       }
     ]
-  }
+  },
+  "favicon": "https://blob-cdn.documentation.ai/org-2bf7abec-585f-44a8-a79e-12ad8c6b6311/doc-5326b432-f0ae-4374-bef0-e4b11407b58d/1784189069927-gvqrbjeflnl-bright_logo_of_armor.png?fm=auto&auto=compress%2Cformat"
 }

@@ -1,0 +1,77 @@
+---
+title: "Setup, Configuration & Administration"
+description: "Provision ARMOR DSPM, connect your first data source, and configure classification and policy."
+---
+
+## Overview
+
+This guide takes an administrator from an empty tenant to a first set of real findings. Follow the steps in order. Each step links to the deeper reference where relevant.
+
+<Callout kind="info">
+  You need administrator access to the ARMOR tenant and read access to at least one data source to complete this guide.
+</Callout>
+
+## Set up ARMOR DSPM
+
+<Steps>
+  <Step title="Confirm your region" icon="globe" title-type="h3">
+    Choose the tenant region that satisfies your data-residency requirement. This cannot be changed later without a migration.
+
+    <Callout kind="alert">
+      Decide residency before connecting production sources. See [Security, Privacy & Compliance](/technical-architecture-security-and-privacy/security-privacy-and-compliance).
+    </Callout>
+  </Step>
+
+  <Step title="Deploy a connector" icon="plug" title-type="h3">
+    Install a connector near your data source using your platform of choice.
+
+    <Tabs>
+      <Tab title="AWS" icon="cloud">
+        ```bash
+        armor connectors deploy --type aws-s3 --region us-east-1
+        ```
+      </Tab>
+
+      <Tab title="GCP" icon="cloud">
+        ```bash
+        armor connectors deploy --type gcp-storage --region us-central1
+        ```
+      </Tab>
+
+      <Tab title="On-premises" icon="server">
+        ```bash
+        armor connectors deploy --type smb-share --host files.internal
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Connect a data source" icon="database" title-type="h3">
+    Register the source. Discovery starts automatically after the first successful connection.
+
+    <Callout kind="success">
+      When the first assets appear in the catalog, your connection is healthy.
+    </Callout>
+  </Step>
+
+  <Step title="Tune classification" icon="sliders" title-type="h3">
+    Set the confidence threshold and review category alignment. See [Category and Data Type Alignment](/fundamentals-and-functionality/fundamentals/category-and-data-type-alignment).
+  </Step>
+
+  <Step title="Enable a policy" icon="shield" title-type="h3">
+    Attach a classification-driven protection policy so high-risk findings trigger controls automatically.
+  </Step>
+</Steps>
+
+## Administrative settings reference
+
+| Setting | Default | Notes |
+|---------|---------|-------|
+| Confidence threshold | 0.80 | Assets below this route to review |
+| Scan mode | on-change | Alternatives: continuous, scheduled |
+| Retention | 90 days | Applies to finding history, not labels |
+| Reviewer roles | per workspace | Scope access to owning teams |
+
+<Callout kind="tip">
+  Start with the defaults. Change the confidence threshold only after you have seen how review volume behaves on real data.
+</Callout>

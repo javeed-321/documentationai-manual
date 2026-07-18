@@ -1,0 +1,226 @@
+/*
+  ARMOR DSPM — Home page styling.
+
+  Scoped to the Home page only. The reliable anchor is the hidden random heading
+  `### armor-home-x7k29q` in home.mdx, which slugs to id="armor-home-x7k29q".
+  A heading is plain markdown, so the web editor preserves it on save (unlike the
+  raw-HTML hero, which the editor flattens). The random token can never collide
+  with a heading on any other page. We also match the hero's #armor-home / .armor-hero
+  as secondary anchors for when the raw-HTML hero is present.
+
+  On Home, the custom hero replaces the platform's default page title and
+  description, so those are hidden below. Nothing else on the page is touched.
+
+  Only styles/home.css is registered in Site Config. Do not register the
+  repo-root home-page.css; its hides are unscoped and apply on every page.
+
+  To make it live: documentation.ai editor → Site Config → Custom CSS →
+  Add Stylesheet → select styles/home.css → Publish.
+*/
+:root:has(#armor-home-x7k29q),
+:root:has(#armor-home),
+:root:has(.armor-hero) {
+
+  /* ─── Hide the random scope-anchor heading (never shown to readers) ─── */
+  #armor-home-x7k29q { display: none !important; }
+
+  /* ─── Hide the platform title/description the hero replaces ─── */
+  .page-title { display: none !important; }
+  .page-description { display: none !important; }
+  .dai-feedback { display: none !important; }
+  .dai-page-nav { display: none !important; }
+
+  /* ─── Hide heading anchor icons ─── */
+  [data-component="Heading"] > div { display: none !important; }
+
+  /* ─── Content column (wide layout, no sidebar) ─── */
+  .dai-article,
+  .dai-content-column {
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* ─── Hero banner (custom HTML in home.mdx, replaces the platform header) ─── */
+  .armor-hero {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+    flex-wrap: nowrap !important;
+    padding: 12px 0 24px !important;
+    /* Divider like Glean's .heroDivider: 1px line, theme border colour, generous space.
+       Uses the platform --border token so it stays visible and adapts light/dark
+       automatically (no separate .dark override needed). */
+    border-bottom: 1px solid var(--border) !important;
+    /* first value is the top margin — space above the hero */
+    margin: 40px 0 24px !important;
+  }
+
+  /* Brand column shrinks so the tagline wraps inside it instead of pushing buttons down */
+  .armor-hero__brand { flex: 1 1 auto !important; min-width: 0 !important; }
+
+  .armor-hero__wordmark {
+    font-size: 29px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.1 !important;
+    color: #1A1524 !important;
+  }
+  &.dark .armor-hero__wordmark { color: #F5F3FA !important; }
+  /* ARMOR wordmark: the exact logo letter vectors painted onto a plain span via a CSS
+     mask. background-color is the fill, so it is the logo's exact #4A28C3 in every theme.
+     A mask survives the MDX renderer where a raw inline <svg> does not. */
+  .armor-hero__logo {
+    display: inline-block !important;
+    height: 0.74em !important;
+    aspect-ratio: 1272.86 / 205.02 !important;
+    vertical-align: baseline !important;
+    background-color: #4A28C3 !important;
+    -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM1MC42MjcgNTEuNzc1NCAxMjcyLjg2IDIwNS4wMiI+PHBhdGggZD0iTTQ0Ni45MSA1MS43NzU0SDQ5MC45ODFMNTkwLjE0OCAyNTYuNzk1SDU0Ni40NjFMNTMwLjA3NSAyMjIuMjk0SDQxMC4zMTVMMzk0LjQ0MiAyNTYuNzk1SDM1MC42MjdMNDQ2LjkxIDUxLjc3NTRaTTUxMy42NjkgMTg4LjA3MUw0NjkuMzQxIDk0Ljk0OThMNDI2LjE4OCAxODguMDcxSDUxMy42NjlaIi8+PHBhdGggZD0iTTYyMi4wMjQgNTEuNzc1NEg3MjYuMjk3Qzc0Mi4wNDEgNTEuNzc1NCA3NTUuNjcxIDUzLjQyMDMgNzY3LjIyOCA1Ni42ODg5Qzc3OC43NjQgNTkuOTU3NCA3ODguMzU2IDY0LjcyMTMgNzk1Ljk2MSA3MC45MTY1QzgwMy41NjYgNzcuMTMzMSA4MDkuMjI3IDg0LjY5NTYgODEyLjk0NSA5My42MDM5QzgxNi42NjIgMTAyLjUzNCA4MTguNTIgMTEyLjYxNyA4MTguNTIgMTIzLjg5N0M4MTguNTIgMTMxLjUwMiA4MTcuNjAyIDEzOC43NDQgODE1Ljc2NSAxNDUuNjAxQzgxMy45MjcgMTUyLjQ1OSA4MTEuMTA3IDE1OC43ODIgODA3LjMwNSAxNjQuNTVDODAzLjUwMiAxNzAuMzE4IDc5OC43MTcgMTc1LjQ2NyA3OTIuOTQ5IDE3OS45NTNDNzg3LjE4MSAxODQuNDYgNzgwLjM4OCAxODguMTk5IDc3Mi42MTEgMTkxLjE2OEw4MTcuMjE3IDI1Ni43NTJINzY2LjMzMUw3MjcuNzcxIDE5OC41MTdINzI2LjU5Nkw2NjMuNjM5IDE5OC4zODlWMjU2Ljc1Mkg2MjIuMDY3VjUxLjc3NTRINjIyLjAyNFpNNzI3LjM0MyAxNjIuNDc4QzczNS4yMDUgMTYyLjQ3OCA3NDIuMTA1IDE2MS41NTkgNzQ4LjAwMSAxNTkuNzIyQzc1My44OTggMTU3Ljg4NSA3NTguODMyIDE1NS4zIDc2Mi44MjcgMTUxLjk4OUM3NjYuODAxIDE0OC42NTYgNzY5Ljc3IDE0NC42MTkgNzcxLjc1NyAxMzkuODU1Qzc3My43MjIgMTM1LjA5MSA3NzQuNzA1IDEyOS43NzEgNzc0LjcwNSAxMjMuOTE4Qzc3NC43MDUgMTEyLjQ2NyA3NzAuNzc0IDEwMy42MDIgNzYyLjg5MSA5Ny4zNjM4Qzc1NS4wMyA5MS4xMDQ1IDc0My4xNzMgODcuOTg1NSA3MjcuMzQzIDg3Ljk4NTVINjYzLjU5N1YxNjIuNDk5SDcyNy4zNDNWMTYyLjQ3OFoiLz48cGF0aCBkPSJNODY3LjgyNCA1MS43NzU0SDkwOS4zOTZMOTgzLjkxIDEyNi41NDZMMTA1OC40MiA1MS43NzU0SDExMDBWMjU2Ljc5NUgxMDU4LjQyVjEwOS4zN0w5ODMuOTEgMTgxLjEyOEw5MDkuMzk2IDEwOS4zN1YyNTYuNzk1SDg2Ny44MjRWNTEuNzc1NFoiLz48cGF0aCBkPSJNMTE0Ni4yOSAxNTMuNzAyQzExNDYuMjkgMTM4LjIxNCAxMTQ5LjEzIDEyNC4wNSAxMTU0LjgyIDExMS4yMTFDMTE2MC41IDk4LjM1MDUgMTE2OC40OSA4Ny4zMjcyIDExNzguNzYgNzguMDk4NUMxMTg5LjA0IDY4Ljg2OTcgMTIwMS4zNyA2MS43MzQ1IDEyMTUuNzQgNTYuNjUwMUMxMjMwLjEyIDUxLjU4NzEgMTI0Ni4wNiA0OS4wNDQ5IDEyNjMuNTUgNDkuMDQ0OUMxMjgxLjA1IDQ5LjA0NDkgMTI5Ni44OCA1MS41ODcxIDEzMTEuMyA1Ni42NTAxQzEzMjUuNzIgNjEuNzEzMSAxMzM4LjA5IDY4Ljg2OTcgMTM0OC4zNCA3OC4wOTg1QzEzNTguNjIgODcuMzI3MiAxMzY2LjU5IDk4LjM3MTggMTM3Mi4yOSAxMTEuMjExQzEzNzcuOTcgMTI0LjA3MSAxMzgwLjgxIDEzOC4yMzUgMTM4MC44MSAxNTMuNzAyQzEzODAuODEgMTY5LjE2OCAxMzc3Ljk3IDE4My41NDYgMTM3Mi4yOSAxOTYuNTM0QzEzNjYuNjEgMjA5LjUyMyAxMzU4LjYyIDIyMC42OTYgMTM0OC4zNCAyMzAuMDUzQzEzMzguMDcgMjM5LjQxIDEzMjUuNzIgMjQ2LjY5NCAxMzExLjMgMjUxLjg4NkMxMjk2Ljg4IDI1Ny4wOTggMTI4MC45NCAyNTkuNjgzIDEyNjMuNTUgMjU5LjY4M0MxMjQ2LjE2IDI1OS42ODMgMTIzMC4xMiAyNTcuMDc3IDEyMTUuNzQgMjUxLjg4NkMxMjAxLjM3IDI0Ni42OTQgMTE4OS4wMiAyMzkuNDEgMTE3OC43NiAyMzAuMDUzQzExNjguNDkgMjIwLjY5NiAxMTYwLjUgMjA5LjUyMyAxMTU0LjgyIDE5Ni41MzRDMTE0OS4xMyAxODMuNTQ2IDExNDYuMjkgMTY5LjI3NSAxMTQ2LjI5IDE1My43MDJaTTExODcuODkgMTUzLjcwMkMxMTg3Ljg5IDE2NC4yNzYgMTE4OS43OSAxNzMuODI2IDExOTMuNTkgMTgyLjI4NUMxMTk3LjM5IDE5MC43NjYgMTIwMi42OSAxOTguMDA4IDEyMDkuNDYgMjAzLjk5QzEyMTYuMjMgMjA5Ljk3MiAxMjI0LjI1IDIxNC41ODYgMTIzMy40NyAyMTcuODMzQzEyNDIuNyAyMjEuMDU5IDEyNTIuNzIgMjIyLjY4MyAxMjYzLjU3IDIyMi42ODNDMTI3NC40MyAyMjIuNjgzIDEyODQuNDUgMjIxLjA1OSAxMjkzLjY3IDIxNy44MzNDMTMwMi45IDIxNC42MDcgMTMxMC44NyAyMDkuOTkzIDEzMTcuNjIgMjAzLjk5QzEzMjQuMzUgMTk4LjAwOCAxMzI5LjY1IDE5MC43NjYgMTMzMy41IDE4Mi4yODVDMTMzNy4zNCAxNzMuODA0IDEzMzkuMjYgMTY0LjI3NiAxMzM5LjI2IDE1My43MDJDMTMzOS4yNiAxNDMuMTI3IDEzMzcuMzQgMTMzLjY0MiAxMzMzLjUgMTI1LjI0NkMxMzI5LjY1IDExNi44NTEgMTMyNC4zNSAxMDkuNzU4IDEzMTcuNjIgMTAzLjkyNkMxMzEwLjg5IDk4LjExNTUgMTMwMi45IDkzLjY3MiAxMjkzLjY3IDkwLjYxNzFDMTI4NC40NSA4Ny41NjIyIDEyNzQuNDEgODYuMDI0MSAxMjYzLjU3IDg2LjAyNDFDMTI1Mi43NCA4Ni4wMjQxIDEyNDIuNyA4Ny41NjIyIDEyMzMuNDcgOTAuNjE3MUMxMjI0LjI1IDkzLjY3MiAxMjE2LjI2IDk4LjExNTUgMTIwOS40NiAxMDMuOTI2QzEyMDIuNjkgMTA5LjczNyAxMTk3LjM5IDExNi44NTEgMTE5My41OSAxMjUuMjQ2QzExODkuNzkgMTMzLjY0MiAxMTg3Ljg5IDE0My4xMjcgMTE4Ny44OSAxNTMuNzAyWiIvPjxwYXRoIGQ9Ik0xNDI3IDUxLjc3NTRIMTUzMS4yN0MxNTQ3LjAxIDUxLjc3NTQgMTU2MC42NCA1My40MjAzIDE1NzIuMiA1Ni42ODg5QzE1ODMuNzQgNTkuOTU3NCAxNTkzLjMzIDY0LjcyMTMgMTYwMC45MyA3MC45MTY1QzE2MDguNTQgNzcuMTMzMSAxNjE0LjIgODQuNjk1NiAxNjE3LjkyIDkzLjYwMzlDMTYyMS42MyAxMDIuNTM0IDE2MjMuNDkgMTEyLjYxNyAxNjIzLjQ5IDEyMy44OTdDMTYyMy40OSAxMzEuNTAyIDE2MjIuNTcgMTM4Ljc0NCAxNjIwLjc0IDE0NS42MDFDMTYxOC45IDE1Mi40NTkgMTYxNi4wOCAxNTguNzgyIDE2MTIuMjggMTY0LjU1QzE2MDguNDcgMTcwLjMxOCAxNjAzLjY5IDE3NS40NjcgMTU5Ny45MiAxNzkuOTUzQzE1OTIuMTUgMTg0LjQ2IDE1ODUuMzggMTg4LjE5OSAxNTc3LjU4IDE5MS4xNjhMMTYyMi4xOSAyNTYuNzUySDE1NzEuM0wxNTMyLjc0IDE5OC41MTdIMTUzMS41N0wxNDY4LjYxIDE5OC4zODlWMjU2Ljc1MkgxNDI3LjA0VjUxLjc3NTRIMTQyN1pNMTUzMi4zMiAxNjIuNDc4QzE1NDAuMTggMTYyLjQ3OCAxNTQ3LjA4IDE2MS41NTkgMTU1Mi45NyAxNTkuNzIyQzE1NTguODcgMTU3Ljg4NSAxNTYzLjgzIDE1NS4zIDE1NjcuOCAxNTEuOTg5QzE1NzEuNzcgMTQ4LjY1NiAxNTc0Ljc0IDE0NC42MTkgMTU3Ni43MSAxMzkuODU1QzE1NzguNjcgMTM1LjA5MSAxNTc5LjY2IDEyOS43NzEgMTU3OS42NiAxMjMuOTE4QzE1NzkuNjYgMTEyLjQ2NyAxNTc1LjczIDEwMy42MDIgMTU2Ny44NCA5Ny4zNjM4QzE1NTkuOTggOTEuMTA0NSAxNTQ4LjEyIDg3Ljk4NTUgMTUzMi4yOSA4Ny45ODU1SDE0NjguNTVWMTYyLjQ5OUgxNTMyLjI5TDE1MzIuMzIgMTYyLjQ3OFoiLz48L3N2Zz4=") no-repeat left center / contain !important;
+    mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM1MC42MjcgNTEuNzc1NCAxMjcyLjg2IDIwNS4wMiI+PHBhdGggZD0iTTQ0Ni45MSA1MS43NzU0SDQ5MC45ODFMNTkwLjE0OCAyNTYuNzk1SDU0Ni40NjFMNTMwLjA3NSAyMjIuMjk0SDQxMC4zMTVMMzk0LjQ0MiAyNTYuNzk1SDM1MC42MjdMNDQ2LjkxIDUxLjc3NTRaTTUxMy42NjkgMTg4LjA3MUw0NjkuMzQxIDk0Ljk0OThMNDI2LjE4OCAxODguMDcxSDUxMy42NjlaIi8+PHBhdGggZD0iTTYyMi4wMjQgNTEuNzc1NEg3MjYuMjk3Qzc0Mi4wNDEgNTEuNzc1NCA3NTUuNjcxIDUzLjQyMDMgNzY3LjIyOCA1Ni42ODg5Qzc3OC43NjQgNTkuOTU3NCA3ODguMzU2IDY0LjcyMTMgNzk1Ljk2MSA3MC45MTY1QzgwMy41NjYgNzcuMTMzMSA4MDkuMjI3IDg0LjY5NTYgODEyLjk0NSA5My42MDM5QzgxNi42NjIgMTAyLjUzNCA4MTguNTIgMTEyLjYxNyA4MTguNTIgMTIzLjg5N0M4MTguNTIgMTMxLjUwMiA4MTcuNjAyIDEzOC43NDQgODE1Ljc2NSAxNDUuNjAxQzgxMy45MjcgMTUyLjQ1OSA4MTEuMTA3IDE1OC43ODIgODA3LjMwNSAxNjQuNTVDODAzLjUwMiAxNzAuMzE4IDc5OC43MTcgMTc1LjQ2NyA3OTIuOTQ5IDE3OS45NTNDNzg3LjE4MSAxODQuNDYgNzgwLjM4OCAxODguMTk5IDc3Mi42MTEgMTkxLjE2OEw4MTcuMjE3IDI1Ni43NTJINzY2LjMzMUw3MjcuNzcxIDE5OC41MTdINzI2LjU5Nkw2NjMuNjM5IDE5OC4zODlWMjU2Ljc1Mkg2MjIuMDY3VjUxLjc3NTRINjIyLjAyNFpNNzI3LjM0MyAxNjIuNDc4QzczNS4yMDUgMTYyLjQ3OCA3NDIuMTA1IDE2MS41NTkgNzQ4LjAwMSAxNTkuNzIyQzc1My44OTggMTU3Ljg4NSA3NTguODMyIDE1NS4zIDc2Mi44MjcgMTUxLjk4OUM3NjYuODAxIDE0OC42NTYgNzY5Ljc3IDE0NC42MTkgNzcxLjc1NyAxMzkuODU1Qzc3My43MjIgMTM1LjA5MSA3NzQuNzA1IDEyOS43NzEgNzc0LjcwNSAxMjMuOTE4Qzc3NC43MDUgMTEyLjQ2NyA3NzAuNzc0IDEwMy42MDIgNzYyLjg5MSA5Ny4zNjM4Qzc1NS4wMyA5MS4xMDQ1IDc0My4xNzMgODcuOTg1NSA3MjcuMzQzIDg3Ljk4NTVINjYzLjU5N1YxNjIuNDk5SDcyNy4zNDNWMTYyLjQ3OFoiLz48cGF0aCBkPSJNODY3LjgyNCA1MS43NzU0SDkwOS4zOTZMOTgzLjkxIDEyNi41NDZMMTA1OC40MiA1MS43NzU0SDExMDBWMjU2Ljc5NUgxMDU4LjQyVjEwOS4zN0w5ODMuOTEgMTgxLjEyOEw5MDkuMzk2IDEwOS4zN1YyNTYuNzk1SDg2Ny44MjRWNTEuNzc1NFoiLz48cGF0aCBkPSJNMTE0Ni4yOSAxNTMuNzAyQzExNDYuMjkgMTM4LjIxNCAxMTQ5LjEzIDEyNC4wNSAxMTU0LjgyIDExMS4yMTFDMTE2MC41IDk4LjM1MDUgMTE2OC40OSA4Ny4zMjcyIDExNzguNzYgNzguMDk4NUMxMTg5LjA0IDY4Ljg2OTcgMTIwMS4zNyA2MS43MzQ1IDEyMTUuNzQgNTYuNjUwMUMxMjMwLjEyIDUxLjU4NzEgMTI0Ni4wNiA0OS4wNDQ5IDEyNjMuNTUgNDkuMDQ0OUMxMjgxLjA1IDQ5LjA0NDkgMTI5Ni44OCA1MS41ODcxIDEzMTEuMyA1Ni42NTAxQzEzMjUuNzIgNjEuNzEzMSAxMzM4LjA5IDY4Ljg2OTcgMTM0OC4zNCA3OC4wOTg1QzEzNTguNjIgODcuMzI3MiAxMzY2LjU5IDk4LjM3MTggMTM3Mi4yOSAxMTEuMjExQzEzNzcuOTcgMTI0LjA3MSAxMzgwLjgxIDEzOC4yMzUgMTM4MC44MSAxNTMuNzAyQzEzODAuODEgMTY5LjE2OCAxMzc3Ljk3IDE4My41NDYgMTM3Mi4yOSAxOTYuNTM0QzEzNjYuNjEgMjA5LjUyMyAxMzU4LjYyIDIyMC42OTYgMTM0OC4zNCAyMzAuMDUzQzEzMzguMDcgMjM5LjQxIDEzMjUuNzIgMjQ2LjY5NCAxMzExLjMgMjUxLjg4NkMxMjk2Ljg4IDI1Ny4wOTggMTI4MC45NCAyNTkuNjgzIDEyNjMuNTUgMjU5LjY4M0MxMjQ2LjE2IDI1OS42ODMgMTIzMC4xMiAyNTcuMDc3IDEyMTUuNzQgMjUxLjg4NkMxMjAxLjM3IDI0Ni42OTQgMTE4OS4wMiAyMzkuNDEgMTE3OC43NiAyMzAuMDUzQzExNjguNDkgMjIwLjY5NiAxMTYwLjUgMjA5LjUyMyAxMTU0LjgyIDE5Ni41MzRDMTE0OS4xMyAxODMuNTQ2IDExNDYuMjkgMTY5LjI3NSAxMTQ2LjI5IDE1My43MDJaTTExODcuODkgMTUzLjcwMkMxMTg3Ljg5IDE2NC4yNzYgMTE4OS43OSAxNzMuODI2IDExOTMuNTkgMTgyLjI4NUMxMTk3LjM5IDE5MC43NjYgMTIwMi42OSAxOTguMDA4IDEyMDkuNDYgMjAzLjk5QzEyMTYuMjMgMjA5Ljk3MiAxMjI0LjI1IDIxNC41ODYgMTIzMy40NyAyMTcuODMzQzEyNDIuNyAyMjEuMDU5IDEyNTIuNzIgMjIyLjY4MyAxMjYzLjU3IDIyMi42ODNDMTI3NC40MyAyMjIuNjgzIDEyODQuNDUgMjIxLjA1OSAxMjkzLjY3IDIxNy44MzNDMTMwMi45IDIxNC42MDcgMTMxMC44NyAyMDkuOTkzIDEzMTcuNjIgMjAzLjk5QzEzMjQuMzUgMTk4LjAwOCAxMzI5LjY1IDE5MC43NjYgMTMzMy41IDE4Mi4yODVDMTMzNy4zNCAxNzMuODA0IDEzMzkuMjYgMTY0LjI3NiAxMzM5LjI2IDE1My43MDJDMTMzOS4yNiAxNDMuMTI3IDEzMzcuMzQgMTMzLjY0MiAxMzMzLjUgMTI1LjI0NkMxMzI5LjY1IDExNi44NTEgMTMyNC4zNSAxMDkuNzU4IDEzMTcuNjIgMTAzLjkyNkMxMzEwLjg5IDk4LjExNTUgMTMwMi45IDkzLjY3MiAxMjkzLjY3IDkwLjYxNzFDMTI4NC40NSA4Ny41NjIyIDEyNzQuNDEgODYuMDI0MSAxMjYzLjU3IDg2LjAyNDFDMTI1Mi43NCA4Ni4wMjQxIDEyNDIuNyA4Ny41NjIyIDEyMzMuNDcgOTAuNjE3MUMxMjI0LjI1IDkzLjY3MiAxMjE2LjI2IDk4LjExNTUgMTIwOS40NiAxMDMuOTI2QzEyMDIuNjkgMTA5LjczNyAxMTk3LjM5IDExNi44NTEgMTE5My41OSAxMjUuMjQ2QzExODkuNzkgMTMzLjY0MiAxMTg3Ljg5IDE0My4xMjcgMTE4Ny44OSAxNTMuNzAyWiIvPjxwYXRoIGQ9Ik0xNDI3IDUxLjc3NTRIMTUzMS4yN0MxNTQ3LjAxIDUxLjc3NTQgMTU2MC42NCA1My40MjAzIDE1NzIuMiA1Ni42ODg5QzE1ODMuNzQgNTkuOTU3NCAxNTkzLjMzIDY0LjcyMTMgMTYwMC45MyA3MC45MTY1QzE2MDguNTQgNzcuMTMzMSAxNjE0LjIgODQuNjk1NiAxNjE3LjkyIDkzLjYwMzlDMTYyMS42MyAxMDIuNTM0IDE2MjMuNDkgMTEyLjYxNyAxNjIzLjQ5IDEyMy44OTdDMTYyMy40OSAxMzEuNTAyIDE2MjIuNTcgMTM4Ljc0NCAxNjIwLjc0IDE0NS42MDFDMTYxOC45IDE1Mi40NTkgMTYxNi4wOCAxNTguNzgyIDE2MTIuMjggMTY0LjU1QzE2MDguNDcgMTcwLjMxOCAxNjAzLjY5IDE3NS40NjcgMTU5Ny45MiAxNzkuOTUzQzE1OTIuMTUgMTg0LjQ2IDE1ODUuMzggMTg4LjE5OSAxNTc3LjU4IDE5MS4xNjhMMTYyMi4xOSAyNTYuNzUySDE1NzEuM0wxNTMyLjc0IDE5OC41MTdIMTUzMS41N0wxNDY4LjYxIDE5OC4zODlWMjU2Ljc1MkgxNDI3LjA0VjUxLjc3NTRIMTQyN1pNMTUzMi4zMiAxNjIuNDc4QzE1NDAuMTggMTYyLjQ3OCAxNTQ3LjA4IDE2MS41NTkgMTU1Mi45NyAxNTkuNzIyQzE1NTguODcgMTU3Ljg4NSAxNTYzLjgzIDE1NS4zIDE1NjcuOCAxNTEuOTg5QzE1NzEuNzcgMTQ4LjY1NiAxNTc0Ljc0IDE0NC42MTkgMTU3Ni43MSAxMzkuODU1QzE1NzguNjcgMTM1LjA5MSAxNTc5LjY2IDEyOS43NzEgMTU3OS42NiAxMjMuOTE4QzE1NzkuNjYgMTEyLjQ2NyAxNTc1LjczIDEwMy42MDIgMTU2Ny44NCA5Ny4zNjM4QzE1NTkuOTggOTEuMTA0NSAxNTQ4LjEyIDg3Ljk4NTUgMTUzMi4yOSA4Ny45ODU1SDE0NjguNTVWMTYyLjQ5OUgxNTMyLjI5TDE1MzIuMzIgMTYyLjQ3OFoiLz48L3N2Zz4=") no-repeat left center / contain !important;
+  }
+  .armor-hero__docs { font-weight: 500 !important; }
+
+  .armor-hero__tagline {
+    margin: 8px 0 0 !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: #4A4658 !important;
+  }
+  &.dark .armor-hero__tagline { color: #B9B4C7 !important; }
+
+  .armor-hero__actions { display: flex !important; gap: 12px !important; flex: 0 0 auto !important; margin-left: auto !important; }
+
+  .armor-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+    padding: 9px 20px !important;
+    border-radius: 999px !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease !important;
+  }
+
+  .armor-btn--primary { background: #4A28C3 !important; color: #fff !important; border: 1px solid #4A28C3 !important; }
+  .armor-btn--primary:hover { background: #4423B3 !important; border-color: #4423B3 !important; }
+  .armor-btn--ghost { background: transparent !important; color: #4A28C3 !important; border: 1.5px solid #4A28C3 !important; }
+  .armor-btn--ghost:hover { background: rgba(74, 40, 195, 0.04) !important; border-color: #4A28C3 !important; color: #4A28C3 !important; }
+  &.dark .armor-btn--primary { background: #B7A0F5 !important; color: #1A1524 !important; border-color: #B7A0F5 !important; }
+  &.dark .armor-btn--ghost { color: #B7A0F5 !important; border-color: #B7A0F5 !important; }
+  &.dark .armor-btn--ghost:hover { background: rgba(183, 160, 245, 0.12) !important; }
+
+  /* ─── Section labels (### headings) — default heading color, not brand ─── */
+  .dai-article h3 {
+    color: #1A1524 !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    letter-spacing: 0.06em !important;
+    margin: 44px 0 16px !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+  &.dark .dai-article h3 { color: #F5F3FA !important; }
+
+  /* ─── Grid spacing under each section ─── */
+  h3 + [data-component="Columns"] {
+    margin: 0 0 8px !important;
+    gap: 16px !important;
+  }
+
+  /* ─── Cards ─── */
+  [data-component="Card"] {
+    border-radius: 14px !important;
+    border: 1px solid rgba(26, 21, 36, 0.10) !important;
+    background: #ffffff !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+  }
+  &.dark [data-component="Card"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(255, 255, 255, 0.10) !important;
+  }
+  a:hover [data-component="Card"] {
+    border-color: rgba(74, 40, 195, 0.35) !important;
+    box-shadow: 0 1px 2px rgba(26, 21, 36, 0.04), 0 12px 26px -16px rgba(74, 40, 195, 0.30) !important;
+  }
+  &.dark a:hover [data-component="Card"] {
+    border-color: rgba(183, 160, 245, 0.45) !important;
+    box-shadow: 0 14px 30px -16px rgba(0, 0, 0, 0.60) !important;
+  }
+
+  /* ─── Card icon ─── */
+  [data-component="Card"] svg { color: #4A28C3 !important; }
+  &.dark [data-component="Card"] svg { color: #CBB8FB !important; }
+
+  /* ─── Card title ─── */
+  [data-component="Card"] .dai-card-title {
+    color: #1A1524 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+  }
+  &.dark [data-component="Card"] .dai-card-title { color: #F5F3FA !important; }
+
+  /* ─── Card description ─── */
+  [data-component="Card"] .dai-card-description {
+    color: #4A4658 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
+    margin-top: 4px !important;
+  }
+  &.dark [data-component="Card"] .dai-card-description { color: #B9B4C7 !important; }
+
+  /* ─── Tablet ─── */
+  @media (max-width: 1000px) {
+    .dai-article,
+    .dai-content-column {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+
+  /* ─── Stack the hero before the one-row layout collides ─── */
+  /* Buttons drop to a row below the text at their natural pill size, left-aligned */
+  @media (max-width: 1024px) {
+    .armor-hero { flex-direction: column !important; align-items: flex-start !important; flex-wrap: wrap !important; }
+    .armor-hero__actions { margin-left: 0 !important; width: auto !important; justify-content: flex-start !important; }
+    .armor-hero__tagline { white-space: normal !important; }
+  }
+
+  /* ─── Mobile ─── */
+  @media (max-width: 540px) {
+    .dai-article,
+    .dai-content-column {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+    .armor-hero__wordmark { font-size: 26px !important; }
+    .armor-hero__actions { flex-direction: column !important; align-items: stretch !important; width: 100% !important; }
+    .dai-article h3 { margin-top: 32px !important; }
+  }
+}
+
+/*
+  ARMOR DSPM — Roadmap page: match the Home page's left/right spacing.
+
+  Scoped to the Roadmap page only via :root:has(#delivery-board). The "Delivery
+  board" heading gives an id of #delivery-board that exists only on this page, so
+  these rules never touch any other page. Values are copied from the Home block
+  above (max-width 1280px, centered, 24px side padding) so the left gutter matches.
+*/
+:root:has(#delivery-board) {
+  .dai-article,
+  .dai-content-column {
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
