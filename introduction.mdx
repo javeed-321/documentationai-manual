@@ -1,78 +1,25 @@
----
-title: Set Up Your Documentation
-description: 'A minimal, editable starting point for your own documentation site.'
----
-## Start here (5–10 minutes)
-
-1. Edit this page so it describes your product and audience.
-
-2. Customize your onboarding flow in the [Quickstart](/quickstart) page.
-
-3. Delete or rewrite any sections and pages you do not plan to use.
-
-4. Invite a teammate to review the structure and concepts starting from [Core Concepts](/concepts).
-
-<Callout kind="alert" collapsed="false">
-  This site ships with placeholder content. Edit the text, links, and examples so they match your product before sharing it with others.
-</Callout>
-
-## What you get
-
-<Columns cols="3">
-  <Card title="Docs structure" href="/quickstart" icon="book-open" horizontal="false">
-    A clear navigation layout with starter pages you can rename or replace.
-  </Card>
-
-  <Card title="Components" href="#try-a-few-components" icon="layout-grid" horizontal="false" target="_self">
-    Prebuilt blocks like Callouts, Steps, Tabs, and Cards to keep pages clean.
-  </Card>
-
-  <Card title="API reference hook" href="/authentication" icon="code" horizontal="false">
-    A placeholder `openapi.yaml` you can swap with your real API spec.
-  </Card>
-</Columns>
-
-## Make your first edit
-
-<Steps>
-  <Step title="Rewrite this page" icon="edit" title-type="p">
-    Update the title, description, and sections in `introduction` so they reflect your product and documentation goals.
-  </Step>
-
-  <Step title="Customize Quickstart" icon="zap" title-type="p">
-    Replace the steps in `quickstart` with your real onboarding flow so new readers know exactly how to get started.
-  </Step>
-
-  <Step title="Remove or repurpose samples" icon="trash" title-type="p">
-    Delete unused sample sections and pages, or rewrite them with your own content to keep navigation focused.
-  </Step>
-</Steps>
-
-## Try a few components
-
-You can browse the component gallery in the [Components](/components) page for ready-to-use examples of Cards, Callouts, Steps, Tabs, and more.
-
-## Continue to the rest of the sample
-
-<Columns cols="2">
-  <Card title="Quickstart" href="/quickstart" icon="zap" horizontal="false">
-    See the minimal setup flow.
-  </Card>
-
-  <Card title="Core Concepts" href="/concepts" icon="layers" horizontal="false">
-    Learn how pages, navigation, and components fit together.
-  </Card>
-
-  <Card title="Components" href="/components" icon="code" horizontal="false">
-    A small gallery of built-in components.
-  </Card>
-
-  <Card title="Authentication" href="/authentication" icon="lock" horizontal="false">
-    Example layout for an auth guide.
-  </Card>
-
-  <Card title="Help Center" href="/help-center" icon="help-circle" horizontal="false">
-    Starter FAQ, guides, and troubleshooting templates.
-  </Card>
-</Columns>
+| • Parameter • (Parameters marked with \* are mandatory) | Type                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| :------------------------------------------------------ | :------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| source\*                                                | Enum \[INSTORE, MARTJACK, WECHAT, LINE, ALL] | Specifies the source of the customer details to be retrieved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| accountId                                               | String                                       | Unique identifier for the account.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| embed                                                   | Array of String                              | • Details to include in the response. Supported values: `points`, `subscriptions`, `mlp`, `userGroup`, `gapDetails`, `promotionalPoints`, `expirySchedules`, `expiredPoints`, `customerImage`, `returnedPoints`, `associatedImages`, `segments`. • _Note:_\* The associated images parameter retrieves the barcode image details associated with the customer.                                                                                                                                                                                                                                  |
+| includedAllUserGroup2                                   | Boolean (false)                              | Pass `true` to see the customer details in all user groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| userGroup2Id                                            | Long                                         | Unique ID of the user group to fetch customer details from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| includedUserGroup2LoyaltyDetails                        | Boolean (false)                              | Pass `true` to include loyalty details of user groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| includedFraudDetails                                    | Boolean (false)                              | Pass `true` to include fraud details of the customer in the response.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| includedOnlyCurrentProfile                              | Boolean (false)                              | Pass `true` to fetch details of the current source and hide information from other sources.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ug2JoinedStartDate                                      | DateTime                                     | Start date for filtering customers who joined user groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ug2JoinedEndDate                                        | DateTime                                     | End date for filtering customers who joined user groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ug2Offset                                               | Integer                                      | Specifies the offset for pagination of user group results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ug2Limit                                                | Integer                                      | Sets the maximum number of results to retrieve per page for user groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ug2SortBy                                               | String (JoinedDate)                          | Specifies the field by which the user group results should be sorted.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ug2SortOrder                                            | Enum \[ASC, DESC] (DESC)                     | Specifies the sorting order for the user group results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ug2PaginationDetails                                    | Boolean                                      | Pass `true` to include pagination details for user groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| gapToUpgrade                                            | Integer                                      | • **Prerequisite:** Set`embed=MLP` to retrieve the details. The `gapToUpgrade` parameter retrieves the details of the additional purchases, points, visits, or tracker value required for a customer to upgrade to the next tier. It calculates this based on a specified number of days from the current date. **Supported values:** 0: Retrieves the gap for the current day. 1: Calculates the gap for the next day. 30: Projects the gap 30 days from the current day. Negative values are not supported.                                                                                   |
+| gapToRenew                                              | Integer                                      | • \*Prerequisite:\*_Set_``_&#x20;to retrieve the details. Thie&#x20;_``_&#x20;parameter retrieves the additional purchases, visits, points, or tracker value required for a customer to renew their tier after a specified number of days from the current date.&#x20;_**_Supported values:_**_:\ • 0: Retrieves the renewal value for the current day. • 1: Calculates the renewal value for the next day. • 30: Projects the renewal value 30 days from the current day. • Negative values are not supported. • Note:_ If the customer is in the base slab, this block will not be displayed. |
+| ndncStatus                                              | Boolean                                      | • Pass `true` to include the customer's NDNC (Do Not Disturb / Do Not Call) status in the response. • **Default value**: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| optinStatus                                             | Boolean                                      | • Pass `true` to include the customer's opt-in status for communications in the response. • **Default value**: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| slabHistory                                             | Boolean                                      | Pass `true` to include the customer's tier upgrade/slab history in the response. Use this along with `embed=mlp.`**Default value**: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| tierUpgradeCriteria                                     | Boolean                                      | • Pass `true` to include tier upgrade criteria details in the response. This shows the requirements for the customer to upgrade to the next tier. • **Default value**: `false`                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| membershipRetentionCriteria                             | Boolean                                      | • Pass `true` to include membership retention criteria details in the response. This shows the requirements for the customer to maintain their current tier. • **Default value**: `false` • **Note**: If the downgrade criteria is not configured for the associated program, this array is not included in the response, even if you set this value to true.                                                                                                                                                                                                                                   |
 
