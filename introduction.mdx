@@ -4,56 +4,26 @@
 '2': l
 '3': l
 '4': o
+description: fd
 ---
-# Nested-parameter table examples (Documentation.AI MDX)
-
-Every indented cell below uses real em-spaces (U+2003) + glyph — no ASCII spaces.
-Copy these rows as-is; the indentation survives the GFM table parser.
-
-## Example 1 — Webhook response (from `get-v3-webhooks`, dash-run source)
-
-| Parameter           | Description                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------- |
-| data                | Contains the main data for the webhook configuration.                                                   |
-|   • attribution     | Metadata about the creation and last update of the webhook.                                             |
-|     ◦ createdOn     | Timestamp when the webhook was created. It is in the local time zone of the org and in ISO 8601 format. |
-|     ◦ lastUpdatedBy | Information about the user who last updated the webhook.                                                |
-|       ▪ id          | Unique identifier of the user.                                                                          |
-|       ▪ code        | Code of the user.                                                                                       |
-|       ▪ name        | Name of the user.                                                                                       |
-|     ◦ createdBy     | Information about the user who created the webhook.                                                     |
-|       ▪ id          | Unique identifier of the user.                                                                          |
-| webHookId           | Unique identifier of the webhook.                                                                       |
-| webHookHeaders      | Headers sent with the webhook request.                                                                  |
-|   • Authorization   | Authorization header for authentication.                                                                |
-|   • Content-Type    | Specifies the content. Example: `application/json`                                                      |
-
-## Example 2 — Points expiry response (from `update-points-expiry`, dot-path source)
-
-| Parameter                        | Data Type       | Description                                                                               |
-| -------------------------------- | --------------- | ----------------------------------------------------------------------------------------- |
-| updateCurrencyExpiryDateResponse | object          | Object containing details of the points expiry update request.                            |
-|   • customerId                   | integer (int64) | Unique identifier of the customer whose points expiry is updated.                         |
-|   • programId                    | integer (int64) | Unique identifier of the loyalty program.                                                 |
-|   • pointsExpiryUpdateLogs       | object          | Object containing details of the points expiry update.                                    |
-|     ◦ paType                     | enum            | Type of points awarded. Possible values: `POINT_AWARDED`, `POINT_AWARDED_BILL_PROMOTION`. |
-|     ◦ expiryUpdateReasonType     | enum            | Type of expiry modification. Possible values: `EARLY_EXPIRY`, `EXTEND_EXPIRY`.            |
-|     ◦ standardMeta               | object          | Object containing details of the reason and users who raised and approved the request.    |
-|       ▪ who\_raised              | string          | Name or username of the user who raised the request.                                      |
-|       ▪ who\_approved            | string          | Name or username of the user who approved the request.                                    |
-|       ▪ reason\_for\_trigger     | string          | Reason for expiring or extending the points expiry update.                                |
-|     ◦ customMeta                 | object          | Object containing details of custom metadata.                                             |
-
-## Example 3 — Request body with Mandatory column
-
-| Parameter               | Data Type       | Mandatory | Description                                                                                       |
-| ----------------------- | --------------- | --------- | ------------------------------------------------------------------------------------------------- |
-| expiryDateUpdateRequest | object          | Yes       | Object containing customer, program, and metadata details.                                        |
-|   • identifierName      | string          | Yes       | Identifier type for customer ID. Supported values: `mobile`, `id`, `externalId`, `email`.         |
-|   • pointsAwardedRefId  | integer (int64) | Yes       | Unique reference ID generated when points are awarded to a user.                                  |
-|   • standardMeta        | object          | No        | Object containing details about the user who raised and approved the request.                     |
-|     ◦ who\_raised       | string          | No        | Name or username of the user who raised the request.                                              |
-|   • expiryDate          | object          | Yes       | Object containing details of the updated points expiry date.                                      |
-|     ◦ expiryType        | enum            | Yes       | Type of points expiry. Supported values: `FIXED_DATE`, `FIXED_DAYS`, `FIXED_MONTHS`, `IMMEDIATE`. |
-|     ◦ expiryValue       | string/date     | Yes       | The date in YYYY-MM-DD format or number of days after which the points expire.                    |
+| Parameter                    | Data Type       | Mandatory | Description                                                                                                                                                                                                |
+| ---------------------------- | --------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| expiryDateUpdateRequest      | object          | Yes       | Object containing details about the customer, the program ID, the identifiers for the points, and the metadata for the points expiration.                                                                  |
+|     identifierName           | string          | Yes       | Identifier type for customer ID. Supported values: mobile, id, externalId, email.                                                                                                                          |
+|     identifierValue          | string          | Yes       | Value corresponding to the identifierName provided.                                                                                                                                                        |
+|     programId                | integer (int64) | Yes       | Unique ID of the loyalty program. To retrieve the programId, use the Get Loyalty Programs API.                                                                                                             |
+|     pointsAwardedRefId       | integer (int64) | Yes       | Unique reference ID generated when points are awarded to a user.                                                                                                                                           |
+|     pointsAwardedRefType     | enum            | Yes       | Type of points awarded to the user. Supported values: POINT\_AWARDED, POINT\_AWARDED\_BILL\_PROMOTION, POINT\_AWARDED\_LINEITEM, POINT\_AWARDED\_LINEITEM\_PROMOTION, POINT\_AWARDED\_CUSTOMER\_PROMOTION. |
+|     currencyName             | string          | No        | Name of the reward currency.                                                                                                                                                                               |
+|     pointCategoryType        | string          | No        | Type of points to update the expiry. Possible values: REGULAR, PROMISED                                                                                                                                    |
+|     expiryUpdateReasonType   | enum            | No        | Type of expiry modification. Supported values: EARLY\_EXPIRY, EXTEND\_EXPIRY.                                                                                                                              |
+|     expiryUpdateReasonNote   | string          | No        | Reason for updating the points expiry date.                                                                                                                                                                |
+|     standardMeta             | object          | No        | Object containing details about the user who raised and approved the request, along with the reason for updating the expiry of points.                                                                     |
+|         who\_raised          | string          | No        | Name or username of the user who raised the points expiry update request.                                                                                                                                  |
+|         who\_approved        | string          | No        | Name or username of the user who approved the points expiry update request.                                                                                                                                |
+|         reason\_for\_trigger | string          | No        | Reason for expiring or extending the points expiry update.                                                                                                                                                 |
+|     customMeta               | object          | No        | Object containing details of custom metadata for the points expiry update.                                                                                                                                 |
+|     expiryDate               | object          | Yes       | Object containing details of the updated points expiry date.                                                                                                                                               |
+|         expiryType           | enum            | Yes       | Type of points expiry. Supported values: FIXED\_DATE, FIXED\_DAYS, FIXED\_MONTHS, IMMEDIATE.                                                                                                               |
+|         expiryValue          | string/date     | Yes       | The date in YYYY-MM-DD format or number of days after which the points expire. Timezone: Cluster-specific timezone.                                                                                        |
 
