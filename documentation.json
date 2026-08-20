@@ -151,11 +151,15 @@
       }
     ]
   },
-  
   "customCss": [
-    { "src": "styles/custom.css" },
-    { "src": "https://cdn.example.com/external-styles.css" }
+    {
+      "src": "styles/custom.css"
+    },
+    {
+      "src": "https://cdn.example.com/external-styles.css"
+    },
+    {
+      "src": "styles/hello.css"
+    }
   ]
-
-
 }
