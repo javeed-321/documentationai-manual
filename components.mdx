@@ -1,92 +1,86 @@
----
-title: Components (Sample)
-description: A small showcase of the built-in MDX components with usage guidelines.
----
+# Marketplace demo
 
-## Quick component tour
+## Plan availability
 
-<Callout kind="info">
-These are example components from Documentation.AI. Use them to make pages easier to scan.
-</Callout>
+### Bulk export API
 
-<Columns cols={3}>
-  <Card title="Callout" icon="info" href="/components/callouts">
-    Use for tips, warnings, and important notes.
-  </Card>
-  <Card title="Steps" icon="check-circle" href="/components/steps">
-    Break tasks into easy, numbered actions.
-  </Card>
-  <Card title="Tabs" icon="layers" href="/components/tabs">
-    Keep alternate examples tidy.
-  </Card>
-</Columns>
+Export up to 50,000 records per request.
 
-### Callout: usage tips
+| Plan       | Available |
+| :--------- | :-------- |
+| Free       | —         |
+| Business   | ✅         |
+| Enterprise | ✅         |
 
-**When to use**
+## Error codes
 
-- Highlight important warnings or constraints that affect success
-- Call out tips that save time or prevent common mistakes
-- Emphasize prerequisites, permissions, or irreversible actions
+| Code               | Status      | Message                                                      |
+| :----------------- | :---------- | :----------------------------------------------------------- |
+| CATEGORY\_NOTFOUND | Not Found   | The category with the slug '`{category}`' couldn't be found. |
+| CHANGELOG\_INVALID | Bad Request | We couldn't save this changelog (`{error}`).                 |
 
-**When not to use**
-
-- For every minor detail; overuse makes real warnings easy to ignore
-- As a replacement for clear prose and headings
-- To hide critical blocking information at the bottom of a long page
-
-## Steps (sample)
+## Installing
 
 <Steps>
-  <Step title="Add a heading" icon="type">
-    Start each page with a clear, short title.
+  <Step title="Install the CLI" title-type="p">
+    Run the install command.
   </Step>
-  <Step title="Explain the goal" icon="target">
-    Tell readers what they will achieve.
-  </Step>
-  <Step title="Link to next steps" icon="arrow-right">
-    Point to the next page they should read.
+
+  <Step title="Authenticate" title-type="p">
+    Paste your API key when prompted.
   </Step>
 </Steps>
 
-### Steps: usage tips
+```bash
+$ npm install -g doc-ai-cli
+added 1 package in 2s
+$ doc-ai login
+Logged in as accounts@documentation.ai
+```
 
-**When to use**
+## The maths
 
-- Readers must follow actions in a specific order
-- You describe tasks that can be completed in one sitting
-- You want to separate conceptual explanation from hands-on actions
+<div className="math"></div>
 
-**When not to use**
+## Reference
 
-- For unordered checklists where sequence does not matter
-- To document background concepts or architecture
-- For long, branching workflows that need their own dedicated guide
+<Expandable title="Click to reveal" default-open="false">
+  The default rate limit is 60 requests per minute.
+</Expandable>
 
-## Tabs (sample)
+<Expandable title="Press Ctrl+Alt+d" default-open="false">
+  Debug mode exposes the raw request payload.
+</Expandable>
 
-<Tabs>
-  <Tab title="CLI" icon="terminal">
-    ```bash
-    docs init my-project
-    docs dev
-    ```
-  </Tab>
-  <Tab title="UI" icon="mouse-pointer">
-    Open the editor, choose a page, and start writing.
-  </Tab>
-</Tabs>
+<ExpandableGroup>
+  <Expandable title="Connection issues" default-open="false">
+    Check your firewall allows outbound 443.
+  </Expandable>
 
-### Tabs: usage tips
+  <Expandable title="Auth failures" default-open="false">
+    Verify the key has not expired.
+  </Expandable>
+</ExpandableGroup>
 
-**When to use**
+## Status and downloads
 
-- You show the same idea in multiple languages or platforms
-- You provide alternate setup paths, such as CLI versus UI
-- You want to keep short variants in one compact section
+<Card title="Service status" href="https://status.documentation.ai" icon="activity" horizontal="false">
+  Check the current status of all services.
+</Card>
 
-**When not to use**
+<Card title="Download OpenAPI spec" href="https://demo.readme.io/openapi/openapi.json" icon="download" horizontal="false">
+  Download `openapi.json`.
+</Card>
 
-- When one variant is strongly recommended over the others
-- For long, independent flows that deserve separate pages
-- When content differs so much that readers must read all variants anyway
+<Image src="https://github.com/readmeio/marketplace/actions/workflows/ci.yml/badge.svg?branch=main" width="100" height="22" alt="ci.yml status" caption=" " style="width: 100px; height: auto; cursor: pointer;" />
+
+<Callout kind="info" collapsed="false">
+  Scheduled maintenance on Sunday 02:00 UTC.
+</Callout>
+
+## Gallery
+
+<div className="rm-slider"><Image src="https://files.readme.io/dashboard.png" alt="Dashboard" caption=" " /><Image src="https://files.readme.io/analytics.png" alt="Analytics" caption=" " /></div>
+
+<div className="rm-window"><div className="rm-window-title"><p>README.TXT</p></div><div className="rm-window-body"><p>This frame is decoration. The text inside is still markdown.</p></div></div>
+
