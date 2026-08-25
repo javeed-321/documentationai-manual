@@ -1,0 +1,35 @@
+---
+title: "Allowlisting Pipedrive IP addresses"
+---
+
+---
+
+## updatedAt: 2026-06-10T12:37:44.000Z
+
+# Allowlisting Pipedrive IP addresses
+
+If your server has firewall rules that restrict inbound traffic, you'll need to allowlist Pipedrive's IP addresses so your integration can receive requests from us. This comes up most often with webhooks, but also with email sync if your network filters outbound connections by origin IP.
+
+## When this applies
+
+You need an allowlist if:
+
+- Your server receives webhooks and a firewall blocks connections that aren't explicitly permitted
+- You use Pipedrive's email sync (IMAP or SMTP) behind a corporate network that restricts connections by origin IP
+- Any other Pipedrive-to-server traffic is filtered at the network level
+
+## Getting the current IP list
+
+We publish our IP ranges in a public GitHub repository: [pipedrive/ip-ranges](https://github.com/pipedrive/ip-ranges). Three ways to access it:
+
+1. **DNS lookup**: resolve `qc8m7z2q.pipedrive.blue` to get the current set dynamically. Works well with automated firewall provisioning tools.
+2. **JSON**: fetch `https://raw.githubusercontent.com/pipedrive/ip-ranges/master/ip-ranges.json` for a machine-readable array you can parse in a script.
+3. **Plain text**: fetch `https://raw.githubusercontent.com/pipedrive/ip-ranges/master/ip-ranges.txt` if your tooling expects a newline-delimited format.
+
+## Staying up to date
+
+Watch the [pipedrive/ip-ranges](https://github.com/pipedrive/ip-ranges) repository on GitHub to get notified when addresses change. If you manage firewall rules with a script, have it fetch the JSON or text file on a schedule rather than relying on a hardcoded list.
+
+<Callout kind="alert">
+  Static allowlists go stale. If you've copied the IP addresses somewhere, automate the fetch or set a reminder to check the repository regularly.
+</Callout>

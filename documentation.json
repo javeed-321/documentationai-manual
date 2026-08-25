@@ -1,13 +1,14 @@
 {
-  "name": "WP Travel Engine",
+  "name": "pipedrive.readme.io",
+  "initialRoute": "docs/getting-started",
   "colors": {
     "light": {
-      "brand": "#0c6b56",
+      "brand": "#3143e3",
       "heading": "#1a1a1a",
       "text": "#374151"
     },
     "dark": {
-      "brand": "#82A2C9",
+      "brand": "#85a1ff",
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
@@ -15,1046 +16,353 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Pipedrive Developer Documentation",
         "icon": "book",
         "groups": [
           {
-            "group": "Create and Manage Trips",
-            "icon": "rocket",
+            "group": "Overview",
             "pages": [
               {
-                "title": "How to add General Info?",
-                "path": "how-to-add-general-info"
+                "title": "Getting started",
+                "path": "docs/getting-started"
               },
               {
-                "title": "How to add Date and Price Info?",
-                "path": "how-to-add-date-and-price-info"
+                "title": "Developer sandbox account",
+                "path": "docs/developer-sandbox-account"
               },
               {
-                "title": "Seat Allocation and Booking Capacity in WP Travel Engine (with FSD Plugin)",
-                "path": "seat-allocation-and-booking-capacity-in-wp-travel-engine-with-fsd-plugin"
+                "title": "Pipedrive API in Postman or Insomnia",
+                "path": "docs/run-pipedrive-api-in-postman-or-insomnia"
               },
               {
-                "title": "How to Add a Trip Itinerary",
-                "path": "how-to-add-a-trip-itinerary"
+                "title": "Creating an app",
+                "path": "docs/marketplace-creating-a-proper-app"
               },
               {
-                "title": "How to Add Trip Overview Info",
-                "path": "how-to-add-trip-overview-info"
+                "title": "create-pipedrive-app CLI",
+                "path": "docs/create-pipedrive-app-cli"
               },
               {
-                "title": "How to Add Trip Info",
-                "path": "how-to-add-trip-info"
+                "title": "Pipedrive API v2 overview",
+                "path": "docs/pipedrive-api-v2"
               },
               {
-                "title": "How to Add a Trip Gallery",
-                "path": "how-to-add-a-trip-gallery"
+                "title": "Pipedrive API v2 migration guide",
+                "path": "docs/pipedrive-api-v2-migration-guide"
               },
               {
-                "title": "How to Add Trip Includes and Excludes",
-                "path": "how-to-add-trip-includes-and-excludes"
-              },
-              {
-                "title": "How to add Image Gallery?",
-                "path": "how-to-add-image-gallery"
-              },
-              {
-                "title": "How to display a Trip Duration on the single trip page?",
-                "path": "how-to-display-a-trip-duration-on-the-single-trip-page"
+                "title": "Allowlisting Pipedrive IP addresses",
+                "path": "docs/allowlisting-pipedrive-ip-addresses"
               }
             ]
           },
           {
-            "group": "Pro Add-ons",
-            "icon": "layers",
+            "group": "Core API Concepts",
             "pages": [
               {
-                "title": "Webhooks and API",
-                "path": "webhooks-and-api"
+                "title": "About the Pipedrive API",
+                "path": "docs/core-api-concepts-about-pipedrive-api"
               },
               {
-                "title": "Accommodation",
-                "path": "accommodation"
+                "title": "Changes to the API",
+                "path": "docs/changes-to-the-api"
               },
               {
-                "title": "Activity Tour Booking",
-                "path": "activity-tour-booking"
+                "title": "Requests",
+                "path": "docs/core-api-concepts-requests"
               },
               {
-                "title": "Advanced Analytics",
-                "path": "advanced-analytics"
+                "title": "Rate limiting",
+                "path": "docs/core-api-concepts-rate-limiting"
               },
               {
-                "title": "Advanced Email Automator",
-                "path": "advanced-email-automator"
+                "title": "Responses",
+                "path": "docs/core-api-concepts-responses"
               },
               {
-                "title": "Advanced Itinerary Builder",
-                "path": "advanced-itinerary-builder"
+                "title": "Date format",
+                "path": "docs/core-api-concepts-date-format"
               },
               {
-                "title": "Booking Fee",
-                "path": "booking-fee"
+                "title": "Pagination",
+                "path": "docs/core-api-concepts-pagination"
               },
               {
-                "title": "Conditional Price",
-                "path": "conditional-price"
+                "title": "HTTP status codes",
+                "path": "docs/core-api-concepts-http-status-codes"
               },
               {
-                "title": "Currency Converter",
-                "path": "currency-converter"
+                "title": "Authentication",
+                "path": "docs/core-api-concepts-authentication"
               },
               {
-                "title": "Custom Booking Link",
-                "path": "custom-booking-link"
+                "title": "Custom fields",
+                "path": "docs/core-api-concepts-custom-fields"
+              }
+            ]
+          },
+          {
+            "group": "Marketplace",
+            "pages": [
+              {
+                "title": "About the Marketplace",
+                "path": "docs/about-the-marketplace"
               },
               {
-                "title": "Elementor Widgets",
-                "path": "elementor-widgets"
+                "title": "App installation flows",
+                "path": "docs/app-installation-flows"
               },
               {
-                "title": "Email Customizer",
-                "path": "email-customizer"
-              },
-              {
-                "title": "Extra Services",
-                "path": "extra-services"
-              },
-              {
-                "title": "File Downloads",
-                "path": "file-downloads"
-              },
-              {
-                "title": "Form Editor",
-                "path": "form-editor"
-              },
-              {
-                "title": "GA4 eCommerce Tracking",
-                "path": "ga4-ecommerce-tracking"
-              },
-              {
-                "title": "Group Discount",
-                "path": "group-discount"
-              },
-              {
-                "title": "Installment Payments",
-                "path": "installment-payments"
-              },
-              {
-                "title": "Itinerary Downloader",
-                "path": "itinerary-downloader"
-              },
-              {
-                "title": "Legal Documents",
-                "path": "legal-documents"
-              },
-              {
-                "title": "Partial Payment",
-                "path": "partial-payment"
-              },
-              {
-                "title": "Per Trip Emails",
-                "path": "per-trip-emails"
-              },
-              {
-                "title": "Pickup Points",
-                "path": "pickup-points"
-              },
-              {
-                "title": "Price on Request",
-                "path": "price-on-request"
-              },
-              {
-                "title": "Private Trips",
-                "path": "private-trips"
-              },
-              {
-                "title": "Resource Management Add-on",
-                "path": "resource-management-add-on"
-              },
-              {
-                "title": "SliceWP Integration",
-                "path": "slicewp-integration"
-              },
-              {
-                "title": "Social Proof",
-                "path": "social-proof"
-              },
-              {
-                "title": "Trip Fixed Starting Dates Countdown",
-                "path": "trip-fixed-starting-dates-countdown"
-              },
-              {
-                "title": "Trip Fixed Starting Dates",
-                "path": "trip-fixed-starting-dates"
-              },
-              {
-                "title": "Trip Fixed Starting Dates Introduction",
-                "path": "trip-fixed-starting-dates-introduction"
-              },
-              {
-                "title": "Configuring the Global Settings for Trip Fixed Starting Dates",
-                "path": "configuring-the-global-settings-for-trip-fixed-starting-dates"
-              },
-              {
-                "title": "Trip Reviews",
-                "path": "trip-reviews"
-              },
-              {
-                "title": "Trip Weather Forecast",
-                "path": "trip-weather-forecast"
-              },
-              {
-                "title": "Trips Embedder",
-                "path": "trips-embedder"
-              },
-              {
-                "title": "Travel Insurance",
-                "path": "travel-insurance"
-              },
-              {
-                "title": "User History",
-                "path": "user-history"
-              },
-              {
-                "title": "Waitlist",
-                "path": "waitlist"
-              },
-              {
-                "title": "Whatsapp Notification",
-                "path": "whatsapp-notification"
-              },
-              {
-                "title": "WP Travel Engine Pro",
-                "path": "wp-travel-engine-pro"
-              },
-              {
-                "title": "Zapier",
-                "path": "zapier"
-              },
-              {
-                "group": "Fixed Starting Dates",
+                "group": "Developer Hub",
                 "pages": [
                   {
-                    "group": "Introduction",
-                    "pages": [
-                      {
-                        "title": "Overview",
-                        "path": "overview"
-                      },
-                      {
-                        "title": "Prerequisites",
-                        "path": "prerequisites"
-                      },
-                      {
-                        "title": "Key Features",
-                        "path": "key-features"
-                      }
-                    ]
+                    "title": "Developer Hub",
+                    "path": "docs/developer-hub"
                   },
                   {
-                    "group": "How to Install the Trip Fixed Starting Dates Add-on",
-                    "pages": [],
-                    "path": "how-to-install-the-trip-fixed-starting-dates-add-on"
+                    "title": "Registering a public app",
+                    "path": "docs/marketplace-registering-the-app"
                   },
                   {
-                    "group": "Global Settings",
-                    "pages": [
-                      {
-                        "title": "General",
-                        "path": "general"
-                      },
-                      {
-                        "title": "Display Options",
-                        "path": "display-options"
-                      },
-                      {
-                        "title": "Exclude Dates",
-                        "path": "exclude-dates"
-                      },
-                      {
-                        "title": "Trip Archive",
-                        "path": "trip-archive"
-                      },
-                      {
-                        "title": "Private Trip",
-                        "path": "private-trip"
-                      },
-                      {
-                        "title": "Availability Labels",
-                        "path": "availability-labels"
-                      },
-                      {
-                        "group": "Trip Departure Calendar",
-                        "pages": [
-                          {
-                            "title": "Departure Calendar Shortcode",
-                            "path": "departure-calendar-shortcode"
-                          }
-                        ],
-                        "path": "trip-departure-calendars"
-                      },
-                      {
-                        "group": "FSD Settings in the Single Trip",
-                        "pages": [
-                          {
-                            "title": "Date Settings in a Single Trip",
-                            "path": "date-settings-in-a-single-trip"
-                          },
-                          {
-                            "title": "Assigning Dates to Packages in FSD",
-                            "path": "assigning-dates-to-packages-in-fsd"
-                          },
-                          {
-                            "title": "Adding Time Slots for Booking",
-                            "path": "adding-time-slots-for-booking"
-                          },
-                          {
-                            "title": "Recurring time",
-                            "path": "recurring-time"
-                          },
-                          {
-                            "title": "Shortcode",
-                            "path": "shortcodes"
-                          }
-                        ]
-                      }
-                    ],
-                    "path": "global-settings"
+                    "title": "Registering a private app",
+                    "path": "docs/marketplace-registering-a-private-app"
                   },
                   {
-                    "title": "Troubleshooting",
-                    "path": "troubleshooting"
+                    "title": "Updating approved apps",
+                    "path": "docs/marketplace-updating-the-existing-app"
                   },
                   {
-                    "title": "FAQs",
-                    "path": "faqs"
+                    "title": "Deleting an app",
+                    "path": "docs/marketplace-deleting-the-existing-app"
                   }
-                ],
-                "icon": "calendar",
-                "path": "addon/fixed-starting-dates"
+                ]
+              },
+              {
+                "title": "Client Id And Client Secret",
+                "path": "docs/client-id-and-client-secret"
+              },
+              {
+                "title": "Marketplace App Approval Process",
+                "path": "docs/marketplace-app-approval-process"
+              },
+              {
+                "title": "Marketplace Vendor Agreement",
+                "path": "docs/marketplace-vendor-agreement"
               }
             ]
           },
           {
-            "group": "General Setup & Configuration",
+            "group": "App extensions",
             "pages": [
               {
-                "title": "How to configure Predefined Pages?",
-                "path": "how-to-configure-predefined-pages"
+                "title": "App Extensions",
+                "path": "docs/app-extensions"
               },
               {
-                "title": "How to configure Trip Tabs Settings?",
-                "path": "how-to-configure-trip-tabs-settings"
+                "title": "App Extensions Actions",
+                "path": "docs/app-extensions-actions"
               },
               {
-                "title": "How to configure Trip Info Settings?",
-                "path": "how-to-configure-trip-info-settings"
+                "group": "JSON modals",
+                "pages": [
+                  {
+                    "title": "App Extensions Json Modals",
+                    "path": "docs/app-extensions-json-modals"
+                  },
+                  {
+                    "title": "Json Modals Component Library",
+                    "path": "docs/json-modals-component-library"
+                  },
+                  {
+                    "title": "Json Modals User Interaction Handling",
+                    "path": "docs/json-modals-user-interaction-handling"
+                  }
+                ]
               },
               {
-                "title": "How to Configure Taxonomy Settings?",
-                "path": "how-to-configure-taxonomy-settings"
+                "group": "JSON panels",
+                "pages": [
+                  {
+                    "title": "App Extensions Json Panels",
+                    "path": "docs/app-extensions-json-panels"
+                  },
+                  {
+                    "title": "Json Panels Adding A Panel",
+                    "path": "docs/json-panels-adding-a-panel"
+                  },
+                  {
+                    "title": "Json Panels Actions In Panels",
+                    "path": "docs/json-panels-actions-in-panels"
+                  }
+                ]
               },
               {
-                "title": "How to configure Trip Search Settings?",
-                "path": "how-to-configure-trip-search-settings"
+                "group": "Custom UI extensions",
+                "pages": [
+                  {
+                    "title": "Custom Ui Extensions",
+                    "path": "docs/custom-ui-extensions"
+                  },
+                  {
+                    "title": "Custom Ui Extensions Floating Window",
+                    "path": "docs/custom-ui-extensions-floating-window"
+                  },
+                  {
+                    "title": "Custom Ui Extensions Panels",
+                    "path": "docs/custom-ui-extensions-panels"
+                  },
+                  {
+                    "title": "Custom Ui Extensions Modals",
+                    "path": "docs/custom-ui-extensions-modals"
+                  },
+                  {
+                    "title": "Custom Ui Extensions App Settings",
+                    "path": "docs/custom-ui-extensions-app-settings"
+                  }
+                ]
               },
               {
-                "title": "How to configure Performance Setting?",
-                "path": "how-to-configure-performance-setting"
+                "title": "Video Calling App Extension",
+                "path": "docs/video-calling-app-extension"
               },
               {
-                "title": "How to configure Single Trip settings?",
-                "path": "how-to-configure-single-trip-settings"
-              },
-              {
-                "title": "How to Configure Checkout Settings?",
-                "path": "how-to-configure-checkout-settings"
-              },
-              {
-                "title": "How to configure Trip Card/Listing page settings?",
-                "path": "how-to-configure-trip-card/listing-page-settings"
-              },
-              {
-                "title": "How to Configure Trip Archive Settings?",
-                "path": "how-to-configure-trip-archive-settings"
-              },
-              {
-                "title": "How to Customize Colors Settings?",
-                "path": "how-to-customize-colors-settings"
-              },
-              {
-                "title": "How to add a new Pricing Type?",
-                "path": "how-to-add-a-new-pricing-type"
-              },
-              {
-                "title": "How to add Global Trip Highlights?",
-                "path": "how-to-add-global-trip-highlights"
-              },
-              {
-                "title": "How to Configure Currency Settings?",
-                "path": "how-to-configure-currency-settings"
-              },
-              {
-                "title": "How to Customize the Trip Search / Archive Page",
-                "path": "how-to-customize-the-trip-search-/-archive-page"
-              },
-              {
-                "title": "Getting Started",
-                "path": "getting-started"
-              },
-              {
-                "title": "How to Set Up Coupons",
-                "path": "how-to-set-up-coupons"
+                "group": "Messaging app extension",
+                "pages": [
+                  {
+                    "title": "Messaging App Extension",
+                    "path": "docs/messaging-app-extension"
+                  },
+                  {
+                    "title": "Implementing Messaging App Extension",
+                    "path": "docs/implementing-messaging-app-extension"
+                  },
+                  {
+                    "title": "Error Codes And Troubleshooting For Messaging App Extension",
+                    "path": "docs/error-codes-and-troubleshooting-for-messaging-app-extension"
+                  }
+                ]
               }
             ]
           },
           {
-            "group": "Payment Settings and Gateways",
+            "group": "App Functionalities",
             "pages": [
               {
-                "title": "Stripe Payment Gateway",
-                "path": "stripe-payment-gateway"
-              },
-              {
-                "title": "How to add PayPal Standard?",
-                "path": "how-to-add-paypal-standard"
-              },
-              {
-                "title": "How to configure the Check Payments Settings?",
-                "path": "how-to-configure-the-check-payments-settings"
-              },
-              {
-                "title": "How to configure Tax Settings?",
-                "path": "how-to-configure-tax-settings"
-              },
-              {
-                "title": "Razorpay Payment Gateway",
-                "path": "razorpay-payment-gateway"
-              },
-              {
-                "title": "WeTravel Integration",
-                "path": "wetravel-integration"
-              },
-              {
-                "title": "WooCommerce Payment Gateway",
-                "path": "woocommerce-payment-gateway"
-              },
-              {
-                "title": "PayU Biz Payment Gateway",
-                "path": "payu-biz-payment-gateway"
-              },
-              {
-                "title": "PayU Money Payment Gateway",
-                "path": "payu-money-payment-gateway"
-              },
-              {
-                "title": "PayPal Express Checkout Payment Gateway",
-                "path": "paypal-express-checkout-payment-gateway"
-              },
-              {
-                "title": "PayHere Payment Gateway",
-                "path": "payhere-payment-gateway"
-              },
-              {
-                "title": "PayFast Payment Gateway",
-                "path": "payfast-payment-gateway"
-              },
-              {
-                "title": "Midtrans Payment Gateway",
-                "path": "midtrans-payment-gateway"
-              },
-              {
-                "title": "Himalayan Bank Payment Gateway",
-                "path": "himalayan-bank-payment-gateway"
-              },
-              {
-                "title": "Authorize.net Payment Gateway",
-                "path": "authorizenet-payment-gateway"
+                "title": "App Sharing Adding Apps To Multiple Users",
+                "path": "docs/app-sharing-adding-apps-to-multiple-users"
               }
             ]
           },
           {
-            "group": "Email Notifications",
+            "group": "OAuth 2.0",
             "pages": [
               {
-                "title": "How to resend the booking confirmation email",
-                "path": "how-to-resend-the-booking-confirmation-email"
+                "title": "Marketplace Oauth Api",
+                "path": "docs/marketplace-oauth-api"
               },
               {
-                "title": "Email Troubleshooting",
-                "path": "email-troubleshooting"
+                "title": "Marketplace Oauth Authorization",
+                "path": "docs/marketplace-oauth-authorization"
               },
               {
-                "title": "How to change booking emails",
-                "path": "how-to-change-booking-emails"
+                "title": "Marketplace Scopes And Permissions Explanations",
+                "path": "docs/marketplace-scopes-and-permissions-explanations"
               },
               {
-                "title": "How to configure Customer Email?",
-                "path": "how-to-configure-customer-email"
+                "title": "Marketplace Oauth Authorization State Parameter",
+                "path": "docs/marketplace-oauth-authorization-state-parameter"
               },
               {
-                "title": "How to configure Enquiry Email?",
-                "path": "how-to-configure-enquiry-email"
+                "title": "Marketplace Getting User Data",
+                "path": "docs/marketplace-getting-user-data"
               },
               {
-                "title": "How to configure Admin Email?",
-                "path": "how-to-configure-admin-email"
+                "title": "Webhooks For Apps",
+                "path": "docs/webhooks-for-apps"
               },
               {
-                "title": "How to follow up or send an email to customers who have booked a tour?",
-                "path": "how-to-follow-up-or-send-an-email-to-customers-who-have-booked-a-tour"
+                "title": "App Uninstallation",
+                "path": "docs/app-uninstallation"
               },
               {
-                "title": "How to Customize Header and Footer of Your Email Template",
-                "path": "how-to-customize-header-and-footer-of-your-email-template"
+                "title": "Marketplace Oauth And Api Proxy Status Codes",
+                "path": "docs/marketplace-oauth-and-api-proxy-status-codes"
               },
               {
-                "title": "Email Personalization Tags",
-                "path": "email-personalization-tags"
+                "title": "Marketplace Migrating Existing Integration Users",
+                "path": "docs/marketplace-migrating-existing-integration-users"
               }
             ]
           },
           {
-            "group": "Licensing & Account Management",
+            "group": "Tutorials and Articles",
             "pages": [
               {
-                "title": "How to Update Your Credit Card Details",
-                "path": "how-to-update-your-credit-card-details"
+                "group": "Guide for Webhooks v2",
+                "pages": [
+                  {
+                    "title": "Guide For Webhooks V2",
+                    "path": "docs/guide-for-webhooks-v2"
+                  },
+                  {
+                    "title": "List Of Webhooks V2",
+                    "path": "docs/list-of-webhooks-v2"
+                  }
+                ]
               },
               {
-                "title": "How Can You Manage Your Subscription?",
-                "path": "how-can-you-manage-your-subscription"
+                "title": "Webhooks V2 Migration Guide",
+                "path": "docs/webhooks-v2-migration-guide"
               },
               {
-                "title": "Why Upgrade to WP Travel Engine Pro",
-                "path": "why-upgrade-to-wp-travel-engine-pro"
+                "title": "Guide For Webhooks",
+                "path": "docs/guide-for-webhooks"
               },
               {
-                "title": "How to Make a Purchase from Nepal",
-                "path": "how-to-make-a-purchase-from-nepal"
+                "title": "Guide For Optimizing Api Usage",
+                "path": "docs/guide-for-optimizing-api-usage"
               },
               {
-                "title": "How to Make a Purchase from India",
-                "path": "how-to-make-a-purchase-from-india"
+                "title": "Subscriptions Api Migration Guide",
+                "path": "docs/subscriptions-api-migration-guide"
               },
               {
-                "title": "How generate the Invoice from WP Travel Engine account?",
-                "path": "how-generate-the-invoice-from-wp-travel-engine-account"
+                "group": "Tutorials",
+                "pages": [
+                  {
+                    "title": "Tutorials",
+                    "path": "docs/tutorials"
+                  },
+                  {
+                    "title": "How To Find The Api Token",
+                    "path": "docs/how-to-find-the-api-token"
+                  },
+                  {
+                    "title": "How To Get The Company Domain",
+                    "path": "docs/how-to-get-the-company-domain"
+                  },
+                  {
+                    "title": "Enabling Api For Company Users",
+                    "path": "docs/enabling-api-for-company-users"
+                  }
+                ]
               },
               {
-                "title": "How to activate the Pro add-on license key?",
-                "path": "how-to-activate-the-pro-add-on-license-key"
+                "title": "Working With Labels",
+                "path": "docs/working-with-labels"
               },
               {
-                "title": "How to Download Add-ons and Themes After Purchasing?",
-                "path": "how-to-download-add-ons-and-themes-after-purchasing"
+                "title": "Leadbooster Browser Api",
+                "path": "docs/leadbooster-browser-api"
               },
               {
-                "title": "How to upgrade the purchased plan?",
-                "path": "how-to-upgrade-the-purchased-plan"
-              },
-              {
-                "title": "How to cancel the subscription for your purchase?",
-                "path": "how-to-cancel-the-subscription-for-your-purchase"
-              },
-              {
-                "title": "Unable to Login Into Your Account",
-                "path": "unable-to-login-into-your-account"
+                "title": "Faq",
+                "path": "docs/faq"
               }
             ]
-          },
-          {
-            "group": "Multilingual & Translation",
-            "pages": [
-              {
-                "title": "How to Translate Themes and Plugins Using Loco Translate",
-                "path": "how-to-translate-themes-and-plugins-using-loco-translate"
-              },
-              {
-                "title": "How to Build a Multilingual Travel Website Using WP Travel Engine and WPML",
-                "path": "how-to-build-a-multilingual-travel-website-using-wp-travel-engine-and-wpml"
-              },
-              {
-                "title": "How to use Labels Feature for changing Static Strings?",
-                "path": "how-to-use-labels-feature-for-changing-static-strings"
-              },
-              {
-                "title": "How to use TranslatePress with WP Travel Engine?",
-                "path": "how-to-use-translatepress-with-wp-travel-engine"
-              }
-            ]
-          },
-          {
-            "group": "Trip Management and Operations",
-            "pages": [
-              {
-                "title": "How to View and Manage Trip Bookings ?",
-                "path": "how-to-view-and-manage-trip-bookings"
-              },
-              {
-                "title": "Change Currency Symbol to Currency Code",
-                "path": "change-currency-symbol-to-currency-code"
-              },
-              {
-                "title": "Changing the default currency i.e dollar",
-                "path": "changing-the-default-currency-ie-dollar"
-              },
-              {
-                "title": "“Label” text is appeared instead of Pricing Category",
-                "path": "label-text-is-appeared-instead-of-pricing-category"
-              },
-              {
-                "title": "How to Change the Adult, Child Label",
-                "path": "how-to-change-the-adult-child-label"
-              },
-              {
-                "title": "Roles & Capabilities Controlling Who Can Access What in WP Travel Engine",
-                "path": "roles-capabilities"
-              }
-            ]
-          },
-          {
-            "group": "Design & Layout Customization",
-            "pages": [
-              {
-                "title": "Is WP Travel Engine Compatible with Divi Builder?",
-                "path": "is-wp-travel-engine-compatible-with-divi-builder"
-              },
-              {
-                "title": "Can I use WP Travel Engine with Elementor?",
-                "path": "can-i-use-wp-travel-engine-with-elementor"
-              },
-              {
-                "title": "WP Travel Engine – Blocks, Patterns & Templates",
-                "path": "wp-travel-engine-blocks-patterns-templates"
-              }
-            ]
-          },
-          {
-            "group": "FAQ",
-            "pages": [
-              {
-                "title": "How to give WP Travel Engine plugin review on wordpress.org?",
-                "path": "how-to-give-wp-travel-engine-plugin-review-on-wordpressorg"
-              },
-              {
-                "title": "Why can’t I expand the Trip Edit sections (Overview,Itinerary etc.) in the backend?",
-                "path": "why-cant-i-expand-the-trip-edit-sections-overviewitinerary-etc-in-the-backend"
-              },
-              {
-                "title": "How does the Trip Expiry Date feature work in WP Travel Engine?",
-                "path": "how-does-the-trip-expiry-date-feature-work-in-wp-travel-engine"
-              },
-              {
-                "title": "How to add a new filters/taxonomies using Custom Filters",
-                "path": "how-to-add-a-new-filters/taxonomies-using-custom-filters"
-              },
-              {
-                "title": "How to add the Itinerary Downloader button on the archive pages",
-                "path": "how-to-add-the-itinerary-downloader-button-on-the-archive-pages"
-              },
-              {
-                "title": "How to Export Bookings with WP Travel Engine",
-                "path": "how-to-export-bookings-with-wp-travel-engine"
-              },
-              {
-                "title": "How to Customize the WP Travel Engine Trip Slugs",
-                "path": "how-to-customize-the-wp-travel-engine-trip-slugs"
-              },
-              {
-                "title": "How to Customize the Trip Related Trips",
-                "path": "how-to-customize-the-trip-related-trips"
-              },
-              {
-                "title": "How to Sort Pricing Category in WP Travel Engine",
-                "path": "how-to-sort-pricing-category-in-wp-travel-engine"
-              },
-              {
-                "title": "Add FAQs to Your Trips",
-                "path": "add-faqs-to-your-trips"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "pages": [
-              {
-                "title": "503 and Resource Limit Errors",
-                "path": "503-resource-limit-errors"
-              },
-              {
-                "title": "Created Destinations Not Displayed on the Destination Page",
-                "path": "created-destinations-not-displayed-on-the-destination-page"
-              },
-              {
-                "title": "Resolving the Date and Price Tab Loading Issue",
-                "path": "resolving-the-date-and-price-tab-loading-issue"
-              },
-              {
-                "title": "How to check plugin conflicts in WordPress?",
-                "path": "how-to-check-plugin-conflicts-in-wordpress"
-              },
-              {
-                "title": "Search Result Page Showing a 404 Error",
-                "path": "search-result-page-showing-a-404-error"
-              },
-              {
-                "title": "Trip Facts Not Appearing on the Trip Page",
-                "path": "trip-facts-not-appearing-on-the-trip-page"
-              },
-              {
-                "title": "Page not found appeared on the single trip page",
-                "path": "page-not-found-appeared-on-the-single-trip-page"
-              }
-            ]
-          },
-          {
-            "group": "Travel Monster",
-            "pages": [
-              {
-                "title": "Setup Static Homepage",
-                "path": "setup-static-homepage"
-              },
-              {
-                "title": "Configure Widgets",
-                "path": "configure-widgets"
-              },
-              {
-                "title": "Configure Menus",
-                "path": "configure-menus"
-              },
-              {
-                "title": "Posts & Pages Settings",
-                "path": "posts-pages-settings"
-              },
-              {
-                "title": "Footer Settings",
-                "path": "footer-settings"
-              },
-              {
-                "title": "Header Settings",
-                "path": "header-settings"
-              },
-              {
-                "title": "General Settings",
-                "path": "general-settings"
-              },
-              {
-                "title": "Configure Site Identity",
-                "path": "configure-site-identity"
-              },
-              {
-                "title": "Import Starter Site",
-                "path": "import-starter-site"
-              },
-              {
-                "title": "Install Travel Monster Theme",
-                "path": "install-travel-monster-theme"
-              }
-            ]
-          },
-          {
-            "group": "Travel Monster Pro",
-            "pages": [
-              {
-                "title": "User Social Link",
-                "path": "user-social-link"
-              },
-              {
-                "title": "Misc Settings",
-                "path": "misc-settings"
-              },
-              {
-                "title": "Posts & Pages Settings 2",
-                "path": "posts-pages-settings-2"
-              },
-              {
-                "title": "Footer Settings 2",
-                "path": "footer-settings-2"
-              },
-              {
-                "title": "Header Settings 2",
-                "path": "header-settings-2"
-              },
-              {
-                "title": "General Settings 2",
-                "path": "general-settings-2"
-              },
-              {
-                "title": "Import Starter Site 2",
-                "path": "import-starter-site-2"
-              },
-              {
-                "title": "How To Activate Travel Monster Pro License",
-                "path": "how-to-activate-travel-monster-pro-license"
-              },
-              {
-                "title": "Install and Activate Travel Monster Pro",
-                "path": "install-and-activate-travel-monster-pro"
-              },
-              {
-                "title": "Travel Monster Addons",
-                "path": "travel-monster-addons"
-              }
-            ]
-          },
-          {
-            "group": "Altus AI",
-            "pages": [
-              {
-                "title": "Getting Started with Altus AI",
-                "path": "getting-started-with-altus-ai"
-              },
-              {
-                "title": "Content Generation",
-                "path": "content-generation"
-              },
-              {
-                "title": "Connect AI Assistants via MCP with WP Travel Engine",
-                "path": "connect-ai-assistants-via-mcp-with-wp-travel-engine"
-              },
-              {
-                "title": "Usage & Logs",
-                "path": "usage-logs"
-              }
-            ]
-          },
-          {
-            "group": "WordPress Themes",
-            "pages": [
-              {
-                "title": "Travel Booking Pro",
-                "path": "travel-booking-pro"
-              },
-              {
-                "title": "Travel Booking",
-                "path": "travel-booking"
-              },
-              {
-                "title": "Travel Muni Pro",
-                "path": "travel-muni-pro"
-              },
-              {
-                "title": "Travel Muni",
-                "path": "travel-muni"
-              },
-              {
-                "title": "Travelverse",
-                "path": "travelverse"
-              },
-              {
-                "title": "Pattern Engine",
-                "path": "pattern-engine"
-              }
-            ]
-          },
-          {
-            "group": "Elementor Widgets",
-            "pages": [
-              {
-                "title": "Destination/Activities Slider 3",
-                "path": "destination/activities-slider-3"
-              },
-              {
-                "title": "Destination/Activities Slider 2",
-                "path": "destination/activities-slider-2"
-              },
-              {
-                "title": "Destination/Activities Slider 1",
-                "path": "destination/activities-slider-1"
-              },
-              {
-                "title": "Destination/Activities Module 2",
-                "path": "destination/activities-module-2"
-              },
-              {
-                "title": "Destination/Activities Module 1",
-                "path": "destination/activities-module-1"
-              },
-              {
-                "title": "Destination/Activities 2",
-                "path": "destination/activities-2"
-              },
-              {
-                "title": "Destination/Activities 1",
-                "path": "destination/activities-1"
-              },
-              {
-                "title": "Trips List",
-                "path": "trips-list"
-              },
-              {
-                "title": "Advanced Trips 4",
-                "path": "advanced-trips-4"
-              },
-              {
-                "title": "Advanced Trip 3",
-                "path": "advanced-trip-3"
-              },
-              {
-                "title": "Advanced Trip 2",
-                "path": "advanced-trip-2"
-              },
-              {
-                "title": "Advanced Trip",
-                "path": "advanced-trip"
-              },
-              {
-                "title": "Featured Trip",
-                "path": "featured-trip"
-              },
-              {
-                "title": "Trips Accordion",
-                "path": "trips-accordion"
-              },
-              {
-                "title": "Trips Module Three",
-                "path": "trips-module-three"
-              },
-              {
-                "title": "Trips Module Two",
-                "path": "trips-module-two"
-              },
-              {
-                "title": "Trips Module One",
-                "path": "trips-module-one"
-              },
-              {
-                "title": "Trips Slider",
-                "path": "trips-slider"
-              },
-              {
-                "title": "Trips Slider Two",
-                "path": "trips-slider-two"
-              },
-              {
-                "title": "Trips Slider Three",
-                "path": "trips-slider-three"
-              },
-              {
-                "title": "Trips Tab",
-                "path": "trips-tab"
-              },
-              {
-                "title": "Trip Search",
-                "path": "trip-search"
-              },
-              {
-                "title": "Tour Search widget",
-                "path": "tour-search-widget"
-              },
-              {
-                "title": "Contact widget",
-                "path": "contact-widget"
-              },
-              {
-                "title": "Navigation menu widget",
-                "path": "navigation-menu-widget"
-              },
-              {
-                "title": "Search widget",
-                "path": "search-widget"
-              },
-              {
-                "title": "Site logo widget",
-                "path": "site-logo-widget"
-              },
-              {
-                "title": "Header and Footer Builder",
-                "path": "header-and-footer-builder"
-              },
-              {
-                "title": "Mobile Menu & Off Canvas",
-                "path": "mobile-menu-off-canvas"
-              }
-            ]
-          },
-          {
-            "group": "Customer Experience & Portal",
-            "pages": [
-              {
-                "title": "How to configure User Dashboard?",
-                "path": "how-to-configure-user-dashboard"
-              },
-              {
-                "title": "How to Configure Social Login",
-                "path": "how-to-configure-social-login"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.yaml",
-            "pages": []
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "What is WP Travel Engine?",
-                "path": "help-center/faq/what-is-wp-travel-engine"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Fix Plugin Conflict",
-                "path": "help-center/troubleshooting/fix-plugin-conflict"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Setup First Tour",
-                "path": "help-center/guides/setup-first-tour"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
           }
         ]
       }
     ]
-  },
-  "seo": {
-    "robots:index": false,
-    "robots:follow": true
   }
 }
