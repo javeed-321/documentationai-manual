@@ -4,6 +4,24 @@ description: >-
   Configure nodes, add features and UI elements, and manage attributes in the
   Test Design canvas.
 type: guide
+heading: 'Mintlify Pricing: Plans, AI Credits, Enterprise Pricing & Hidden Costs'
+deck: >-
+  Understand how Mintlify's pricing actually works, from Pro and Enterprise
+  plans to AI credits, rollover, overages, and real-world cost scenarios so you
+  can estimate your total monthly spend before you buy.
+author: roopreddy
+category: comparisons
+cover: ./cover.png
+cta:
+  eyebrow: Comparing the bill?
+  headline: The free tier is a real tier
+  body: >-
+    No contact-sales wall before an upgrade, and no per-seat surprise at
+    renewal.
+  action:
+    label: Start free
+    href: signup
+  note: No credit card required
 ---
 ## Configure a Node Using the Add Node Functionality
 
@@ -32,15 +50,27 @@ In the UI elements configuration, you can:
 
 - Add new UI elements to the required feature by clicking the Plus icon at the top of the controls pane, update the attributes of the UI element, such as control name, control value, and current page. By default, one UI element is configured. The following table describes the attributes and descriptions of UI element line items.
 
-| Attributes             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Control Name           | Enter the UI element (control) name. For example, in the login page, the submit button is a UI element name.                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Control Type           | Select the UI element type. In the preceding example, it is a clickable button that triggers the submission of the username and password data to authenticate the user.                                                                                                                                                                                                                                                                                                                                                   |
-| Business Rules         | Select the Assertion and Business Rules buttons, then select the checkbox for Business Rules. The selected business rules will appear in Node Configuration. The Business Rules button is enabled only when the UI element type is Textbox, Text Area, or Dropdown List. You can generate different sets of data using business rules. Business rules help to validate text field, text area, and dropdown list. Business Rules categories are: Correct valuesIncorrect valuesIllegal valuesInvalid valuesBoundary values |
-| Control Value          | Enter the test data or parameters for the UI element. For example, when you enter "enter your name" in the UI element text box, the parameter is `<username>`.                                                                                                                                                                                                                                                                                                                                                            |
-| Locator                | You can update the XPath information captured using the algoScraper tool                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Delete Icon            | You can delete a created UI element line item.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Set the Default Action | You can enter the default action by clicking the More Menu (three dots) and then click Save.                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Attributes             | Description                                                                                                                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Control Name           | Enter the UI element (control) name. For example, in the login page, the submit button is a UI element name.                                                                                                              |
+| Control Type           | Select the UI element type. In the preceding example, it is a clickable button that triggers the submission of the username and password data to authenticate the user.                                                   |
+| Business Rules         | Select the Assertion and Business Rules buttons, then select the checkbox for Business Rules. The selected business rules will appear in Node Configuration. See [Business rules categories](#business-rules-categories). |
+| Control Value          | Enter the test data or parameters for the UI element. For example, when you enter "enter your name" in the UI element text box, the parameter is `<username>`.                                                            |
+| Locator                | You can update the XPath information captured using the algoScraper tool.                                                                                                                                                 |
+| Delete Icon            | You can delete a created UI element line item.                                                                                                                                                                            |
+| Set the Default Action | You can enter the default action by clicking the More Menu (three dots) and then click Save.                                                                                                                              |
+
+#### Business rules categories
+
+The Business Rules button is enabled only when the UI element type is Textbox, Text Area, or Dropdown List. You can generate different sets of data using business rules, which help to validate text field, text area, and dropdown list.
+
+Business rules categories are:
+
+1. Correct values
+2. Incorrect values
+3. Illegal values
+4. Invalid values
+5. Boundary values
 
 The following table provides a list of various UI element types used in Node Configuration:
 
@@ -62,11 +92,7 @@ The following table provides a list of various UI element types used in Node Con
 | Scroll                | A scroll refers to the action of moving content up, down, or sideways within a window or container to view more information that extends beyond the visible area.                                                                                                               |
 | Window                | A window is a rectangular area on the screen that displays content and allows interaction with an application or system.                                                                                                                                                        |
 | New Tab               | A New Tab in applications or web browsers allows you to open a new tab for viewing or interacting with different content without navigating away from the current screen.                                                                                                       |
-| Parent (optional)     | A Parent organizes and contains child UI elements, helping to structure and manage their layout and interaction within the interface.- this is&#x20;
-- hello&#x20;
-- and &#x20;1. hai&#x20;
-2. bai&#x20;
-3. helo                                                                |
+| Parent (optional)     | A Parent organizes and contains child UI elements, helping to structure and manage their layout and interaction within the interface.                                                                                                                                           |
 
 - search for a particular UI element by entering a keyword from the UI element's name in the search textbox. The matching elements will appear as you type.
 - select all the UI elements by selecting the 'Select All' checkbox or clicking the Select All Controls button.
