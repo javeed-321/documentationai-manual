@@ -1,0 +1,714 @@
+{
+  "slug": "apis/docs/customer-verification",
+  "source": "https://developer.drivewealth.com/apis/docs/customer-verification.md",
+  "url": "https://developer.drivewealth.com/apis/docs/customer-verification",
+  "title": "Customer verification",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T22:50:15.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 16,
+    "list": 2,
+    "Callout": 2,
+    "code": 5,
+    "Image": 1,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Customer verification",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Customer verification",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Like with many other types of financial products, customers cannot engage in investing until their personal information is verified. There are several flows supported out-of-the-box by DriveWealth:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Like with many other types of financial products, customers cannot engage in investing until their personal information is verified. There are several flows supported out-of-the-box by DriveWealth:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        15
+      ],
+      "raw": "1. **DriveWealth Does KYC** (`DO_KYC`) — DriveWealth performs KYC (Know-Your-Customer) checks on all newly created Users.\n\n2. **DriveWealth Relies on client** (`NO_KYC`) — DriveWealth can rely on the client's KYC processes, pending a successful review of KYC policies and procedures.\n\n3. **DriveWealth performs secondary KYC** (`VERIFY_KYC`) — In some cases, DriveWealth can allow accounts to be opened immediately, based on the client's KYC processes, but DriveWealth must also verify all account details after the account is opened.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DriveWealth Does KYC (DO_KYC) — DriveWealth performs KYC (Know-Your-Customer) checks on all newly created Users.DriveWealth Relies on client (NO_KYC) — DriveWealth can rely on the client's KYC processes, pending a successful review of KYC policies and procedures.DriveWealth performs secondary KYC (VERIFY_KYC) — In some cases, DriveWealth can allow accounts to be opened immediately, based on the client's KYC processes, but DriveWealth must also verify all account details after the account is opened.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        17,
+        24
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Document Upload Guidelines\n\n  For clients required to upload documents for KYC verification, following are some guidelines:\n\n  - DriveWealth DOES NOT accept digital ID cards, the documents uploaded should be copies of the the Physical ID card themselves. Camera clicked pictures or scanned copies of the Physical ID cards are accepted.\n  - Names on the ID Document MUST match the name on the Brokerage account. For instance, if the ID document has the name \"John Allen Smith\", the brokerage account should be opened by inputting the`firstName` as \"John\" and `lastName` as \"Allen Smith\" while Creating the User.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "Document Upload GuidelinesFor clients required to upload documents for KYC verification, following are some guidelines:DriveWealth DOES NOT accept digital ID cards, the documents uploaded should be copies of the the Physical ID card themselves. Camera clicked pictures or scanned copies of the Physical ID cards are accepted.Names on the ID Document MUST match the name on the Brokerage account. For instance, if the ID document has the name \"John Allen Smith\", the brokerage account should be opened by inputting thefirstName as \"John\" and lastName as \"Allen Smith\" while Creating the User.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 4,
+          "lines": [
+            18,
+            18
+          ],
+          "raw": "  ### Document Upload Guidelines",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Document Upload Guidelines",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 5,
+          "lines": [
+            20,
+            20
+          ],
+          "raw": "  For clients required to upload documents for KYC verification, following are some guidelines:",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "For clients required to upload documents for KYC verification, following are some guidelines:",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 6,
+          "lines": [
+            22,
+            23
+          ],
+          "raw": "  - DriveWealth DOES NOT accept digital ID cards, the documents uploaded should be copies of the the Physical ID card themselves. Camera clicked pictures or scanned copies of the Physical ID cards are accepted.\n  - Names on the ID Document MUST match the name on the Brokerage account. For instance, if the ID document has the name \"John Allen Smith\", the brokerage account should be opened by inputting the`firstName` as \"John\" and `lastName` as \"Allen Smith\" while Creating the User.",
+          "kind": "list",
+          "syntax": "markdown",
+          "text": "DriveWealth DOES NOT accept digital ID cards, the documents uploaded should be copies of the the Physical ID card themselves. Camera clicked pictures or scanned copies of the Physical ID cards are accepted.Names on the ID Document MUST match the name on the Brokerage account. For instance, if the ID document has the name \"John Allen Smith\", the brokerage account should be opened by inputting thefirstName as \"John\" and lastName as \"Allen Smith\" while Creating the User.",
+          "attrs": {
+            "ordered": "false"
+          },
+          "target": {
+            "component": null,
+            "status": "transform",
+            "note": "normalise `*`/`+` markers to `-`"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "One of the three available verification methods will be selected based on the clients geographic location, licenses, and KYC/AML capabilities.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "One of the three available verification methods will be selected based on the clients geographic location, licenses, and KYC/AML capabilities.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "## `DO_KYC`",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "DO_KYC",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "Once a User is created, its status will be pending, as shown in the following Event:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once a User is created, its status will be pending, as shown in the following Event:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        32,
+        48
+      ],
+      "raw": "```json\n{\n  \"id\": \"event_b84d304f-d434-4610-859a-ebdcda33ffcb\",\n  \"type\": \"users.created\",\n  \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n  \"payload\": {\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\",\n    \"email\" : \"jsmith@google.com\",\n    \"userID\": \"0b06eda0-b7d6-4e4b-8f8f-c46426070957\",\n    \"status\": {\n      \"name\": \"PENDING\",\n      \"description\": \"User is pending approval.\"\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"event_b84d304f-d434-4610-859a-ebdcda33ffcb\",\n  \"type\": \"users.created\",\n  \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n  \"payload\": {\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\",\n    \"email\" : \"jsmith@google.com\",\n    \"userID\": \"0b06eda0-b7d6-4e4b-8f8f-c46426070957\",\n    \"status\": {\n      \"name\": \"PENDING\",\n      \"description\": \"User is pending approval.\"\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "Depending on the region of the customer, you may need to upload physical document proofs as well before validation will begin. Refer back to [Opening accounts](https://developer.drivewealth.com/apis/docs/opening-accounts) for how to do this.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Depending on the region of the customer, you may need to upload physical document proofs as well before validation will begin. Refer back to Opening accounts for how to do this.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "Verification of the customer is initiated automatically, and a determination is made within the next 15 minutes (but usually, within seconds). Once this is complete, the User status is changed, which can be subscribed to via an Event:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Verification of the customer is initiated automatically, and a determination is made within the next 15 minutes (but usually, within seconds). Once this is complete, the User status is changed, which can be subscribed to via an Event:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        54,
+        75
+      ],
+      "raw": "```json\n{\n  \"id\": \"event_4da42927...\",\n  \"type\": \"users.updated\",\n  \"timestamp\": \"2019-01-09T12:14:44.155187291Z\",\n  \"payload\": {\n    \"previous\": {\n      \"status\": {\n        \"name\": \"PENDING\",\n        \"description\": \"User is pending approval.\"\n      }\n    },\n    \"current\": {\n      \"status\": {\n        \"name\": \"APPROVED\",\n        \"description\": \"User is approved.\"\n      }\n    },\n    \"userID\": \"cc07f91b-7ee1...\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"event_4da42927...\",\n  \"type\": \"users.updated\",\n  \"timestamp\": \"2019-01-09T12:14:44.155187291Z\",\n  \"payload\": {\n    \"previous\": {\n      \"status\": {\n        \"name\": \"PENDING\",\n        \"description\": \"User is pending approval.\"\n      }\n    },\n    \"current\": {\n      \"status\": {\n        \"name\": \"APPROVED\",\n        \"description\": \"User is approved.\"\n      }\n    },\n    \"userID\": \"cc07f91b-7ee1...\"\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "If not using the Events system, you can alternatively check the [Retrieve KYC status by User](https://developer.drivewealth.com/apis/reference/get_users-userid-kyc-status) API. When something goes wrong, like if the customer cannot be verified, you can also use this API to determine the specific failure and action to take:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If not using the Events system, you can alternatively check the Retrieve KYC status by User API. When something goes wrong, like if the customer cannot be verified, you can also use this API to determine the specific failure and action to take:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        79,
+        105
+      ],
+      "raw": "```json\nGET /back-office/users/:userID/kyc-status\n{\n  ...\n  \"kyc\": {\n    \"status\": {\n      \"name\": \"KYC_INFO_REQUIRED\",\n      \"code\": \"KS102\",\n      \"description\": \"User's PII not matched. Please revisit your PII info.\"\n    },\n    \"approved\": null,\n    \"accepted\": null,\n    \"errors\": [{\n        \"name\": \"USER_ID_ERROR\",\n        \"code\": \"K101\",\n        \"description\": \"SSN/ID number not matched. Please edit your PII info or submit the document for verification.\"\n      },\n      {\n        \"name\": \"USER_DOB_ERROR\",\n        \"code\": \"K102\",\n        \"description\": \"Date of birth not matched.\"\n      }\n    ]\n  },\n  ...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "GET /back-office/users/:userID/kyc-status\n{\n  ...\n  \"kyc\": {\n    \"status\": {\n      \"name\": \"KYC_INFO_REQUIRED\",\n      \"code\": \"KS102\",\n      \"description\": \"User's PII not matched. Please revisit your PII info.\"\n    },\n    \"approved\": null,\n    \"accepted\": null,\n    \"errors\": [{\n        \"name\": \"USER_ID_ERROR\",\n        \"code\": \"K101\",\n        \"description\": \"SSN/ID number not matched. Please edit your PII info or submit the document for verification.\"\n      },\n      {\n        \"name\": \"USER_DOB_ERROR\",\n        \"code\": \"K102\",\n        \"description\": \"Date of birth not matched.\"\n      }\n    ]\n  },\n  ...\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        107,
+        107
+      ],
+      "raw": "## `NO_KYC` and `VERIFY_KYC`",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "NO_KYC and VERIFY_KYC",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        109,
+        109
+      ],
+      "raw": "With these setups, once you create a User, you’re done! The User status will change to APPROVED within a few seconds.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "With these setups, once you create a User, you’re done! The User status will change to APPROVED within a few seconds.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        111,
+        115
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ###\n\n  Only customers whose details have been vetted and approved by your firm should be sent to DriveWealth in these models.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "Only customers whose details have been vetted and approved by your firm should be sent to DriveWealth in these models.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 19,
+          "lines": [
+            112,
+            112
+          ],
+          "raw": "  ###",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 20,
+          "lines": [
+            114,
+            114
+          ],
+          "raw": "  Only customers whose details have been vetted and approved by your firm should be sent to DriveWealth in these models.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Only customers whose details have been vetted and approved by your firm should be sent to DriveWealth in these models.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        117,
+        117
+      ],
+      "raw": "## KYC status workflow",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "KYC status workflow",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        119,
+        119
+      ],
+      "raw": "The [Retrieve KYC status by User](https://developer.drivewealth.com/apis/reference/get_users-userid-kyc-status) API will return different values based on the current KYC state of the customer. The workflow of statuses looks like this:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Retrieve KYC status by User API will return different values based on the current KYC state of the customer. The workflow of statuses looks like this:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        121,
+        121
+      ],
+      "raw": "<Image src=\"https://files.readme.io/feed41f-6a18b92-KYC_Status.png\" alt=\"6a18b92-KYC_Status.png\" align=\"center\" width=\"1187\" caption=\"At any point beyond `KYC_PROCESSING`, the User's KYC can be approved or denied.\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/feed41f-6a18b92-KYC_Status.png",
+        "alt": "6a18b92-KYC_Status.png",
+        "align": "center",
+        "width": "1187",
+        "caption": "At any point beyond `KYC_PROCESSING`, the User's KYC can be approved or denied."
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        123,
+        132
+      ],
+      "raw": "| KYC status          | Description                                                                                                                                                                                                     |\n| :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `KYC_NOT_READY`     | All required data document fields have not been submitted.                                                                                                                                                      |\n| `KYC_READY`         | All required data document fields have been submitted successfully and user is ready to be KYC'ed.                                                                                                              |\n| `KYC_PROCESSING`    | The user's data submitted has been sent to our vendor to verify the user.                                                                                                                                       |\n| `KYC_APPROVED`      | The user's data has been verified by our vendor and the vendor has signed on the legitimacy of the user.                                                                                                        |\n| `KYC_INFO_REQUIRED` | The user's data that has been submitted to DriveWealth and thus our vendor has one or many errors in it. To have the KYC process rerun, once the user updates their information, call a PATCH on /users.        |\n| `KYC_DOC_REQUIRED`  | A physical document like a passport, driver's license, utilities bill, etc. is required to be uploaded to uploaded. Once the physical document has been uploaded this will automatically rerun the KYC process. |\n| `KYC_MANUAL_REVIEW` | The user's KYC is under additional review after additional data and documents have been submitted.                                                                                                              |\n| `KYC_DENIED`        | The user's KYC was denied by our vendor automatically by the system or by a human operator.                                                                                                                     |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "KYC status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "KYC_NOT_READY",
+            "All required data document fields have not been submitted."
+          ],
+          [
+            "KYC_READY",
+            "All required data document fields have been submitted successfully and user is ready to be KYC'ed."
+          ],
+          [
+            "KYC_PROCESSING",
+            "The user's data submitted has been sent to our vendor to verify the user."
+          ],
+          [
+            "KYC_APPROVED",
+            "The user's data has been verified by our vendor and the vendor has signed on the legitimacy of the user."
+          ],
+          [
+            "KYC_INFO_REQUIRED",
+            "The user's data that has been submitted to DriveWealth and thus our vendor has one or many errors in it. To have the KYC process rerun, once the user updates their information, call a PATCH on /users."
+          ],
+          [
+            "KYC_DOC_REQUIRED",
+            "A physical document like a passport, driver's license, utilities bill, etc. is required to be uploaded to uploaded. Once the physical document has been uploaded this will automatically rerun the KYC process."
+          ],
+          [
+            "KYC_MANUAL_REVIEW",
+            "The user's KYC is under additional review after additional data and documents have been submitted."
+          ],
+          [
+            "KYC_DENIED",
+            "The user's KYC was denied by our vendor automatically by the system or by a human operator."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        134,
+        134
+      ],
+      "raw": "## Ongoing account monitoring",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Ongoing account monitoring",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        136,
+        136
+      ],
+      "raw": "In all of these models, DriveWealth will perform some level of continuing checks on the customer throughout the lifecycle of the Account. If DriveWealth finds information that would prohibit further trading, the Account may change in status to prevent further trading. This can be captured via an Event:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In all of these models, DriveWealth will perform some level of continuing checks on the customer throughout the lifecycle of the Account. If DriveWealth finds information that would prohibit further trading, the Account may change in status to prevent further trading. This can be captured via an Event:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        138,
+        161
+      ],
+      "raw": "```json\n{\n  \"id\": \"event_773a8a45-75fc...\",\n  \"type\": \"accounts.updated\",\n  \"timestamp\": \"2019-03-28T22:46:47.821071506Z\",\n  \"payload\": {\n    \"previous\": {\n      \"status\": {\n        \"name\": \"OPEN\",\n        \"description\": \"Open\"\n      }\n    },\n    \"current\": {\n      \"status\": {\n        \"name\": \"CLOSED\",\n        \"description\": \"Closed\"\n      }\n    },\n    \"accountID\": \"711c012d-7a3c...\",\n    \"accountNo\": \"ABCD000001\",\n    \"userID\": \"711c012d-7a3c...\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"event_773a8a45-75fc...\",\n  \"type\": \"accounts.updated\",\n  \"timestamp\": \"2019-03-28T22:46:47.821071506Z\",\n  \"payload\": {\n    \"previous\": {\n      \"status\": {\n        \"name\": \"OPEN\",\n        \"description\": \"Open\"\n      }\n    },\n    \"current\": {\n      \"status\": {\n        \"name\": \"CLOSED\",\n        \"description\": \"Closed\"\n      }\n    },\n    \"accountID\": \"711c012d-7a3c...\",\n    \"accountNo\": \"ABCD000001\",\n    \"userID\": \"711c012d-7a3c...\"\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        163,
+        163
+      ],
+      "raw": "In some cases, Accounts will be restricted from trading while an investigation is done (typically alongside the client). In other cases, an Account may need to be closed with urgency.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In some cases, Accounts will be restricted from trading while an investigation is done (typically alongside the client). In other cases, an Account may need to be closed with urgency.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        165,
+        165
+      ],
+      "raw": "## Simulating specific cases",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Simulating specific cases",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        167,
+        167
+      ],
+      "raw": "In sandbox, you can test error cases by setting the `lastName` of a User to the specific error condition you want to encounter.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In sandbox, you can test error cases by setting the lastName of a User to the specific error condition you want to encounter.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        169,
+        169
+      ],
+      "raw": "For example, you can create a User with this data:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For example, you can create a User with this data:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        171,
+        191
+      ],
+      "raw": "```json\nPOST /back-office/users\n{\n  \"userType\": \"INDIVIDUAL_TRADER\",\n  \"documents\": [\n    {\n      \"type\": \"BASIC_INFO\",\n      \"data\": {\n        \"firstName\": \"Daryl\",\n        \"lastName\": \"DOB_NOT_MATCH\",\n        \"username\": \"DHall\",\n        \"country\": \"USA\",\n        \"phone\": \"2914443333\",\n        \"emailAddress\": \"b@b.com\",\n        \"language\": \"en_US\"\n      }\n    },\n    ...\n  ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "POST /back-office/users\n{\n  \"userType\": \"INDIVIDUAL_TRADER\",\n  \"documents\": [\n    {\n      \"type\": \"BASIC_INFO\",\n      \"data\": {\n        \"firstName\": \"Daryl\",\n        \"lastName\": \"DOB_NOT_MATCH\",\n        \"username\": \"DHall\",\n        \"country\": \"USA\",\n        \"phone\": \"2914443333\",\n        \"emailAddress\": \"b@b.com\",\n        \"language\": \"en_US\"\n      }\n    },\n    ...\n  ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        193,
+        193
+      ],
+      "raw": "Once the KYC workflow is invoked, this User will be rejected for an invalid date of birth.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once the KYC workflow is invoked, this User will be rejected for an invalid date of birth.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        195,
+        195
+      ],
+      "raw": "Refer to the [full list of KYC error codes](https://developer.drivewealth.com/apis/reference/errors#kyc-document-errors), all of which can be used in this manner.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Refer to the full list of KYC error codes, all of which can be used in this manner.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

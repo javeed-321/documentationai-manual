@@ -1,0 +1,1089 @@
+{
+  "slug": "apis/changelog/api-release-155",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-155.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-155",
+  "title": "API Release 1.55",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 30,
+    "list": 3,
+    "paragraph": 5,
+    "code": 11,
+    "Callout": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.55",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.55",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.55",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.55",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Deployed in UAT - Yes, available to test.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deployed in UAT - Yes, available to test.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Deployed in Production - July 11, 2023.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deployed in Production - July 11, 2023.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🚀New Features - What’s New?",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀New Features - What’s New?",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "#### None",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "None",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "# 2. 🎉Feature Enhancements - We are making it better for you!!",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "2. 🎉Feature Enhancements - We are making it better for you!!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "## 2.1 Enhancement to Travel rules + bankAccountID combo",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.1 Enhancement to Travel rules + bankAccountID combo",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "#### Existing Feature - With the current implementation of the Travel rule, it is required as a mandate for the partners to add the below-mentioned details for INSTANT\\_FUNDING deposits/redemptions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Existing Feature - With the current implementation of the Travel rule, it is required as a mandate for the partners to add the below-mentioned details for INSTANT_FUNDING deposits/redemptions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        21,
+        28
+      ],
+      "raw": "1. Bank Account Number\n2. Bank Routing Number\n3. Bank Name\n4. Bank Address\n5. Bank Country\n6. Account Holder’s name\n7. Account Holder’s Address\n8. Account Holder’s country",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Bank Account NumberBank Routing NumberBank NameBank AddressBank CountryAccount Holder’s nameAccount Holder’s AddressAccount Holder’s country",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "#### What is improving? - Instead of asking partners to add the source details for Travel rules manually for every INSTANT\\_FUNDING request, we want to utilize the bank account API to capture the travel rule details.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "What is improving? - Instead of asking partners to add the source details for Travel rules manually for every INSTANT_FUNDING request, we want to utilize the bank account API to capture the travel rule details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "**POST bank-account changes for Travel Rule + Bank Account ID combo**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "POST bank-account changes for Travel Rule + Bank Account ID combo",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        34,
+        50
+      ],
+      "raw": "```Text POST: {{bo-url}}/back-office/bank-account\n{\n  \"bankAccountNumber\":\"123456789\",\n  \"bankRoutingNumber\":\"CHASUS33\",\n  \"userID\":\"userID\",\n  \"bankAccountNickname\": \"Kakashi's spending ACRT account\",\n  \"bankAccountPurpose\" : \"TRAVEL_RULE\",\n  \"beneficiaryDetails\" : {\n      \"accountHolderName\" : \"Kakashi Hatake\",\n      \"accountHolderAddress\" : \"Village hidden in sand\",\n      \"accountHolderCountry\" : \"JPN\"\n  },\n  \"bankName\" : \"Bank of Konoha\",\n  \"bankAddress\" : \"Village hidden in mist\",\n  \"bankCountry\" : \"JPN\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "POST: {{bo-url}}/back-office/bank-account",
+        "code": "{\n  \"bankAccountNumber\":\"123456789\",\n  \"bankRoutingNumber\":\"CHASUS33\",\n  \"userID\":\"userID\",\n  \"bankAccountNickname\": \"Kakashi's spending ACRT account\",\n  \"bankAccountPurpose\" : \"TRAVEL_RULE\",\n  \"beneficiaryDetails\" : {\n      \"accountHolderName\" : \"Kakashi Hatake\",\n      \"accountHolderAddress\" : \"Village hidden in sand\",\n      \"accountHolderCountry\" : \"JPN\"\n  },\n  \"bankName\" : \"Bank of Konoha\",\n  \"bankAddress\" : \"Village hidden in mist\",\n  \"bankCountry\" : \"JPN\"\n}"
+      },
+      "text": "POST: {{bo-url}}/back-office/bank-account",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 34
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        52,
+        88
+      ],
+      "raw": "```Text 200 OK response\n{\n    \"id\": \"bank_2b8c12f1-048b-44a1-ae83-c367972de5b4\",\n    \"userDetails\": {\n        \"userID\": \"d519fbf6-3a9a-4656-99a2-7e219776c678\",\n        \"username\": \"test.individual.1688034596\",\n        \"firstName\": \"Levi\",\n        \"lastName\": \"Ackermann\",\n        \"email\": \"b@b.com\",\n        \"parentIB\": {\n            \"id\": \"80f9b672-120d-4b73-9cc9-42fb3262c4b9\",\n            \"name\": \"DriveWealth\"\n        },\n        \"wlpID\": \"DW\"\n    },\n    \"bankAccountDetails\": {\n        \"bankAccountNickname\": \"Traveller's spending ACRT account\",\n        \"bankAccountNumber\": \"****0027\",\n        \"bankRoutingNumber\": \"121141822\",\n        \"bankName\": \"Bank of Konoha\",\n        \"bankAddress\": {\n            \"addressLine1\": \"Village hidden in mist\",\n            \"country\": \"Jpn\"\n        }\n    },\n    \"default\": false,\n    \"status\": \"ACTIVE\",\n    \"bankAccountPurpose\": \"TRAVEL_RULE\",\n    \"beneficiaryDetails\": {\n        \"accountHolderName\": \"Kakashi Hatake\",\n        \"accountHolderAddress\": \"Village hidden in sand\",\n        \"accountHolderCountry\": \"Jpn\"\n    },\n    \"created\": \"2023-06-29T10:30:20.568Z\",\n    \"updated\": \"2023-06-29T10:30:20.568Z\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "200 OK response",
+        "code": "{\n    \"id\": \"bank_2b8c12f1-048b-44a1-ae83-c367972de5b4\",\n    \"userDetails\": {\n        \"userID\": \"d519fbf6-3a9a-4656-99a2-7e219776c678\",\n        \"username\": \"test.individual.1688034596\",\n        \"firstName\": \"Levi\",\n        \"lastName\": \"Ackermann\",\n        \"email\": \"b@b.com\",\n        \"parentIB\": {\n            \"id\": \"80f9b672-120d-4b73-9cc9-42fb3262c4b9\",\n            \"name\": \"DriveWealth\"\n        },\n        \"wlpID\": \"DW\"\n    },\n    \"bankAccountDetails\": {\n        \"bankAccountNickname\": \"Traveller's spending ACRT account\",\n        \"bankAccountNumber\": \"****0027\",\n        \"bankRoutingNumber\": \"121141822\",\n        \"bankName\": \"Bank of Konoha\",\n        \"bankAddress\": {\n            \"addressLine1\": \"Village hidden in mist\",\n            \"country\": \"Jpn\"\n        }\n    },\n    \"default\": false,\n    \"status\": \"ACTIVE\",\n    \"bankAccountPurpose\": \"TRAVEL_RULE\",\n    \"beneficiaryDetails\": {\n        \"accountHolderName\": \"Kakashi Hatake\",\n        \"accountHolderAddress\": \"Village hidden in sand\",\n        \"accountHolderCountry\": \"Jpn\"\n    },\n    \"created\": \"2023-06-29T10:30:20.568Z\",\n    \"updated\": \"2023-06-29T10:30:20.568Z\"\n}"
+      },
+      "text": "200 OK response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        90,
+        90
+      ],
+      "raw": "> 🚧 Use the bankAccountID generated for making INSTANT\\_FUNDING deposit/Redemptions",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Use the bankAccountID generated for making INSTANT_FUNDING deposit/Redemptions",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        92,
+        101
+      ],
+      "raw": "```Text POST: {{bo-url}}/back-office/funding/deposits\n{\n   \"accountNo\": \"DWQT000095\",\n   \"amount\": 1000,\n   \"currency\": \"USD\",\n   \"type\": \"INSTANT_FUNDING\",\n   \"note\": \"Here's some money\",\n   \"bankAccountID\": \"bank_b47c01cc-bd1c-43df-bf05-512c926c140e\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "POST: {{bo-url}}/back-office/funding/deposits",
+        "code": "{\n   \"accountNo\": \"DWQT000095\",\n   \"amount\": 1000,\n   \"currency\": \"USD\",\n   \"type\": \"INSTANT_FUNDING\",\n   \"note\": \"Here's some money\",\n   \"bankAccountID\": \"bank_b47c01cc-bd1c-43df-bf05-512c926c140e\"\n}"
+      },
+      "text": "POST: {{bo-url}}/back-office/funding/deposits",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 92
+        }
+      ]
+    },
+    {
+      "i": 17,
+      "lines": [
+        103,
+        112
+      ],
+      "raw": "```Text POST: {{bo-url}}/back-office/funding/redemptions\n{\n   \"accountNo\": \"DWQT000095\",\n   \"amount\": 100,\n   \"currency\": \"USD\",\n   \"type\": \"INSTANT_FUNDING\",\n   \"note\": \"Here's some money\",\n   \"bankAccountID\": \"bank_b47c01cc-bd1c-43df-bf05-512c926c140e\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "POST: {{bo-url}}/back-office/funding/redemptions",
+        "code": "{\n   \"accountNo\": \"DWQT000095\",\n   \"amount\": 100,\n   \"currency\": \"USD\",\n   \"type\": \"INSTANT_FUNDING\",\n   \"note\": \"Here's some money\",\n   \"bankAccountID\": \"bank_b47c01cc-bd1c-43df-bf05-512c926c140e\"\n}"
+      },
+      "text": "POST: {{bo-url}}/back-office/funding/redemptions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 103
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        114,
+        114
+      ],
+      "raw": "**PATCH bank-account changes for Travel Rule + Bank Account ID combo**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PATCH bank-account changes for Travel Rule + Bank Account ID combo",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        116,
+        128
+      ],
+      "raw": "```Text PATCH: {{bo-url}}/back-office/bank-account/{{bankAccountID}}\n{\n  \"bankAccountPurpose\" : \"TRAVEL_RULE\",\n  \"bankAccountDetails\": {\n        \"bankName\": \"Bank of Konoha\",\n        \"bankAddress\": \"Village Hidden in the Sand, Sunagakure\",\n        \"bankCountry\": \"jpn\",\n        \"accountHolderName\": \"Naruto Uzumaki\",\n        \"accountHolderAddress\": \"Village Hidden in the Leaves, Konohagakure\",\n        \"accountHolderCountry\": \"JPN\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "PATCH: {{bo-url}}/back-office/bank-account/{{bankAccountID}}",
+        "code": "{\n  \"bankAccountPurpose\" : \"TRAVEL_RULE\",\n  \"bankAccountDetails\": {\n        \"bankName\": \"Bank of Konoha\",\n        \"bankAddress\": \"Village Hidden in the Sand, Sunagakure\",\n        \"bankCountry\": \"jpn\",\n        \"accountHolderName\": \"Naruto Uzumaki\",\n        \"accountHolderAddress\": \"Village Hidden in the Leaves, Konohagakure\",\n        \"accountHolderCountry\": \"JPN\"\n    }\n}"
+      },
+      "text": "PATCH: {{bo-url}}/back-office/bank-account/{{bankAccountID}}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 116
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{bankAccountID}}",
+          "line": 116
+        }
+      ]
+    },
+    {
+      "i": 20,
+      "lines": [
+        130,
+        130
+      ],
+      "raw": "#### Expected change - This update will sit behind a Feature Toggle. When turned on for the partners, it will:",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Expected change - This update will sit behind a Feature Toggle. When turned on for the partners, it will:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        132,
+        135
+      ],
+      "raw": "* [x] Rename bankAccountPurpose: TRAVEL\\_RULE\n* [x] Return mandatory bank and beneficiary details for Travel rule in GET, PATCH, POST API.\n* [x] Return bankAccountID in DEPOSIT/REDEMPTION in response for INSTANT\\_FUNDING.\n* [x] Add all mandatory details in bankAccounts.created and bankAccounts.updated Event",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Rename bankAccountPurpose: TRAVEL_RULEReturn mandatory bank and beneficiary details for Travel rule in GET, PATCH, POST API.Return bankAccountID in DEPOSIT/REDEMPTION in response for INSTANT_FUNDING.Add all mandatory details in bankAccounts.created and bankAccounts.updated Event",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "## 2.2 Adding Position Quantity to orders.completed or positions.updated SQS events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.2 Adding Position Quantity to orders.completed or positions.updated SQS events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        139,
+        139
+      ],
+      "raw": "#### Existing Feature - Currently, DW is only sending availableForTradingQuantity in the account summary endpoint.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Existing Feature - Currently, DW is only sending availableForTradingQuantity in the account summary endpoint.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        141,
+        141
+      ],
+      "raw": "#### What is improving? - Going forward, our partners will be able to consume openQuantity and availableForTradingQuantity within the following endpoint and SQS events.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "What is improving? - Going forward, our partners will be able to consume openQuantity and availableForTradingQuantity within the following endpoint and SQS events.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        143,
+        147
+      ],
+      "raw": "* getOrderById\n* getOrderByNo\n* getAuditOrderById\n* orders.completed event\n* orders.created event",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "getOrderByIdgetOrderByNogetAuditOrderByIdorders.completed eventorders.created event",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        149,
+        175
+      ],
+      "raw": "```Text GET : {{bo-url}}/back-office/orders/{{OrderID}}\n{\n    \"id\": \"KE.64637a12-24f3-478c-a411-02de46f1fdf8\",\n    \"orderNo\": \"KEWG000012\",\n    \"type\": \"MARKET\",\n    \"side\": \"SELL\",\n    \"status\": \"FILLED\",\n    \"symbol\": \"AA\",\n    \"averagePrice\": 33.66,\n    \"averagePriceRaw\": 33.66,\n    \"totalOrderAmount\": 33.66,\n    \"cumulativeQuantity\": 1,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 2.99,\n    \"orderExpires\": \"2023-05-18T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-05-18T13:24:32.259Z\",\n    \"lastExecuted\": \"2023-05-18T13:30:02.153Z\",\n    \"extendedHours\": false,\n    \"preventQueuing\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "GET : {{bo-url}}/back-office/orders/{{OrderID}}",
+        "code": "{\n    \"id\": \"KE.64637a12-24f3-478c-a411-02de46f1fdf8\",\n    \"orderNo\": \"KEWG000012\",\n    \"type\": \"MARKET\",\n    \"side\": \"SELL\",\n    \"status\": \"FILLED\",\n    \"symbol\": \"AA\",\n    \"averagePrice\": 33.66,\n    \"averagePriceRaw\": 33.66,\n    \"totalOrderAmount\": 33.66,\n    \"cumulativeQuantity\": 1,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 2.99,\n    \"orderExpires\": \"2023-05-18T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-05-18T13:24:32.259Z\",\n    \"lastExecuted\": \"2023-05-18T13:30:02.153Z\",\n    \"extendedHours\": false,\n    \"preventQueuing\": false\n}"
+      },
+      "text": "GET : {{bo-url}}/back-office/orders/{{OrderID}}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 149
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{OrderID}}",
+          "line": 149
+        }
+      ]
+    },
+    {
+      "i": 27,
+      "lines": [
+        177,
+        203
+      ],
+      "raw": "```Text GET : {{bo-url}}/back-office/orders/byOrderNo/{{OrderID}}\n{\n    \"id\": \"KE.64637a12-24f3-478c-a411-02de46f1fdf8\",\n    \"orderNo\": \"KEWG000012\",\n    \"type\": \"MARKET\",\n    \"side\": \"SELL\",\n    \"status\": \"FILLED\",\n    \"symbol\": \"AA\",\n    \"averagePrice\": 33.66,\n    \"averagePriceRaw\": 33.66,\n    \"totalOrderAmount\": 33.66,\n    \"cumulativeQuantity\": 1,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 2.99,\n    \"orderExpires\": \"2023-05-18T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-05-18T13:24:32.259Z\",\n    \"lastExecuted\": \"2023-05-18T13:30:02.153Z\",\n    \"extendedHours\": false,\n    \"preventQueuing\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "GET : {{bo-url}}/back-office/orders/byOrderNo/{{OrderID}}",
+        "code": "{\n    \"id\": \"KE.64637a12-24f3-478c-a411-02de46f1fdf8\",\n    \"orderNo\": \"KEWG000012\",\n    \"type\": \"MARKET\",\n    \"side\": \"SELL\",\n    \"status\": \"FILLED\",\n    \"symbol\": \"AA\",\n    \"averagePrice\": 33.66,\n    \"averagePriceRaw\": 33.66,\n    \"totalOrderAmount\": 33.66,\n    \"cumulativeQuantity\": 1,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 2.99,\n    \"orderExpires\": \"2023-05-18T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-05-18T13:24:32.259Z\",\n    \"lastExecuted\": \"2023-05-18T13:30:02.153Z\",\n    \"extendedHours\": false,\n    \"preventQueuing\": false\n}"
+      },
+      "text": "GET : {{bo-url}}/back-office/orders/byOrderNo/{{OrderID}}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 177
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{OrderID}}",
+          "line": 177
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        205,
+        328
+      ],
+      "raw": "```Text GET :  {{bo-url}}/back-office/orders/{{OrderID}}/audit\n{\n    \"id\": \"KE.64637a12-24f3-478c-a411-02de46f1fdf8\",\n    \"orderNo\": \"KEWG000012\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"quantities\": {\n        \"requestedQuantity\": 1,\n        \"totalFilledQuantity\": 1\n    },\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"amountCash\": 0,\n    \"status\": \"FILLED\",\n    \"side\": \"SELL\",\n    \"instrumentID\": \"1b474cec-97f7-4305-4d6e-f1ac72b8ee71\",\n    \"symbol\": \"AA\",\n    \"type\": \"1\",\n    \"pricing\": {\n        \"avgPxRaw\": 33.66,\n        \"avgPx\": 33.66,\n        \"stopPx\": 0,\n        \"mitTriggerPrice\": 0\n    },\n    \"expires\": \"2023-05-18T20:00:00.000Z\",\n    \"commissionOverride\": {\n        \"commissionOverrideType\": \"NO_OVERRIDE\",\n        \"commissionID\": null,\n        \"commissionOverrideDesc\": \"Standard Commission\"\n    },\n    \"commissionAndFees\": {\n        \"total\": 2.99,\n        \"tefra\": 0,\n        \"ptp\": 0\n    },\n    \"auditLog\": [\n        {\n            \"status\": \"NEW\",\n            \"quantities\": {\n                \"cumulativeQuantity\": 0,\n                \"filledQuantity\": 0,\n                \"remainingQuantity\": 0\n            },\n            \"pricing\": {\n                \"averagePrice\": 0,\n                \"averagePriceRaw\": 0,\n                \"lastPrice\": 0,\n                \"rateAsk\": 0,\n                \"rateBid\": 0\n            },\n            \"commissionAndFees\": {\n                \"commission\": 0,\n                \"feeSec\": 0,\n                \"feeTaf\": 0,\n                \"feeBase\": 0,\n                \"feeXtraShares\": 0,\n                \"feeExchange\": 0\n            },\n            \"pnl\": 0,\n            \"transactTime\": \"2023-05-18T13:24:32.097Z\",\n            \"comment\": \"NOS started\",\n            \"createdWhen\": \"2023-05-18T13:24:32.097Z\"\n        },\n        {\n            \"status\": \"NEW\",\n            \"quantities\": {\n                \"cumulativeQuantity\": 0,\n                \"filledQuantity\": 0,\n                \"remainingQuantity\": 1\n            },\n            \"pricing\": {\n                \"averagePrice\": 0,\n                \"averagePriceRaw\": 0,\n                \"lastPrice\": 0,\n                \"rateAsk\": 36.74,\n                \"rateBid\": 36.4\n            },\n            \"commissionAndFees\": {\n                \"commission\": 0,\n                \"feeSec\": 0,\n                \"feeTaf\": 0,\n                \"feeBase\": 0,\n                \"feeXtraShares\": 0,\n                \"feeExchange\": 0\n            },\n            \"pnl\": 0,\n            \"transactTime\": \"2023-05-18T13:24:32.268Z\",\n            \"comment\": \"NOS accepted\",\n            \"createdWhen\": \"2023-05-18T13:24:32.268Z\"\n        },\n        {\n            \"status\": \"FILLED\",\n            \"quantities\": {\n                \"cumulativeQuantity\": 1,\n                \"filledQuantity\": 1,\n                \"remainingQuantity\": 0\n            },\n            \"pricing\": {\n                \"averagePrice\": 33.66,\n                \"averagePriceRaw\": 0,\n                \"lastPrice\": 33.66,\n                \"rateAsk\": 36.53,\n                \"rateBid\": 36.29\n            },\n            \"commissionAndFees\": {\n                \"commission\": 2.99,\n                \"feeSec\": 0,\n                \"feeTaf\": 0,\n                \"feeBase\": 2.99,\n                \"feeXtraShares\": 0,\n                \"feeExchange\": 0\n            },\n            \"pnl\": 0,\n            \"transactTime\": \"2023-05-18T13:30:02.153Z\",\n            \"comment\": \"LQBK01FILLED1fill1\",\n            \"eventID\": \"event_b2ed6e73-cb30-481c-9b9e-93b57f456344\",\n            \"createdWhen\": \"2023-05-18T13:30:01.863Z\"\n        }\n    ],\n    \"violationExempt\": false,\n    \"preventQueuing\": false,\n    \"extendedHours\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "GET :  {{bo-url}}/back-office/orders/{{OrderID}}/audit",
+        "code": "{\n    \"id\": \"KE.64637a12-24f3-478c-a411-02de46f1fdf8\",\n    \"orderNo\": \"KEWG000012\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"quantities\": {\n        \"requestedQuantity\": 1,\n        \"totalFilledQuantity\": 1\n    },\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"amountCash\": 0,\n    \"status\": \"FILLED\",\n    \"side\": \"SELL\",\n    \"instrumentID\": \"1b474cec-97f7-4305-4d6e-f1ac72b8ee71\",\n    \"symbol\": \"AA\",\n    \"type\": \"1\",\n    \"pricing\": {\n        \"avgPxRaw\": 33.66,\n        \"avgPx\": 33.66,\n        \"stopPx\": 0,\n        \"mitTriggerPrice\": 0\n    },\n    \"expires\": \"2023-05-18T20:00:00.000Z\",\n    \"commissionOverride\": {\n        \"commissionOverrideType\": \"NO_OVERRIDE\",\n        \"commissionID\": null,\n        \"commissionOverrideDesc\": \"Standard Commission\"\n    },\n    \"commissionAndFees\": {\n        \"total\": 2.99,\n        \"tefra\": 0,\n        \"ptp\": 0\n    },\n    \"auditLog\": [\n        {\n            \"status\": \"NEW\",\n            \"quantities\": {\n                \"cumulativeQuantity\": 0,\n                \"filledQuantity\": 0,\n                \"remainingQuantity\": 0\n            },\n            \"pricing\": {\n                \"averagePrice\": 0,\n                \"averagePriceRaw\": 0,\n                \"lastPrice\": 0,\n                \"rateAsk\": 0,\n                \"rateBid\": 0\n            },\n            \"commissionAndFees\": {\n                \"commission\": 0,\n                \"feeSec\": 0,\n                \"feeTaf\": 0,\n                \"feeBase\": 0,\n                \"feeXtraShares\": 0,\n                \"feeExchange\": 0\n            },\n            \"pnl\": 0,\n            \"transactTime\": \"2023-05-18T13:24:32.097Z\",\n            \"comment\": \"NOS started\",\n            \"createdWhen\": \"2023-05-18T13:24:32.097Z\"\n        },\n        {\n            \"status\": \"NEW\",\n            \"quantities\": {\n                \"cumulativeQuantity\": 0,\n                \"filledQuantity\": 0,\n                \"remainingQuantity\": 1\n            },\n            \"pricing\": {\n                \"averagePrice\": 0,\n                \"averagePriceRaw\": 0,\n                \"lastPrice\": 0,\n                \"rateAsk\": 36.74,\n                \"rateBid\": 36.4\n            },\n            \"commissionAndFees\": {\n                \"commission\": 0,\n                \"feeSec\": 0,\n                \"feeTaf\": 0,\n                \"feeBase\": 0,\n                \"feeXtraShares\": 0,\n                \"feeExchange\": 0\n            },\n            \"pnl\": 0,\n            \"transactTime\": \"2023-05-18T13:24:32.268Z\",\n            \"comment\": \"NOS accepted\",\n            \"createdWhen\": \"2023-05-18T13:24:32.268Z\"\n        },\n        {\n            \"status\": \"FILLED\",\n            \"quantities\": {\n                \"cumulativeQuantity\": 1,\n                \"filledQuantity\": 1,\n                \"remainingQuantity\": 0\n            },\n            \"pricing\": {\n                \"averagePrice\": 33.66,\n                \"averagePriceRaw\": 0,\n                \"lastPrice\": 33.66,\n                \"rateAsk\": 36.53,\n                \"rateBid\": 36.29\n            },\n            \"commissionAndFees\": {\n                \"commission\": 2.99,\n                \"feeSec\": 0,\n                \"feeTaf\": 0,\n                \"feeBase\": 2.99,\n                \"feeXtraShares\": 0,\n                \"feeExchange\": 0\n            },\n            \"pnl\": 0,\n            \"transactTime\": \"2023-05-18T13:30:02.153Z\",\n            \"comment\": \"LQBK01FILLED1fill1\",\n            \"eventID\": \"event_b2ed6e73-cb30-481c-9b9e-93b57f456344\",\n            \"createdWhen\": \"2023-05-18T13:30:01.863Z\"\n        }\n    ],\n    \"violationExempt\": false,\n    \"preventQueuing\": false,\n    \"extendedHours\": false\n}"
+      },
+      "text": "GET :  {{bo-url}}/back-office/orders/{{OrderID}}/audit",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 205
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{OrderID}}",
+          "line": 205
+        }
+      ]
+    },
+    {
+      "i": 29,
+      "lines": [
+        330,
+        358
+      ],
+      "raw": "```Text Payload\n{\n  \"id\": \"event_97d605cb-860a-4161-b208-11d2089b8dc6\",\n  \"type\": \"orders.created\",\n  \"timestamp\": \"2023-06-06T17:03:54.522332054Z\",\n  \"payload\": {\n    \"id\": \"KF.1aaeecf1-2ab5-4f4d-9103-51cb160bda52\",\n    \"orderNo\": \"KFGJ000002\",\n    \"type\": \"MARKET\",\n    \"side\": \"BUY\",\n    \"status\": \"NEW\",\n    \"symbol\": \"AA\",\n    \"averagePrice\": 0,\n    \"averagePriceRaw\": 0,\n    \"totalOrderAmount\": 0,\n    \"cumulativeQuantity\": 0,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 0,\n    \"orderExpires\": \"2023-06-06T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-06-06T11:33:43.105Z\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "Payload",
+        "code": "{\n  \"id\": \"event_97d605cb-860a-4161-b208-11d2089b8dc6\",\n  \"type\": \"orders.created\",\n  \"timestamp\": \"2023-06-06T17:03:54.522332054Z\",\n  \"payload\": {\n    \"id\": \"KF.1aaeecf1-2ab5-4f4d-9103-51cb160bda52\",\n    \"orderNo\": \"KFGJ000002\",\n    \"type\": \"MARKET\",\n    \"side\": \"BUY\",\n    \"status\": \"NEW\",\n    \"symbol\": \"AA\",\n    \"averagePrice\": 0,\n    \"averagePriceRaw\": 0,\n    \"totalOrderAmount\": 0,\n    \"cumulativeQuantity\": 0,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 0,\n    \"orderExpires\": \"2023-06-06T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-06-06T11:33:43.105Z\"\n  }\n}"
+      },
+      "text": "Payload",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        360,
+        392
+      ],
+      "raw": "```Text Payload\n{\n  \"id\": \"event_53446c29-13f4-410b-898e-1a9066fa08e7\",\n  \"type\": \"orders.completed\",\n  \"timestamp\": \"2023-06-06T17:03:55.108307483Z\",\n  \"payload\": {\n    \"id\": \"KF.1aaeecf1-2ab5-4f4d-9103-51cb160bda52\",\n    \"orderNo\": \"KFGJ000002\",\n    \"type\": \"MARKET\",\n    \"side\": \"BUY\",\n    \"status\": \"REJECTED\",\n    \"statusMessage\": {\n      \"errorCode\": \"O099\",\n      \"message\": \"Internal error.\"\n    },\n    \"symbol\": \"AA\",\n    \"averagePrice\": 0,\n    \"averagePriceRaw\": 0,\n    \"totalOrderAmount\": 0,\n    \"cumulativeQuantity\": 0,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 0,\n    \"orderExpires\": \"2023-06-06T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-06-06T11:33:43.105Z\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "Payload",
+        "code": "{\n  \"id\": \"event_53446c29-13f4-410b-898e-1a9066fa08e7\",\n  \"type\": \"orders.completed\",\n  \"timestamp\": \"2023-06-06T17:03:55.108307483Z\",\n  \"payload\": {\n    \"id\": \"KF.1aaeecf1-2ab5-4f4d-9103-51cb160bda52\",\n    \"orderNo\": \"KFGJ000002\",\n    \"type\": \"MARKET\",\n    \"side\": \"BUY\",\n    \"status\": \"REJECTED\",\n    \"statusMessage\": {\n      \"errorCode\": \"O099\",\n      \"message\": \"Internal error.\"\n    },\n    \"symbol\": \"AA\",\n    \"averagePrice\": 0,\n    \"averagePriceRaw\": 0,\n    \"totalOrderAmount\": 0,\n    \"cumulativeQuantity\": 0,\n    \"openQuantity\": 7,\n    \"availableForTradingQuantity\": 7,\n    \"quantity\": 1,\n    \"fees\": 0,\n    \"orderExpires\": \"2023-06-06T20:00:00.000Z\",\n    \"createdBy\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"userID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684\",\n    \"accountID\": \"9a8cebff-6b1f-4f99-bb9c-f6843626a684.1682435763668\",\n    \"accountNo\": \"DWXN000105\",\n    \"created\": \"2023-06-06T11:33:43.105Z\"\n  }\n}"
+      },
+      "text": "Payload",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        394,
+        394
+      ],
+      "raw": "## 2.3 POST/PATCH changes to accommodate non-supported countries",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.3 POST/PATCH changes to accommodate non-supported countries",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        396,
+        396
+      ],
+      "raw": "#### Expected change - Today, the logic for POST/PATCH changes to accommodate non-supported countries is convoluted, this change will help clean up and make the logic more simple.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Expected change - Today, the logic for POST/PATCH changes to accommodate non-supported countries is convoluted, this change will help clean up and make the logic more simple.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        398,
+        398
+      ],
+      "raw": "In either POST or PATCH on the user",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In either POST or PATCH on the user",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        400,
+        411
+      ],
+      "raw": "> 📘 For country of residence (country field)\n>\n> 1. Check country's active flag.\n> 2. If country is active > Request Allowed\n> 3. If inactive > For POST - block user; for PATCH – allow request but set the account to FROZEN\n> 4. For citizenship field\n> 5. Always check country active flag first.\n>    1. If country is active > let user through\n>    2. If inactive > Check expat logic\n> 6. Expat logic:\n>    1. If expat allowed > Request allowed\n>    2. If not allowed > For POST - block user; for PATCH – allow request but set account to FROZEN",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "For country of residence (country field)Check country's active flag.If country is active > Request AllowedIf inactive > For POST - block user; for PATCH – allow request but set the account to FROZENFor citizenship fieldAlways check country active flag first.If country is active > let user throughIf inactive > Check expat logicExpat logic:If expat allowed > Request allowedIf not allowed > For POST - block user; for PATCH – allow request but set account to FROZEN",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        413,
+        413
+      ],
+      "raw": "## 2.4 Additional SQS queues for events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.4 Additional SQS queues for events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        415,
+        417
+      ],
+      "raw": "> ❗️ **Limited Availability**\n>\n> Partners can now have events sent to multiple SQS queues. Please reach out to your relationship management team if this is something you are interested in.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "❗️"
+      },
+      "text": "Limited AvailabilityPartners can now have events sent to multiple SQS queues. Please reach out to your relationship management team if this is something you are interested in.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "danger"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        419,
+        419
+      ],
+      "raw": "## 2.5 Change in Cash Promotion Types",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.5 Change in Cash Promotion Types",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        421,
+        421
+      ],
+      "raw": "**This is for partners who use our cash promotion endpoints**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is for partners who use our cash promotion endpoints",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        423,
+        423
+      ],
+      "raw": "> 👍 API : \\{\\{bo-url}}/back-office/transactions/types",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "API : {{bo-url}}/back-office/transactions/types",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "\\{\\{bo-url}}",
+          "line": 423
+        }
+      ]
+    },
+    {
+      "i": 40,
+      "lines": [
+        425,
+        425
+      ],
+      "raw": "#### We are deprecating the type *“PROMOTION”* for cash promotions and are adding a new type called “CASH\\_PROMOTION”. Additionally, cash promotions will no longer show as cash journals in the transaction history. The Cash Promotion will show two transactions. One is a disbursement (CSD) from the Cash Promotion account. The second transaction is a receipt (CSR) of the cash promotion into the user's account.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "We are deprecating the type “PROMOTION” for cash promotions and are adding a new type called “CASH_PROMOTION”. Additionally, cash promotions will no longer show as cash journals in the transaction history. The Cash Promotion will show two transactions. One is a disbursement (CSD) from the Cash Promotion account. The second transaction is a receipt (CSR) of the cash promotion into the user's account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        427,
+        427
+      ],
+      "raw": "#### Creating a Cash Promotion for a user account.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Creating a Cash Promotion for a user account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        429,
+        436
+      ],
+      "raw": "```Text POST {{bo-url}}/back-office/funding/deposits\n{\n  \"currency\": \"USD\",\n  \"type\": \"CASH_PROMOTION\"\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 250.25,\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "POST {{bo-url}}/back-office/funding/deposits",
+        "code": "{\n  \"currency\": \"USD\",\n  \"type\": \"CASH_PROMOTION\"\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 250.25,\n}"
+      },
+      "text": "POST {{bo-url}}/back-office/funding/deposits",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 429
+        }
+      ]
+    },
+    {
+      "i": 43,
+      "lines": [
+        438,
+        438
+      ],
+      "raw": "## 2.6 Ongoing Enhancement to PDT Calculations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.6 Ongoing Enhancement to PDT Calculations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        440,
+        440
+      ],
+      "raw": "#### We are making improvements to the timing and detection of PDTs to provide a better user experience. More improvements are to come in upcoming releases.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "We are making improvements to the timing and detection of PDTs to provide a better user experience. More improvements are to come in upcoming releases.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        442,
+        442
+      ],
+      "raw": "# 3.🔧Bug Fixes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "3.🔧Bug Fixes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        444,
+        444
+      ],
+      "raw": "## 3.1 Autopilot redemptions failing due to commission & fees not being deducted.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "3.1 Autopilot redemptions failing due to commission & fees not being deducted.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        446,
+        446
+      ],
+      "raw": "#### **What is improving?** - Autopilot will now include commissions, SEC, and TAF fees when calculating the liquidation amount for withdrawals. This will eliminate withdrawals failing for “Insufficient Funds” even though there is sufficient money in the user's account.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "What is improving? - Autopilot will now include commissions, SEC, and TAF fees when calculating the liquidation amount for withdrawals. This will eliminate withdrawals failing for “Insufficient Funds” even though there is sufficient money in the user's account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        448,
+        448
+      ],
+      "raw": "# 4. 🎁New API endpoints",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "4. 🎁New API endpoints",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        450,
+        450
+      ],
+      "raw": "#### None",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "None",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        452,
+        452
+      ],
+      "raw": "# ⭐️ Coming Soon!",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "⭐️ Coming Soon!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 51,
+      "lines": [
+        454,
+        454
+      ],
+      "raw": "#### Due to compliance and regulatory requirements, we will be imposing minimum notional quantity limits on trades for certain instruments like BRK.A (Berkshire Hathaway).",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Due to compliance and regulatory requirements, we will be imposing minimum notional quantity limits on trades for certain instruments like BRK.A (Berkshire Hathaway).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 52,
+      "lines": [
+        456,
+        456
+      ],
+      "raw": "More information and updates to follow in future communications.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "More information and updates to follow in future communications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        458,
+        458
+      ],
+      "raw": "### In the meantime, please feel free to ask us any questions that you may have.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "In the meantime, please feel free to ask us any questions that you may have.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

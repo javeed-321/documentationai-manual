@@ -1,0 +1,520 @@
+{
+  "slug": "apis/docs/reinvesting-dividends",
+  "source": "https://developer.drivewealth.com/apis/docs/reinvesting-dividends.md",
+  "url": "https://developer.drivewealth.com/apis/docs/reinvesting-dividends",
+  "title": "Reinvesting dividends",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T23:03:24.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 9,
+    "paragraph": 13,
+    "Callout": 2,
+    "code": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Reinvesting dividends",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Reinvesting dividends",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Investors holding [Equities](https://developer.drivewealth.com/apis/docs/equities) or [Mutual Funds](https://developer.drivewealth.com/apis/docs/mutual-funds) often have dividends re-invested into the original position. This can be automated assuming the customer has previously agreed to a Dividend Reinvestment program.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Investors holding Equities or Mutual Funds often have dividends re-invested into the original position. This can be automated assuming the customer has previously agreed to a Dividend Reinvestment program.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Enabling Dividend Reinvestment",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Enabling Dividend Reinvestment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "### Step 1: Providing the disclosures",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 1: Providing the disclosures",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Before enrolling customers in Dividend Reinvestment, clients must present the required disclosures and capture customer acknowledgment.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before enrolling customers in Dividend Reinvestment, clients must present the required disclosures and capture customer acknowledgment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        21
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Using disclosures\n\n  Refer to [Showing disclosures](https://developer.drivewealth.com/apis/docs/showing-disclosures#/) to read more about this general disclosure process.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "Using disclosuresRefer to Showing disclosures to read more about this general disclosure process.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 6,
+          "lines": [
+            18,
+            18
+          ],
+          "raw": "  ### Using disclosures",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Using disclosures",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 7,
+          "lines": [
+            20,
+            20
+          ],
+          "raw": "  Refer to [Showing disclosures](https://developer.drivewealth.com/apis/docs/showing-disclosures#/) to read more about this general disclosure process.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Refer to Showing disclosures to read more about this general disclosure process.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "### Step 2: Enabling the feature for an Account",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 2: Enabling the feature for an Account",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "An account can be enabled individually for Equities and for Mutual Funds.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An account can be enabled individually for Equities and for Mutual Funds.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "This update can be made at the time of account opening or later by updating the account settings. All held securities will be eligible for reinvestment.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This update can be made at the time of account opening or later by updating the account settings. All held securities will be eligible for reinvestment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        29,
+        43
+      ],
+      "raw": "```json\nPATCH https://bo-api.drivewealth.io/accounts/{{accountID}}\n\n{\n    \"accountFeatures\": {\n        \"equities\": {\n            \"dividendReinvestment\": true,\n            \"capitalGainsReinvestment\": true\n        },\n        \"mutualFunds\": {\n            \"dividendCapGainsReinvestment\": true\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "PATCH https://bo-api.drivewealth.io/accounts/{{accountID}}\n\n{\n    \"accountFeatures\": {\n        \"equities\": {\n            \"dividendReinvestment\": true,\n            \"capitalGainsReinvestment\": true\n        },\n        \"mutualFunds\": {\n            \"dividendCapGainsReinvestment\": true\n        }\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{accountID}}",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "Note that Equities support two fields: `dividendReinvestment` and `capitalGainsReinvestment`. The latter refers to corporate actions where a held ETF issues a dividend that is characterized as capital gains. This usually happens when the fund sells underlying holdings, and such dividends generally have different tax treatment. Although these two settings can be individually enabled, it is uncommon to directly give the customer this choice.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note that Equities support two fields: dividendReinvestment and capitalGainsReinvestment. The latter refers to corporate actions where a held ETF issues a dividend that is characterized as capital gains. This usually happens when the fund sells underlying holdings, and such dividends generally have different tax treatment. Although these two settings can be individually enabled, it is uncommon to directly give the customer this choice.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        47,
+        51
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ### Cutoff time\n\n  Accounts must be enrolled into Dividend Reinvestment by 4:15pm ET. Any accounts not enabled before this time will not have that night's dividends reinvested.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "Cutoff timeAccounts must be enrolled into Dividend Reinvestment by 4:15pm ET. Any accounts not enabled before this time will not have that night's dividends reinvested.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 14,
+          "lines": [
+            48,
+            48
+          ],
+          "raw": "  ### Cutoff time",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Cutoff time",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 15,
+          "lines": [
+            50,
+            50
+          ],
+          "raw": "  Accounts must be enrolled into Dividend Reinvestment by 4:15pm ET. Any accounts not enabled before this time will not have that night's dividends reinvested.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Accounts must be enrolled into Dividend Reinvestment by 4:15pm ET. Any accounts not enabled before this time will not have that night's dividends reinvested.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "## Example events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Example events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "### Dividend that will be reinvested",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Dividend that will be reinvested",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "Note that the `dividend` block includes `reinvestment` boolean indicating if a subsequent purchase will be created.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note that the dividend block includes reinvestment boolean indicating if a subsequent purchase will be created.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        59,
+        94
+      ],
+      "raw": "```json\n{\n  \"id\": \"event_a1acdf71-17d2-4e38-81ce-871a86374b40\",\n  \"type\": \"transactions.created\",\n  \"timestamp\": \"2019-04-05T19:25:14.711707573Z\",\n  \"payload\": {\n    \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850\",\n    \"accountNo\": \"DWEF000010\",\n    \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\",\n    \"transaction\": {\n      \"accountAmount\": 2.10,\n      \"accountBalance\": 128195.27,\n      \"comment\": \"WMT dividend, $0.30/share\",\n      \"finTranID\": \"GF.861e931d-e7aa-47c8-b87a-b1e55acf3862\",\n      \"wlpFinTranTypeID\": \"e8ff5103-ad40-4ed9-b2ee-fd96826bf935\",\n      \"finTranTypeID\": \"DIV\",\n      \"feeSec\": 0,\n      \"feeTaf\": 0,\n      \"feeBase\": 0,\n      \"feeXtraShares\": 0,\n      \"feeExchange\": 0,\n      \"instrument\": {\n        \"id\": \"067e00c6-b55a-4576-b6cd-e699add6ead5\",\n        \"symbol\": \"WMT\",\n        \"name\": \"Wal-Mart Stores Inc.\"\n      },\n      \"dividend\": {\n        \"type\": \"CASH\",\n        \"amountPerShare\": 0.3043,\n        \"taxCode\": \"NON_TAXABLE\",\n        \"reinvestment\":true\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"event_a1acdf71-17d2-4e38-81ce-871a86374b40\",\n  \"type\": \"transactions.created\",\n  \"timestamp\": \"2019-04-05T19:25:14.711707573Z\",\n  \"payload\": {\n    \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850\",\n    \"accountNo\": \"DWEF000010\",\n    \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\",\n    \"transaction\": {\n      \"accountAmount\": 2.10,\n      \"accountBalance\": 128195.27,\n      \"comment\": \"WMT dividend, $0.30/share\",\n      \"finTranID\": \"GF.861e931d-e7aa-47c8-b87a-b1e55acf3862\",\n      \"wlpFinTranTypeID\": \"e8ff5103-ad40-4ed9-b2ee-fd96826bf935\",\n      \"finTranTypeID\": \"DIV\",\n      \"feeSec\": 0,\n      \"feeTaf\": 0,\n      \"feeBase\": 0,\n      \"feeXtraShares\": 0,\n      \"feeExchange\": 0,\n      \"instrument\": {\n        \"id\": \"067e00c6-b55a-4576-b6cd-e699add6ead5\",\n        \"symbol\": \"WMT\",\n        \"name\": \"Wal-Mart Stores Inc.\"\n      },\n      \"dividend\": {\n        \"type\": \"CASH\",\n        \"amountPerShare\": 0.3043,\n        \"taxCode\": \"NON_TAXABLE\",\n        \"reinvestment\":true\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        96,
+        96
+      ],
+      "raw": "For more details on dividend-related events, review [Dividend Events](https://developer.drivewealth.com/apis/reference/dividends-events).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For more details on dividend-related events, review Dividend Events.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "After the above event, the account would have an Order created automatically, with the corresponding amount:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After the above event, the account would have an Order created automatically, with the corresponding amount:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        100,
+        128
+      ],
+      "raw": "```json\n{\n    \"id\": \"event_dcadb7df-a677-4ba6-8a06-15005d4a491d\",\n    \"type\": \"orders.created\",\n    \"timestamp\": \"2019-03-28T22:40:03.260922189Z\",\n    \"extendedHours\": false,\n    \"timeInForce\": \"\",\n    \"payload\": {\n        \"id\": \"GC.f7590a52-75c7-4f3a-92c7-6b03e02dc44f\",\n        \"orderNo\": \"DLAI000010\",\n        \"type\": \"MARKET\",\n        \"side\": \"BUY\",\n        \"status\": \"NEW\",\n        \"symbol\": \"WMT\",\n        \"averagePrice\": 0,\n        \"cumulativeQuantity\": 0,\n        \"openQuantity\": 1,\n        \"availableForTradingQuantity\": 0,\n        \"amountCash\": 2.1,\n        \"fees\": 0,\n        \"orderExpires\": \"2019-03-29T20:00:00.000Z\",\n        \"createdBy\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\",\n        \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\",\n        \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850\",\n        \"accountNo\": \"DWEF000010\",\n        \"created\": \"2019-03-28T22:40:03.240Z\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"id\": \"event_dcadb7df-a677-4ba6-8a06-15005d4a491d\",\n    \"type\": \"orders.created\",\n    \"timestamp\": \"2019-03-28T22:40:03.260922189Z\",\n    \"extendedHours\": false,\n    \"timeInForce\": \"\",\n    \"payload\": {\n        \"id\": \"GC.f7590a52-75c7-4f3a-92c7-6b03e02dc44f\",\n        \"orderNo\": \"DLAI000010\",\n        \"type\": \"MARKET\",\n        \"side\": \"BUY\",\n        \"status\": \"NEW\",\n        \"symbol\": \"WMT\",\n        \"averagePrice\": 0,\n        \"cumulativeQuantity\": 0,\n        \"openQuantity\": 1,\n        \"availableForTradingQuantity\": 0,\n        \"amountCash\": 2.1,\n        \"fees\": 0,\n        \"orderExpires\": \"2019-03-29T20:00:00.000Z\",\n        \"createdBy\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\",\n        \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\",\n        \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850\",\n        \"accountNo\": \"DWEF000010\",\n        \"created\": \"2019-03-28T22:40:03.240Z\"\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        130,
+        130
+      ],
+      "raw": "For more details on Order-related events, review [Order Events](https://developer.drivewealth.com/apis/reference/orders-events).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For more details on Order-related events, review Order Events.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        132,
+        132
+      ],
+      "raw": "## Working with Dividend Reinvestment in [Cashless accounts](https://developer.drivewealth.com/apis/docs/cashless-accounts)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Working with Dividend Reinvestment in Cashless accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        134,
+        134
+      ],
+      "raw": "In [Cashless accounts](https://developer.drivewealth.com/apis/docs/cashless-accounts), it is common for clients to use the publishing of dividend events to expect funds to be withdrawn automatically out of the brokerage account. However, for customers with Dividend Reinvestment enabled, these funds will be used to purchase the security, so no resulting fund movement should take place.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In Cashless accounts, it is common for clients to use the publishing of dividend events to expect funds to be withdrawn automatically out of the brokerage account. However, for customers with Dividend Reinvestment enabled, these funds will be used to purchase the security, so no resulting fund movement should take place.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        136,
+        136
+      ],
+      "raw": "Ensure that you are reviewing the `dividend.reinvestment` boolean discussed in the example events above to determine how to handle newly paid dividends.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Ensure that you are reviewing the dividend.reinvestment boolean discussed in the example events above to determine how to handle newly paid dividends.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

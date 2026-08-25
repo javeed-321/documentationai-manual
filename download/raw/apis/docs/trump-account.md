@@ -1,0 +1,234 @@
+---
+updatedAt: 2026-07-13T16:00:37.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Trump Account
+
+<Callout icon="📘" theme="info">
+  ###
+
+  This guide is for enabling Trump Account for fully disclosed US Partners only. Before using this, DriveWealth needs to activate the Partner environment for access to the Trump Account
+</Callout>
+
+Trump Accounts, officially designated as 530A IRAs, are federal tax-advantaged investment vehicles designed to help minors build wealth exclusively through approved low-cost U.S. equity index funds. Integrating these accounts requires logic capable of tracking multi-source deposits against annual limits, and strictly enforcing investment eligibility rules. Furthermore, the system features robust age-based controls to lock all distributions during the beneficiary's minor years and seamlessly transition the account to traditional IRA status when the owner turns 18.
+
+## Trump Account onboarding flow
+
+There are 3 steps involved to onboard a Trump Account.
+
+### Step 1: Create custodian/responsible party
+
+A parent or legal guardian must be established to manage the account until the child reaches the age of majority. The authorized individual designated on Form 4547, Part I, serves as the responsible party with permissions to fund the account, select eligible investments, execute qualified rollovers, and appoint successor custodians. Onboarding requires standard KYC data fields (Basic, Personal, Identification, Address, and Employment) and acceptance of the DriveWealth IRA Agreement alongside other required legal disclosures.
+
+```curl
+curl --location 'https://bo-api.drivewealth.tech/back-office/users' \
+--header 'dw-client-app-key: ••••••' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--data-raw '{
+    "username": "test.custodian",
+    "password": "passw0rd",
+    "userType": "INDIVIDUAL_TRADER",
+    "documents": [
+        {
+            "type": "BASIC_INFO",
+            "data": {
+                "firstName": "parent",
+                "lastName": "adult",
+                "country": "USA",
+                "phone": "2912341122",
+                "emailAddress": "b@b.com",
+                "language": "en_US"
+            }
+        },
+        {
+            "type": "PERSONAL_INFO",
+            "data": {
+                "birthDay": 3,
+                "birthMonth": 12,
+                "birthYear": 1990,
+                "marital": "Single",
+                "politicallyExposedNames": null
+            }
+        },
+        {
+            "type": "IDENTIFICATION_INFO",
+            "data": {
+                "value": "123456788",
+                "type": "SSN",
+                "citizenship": "USA"
+            }
+        },
+        {
+            "type": "ADDRESS_INFO",
+            "data": {
+                "street1": "123 Main St",
+                "city": "Chatham",
+                "province": "NJ",
+                "postalCode": "09812",
+                "country": "USA"
+            }
+        },
+        {
+            "type": "EMPLOYMENT_INFO",
+            "data": {
+                "status": "Employed",
+                "broker": false,
+                "company": "MyCo",
+                "type": "PROFESSIONAL",
+                "city": "Gotham",
+                "country": "USA",
+                "position": "Police"
+            }
+        },
+        {
+            "type": "DISCLOSURES",
+            "data": {
+                "termsOfUse": true,
+                "customerAgreement": true,
+                "marketDataAgreement": true,
+                "rule14b": true,
+                "findersFee": true,
+                "privacyPolicy": true,
+                "iraAgreement": true,
+                "signedBy": "Chris Turkelton"
+            }
+        }
+    ]
+}'
+```
+
+<br />
+
+### Step 2: Configure the beneficiary
+
+Eligible beneficiaries include any U.S. child under 18 with a valid Social Security Number. The child identified in Form 4547, Part II, is designated as the primary account owner and must be configured in the system using the `BENEFICIARY` user type.
+
+```curl
+curl --location 'https://bo-api.drivewealth.tech/back-office/users' \
+--header 'dw-client-app-key: ••••••' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--data-raw '{
+    "username": "test.minor.1780683188",
+    "password": "passw0rd",
+    "userType": "BENEFICIARY",
+    "documents": [
+        {
+            "type": "BASIC_INFO",
+            "data": {
+                "firstName": "minor",
+                "lastName": "teen",
+                "country": "USA"
+            }
+        },
+        {
+            "type": "PERSONAL_INFO",
+            "data": {
+                "birthDay": 3,
+                "birthMonth": 12,
+                "birthYear": 2025
+            }
+        },
+        {
+            "type": "IDENTIFICATION_INFO",
+            "data": {
+                "value": "123456799",
+                "type": "SSN",
+                "citizenship": "USA"
+            }
+        },
+        {
+            "type": "ADDRESS_INFO",
+            "data": {
+                "street1": "123 Main St",
+                "city": "Chatham",
+                "province": "NJ",
+                "postalCode": "09812",
+                "country": "USA"
+            }
+        }
+    ]
+}'
+```
+
+### Step 3: Open a Trump Account
+
+A Trump Account must be opened using the distinct account management type`TRUMP_SELF`. When establishing the account, please keep the following guidelines in mind:
+
+* Beneficiary Limit: A beneficiary can only have one Trump account at a time.
+* Registration: The account is registered under the beneficiary’s name, with the custodian linked as an interested party.
+* Pending Status: The account status remains PENDING until the custodian's KYC verification is successfully completed.
+
+```curl
+curl --location 'https://bo-api.drivewealth.tech/back-office/users' \
+--header 'dw-client-app-key: ••••••' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--data-raw '{
+    "userID": "c7644742-79e0-417c-86dc-b27445715ba7",
+    "accountType": "LIVE",
+    "accountManagementType": "TRUMP_SELF",
+    "tradingType": "CASH",
+    "interestedParties": [
+        {
+            "type": "CUSTODIAN",
+            "data": [
+                {
+                    "id": "59e99007-5a85-4672-b49e-2718cb1481ac"
+                }
+            ]
+        }
+    ]
+}'
+```
+
+Upon the successful creation of a Trump Account, the new account record will be accessible via the <Anchor target="_blank" href="https://developer.drivewealth.com/apis/v1.83.0/reference/get_users-userid-accounts">User Accounts API</Anchor>. The account details are retrievable using either the responsible party's unique identifier or the beneficiary's userID.
+
+## Asset transfer
+
+A Trump Account must be initially funded by a qualified rollover, specifically a direct trustee-to-trustee transfer of the account beneficiary's entire Trump account balance to a rollover Trump account for the same account beneficiary. To facilitate the direct transfer, Partners should utilize the <Anchor target="_blank" href="https://developer.drivewealth.com/apis/v1.83.0/reference/post_asset-transfers-acats">ACATS</Anchor> procedure for the qualified rollover process.
+
+## Contribution
+
+During the growth phase, there are 4 types of contributions available for Trump Accounts via Deposit API. These contribution categories include:
+
+* `PILOT_PROGRAM`: U.S. Treasury Pilot Program allocations, delivering a singular $1,000 grant for each qualifying minor. These funds do not count toward the standard annual contribution threshold.
+* `SEC_128_EMPLOYER`: Section 128 Employer Contributions, which are excluded from the individual's gross income under federal mandates. These are limited to $2,500 annually and remain subject to the $5,000 aggregate annual cap for 2026.
+* `OTHER_SOURCE`: Other Source Contributions, comprising private deposits from the beneficiary, family members, or third parties. Funding is capped at a total of $5,000 for the 2026 calendar year.
+* `QUALIFIED_GENERAL`: Grants issued by federal, state, or tribal government entities and 501(c)(3) nonprofits. While exempt from the $5,000 annual limit, these allocations must be designated for specific beneficiary groups based on birth year, residency, or universal eligibility requirements.
+
+```curl
+curl --location 'https://bo-api.drivewealth.tech/back-office/funding/deposits' \
+--header 'dw-client-app-key: ••••••' \
+--header 'dw-auth-token: ••••••' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "accountNo": "UWTA000017",
+    "amount": 1,
+    "currency": "USD",
+    "type": "ACH",
+    "bankAccountID": "bank_9a86f5aa-470c-49e8-819d-fad56a3cf80a",
+    "note": "Test Deposit",
+    "iraContribution": "QUALIFIED_GENERAL"
+}'
+```
+
+DriveWealth actively monitors and enforces all regulatory limits, and will systematically reject any contribution that causes the account to exceed its cumulative annual maximum.
+
+## Distribution
+
+Trump Accounts generally restrict distributions from the account. During the growth period, the only distributions that can be made from a Trump account are qualified rollover contributions to a rollover Trump account, qualified ABLE rollover contributions at age 17 to an ABLE account of the account beneficiary, distributions of excess contributions, and distributions upon death of the account beneficiary. Please reach out to DriveWealth directly to request a distribution during the growth period.
+
+## Trading
+
+In accordance with federal regulations, Trump Account assets must be allocated exclusively to approved low-cost U.S. equity index funds that track broad market benchmarks like the S\&P 500. To qualify, these investment vehicles must be non-leveraged and exhibit an annual expense ratio of 0.10% or less. Partners can programmatically identify eligible securities by querying the Instrument API and filtering for instruments where the `trumpAccountsEligible` flag is set to true. Place an order of a trump account eligible instrument by using the standard <Anchor target="_blank" href="https://developer.drivewealth.com/apis/v1.83.0/reference/post_orders">Orders API</Anchor>. Cash holdings are only permitted briefly to facilitate clearing transactions or to reinvest dividends. Partners must implement functionality that either prompts the responsible party to invest idle cash or facilitates an automated investment logic to ensure compliance.
+
+## Transition to Trump IRA
+
+Once the beneficiary reaches the year they turn 18, the account officially exits the "growth period" and undergoes a transition, and the account is generally treated as a Traditional IRA. More details will be provided.
+
+<br />

@@ -1,0 +1,24 @@
+---
+title: "API Release 1.20"
+---
+
+## API Release 1.20
+
+| Release Date    | Status   |
+| :-------------- | :------- |
+| July 29th, 2021 | RELEASED |
+
+## Bug Fixes
+
+- An update was made to correct an issue where an error was being thrown when a customer did not have an available cash balance to satisfy a redemption after 10 days. To remedy this issue, DriveWealth is now rejecting the redemption after 10 days of the customer not having the available cash balance rather than sending an error.
+  - :exclamation: This primarily impacted `RIA_APPROVED` redemption requests
+
+- When a user had a `KYC_DENIED` status, the account was moved immediately to a `CLOSE_POSITIONS_ONLY` status, and would then be moved to a `CLOSED` status. With this patch, the `CLOSE_POSITIONS_ONLY` status is going to be bypassed, and only a `CLOSED` status will be applied to the accounts.
+
+- When a customer had changed their employment details to a status that did not require additional fields, the data had persisted and would not be cleared. Now, when a customer selects they are either: `RETIRED` , `STUDENT` or `UNEMPLOYED` the additional employment fields are removed from the user details.
+
+- Plaid token error handling has been improved with this version. Previously when retrieving a customers bank accounts an error was thrown when at least 1 account was invalid making it impossible to retrieve other valid accounts. Now, all bank accounts are returned even if a Plaid token error occurs.
+
+## Features
+
+- For increased transparency, comments added by DriveWealth's AML team during user review are now being added to the API, by using the [Get KYC Status](https://developer.drivewealth.com/apis/reference/get-kyc-status) endpoint.

@@ -1,0 +1,168 @@
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# API Release 1.61
+
+We are back with another release and we are super excited to share with you all some changes to the platform.  This release is a relatively small one but we are working hard behind the scenes to bring you more features and fix issues on the platform. If you have any questions about this release feel free to reach out to us on the slack channels or send us an email at: <psg@drivewealth.com.>
+
+# 🚀 New Features
+
+Bummer, nothing new this go around but check out things that are in the pipeline.
+
+# 🎉 Feature Enhancements
+
+## Instant Funding
+
+Instant funding is getting a sexy new name in our deposit and withdrawal APIs and it's called Bulk Funding. The functionality stays the same but the API will now accept `BULK_FUNDING` as the type.
+
+Please note, the platform will continue to accept `INSTANT_FUNDING` as an argument until further notice. We will update our partners to when this will be phased out. So, stay tuned.
+
+What is bulk funding, check out this [article](https://developer.drivewealth.com/apis/v1.61.0/docs/depositing#bulk-deposits) on the topic.
+
+## Withdrawing
+
+Withdrawing cash from the platform has always been easy but in some rare occasions when liquidating and closing accounts there would be residual funds in the account normally less than a few dollars. The account would be closed and withdrawing from the account any further would be ceased.
+
+We are now introducing the ability to withdraw residual funds from these closed accounts. So, simply call the [withdrawal API](https://developer.drivewealth.com/apis/reference/post_funding-redemptions)as normally, and the withdrawal will be processed.
+
+Please note that it is specifically for Robo Advisory accounts that are settling in bulk to DriveWealth. Additionally, please reach out to your **account manager** to enable this feature.
+
+## Instruments
+
+### Fundamental Data
+
+Our instruments API is getting better and we are adding more data in the `fundamentalDataModel` object, that will help you build more intelligent user experiences for your customers. We are adding the following:
+
+* **`percentchangeMTD`**
+* **`percentchangeYTD`**
+* **`percentchange13week`**
+* **`percentchange26week`**
+* **`percentchange52week`**
+
+Check out our [instruments API](https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid) to learn more.
+
+### Filters
+
+More in instruments, we are improving the instruments filter API to better handle operators and making the name such as ISIN, CUSIP and more filterable as well. To learn more, see the [instruments filter API](https://developer.drivewealth.com/apis/reference/filterinstruments)
+
+## ACATs
+
+We are now making it easier for you to view the status of ACATs right in the DriveHub UI. All you have to do is search the account in question, click on the pencil labeled notes, then filter the notes by ACAT delivery, “ba da bing ba da boom.”
+
+# 👠🐛 Squashing Bugs
+
+## Closing Accounts
+
+In some cases there were issues around closing customer accounts. The API would return a **403** error when making the call to close the account. We deployed a fix for this issue. Thank you for your patience.
+
+# 👤 🆙  Heads Up
+
+## KYC
+
+In order to resolve issues with customers KYC statuses not in an approved state after 30 days, we are working on moving those customer accounts to a “FROZEN” state. Customer’s will no longer be able to trade in the account until they complete the KYC approval process. After the customer is approved, the account will automatically be set to an “OPEN” state.
+
+#### 🗒️ Important Note
+
+This is for all partners, who have reliance provisions with DriveWealth. Unsure, if this is you. Reach out to your account manager, for more details.\
+An **effective date** for this change **has not yet been** determined.\
+Stay on the lookout for communication with more information in the near future.
+
+# 🪵 ChangeLog
+
+```groovy CHANGELOG.md
+## Modified endpoints
+
+**`POST /funding/deposits`**
+
+* Request payload:
+    * Changed enum values for property `type`
+        * Added values `BULK_FUNDING`, `CASH_TRANSFER`
+        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_DEPOSITS`
+* Modified the `200` response:
+    * Changed object property `source`
+        * Changed enum values for property `id`
+            * Added values `BULK_FUNDING`, `CASH_TRANSFER`
+            * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_DEPOSITS`
+
+**`GET /funding/redemptions`**
+
+* Path parameters:
+* Modified the `200` response:
+    * Changed root array
+        * Modified the schema option `WithdrawalForTheFirm`
+            * Changed enum values for property `type`
+                * Added values `BULK_FUNDING`
+                * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`
+
+**`POST /funding/redemptions`**
+
+* Request payload:
+    * Changed enum values for property `type`
+        * Added values `BULK_FUNDING`
+        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`
+* Modified the `200` response:
+    * Changed object property `source`
+        * Changed enum values for property `id`
+            * Added values `BULK_FUNDING`
+            * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`
+
+**`GET /funding/redemptions/{redemptionID}`**
+
+* Modified the `200` response:
+    * Changed enum values for property `type`
+        * Added values `BULK_FUNDING`
+        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`
+
+**`GET /instruments`**
+
+* Modified the `200` response:
+    * Changed root array
+        * Removed 2 schema options: InstrumentInList, DebtInstrumentDetails
+
+**`POST /instruments/filter`**
+
+* Request payload:
+    * Changed root array
+        * Changed nested object schema
+            * Changed enum values for property `field`
+                * Added values `ISIN`, `CUSIP`, `payFrequency`, `spRating`, `couponRate`, `maturityDate`, `spRating`, `bidPrice`, `askPrice`, `askYieldToMaturity`, `bidYieldToMaturity`, `status`, `bondType`, `issuer.primaryName`, `issuer.domicileCountry`, `issuer.country`, `coupon.dayCount`, `coupon.couponType`, `coupon.nextCouponDate`, `minimumInvestmentAmount`, `incrementalInvestmentAmount`
+* Modified the `200` response:
+    * Changed root array
+        * Removed 2 schema options: InstrumentInList, DebtInstrumentDetails
+
+**`GET /instruments/{symbolOrInstrumentID}`**
+
+* Modified the `200` response:
+    * Modified the schema option `DebtInstrumentDetails`
+        * Added property `bondType`
+        * Added property `maturityDate`
+        * Added property `coupon`
+        * Added property `payFrequency`
+        * Added property `minimumInvestmentAmount`
+        * Added property `debtType`
+        * Added property `couponRate`
+        * Added property `incrementalInvestmentAmount`
+        * Added property `issuePrice`
+        * Added property `issueAmount`
+        * Added property `datedDate`
+        * Added property `issueDate`
+        * Added property `accruedInterest`
+        * Added property `issuer`
+        * Added property `spRating`
+        * Removed property `debtData`
+    * Modified the schema option `EquityInstrumentDetails`
+        * Changed object property `fundamentalDataModel`
+            * Added property `percentchange26week`
+            * Added property `percentchange52week`
+            * Added property `percentchange13week`
+            * Added property `percentchangeYTD`
+            * Added property `percentchangeMTD`
+    * Modified the schema option `MutualFundInstrumentDetails`
+        * Changed object property `mutualFundData`
+            * Added property `domicile`
+            * Added property `summaryRiskIndicator`
+            * Added property `managementFee`
+            * Added property `UCITS`
+            * Added property `prospectusUrl`
+            * Removed property `settlementDays`
+
+```

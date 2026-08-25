@@ -1,0 +1,1216 @@
+---
+updatedAt: 2026-05-27T16:57:55.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create Account
+
+Creates a trading Account
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Core APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Accounts"
+    }
+  ],
+  "paths": {
+    "/accounts": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "summary": "Create Account",
+        "description": "Creates a trading Account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountReq"
+              },
+              "examples": {
+                "Self Directed Account": {
+                  "value": {
+                    "userID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+                    "accountType": "LIVE",
+                    "accountManagementType": "SELF",
+                    "tradingType": "CASH"
+                  }
+                },
+                "Managed Account": {
+                  "value": {
+                    "userID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+                    "accountType": "LIVE",
+                    "accountManagementType": "MANAGED",
+                    "tradingType": "CASH"
+                  }
+                },
+                "Robo Advisory Account": {
+                  "value": {
+                    "userID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+                    "accountType": "LIVE",
+                    "accountManagementType": "RIA_MANAGED",
+                    "tradingType": "CASH",
+                    "riaProductID": "product_b94c0b6a-5ac8-43e4-95d1-777051c0503b",
+                    "riaUserID": "80f9b672-120d-4b73-9ccv9-42fb3262c4b9"
+                  }
+                },
+                "Trump Self Directed Account": {
+                  "value": {
+                    "userID": "4fe182d9-b968-444a-9666-82a5b1cd9aa0",
+                    "accountType": "LIVE",
+                    "accountManagementType": "TRUMP_SELF",
+                    "tradingType": "CASH",
+                    "interestedParties": [
+                      {
+                        "type": "CUSTODIAN",
+                        "data": [
+                          {
+                            "id": "cafe5a78-58d6-44a0-a622-cc514fed96d2"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "Account with Authorized User Interested Party": {
+                  "value": {
+                    "userID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+                    "accountType": "LIVE",
+                    "accountManagementType": "SELF",
+                    "tradingType": "CASH",
+                    "interestedParties": [
+                      {
+                        "type": "AUTHORIZED_USER",
+                        "data": [
+                          {
+                            "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+                            "reportingRole": "AUTHREP",
+                            "from": "2024-12-01T00:00:00Z",
+                            "tradeDiscretion": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Creating an Account was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountRes"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseModel"
+                },
+                "examples": {
+                  "Missing required user field": {
+                    "value": {
+                      "errorCode": "A035",
+                      "message": "Unable to create account due to missing field(s) on the user."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseModel"
+                },
+                "examples": {
+                  "Caller is not permissioned for this operation": {
+                    "value": {
+                      "errorCode": "P075",
+                      "message": "User does not have permissions to perform this operation. Contact your administrator."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ErrorCode": {
+        "type": "string",
+        "description": "The error code that is returned when an error occurs.",
+        "example": "E032"
+      },
+      "ErrorCodeMessage": {
+        "type": "string",
+        "description": "The error message that is returned when an error occurs."
+      },
+      "ErrorDetails": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "JSON field name from the request body that caused an error"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "STRING",
+              "ARRAY",
+              "INT",
+              "DECIMAL",
+              "BOOL",
+              "TEXT",
+              "UUID",
+              "DATE",
+              "MAP",
+              "OBJECT"
+            ],
+            "description": "Expected data type of the field"
+          },
+          "allowedValues": {
+            "type": "string",
+            "description": "Example values which are allowed in the field"
+          }
+        }
+      },
+      "ErrorResponseModel": {
+        "type": "object",
+        "description": "The error response model that is returned when an error occurs.",
+        "required": [
+          "errorCode",
+          "message"
+        ],
+        "properties": {
+          "errorCode": {
+            "$ref": "#/components/schemas/ErrorCode"
+          },
+          "message": {
+            "$ref": "#/components/schemas/ErrorCodeMessage"
+          },
+          "errorDetails": {
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "userID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+        "description": "A unique identifier created for each User on DriveWealth's platform."
+      },
+      "accountID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+        "description": "The user's unique account identifier."
+      },
+      "accountNo": {
+        "type": "string",
+        "example": "DWBG000052",
+        "description": "The user's unique account number, that is human readable."
+      },
+      "accountType": {
+        "type": "string",
+        "example": "LIVE",
+        "description": "The type of account that has been created.",
+        "enum": [
+          "LIVE"
+        ]
+      },
+      "accountManagementType": {
+        "type": "string",
+        "example": "SELF",
+        "description": "The type of account who has trading authority.",
+        "enum": [
+          "SELF",
+          "ADVISORY",
+          "MANAGED",
+          "RIA_MANAGED",
+          "CUSTODIAL",
+          "CUSTODIAL_MANAGED",
+          "RESERVED",
+          "HSA_SELF",
+          "HSA_ADVISORY",
+          "HSA_RIA_MANAGED",
+          "BUSINESS_SELF",
+          "BUSINESS_ADVISORY",
+          "BUSINESS_RIA_MANAGED",
+          "TRUST_SELF",
+          "TRUST_ADVISORY",
+          "TRUST_RIA_MANAGED",
+          "TRUMP_SELF"
+        ]
+      },
+      "accountHolderType": {
+        "type": "string",
+        "example": "I",
+        "description": "A classification for the type of the account holder. US broker-dealers must utilize this field for CAIS compliance. If unset, a default value of `I` will be assumed for CAIS reporting. Please refer to CAIS documentation and instructions for more information on the allowed values.",
+        "enum": [
+          "E",
+          "I",
+          "A",
+          "F",
+          "O",
+          "V",
+          "P",
+          "X"
+        ]
+      },
+      "accountManagementTypeObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "SELF",
+            "description": "The type of account who has trading authority.",
+            "enum": [
+              "SELF",
+              "ADVISORY",
+              "RIA_MANAGED",
+              "CUSTODIAL",
+              "CUSTODIAL_MANAGED",
+              "RESERVED",
+              "RETIREMENT_TRADITIONAL_SELF",
+              "RETIREMENT_TRADITIONAL_ADVISORY",
+              "RETIREMENT_TRADITIONAL_RIA_MANAGED",
+              "RETIREMENT_ROTH_SELF",
+              "RETIREMENT_ROTH_ADVISORY",
+              "RETIREMENT_ROTH_RIA_MANAGED",
+              "TRUST_SELF",
+              "TRUST_ADVISORY",
+              "TRUST_RIA_MANAGED",
+              "HSA_SELF",
+              "HSA_ADVISORY",
+              "HSA_RIA_MANAGED",
+              "BUSINESS_SELF",
+              "BUSINESS_ADVISORY",
+              "BUSINESS_RIA_MANAGED",
+              "TRUMP_SELF"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "example": "Self Directed Account",
+            "description": "A custom description of the account management type."
+          }
+        }
+      },
+      "accountHolderTypeObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/accountHolderType"
+          },
+          "description": {
+            "type": "string",
+            "example": "An account that does not meet FINRA Rule 4215(c) or a proprietary trading account",
+            "description": "A custom description of the account holder type."
+          }
+        }
+      },
+      "tradingType": {
+        "type": "string",
+        "example": "CASH",
+        "description": "The type of trading the account will participate in.",
+        "enum": [
+          "CASH",
+          "MARGIN"
+        ]
+      },
+      "accountStatus": {
+        "type": "string",
+        "example": "OPEN",
+        "description": "The current status of the user's account.",
+        "enum": [
+          "PENDING",
+          "OPEN",
+          "OPEN_NO_NEW_TRADES",
+          "FROZEN",
+          "CLOSED"
+        ]
+      },
+      "portfolioID": {
+        "type": "string",
+        "example": "portfolio_87fec25f-c350-4a53-83a0-fc6be0c2989e",
+        "description": "The unique identifier of a portfolio."
+      },
+      "parentIBIDObject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+            "description": "The unique identifier of an associated organization."
+          },
+          "name": {
+            "type": "string",
+            "example": "Tendies Trading Company",
+            "description": "The organization name."
+          }
+        }
+      },
+      "riaID": {
+        "type": "string",
+        "example": "66304da9-3h6f-2234-935f-ac6b7933d706",
+        "description": "This is the parentIBID or userID of the registered investment advisor creating the re-balance run."
+      },
+      "leverage": {
+        "type": "number",
+        "example": 1,
+        "description": "The amount of leverage an account is allowed to trade with."
+      },
+      "accountNickname": {
+        "type": "string",
+        "example": "Steve's Robo Advisor Managed Account",
+        "description": "A description or nickname for an account."
+      },
+      "taxProfileObject": {
+        "type": "object",
+        "properties": {
+          "taxStatusCode": {
+            "type": "string",
+            "example": "W-9",
+            "description": "The tax code of the accounts associated user."
+          },
+          "taxRecipientCode": {
+            "type": "string",
+            "example": "INDIVIDUAL",
+            "description": "The type of tax filing of the accounts associated user."
+          }
+        }
+      },
+      "commissionID": {
+        "type": "string",
+        "example": "b3e985dd-9679-63dc-5dd5-9bd7982efecd",
+        "description": "The unique identifier associated with a specific commission related to the account."
+      },
+      "beneficiariesOption": {
+        "type": "boolean",
+        "example": false,
+        "description": "True if the account has associated beneficiaries."
+      },
+      "restricted": {
+        "type": "boolean",
+        "example": false,
+        "description": "If true, the account cannot trade on unsettled funds."
+      },
+      "goodFaithViolations": {
+        "type": "number",
+        "example": 0,
+        "description": "The total number of good faith violations."
+      },
+      "patternDayTrades": {
+        "type": "number",
+        "example": 0,
+        "description": "The total number of pattern day trades.",
+        "deprecated": true
+      },
+      "freeTradeBalance": {
+        "type": "number",
+        "example": 0,
+        "description": "The total number of free trades left for the account."
+      },
+      "gfvPdtExempt": {
+        "type": "boolean",
+        "example": false,
+        "description": "True if the account exempt from trading violations."
+      },
+      "buyingPowerOverride": {
+        "type": "boolean",
+        "example": false,
+        "description": "True if the account is required to have sufficient buying power to enter a trade."
+      },
+      "bod": {
+        "type": "object",
+        "description": "Beginning of day balances in the account.",
+        "properties": {
+          "moneyMarket": {
+            "type": "number",
+            "example": 0,
+            "description": "Beginning of day money market value."
+          },
+          "equityValue": {
+            "type": "number",
+            "example": 0,
+            "description": "Beginning of day equity value."
+          },
+          "cashAvailableForWithdrawal": {
+            "type": "number",
+            "example": 0,
+            "description": "Total amount of settled funds that can be withdrawn."
+          },
+          "cashAvailableForTrading": {
+            "type": "number",
+            "example": 0,
+            "description": "Total amount of settled funds that can be traded."
+          },
+          "cashBalance": {
+            "type": "number",
+            "example": 0,
+            "description": "The current account cash balance."
+          }
+        }
+      },
+      "productID": {
+        "type": "string",
+        "example": "product_b94c0b6a-5ac8-43e4-95d1-777051c0503b",
+        "description": "The unique identifier associated with an RIA managed product."
+      },
+      "riaObject": {
+        "type": "object",
+        "properties": {
+          "advisorID": {
+            "$ref": "#/components/schemas/riaID"
+          },
+          "productID": {
+            "$ref": "#/components/schemas/productID"
+          }
+        }
+      },
+      "sweepInd": {
+        "type": "boolean",
+        "example": true,
+        "description": "Are the funds swept into a money market account?"
+      },
+      "interestFree": {
+        "type": "boolean",
+        "example": false,
+        "description": "Is the interest generated from money market deposited back into account?"
+      },
+      "openedWhen": {
+        "type": "string",
+        "example": "2022-12-22T06:07:41Z",
+        "description": "A timestamp of when the account was opened."
+      },
+      "ignoreMarketHoursForTest": {
+        "type": "boolean",
+        "example": false,
+        "description": "Can the account ignore market hours in the UAT environment?"
+      },
+      "flaggedForACATS": {
+        "type": "boolean",
+        "example": false,
+        "description": "True if the account is flagged for an Automated Customer Account Transfer (ACATS)."
+      },
+      "authorizedUser": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "$ref": "#/components/schemas/userID"
+          },
+          "permissions": {
+            "type": "array",
+            "description": "Permission assigned to the authorized user.",
+            "example": [
+              "ORDERS_CREATE",
+              "MINOR_GRADUATION_TRANSFER"
+            ],
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/permissions"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "permissions": {
+        "type": "string",
+        "example": "MINOR_GRADUATION_TRANSFER",
+        "enum": [
+          "ORDERS_CREATE",
+          "MINOR_GRADUATION_TRANSFER"
+        ]
+      },
+      "interestedParty": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of interested party.",
+            "enum": [
+              "AUTHORIZED_USER",
+              "CUSTODIAN"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "description": "The list of interested parties. The shape of each item is determined by the sibling `type` field: when `type` is `AUTHORIZED_USER`, each item follows `interestedPartyAuthorizedUser`; when `type` is `CUSTODIAN`, each item follows `interestedPartyCustodian`. The item itself does not repeat the `type` field.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/interestedPartyAuthorizedUser"
+                },
+                {
+                  "$ref": "#/components/schemas/interestedPartyCustodian"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "interestedPartyAuthorizedUser": {
+        "type": "object",
+        "required": [
+          "id",
+          "reportingRole",
+          "tradeDiscretion",
+          "from"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/userID"
+          },
+          "reportingRole": {
+            "type": "string",
+            "description": "The role of the interested party of the ID.",
+            "enum": [
+              "AUTH3RD",
+              "AUTHREP",
+              "NTHOLDER",
+              "TRDHOLDER"
+            ]
+          },
+          "tradeDiscretion": {
+            "type": "boolean",
+            "description": "The trade discretion of the interested party of the ID."
+          },
+          "from": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "yyyy-MM-ddTHH:mm:ss.SSSZ",
+            "example": "2022-12-25T22:28:21.810Z",
+            "description": "Time when the interested party role started"
+          },
+          "to": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "yyyy-MM-ddTHH:mm:ss.SSSZ",
+            "example": "2022-12-26T22:28:21.810Z",
+            "description": "Time when the interested party role ended"
+          },
+          "endReason": {
+            "type": "string",
+            "description": "The reason the interested party role ended.",
+            "enum": [
+              "CORRECTION",
+              "ENDED",
+              "INACTIVE",
+              "REPLACED",
+              "OTHER",
+              "TRANSFER"
+            ]
+          }
+        }
+      },
+      "interestedPartyCustodian": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/userID"
+          }
+        }
+      },
+      "AccountReq": {
+        "type": "object",
+        "required": [
+          "userID",
+          "accountType",
+          "accountManagementType"
+        ],
+        "properties": {
+          "userID": {
+            "$ref": "#/components/schemas/userID"
+          },
+          "accountType": {
+            "$ref": "#/components/schemas/accountType"
+          },
+          "accountManagementType": {
+            "$ref": "#/components/schemas/accountManagementType"
+          },
+          "accountHolderType": {
+            "$ref": "#/components/schemas/accountHolderType"
+          },
+          "tradingType": {
+            "$ref": "#/components/schemas/tradingType"
+          },
+          "finra3210ComplianceEntity": {
+            "$ref": "#/components/schemas/finra3210ComplianceEntity"
+          },
+          "riaUserID": {
+            "$ref": "#/components/schemas/riaID"
+          },
+          "riaProductID": {
+            "type": "string",
+            "example": "",
+            "description": "RIA product identifier (legacy)"
+          },
+          "riaPortfolioID": {
+            "$ref": "#/components/schemas/portfolioID",
+            "description": "A unique ID associated with an RIA managed portfolio. If set, a portfolio will be assigned to this account for automatic rebalancing."
+          },
+          "authorizedUsers": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/authorizedUser"
+                }
+              ]
+            }
+          },
+          "ignoreBuyingPower": {
+            "type": "boolean",
+            "example": false,
+            "description": "If true, the accounts cash balance can go negative."
+          },
+          "violationsExempt": {
+            "type": "boolean",
+            "example": false,
+            "description": "Instruct the GFV/PDT system to not process for this account. Available only in sandbox."
+          },
+          "ignoreMarketHoursForTest": {
+            "type": "boolean",
+            "example": true,
+            "description": "If set to `true` trades will execute in DriveWealth's UAT environment after market hours. If you are attempting to test Mutual Fund orders this flag needs to be set to `false`."
+          },
+          "extendedHoursEnrolled": {
+            "type": "boolean",
+            "example": false,
+            "description": "`true` or `false` if the account is enrolled in and able to access Extended Hours Trading"
+          },
+          "classActionsEnrolled": {
+            "type": "boolean",
+            "example": false,
+            "description": "Indicates whether the account is enrolled in class actions settlement claim filing service. Set to `false` if the client explicitly opts out. If omitted or `null`, the account is treated as enrolled."
+          },
+          "metadata": {
+            "type": "object",
+            "example": {
+              "myCustomKey": "myCustomValue"
+            },
+            "description": "The metadata object allows for creating a maximum of 5 keys (max 36 characters) and each value cannot exceed more than 128 bytes."
+          },
+          "leverage": {
+            "$ref": "#/components/schemas/leverage"
+          },
+          "accountFeatures": {
+            "$ref": "#/components/schemas/accountFeatures"
+          },
+          "accountFundingType": {
+            "$ref": "#/components/schemas/accountFundingType"
+          },
+          "interestedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/interestedParty"
+            }
+          },
+          "trustedContact": {
+            "$ref": "#/components/schemas/trustedContact"
+          }
+        }
+      },
+      "AccountRes": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/accountID"
+          },
+          "accountNo": {
+            "$ref": "#/components/schemas/accountNo"
+          },
+          "accountType": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "example": "LIVE",
+                "description": "The type of account."
+              },
+              "description": {
+                "type": "string",
+                "example": "Live Account",
+                "description": "A description of the type of account."
+              }
+            }
+          },
+          "accountMgmtType": {
+            "$ref": "#/components/schemas/accountManagementTypeObject"
+          },
+          "accountHolderType": {
+            "$ref": "#/components/schemas/accountHolderTypeObject"
+          },
+          "status": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "$ref": "#/components/schemas/accountStatus"
+              },
+              "description": {
+                "type": "string",
+                "example": "Open",
+                "description": "A description of the account status."
+              }
+            }
+          },
+          "tradingType": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "example": "CASH",
+                "description": "The type of trading ocurring in the account.",
+                "enum": [
+                  "CASH",
+                  "MARGIN",
+                  "CRYPTO"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "example": "Cash Account",
+                "description": "A custom description about the type of account."
+              }
+            }
+          },
+          "leverage": {
+            "$ref": "#/components/schemas/leverage"
+          },
+          "nickname": {
+            "$ref": "#/components/schemas/accountNickname"
+          },
+          "parentIB": {
+            "$ref": "#/components/schemas/parentIBIDObject"
+          },
+          "taxProfile": {
+            "$ref": "#/components/schemas/taxProfileObject"
+          },
+          "commissionID": {
+            "$ref": "#/components/schemas/commissionID"
+          },
+          "beneficiaries": {
+            "$ref": "#/components/schemas/beneficiariesOption"
+          },
+          "userID": {
+            "$ref": "#/components/schemas/userID",
+            "description": "The userID associated with the account. This will be the userID of your customer."
+          },
+          "restricted": {
+            "$ref": "#/components/schemas/restricted"
+          },
+          "goodFaithViolations": {
+            "$ref": "#/components/schemas/goodFaithViolations"
+          },
+          "patternDayTrades": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/patternDayTrades"
+              }
+            ],
+            "deprecated": true
+          },
+          "freeTradeBalance": {
+            "$ref": "#/components/schemas/freeTradeBalance"
+          },
+          "gfvPdtExempt": {
+            "$ref": "#/components/schemas/gfvPdtExempt"
+          },
+          "buyingPowerOverride": {
+            "$ref": "#/components/schemas/buyingPowerOverride"
+          },
+          "bod": {
+            "$ref": "#/components/schemas/bod"
+          },
+          "ria": {
+            "$ref": "#/components/schemas/riaObject"
+          },
+          "sweepInd": {
+            "$ref": "#/components/schemas/sweepInd"
+          },
+          "interestFree": {
+            "$ref": "#/components/schemas/interestFree"
+          },
+          "openedWhen": {
+            "$ref": "#/components/schemas/openedWhen"
+          },
+          "ignoreMarketHoursForTest": {
+            "$ref": "#/components/schemas/ignoreMarketHoursForTest"
+          },
+          "flaggedForACATS": {
+            "$ref": "#/components/schemas/flaggedForACATS"
+          },
+          "fpslEnrolled": {
+            "$ref": "#/components/schemas/fpslEnrolled"
+          },
+          "accountFeatures": {
+            "$ref": "#/components/schemas/accountFeaturesResp"
+          },
+          "accountFundingType": {
+            "$ref": "#/components/schemas/accountFundingType"
+          },
+          "interestedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/interestedParty"
+            }
+          },
+          "trustedContact": {
+            "$ref": "#/components/schemas/trustedContact"
+          }
+        }
+      },
+      "finra3210ComplianceEntity": {
+        "type": "string",
+        "example": "COMPLYSCI",
+        "description": "The regulatory system that the account will be reported to.",
+        "enum": [
+          "",
+          "COMPLYSCI",
+          "MCO"
+        ]
+      },
+      "accountFeatures": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "$ref": "#/components/schemas/AccountFeatureOptions"
+          },
+          "mutualFunds": {
+            "$ref": "#/components/schemas/AccountFeatureMutualFunds"
+          },
+          "fixedIncome": {
+            "$ref": "#/components/schemas/AccountFeatureFixedIncome"
+          },
+          "equities": {
+            "$ref": "#/components/schemas/AccountFeatureEquities"
+          }
+        }
+      },
+      "accountFeaturesResp": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "$ref": "#/components/schemas/AccountFeatureOptionsResp"
+          },
+          "mutualFunds": {
+            "$ref": "#/components/schemas/AccountFeatureMutualFunds"
+          },
+          "fixedIncome": {
+            "$ref": "#/components/schemas/AccountFeatureFixedIncome"
+          },
+          "equities": {
+            "$ref": "#/components/schemas/AccountFeatureEquities"
+          }
+        }
+      },
+      "AccountFeatureFixedIncome": {
+        "type": "object",
+        "description": "Account features related to Fixed Income",
+        "properties": {
+          "enrolled": {
+            "description": "Indicates if this account is enrolled for trading fixed income assets",
+            "type": "boolean",
+            "default": false,
+            "example": true
+          }
+        }
+      },
+      "AccountFeatureEquities": {
+        "type": "object",
+        "description": "Account features related to equities",
+        "properties": {
+          "dividendReinvestment": {
+            "type": "boolean",
+            "example": true,
+            "description": "True, if equity dividends are reinvested."
+          },
+          "dividendReinvestmentOptInWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted for equity dividend reinvestment.",
+            "readOnly": true
+          },
+          "dividendReinvestmentOptOutWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted out of equity dividend reinvestment.",
+            "readOnly": true
+          },
+          "capitalGainsReinvestment": {
+            "type": "boolean",
+            "example": true,
+            "description": "True, if equity capital gains are reinvested."
+          },
+          "capitalGainsReinvestmentOptInWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted for equity capital gains reinvestment.",
+            "readOnly": true
+          },
+          "capitalGainsReinvestmentOptOutWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted out of equity capital gains reinvestment",
+            "readOnly": true
+          },
+          "overnightHoursEnrolled": {
+            "type": "boolean",
+            "example": true,
+            "description": "True, if the account is enrolled for trading during overnight hours."
+          }
+        }
+      },
+      "AccountFeatureOptions": {
+        "type": "object",
+        "properties": {
+          "enrolled": {
+            "type": "boolean",
+            "description": "User requested option trading be allowed for their account",
+            "example": true
+          },
+          "optionsLevel": {
+            "type": "string",
+            "description": "The level of options trading the customer requested",
+            "example": "LEVEL_2",
+            "enum": [
+              "LEVEL_2"
+            ]
+          },
+          "rop": {
+            "type": "object",
+            "description": "Registered Options Principal (ROP) information for the representative who approved the account for options enrollment. Required for US brokers; optional for foreign brokers.",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the ROP representative",
+                "example": "Joe Smith"
+              },
+              "licenseType": {
+                "type": "string",
+                "description": "The type of license the ROP representative holds",
+                "example": "Series 3"
+              },
+              "licenseNo": {
+                "type": "string",
+                "description": "The license number of the ROP representative",
+                "example": "1234567"
+              },
+              "approvedWhen": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The UTC timestamp when the account was approved by the ROP for options trading",
+                "example": "2022-12-11T22:28:21.810Z"
+              }
+            }
+          }
+        }
+      },
+      "AccountFeatureOptionsResp": {
+        "type": "object",
+        "properties": {
+          "enrolled": {
+            "type": "boolean",
+            "description": "Whether the account is enrolled for options trading. This may be different from the value sent in the request if the account is pending approval for options trading or if the account was previously enrolled but has since been unenrolled.",
+            "example": true
+          },
+          "optionsLevel": {
+            "type": "string",
+            "description": "The level of options trading the customer is approved for. This may be different from the value sent in the request if the account is pending approval for options trading or if the account was previously approved for a different level of options trading.",
+            "example": "LEVEL_2",
+            "enum": [
+              "LEVEL_2"
+            ]
+          },
+          "requestedLevel": {
+            "type": "string",
+            "description": "The level of options trading the customer requested. This value is only returned if the account is pending approval for options trading and may be used to differentiate between accounts that are pending approval for new options trading and accounts that are pending approval for changes to existing options trading.",
+            "example": "LEVEL_2",
+            "enum": [
+              "LEVEL_2"
+            ]
+          },
+          "evaluatedAt": {
+            "type": "string",
+            "description": "The timestamp when the account's options trading features were last evaluated for approval.",
+            "example": "2022-12-11T22:28:21.810Z",
+            "readOnly": true
+          },
+          "rop": {
+            "type": "object",
+            "description": "Registered Options Principal (ROP) information for the representative who approved the account for options enrollment. Required for US brokers; optional for foreign brokers.",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the ROP representative",
+                "example": "Joe Smith"
+              },
+              "licenseType": {
+                "type": "string",
+                "description": "The type of license the ROP representative holds",
+                "example": "Series 3"
+              },
+              "licenseNo": {
+                "type": "string",
+                "description": "The license number of the ROP representative",
+                "example": "1234567"
+              },
+              "approvedWhen": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The UTC timestamp when the account was approved by the ROP for options trading",
+                "example": "2022-12-11T22:28:21.810Z"
+              }
+            }
+          }
+        }
+      },
+      "AccountFeatureMutualFunds": {
+        "type": "object",
+        "properties": {
+          "dividendReinvestment": {
+            "type": "boolean",
+            "example": true,
+            "description": "True, if dividends are reinvested."
+          },
+          "dividendReinvestmentOptInWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted for dividend reinvestment.",
+            "readOnly": true
+          },
+          "dividendReinvestmentOptOutWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted out of dividend reinvestment.",
+            "readOnly": true
+          },
+          "capitalGainsReinvestment": {
+            "type": "boolean",
+            "example": true,
+            "description": "True, if capital gains are reinvested."
+          },
+          "capitalGainsReinvestmentOptInWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted for capital gains reinvestment.",
+            "readOnly": true
+          },
+          "capitalGainsReinvestmentOptOutWhen": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp when the account has opted out of capital gains reinvestment",
+            "readOnly": true
+          }
+        }
+      },
+      "accountFundingType": {
+        "type": "string",
+        "description": "The method used to provide liquidity to the account. 'CASH' indicates accounts receive cash deposits and/or maintains a cash balance. 'CASHLESS' indicates accounts do not maintain cash balance.",
+        "example": "CASH",
+        "enum": [
+          "CASH",
+          "CASHLESS"
+        ]
+      },
+      "fpslEnrolled": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates whether the account is enrolled in Fully Paid Securities Lending (FPSL) program."
+      },
+      "trustedContact": {
+        "type": "object",
+        "description": "A trusted contact for the account. This information is typically collected for account holders who are seniors or vulnerable adults.",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "example": "John",
+            "description": "The first name of the trusted contact."
+          },
+          "lastName": {
+            "type": "string",
+            "example": "Smith",
+            "description": "The last name of the trusted contact."
+          },
+          "email": {
+            "type": "string",
+            "example": "hello@example.com",
+            "description": "The email address of the trusted contact."
+          },
+          "address": {
+            "type": "string",
+            "example": "123 Main Street",
+            "description": "The address of the trusted contact."
+          },
+          "phoneNumber": {
+            "type": "string",
+            "example": "+15106001234",
+            "description": "The phone number of the trusted contact."
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

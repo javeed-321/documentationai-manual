@@ -1,0 +1,733 @@
+{
+  "slug": "apis/docs/user-onboarding-data-requirements",
+  "source": "https://developer.drivewealth.com/apis/docs/user-onboarding-data-requirements.md",
+  "url": "https://developer.drivewealth.com/apis/docs/user-onboarding-data-requirements",
+  "title": "User Onboarding Data Requirements",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-26T20:14:50.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 21,
+    "br": 1,
+    "list": 8,
+    "Callout": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# User Onboarding Data Requirements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "User Onboarding Data Requirements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This document defines the required user data fields, validation rules, and compliance constraints for onboarding natural persons and entities on the platform.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This document defines the required user data fields, validation rules, and compliance constraints for onboarding natural persons and entities on the platform.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Name",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Name",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        16
+      ],
+      "raw": "**Validation:**\\\nMust begin with a letter and contain only letters (A–Z, a–z), hyphens (-), and spaces.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Validation:Must begin with a letter and contain only letters (A–Z, a–z), hyphens (-), and spaces.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        19
+      ],
+      "raw": "**Length:**\\\nMaximum length is 200 characters for both.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Length:Maximum length is 200 characters for both.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "**Null Handling**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Null Handling",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        24
+      ],
+      "raw": "* If a user has both a legal `firstName` and a legal `lastName`, **both must be provided**.\n* If a user legally does not have a first name or does not have a last name, the missing field may be left null.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "If a user has both a legal firstName and a legal lastName, both must be provided.If a user legally does not have a first name or does not have a last name, the missing field may be left null.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        26,
+        28
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  Name validation also applies to \"beneficiary\" and \"trusted contact\" names.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "Name validation also applies to \"beneficiary\" and \"trusted contact\" names.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 9,
+          "lines": [
+            27,
+            27
+          ],
+          "raw": "  Name validation also applies to \"beneficiary\" and \"trusted contact\" names.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Name validation also applies to \"beneficiary\" and \"trusted contact\" names.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "## Email",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Email",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        32,
+        33
+      ],
+      "raw": "**Length:**\\\nMaximum 255 characters.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Length:Maximum 255 characters.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        35,
+        36
+      ],
+      "raw": "Using industry-standard regex for pattern matching.\\\n`^(?![.])(?!.*[.]{2})[A-Za-z0-9._%+\\-']{1,64}(?<![.])@(?!-)(?!.*[.]{2})[A-Za-z0-9.-]+(?<!-)\\.[A-Za-z]{2,63}$`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Using industry-standard regex for pattern matching.^(?![.])(?!.*[.]{2})[A-Za-z0-9._%+\\-']{1,64}(?<![.])@(?!-)(?!.*[.]{2})[A-Za-z0-9.-]+(?<!-)\\.[A-Za-z]{2,63}$",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "## Address",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Address",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "**`street1`, `street2`:**  Must only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), comma (,), and spaces.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "street1, street2:  Must only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), comma (,), and spaces.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "`street1` is required; `street2` is optional.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "street1 is required; street2 is optional.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "**`city`:** Must only contain letters (a-z, A-Z), hyphen (-) and space.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "city: Must only contain letters (a-z, A-Z), hyphen (-) and space.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "**`province`:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "province:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        48,
+        49
+      ],
+      "raw": "* US addresses **must** provide a valid 2-letter state code\n* Optional (to accommodate addresses without province code)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "US addresses must provide a valid 2-letter state codeOptional (to accommodate addresses without province code)",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "**`postalCode`:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "postalCode:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        53,
+        54
+      ],
+      "raw": "* US addresses must provide 5 digit postal code.\n* Other countries' postal code is optional (to accommodate addresses without a postal code), must be 3 to 15 characters, allowing letters (a-z, A-Z), numbers (0-9), spaces.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "US addresses must provide 5 digit postal code.Other countries' postal code is optional (to accommodate addresses without a postal code), must be 3 to 15 characters, allowing letters (a-z, A-Z), numbers (0-9), spaces.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "## Date of Birth",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Date of Birth",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "**Age Limits:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Age Limits:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "* Minimum age: Must be 18 years or older.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Minimum age: Must be 18 years or older.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        62,
+        64
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  (US Only) Alabama residents who are only 18 must represent, as part of onboarding, that they are \"of sound mind\" and seek to open an account.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "(US Only) Alabama residents who are only 18 must represent, as part of onboarding, that they are \"of sound mind\" and seek to open an account.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 25,
+          "lines": [
+            63,
+            63
+          ],
+          "raw": "  (US Only) Alabama residents who are only 18 must represent, as part of onboarding, that they are \"of sound mind\" and seek to open an account.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "(US Only) Alabama residents who are only 18 must represent, as part of onboarding, that they are \"of sound mind\" and seek to open an account.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "## Citizenship, Country of Residency, and Tax Country",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Citizenship, Country of Residency, and Tax Country",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "Must use the standard ISO3 code.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Must use the standard ISO3 code.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "## Identification",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Identification",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "**US Taxpayer (Natural Persons):**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "US Taxpayer (Natural Persons):",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        74,
+        75
+      ],
+      "raw": "* Must provide SSN\n* SSN must be a 9-digit number; no dashes or periods.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Must provide SSNSSN must be a 9-digit number; no dashes or periods.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "**US Entities:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "US Entities:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        79,
+        80
+      ],
+      "raw": "* US entities must provide EIN\n* EIN must be a 9-digit number; no dashes are allowed",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "US entities must provide EINEIN must be a 9-digit number; no dashes are allowed",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        82,
+        82
+      ],
+      "raw": "**Foreign Individuals:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Foreign Individuals:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        84,
+        84
+      ],
+      "raw": "Must provide an ID, in priority order below:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Must provide an ID, in priority order below:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        86,
+        93
+      ],
+      "raw": "* a taxpayer identification number:\n  * allowed characters: a-z, A-Z, 0-9, blank (space), hyphen (-), comma (,), apostrophe ('), forward slash (/), period (.)\n* a passport number and country of issuance.\n  * allowed characters: a-z, A-Z, 0-9\n* an alien identification card number:\n  * allowed characters: a-z, A-Z, 0-9\n* the number and country of issuance of any other government-issued document evidencing nationality or residence and bearing a photograph or similar safeguard.\n  * allowed characters: a-z, A-Z, 0-9",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "a taxpayer identification number:allowed characters: a-z, A-Z, 0-9, blank (space), hyphen (-), comma (,), apostrophe ('), forward slash (/), period (.)a passport number and country of issuance.allowed characters: a-z, A-Z, 0-9an alien identification card number:allowed characters: a-z, A-Z, 0-9the number and country of issuance of any other government-issued document evidencing nationality or residence and bearing a photograph or similar safeguard.allowed characters: a-z, A-Z, 0-9",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "**Foreign entities:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Foreign entities:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "Must provide a tax identification number or other government-issued identification number",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Must provide a tax identification number or other government-issued identification number",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "* allowed characters: a-z, A-Z, 0-9",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "allowed characters: a-z, A-Z, 0-9",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

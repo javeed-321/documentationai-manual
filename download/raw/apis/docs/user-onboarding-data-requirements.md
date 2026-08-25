@@ -1,0 +1,99 @@
+---
+updatedAt: 2026-05-26T20:14:50.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# User Onboarding Data Requirements
+
+This document defines the required user data fields, validation rules, and compliance constraints for onboarding natural persons and entities on the platform.
+
+<br />
+
+## Name
+
+**Validation:**\
+Must begin with a letter and contain only letters (A–Z, a–z), hyphens (-), and spaces.
+
+**Length:**\
+Maximum length is 200 characters for both.
+
+**Null Handling**
+
+* If a user has both a legal `firstName` and a legal `lastName`, **both must be provided**.
+* If a user legally does not have a first name or does not have a last name, the missing field may be left null.
+
+<Callout icon="📘" theme="info">
+  Name validation also applies to "beneficiary" and "trusted contact" names.
+</Callout>
+
+## Email
+
+**Length:**\
+Maximum 255 characters.
+
+Using industry-standard regex for pattern matching.\
+`^(?![.])(?!.*[.]{2})[A-Za-z0-9._%+\-']{1,64}(?<![.])@(?!-)(?!.*[.]{2})[A-Za-z0-9.-]+(?<!-)\.[A-Za-z]{2,63}$`
+
+## Address
+
+**`street1`, `street2`:**  Must only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), comma (,), and spaces.
+
+`street1` is required; `street2` is optional.
+
+**`city`:** Must only contain letters (a-z, A-Z), hyphen (-) and space.
+
+**`province`:**
+
+* US addresses **must** provide a valid 2-letter state code
+* Optional (to accommodate addresses without province code)
+
+**`postalCode`:**
+
+* US addresses must provide 5 digit postal code.
+* Other countries' postal code is optional (to accommodate addresses without a postal code), must be 3 to 15 characters, allowing letters (a-z, A-Z), numbers (0-9), spaces.
+
+## Date of Birth
+
+**Age Limits:**
+
+* Minimum age: Must be 18 years or older.
+
+<Callout icon="🚧" theme="warn">
+  (US Only) Alabama residents who are only 18 must represent, as part of onboarding, that they are "of sound mind" and seek to open an account.
+</Callout>
+
+## Citizenship, Country of Residency, and Tax Country
+
+Must use the standard ISO3 code.
+
+## Identification
+
+**US Taxpayer (Natural Persons):**
+
+* Must provide SSN
+* SSN must be a 9-digit number; no dashes or periods.
+
+**US Entities:**
+
+* US entities must provide EIN
+* EIN must be a 9-digit number; no dashes are allowed
+
+**Foreign Individuals:**
+
+Must provide an ID, in priority order below:
+
+* a taxpayer identification number:
+  * allowed characters: a-z, A-Z, 0-9, blank (space), hyphen (-), comma (,), apostrophe ('), forward slash (/), period (.)
+* a passport number and country of issuance.
+  * allowed characters: a-z, A-Z, 0-9
+* an alien identification card number:
+  * allowed characters: a-z, A-Z, 0-9
+* the number and country of issuance of any other government-issued document evidencing nationality or residence and bearing a photograph or similar safeguard.
+  * allowed characters: a-z, A-Z, 0-9
+
+**Foreign entities:**
+
+Must provide a tax identification number or other government-issued identification number
+
+* allowed characters: a-z, A-Z, 0-9

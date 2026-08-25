@@ -1,0 +1,1000 @@
+{
+  "slug": "apis/docs/api-lifecycle-guide",
+  "source": "https://developer.drivewealth.com/apis/docs/api-lifecycle-guide.md",
+  "url": "https://developer.drivewealth.com/apis/docs/api-lifecycle-guide",
+  "title": "API lifecycle",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-08-07T19:51:35.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 12,
+    "paragraph": 21,
+    "list": 8,
+    "thematicBreak": 6,
+    "code": 1,
+    "Table": 2,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# API lifecycle",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API lifecycle",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This guide explains how DriveWealth manages the lifecycle of its APIs — from early availability through general release to eventual deprecation. Understanding these stages helps you build integrations that are stable, forward-compatible, and easy to maintain.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This guide explains how DriveWealth manages the lifecycle of its APIs — from early availability through general release to eventual deprecation. Understanding these stages helps you build integrations that are stable, forward-compatible, and easy to maintain.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## **Lifecycle stages**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Lifecycle stages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "### **Beta**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Beta",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "A **Beta** endpoint is available in the UAT (sandbox) environment for integration testing. Beta endpoints are not available in production.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A Beta endpoint is available in the UAT (sandbox) environment for integration testing. Beta endpoints are not available in production.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "A beta endpoint is identified by the `beta` tag in the API reference.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A beta endpoint is identified by the beta tag in the API reference.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "**What to expect during beta:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "What to expect during beta:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        23
+      ],
+      "raw": "* The endpoint is functional and testable in UAT\n* Request and response schemas may change before GA\n* There is no committed timeline for GA promotion",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The endpoint is functional and testable in UATRequest and response schemas may change before GAThere is no committed timeline for GA promotion",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "**Recommendations:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Recommendations:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        27,
+        29
+      ],
+      "raw": "* Do not release beta-dependent features to end customers in production\n* Monitor the <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/changelog\">changelog</Anchor> for updates to beta endpoints\n* Treat any schema changes during beta as expected, not breaking",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Do not release beta-dependent features to end customers in productionMonitor the changelog for updates to beta endpointsTreat any schema changes during beta as expected, not breaking",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/changelog",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "### **General Availability (GA)**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "General Availability (GA)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "A **GA** endpoint has had its `beta` tag removed and is available in both UAT and production environments.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A GA endpoint has had its beta tag removed and is available in both UAT and production environments.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "GA endpoints are covered by DriveWealth's API stability guarantees. Any breaking changes to a GA endpoint will follow the deprecation process described below.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "GA endpoints are covered by DriveWealth's API stability guarantees. Any breaking changes to a GA endpoint will follow the deprecation process described below.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "**What you can rely on with GA endpoints:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "What you can rely on with GA endpoints:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        41,
+        44
+      ],
+      "raw": "* The endpoint is stable and production-ready\n* Schema changes will be additive and non-breaking (see [Breaking vs. non-breaking changes](#breaking-vs-non-breaking-changes))\n* Advance notice will be given before any breaking changes\n* The endpoint appears in the changelog when it graduates from beta",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The endpoint is stable and production-readySchema changes will be additive and non-breaking (see Breaking vs. non-breaking changes)Advance notice will be given before any breaking changesThe endpoint appears in the changelog when it graduates from beta",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "### **Deprecated**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Deprecated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "A **Deprecated** endpoint is marked with a `deprecated` tag in the API reference. It remains available in both UAT and production but should not be used for new integrations.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A Deprecated endpoint is marked with a deprecated tag in the API reference. It remains available in both UAT and production but should not be used for new integrations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "Deprecated endpoints have a defined sunset date after which they will be removed entirely.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Deprecated endpoints have a defined sunset date after which they will be removed entirely.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "**What to expect when an endpoint is deprecated:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "What to expect when an endpoint is deprecated:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        56,
+        59
+      ],
+      "raw": "* A deprecation notice is published in the <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/changelog\">changelog</Anchor>\n* The sunset date is stated in the deprecation notice — typically a minimum of **12 months** from the deprecation date\n* The endpoint continues to function until the sunset date\n* DriveWealth will communicate migration guidance alongside the deprecation notice",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "A deprecation notice is published in the changelogThe sunset date is stated in the deprecation notice — typically a minimum of 12 months from the deprecation dateThe endpoint continues to function until the sunset dateDriveWealth will communicate migration guidance alongside the deprecation notice",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/changelog",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "**Recommendations:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Recommendations:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        63,
+        65
+      ],
+      "raw": "* Begin planning your migration as soon as you see a deprecation notice\n* Do not build new features on deprecated endpoints\n* Contact your DriveWealth integration manager if the timeline creates a problem for your roadmap",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Begin planning your migration as soon as you see a deprecation noticeDo not build new features on deprecated endpointsContact your DriveWealth integration manager if the timeline creates a problem for your roadmap",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        67,
+        67
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "### **Retired**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Retired",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "A **retired** endpoint has been fully removed. Requests to a sunset endpoint will return a `410 Gone` response.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A retired endpoint has been fully removed. Requests to a sunset endpoint will return a 410 Gone response.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        73,
+        80
+      ],
+      "raw": "```json\n{\n  \"error\": {\n    \"code\": \"ENDPOINT_REMOVED\",\n    \"message\": \"This endpoint was removed on 2025-06-01. See https://developer.drivewealth.com/apis/changelog for migration guidance.\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"error\": {\n    \"code\": \"ENDPOINT_REMOVED\",\n    \"message\": \"This endpoint was removed on 2025-06-01. See https://developer.drivewealth.com/apis/changelog for migration guidance.\"\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        82,
+        82
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        84,
+        84
+      ],
+      "raw": "## **Lifecycle at a glance**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Lifecycle at a glance",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        86,
+        91
+      ],
+      "raw": "| Stage          | UAT | Production | Stability guarantee | Action required           |\n| :------------- | :-- | :--------- | :------------------ | :------------------------ |\n| **Beta**       | ✅   | ❌          | None                | Test and provide feedback |\n| **GA**         | ✅   | ✅          | ✅                   | Build against             |\n| **Deprecated** | ✅   | ✅          | Until sunset date   | Plan migration            |\n| **Retired**    | ❌   | ❌          | —                   | Migrate immediately       |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Stage",
+          "UAT",
+          "Production",
+          "Stability guarantee",
+          "Action required"
+        ],
+        "rows": [
+          [
+            "Beta",
+            "✅",
+            "❌",
+            "None",
+            "Test and provide feedback"
+          ],
+          [
+            "GA",
+            "✅",
+            "✅",
+            "✅",
+            "Build against"
+          ],
+          [
+            "Deprecated",
+            "✅",
+            "✅",
+            "Until sunset date",
+            "Plan migration"
+          ],
+          [
+            "Retired",
+            "❌",
+            "❌",
+            "—",
+            "Migrate immediately"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "## **Breaking vs. non-breaking changes**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Breaking vs. non-breaking changes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "DriveWealth distinguishes between changes that require action on your part and changes that are safe to absorb automatically.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth distinguishes between changes that require action on your part and changes that are safe to absorb automatically.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "### **Breaking changes**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Breaking changes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        101,
+        101
+      ],
+      "raw": "A breaking change is any modification that can cause an existing, correctly-written integration to fail or behave incorrectly without code changes on your side.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A breaking change is any modification that can cause an existing, correctly-written integration to fail or behave incorrectly without code changes on your side.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        103,
+        103
+      ],
+      "raw": "DriveWealth will **never** introduce breaking changes to a GA endpoint without first deprecating it and providing a migration path.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth will never introduce breaking changes to a GA endpoint without first deprecating it and providing a migration path.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        105,
+        105
+      ],
+      "raw": "Breaking changes include:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Breaking changes include:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        107,
+        118
+      ],
+      "raw": "* Removing an endpoint entirely\n* Removing a required or optional request field\n* Removing a response field\n* Renaming a field\n* Changing a field's data type (e.g. `string` → `integer`)\n* Changing a field's format in a meaningful way (e.g. date format `YYYY-MM-DD` → Unix timestamp)\n* Changing an HTTP method (e.g. `POST` → `PUT`)\n* Changing a URL path or path parameter\n* Adding a new **required** request field\n* Changing authentication requirements\n* Narrowing the range of accepted values for a field (e.g. reducing the max length of a string)\n* Removing or renaming an enum value that appears in responses",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Removing an endpoint entirelyRemoving a required or optional request fieldRemoving a response fieldRenaming a fieldChanging a field's data type (e.g. string → integer)Changing a field's format in a meaningful way (e.g. date format YYYY-MM-DD → Unix timestamp)Changing an HTTP method (e.g. POST → PUT)Changing a URL path or path parameterAdding a new required request fieldChanging authentication requirementsNarrowing the range of accepted values for a field (e.g. reducing the max length of a string)Removing or renaming an enum value that appears in responses",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        120,
+        120
+      ],
+      "raw": "### **Non-breaking changes**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Non-breaking changes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        122,
+        122
+      ],
+      "raw": "A non-breaking change can be introduced to GA endpoints at any time without a deprecation cycle. Well-written integrations should absorb these changes gracefully.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A non-breaking change can be introduced to GA endpoints at any time without a deprecation cycle. Well-written integrations should absorb these changes gracefully.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        124,
+        124
+      ],
+      "raw": "Non-breaking changes include:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Non-breaking changes include:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        126,
+        133
+      ],
+      "raw": "* Adding a new optional request field\n* Adding a new response field\n* Adding a new endpoint\n* Adding a new enum value to a **request** field (see note below)\n* Relaxing validation (e.g. increasing the max length of a string)\n* Changing the order of fields in a JSON response\n* Adding new error codes to the documented error set\n* Performance improvements with no observable behavior change",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Adding a new optional request fieldAdding a new response fieldAdding a new endpointAdding a new enum value to a request field (see note below)Relaxing validation (e.g. increasing the max length of a string)Changing the order of fields in a JSON responseAdding new error codes to the documented error setPerformance improvements with no observable behavior change",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        135,
+        135
+      ],
+      "raw": "**Note on new enum values in responses:** If your integration deserializes responses into a strict enum type, a new response enum value can cause a runtime error. DriveWealth recommends using permissive deserialization for enum fields and treating unknown values as a signal to check the changelog — not as a hard failure.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note on new enum values in responses: If your integration deserializes responses into a strict enum type, a new response enum value can cause a runtime error. DriveWealth recommends using permissive deserialization for enum fields and treating unknown values as a signal to check the changelog — not as a hard failure.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "### **How to write a resilient integration**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "How to write a resilient integration",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        139,
+        139
+      ],
+      "raw": "Following these practices will ensure your integration handles non-breaking changes without requiring code changes:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Following these practices will ensure your integration handles non-breaking changes without requiring code changes:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        141,
+        144
+      ],
+      "raw": "* **Ignore unknown fields.** Do not reject responses that contain fields your code does not recognize.\n* **Use permissive enum handling.** Log and skip unknown enum values rather than throwing an error.\n* **Do not rely on field ordering.** JSON object field order is not guaranteed.\n* **Check for&#x20;**`null`**&#x20;explicitly.** Do not assume that a field present today will always have a non-null value.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Ignore unknown fields. Do not reject responses that contain fields your code does not recognize.Use permissive enum handling. Log and skip unknown enum values rather than throwing an error.Do not rely on field ordering. JSON object field order is not guaranteed.Check for null explicitly. Do not assume that a field present today will always have a non-null value.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        146,
+        146
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        148,
+        148
+      ],
+      "raw": "## **How changes are communicated**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "How changes are communicated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        150,
+        154
+      ],
+      "raw": "| Channel                                                                                            | What's published                                                                      |\n| :------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/changelog\">Changelog</Anchor> | All lifecycle events: beta promotion, GA release, deprecation notices, sunset notices |\n| API reference                                                                                      | `beta` and `deprecated` tags on affected endpoints                                    |\n| Email                                                                                              | Direct notice to affected clients for breaking changes and deprecations               |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Channel",
+          "What's published"
+        ],
+        "rows": [
+          [
+            "Changelog",
+            "All lifecycle events: beta promotion, GA release, deprecation notices, sunset notices"
+          ],
+          [
+            "API reference",
+            "beta and deprecated tags on affected endpoints"
+          ],
+          [
+            "Email",
+            "Direct notice to affected clients for breaking changes and deprecations"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/changelog",
+          "line": 152
+        }
+      ]
+    },
+    {
+      "i": 51,
+      "lines": [
+        156,
+        156
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 156
+        }
+      ]
+    }
+  ]
+}

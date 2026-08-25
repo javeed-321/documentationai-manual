@@ -1,0 +1,339 @@
+---
+title: "Understanding How DriveWealth Calculates Account Performance"
+---
+
+**Developer Guide** — This document covers the Modified Dietz methodology used by DriveWealth to calculate account performance, how it maps to the [Retrieve Account Performance API](https://developer.drivewealth.com/apis/reference/accountperformance), and guidance for surfacing performance data to your end users.
+
+## **The Modified Dietz Method**
+
+DriveWealth calculates the performance (rate of return) of each account using the Modified Dietz method. This is a widely used, industry-recognized approach for measuring how investments have performed over a given period of time, while fairly accounting for any money added or withdrawn along the way.
+
+This document explains how it works, walks through a few examples, and compares it to other methods used across the industry.
+
+---
+
+## **Why performance calculation isn't as simple as it sounds**
+
+If a user never added or withdrew money, measuring return would be easy:
+
+**Return = (Ending Value − Starting Value) ÷ Starting Value**
+
+But in the real world, users deposit and withdraw funds throughout the period. A simple calculation can't tell the difference between _growth from investments_ and _growth from new money added_. For example, if an account grew from $10,000 to $15,000, but $4,000 of that was a deposit, the investments only really earned $1,000 — not $5,000.
+
+The Modified Dietz method solves this by weighting each cash flow by how long it was actually invested during the period.
+
+---
+
+## **The formula**
+
+The **Modified Dietz formula** for performance returns is:
+
+```
+R = (Bₑ − B₀ − C) ÷ (B₀ + W)
+```
+
+Where:
+
+| Variable | Description                                                                                                       |
+| :------- | :---------------------------------------------------------------------------------------------------------------- |
+| **R**    | The Modified Dietz return                                                                                         |
+| **Bₑ**   | The ending balance of the portfolio                                                                               |
+| **B₀**   | The beginning balance of the portfolio                                                                            |
+| **C**    | The net sum of all cash flows during the period (inflows are positive, outflows are negative)                     |
+| **W**    | The weighted sum of cash flows, which accounts for the timing of each cash flow relative to the period's duration |
+
+**Weighted Cash Flows (W) Calculation:**
+
+```
+W = Σ [ Cᵢ × (T − tᵢ) ÷ T ]   (summed over each cash flow i = 1 to n)
+```
+
+Where:
+
+| Variable | Description                                                      |
+| :------- | :--------------------------------------------------------------- |
+| **Cᵢ**   | The amount of each cash flow                                     |
+| **tᵢ**   | The time (in days) from the start of the period to the cash flow |
+| **T**    | The total length of the period (in days)                         |
+
+In plain terms:
+
+- The **numerator** (Bₑ − B₀ − C) is the actual investment gain — the ending balance minus what was there at the start and minus any money put in or taken out.
+- The **denominator** (B₀ + W) is the "average invested capital" — the starting balance plus deposits/withdrawals adjusted for how long they were in the account.
+
+A deposit made early in the period (small tᵢ) is weighted heavily, because (T − tᵢ) ÷ T is close to 1 — it was invested almost the whole time. A deposit made on the last day (tᵢ = T) carries a weight of 0 and barely counts toward the return, because it had almost no time to earn anything.
+
+---
+
+## **Example 1: A simple period with no cash flows**
+
+**Scenario** — A 30-day month, no deposits or withdrawals.
+
+| Variable                | Value   |
+| :---------------------- | :------ |
+| Beginning balance (B₀)  | $10,000 |
+| Ending balance (Bₑ)     | $10,500 |
+| Net cash flows (C)      | $0      |
+| Weighted cash flows (W) | $0      |
+
+```
+R = (Bₑ − B₀ − C) ÷ (B₀ + W)
+  = (10,500 − 10,000 − 0) ÷ (10,000 + 0)
+  = 500 ÷ 10,000
+  = 5.0%
+```
+
+With no cash flows, Modified Dietz gives the same simple, intuitive answer you'd expect: **5.0%**.
+
+---
+
+## **Example 2: A deposit mid-period**
+
+**Scenario** — A 30-day month. A deposit of **$5,000 on Day 15** (halfway through).
+
+| Variable               | Value   |
+| :--------------------- | :------ |
+| Beginning balance (B₀) | $10,000 |
+| Ending balance (Bₑ)    | $16,000 |
+| Deposit on Day 15 (C₁) | +$5,000 |
+| Net cash flows (C)     | +$5,000 |
+| Total days (T)         | 30      |
+| Days to cash flow (t₁) | 15      |
+
+**Step 1 — Compute the weighted cash flow (W).** The deposit's time from the start of the period is t₁ = 15 of T = 30 days:
+
+```
+W = C₁ × (T − t₁) ÷ T
+  = 5,000 × (30 − 15) ÷ 30
+  = 5,000 × 0.50
+  = 2,500
+```
+
+**Step 2 — Apply the formula.**
+
+```
+R = (Bₑ − B₀ − C) ÷ (B₀ + W)
+  = (16,000 − 10,000 − 5,000) ÷ (10,000 + 2,500)
+  = 1,000 ÷ 12,500
+  = 8.0%
+```
+
+Even though the raw account value jumped by $6,000, the investments only _earned_ $1,000. Because the $5,000 deposit was only invested for half the period, it counts as $2,500 of "average invested capital" — producing a fair return of **8.0%**.
+
+---
+
+## **Example 3: The timing of the deposit matters**
+
+Same numbers as Example 2 ($1,000 of actual gain), but with different deposit timing:
+
+| Deposit Timing (t₁) | Weight (T − t₁) ÷ T | W      | Denominator (B₀ + W) | Return (R) |
+| :------------------ | :------------------ | :----- | :------------------- | :--------- |
+| Day 1 (start)       | 29/30 ≈ 0.97        | $4,833 | $14,833              | **6.7%**   |
+| Day 15 (middle)     | 15/30 = 0.50        | $2,500 | $12,500              | **8.0%**   |
+| Day 30 (end)        | 0/30 = 0.00         | $0     | $10,000              | **10.0%**  |
+
+This illustrates the core idea: **money that was invested longer carries more weight.** A deposit on the last day shouldn't get "credit" for the whole period's growth — and Modified Dietz ensures it doesn't.
+
+---
+
+## **Pros and cons of the Modified Dietz Method**
+
+### **Advantages**
+
+- Fairly accounts for cash flows. Deposits and withdrawals are weighted by time invested, so the return reflects investment performance — not just money moving in and out.
+- No need for daily valuations. It only requires the beginning value, ending value, and the dates/amounts of cash flows. This makes it practical, transparent, and reproducible.
+- Industry-standard and GIPS-recognized. Modified Dietz is explicitly permitted under the Global Investment Performance Standards (GIPS) for periods without daily pricing, making it a credible and accepted methodology.
+- Easy to understand and audit. The inputs are simple and the math can be verified by hand.
+
+### **Limitations**
+
+- It's an approximation. Modified Dietz assumes a constant rate of return across the period. It doesn't capture exactly _when_ market gains and losses occurred relative to cash flows.
+- Less accurate with large cash flows in volatile markets. If a big deposit occurs right before a sharp market move, the time-weighting approximation can diverge from the true return.
+- Money-weighted by design. Because the result is influenced by the size and timing of cash flows, it measures the _personal investor experience_ rather than the pure performance of the underlying investments. (This can be a pro or a con depending on what you want to measure — see below.)
+
+---
+
+## **How this compares to the rest of the industry**
+
+There are three broad families of performance calculation. Modified Dietz is a practical middle ground.
+
+### **1. Simple Return**
+
+- **What it is:** (End − Start) ÷ Start, ignoring cash flow timing.
+- **Trade-off:** Easy, but misleading whenever money is added or withdrawn. Rarely used on its own for client reporting.
+
+### **2. Money-Weighted Return (MWR / IRR) — _the family Modified Dietz belongs to_**
+
+- **What it is:** Measures the return on the actual dollars invested, accounting for the timing and size of cash flows. The most precise version is the Internal Rate of Return (IRR), which requires iterative computation.
+- **Modified Dietz** is a simplified, closed-form approximation of IRR — it captures most of the benefit without the computational complexity.
+- **Best for:** Showing the personal investor experience — what specific decisions and timing actually earned.
+- **Used by:** Most retail brokerages and robo-advisors for individual account-level returns. Required for client reporting under regulations like the EU's MiFID II.
+
+### **3. Time-Weighted Return (TWR)**
+
+- **What it is:** Removes the impact of cash flow timing entirely by breaking the period into sub-periods at each cash flow and chaining (geometrically linking) the sub-period returns.
+- **Best for:** Comparing the skill of a fund or portfolio manager, because it isolates investment performance from the client's deposit/withdrawal decisions.
+- **Trade-off:** Requires a portfolio valuation at every cash flow date, which is more data-intensive.
+- **Used by:** Mutual funds, ETFs, and investment managers reporting a strategy's "official" performance, and is the GIPS-preferred standard for composite manager performance.
+
+### **Quick Comparison**
+
+| Method              | Accounts for Cash Flow Timing? | Needs Daily/Per-Flow Valuations? | Best Measures                       | Complexity |
+| :------------------ | :----------------------------- | :------------------------------- | :---------------------------------- | :--------- |
+| Simple Return       | No                             | No                               | Nothing reliably (when flows exist) | Very Low   |
+| Modified Dietz      | Yes (approximate)              | No                               | Your investor experience            | Medium     |
+| IRR / MWR (exact)   | Yes (exact)                    | No (but iterative)               | Your investor experience            | Medium     |
+| Time-Weighted (TWR) | Yes — removes the impact       | Yes                              | Manager/strategy skill              | High       |
+
+---
+
+## **The bottom line**
+
+DriveWealth uses **Modified Dietz** because it strikes the right balance for individual investors:
+
+- It fairly reflects personal returns, accounting for when money was added or withdrawn.
+- It is transparent, reproducible, and industry-accepted under GIPS.
+- It doesn't require complex daily valuations, making it reliable and easy to explain.
+
+In short, it answers the question most investors actually care about: _"Given the money I put in and when I put it in, how did my investments actually perform?"_
+
+---
+
+## **Fetching account performance from the API**
+
+The DriveWealth [Retrieve Account Performance](https://developer.drivewealth.com/apis/reference/accountperformance) endpoint returns end-of-day performance data per account, including balances, cash flows, and the Modified Dietz rate of return for each period in the time series.
+
+### **Endpoint**
+
+```
+GET https://bo-api.drivewealth.io/back-office/accounts/{accountID}/performance-returns
+```
+
+### **Required Parameters**
+
+| Parameter   | Type  | Description                                                              |
+| :---------- | :---- | :----------------------------------------------------------------------- |
+| `accountID` | path  | The user's unique account identifier                                     |
+| `frequency` | query | Period frequency: `D` (Daily), `W` (Weekly), `M` (Monthly), `Y` (Yearly) |
+| `from`      | query | Start date filter (e.g. `2025-11-11`)                                    |
+| `to`        | query | End date filter (e.g. `2025-11-18`)                                      |
+
+**Frequency validation rules:**
+
+- Range ≤ 90 days: `D`, `W`, or `M`
+- Range > 90 days and ≤ 12 months: `M` only
+- Range > 12 months: `M` or `Y`
+
+### **Example request**
+
+```shell
+curl --request GET \
+     --url 'https://bo-api.drivewealth.io/back-office/accounts/{{ACCOUNT_ID}}/performance-returns?frequency=D&from=2025-11-11&to=2025-11-18' \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer \{\{YOUR_ACCESS_TOKEN}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}'
+```
+
+### **Example response**
+
+```json
+{
+    "accountID": "2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394",
+    "accountNo": "ABCD005972",
+    "startDate": "2025-11-11",
+    "endDate": "2025-11-18",
+    "lastUpdated": "2025-11-18",
+    "timeSeries": [
+        {
+            "date": "2025-11-11",
+            "gainLoss": 7.18,
+            "positionBalance": 2273.33,
+            "cashBalance": 46.38,
+            "marketValue": 2319.71,
+            "cashFlows": 0.00,
+            "deposits": 0.00,
+            "withdrawals": 0.00,
+            "fees": 0.00,
+            "income": 0.00,
+            "rateOfReturn": 0.003104
+        },
+        {
+            "date": "2025-11-12",
+            "gainLoss": 5.08,
+            "positionBalance": 2278.41,
+            "cashBalance": 46.38,
+            "marketValue": 2324.79,
+            "cashFlows": 0.00,
+            "deposits": 0.00,
+            "withdrawals": 0.00,
+            "fees": 0.00,
+            "income": 0.00,
+            "rateOfReturn": 0.002188
+        }
+    ],
+    "summary": {
+        "beginningMarketValue": null,
+        "beginningPositionBalance": null,
+        "beginningCashBalance": null,
+        "endingMarketValue": 2266.53,
+        "endingPositionBalance": 2220.15,
+        "endingCashBalance": 46.38,
+        "periodGainLoss": null,
+        "periodCashFlows": 0.00,
+        "periodDeposits": 0.00,
+        "periodWithdrawals": 0.00,
+        "periodFees": 0.00,
+        "periodIncome": 0.29,
+        "periodReturn": -0.022925,
+        "mtdReturn": -0.018631,
+        "ytdReturn": 0.120243,
+        "inceptionReturn": -0.999999,
+        "1yearReturn": 0.092667,
+        "3yearReturn": -0.999999,
+        "5yearReturn": null
+    }
+}
+```
+
+**Note:** `mtdReturn`, `ytdReturn`, `1yearReturn`, `3yearReturn`, `5yearReturn`, and `inceptionReturn` will return `null` when values are not available for those time periods, even within a `200` response.
+
+---
+
+## **Building a performance UI for end users**
+
+### **Displaying Account Value Over Time**
+
+To chart how an account's total value has changed over time, use the `marketValue` field from the time series. This represents the ending cash + position balance of the account for each period.
+
+### **Displaying Gain / Loss Over Time**
+
+To chart the change in account value after accounting for deposits and withdrawals, use the `gainLoss` field. This strips out the effect of cash flows so the chart reflects true investment performance — not just money moving in and out.
+
+### **Displaying a Rate of Return**
+
+When showing a rate of return, display a single figure corresponding to the time frame of the associated graph. Use `periodReturn` from the `summary` object, and convert from decimal to percentage for display.
+
+**Example — 1-week period:**
+
+```
+periodReturn = 0.000277 → display as 0.0277%
+```
+
+**What to tell your users:** "This return shows how your investments performed during the selected period, adjusted for any deposits or withdrawals you made. It uses the Modified Dietz method, an industry-standard calculation that ensures your contributions don't artificially inflate or deflate your returns."
+
+### **Frequency Options**
+
+| Value | Period  | Notes                                                                          |
+| :---- | :------ | :----------------------------------------------------------------------------- |
+| `D`   | Daily   | One data point per calendar day                                                |
+| `W`   | Weekly  | Monday–Friday. Dates are adjusted to week boundaries automatically             |
+| `M`   | Monthly | First of month to last of month. Day values in `from`/`to` are ignored         |
+| `Y`   | Yearly  | First of year to last of year. Day and month values in `from`/`to` are ignored |
+
+**Weekly note:** If a Wednesday date is passed in `from`, it is adjusted to that Monday. If a Wednesday is passed in `to`, it is adjusted to that Friday. The date returned in the array is always the Friday date.
+
+**Monthly note:** Pass only year and month values in `from`/`to`. The API calculates full calendar months regardless of day values.
+
+**Yearly note:** Pass only year values in `from`/`to`. The array returns one record per year, with the last record ending on the most recently calculated performance date.
+
+---

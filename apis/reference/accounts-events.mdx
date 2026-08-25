@@ -1,0 +1,100 @@
+---
+title: "Account Events"
+---
+
+## Accounts Created
+
+A new account has been created for a user.
+
+```json title="Created"
+{
+    "id": "event_19c419d4-abb7-43ab-95df-86b3185f41e8",
+    "type": "accounts.created",
+    "timestamp": "2019-03-28T22:43:13.929517111Z",
+    "payload": {
+        "accountNo": "DWPR000088",
+        "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1553812993200",
+        "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd"
+    }
+}
+```
+
+## Accounts Updated
+
+The detail of the user's account has been updated. This event will show the previous state and the current state of the object.
+
+> **⚠️ DEPRECATED:** Pattern Day Trading (PDT) fields are deprecated. The `pdt` object and its properties (`patternDayTrader`, `pdtRestricted`, `pdtRestrictedWhen`) will be removed in a future release.
+
+```json title="Updated"
+{
+    "id": "event_773a8a45-75fc-4143-8673-9dcfef576328",
+    "type": "accounts.updated",
+    "timestamp": "2019-03-28T22:46:47.821071506Z",
+    "payload": {
+        "previous": {
+            "status": {
+                "name": "OPEN",
+                "description": "Open"
+            },
+            "pdt": {
+                "patternDayTrader": false,
+                "pdtRestricted": false,
+                "pdtRestrictedWhen": null
+            },
+            "bod": {
+                "moneyMarket": 0,
+                "equityValue": 22738.32,
+                "cashAvailableForWithdrawal": 0,
+                "cashAvailableForTrading": 0,
+                "updatedWhen": "2019-03-28T07:18:02.879Z",
+                "cashBalance": 0
+            }
+        },
+        "current": {
+            "status": {
+                "name": "OPEN_NO_NEW_TRADES",
+                "description": "Open - No new trades"
+            },
+            "pdt": {
+                "patternDayTrader": true,
+                "pdtRestricted": true,
+                "pdtRestrictedWhen": "2019-02-28T07:18:02.879Z"
+            },
+            "bod": {
+                "moneyMarket": 0,
+                "equityValue": 22738.32,
+                "cashAvailableForWithdrawal": 0,
+                "cashAvailableForTrading": 0,
+                "updatedWhen": "2019-03-28T22:46:47.777Z",
+                "cashBalance": 0
+            }
+        },
+        "accountEquityBreakdown": {
+            "longMarketValue": 0,
+            "debitBalance": 0,
+            "accountEquity": 22738.32
+        },
+        "accountID": "711c012d-7a3c-4c25-be20-a6613ede1a3a.1559212256121",
+        "accountNo": "DWYZ000001",
+        "userID": "711c012d-7a3c-4c25-be20-a6613ede1a3a"
+    }
+}
+```
+
+## Account Commission Update
+
+A user's account commission has been updated.
+
+```json title="Updated Commissions"
+{
+    "id": "event_5a11c5b9-ad97-4e25-a1d6-7ff27378c08c",
+    "type": "accounts.commission.updated",
+    "timestamp": "2019-03-28T22:44:19.745615563Z",
+    "payload": {
+        "commissionID": "b3e985dd-9679-63dc-5dd5-9bd7982efecd",
+        "accountNo": "DWZR000001",
+        "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1403540676095",
+        "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd"
+    }
+}
+```

@@ -1,0 +1,188 @@
+{
+  "slug": "apis/reference/withdrawals-events",
+  "source": "https://developer.drivewealth.com/apis/reference/withdrawals-events.md",
+  "url": "https://developer.drivewealth.com/apis/reference/withdrawals-events",
+  "title": "Withdrawal Events",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-08-13T02:07:54.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "Callout": 1,
+    "paragraph": 2,
+    "code": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Withdrawal Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Withdrawal Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        11
+      ],
+      "raw": "> 👍 Withdrawals vs Redemptions\n>\n> Redemptions and withdrawals mean the same thing and are used throughout the guides and API reference interchangeably. So when you see redemptions think withdrawals and vice versa.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "Withdrawals vs RedemptionsRedemptions and withdrawals mean the same thing and are used throughout the guides and API reference interchangeably. So when you see redemptions think withdrawals and vice versa.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Withdrawals Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Withdrawals Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "A new withdrawal has been created in a user's account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A new withdrawal has been created in a user's account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        40
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_a296f5ba-3366-43dd-a0da-4e9a48ab7d57\",\n    \"type\": \"redemptions.created\",\n    \"timestamp\": \"2019-09-23T07:08:14.121518146Z\",\n    \"payload\": {\n        \"paymentID\": \"DWTY000222-1569532743890-RXUCH\",\n        \"category\": \"REDEMPTION\",\n        \"type\": \"WIRE\",\n        \"amount\": -100.0,\n        \"currency\": \"USD\",\n        \"status\": 1,\n        \"statusMessage\": \"Pending\",\n        \"userID\": \"30b250c6-8e85-40e0-937f-0b0689691b38\",\n        \"accountID\": \"30b250c6-8e85-40e0-937f-0b0689691b38.1569532274142\",\n        \"transactionCode\": \"RECEIPT_WIRE\",\n        \"description\": \"Cash Disbursement - Wire\",\n        \"note\": \"Here's some money\",\n        \"metadata\": {\n            \"clientWithdrawalRef\": \"WD-20260807-0043\"\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_a296f5ba-3366-43dd-a0da-4e9a48ab7d57\",\n    \"type\": \"redemptions.created\",\n    \"timestamp\": \"2019-09-23T07:08:14.121518146Z\",\n    \"payload\": {\n        \"paymentID\": \"DWTY000222-1569532743890-RXUCH\",\n        \"category\": \"REDEMPTION\",\n        \"type\": \"WIRE\",\n        \"amount\": -100.0,\n        \"currency\": \"USD\",\n        \"status\": 1,\n        \"statusMessage\": \"Pending\",\n        \"userID\": \"30b250c6-8e85-40e0-937f-0b0689691b38\",\n        \"accountID\": \"30b250c6-8e85-40e0-937f-0b0689691b38.1569532274142\",\n        \"transactionCode\": \"RECEIPT_WIRE\",\n        \"description\": \"Cash Disbursement - Wire\",\n        \"note\": \"Here's some money\",\n        \"metadata\": {\n            \"clientWithdrawalRef\": \"WD-20260807-0043\"\n        }\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "## Withdrawals Updated",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Withdrawals Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "A withdrawal has been updated.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A withdrawal has been updated.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        46,
+        70
+      ],
+      "raw": "```json Updated\n{\n    \"id\": \"event_a296f5ba-3366-43dd-a0da-4e9a48ab7d57\",\n    \"type\": \"redemptions.updated\",\n    \"timestamp\": \"2019-09-23T07:08:14.121518146Z\",\n    \"payload\": {\n        \"paymentID\": \"DWTY000222-1569532743890-RXUCH\",\n        \"category\": \"REDEMPTION\",\n        \"type\": \"ACH\",\n        \"amount\": -100.0,\n        \"currency\": \"USD\",\n        \"status\": 2,\n        \"statusMessage\": \"Successful\",\n        \"userID\": \"30b250c6-8e85-40e0-937f-0b0689691b38\",\n        \"accountID\": \"30b250c6-8e85-40e0-937f-0b0689691b38.1569532274142\",\n        \"finTranRef\": \"GA.59ef9888-abb9-4b8d-95ce-e2a6cac7d576\",\n        \"transactionCode\": \"CSD\",\n        \"description\": \"Cash Disbursement - Wire\",\n        \"note\": \"Here's some money\",\n        \"metadata\": {\n            \"clientWithdrawalRef\": \"WD-20260807-0043\"\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n    \"id\": \"event_a296f5ba-3366-43dd-a0da-4e9a48ab7d57\",\n    \"type\": \"redemptions.updated\",\n    \"timestamp\": \"2019-09-23T07:08:14.121518146Z\",\n    \"payload\": {\n        \"paymentID\": \"DWTY000222-1569532743890-RXUCH\",\n        \"category\": \"REDEMPTION\",\n        \"type\": \"ACH\",\n        \"amount\": -100.0,\n        \"currency\": \"USD\",\n        \"status\": 2,\n        \"statusMessage\": \"Successful\",\n        \"userID\": \"30b250c6-8e85-40e0-937f-0b0689691b38\",\n        \"accountID\": \"30b250c6-8e85-40e0-937f-0b0689691b38.1569532274142\",\n        \"finTranRef\": \"GA.59ef9888-abb9-4b8d-95ce-e2a6cac7d576\",\n        \"transactionCode\": \"CSD\",\n        \"description\": \"Cash Disbursement - Wire\",\n        \"note\": \"Here's some money\",\n        \"metadata\": {\n            \"clientWithdrawalRef\": \"WD-20260807-0043\"\n        }\n    }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

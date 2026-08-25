@@ -1,0 +1,218 @@
+---
+updatedAt: 2025-09-22T15:02:04.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Transaction Events
+
+## Transactions Created
+
+A new transaction has been created in a customer account. This event provides the details and type of the transaction that took place.
+
+```json Created
+{
+    "id": "event_605c0042-ebc7-453e-9904-268b4f703f70",
+    "type": "transactions.created",
+    "timestamp": "2019-03-28T22:35:20.390396363Z",
+    "payload": {
+        "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1403540676095",
+        "accountNo": "DWZR000001",
+        "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd",
+        "transaction": {
+            "accountAmount": 12,
+            "accountBalance": 57529.64,
+            "comment": "22",
+            "finTranID": "GC.4bafaf91-c893-4684-9e59-27d514b72e7a",
+            "wlpFinTranTypeID": "00cec36e-4d83-4703-a769-894198b829f2",
+            "finTranTypeID": "CSR",
+            "feeSec": 0,
+            "feeTaf": 0,
+            "feeBase": 0,
+            "feeXtraShares": 0,
+            "feeExchange": 0
+        }
+    }
+}
+```
+```json Created [dividend]
+{
+    "id": "event_a1acdf71-17d2-4e38-81ce-871a86374b40",
+    "type": "transactions.created",
+    "timestamp": "2019-04-05T19:25:14.711707573Z",
+    "payload": {
+        "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850",
+        "accountNo": "DWEF000010",
+        "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd",
+        "transaction": {
+            "accountAmount": 2.29,
+            "accountBalance": 128195.27,
+            "comment": "BPY dividend, $0.3043/share",
+            "finTranID": "GF.861e931d-e7aa-47c8-b87a-b1e55acf3862",
+            "wlpFinTranTypeID": "e8ff5103-ad40-4ed9-b2ee-fd96826bf935",
+            "finTranTypeID": "DIV",
+            "feeSec": 0,
+            "feeTaf": 0,
+            "feeBase": 0,
+            "feeXtraShares": 0,
+            "feeExchange": 0,
+            "instrument": {
+                "id": "476b40ee-3ff9-46af-85af-fec572d13d23",
+                "symbol": "BPY",
+                "name": "Brookfield Property Partners L.P."
+            },
+            "dividend": {
+                "type": "CASH",
+                "amountPerShare": 0.3043,
+                "taxCode": "NON_TAXABLE"
+            }
+        }
+    }
+}
+```
+```json Created [dividend tax]
+{
+    "id": "event_a1acdf71-17d2-4e38-81ce-871a86374b40",
+    "type": "transactions.created",
+    "timestamp": "2019-04-05T19:25:14.711707573Z",
+    "payload": {
+        "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850",
+        "accountNo": "DWEF000010",
+        "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd",
+        "transaction": {
+            "accountAmount": -0.06,
+            "accountBalance": 26065.89,
+            "comment": "GRFS tax, 19% withheld",
+            "finTranID": "GL.b0043e24-117d-4429-82dd-9b23ea82ef74",
+            "wlpFinTranTypeID": "e8ff5103-ad40-4ed9-b2ee-fd96826bf937",
+            "finTranTypeID": "DIVTAX",
+            "feeSec": 0,
+            "feeTaf": 0,
+            "feeBase": 0,
+            "feeXtraShares": 0,
+            "feeExchange": 0,
+            "instrument": {
+                "id": "247a3366-42ef-403a-834e-3a50d5b143e4",
+                "symbol": "GRFS",
+                "name": "Grifols, S.A."
+            },
+            "dividendTax": {
+                "type": "FOREIGN_TAX",
+                "rate": 0.19
+            }
+        }
+    }
+}
+```
+```json Created [shares, cash swap]
+{
+    "id": "event_88602b5d-a189-4a0a-b4f7-941ad9a2fb4a",
+    "type": "transactions.created",
+    "timestamp": "2019-08-02T07:02:31.844056197Z",
+    "payload": {
+        "accountID": "0dd1b08f-3668-440a-be18-131443d85a47.1551208006668",
+        "accountNo": "DWUV000073",
+        "userID": "0dd1b08f-3668-440a-be18-131443d85a47",
+        "transaction": {
+            "accountAmount": 122.33,
+            "accountBalance": 3616.2,
+            "comment": "Removed 11.64958061 shares of TWTR (part of merger/acquisition of TWTR by FB)",
+            "finTranID": "GH.b06c05f5-e1da-4989-9f4d-fbe5d8be4ac1",
+            "wlpFinTranTypeID": "b9d3f58c-da1a-47de-af78-fe59401f396b",
+            "finTranTypeID": "MERGER_ACQUISITION",
+            "feeSec": 0,
+            "feeTaf": 0,
+            "feeBase": 0,
+            "feeXtraShares": 0,
+            "feeExchange": 0,
+            "positionDelta": -11.64958061,
+            "instrument": {
+                "id": "bf4fc752-a5f4-4801-a416-0d75087c9779",
+                "symbol": "TWTR",
+                "name": "Twitter, Inc."
+            },
+            "mergerAcquisition": {
+                "type": "REMOVE_SHARES_ADD_CASH",
+                "acquirer": {
+                    "id": "4312a85c-b50d-4adb-93ba-cc7973243a53",
+                    "symbol": "FB",
+                    "name": "Facebook, Inc."
+                },
+                "acquiree": {
+                    "id": "bf4fc752-a5f4-4801-a416-0d75087c9779",
+                    "symbol": "TWTR",
+                    "name": "Twitter, Inc."
+                }
+            }
+        }
+    }
+}
+```
+```json Created [removed shares]
+{
+    "id": "event_88602b5d-a189-4a0a-b4f7-941ad9a2fb4a",
+    "type": "transactions.created",
+    "timestamp": "2019-08-02T07:02:31.844056197Z",
+    "payload": {
+        "accountID": "0dd1b08f-3668-440a-be18-131443d85a47.1551208006668",
+        "accountNo": "DWUV000073",
+        "userID": "0dd1b08f-3668-440a-be18-131443d85a47",
+        "transaction": {
+            "accountAmount": 0,
+            "accountBalance": 3616.2,
+            "comment": "Removed 11.64958061 shares of TWTR (part of merger/acquisition of TWTR by FB)",
+            "finTranID": "GH.b06c05f5-e1da-4989-9f4d-fbe5d8be4ac1",
+            "wlpFinTranTypeID": "b9d3f58c-da1a-47de-af78-fe59401f396b",
+            "finTranTypeID": "MERGER_ACQUISITION",
+            "feeSec": 0,
+            "feeTaf": 0,
+            "feeBase": 0,
+            "feeXtraShares": 0,
+            "feeExchange": 0,
+            "positionDelta": -11.64958061,
+            "instrument": {
+                "id": "bf4fc752-a5f4-4801-a416-0d75087c9779",
+                "symbol": "TWTR",
+                "name": "Twitter, Inc."
+            },
+            "mergerAcquisition": {
+                "type": "REMOVE_SHARES",
+                "acquirer": {
+                    "id": "4312a85c-b50d-4adb-93ba-cc7973243a53",
+                    "symbol": "FB",
+                    "name": "Facebook, Inc."
+                },
+                "acquiree": {
+                    "id": "bf4fc752-a5f4-4801-a416-0d75087c9779",
+                    "symbol": "TWTR",
+                    "name": "Twitter, Inc."
+                }
+            }
+        }
+    }
+}
+```
+```json Created [interest payment]
+{
+    "id": "event_b598b88a-b225-4652-b833-ae31ace2e724",
+    "type": "transactions.created",
+    "timestamp": "2022-07-26T04:11:54.330847595Z",
+    "payload": {
+        "accountID": "81151531-63ec-4e06-84b1-13cf58d71ab5.1652845247759",
+        "accountNo": "STSQ000025",
+        "userID": "81151531-63ec-4e06-84b1-13cf58d71ab5",
+        "transaction": {
+            "accountAmount": 5,
+            "accountBalance": 5,
+            "comment": "FullyPaid Securities Lending Rebate 06/2022",
+            "finTranID": "JG.dd3530f2-cefb-4350-a828-7dfff776c69d",
+            "finTranTypeID": "SLIP",
+            "feeSec": 0,
+            "feeTaf": 0,
+            "feeBase": 0,
+            "feeXtraShares": 0,
+            "feeExchange": 0
+        }
+    }
+}
+```

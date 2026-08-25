@@ -1,0 +1,136 @@
+---
+updatedAt: 2026-07-13T23:03:24.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Reinvesting dividends
+
+Investors holding [Equities](https://developer.drivewealth.com/apis/docs/equities) or [Mutual Funds](https://developer.drivewealth.com/apis/docs/mutual-funds) often have dividends re-invested into the original position. This can be automated assuming the customer has previously agreed to a Dividend Reinvestment program.
+
+## Enabling Dividend Reinvestment
+
+### Step 1: Providing the disclosures
+
+Before enrolling customers in Dividend Reinvestment, clients must present the required disclosures and capture customer acknowledgment.
+
+<Callout icon="📘" theme="info">
+  ### Using disclosures
+
+  Refer to [Showing disclosures](https://developer.drivewealth.com/apis/docs/showing-disclosures#/) to read more about this general disclosure process.
+</Callout>
+
+### Step 2: Enabling the feature for an Account
+
+An account can be enabled individually for Equities and for Mutual Funds.
+
+This update can be made at the time of account opening or later by updating the account settings. All held securities will be eligible for reinvestment.
+
+```json
+PATCH https://bo-api.drivewealth.io/accounts/{{accountID}}
+
+{
+    "accountFeatures": {
+        "equities": {
+            "dividendReinvestment": true,
+            "capitalGainsReinvestment": true
+        },
+        "mutualFunds": {
+            "dividendCapGainsReinvestment": true
+        }
+    }
+}
+```
+
+Note that Equities support two fields: `dividendReinvestment` and `capitalGainsReinvestment`. The latter refers to corporate actions where a held ETF issues a dividend that is characterized as capital gains. This usually happens when the fund sells underlying holdings, and such dividends generally have different tax treatment. Although these two settings can be individually enabled, it is uncommon to directly give the customer this choice.
+
+<Callout icon="🚧" theme="warn">
+  ### Cutoff time
+
+  Accounts must be enrolled into Dividend Reinvestment by 4:15pm ET. Any accounts not enabled before this time will not have that night's dividends reinvested.
+</Callout>
+
+## Example events
+
+### Dividend that will be reinvested
+
+Note that the `dividend` block includes `reinvestment` boolean indicating if a subsequent purchase will be created.
+
+```json
+{
+  "id": "event_a1acdf71-17d2-4e38-81ce-871a86374b40",
+  "type": "transactions.created",
+  "timestamp": "2019-04-05T19:25:14.711707573Z",
+  "payload": {
+    "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850",
+    "accountNo": "DWEF000010",
+    "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd",
+    "transaction": {
+      "accountAmount": 2.10,
+      "accountBalance": 128195.27,
+      "comment": "WMT dividend, $0.30/share",
+      "finTranID": "GF.861e931d-e7aa-47c8-b87a-b1e55acf3862",
+      "wlpFinTranTypeID": "e8ff5103-ad40-4ed9-b2ee-fd96826bf935",
+      "finTranTypeID": "DIV",
+      "feeSec": 0,
+      "feeTaf": 0,
+      "feeBase": 0,
+      "feeXtraShares": 0,
+      "feeExchange": 0,
+      "instrument": {
+        "id": "067e00c6-b55a-4576-b6cd-e699add6ead5",
+        "symbol": "WMT",
+        "name": "Wal-Mart Stores Inc."
+      },
+      "dividend": {
+        "type": "CASH",
+        "amountPerShare": 0.3043,
+        "taxCode": "NON_TAXABLE",
+        "reinvestment":true
+      }
+    }
+  }
+}
+```
+
+For more details on dividend-related events, review [Dividend Events](https://developer.drivewealth.com/apis/reference/dividends-events).
+
+After the above event, the account would have an Order created automatically, with the corresponding amount:
+
+```json
+{
+    "id": "event_dcadb7df-a677-4ba6-8a06-15005d4a491d",
+    "type": "orders.created",
+    "timestamp": "2019-03-28T22:40:03.260922189Z",
+    "extendedHours": false,
+    "timeInForce": "",
+    "payload": {
+        "id": "GC.f7590a52-75c7-4f3a-92c7-6b03e02dc44f",
+        "orderNo": "DLAI000010",
+        "type": "MARKET",
+        "side": "BUY",
+        "status": "NEW",
+        "symbol": "WMT",
+        "averagePrice": 0,
+        "cumulativeQuantity": 0,
+        "openQuantity": 1,
+        "availableForTradingQuantity": 0,
+        "amountCash": 2.1,
+        "fees": 0,
+        "orderExpires": "2019-03-29T20:00:00.000Z",
+        "createdBy": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd",
+        "userID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd",
+        "accountID": "b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1491330741850",
+        "accountNo": "DWEF000010",
+        "created": "2019-03-28T22:40:03.240Z"
+    }
+}
+```
+
+For more details on Order-related events, review [Order Events](https://developer.drivewealth.com/apis/reference/orders-events).
+
+## Working with Dividend Reinvestment in [Cashless accounts](https://developer.drivewealth.com/apis/docs/cashless-accounts)
+
+In [Cashless accounts](https://developer.drivewealth.com/apis/docs/cashless-accounts), it is common for clients to use the publishing of dividend events to expect funds to be withdrawn automatically out of the brokerage account. However, for customers with Dividend Reinvestment enabled, these funds will be used to purchase the security, so no resulting fund movement should take place.
+
+Ensure that you are reviewing the `dividend.reinvestment` boolean discussed in the example events above to determine how to handle newly paid dividends.

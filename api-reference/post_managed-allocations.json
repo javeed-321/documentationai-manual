@@ -1,0 +1,195 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Advisor APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Trade Allocations"
+    }
+  ],
+  "paths": {
+    "/managed/allocations": {
+      "post": {
+        "tags": [
+          "Trade Allocations"
+        ],
+        "summary": "Create Trade Allocation",
+        "description": "Create a Trade Allocation.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllocationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Creating a Trade Allocation was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllocationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "clientListID": {
+        "type": "string",
+        "example": "SUMS_CUSTOM_ALLOCATION_TEST",
+        "description": "An advisor created identifier for a specific allocation."
+      },
+      "allocationNote": {
+        "type": "string",
+        "example": "Allocating via api allocation test",
+        "description": "A note for the type of allocation happening."
+      },
+      "AllocationRequest": {
+        "type": "object",
+        "required": [
+          "userID",
+          "orders"
+        ],
+        "properties": {
+          "userID": {
+            "type": "string",
+            "example": "66304da9-3h6f-2234-935f-ac6b7933d706",
+            "description": "The unique identifier of the registered investment advisors account."
+          },
+          "clientListID": {
+            "$ref": "#/components/schemas/clientListID"
+          },
+          "note": {
+            "$ref": "#/components/schemas/allocationNote"
+          },
+          "orders": {
+            "type": "array",
+            "description": "An array of objects that hold the specific order and allocation details.",
+            "required": [
+              "orderID",
+              "allocations"
+            ],
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/order"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "AllocationResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "JL.allocation.SomeRIACompany.9d6def3b-14d7-4934-8a64-57d443e67ce6",
+            "description": "The unique allocation identifier associated to a specific allocation."
+          }
+        }
+      },
+      "order": {
+        "type": "object",
+        "properties": {
+          "orderID": {
+            "type": "string",
+            "example": "JL.562f3719-7c8f-50ee-b234-db7775715a99",
+            "description": "The orderID of a filled order being used in an allocation."
+          },
+          "allocations": {
+            "type": "array",
+            "description": "An array that holds relevant information about how and where to distribute securities from a recent order.",
+            "required": [
+              "accountID",
+              "accountNo",
+              "qty",
+              "useClientFunds"
+            ],
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/allocation"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "allocation": {
+        "type": "object",
+        "properties": {
+          "accountID": {
+            "type": "string",
+            "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+            "description": "The unique account identifier of the end user receiving an allocation."
+          },
+          "accountNo": {
+            "type": "string",
+            "example": "ZYXC000008",
+            "description": "The account number of the end user receiving an allocation."
+          },
+          "qty": {
+            "type": "string",
+            "example": "27",
+            "description": "The number of shares allocated to a users account."
+          },
+          "useClientFunds": {
+            "type": "boolean",
+            "example": true,
+            "description": "True, if allocations should use client funds."
+          },
+          "comment": {
+            "type": "string",
+            "example": "Suds boapi test to 1st",
+            "description": "A note created by the RIA upon creating an allocation."
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

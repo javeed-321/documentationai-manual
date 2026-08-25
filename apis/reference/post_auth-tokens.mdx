@@ -1,0 +1,24 @@
+---
+title: "Create Session Token"
+---
+
+Creates a session token for an implementer to utilize for subsequent API requests.
+
+<Callout kind="info">
+  **Authentication FAQs**
+
+  1. **What's the TTL?**\
+     Every generated access\_token has a 60min (1hr) expiry time.
+
+  2. **Can i have multiple active auth tokens at the same time?**\
+     Yes, requesting for a new token does not expire the previously retrieved token. Every token's expiry time (60 mins) is always determined by when it was initially requested.
+
+  3. **What's the rate limit?**\
+     Token should be cached and recycled. So no more than 5-10 Api calls per hour is expected.
+
+  4. **Can we get multiple pairs of clientID and clientSecret?**\
+     Due to the nature of the authentication model, you shouldn't be requiring more than 1 pair, however, if absolutely needed, we can provision accordingly. Please contact DriveWealth if this is a requirement.
+
+  5. **How do i use the retrieved auth token?**\
+     You'll pass it into the header of all API calls as "Authorization": "Bearer \{access\_token}"
+</Callout>

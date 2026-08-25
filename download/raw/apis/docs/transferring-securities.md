@@ -1,0 +1,146 @@
+---
+updatedAt: 2025-08-20T23:30:22.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Transferring securities
+
+> 👍 Beta functionality
+>
+> Features described on this page are currently in limited beta, and may not yet be available to all implementers. Contact DriveWealth to learn more about enabling these services.
+
+## Transferring to DriveWealth
+
+Transferring stock from one account outside of DriveWealth to one account on the platform is normally done via the ACATS system. This starts by using the [ACATS API](#) to submit a transfer request:
+
+```json POST /back-office/acats
+{
+    "accountID": "cc07f91b-7ee1...",
+    "carryingAccountNo": "3PA123456",
+    "isFull": false,
+    "carryingDtcNo": "0817",
+    "partialPositions": [
+        {
+            "symbol": "ABCD",
+            "qty": 1
+        }
+    ],
+    "acatAckWhen": "2019-01-15T16:10:18.756Z"
+}
+```
+
+In this example, a customer is moving 1 share of ABCD from an account numbered “3PA123456” at another U.S. firm. Note that the `carryingDtcNo` represents the DTC number of that firm. Customers will not normally know this detail, and it’s important to provide some mechanism for translating their current brokerage firm to a DTC number. A full list of DTC numbers can be found online [here](http://www.dtcc.com/client-center/dtc-directories).
+
+Upon receipt, DriveWealth communicates with the other brokerage firm to handle the transfer of securities. This can take up to 5 business days to process. Once shares are received, the Account will have its Positions updated, which can be listened for via an Event:
+
+```json positions.updated [event]
+{
+  "id": "event_faecc66d...",
+  "type": "positions.updated",
+  "timestamp": "2019-09-27T11:54:47.752978141Z",
+  "payload": {
+    "accountID": "cc07f91b-7ee1...",
+    "accountNo": "ABCD000076",
+    "userID": "b2124bd2-467d...",
+    "updateReason": "ACATS_STOCK",
+    "acats": {
+      "type":"INCOMING",
+      "brokerDTCNo": "0817",
+      "referenceNo":"ACAT21182",
+      "controlNo":"20192560028977"
+    },
+    "previous": {
+      "openQty": 0,
+      "symbol": "ABCD"
+    },
+    "current": {
+      "openQty": 1,
+      "symbol": "ABCD"
+    }
+  }
+}
+```
+
+#
+
+<Callout icon="🤔" theme="default">
+  ### **ACATs requests**
+
+  All ACAT requests must be submitted no later than **3:00 PM** ET. Requests that are received after this time should be submitted the next trading day.
+</Callout>
+
+## Transferring away from DriveWealth
+
+If an Account owner wishes to move their assets from DriveWealth to a different firm, they start by informing the new firm of their intent. This firm will have their own procedures for the customer to follow, and once their steps are completed, DriveWealth will be informed by the new firm of the outgoing transfer request.
+
+> 🚧
+>
+> Under U.S. regulations, all Account owners are permitted to transfer their assets away. You may not prevent or prohibit this functionality.
+
+Once DriveWealth receives a request from the incoming firm, the account will be temporarily marked as closed to prevent more Orders from being accepted:
+
+```json accounts.updated [event]
+{
+  "id": "event_773a8a45-75fc...",
+  "type": "accounts.updated",
+  "timestamp": "2019-03-28T22:46:47.821071506Z",
+  "payload": {
+    "previous": {
+      "status": {
+        "name": "OPEN",
+        "description": "Open"
+      }
+    },
+    "current": {
+      "status": {
+        "name": "CLOSED",
+        "description": "Closed"
+      },
+    },
+    "accountID": "711c012d-7a3c...",
+    "accountNo": "ABCD000001",
+    "userID": "711c012d-7a3c..."
+  }
+}
+```
+
+Once the request is processed, `position.update` events will be sent as shown above, according to the transfers requested. The Account will then be changed back to open.
+
+***
+
+## Minor graduation assets transfer
+
+When an account custodianship ends and the beneficiary becomes eligible to assume control of the account at a specified age—typically 18 or 21, depending on the state regulations, a new [user](https://developer.drivewealth.com/apis/reference/post_users) and [account](https://developer.drivewealth.com/apis/reference/post_accounts) needs to be created for this newly graduated minor.
+
+### Add authorized user
+
+After creation of the graduated minor's individual user and account, the original child account on the parent should be patched with an authorizedUser field which points to the newly graduated user that will be allowed the transfer.
+
+```json POST - /accounts/:accountID
+{
+  "authorizedUsers": [
+    {
+      "userID": "f6fd0783-2fdb-4ddb-9fd5-2464d8abc267",
+      "permissions": [
+        "MINOR_GRADUATION_TRANSFER"
+      ]
+    }
+  ]
+}
+```
+
+### Create asset transfer
+
+Once the permissions are granted, you can submit the asset transfer from the existing account to the new account.
+
+```json POST - /asset-transfers/minor-graduation
+{
+  "source": "DWST000076", //CUSTODIAN ACCOUNT
+  "destination": "DWST000076", //NEW INDIVIDUAL ACCOUNT 
+  "comment": "Migrating Teen account to Individual account.",
+  "metadata": [
+    {}
+  ]
+}
+```

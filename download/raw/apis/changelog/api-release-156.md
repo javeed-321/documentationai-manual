@@ -1,0 +1,24 @@
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# API Release 1.56
+
+## API Release 1.56
+
+## Deployed in UAT - Yes, available to test.
+
+## Deployed in Production - August 1, 2023.
+
+# 🚀New Features - What’s New?
+
+* Added the ability to transfer money to/from a client account directly to/from a special purpose account instantly. For deposits the special purpose accounts will be `CASH_TRANSFER_DEPOSITS`. For redemptions the special purpose account should be: `CASH_TRANSFER_WITHDRAWALS`
+  * This will allow you to move funds from your account to a client’s account outside of the money movement window. This will give client’s instant buying power.
+
+# 🎉Feature Enhancements - We are making it better for you!!
+
+* Enabling you to have multiple fund settlement profiles for instant-funding.
+
+# 🔧Bug Fixes
+
+* Fixed recurring frequency `Bi-weekly` start date to upcoming or nearest Monday.
+* `statusMessage` now populates when a promotion deposit is marked `Successful` from `Approved`
+* Improvements to `deposit.created` event consistency

@@ -1,0 +1,445 @@
+---
+updatedAt: 2026-05-27T16:58:36.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Retrieve Quote (referential feed)
+
+Fetch the realtime or 15 minute delayed Referential quote details for a specific security.
+
+<Callout icon="❗️">
+  This API can return `null` for the Fixed Income instruments as they may not have quotes, even during market hours.
+</Callout>
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Market Data APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Quotes"
+    }
+  ],
+  "paths": {
+    "/quotes": {
+      "get": {
+        "tags": [
+          "Quotes"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "dw-customer-user-id",
+            "schema": {
+              "type": "string",
+              "example": "66304da9-3h6f-2234-935f-ac6b7933d706",
+              "description": "The unique identifier of the user, who is requesting the quote."
+            }
+          },
+          {
+            "in": "query",
+            "name": "symbols",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "MS",
+            "description": "The ticker symbol of the associated instrument. Multiple ticker symbols separated by a comma may also be used."
+          },
+          {
+            "in": "query",
+            "name": "exchangeOverride",
+            "schema": {
+              "type": "string"
+            },
+            "required": false,
+            "example": "15MinDelayed",
+            "description": "The quote details will be 15 minutes delayed."
+          },
+          {
+            "in": "query",
+            "name": "instrumentIDs",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "1179e8dd-2781-4ce9-842c-f05ded6a40d7",
+            "description": "The id of an instrument. Multiple instrumentIDs separated by a comma may also be used."
+          },
+          {
+            "in": "query",
+            "name": "isins",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "US912810RC45",
+            "description": "The unique identifier of the instrument. Multiple instrumentIDs separated by a comma may also be used."
+          }
+        ],
+        "summary": "Retrieve Quote (referential feed)",
+        "description": "Fetch the realtime or 15 minute delayed Referential quote details for a specific security.",
+        "responses": {
+          "200": {
+            "description": "Fetch referential quote details was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Referential"
+                },
+                "examples": {
+                  "Equity Quote": {
+                    "value": [
+                      {
+                        "symbol": "SBUX",
+                        "bid": 95.59,
+                        "ask": 95.6,
+                        "lastTrade": 95.6,
+                        "change": 0.32,
+                        "open": 95.65,
+                        "high": 96.2,
+                        "low": 95.23,
+                        "close": 0,
+                        "priorClose": 95.28,
+                        "volume": 3973709,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "NYSE"
+                      }
+                    ]
+                  },
+                  "Option Quote": {
+                    "value": [
+                      {
+                        "symbol": "AAPL230818C00177500",
+                        "bid": 0.01,
+                        "ask": 0.03,
+                        "lastTrade": 0,
+                        "change": 0,
+                        "close": 0.85,
+                        "priorClose": 1.5,
+                        "volume": 0,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "OPRA"
+                      },
+                      {
+                        "symbol": "AAPL230818C00180000",
+                        "bid": 0.01,
+                        "ask": 0.02,
+                        "lastTrade": 0.01,
+                        "change": -0.22,
+                        "close": 16.52,
+                        "priorClose": 16.85,
+                        "volume": 43512,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "OPRA"
+                      },
+                      {
+                        "symbol": "AAPL230818C00182500",
+                        "bid": 0.01,
+                        "ask": 0.02,
+                        "lastTrade": 0.01,
+                        "change": -0.05,
+                        "close": 0.06,
+                        "priorClose": 0.14,
+                        "volume": 16388,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "OPRA"
+                      },
+                      {
+                        "symbol": "AAPL230818C00175000",
+                        "bid": 0.01,
+                        "ask": 0.02,
+                        "lastTrade": 0.01,
+                        "change": -0.45,
+                        "close": 21.45,
+                        "priorClose": 21.65,
+                        "volume": 172163,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "OPRA"
+                      },
+                      {
+                        "symbol": "AAPL230818C00172500",
+                        "bid": 1.71,
+                        "ask": 2.28,
+                        "lastTrade": 1.9,
+                        "change": -0.02,
+                        "close": 4.3,
+                        "priorClose": 5.5,
+                        "volume": 33437,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "OPRA"
+                      },
+                      {
+                        "symbol": "AAPL230818C00170000",
+                        "bid": 4.4,
+                        "ask": 5.2,
+                        "lastTrade": 4.4,
+                        "change": 0.32,
+                        "close": 26.15,
+                        "priorClose": 26.55,
+                        "volume": 3230,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "OPRA"
+                      }
+                    ]
+                  },
+                  "Fixed Income Quote": {
+                    "value": [
+                      {
+                        "instrumentID": "1179e8dd-2781-4ce9-842c-f05ded6a40d7",
+                        "isin": "US912810RC45",
+                        "bidYield": 4.220776,
+                        "askYield": 4.207803,
+                        "bid": 92.276,
+                        "ask": 92.436,
+                        "priorClose": 92.3085938,
+                        "askSize": 0,
+                        "bidSize": 0,
+                        "lastTradeSize": 0,
+                        "tradeCount": 0,
+                        "marketCondition": "NORMAL",
+                        "dataProvider": "ICE BondPoint",
+                        "timeOffset": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "instrumentSymbol": {
+        "type": "string",
+        "nullable": true,
+        "example": "MS",
+        "description": "The ticker symbol of the Instrument. Debt Instruments and Global Mutual Funds do not have symbols and are referred to buy their `instrumentID` or `ISIN`."
+      },
+      "openPrice": {
+        "type": "number",
+        "example": 86.53,
+        "description": "Most recent opening price of the instrument."
+      },
+      "bidPrice": {
+        "type": "number",
+        "example": 86.12,
+        "description": "The current price buyers are prepared to pay for a security."
+      },
+      "askPrice": {
+        "type": "number",
+        "example": 85.14,
+        "description": "The current price sellers are prepared to sell a security."
+      },
+      "lowPrice": {
+        "type": "number",
+        "example": 85.83,
+        "description": "The lowest price in the current trading day."
+      },
+      "highPrice": {
+        "type": "number",
+        "example": 86.85,
+        "description": "The highest price in the current trading day."
+      },
+      "Referential": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/EquityQuote"
+            },
+            {
+              "$ref": "#/components/schemas/FixedIncomeQuote"
+            }
+          ]
+        }
+      },
+      "EquityQuote": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "$ref": "#/components/schemas/instrumentSymbol"
+          },
+          "bid": {
+            "$ref": "#/components/schemas/bidPrice"
+          },
+          "ask": {
+            "$ref": "#/components/schemas/askPrice"
+          },
+          "lastTrade": {
+            "type": "number",
+            "example": 86.47,
+            "description": "The NBBO quote of the most recent trade."
+          },
+          "change": {
+            "type": "number",
+            "example": -1.33,
+            "description": "The percentage change in trade price relative to the previous days close."
+          },
+          "open": {
+            "$ref": "#/components/schemas/openPrice"
+          },
+          "high": {
+            "$ref": "#/components/schemas/highPrice"
+          },
+          "low": {
+            "$ref": "#/components/schemas/lowPrice"
+          },
+          "close": {
+            "type": "number",
+            "example": 0,
+            "description": "The close price populated after market close, price updates overnight if a corporate action occurs."
+          },
+          "priorClose": {
+            "type": "number",
+            "example": 86.86,
+            "description": "The closing price of the current symbol for the prior trading day."
+          },
+          "volume": {
+            "type": "number",
+            "example": 2779731,
+            "description": "The total trading volume of the security for the current day in quantity of shares."
+          },
+          "marketCondition": {
+            "type": "string",
+            "example": "NORMAL",
+            "description": "The trading status of the symbol.",
+            "enum": [
+              "NORMAL",
+              "TRADING_HALT",
+              "UNKNOWN"
+            ]
+          },
+          "dataProvider": {
+            "type": "string",
+            "example": "NYSE",
+            "description": "The exchange venue providing the quote."
+          }
+        }
+      },
+      "FixedIncomeQuote": {
+        "type": "array",
+        "properties": {
+          "instrumentID": {
+            "type": "string",
+            "example": "1179e8dd-2781-4ce9-842c-f05ded6a40d7",
+            "description": "The unique identifier of the instrument."
+          },
+          "isin": {
+            "type": "string",
+            "example": "US912810RC45",
+            "description": "The International Securities Identification Number (ISIN) of the instrument."
+          },
+          "bidYield": {
+            "type": "number",
+            "example": 4.220776,
+            "description": "The yield at which the buyer is willing to buy the security."
+          },
+          "askYield": {
+            "type": "number",
+            "example": 4.207803,
+            "description": "The yield at which the seller is willing to sell the security."
+          },
+          "bid": {
+            "type": "number",
+            "example": 92.276,
+            "description": "The price at which the buyer is willing to buy the security."
+          },
+          "ask": {
+            "type": "number",
+            "example": 92.436,
+            "description": "The price at which the seller is willing to sell the security."
+          },
+          "priorClose": {
+            "type": "number",
+            "example": 92.3085938,
+            "description": "The closing price of the current symbol for the prior trading day."
+          },
+          "askSize": {
+            "type": "number",
+            "example": 0,
+            "description": "The ask size is the number of shares investors are trying to sell at a given price for a particular security."
+          },
+          "bidSize": {
+            "type": "number",
+            "example": 0,
+            "description": "The bid size is the number of shares investors are trying to buy at a given price for a particular security."
+          },
+          "lastTradeSize": {
+            "type": "number",
+            "example": 0,
+            "description": "The quantity of shares of the last trade."
+          },
+          "tradeCount": {
+            "type": "number",
+            "example": 0,
+            "description": "The number of trades placed for the symbol during the current trading day."
+          },
+          "marketCondition": {
+            "type": "string",
+            "example": "NORMAL",
+            "description": "The trading status of the symbol.",
+            "enum": [
+              "NORMAL",
+              "TRADING_HALT",
+              "UNKNOWN"
+            ]
+          },
+          "dataProvider": {
+            "type": "string",
+            "example": "ICE BondPoint",
+            "description": "The exchange venue providing the quote."
+          },
+          "timeOffset": {
+            "type": "number",
+            "example": 0
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

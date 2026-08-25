@@ -1,0 +1,427 @@
+{
+  "slug": "apis/docs/corporate-actions",
+  "source": "https://developer.drivewealth.com/apis/docs/corporate-actions.md",
+  "url": "https://developer.drivewealth.com/apis/docs/corporate-actions",
+  "title": "Corporate actions",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:30:41.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 11,
+    "Table": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Corporate actions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Corporate actions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Corporate actions affect all customers who hold security positions, and encompass a wide variety of different situations. For example, an issuer may decide to pay a dividend to all shareholders, where each receives a cash amount for every share owned. Or, one company could get purchased by another, and existing shareholders exchange their shares for stock in the acquirer. Situations like these occur frequently, and your product will need to display these changes appropriately for customers to understand what's happening to their account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Corporate actions affect all customers who hold security positions, and encompass a wide variety of different situations. For example, an issuer may decide to pay a dividend to all shareholders, where each receives a cash amount for every share owned. Or, one company could get purchased by another, and existing shareholders exchange their shares for stock in the acquirer. Situations like these occur frequently, and your product will need to display these changes appropriately for customers to understand what's happening to their account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Mandatory actions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Mandatory actions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Brokerage firms like DriveWealth that handle customer-facing account adjustments receive corporate action details reported to the DTCC, the central custodian in the United States. Corporate actions are one of the most operationally intensive processes firms are required to fulfill. Many of these actions are mandatory, meaning they are automatically applied to customer accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Brokerage firms like DriveWealth that handle customer-facing account adjustments receive corporate action details reported to the DTCC, the central custodian in the United States. Corporate actions are one of the most operationally intensive processes firms are required to fulfill. Many of these actions are mandatory, meaning they are automatically applied to customer accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Imagine that ABCD is being acquired by WXYZ, in an all-stock deal. Existing ABCD shareholders will automatically see their ABCD position removed, and a new WXYZ position added. Often this is not one-for-one (meaning the position quantities will differ), or there may also be cash credited. Ensure that you are displaying the full details of this transaction in the customer's activity view, and consider having support staff prepared to answer questions regarding this event.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Imagine that ABCD is being acquired by WXYZ, in an all-stock deal. Existing ABCD shareholders will automatically see their ABCD position removed, and a new WXYZ position added. Often this is not one-for-one (meaning the position quantities will differ), or there may also be cash credited. Ensure that you are displaying the full details of this transaction in the customer's activity view, and consider having support staff prepared to answer questions regarding this event.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "## Voluntary actions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Voluntary actions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "Some corporate actions are optional, and not applied to an account automatically. The most common example of this is a proxy vote opportunity, when shareholders can cast votes for an upcoming shareholder meeting. Customers can choose to take advantage of this opportunity, or do nothing, and there will be no impact on their account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Some corporate actions are optional, and not applied to an account automatically. The most common example of this is a proxy vote opportunity, when shareholders can cast votes for an upcoming shareholder meeting. Customers can choose to take advantage of this opportunity, or do nothing, and there will be no impact on their account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "Sometimes, a corporate action occurs which is voluntary for the shareholder, but if opted-in, triggers a mandatory change. For example, a tender offer could be announced to tender ABCD stock at $10 per share. If a shareholder opts-in, their position will be frozen until pay date and automatically swapped for cash. You can learn more about [tender offers](https://developer.drivewealth.com/apis/docs/tender-offers) and other voluntary action types from the sidebar.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sometimes, a corporate action occurs which is voluntary for the shareholder, but if opted-in, triggers a mandatory change. For example, a tender offer could be announced to tender ABCD stock at $10 per share. If a shareholder opts-in, their position will be frozen until pay date and automatically swapped for cash. You can learn more about tender offers and other voluntary action types from the sidebar.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "## Corporate action timeline",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Corporate action timeline",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "In general, a corporate action has several important dates:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In general, a corporate action has several important dates:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        27,
+        91
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Date\n      </th>\n\n      <th>\n        Description\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        Announcement date\n      </td>\n\n      <td>\n        The day an upcoming action is made publicly known\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Record date\n      </td>\n\n      <td>\n        The last day by which a customer must own a security to benefit from the corporate action\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Ex date\n      </td>\n\n      <td>\n        The first day the security will trade with its price will be adjusted by the corporate action\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Pay date\n      </td>\n\n      <td>\n        The expected day that shareholders (as of the record date) will be paid cash or stock, or have their position adjusted\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Post date\n      </td>\n\n      <td>\n        The day that DriveWealth posts the corporate action event. This date may differ from pay date.\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "Date",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Announcement date",
+            "The day an upcoming action is made publicly known"
+          ],
+          [
+            "Record date",
+            "The last day by which a customer must own a security to benefit from the corporate action"
+          ],
+          [
+            "Ex date",
+            "The first day the security will trade with its price will be adjusted by the corporate action"
+          ],
+          [
+            "Pay date",
+            "The expected day that shareholders (as of the record date) will be paid cash or stock, or have their position adjusted"
+          ],
+          [
+            "Post date",
+            "The day that DriveWealth posts the corporate action event. This date may differ from pay date."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "Both the Transactions API and Events system will reflect corporate action updates overnight after the pay date.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Both the Transactions API and Events system will reflect corporate action updates overnight after the pay date.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "## Corporate action notifications",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Corporate action notifications",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "You will receive real-time notifications of corporate actions via the [Events API](https://developer.drivewealth.com/apis/reference/stock-splits), and in turn be able to send real-time notifications to customers and better understand/anticipate corresponding updates to positions and/or cash entries to underlying customer accounts that will be processed by DriveWealth.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You will receive real-time notifications of corporate actions via the Events API, and in turn be able to send real-time notifications to customers and better understand/anticipate corresponding updates to positions and/or cash entries to underlying customer accounts that will be processed by DriveWealth.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "## Displaying action details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Displaying action details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        101,
+        101
+      ],
+      "raw": "When requesting current account information via the [Transactions API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary-transactions) or [Account Summary API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary), positions and cash will automatically be updated for any corporate actions that take place.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When requesting current account information via the Transactions API or Account Summary API, positions and cash will automatically be updated for any corporate actions that take place.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        103,
+        103
+      ],
+      "raw": "DriveWealth will send emails to shareholders of record when a voluntary corporate action occurs. Read [Shareholder communications](https://developer.drivewealth.com/apis/docs/shareholder-communications)  to learn more about these communications.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth will send emails to shareholders of record when a voluntary corporate action occurs. Read Shareholder communications  to learn more about these communications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        105,
+        105
+      ],
+      "raw": "## Adjustments to orders",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Adjustments to orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        107,
+        107
+      ],
+      "raw": "Orders that are pending for a security can be modified unless a corporate action takes place and it falls under on the dates outlined below.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Orders that are pending for a security can be modified unless a corporate action takes place and it falls under on the dates outlined below.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        109,
+        143
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Corporate Action Type\n      </th>\n\n      <th>\n        Date\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        Dividends\n      </td>\n\n      <td>\n        EX date\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        All other events\n      </td>\n\n      <td>\n        Post date\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "Corporate Action Type",
+          "Date"
+        ],
+        "rows": [
+          [
+            "Dividends",
+            "EX date"
+          ],
+          [
+            "All other events",
+            "Post date"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    }
+  ]
+}

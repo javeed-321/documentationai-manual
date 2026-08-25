@@ -1,8 +1,0 @@
-# GTM Reporting API Documentation
-
-> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.
-
-Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
-
-## API Reference: Latency
-- [Report latency per data center](https://techdocs.akamai.com/gtm-reporting/reference/get-latency-datacenter.md): This operation returns a collection of reports representing latency and loss of ping data as reported by network agents in each Data Center for a property. Latency and Loss parameters follow bucket ranges schema (bucket ranges, delimited by a pipe: `|`).  Ping Loss ranges from `0%` to `100%`. So a schema of `5|10|15|20` would represent grouping of data from `0%` to `5%`, `5%` to `10%`, `10%` to `15%`, `15%` to `20%`, and `20%` to `100%` bucket ranges. The end of one bucket would be the beginning of the next bucket. Similarly `0|5|80` would represent `0%`, `0%` to `5%`, `5%` to `100%`, and `80%` to `100%` bucket ranges. A trailing pipe at the end of a bucket indicates that there is no _greater than the max_ bucket. That is, in the above example if loss schema were `0|5|80|` then it would mean `0%`, `0%` to `5%`, and `5%` to `80%`.  Latency is measured in milliseconds. Each bucket ranges from 0 ms to 1000 ms.  So, a schema of `5|10|300|1000` would mean `0ms` to `5ms`, `5ms` to `10ms`, `10ms` to `300ms`, `300ms` to `1000ms`, and `> 1000ms`.

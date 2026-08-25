@@ -1,0 +1,342 @@
+{
+  "slug": "apis/changelog/api-release-131",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-131.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-131",
+  "title": "API Release 1.31",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 9,
+    "Table": 1,
+    "paragraph": 6
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.31",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.31",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.31",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.31",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Release Date     | Status   |\n| :--------------- | :------- |\n| January 18, 2022 | RELEASED |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Release Date",
+          "Status"
+        ],
+        "rows": [
+          [
+            "January 18, 2022",
+            "RELEASED"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Features and Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Features and Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "### **Enable RIA Partners to Update Payment Status and Amount**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Enable RIA Partners to Update Payment Status and Amount",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "RIA Partners can now change the payment status from `RIA_APPROVED` or `RIA_PENDING` to `RIA_REJECTED`. RIA partners can update payment amounts if payment is in `RIA_APPROVED` or `RIA_PENDING` status.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "RIA Partners can now change the payment status from RIA_APPROVED or RIA_PENDING to RIA_REJECTED. RIA partners can update payment amounts if payment is in RIA_APPROVED or RIA_PENDING status.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "### **User Update Tracking**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "User Update Tracking",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "New field `updatedBy` added to `users.updated` event and to [Update User](https://developer.drivewealth.com/reference/update-user) response that captures the userID of the user that made changes. When user information is changed through the Update User API or through DriveHub, the `updatedBy` field is recorded.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New field updatedBy added to users.updated event and to Update User response that captures the userID of the user that made changes. When user information is changed through the Update User API or through DriveHub, the updatedBy field is recorded.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/update-user",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "### **Reject Corrupted Documents**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Reject Corrupted Documents",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "[Documents API](https://developer.drivewealth.com/reference/upload-physical-documents) will reject corrupted documents and respond with error code.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Documents API will reject corrupted documents and respond with error code.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/upload-physical-documents",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "### **Reject TEFRA Reversal Fee if Outside Trading Hours**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Reject TEFRA Reversal Fee if Outside Trading Hours",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "TEFRA Reversal request will be rejected if request is received outside of trading hours.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "TEFRA Reversal request will be rejected if request is received outside of trading hours.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "### **Pending Limit Orders Deducts CAFW**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Pending Limit Orders Deducts CAFW",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "For pending limit orders, the cash available for withdrawal (CAFW) will be deducted by the order amount. Cash available for trade (CAFT) will continue to be deducted by the order amount.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For pending limit orders, the cash available for withdrawal (CAFW) will be deducted by the order amount. Cash available for trade (CAFT) will continue to be deducted by the order amount.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "### **New KYC Error Codes**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "New KYC Error Codes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "New KYC error codes `INVALID_NAME_TOO_LONG` and `UNSUPPORTED_COUNTRY` added to [KYC Error Mapping](https://developer.drivewealth.com/reference/simulate-kyc-failures). Errors found while submitting the user will update the [KYC Status](https://developer.drivewealth.com/reference/kyc-statuses) to `KYC_NOT_READY` and add message in `statusComment` field.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New KYC error codes INVALID_NAME_TOO_LONG and UNSUPPORTED_COUNTRY added to KYC Error Mapping. Errors found while submitting the user will update the KYC Status to KYC_NOT_READY and add message in statusComment field.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/simulate-kyc-failures",
+          "line": 35
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/kyc-statuses",
+          "line": 35
+        }
+      ]
+    }
+  ]
+}

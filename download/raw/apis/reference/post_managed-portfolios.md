@@ -1,0 +1,384 @@
+---
+updatedAt: 2026-05-27T16:58:45.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create Portfolio
+
+Creates a Portfolio.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Advisor APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Portfolios"
+    }
+  ],
+  "paths": {
+    "/managed/portfolios": {
+      "post": {
+        "deprecated": true,
+        "tags": [
+          "Portfolios"
+        ],
+        "summary": "Create Portfolio",
+        "description": "Creates a Portfolio.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/portfolioReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Creating a Portfolio was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/portfolioRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "clientFundID": {
+        "type": "string",
+        "example": "AAABBB-1222-3344.123456789",
+        "description": "A user defined identifier attached to the fund."
+      },
+      "clientPortfolioID": {
+        "type": "string",
+        "example": "AAABBB-1222-3344.123456789",
+        "description": "A user defined identifier attached to the portfolio."
+      },
+      "managedAccountsUserID": {
+        "type": "string",
+        "example": "66304da9-3h6f-2234-935f-ac6b7933d706",
+        "description": "The unique identifier of the registered investment advisors account."
+      },
+      "holdingsObject": {
+        "type": "object",
+        "description": "An object in the holdings array that holds the instrumentID and target.",
+        "properties": {
+          "instrumentID": {
+            "type": "string",
+            "example": "5b85fabb-d57c-44e6-a7f6-a3efc760226c",
+            "description": "A unique ID created by DriveWealth to identify a specific instrument."
+          },
+          "target": {
+            "type": "number",
+            "example": 0.5,
+            "description": "The target percentage for the specific instrumentID within a fund."
+          }
+        }
+      },
+      "triggersObject": {
+        "type": "object",
+        "description": "An object that holds the details of when to trigger a rebalance of the Fund.",
+        "required": [
+          "type",
+          "child",
+          "maxAllowed",
+          "lowerBound",
+          "upperBound"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "TOTAL_DRIFT",
+            "description": "The type of trigger specified to enable a rebalance.",
+            "enum": [
+              "TOTAL_DRIFT",
+              "RELATIVE_DRIFT",
+              "ABSOLUTE_DRIFT"
+            ]
+          },
+          "maxAllowed": {
+            "type": "number",
+            "example": 0.05,
+            "description": "The maximum allowed drift for the Fund."
+          },
+          "child": {
+            "type": "string",
+            "example": null
+          },
+          "lowerBound": {
+            "type": "number",
+            "example": 0.01,
+            "description": "The lowest bound range of the drift parameters."
+          },
+          "upperBound": {
+            "type": "number",
+            "example": 0.02,
+            "description": "The highest bound range of the drift parameter."
+          }
+        }
+      },
+      "portfolioReq": {
+        "type": "object",
+        "required": [
+          "userID",
+          "name",
+          "clientPortfolioID",
+          "description",
+          "holdings",
+          "triggers"
+        ],
+        "properties": {
+          "userID": {
+            "$ref": "#/components/schemas/managedAccountsUserID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Recession Proof",
+            "description": "A name given to the Portfolio by the RIA."
+          },
+          "clientPortfolioID": {
+            "$ref": "#/components/schemas/clientPortfolioID"
+          },
+          "description": {
+            "type": "string",
+            "example": "Mix of sectors",
+            "description": "A short description for the portfolio."
+          },
+          "holdings": {
+            "type": "array",
+            "description": "An array of objects that hold a list of Funds in a portfolio.",
+            "items": {
+              "$ref": "#/components/schemas/portfolioReqHoldings"
+            }
+          },
+          "triggers": {
+            "type": "array",
+            "description": "An array of objects that hold a list if triggers associated with a portfolio.",
+            "items": {
+              "$ref": "#/components/schemas/portfolioTriggers"
+            }
+          }
+        }
+      },
+      "portfolioRes": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "portfolio_4a22340a-31f8-4f0e-b5ee-24ddfbc66727",
+            "description": "The unique identifier associated with a portfolio."
+          },
+          "name": {
+            "type": "string",
+            "example": "Recession Proof",
+            "description": "A name given to the Portfolio by the RIA."
+          },
+          "clientPortfolioID": {
+            "$ref": "#/components/schemas/clientPortfolioID"
+          },
+          "description": {
+            "type": "string",
+            "example": "A portifolio description",
+            "description": "A short description for the Portfolio."
+          },
+          "holdings": {
+            "type": "array",
+            "description": "An array of objects that hold the type of Funds in the Portfolio.",
+            "items": {
+              "$ref": "#/components/schemas/portfolioResHoldingsObject"
+            }
+          },
+          "userID": {
+            "$ref": "#/components/schemas/managedAccountsUserID"
+          },
+          "triggers": {
+            "type": "array",
+            "description": "An array of objects that hold information on when to trigger a rebalance in the Portfolio.",
+            "items": {
+              "$ref": "#/components/schemas/portfolioTriggers"
+            }
+          },
+          "isFundTargetsChanged": {
+            "type": "boolean",
+            "example": false
+          },
+          "fundsTargetsChanged": {
+            "type": "boolean",
+            "example": false
+          }
+        }
+      },
+      "portfolioReqHoldings": {
+        "type": "object",
+        "required": [
+          "type",
+          "target"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "FUND",
+            "description": "The type of asset in a Portfolio.",
+            "enum": [
+              "FUND",
+              "CASH_RESERVE"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "example": "fund_3d9d00d1-f06e-4f86-9cbf-893c75cf77fe",
+            "description": "The unique fundID."
+          },
+          "target": {
+            "type": "number",
+            "example": 0.95,
+            "description": "The percentage of a Fund within a Portfolio."
+          }
+        }
+      },
+      "portfolioTriggers": {
+        "type": "object",
+        "description": "An object that holds the details of when to trigger a rebalance of a Portfolio.",
+        "required": [
+          "type",
+          "child",
+          "maxAllowed",
+          "lowerBound",
+          "upperBound"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "TOTAL_DRIFT",
+            "description": "The type of trigger specified to enable a rebalance.",
+            "enum": [
+              "TOTAL_DRIFT",
+              "RELATIVE_DRIFT",
+              "ABSOLUTE_DRIFT"
+            ]
+          },
+          "maxAllowed": {
+            "type": "number",
+            "example": 0.05,
+            "description": "The maximum allowed drift for the Portfolio."
+          },
+          "child": {
+            "type": "string",
+            "example": null
+          },
+          "lowerBound": {
+            "type": "number",
+            "example": 0.01,
+            "description": "The lowest bound range of the drift parameters."
+          },
+          "upperBound": {
+            "type": "number",
+            "example": 0.02,
+            "description": "The highest bound range of the drift parameter."
+          }
+        }
+      },
+      "portfolioResHoldingsObject": {
+        "type": "object",
+        "description": "An array of objects that hold details of a Fund in a Portfolio.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "fund_3d9d00d1-f06e-4f86-9cbf-893c75cf77fe",
+            "description": "The unique FundID."
+          },
+          "name": {
+            "type": "string",
+            "example": "TECH",
+            "description": "A name given to the Fund by the RIA."
+          },
+          "type": {
+            "type": "string",
+            "example": "FUND",
+            "description": "The type of asset in the Portfolio.",
+            "enum": [
+              "FUND",
+              "CASH_RESERVE"
+            ]
+          },
+          "clientFundID": {
+            "$ref": "#/components/schemas/clientFundID"
+          },
+          "description": {
+            "type": "string",
+            "example": "Top 10 US Tech",
+            "description": "A short description for the Fund."
+          },
+          "target": {
+            "type": "number",
+            "example": 0.95,
+            "description": "The percentage of a Fund within a Portfolio."
+          },
+          "holdings": {
+            "type": "array",
+            "description": "A list of the securities held in a Fund.",
+            "items": {
+              "$ref": "#/components/schemas/holdingsObject"
+            }
+          },
+          "triggers": {
+            "type": "array",
+            "description": "The triggers associated with a Portfolio.",
+            "items": {
+              "$ref": "#/components/schemas/triggersObject"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

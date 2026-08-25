@@ -1,0 +1,273 @@
+{
+  "slug": "apis/changelog/api-release-1640",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-1640.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-1640",
+  "title": "API Release 1.64.0",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `@` (U+0040) in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 6,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.64.0",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.64.0",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Starting 2024 with another API Release! We are super excited to share with you all some changes to the platform.  If you have any questions about this release feel free to reach out to on the slack channels or send us an email at: <psg@drivewealth.com>.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Starting 2024 with another API Release! We are super excited to share with you all some changes to the platform.  If you have any questions about this release feel free to reach out to on the slack channels or send us an email at: psg@drivewealth.com.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "We are building up to some great features and product launches, check back in the next few releases.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are building up to some great features and product launches, check back in the next few releases.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🎉 Feature Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Cancel Rebill",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Cancel Rebill",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        16
+      ],
+      "raw": "Currently, we restrict Cancel Rebill requests from being processed when corporate actions are applied on an instrument held during a price adjustment or cancellation.\\\nStarting with this release, the request will remain in an ON\\_HOLD status if the corporate action is present. With this enhancement, both DIV and DIVTAX transactions will no longer be put into the ON\\_HOLD status and will be processed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Currently, we restrict Cancel Rebill requests from being processed when corporate actions are applied on an instrument held during a price adjustment or cancellation.Starting with this release, the request will remain in an ON_HOLD status if the corporate action is present. With this enhancement, both DIV and DIVTAX transactions will no longer be put into the ON_HOLD status and will be processed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "## Recurring Deposits",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recurring Deposits",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "Recurring deposits today do not allow the ability to determine the start date of when the initial recurring deposit should start. We are improving the [DepositAPI](https://developer.drivewealth.com/apis/reference/post_funding-deposits), which will enable you to pass the startDate in the request.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Recurring deposits today do not allow the ability to determine the start date of when the initial recurring deposit should start. We are improving the DepositAPI, which will enable you to pass the startDate in the request.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "Remember, that calendar months have different amounts of days within them. So, if you specify the start date as 28th, 29th, 30th or the 31th of that month and that month doesn’t have that day then the recurring deposit will start on the last day of the month. One last thing, if you don’t specify the startDate and it's the last day of the month, the recurring will start on the day of the request and continue on the end of the month recurring basis.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Remember, that calendar months have different amounts of days within them. So, if you specify the start date as 28th, 29th, 30th or the 31th of that month and that month doesn’t have that day then the recurring deposit will start on the last day of the month. One last thing, if you don’t specify the startDate and it's the last day of the month, the recurring will start on the day of the request and continue on the end of the month recurring basis.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "# 👠🐛 Squashing Bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing Bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "We are always squashing bugs but nothing to speak about this on this release.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are always squashing bugs but nothing to speak about this on this release.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        30,
+        70
+      ],
+      "raw": "```asp Changelog 🪵\n**`POST /funding/deposits`**\n\n* Request payload:\n    * Changed enum values for property `recurringFrequency`\n        * Added values `MONTHLY`\n* Modified the `200` response:\n    * Changed object property `recurring`\n        * Changed enum values for property `frequency`\n            * Added values `MONTHLY`\n\n**`DELETE /funding/recurring-deposits/{recurringID}`**\n\n* Modified the `200` response:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n\n**`GET /funding/recurring-deposits/{recurringID}`**\n\n* Modified the `200` response:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n\n**`PATCH /funding/recurring-deposits/{recurringID}`**\n\n* Request payload:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n* Modified the `200` response:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n\n**`GET /users/{userID}/recurring-deposits`**\n\n* Modified the `200` response:\n    * Changed root array\n        * Modified the schema option `DepositByUserID`\n            * Changed enum values for property `frequency`\n                * Added values `MONTHLY`\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "asp",
+        "title": "Changelog 🪵",
+        "code": "**`POST /funding/deposits`**\n\n* Request payload:\n    * Changed enum values for property `recurringFrequency`\n        * Added values `MONTHLY`\n* Modified the `200` response:\n    * Changed object property `recurring`\n        * Changed enum values for property `frequency`\n            * Added values `MONTHLY`\n\n**`DELETE /funding/recurring-deposits/{recurringID}`**\n\n* Modified the `200` response:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n\n**`GET /funding/recurring-deposits/{recurringID}`**\n\n* Modified the `200` response:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n\n**`PATCH /funding/recurring-deposits/{recurringID}`**\n\n* Request payload:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n* Modified the `200` response:\n    * Changed enum values for property `frequency`\n        * Added values `MONTHLY`\n\n**`GET /users/{userID}/recurring-deposits`**\n\n* Modified the `200` response:\n    * Changed root array\n        * Modified the schema option `DepositByUserID`\n            * Changed enum values for property `frequency`\n                * Added values `MONTHLY`\n"
+      },
+      "text": "Changelog 🪵",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "slug": "apis/reference/merger-acquisitions-events",
+  "source": "https://developer.drivewealth.com/apis/reference/merger-acquisitions-events.md",
+  "url": "https://developer.drivewealth.com/apis/reference/merger-acquisitions-events",
+  "title": "Merger & Acquisitions Events",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-22T15:01:32.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 5,
+    "list": 2,
+    "code": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Merger & Acquisitions Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Merger & Acquisitions Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "M\\&A corporate events consist of a bit more data because of updates that need to be made to cash and share positions. When an M\\&A event does occur there will be four (4) events created; Two `transaction.created` (changes in cash), and two `positions.updated` (removal of one symbol and addition of another). The sequence of events you would see are the following:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "M&A corporate events consist of a bit more data because of updates that need to be made to cash and share positions. When an M&A event does occur there will be four (4) events created; Two transaction.created (changes in cash), and two positions.updated (removal of one symbol and addition of another). The sequence of events you would see are the following:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## First Transaction Event\\*\\*",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "First Transaction Event**",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "* The first transaction event will be the addition of the acquirers shares as part of the merger or acquisition.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The first transaction event will be the addition of the acquirers shares as part of the merger or acquisition.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        58
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_ff31400a-565a-4c35-9782-279313f18521\",\n    \"type\": \"transactions.created\",\n    \"timestamp\": \"2019-08-02T07:02:31.858026996Z\",\n    \"payload\": {\n        \"accountID\": \"0dd1b08f-3668-440a-be18-131443d85a47.1551208006668\",\n        \"accountNo\": \"DWUV000073\",\n        \"userID\": \"0dd1b08f-3668-440a-be18-131443d85a47\",\n        \"transaction\": {\n            \"accountAmount\": 0,\n            \"accountBalance\": 3616.2,\n            \"comment\": \"Added 5.51 shares of FB (part of merger/acquisition of TWTR by FB)\",\n            \"finTranID\": \"GH.081b1011-7923-49fe-9144-aa1b555f0873\",\n            \"wlpFinTranTypeID\": \"b9d3f58c-da1a-47de-af78-fe59401f396b\",\n            \"finTranTypeID\": \"MERGER_ACQUISITION\",\n            \"feeSec\": 0,\n            \"feeTaf\": 0,\n            \"feeBase\": 0,\n            \"feeXtraShares\": 0,\n            \"feeExchange\": 0,\n            \"positionDelta\": 5.51,\n            \"instrument\": {\n                \"id\": \"4312a85c-b50d-4adb-93ba-cc7973243a53\",\n                \"symbol\": \"FB\",\n                \"name\": \"Facebook, Inc.\"\n            },\n            \"mergerAcquisition\": {\n                \"type\": \"ADD_SHARES\",\n                \"acquirer\": {\n                    \"id\": \"4312a85c-b50d-4adb-93ba-cc7973243a53\",\n                    \"symbol\": \"FB\",\n                    \"name\": \"Facebook, Inc.\"\n                },\n                \"acquiree\": {\n                    \"id\": \"bf4fc752-a5f4-4801-a416-0d75087c9779\",\n                    \"symbol\": \"TWTR\",\n                    \"name\": \"Twitter, Inc.\"\n                }\n            }\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_ff31400a-565a-4c35-9782-279313f18521\",\n    \"type\": \"transactions.created\",\n    \"timestamp\": \"2019-08-02T07:02:31.858026996Z\",\n    \"payload\": {\n        \"accountID\": \"0dd1b08f-3668-440a-be18-131443d85a47.1551208006668\",\n        \"accountNo\": \"DWUV000073\",\n        \"userID\": \"0dd1b08f-3668-440a-be18-131443d85a47\",\n        \"transaction\": {\n            \"accountAmount\": 0,\n            \"accountBalance\": 3616.2,\n            \"comment\": \"Added 5.51 shares of FB (part of merger/acquisition of TWTR by FB)\",\n            \"finTranID\": \"GH.081b1011-7923-49fe-9144-aa1b555f0873\",\n            \"wlpFinTranTypeID\": \"b9d3f58c-da1a-47de-af78-fe59401f396b\",\n            \"finTranTypeID\": \"MERGER_ACQUISITION\",\n            \"feeSec\": 0,\n            \"feeTaf\": 0,\n            \"feeBase\": 0,\n            \"feeXtraShares\": 0,\n            \"feeExchange\": 0,\n            \"positionDelta\": 5.51,\n            \"instrument\": {\n                \"id\": \"4312a85c-b50d-4adb-93ba-cc7973243a53\",\n                \"symbol\": \"FB\",\n                \"name\": \"Facebook, Inc.\"\n            },\n            \"mergerAcquisition\": {\n                \"type\": \"ADD_SHARES\",\n                \"acquirer\": {\n                    \"id\": \"4312a85c-b50d-4adb-93ba-cc7973243a53\",\n                    \"symbol\": \"FB\",\n                    \"name\": \"Facebook, Inc.\"\n                },\n                \"acquiree\": {\n                    \"id\": \"bf4fc752-a5f4-4801-a416-0d75087c9779\",\n                    \"symbol\": \"TWTR\",\n                    \"name\": \"Twitter, Inc.\"\n                }\n            }\n        }\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "In this example we see that Facebook bought Twitter, and so we `ADD_SHARES` to the customers account. In this case 5.51 shares of FB were added (`positionDelta`).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In this example we see that Facebook bought Twitter, and so we ADD_SHARES to the customers account. In this case 5.51 shares of FB were added (positionDelta).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "## Second Transaction Event",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Second Transaction Event",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "The second transaction event will be the removal of the acquiree's shares and addition of any cash as a result of the merger or acquisition.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The second transaction event will be the removal of the acquiree's shares and addition of any cash as a result of the merger or acquisition.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        66,
+        109
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_88602b5d-a189-4a0a-b4f7-941ad9a2fb4a\",\n    \"type\": \"transactions.created\",\n    \"timestamp\": \"2019-08-02T07:02:31.844056197Z\",\n    \"payload\": {\n        \"accountID\": \"0dd1b08f-3668-440a-be18-131443d85a47.1551208006668\",\n        \"accountNo\": \"DWUV000073\",\n        \"userID\": \"0dd1b08f-3668-440a-be18-131443d85a47\",\n        \"transaction\": {\n            \"accountAmount\": 122.320596405,\n            \"accountBalance\": 3616.2,\n            \"comment\": \"Removed 11.64958061 shares of TWTR (part of merger/acquisition of TWTR by FB)\",\n            \"finTranID\": \"GH.b06c05f5-e1da-4989-9f4d-fbe5d8be4ac1\",\n            \"wlpFinTranTypeID\": \"b9d3f58c-da1a-47de-af78-fe59401f396b\",\n            \"finTranTypeID\": \"MERGER_ACQUISITION\",\n            \"feeSec\": 0,\n            \"feeTaf\": 0,\n            \"feeBase\": 0,\n            \"feeXtraShares\": 0,\n            \"feeExchange\": 0,\n            \"positionDelta\": -11.64958061,\n            \"instrument\": {\n                \"id\": \"bf4fc752-a5f4-4801-a416-0d75087c9779\",\n                \"symbol\": \"TWTR\",\n                \"name\": \"Twitter, Inc.\"\n            },\n            \"mergerAcquisition\": {\n                \"type\": \"REMOVE_SHARES_ADD_CASH\",\n                \"acquirer\": {\n                    \"id\": \"4312a85c-b50d-4adb-93ba-cc7973243a53\",\n                    \"symbol\": \"FB\",\n                    \"name\": \"Facebook, Inc.\"\n                },\n                \"acquiree\": {\n                    \"id\": \"bf4fc752-a5f4-4801-a416-0d75087c9779\",\n                    \"symbol\": \"TWTR\",\n                    \"name\": \"Twitter, Inc.\"\n                }\n            }\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_88602b5d-a189-4a0a-b4f7-941ad9a2fb4a\",\n    \"type\": \"transactions.created\",\n    \"timestamp\": \"2019-08-02T07:02:31.844056197Z\",\n    \"payload\": {\n        \"accountID\": \"0dd1b08f-3668-440a-be18-131443d85a47.1551208006668\",\n        \"accountNo\": \"DWUV000073\",\n        \"userID\": \"0dd1b08f-3668-440a-be18-131443d85a47\",\n        \"transaction\": {\n            \"accountAmount\": 122.320596405,\n            \"accountBalance\": 3616.2,\n            \"comment\": \"Removed 11.64958061 shares of TWTR (part of merger/acquisition of TWTR by FB)\",\n            \"finTranID\": \"GH.b06c05f5-e1da-4989-9f4d-fbe5d8be4ac1\",\n            \"wlpFinTranTypeID\": \"b9d3f58c-da1a-47de-af78-fe59401f396b\",\n            \"finTranTypeID\": \"MERGER_ACQUISITION\",\n            \"feeSec\": 0,\n            \"feeTaf\": 0,\n            \"feeBase\": 0,\n            \"feeXtraShares\": 0,\n            \"feeExchange\": 0,\n            \"positionDelta\": -11.64958061,\n            \"instrument\": {\n                \"id\": \"bf4fc752-a5f4-4801-a416-0d75087c9779\",\n                \"symbol\": \"TWTR\",\n                \"name\": \"Twitter, Inc.\"\n            },\n            \"mergerAcquisition\": {\n                \"type\": \"REMOVE_SHARES_ADD_CASH\",\n                \"acquirer\": {\n                    \"id\": \"4312a85c-b50d-4adb-93ba-cc7973243a53\",\n                    \"symbol\": \"FB\",\n                    \"name\": \"Facebook, Inc.\"\n                },\n                \"acquiree\": {\n                    \"id\": \"bf4fc752-a5f4-4801-a416-0d75087c9779\",\n                    \"symbol\": \"TWTR\",\n                    \"name\": \"Twitter, Inc.\"\n                }\n            }\n        }\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        111,
+        111
+      ],
+      "raw": "In this example we see that we removed the existing position of TWTR, and added the cash due to the customer.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In this example we see that we removed the existing position of TWTR, and added the cash due to the customer.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        113,
+        113
+      ],
+      "raw": "## First Position Update Event",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "First Position Update Event",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        115,
+        115
+      ],
+      "raw": "* The first position update will be for the addition of the acquiring company's shares.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The first position update will be for the addition of the acquiring company's shares.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        117,
+        140
+      ],
+      "raw": "```json Updated\n{\n    \"id\": \"event_fc0df771-084b-4d4c-b1b4-2f5cb5b86ad7\",\n    \"type\": \"positions.updated\",\n    \"timestamp\": \"2019-08-02T07:02:31.827375527Z\",\n    \"payload\": {\n        \"accountID\": \"0dd1b08f-3668-440a-be18-131443d85a47.1551208006668\",\n        \"accountNo\": \"DWUV000073\",\n        \"userID\": \"0dd1b08f-3668-440a-be18-131443d85a47\",\n        \"updateReason\": \"MERGER_AND_ACQUISITION\",\n        \"previous\": {\n            \"costBasis\": 500,\n            \"openQty\": 11.64958061,\n            \"symbol\": \"TWTR\",\n            \"avgPrice\": 42.92\n        },\n        \"current\": {\n            \"costBasis\": 0,\n            \"openQty\": 0,\n            \"symbol\": \"TWTR\"\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n    \"id\": \"event_fc0df771-084b-4d4c-b1b4-2f5cb5b86ad7\",\n    \"type\": \"positions.updated\",\n    \"timestamp\": \"2019-08-02T07:02:31.827375527Z\",\n    \"payload\": {\n        \"accountID\": \"0dd1b08f-3668-440a-be18-131443d85a47.1551208006668\",\n        \"accountNo\": \"DWUV000073\",\n        \"userID\": \"0dd1b08f-3668-440a-be18-131443d85a47\",\n        \"updateReason\": \"MERGER_AND_ACQUISITION\",\n        \"previous\": {\n            \"costBasis\": 500,\n            \"openQty\": 11.64958061,\n            \"symbol\": \"TWTR\",\n            \"avgPrice\": 42.92\n        },\n        \"current\": {\n            \"costBasis\": 0,\n            \"openQty\": 0,\n            \"symbol\": \"TWTR\"\n        }\n    }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        142,
+        142
+      ],
+      "raw": "In this example we can see that we removed all shares of TWTR as a part of the merger or acquisition.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In this example we can see that we removed all shares of TWTR as a part of the merger or acquisition.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

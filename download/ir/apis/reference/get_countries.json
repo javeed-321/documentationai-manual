@@ -1,0 +1,114 @@
+{
+  "slug": "apis/reference/get_countries",
+  "source": "https://developer.drivewealth.com/apis/reference/get_countries.md",
+  "url": "https://developer.drivewealth.com/apis/reference/get_countries",
+  "title": "List Supported Countries",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:57:55.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# List Supported Countries",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "List Supported Countries",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Retrieves a list of allowed countries for which users can be onboard from.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrieves a list of allowed countries for which users can be onboard from.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        167
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Core APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Supported Countries\"\n    }\n  ],\n  \"paths\": {\n    \"/countries\": {\n      \"get\": {\n        \"tags\": [\n          \"Supported Countries\"\n        ],\n        \"summary\": \"List Supported Countries\",\n        \"description\": \"Retrieves a list of allowed countries for which users can be onboard from.\",\n        \"parameters\": [\n          {\n            \"in\": \"query\",\n            \"name\": \"status\",\n            \"schema\": {\n              \"type\": \"string\",\n              \"enum\": [\n                \"ACTIVE\",\n                \"INACTIVE\"\n              ]\n            },\n            \"required\": true,\n            \"example\": \"ACTIVE\",\n            \"description\": \"Filters on the returned countries list has inactive or active countries inside it.\"\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Retrieving a list of Supported Countries was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ListOfAllowedCountries\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"ListOfAllowedCountry\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"example\": \"ALA\",\n            \"description\": \"The abbreviated identifier of a country.\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"example\": \"Aland Islands\",\n            \"description\": \"The full name of the country\"\n          },\n          \"code2\": {\n            \"type\": \"string\",\n            \"example\": \"AX\",\n            \"description\": \"An alternative abbreviated identifier of a country.\"\n          },\n          \"code3\": {\n            \"type\": \"string\",\n            \"example\": \"ALA\",\n            \"description\": \"An alternative abbreviated identifier of a country.\"\n          },\n          \"active\": {\n            \"type\": \"boolean\",\n            \"example\": true,\n            \"description\": \"True, if a user can be onboarded from this country.\"\n          },\n          \"expatsAllowed\": {\n            \"type\": \"boolean\",\n            \"example\": false,\n            \"description\": \"True, if a user who resides outside of their country can be onboarded from the listed country.\"\n          },\n          \"foreignTINNotRequired\": {\n            \"type\": \"boolean\",\n            \"example\": false,\n            \"description\": \"True, if a user's tax identifier is NOT required during onboarding.\"\n          },\n          \"fpslProhibited\": {\n            \"type\": \"boolean\",\n            \"example\": false\n          },\n          \"supportDomicile\": {\n            \"type\": \"boolean\",\n            \"example\": false\n          },\n          \"taxTreatyCountry\": {\n            \"type\": \"boolean\",\n            \"example\": false,\n            \"description\": \"True, if the country has a tax treaty with the United States.\"\n          }\n        }\n      },\n      \"ListOfAllowedCountries\": {\n        \"type\": \"array\",\n        \"description\": \"A list of allowed countries.\",\n        \"items\": {\n          \"oneOf\": [\n            {\n              \"$ref\": \"#/components/schemas/ListOfAllowedCountry\"\n            }\n          ]\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Core APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Supported Countries\"\n    }\n  ],\n  \"paths\": {\n    \"/countries\": {\n      \"get\": {\n        \"tags\": [\n          \"Supported Countries\"\n        ],\n        \"summary\": \"List Supported Countries\",\n        \"description\": \"Retrieves a list of allowed countries for which users can be onboard from.\",\n        \"parameters\": [\n          {\n            \"in\": \"query\",\n            \"name\": \"status\",\n            \"schema\": {\n              \"type\": \"string\",\n              \"enum\": [\n                \"ACTIVE\",\n                \"INACTIVE\"\n              ]\n            },\n            \"required\": true,\n            \"example\": \"ACTIVE\",\n            \"description\": \"Filters on the returned countries list has inactive or active countries inside it.\"\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Retrieving a list of Supported Countries was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ListOfAllowedCountries\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"ListOfAllowedCountry\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"example\": \"ALA\",\n            \"description\": \"The abbreviated identifier of a country.\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"example\": \"Aland Islands\",\n            \"description\": \"The full name of the country\"\n          },\n          \"code2\": {\n            \"type\": \"string\",\n            \"example\": \"AX\",\n            \"description\": \"An alternative abbreviated identifier of a country.\"\n          },\n          \"code3\": {\n            \"type\": \"string\",\n            \"example\": \"ALA\",\n            \"description\": \"An alternative abbreviated identifier of a country.\"\n          },\n          \"active\": {\n            \"type\": \"boolean\",\n            \"example\": true,\n            \"description\": \"True, if a user can be onboarded from this country.\"\n          },\n          \"expatsAllowed\": {\n            \"type\": \"boolean\",\n            \"example\": false,\n            \"description\": \"True, if a user who resides outside of their country can be onboarded from the listed country.\"\n          },\n          \"foreignTINNotRequired\": {\n            \"type\": \"boolean\",\n            \"example\": false,\n            \"description\": \"True, if a user's tax identifier is NOT required during onboarding.\"\n          },\n          \"fpslProhibited\": {\n            \"type\": \"boolean\",\n            \"example\": false\n          },\n          \"supportDomicile\": {\n            \"type\": \"boolean\",\n            \"example\": false\n          },\n          \"taxTreatyCountry\": {\n            \"type\": \"boolean\",\n            \"example\": false,\n            \"description\": \"True, if the country has a tax treaty with the United States.\"\n          }\n        }\n      },\n      \"ListOfAllowedCountries\": {\n        \"type\": \"array\",\n        \"description\": \"A list of allowed countries.\",\n        \"items\": {\n          \"oneOf\": [\n            {\n              \"$ref\": \"#/components/schemas/ListOfAllowedCountry\"\n            }\n          ]\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 43
+        }
+      ]
+    }
+  ]
+}

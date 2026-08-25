@@ -1,0 +1,741 @@
+{
+  "slug": "apis/docs/placing-option-orders",
+  "source": "https://developer.drivewealth.com/apis/docs/placing-option-orders.md",
+  "url": "https://developer.drivewealth.com/apis/docs/placing-option-orders",
+  "title": "Placing option orders",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T16:47:34.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 11,
+    "code": 6,
+    "Table": 3,
+    "blockquote": 1,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Placing option orders",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Placing option orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Place a single-leg options order on an equity or ETF underlying using the Orders endpoint. Options trade Monday–Friday, 9:30am–4:00pm ET; a subset of broad-based ETFs trade until 4:15pm ET `TODO: confirm which broad-based ETFs trade until 4:15pm ET — needs team input`. Only limit orders are accepted; market orders and dollar-based orders are not supported. DriveWealth currently supports Level 2 options trading — valid sides are `BUY_OPEN` and `SELL_CLOSE` only. Before placing an order, accounts must be approved for options trading — see [Enabling options access](https://developer.drivewealth.com/apis/docs/options-approval) . To find a contract to trade, see [Showing options chains](https://developer.drivewealth.com/apis/docs/filtering-options) .",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Place a single-leg options order on an equity or ETF underlying using the Orders endpoint. Options trade Monday–Friday, 9:30am–4:00pm ET; a subset of broad-based ETFs trade until 4:15pm ET TODO: confirm which broad-based ETFs trade until 4:15pm ET — needs team input. Only limit orders are accepted; market orders and dollar-based orders are not supported. DriveWealth currently supports Level 2 options trading — valid sides are BUY_OPEN and SELL_CLOSE only. Before placing an order, accounts must be approved for options trading — see Enabling options access . To find a contract to trade, see Showing options chains .",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Buy to open",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Buy to open",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Opens a new long position by purchasing a contract.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Opens a new long position by purchasing a contract.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        33
+      ],
+      "raw": "```shell\ncurl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/orders \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"accountNo\":   \"DWPH000003\",\n  \"orderType\":   \"LIMIT\",\n  \"timeInForce\": \"DAY\",\n  \"symbol\":      \"KO280121C00075000\",\n  \"side\":        \"BUY_OPEN\",\n  \"quantity\":    1,\n  \"price\":       3.42\n}\n'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/orders \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"accountNo\":   \"DWPH000003\",\n  \"orderType\":   \"LIMIT\",\n  \"timeInForce\": \"DAY\",\n  \"symbol\":      \"KO280121C00075000\",\n  \"side\":        \"BUY_OPEN\",\n  \"quantity\":    1,\n  \"price\":       3.42\n}\n'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 19
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## Sell to close",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Sell to close",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "Closes an existing long position by selling a contract you hold.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Closes an existing long position by selling a contract you hold.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        39,
+        57
+      ],
+      "raw": "```shell\ncurl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/orders \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"accountNo\":   \"DWPH000003\",\n  \"orderType\":   \"LIMIT\",\n  \"timeInForce\": \"DAY\",\n  \"symbol\":      \"KO280121C00075000\",\n  \"side\":        \"SELL_CLOSE\",\n  \"quantity\":    1,\n  \"price\":       3.25\n}\n'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/orders \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"accountNo\":   \"DWPH000003\",\n  \"orderType\":   \"LIMIT\",\n  \"timeInForce\": \"DAY\",\n  \"symbol\":      \"KO280121C00075000\",\n  \"side\":        \"SELL_CLOSE\",\n  \"quantity\":    1,\n  \"price\":       3.25\n}\n'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 43
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 45
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "## Request body parameters",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Request body parameters",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        61,
+        69
+      ],
+      "raw": "| Parameter     | Type    | Required | Description                                                                                                                                                                                                                                                                                 |\n| :------------ | :------ | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `accountNo`   | string  | Required | The account to place the order from.                                                                                                                                                                                                                                                        |\n| `symbol`      | string  | Required | OSI-formatted option symbol. Retrieve valid symbols from the [options chains endpoint](https://developer.drivewealth.com/apis/docs/filtering-options).                                                                                                                                      |\n| `orderType`   | string  | Required | Must be `LIMIT`. Market orders are not accepted for options.                                                                                                                                                                                                                                |\n| `side`        | string  | Required | `BUY_OPEN` to open a long position, `SELL_CLOSE` to close one.                                                                                                                                                                                                                              |\n| `quantity`    | integer | Required | Number of contracts. Must be a whole number — fractional quantities are not accepted.                                                                                                                                                                                                       |\n| `price`       | number  | Required | Limit price per share, not per contract. A price of `3.42` on a standard contract equals $342.00 notional (price × multiplier of 100). Confirm the multiplier via the [instrument details endpoint](https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid). |\n| `timeInForce` | string  | Required | Must be `DAY`.                                                                                                                                                                                                                                                                              |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Parameter",
+          "Type",
+          "Required",
+          "Description"
+        ],
+        "rows": [
+          [
+            "accountNo",
+            "string",
+            "Required",
+            "The account to place the order from."
+          ],
+          [
+            "symbol",
+            "string",
+            "Required",
+            "OSI-formatted option symbol. Retrieve valid symbols from the options chains endpoint."
+          ],
+          [
+            "orderType",
+            "string",
+            "Required",
+            "Must be LIMIT. Market orders are not accepted for options."
+          ],
+          [
+            "side",
+            "string",
+            "Required",
+            "BUY_OPEN to open a long position, SELL_CLOSE to close one."
+          ],
+          [
+            "quantity",
+            "integer",
+            "Required",
+            "Number of contracts. Must be a whole number — fractional quantities are not accepted."
+          ],
+          [
+            "price",
+            "number",
+            "Required",
+            "Limit price per share, not per contract. A price of 3.42 on a standard contract equals $342.00 notional (price × multiplier of 100). Confirm the multiplier via the instrument details endpoint."
+          ],
+          [
+            "timeInForce",
+            "string",
+            "Required",
+            "Must be DAY."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "## Response",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        73,
+        73
+      ],
+      "raw": "Order creation returns a `202 Accepted`. Processing is asynchronous — the response does not reflect fill status. Use the returned `id` to poll for updates, or listen for `orders.created`, `orders.updated`, and `orders.completed` events via SQS.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Order creation returns a 202 Accepted. Processing is asynchronous — the response does not reflect fill status. Use the returned id to poll for updates, or listen for orders.created, orders.updated, and orders.completed events via SQS.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "To check the status of an order:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To check the status of an order:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        77,
+        83
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/orders/{orderID} \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer $DW_ACCESS_TOKEN' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/orders/{orderID} \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer $DW_ACCESS_TOKEN' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        85,
+        100
+      ],
+      "raw": "```json\n{\n  \"id\":                 \"GB.70359e38-fe9a-412d-ab8f-364bd7e910f0\",\n  \"orderNo\":            \"GBPT000048\",\n  \"type\":               \"LIMIT\",\n  \"side\":               \"BUY_OPEN\",\n  \"status\":             \"NEW\",\n  \"symbol\":             \"KO280121C00075000\",\n  \"averagePrice\":       0,\n  \"totalOrderAmount\":   0,\n  \"cumulativeQuantity\": 0,\n  \"quantity\":           1,\n  \"accountNo\":          \"DWPH000003\",\n  \"created\":            \"2026-03-29T18:56:07.411Z\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\":                 \"GB.70359e38-fe9a-412d-ab8f-364bd7e910f0\",\n  \"orderNo\":            \"GBPT000048\",\n  \"type\":               \"LIMIT\",\n  \"side\":               \"BUY_OPEN\",\n  \"status\":             \"NEW\",\n  \"symbol\":             \"KO280121C00075000\",\n  \"averagePrice\":       0,\n  \"totalOrderAmount\":   0,\n  \"cumulativeQuantity\": 0,\n  \"quantity\":           1,\n  \"accountNo\":          \"DWPH000003\",\n  \"created\":            \"2026-03-29T18:56:07.411Z\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        102,
+        109
+      ],
+      "raw": "| Field                | Type   | Description                                                                        |\n| :------------------- | :----- | :--------------------------------------------------------------------------------- |\n| `id`                 | string | Use with `GET /back-office/orders/{orderID}` to poll for status updates.           |\n| `orderNo`            | string | Human-readable order reference.                                                    |\n| `status`             | string | Always `NEW` on creation.                                                          |\n| `averagePrice`       | number | Populated once filled. `0` until then.                                             |\n| `cumulativeQuantity` | number | Contracts filled so far. Useful when an order partially fills before cancellation. |\n| `totalOrderAmount`   | number | Notional of filled contracts (fill price × multiplier × filled quantity).          |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Field",
+          "Type",
+          "Description"
+        ],
+        "rows": [
+          [
+            "id",
+            "string",
+            "Use with GET /back-office/orders/{orderID} to poll for status updates."
+          ],
+          [
+            "orderNo",
+            "string",
+            "Human-readable order reference."
+          ],
+          [
+            "status",
+            "string",
+            "Always NEW on creation."
+          ],
+          [
+            "averagePrice",
+            "number",
+            "Populated once filled. 0 until then."
+          ],
+          [
+            "cumulativeQuantity",
+            "number",
+            "Contracts filled so far. Useful when an order partially fills before cancellation."
+          ],
+          [
+            "totalOrderAmount",
+            "number",
+            "Notional of filled contracts (fill price × multiplier × filled quantity)."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        111,
+        111
+      ],
+      "raw": "## Order lifecycle",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Order lifecycle",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        113,
+        113
+      ],
+      "raw": "Three statuses are terminal and will not change: `FILLED`, `CANCELED`, and `REJECTED`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Three statuses are terminal and will not change: FILLED, CANCELED, and REJECTED.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        115,
+        121
+      ],
+      "raw": "| Status         | Description                                                                                        |\n| :------------- | :------------------------------------------------------------------------------------------------- |\n| `NEW`          | Assigned on creation. Persists until the order is received by the OMS.                             |\n| `PARTIAL_FILL` | The order has been partially executed.                                                             |\n| `FILLED`       | The order has been fully executed. Terminal.                                                       |\n| `CANCELED`     | The order was canceled. Terminal.                                                                  |\n| `REJECTED`     | The order was rejected before reaching the OMS — for example, insufficient buying power. Terminal. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "NEW",
+            "Assigned on creation. Persists until the order is received by the OMS."
+          ],
+          [
+            "PARTIAL_FILL",
+            "The order has been partially executed."
+          ],
+          [
+            "FILLED",
+            "The order has been fully executed. Terminal."
+          ],
+          [
+            "CANCELED",
+            "The order was canceled. Terminal."
+          ],
+          [
+            "REJECTED",
+            "The order was rejected before reaching the OMS — for example, insufficient buying power. Terminal."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        123,
+        123
+      ],
+      "raw": "For orders that partially fill before cancellation, use `cumulativeQuantity` to determine how many contracts executed prior to cancellation.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For orders that partially fill before cancellation, use cumulativeQuantity to determine how many contracts executed prior to cancellation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        125,
+        125
+      ],
+      "raw": "To receive status updates without polling, consume `orders.created`, `orders.updated`, and `orders.completed` events from your SQS queue. Note that events may arrive out of sequence — a `orders.completed` event with status `FILLED` may arrive before an `orders.updated` event with status `PARTIAL_FILL`. Implement logic to handle this accordingly. For more details see <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/events\">Events</Anchor>.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To receive status updates without polling, consume orders.created, orders.updated, and orders.completed events from your SQS queue. Note that events may arrive out of sequence — a orders.completed event with status FILLED may arrive before an orders.updated event with status PARTIAL_FILL. Implement logic to handle this accordingly. For more details see Events.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/events",
+          "line": 125
+        }
+      ]
+    },
+    {
+      "i": 22,
+      "lines": [
+        127,
+        127
+      ],
+      "raw": "## Cancel an order",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Cancel an order",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        129,
+        129
+      ],
+      "raw": "Send a `PATCH` request to cancel an open order. A `200` response means the cancellation request was received, not that the order was canceled — the order may already be routing to an exchange.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Send a PATCH request to cancel an open order. A 200 response means the cancellation request was received, not that the order was canceled — the order may already be routing to an exchange.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        131,
+        143
+      ],
+      "raw": "```shell\ncurl --request PATCH \\\n     --url https://bo-api.drivewealth.io/back-office/orders/{orderID} \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer $DW_ACCESS_TOKEN' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"method\": \"CANCEL\"\n}\n'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request PATCH \\\n     --url https://bo-api.drivewealth.io/back-office/orders/{orderID} \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer $DW_ACCESS_TOKEN' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"method\": \"CANCEL\"\n}\n'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "i": 25,
+      "lines": [
+        145,
+        145
+      ],
+      "raw": "If cancellation succeeds you will receive an `orders.completed` SQS event with `status: \"CANCELED\"`. If the order was already executing it will complete as `FILLED`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If cancellation succeeds you will receive an orders.completed SQS event with status: \"CANCELED\". If the order was already executing it will complete as FILLED.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        147,
+        147
+      ],
+      "raw": "> **Note:** Order cancellations are by request and may be unsuccessful. Once an order is routed to an exchange, DriveWealth cannot guarantee cancellation.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Note: Order cancellations are by request and may be unsuccessful. Once an order is routed to an exchange, DriveWealth cannot guarantee cancellation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        149,
+        149
+      ],
+      "raw": "## Security halts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Security halts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        151,
+        151
+      ],
+      "raw": "If an underlying equity is halted, all options on that instrument are also halted. Orders placed against a halted instrument will be rejected. Consume to `instruments.updated` SQS events to detect status changes before placing orders.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If an underlying equity is halted, all options on that instrument are also halted. Orders placed against a halted instrument will be rejected. Consume to instruments.updated SQS events to detect status changes before placing orders.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        153,
+        164
+      ],
+      "raw": "```json\n{\n  \"id\":        \"event_17913550-6db0-4086-9137-3fd728bd6821\",\n  \"type\":      \"instruments.updated\",\n  \"timestamp\": \"2026-08-21T16:41:53.938Z\",\n  \"payload\": {\n    \"instrumentID\": \"26fa9515-d1c6-44ce-93b2-b94430451508\",\n    \"previous\": { \"status\": \"ACTIVE\" },\n    \"current\":  { \"status\": \"HALTED\" }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\":        \"event_17913550-6db0-4086-9137-3fd728bd6821\",\n  \"type\":      \"instruments.updated\",\n  \"timestamp\": \"2026-08-21T16:41:53.938Z\",\n  \"payload\": {\n    \"instrumentID\": \"26fa9515-d1c6-44ce-93b2-b94430451508\",\n    \"previous\": { \"status\": \"ACTIVE\" },\n    \"current\":  { \"status\": \"HALTED\" }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        166,
+        166
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 166
+        }
+      ]
+    }
+  ]
+}

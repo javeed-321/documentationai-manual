@@ -1,0 +1,389 @@
+{
+  "slug": "apis/changelog/api-release-140",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-140.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-140",
+  "title": "API Release 1.40",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "Table": 3,
+    "br": 3,
+    "paragraph": 1,
+    "code": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.40",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.40",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.40",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.40",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        10
+      ],
+      "raw": "| Environment | Release Date                 |\n| :---------- | :--------------------------- |\n| UAT         | RELEASED                     |\n| Production  | Release Date - July 21, 2022 |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Environment",
+          "Release Date"
+        ],
+        "rows": [
+          [
+            "UAT",
+            "RELEASED"
+          ],
+          [
+            "Production",
+            "Release Date - July 21, 2022"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "### **Error Code Updates**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Error Code Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "The following error codes have been updated. Please see [Common Order Gateway Errors](https://developer.drivewealth.com/reference/common-order-gateway-errors) for more details on current error codes.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following error codes have been updated. Please see Common Order Gateway Errors for more details on current error codes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/common-order-gateway-errors",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "i": 7,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "#### **URL :`{{bo-url}}/back-office/orders`**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "URL :{{bo-url}}/back-office/orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        22,
+        24
+      ],
+      "raw": "| Previous Error Code | New Error Code | Status                     | Description                                    |\n| :------------------ | :------------- | :------------------------- | :--------------------------------------------- |\n| `custom`            | `O101`         | ERROR\\_INSTRUMENT\\_UNKNOWN | Invalid `instrumentID` provided in the request |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Previous Error Code",
+          "New Error Code",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "custom",
+            "O101",
+            "ERROR_INSTRUMENT_UNKNOWN",
+            "Invalid instrumentID provided in the request"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        36
+      ],
+      "raw": "```json Sample Response - O101\n{\n    \"errorCode\": \"O101\",\n    \"message\": \"Invalid Symbol. Refer to the API documentation for details. Details: Instrument lookup failed for [symbol=\tAPPL]\",\n    \"errorDetails\": {\n        \"detail\": \"Instrument lookup failed for [symbol= APPL]\",\n        \"field\": \"symbol\",\n        \"type\": \"STRING\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Sample Response - O101",
+        "code": "{\n    \"errorCode\": \"O101\",\n    \"message\": \"Invalid Symbol. Refer to the API documentation for details. Details: Instrument lookup failed for [symbol=\tAPPL]\",\n    \"errorDetails\": {\n        \"detail\": \"Instrument lookup failed for [symbol= APPL]\",\n        \"field\": \"symbol\",\n        \"type\": \"STRING\"\n    }\n}"
+      },
+      "text": "Sample Response - O101",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "#### **URL :`{{bo-url}}/back-office/orders`**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "URL :{{bo-url}}/back-office/orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "lines": [
+        42,
+        44
+      ],
+      "raw": "| Previous Error Code | New Error Code | Status               | Description                      |\n| :------------------ | :------------- | :------------------- | :------------------------------- |\n| `E032`              | `O403`         | ERROR\\_ACCOUNT\\_NULL | `accountID`/ `accountNo` is null |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Previous Error Code",
+          "New Error Code",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "E032",
+            "O403",
+            "ERROR_ACCOUNT_NULL",
+            "accountID/ accountNo is null"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        46,
+        56
+      ],
+      "raw": "```json Sample Response O403\n{\n    \"errorCode\": \"O403\",\n    \"message\": \"Account Number is missing in the request Details: Account Number is missing in the request\",\n    \"errorDetails\": {\n        \"detail\": \"Account Number is missing in the request\",\n        \"field\": \"accountNo\",\n        \"type\": \"STRING\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Sample Response O403",
+        "code": "{\n    \"errorCode\": \"O403\",\n    \"message\": \"Account Number is missing in the request Details: Account Number is missing in the request\",\n    \"errorDetails\": {\n        \"detail\": \"Account Number is missing in the request\",\n        \"field\": \"accountNo\",\n        \"type\": \"STRING\"\n    }\n}"
+      },
+      "text": "Sample Response O403",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

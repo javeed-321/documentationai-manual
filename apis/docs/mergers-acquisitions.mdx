@@ -1,0 +1,18 @@
+---
+title: "Mergers & acquisitions"
+---
+
+Mergers and acquisitions generally relates to two or more companies merging into a single company. While this type of corporate action could take several forms, there are fundamentally 3 or 4 events triggered, depending on the complexity of the corporate action.
+
+- **Instrument Updated Event:**  Instrument Status Update - “Active” to “Inactive”
+- **Instrument Updated Event:** Instrument Symbol Update – “Old” symbol to “New” symbol
+- If a share conversion; there will be two Events, one to remove the prior shares, and another to add the new shares at the converted rate.
+- There can also be a straight Symbol change (e.g. ABC to DEF) as part of the Corporate Action, if one symbol is being retired in favor of a new symbol at a 1:1 conversion.
+
+## Standard procedure
+
+After market close on the last day of trading for the prior symbol(s) (and the day prior to the effective date of trading of the new symbol), the prior symbols are set to inactive, followed by a symbol update event changing the prior symbol to the new symbol.
+
+If the corporate action has a conversion of shares from prior symbol to new symbol, DriveWealth operations will process the conversion from the prior symbol to new symbol at the conversion rate.
+
+If the corporate action also has a 1:1 symbol conversion (e.g. where one of the prior symbols is subject to a symbol change, without conversion) (e.g. BBT -> TFC). DW will process a symbol change.

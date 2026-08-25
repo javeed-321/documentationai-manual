@@ -1,0 +1,210 @@
+---
+title: "API Release 1.52"
+---
+
+## API Release 1.52
+
+### Deployed in UAT - Yes, available to test.
+
+### Deployed in Production - April 20, 2023.
+
+# 1. 🚀New Features - What’s New?
+
+## Frozen Account Status - Updates
+
+- Orders will be rejected if an Account status is FROZEN
+- Add FROZEN status by field with PATCH account API
+- Virtual Account Deposits will move to Suspense if Account status is FROZEN
+- All deposits will be rejected if account status is frozen
+  <Callout kind="info">
+    Only applicable to partners offering Teen Accounts
+  </Callout>
+
+# 2. 🎉Feature Enhancements - We are making it better for you!!
+
+### 2.1 Additional data fields will be available in the **GET /instruments/id API endpoint**
+
+#### Existing Feature - The GET /instruments/id API endpoint only displays a few fields and data points.
+
+#### What is improving? - Going forward, our partners will be able to consume more data points from the below additional available fields.
+
+#### Available to Test in UAT  - Yes
+
+##### Feature Toggle (Y/N) - No
+
+<Callout kind="success">
+  **Additional Available fields**
+
+  1. Sector
+  2. Industry
+  3. IndexMembership
+  4. TRBC2012
+  5. Incorporated Country
+</Callout>
+
+```Text title="New Sample Response"
+{
+    "symbol": "E66O6",
+    "reutersPrimaryRic": "AMZN.O",
+    "name": "iShares Core MSCI Europe",
+    "description": "This is all about iShares",
+    "sector": "Services",
+    "longOnly": true,
+    "orderSizeMax": 10000,
+    "orderSizeMin": 0.0001,
+    "orderSizeStep": 0.0001,
+    "exchangeNickelSpread": false,
+    "close": 0,
+    "enableExtendedHoursNotionalStatus": "INACTIVE",
+    "industry": "Retail (Specialty)",
+    "trbc2012": "Internet & Mail Order Department Stores",
+    "indexMemberships": [
+        "NASDAQ 100 Index",
+        "S&P 500",
+        "TR Equity United States Index"
+    ],
+    "incorporatedCountry": "USA",
+    "id": "d74c9b77-a45e-43ee-856c-2a73975320dc",
+    "type": "EQUITY",
+    "exchange": "NSQ",
+    "url": "https://google.com",
+    "status": "INACTIVE",
+    "exchangeThresholdOverride": 0.5,
+    "closePrior": 0,
+    "image": "https://drivewealth.imgix.net/symbols/e66o6_1680187053.png?fit=fillmax&w=125&h=125&bg=FFFFFF",
+    "ISIN": "US0231351067",
+    "CUSIP": "023135106"
+}
+```
+
+### 2.2 FINRA 3210 - Duplicate Compliance reports
+
+#### Existing Feature - Some of our partners require information about trading activity to report to  for regulatory compliance. Presently there is a manual list of accounts maintained by DriveWealth's compliance team that is populated with this information on a daily basis. This data is then sent to the partner or their vendors via SFTP.
+
+#### What is improving? - We are attempting to semi-automate this manual process so it can be used programmatically by the partner to retrieve reports for 3210 reporting.
+
+#### Available to Test in UAT  - Yes
+
+#### Feature Toggle (Y/N) - No
+
+A two step solution is being proposed to identify accounts and group them into the vendor to which the trading data needs to be sent. This data will be semi-customizable, where a partner will be allowed a pre-approved list of vendors they can request to group together.
+
+The two step process is as follows:
+
+**Step 1: Add the compliance reporting vendor/employer on the customer’s DW account.  (ComplySci, MCO, etc.)**
+
+A new account field **finra3210ComplianceEntity** is being introduced which can be added on an account via a POST or a PATCH request. This field is optional.
+
+<CodeGroup tabs="Add Compliance Entity to account,PATCH,Delete Compliance Vendor from account">
+  ```Text title="Add Compliance Entity to account"
+  POST /accounts
+
+  Request Body:
+  {
+    "userID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+    "accountType": "LIVE",
+    "accountManagementType": "SELF",
+    "tradingType": "CASH",
+    ...
+    "finra3210ComplianceEntity": "COMPLYSCI",
+    ...
+  }
+  ```
+
+  ```Text title="PATCH"
+  PATCH /accounts/accountID
+
+  Request Body:
+  {
+    "finra3210ComplianceEntity": "COMPLYSCI"
+  }
+  ```
+
+  ```Text title="Delete Compliance Vendor from account"
+  PATCH /accounts/accountID
+
+  Request Body:
+  {
+    "finra3210ComplianceEntity": ""
+  }
+
+  Note: Field needs to be passed as empty
+  ```
+</CodeGroup>
+
+**Step 2: Daily files will be created for the partner per vendor that they have associated with the account**
+
+On **T+1** **two** files will be generated for each entity per partner.
+
+<Callout kind="danger">
+  **Note: No file will be generated if the entity account list is empty.**
+</Callout>
+
+These files will be located in an S3 bucket with the following hierarchy
+
+<Callout kind="success">
+  **\* `<partnerID>`/`<date_YYYYMMDD>`/`<ENTITY_NAME>`/xxxPositionsYYYYMMDD.csv**
+
+  accountNo
+
+  ccyymmdd
+
+  symbol
+
+  Name
+
+  SharesEOD
+
+  equity
+</Callout>
+
+<Callout kind="success">
+  **\* `<partnerID>`/`<date_YYYYMMDD>`/`<ENTITY_NAME>`/xxxTradesYYYYMMDD.csv**
+
+  accountNo
+
+  TradeTime
+
+  Symbol
+
+  Side
+
+  Quantity
+
+  Notional
+
+  OrderNo
+</Callout>
+
+<Callout kind="danger">
+  Any new vendors need to be announced to DriveWealth beforehand and DriveWealth will accordingly add the new entries to the list of allowed vendors.
+</Callout>
+
+Partners can pull these files out of the S3 bucket and send it to their vendors.
+
+<Callout kind="alert">
+  Note: These files will be generated after market close on T+1. At this time, no events are generated to notify partners when files are available. The time of file generation will be predetermined and conveyed to the partner in advance.
+</Callout>
+
+<Callout kind="info">
+  **Did you know?**
+
+  The following list of entities is allowed (This is not an exhaustive list. DW is constantly updating it’s list of allowed vendors and partners should get them approved from DW if they are reporting to a new one)
+
+  1. COMPLYSCI
+  2. MCO
+</Callout>
+
+# 3. 🔧Bug Fixes
+
+#### What is the bug? - In the CREATE USER endpoint, when the ID Type  = FTNL0 is selected as the Identification Info, the value field should remain OPTIONAL.
+
+However, we discovered a bug in UAT the value field is REQUIRED.
+
+#### The Fix - When passing Identification Info as ID Type = FTNL0, our partners will not be required to enter any value or numbers. This field can be left blank and will remain optional.
+
+#### Available to Test in UAT  - Yes
+
+# 4. 🎁New API endpoints
+
+None

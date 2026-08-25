@@ -1,0 +1,1650 @@
+{
+  "slug": "apis/docs/mcp-tool-catalog",
+  "source": "https://developer.drivewealth.com/apis/docs/mcp-tool-catalog.md",
+  "url": "https://developer.drivewealth.com/apis/docs/mcp-tool-catalog",
+  "title": "MCP Tool Catalog",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-08-23T16:01:35.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 19,
+    "paragraph": 2,
+    "Table": 18,
+    "list": 1,
+    "thematicBreak": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# MCP Tool Catalog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "MCP Tool Catalog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This catalog is generated directly from the `tools/list` response. Grouping is by REST endpoint root as stated in each tool's `description` field 17 categories, \\~100 tools.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This catalog is generated directly from the tools/list response. Grouping is by REST endpoint root as stated in each tool's description field 17 categories, ~100 tools.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "**Status legend:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Status legend:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        17
+      ],
+      "raw": "| Label          | Meaning                                                                   |\n| :------------- | :------------------------------------------------------------------------ |\n| *(blank)*      | No restriction stated in schema                                           |\n| `Deprecated`   | Schema states a replacement tool exists; avoid for new integrations       |\n| `Sandbox only` | Schema states this tool is registered only in dev/qa/sandbox environments |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Label",
+          "Meaning"
+        ],
+        "rows": [
+          [
+            "(blank)",
+            "No restriction stated in schema"
+          ],
+          [
+            "Deprecated",
+            "Schema states a replacement tool exists; avoid for new integrations"
+          ],
+          [
+            "Sandbox only",
+            "Schema states this tool is registered only in dev/qa/sandbox environments"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## Contents",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Contents",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        21,
+        37
+      ],
+      "raw": "* [Accounts](#accounts)\n* [Orders](#orders)\n* [Instruments & Quotes](#instruments--quotes)\n* [Funding — Deposits & Withdrawals](#funding--deposits--withdrawals)\n* [Asset Transfers](#asset-transfers)\n* [Trade Allocations & Advisor Views](#trade-allocations--advisor-views)\n* [Exchanges (Instrument-to-Instrument)](#exchanges-instrument-to-instrument)\n* [Users & Onboarding](#users--onboarding)\n* [Entities (Business/Trust Accounts)](#entities-businesstrust-accounts)\n* [Bank Accounts](#bank-accounts)\n* [Documents](#documents)\n* [Statements, Confirms & Tax Forms](#statements-confirms--tax-forms)\n* [Transactions](#transactions)\n* [Settlements & Reconciliation](#settlements--reconciliation)\n* [Reports](#reports)\n* [Reference Data](#reference-data)\n* [Documentation Search](#documentation-search)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "AccountsOrdersInstruments & QuotesFunding — Deposits & WithdrawalsAsset TransfersTrade Allocations & Advisor ViewsExchanges (Instrument-to-Instrument)Users & OnboardingEntities (Business/Trust Accounts)Bank AccountsDocumentsStatements, Confirms & Tax FormsTransactionsSettlements & ReconciliationReportsReference DataDocumentation Search",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "## Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        43,
+        64
+      ],
+      "raw": "| Tool                             | Endpoint                                                 | Status     | Description                                                                                                                                                                                                        |\n| :------------------------------- | :------------------------------------------------------- | :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `create_account`                 | `POST /accounts`                                         |            | Creates a trading Account.                                                                                                                                                                                         |\n| `get_account`                    | `GET /accounts/{accountID}`                              |            | Retrieves Account details by accountID.                                                                                                                                                                            |\n| `update_account`                 | `PATCH /accounts/{accountID}`                            |            | Updates Account details by accountID.                                                                                                                                                                              |\n| `get_account_summary`            | `GET /accounts/{accountID}/summary`                      | Deprecated | The full Account Summary API is now deprecated. Schema states: use the individual APIs for Positions, Transactions, or Orders instead (`list_account_positions`, `list_account_transactions`, or the order tools). |\n| `list_account_statements`        | `GET /accounts/{accountID}/statements`                   |            | Retrieves a list of Account Statements by accountID.                                                                                                                                                               |\n| `list_account_positions`         | `GET /accounts/{accountID}/summary/positions`            |            | Retrieves a list of Account Positions by accountID.                                                                                                                                                                |\n| `get_account_cash`               | `GET /accounts/{accountID}/summary/money`                |            | Retrieves an Account Cash details by accountID.                                                                                                                                                                    |\n| `get_account_margin`             | `GET /accounts/{accountID}/summary/margin`               |            | Retrieves Account Margin details by accountID.                                                                                                                                                                     |\n| `list_account_lots`              | `GET /accounts/{accountID}/position-details`             |            | Retrieves an Account Lots details by accountID.                                                                                                                                                                    |\n| `list_account_options_positions` | `GET /accounts/{accountID}/options/positions`            |            | Retrieves Account Option Positions.                                                                                                                                                                                |\n| `list_commission_schedules`      | `GET /accounts/{accountID}/commissions`                  |            | Retrieves a list of Commissions Schedules by accountID.                                                                                                                                                            |\n| `get_account_performance`        | `GET /accounts/{accountID}/performance-returns`          |            | Retrieves end of day account performance including balances, cash flows, rate of return, and other attributes.                                                                                                     |\n| `get_account_virtual_bank`       | `GET /accounts/{accountID}/funding/deposit-instructions` |            | Retrieves an Account Virtual Bank Account details by accountID.                                                                                                                                                    |\n| `list_account_deposits`          | `GET /accounts/{accountID}/funding/deposits`             |            | Retrieves a list of Account Deposits by accountID.                                                                                                                                                                 |\n| `list_account_withdrawals`       | `GET /accounts/{accountID}/funding/redemptions`          |            | Retrieves a list of Account Withdrawals by accountID.                                                                                                                                                              |\n| `create_account_beneficiaries`   | `POST /accounts/{accountID}/beneficiaries`               |            | Creates an Account Beneficiary by accountID.                                                                                                                                                                       |\n| `get_account_beneficiaries`      | `GET /accounts/{accountID}/beneficiaries`                |            | Retrieves a list of Account Beneficiaries by accountID.                                                                                                                                                            |\n| `delete_account_beneficiaries`   | `DELETE /accounts/{accountID}/beneficiaries`             |            | Removes all Account Beneficiaries by accountID.                                                                                                                                                                    |\n| `list_account_violations`        | `GET /accounts/{accountID}/violations`                   |            | Retrieves a list of Account Violations by accountID (good-faith violations, PDT violations, and an account equity breakdown, per schema).                                                                          |\n| `get_account_violations_summary` | `GET /accounts/{accountID}/summary/violations`           |            | Retrieves Account Violations Summary details by accountID.                                                                                                                                                         |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_account",
+            "POST /accounts",
+            "",
+            "Creates a trading Account."
+          ],
+          [
+            "get_account",
+            "GET /accounts/{accountID}",
+            "",
+            "Retrieves Account details by accountID."
+          ],
+          [
+            "update_account",
+            "PATCH /accounts/{accountID}",
+            "",
+            "Updates Account details by accountID."
+          ],
+          [
+            "get_account_summary",
+            "GET /accounts/{accountID}/summary",
+            "Deprecated",
+            "The full Account Summary API is now deprecated. Schema states: use the individual APIs for Positions, Transactions, or Orders instead (list_account_positions, list_account_transactions, or the order tools)."
+          ],
+          [
+            "list_account_statements",
+            "GET /accounts/{accountID}/statements",
+            "",
+            "Retrieves a list of Account Statements by accountID."
+          ],
+          [
+            "list_account_positions",
+            "GET /accounts/{accountID}/summary/positions",
+            "",
+            "Retrieves a list of Account Positions by accountID."
+          ],
+          [
+            "get_account_cash",
+            "GET /accounts/{accountID}/summary/money",
+            "",
+            "Retrieves an Account Cash details by accountID."
+          ],
+          [
+            "get_account_margin",
+            "GET /accounts/{accountID}/summary/margin",
+            "",
+            "Retrieves Account Margin details by accountID."
+          ],
+          [
+            "list_account_lots",
+            "GET /accounts/{accountID}/position-details",
+            "",
+            "Retrieves an Account Lots details by accountID."
+          ],
+          [
+            "list_account_options_positions",
+            "GET /accounts/{accountID}/options/positions",
+            "",
+            "Retrieves Account Option Positions."
+          ],
+          [
+            "list_commission_schedules",
+            "GET /accounts/{accountID}/commissions",
+            "",
+            "Retrieves a list of Commissions Schedules by accountID."
+          ],
+          [
+            "get_account_performance",
+            "GET /accounts/{accountID}/performance-returns",
+            "",
+            "Retrieves end of day account performance including balances, cash flows, rate of return, and other attributes."
+          ],
+          [
+            "get_account_virtual_bank",
+            "GET /accounts/{accountID}/funding/deposit-instructions",
+            "",
+            "Retrieves an Account Virtual Bank Account details by accountID."
+          ],
+          [
+            "list_account_deposits",
+            "GET /accounts/{accountID}/funding/deposits",
+            "",
+            "Retrieves a list of Account Deposits by accountID."
+          ],
+          [
+            "list_account_withdrawals",
+            "GET /accounts/{accountID}/funding/redemptions",
+            "",
+            "Retrieves a list of Account Withdrawals by accountID."
+          ],
+          [
+            "create_account_beneficiaries",
+            "POST /accounts/{accountID}/beneficiaries",
+            "",
+            "Creates an Account Beneficiary by accountID."
+          ],
+          [
+            "get_account_beneficiaries",
+            "GET /accounts/{accountID}/beneficiaries",
+            "",
+            "Retrieves a list of Account Beneficiaries by accountID."
+          ],
+          [
+            "delete_account_beneficiaries",
+            "DELETE /accounts/{accountID}/beneficiaries",
+            "",
+            "Removes all Account Beneficiaries by accountID."
+          ],
+          [
+            "list_account_violations",
+            "GET /accounts/{accountID}/violations",
+            "",
+            "Retrieves a list of Account Violations by accountID (good-faith violations, PDT violations, and an account equity breakdown, per schema)."
+          ],
+          [
+            "get_account_violations_summary",
+            "GET /accounts/{accountID}/summary/violations",
+            "",
+            "Retrieves Account Violations Summary details by accountID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "## Orders",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        68,
+        75
+      ],
+      "raw": "| Tool                             | Endpoint                                          | Status | Description                                                                                                      |\n| :------------------------------- | :------------------------------------------------ | :----- | :--------------------------------------------------------------------------------------------------------------- |\n| `create_order`                   | `POST /orders`                                    |        | Create an Order — equity, fractional, options, fixed income, or mutual fund.                                     |\n| `get_order`                      | `GET /orders/{orderID}`                           |        | Retrieves an Order details by orderID.                                                                           |\n| `update_order`                   | `PATCH /orders/{orderID}`                         |        | Updates an Order by orderID. Schema states current use is to cancel a resting order via `method: CANCEL`.        |\n| `list_account_resting_orders`    | `GET /accounts/{accountID}/summary/orders`        |        | Retrieves a list of Account Orders by accountID; returns currently pending Orders awaiting fill or cancellation. |\n| `list_account_historical_orders` | `GET /accounts/{accountID}/reports/order-history` |        | Retrieves a list of Account Orders by accountID; returns orders that have been closed (filled or canceled).      |\n| `get_order_by_order_no`          | `GET /orders/byOrderNo/{orderNo}`                 |        | Retrieves an Order by OrderNo.                                                                                   |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_order",
+            "POST /orders",
+            "",
+            "Create an Order — equity, fractional, options, fixed income, or mutual fund."
+          ],
+          [
+            "get_order",
+            "GET /orders/{orderID}",
+            "",
+            "Retrieves an Order details by orderID."
+          ],
+          [
+            "update_order",
+            "PATCH /orders/{orderID}",
+            "",
+            "Updates an Order by orderID. Schema states current use is to cancel a resting order via method: CANCEL."
+          ],
+          [
+            "list_account_resting_orders",
+            "GET /accounts/{accountID}/summary/orders",
+            "",
+            "Retrieves a list of Account Orders by accountID; returns currently pending Orders awaiting fill or cancellation."
+          ],
+          [
+            "list_account_historical_orders",
+            "GET /accounts/{accountID}/reports/order-history",
+            "",
+            "Retrieves a list of Account Orders by accountID; returns orders that have been closed (filled or canceled)."
+          ],
+          [
+            "get_order_by_order_no",
+            "GET /orders/byOrderNo/{orderNo}",
+            "",
+            "Retrieves an Order by OrderNo."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "## Instruments & Quotes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Instruments & Quotes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        79,
+        88
+      ],
+      "raw": "| Tool                                     | Endpoint                                                           | Status | Description                                                                                                                                   |\n| :--------------------------------------- | :----------------------------------------------------------------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------- |\n| `list_instruments`                       | `GET /instruments`                                                 |        | Retrieves a list of Instruments.                                                                                                              |\n| `get_instrument`                         | `GET /instruments/{symbolOrInstrumentID}`                          |        | Retrieves an Instrument details by symbol or instrumentID.                                                                                    |\n| `get_instrument_options_chain`           | `GET /instruments/{symbolOrInstrumentID}/options`                  |        | Retrieves an Instrument Options Chain by symbol or instrumentID.                                                                              |\n| `get_instrument_option_expiration_dates` | `GET /instruments/{symbolOrInstrumentID}/options/expiration-dates` |        | Retrieve an Instrument Option Expiration details by symbol or instrumentID.                                                                   |\n| `search_instruments`                     | `POST /instruments/filter`                                         |        | Searches Instruments based on filter criteria. Schema states these filter fields are oriented toward fixed-income/debt instrument attributes. |\n| `get_quote`                              | `GET /quotes`                                                      |        | Fetch the realtime or 15-minute delayed referential quote details for a specific security.                                                    |\n| `get_quote_vdr`                          | `GET /quotes/vdr`                                                  |        | Fetch the NBBO quote details for a specific security.                                                                                         |\n| `get_quote_depth`                        | `POST /quotes/depth`                                               |        | Get the Depth of Book for an Instrument. Schema states this API currently only works with debt instruments.                                   |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "list_instruments",
+            "GET /instruments",
+            "",
+            "Retrieves a list of Instruments."
+          ],
+          [
+            "get_instrument",
+            "GET /instruments/{symbolOrInstrumentID}",
+            "",
+            "Retrieves an Instrument details by symbol or instrumentID."
+          ],
+          [
+            "get_instrument_options_chain",
+            "GET /instruments/{symbolOrInstrumentID}/options",
+            "",
+            "Retrieves an Instrument Options Chain by symbol or instrumentID."
+          ],
+          [
+            "get_instrument_option_expiration_dates",
+            "GET /instruments/{symbolOrInstrumentID}/options/expiration-dates",
+            "",
+            "Retrieve an Instrument Option Expiration details by symbol or instrumentID."
+          ],
+          [
+            "search_instruments",
+            "POST /instruments/filter",
+            "",
+            "Searches Instruments based on filter criteria. Schema states these filter fields are oriented toward fixed-income/debt instrument attributes."
+          ],
+          [
+            "get_quote",
+            "GET /quotes",
+            "",
+            "Fetch the realtime or 15-minute delayed referential quote details for a specific security."
+          ],
+          [
+            "get_quote_vdr",
+            "GET /quotes/vdr",
+            "",
+            "Fetch the NBBO quote details for a specific security."
+          ],
+          [
+            "get_quote_depth",
+            "POST /quotes/depth",
+            "",
+            "Get the Depth of Book for an Instrument. Schema states this API currently only works with debt instruments."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        90,
+        90
+      ],
+      "raw": "## Funding — Deposits & Withdrawals",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Funding — Deposits & Withdrawals",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        92,
+        103
+      ],
+      "raw": "| Tool                            | Endpoint                                            | Status       | Description                                                                                                                               |\n| :------------------------------ | :-------------------------------------------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------- |\n| `create_deposit`                | `POST /funding/deposits`                            |              | Creates a Deposit. Schema states supported methods: ACH, BULK\\_FUNDING, CASH\\_PROMOTION, CASH\\_TRANSFER.                                  |\n| `list_deposits`                 | `GET /funding/deposits`                             |              | Retrieves a list of Deposits across all accounts.                                                                                         |\n| `get_deposit`                   | `GET /funding/deposits/{depositID}`                 |              | Retrieves Deposit details by depositID.                                                                                                   |\n| `update_deposit_ach_settlement` | `PATCH /funding/deposits/{depositID}/achSettlement` | Sandbox only | Schema states: \"NON-PROD / SANDBOX ONLY. Sensitive non-production financial operation... registered only in dev/qa/sandbox environments.\" |\n| `get_recurring_deposit`         | `GET /funding/recurring-deposits/{recurringID}`     |              | Retrieves Recurring Deposits details by recurringID.                                                                                      |\n| `update_recurring_deposit`      | `PATCH /funding/recurring-deposits/{recurringID}`   |              | Updates Recurring Deposit details by recurringID.                                                                                         |\n| `delete_recurring_deposit`      | `DELETE /funding/recurring-deposits/{recurringID}`  |              | Deactivates Recurring Deposit details by recurringID.                                                                                     |\n| `create_withdrawal`             | `POST /funding/redemptions`                         |              | Creates a Withdrawal. Schema states supported methods: ACH, WIRE, CASH\\_TRANSFER, BULK\\_FUNDING.                                          |\n| `list_withdrawals`              | `GET /funding/redemptions`                          |              | Retrieves a list of Withdrawals across all accounts.                                                                                      |\n| `get_withdrawal`                | `GET /funding/redemptions/{redemptionID}`           |              | Retrieves a Withdrawal by redemptionID.                                                                                                   |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_deposit",
+            "POST /funding/deposits",
+            "",
+            "Creates a Deposit. Schema states supported methods: ACH, BULK_FUNDING, CASH_PROMOTION, CASH_TRANSFER."
+          ],
+          [
+            "list_deposits",
+            "GET /funding/deposits",
+            "",
+            "Retrieves a list of Deposits across all accounts."
+          ],
+          [
+            "get_deposit",
+            "GET /funding/deposits/{depositID}",
+            "",
+            "Retrieves Deposit details by depositID."
+          ],
+          [
+            "update_deposit_ach_settlement",
+            "PATCH /funding/deposits/{depositID}/achSettlement",
+            "Sandbox only",
+            "Schema states: \"NON-PROD / SANDBOX ONLY. Sensitive non-production financial operation... registered only in dev/qa/sandbox environments.\""
+          ],
+          [
+            "get_recurring_deposit",
+            "GET /funding/recurring-deposits/{recurringID}",
+            "",
+            "Retrieves Recurring Deposits details by recurringID."
+          ],
+          [
+            "update_recurring_deposit",
+            "PATCH /funding/recurring-deposits/{recurringID}",
+            "",
+            "Updates Recurring Deposit details by recurringID."
+          ],
+          [
+            "delete_recurring_deposit",
+            "DELETE /funding/recurring-deposits/{recurringID}",
+            "",
+            "Deactivates Recurring Deposit details by recurringID."
+          ],
+          [
+            "create_withdrawal",
+            "POST /funding/redemptions",
+            "",
+            "Creates a Withdrawal. Schema states supported methods: ACH, WIRE, CASH_TRANSFER, BULK_FUNDING."
+          ],
+          [
+            "list_withdrawals",
+            "GET /funding/redemptions",
+            "",
+            "Retrieves a list of Withdrawals across all accounts."
+          ],
+          [
+            "get_withdrawal",
+            "GET /funding/redemptions/{redemptionID}",
+            "",
+            "Retrieves a Withdrawal by redemptionID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        105,
+        105
+      ],
+      "raw": "## Asset Transfers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Asset Transfers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        107,
+        115
+      ],
+      "raw": "| Tool                             | Endpoint                                 | Status | Description                                                                                                                       |\n| :------------------------------- | :--------------------------------------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------- |\n| `create_acats_transfer`          | `POST /asset-transfers/acats`            |        | ACATS transfer — the Automated Customer Account Transfer Service, for moving securities to/from an external brokerage per schema. |\n| `update_acat_transfer`           | `PATCH /asset-transfers/acats`           |        | Review ACAT transfer request; used to reject securities from the transfer.                                                        |\n| `list_acats_brokers`             | `GET /asset-transfers/acats/brokers`     |        | Retrieve a list of available ACATS brokers.                                                                                       |\n| `create_minor_graduation`        | `POST /asset-transfers/minor-graduation` |        | Transfers assets from a minor's custodial account to their own named account once they reach the age of majority, per schema.     |\n| `create_internal_asset_transfer` | `POST /asset-transfers/transfers`        |        | Transfers cash and/or securities between accounts at DriveWealth under the same ownership.                                        |\n| `get_transfer`                   | `GET /asset-transfers/{assetTransferID}` |        | Get a Transfer's current details.                                                                                                 |\n| `list_transfers`                 | `GET /asset-transfers`                   |        | Lists all Transfers across all Accounts; filterable by Transfer type.                                                             |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_acats_transfer",
+            "POST /asset-transfers/acats",
+            "",
+            "ACATS transfer — the Automated Customer Account Transfer Service, for moving securities to/from an external brokerage per schema."
+          ],
+          [
+            "update_acat_transfer",
+            "PATCH /asset-transfers/acats",
+            "",
+            "Review ACAT transfer request; used to reject securities from the transfer."
+          ],
+          [
+            "list_acats_brokers",
+            "GET /asset-transfers/acats/brokers",
+            "",
+            "Retrieve a list of available ACATS brokers."
+          ],
+          [
+            "create_minor_graduation",
+            "POST /asset-transfers/minor-graduation",
+            "",
+            "Transfers assets from a minor's custodial account to their own named account once they reach the age of majority, per schema."
+          ],
+          [
+            "create_internal_asset_transfer",
+            "POST /asset-transfers/transfers",
+            "",
+            "Transfers cash and/or securities between accounts at DriveWealth under the same ownership."
+          ],
+          [
+            "get_transfer",
+            "GET /asset-transfers/{assetTransferID}",
+            "",
+            "Get a Transfer's current details."
+          ],
+          [
+            "list_transfers",
+            "GET /asset-transfers",
+            "",
+            "Lists all Transfers across all Accounts; filterable by Transfer type."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        117,
+        117
+      ],
+      "raw": "## Trade Allocations & Advisor Views",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Trade Allocations & Advisor Views",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        119,
+        126
+      ],
+      "raw": "| Tool                                | Endpoint                                     | Status | Description                                                          |\n| :---------------------------------- | :------------------------------------------- | :----- | :------------------------------------------------------------------- |\n| `create_trade_allocation`           | `POST /managed/allocations`                  |        | Create a Trade Allocation.                                           |\n| `get_trade_allocation`              | `GET /managed/allocations/{allocationID}`    |        | Retrieves Trade Allocation by allocationID.                          |\n| `list_allocations_by_advisor`       | `GET /users/{userID}/managed/orders`         |        | Fetches a user's sub-account order allocations by userID.            |\n| `list_orders_by_advisor`            | `GET /users/{userID}/managed/orders/summary` |        | Fetches a User's sub-account order allocations summary by date.      |\n| `list_trade_allocations_by_advisor` | `GET /users/{userID}/managed/allocations`    |        | Fetches a list of a User's allocations.                              |\n| `get_bod_by_advisor`                | `GET /users/{userID}/managed/bod`            |        | Fetches a list of sub-accounts' beginning-of-day holdings by userID. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_trade_allocation",
+            "POST /managed/allocations",
+            "",
+            "Create a Trade Allocation."
+          ],
+          [
+            "get_trade_allocation",
+            "GET /managed/allocations/{allocationID}",
+            "",
+            "Retrieves Trade Allocation by allocationID."
+          ],
+          [
+            "list_allocations_by_advisor",
+            "GET /users/{userID}/managed/orders",
+            "",
+            "Fetches a user's sub-account order allocations by userID."
+          ],
+          [
+            "list_orders_by_advisor",
+            "GET /users/{userID}/managed/orders/summary",
+            "",
+            "Fetches a User's sub-account order allocations summary by date."
+          ],
+          [
+            "list_trade_allocations_by_advisor",
+            "GET /users/{userID}/managed/allocations",
+            "",
+            "Fetches a list of a User's allocations."
+          ],
+          [
+            "get_bod_by_advisor",
+            "GET /users/{userID}/managed/bod",
+            "",
+            "Fetches a list of sub-accounts' beginning-of-day holdings by userID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        128,
+        128
+      ],
+      "raw": "## Exchanges (Instrument-to-Instrument)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Exchanges (Instrument-to-Instrument)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        130,
+        136
+      ],
+      "raw": "| Tool                           | Endpoint                                             | Status | Description                                                                         |\n| :----------------------------- | :--------------------------------------------------- | :----- | :---------------------------------------------------------------------------------- |\n| `create_exchange`              | `POST /exchanges`                                    |        | Creates an Instrument Exchange — sale of a held instrument and purchase of another. |\n| `update_exchange`              | `PATCH /exchanges`                                   |        | Updates an Instrument Exchange; currently used to cancel via `method: CANCEL`.      |\n| `get_exchange`                 | `GET /exchanges/{exchangeIdentifier}`                |        | Retrieves specific exchange details.                                                |\n| `list_account_exchanges`       | `GET /accounts/{accountID}/summary/exchanges`        |        | Retrieves a list of Account Instrument Exchanges by accountID.                      |\n| `get_account_exchange_history` | `GET /accounts/{accountID}/reports/exchange-history` |        | Retrieves a list of Account Instrument Exchange History by accountID.               |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_exchange",
+            "POST /exchanges",
+            "",
+            "Creates an Instrument Exchange — sale of a held instrument and purchase of another."
+          ],
+          [
+            "update_exchange",
+            "PATCH /exchanges",
+            "",
+            "Updates an Instrument Exchange; currently used to cancel via method: CANCEL."
+          ],
+          [
+            "get_exchange",
+            "GET /exchanges/{exchangeIdentifier}",
+            "",
+            "Retrieves specific exchange details."
+          ],
+          [
+            "list_account_exchanges",
+            "GET /accounts/{accountID}/summary/exchanges",
+            "",
+            "Retrieves a list of Account Instrument Exchanges by accountID."
+          ],
+          [
+            "get_account_exchange_history",
+            "GET /accounts/{accountID}/reports/exchange-history",
+            "",
+            "Retrieves a list of Account Instrument Exchange History by accountID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        138,
+        138
+      ],
+      "raw": "## Users & Onboarding",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Users & Onboarding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        140,
+        151
+      ],
+      "raw": "| Tool                             | Endpoint                                  | Status | Description                                              |\n| :------------------------------- | :---------------------------------------- | :----- | :------------------------------------------------------- |\n| `create_user`                    | `POST /users`                             |        | Creates a User.                                          |\n| `get_user`                       | `GET /users/{userID}`                     |        | Retrieves a User details by userID.                      |\n| `update_user`                    | `PATCH /users/{userID}`                   |        | Updates a User details by userID.                        |\n| `get_user_kyc_status`            | `GET /users/{userID}/kyc-status`          |        | Retrieves a User KYC by userID.                          |\n| `list_user_accounts`             | `GET /users/{userID}/accounts`            |        | Retrieves a list of User Accounts by userID.             |\n| `list_user_physical_documents`   | `GET /users/{userID}/documents`           |        | Retrieves a list of User Physical Documents by userID.   |\n| `list_user_linked_bank_accounts` | `GET /users/{userID}/bank-accounts`       |        | Retrieves a list of User Linked Bank Accounts by userID. |\n| `list_user_recurring_deposits`   | `GET /users/{userID}/recurring-deposits`  |        | Retrieves a list of User Recurring Deposits by userID.   |\n| `list_user_deposits`             | `GET /users/{userID}/funding/deposits`    |        | Retrieves a list of User Deposits by userID.             |\n| `list_user_withdrawals`          | `GET /users/{userID}/funding/redemptions` |        | Retrieves a list of User Withdrawals by userID.          |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_user",
+            "POST /users",
+            "",
+            "Creates a User."
+          ],
+          [
+            "get_user",
+            "GET /users/{userID}",
+            "",
+            "Retrieves a User details by userID."
+          ],
+          [
+            "update_user",
+            "PATCH /users/{userID}",
+            "",
+            "Updates a User details by userID."
+          ],
+          [
+            "get_user_kyc_status",
+            "GET /users/{userID}/kyc-status",
+            "",
+            "Retrieves a User KYC by userID."
+          ],
+          [
+            "list_user_accounts",
+            "GET /users/{userID}/accounts",
+            "",
+            "Retrieves a list of User Accounts by userID."
+          ],
+          [
+            "list_user_physical_documents",
+            "GET /users/{userID}/documents",
+            "",
+            "Retrieves a list of User Physical Documents by userID."
+          ],
+          [
+            "list_user_linked_bank_accounts",
+            "GET /users/{userID}/bank-accounts",
+            "",
+            "Retrieves a list of User Linked Bank Accounts by userID."
+          ],
+          [
+            "list_user_recurring_deposits",
+            "GET /users/{userID}/recurring-deposits",
+            "",
+            "Retrieves a list of User Recurring Deposits by userID."
+          ],
+          [
+            "list_user_deposits",
+            "GET /users/{userID}/funding/deposits",
+            "",
+            "Retrieves a list of User Deposits by userID."
+          ],
+          [
+            "list_user_withdrawals",
+            "GET /users/{userID}/funding/redemptions",
+            "",
+            "Retrieves a list of User Withdrawals by userID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        153,
+        153
+      ],
+      "raw": "## Entities (Business/Trust Accounts)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Entities (Business/Trust Accounts)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        155,
+        159
+      ],
+      "raw": "| Tool            | Endpoint                     | Status | Description                                                                      |\n| :-------------- | :--------------------------- | :----- | :------------------------------------------------------------------------------- |\n| `create_entity` | `POST /entities`             |        | Creates an Entity — a business or trust (CORPORATION, LLC, or TRUST) per schema. |\n| `get_entity`    | `GET /entities/{entityId}`   |        | Retrieves an Entity details by entityId.                                         |\n| `update_entity` | `PATCH /entities/{entityId}` |        | Updates an Entity.                                                               |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "create_entity",
+            "POST /entities",
+            "",
+            "Creates an Entity — a business or trust (CORPORATION, LLC, or TRUST) per schema."
+          ],
+          [
+            "get_entity",
+            "GET /entities/{entityId}",
+            "",
+            "Retrieves an Entity details by entityId."
+          ],
+          [
+            "update_entity",
+            "PATCH /entities/{entityId}",
+            "",
+            "Updates an Entity."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        161,
+        161
+      ],
+      "raw": "## Bank Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Bank Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        163,
+        168
+      ],
+      "raw": "| Tool                           | Endpoint                                | Status | Description                                       |\n| :----------------------------- | :-------------------------------------- | :----- | :------------------------------------------------ |\n| `link_bank_account`            | `POST /bank-accounts`                   |        | Links an external Bank Account.                   |\n| `retrieve_linked_bank_account` | `GET /bank-accounts/{bankAccountID}`    |        | Retrieves a Linked Bank Account by bankAccountID. |\n| `update_linked_bank_account`   | `PATCH /bank-accounts/{bankAccountID}`  |        | Updates a Linked Bank Account by bankAccountID.   |\n| `delete_linked_bank_account`   | `DELETE /bank-accounts/{bankAccountID}` |        | Removes a Linked Bank Account by bankAccountID.   |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "link_bank_account",
+            "POST /bank-accounts",
+            "",
+            "Links an external Bank Account."
+          ],
+          [
+            "retrieve_linked_bank_account",
+            "GET /bank-accounts/{bankAccountID}",
+            "",
+            "Retrieves a Linked Bank Account by bankAccountID."
+          ],
+          [
+            "update_linked_bank_account",
+            "PATCH /bank-accounts/{bankAccountID}",
+            "",
+            "Updates a Linked Bank Account by bankAccountID."
+          ],
+          [
+            "delete_linked_bank_account",
+            "DELETE /bank-accounts/{bankAccountID}",
+            "",
+            "Removes a Linked Bank Account by bankAccountID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        170,
+        170
+      ],
+      "raw": "## Documents",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Documents",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        172,
+        175
+      ],
+      "raw": "| Tool                             | Endpoint                          | Status | Description                                                                                                     |\n| :------------------------------- | :-------------------------------- | :----- | :-------------------------------------------------------------------------------------------------------------- |\n| `upload_physical_document`       | `POST /documents`                 |        | Uploads a Physical Document — per schema, for KYC identity verification or asset-transfer supporting paperwork. |\n| `retrieve_physical_document_url` | `GET /documents/{documentID}/url` |        | Retrieves a Physical Document by documentID; returns a short-lived download URL per schema.                     |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "upload_physical_document",
+            "POST /documents",
+            "",
+            "Uploads a Physical Document — per schema, for KYC identity verification or asset-transfer supporting paperwork."
+          ],
+          [
+            "retrieve_physical_document_url",
+            "GET /documents/{documentID}/url",
+            "",
+            "Retrieves a Physical Document by documentID; returns a short-lived download URL per schema."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        177,
+        177
+      ],
+      "raw": "## Statements, Confirms & Tax Forms",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Statements, Confirms & Tax Forms",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        179,
+        183
+      ],
+      "raw": "| Tool                               | Endpoint                                | Status | Description                                                                                         |\n| :--------------------------------- | :-------------------------------------- | :----- | :-------------------------------------------------------------------------------------------------- |\n| `get_statement`                    | `GET /statements/{accountID}/{fileKey}` |        | Retrieves an Account Statement (Monthly, Trade Confirms, Tax Forms, etc.) by accountID and fileKey. |\n| `list_account_tax_statements`      | `GET /accounts/{accountID}/taxforms`    |        | Retrieves a list of Account Tax Statements by accountID.                                            |\n| `list_account_trade_confirmations` | `GET /accounts/{accountID}/confirms`    |        | Retrieves a list of Account Trade Confirmations by accountID.                                       |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "get_statement",
+            "GET /statements/{accountID}/{fileKey}",
+            "",
+            "Retrieves an Account Statement (Monthly, Trade Confirms, Tax Forms, etc.) by accountID and fileKey."
+          ],
+          [
+            "list_account_tax_statements",
+            "GET /accounts/{accountID}/taxforms",
+            "",
+            "Retrieves a list of Account Tax Statements by accountID."
+          ],
+          [
+            "list_account_trade_confirmations",
+            "GET /accounts/{accountID}/confirms",
+            "",
+            "Retrieves a list of Account Trade Confirmations by accountID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        185,
+        185
+      ],
+      "raw": "## Transactions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Transactions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        187,
+        190
+      ],
+      "raw": "| Tool                              | Endpoint                                         | Status     | Description                                                                                                                             |\n| :-------------------------------- | :----------------------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------- |\n| `get_account_transaction_summary` | `GET /accounts/{accountID}/summary/transactions` | Deprecated | Schema states: deprecated; use `list_account_transactions` for historical transactions and `list_account_historical_orders` for orders. |\n| `list_account_transactions`       | `GET /accounts/{accountID}/transactions`         |            | Retrieves a list of Account Transactions by accountID.                                                                                  |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "get_account_transaction_summary",
+            "GET /accounts/{accountID}/summary/transactions",
+            "Deprecated",
+            "Schema states: deprecated; use list_account_transactions for historical transactions and list_account_historical_orders for orders."
+          ],
+          [
+            "list_account_transactions",
+            "GET /accounts/{accountID}/transactions",
+            "",
+            "Retrieves a list of Account Transactions by accountID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        192,
+        192
+      ],
+      "raw": "## Settlements & Reconciliation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Settlements & Reconciliation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        194,
+        203
+      ],
+      "raw": "| Tool                    | Endpoint                                                   | Status       | Description                                                                                                                                                                     |\n| :---------------------- | :--------------------------------------------------------- | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `get_settlements`       | `GET /settlements`                                         |              | Retrieves a list of Settlements.                                                                                                                                                |\n| `get_settlement`        | `GET /settlements/{settlementID}`                          |              | Retrieves Settlement by settlementID.                                                                                                                                           |\n| `update_settlement`     | `PATCH /settlements/{settlementID}`                        |              | Updates Settlement by settlementID.                                                                                                                                             |\n| `attest_settlement`     | `PATCH /settlements/{settlementID}/attest`                 |              | Attests a Settlement if in a successful state and not already attested; schema notes this is only available if the attestation feature is enabled for the Correspondent Client. |\n| `list_reconciliations`  | `GET /funding/reconciliations`                             |              | Fetches a list of daily reconciliations for a firm using cashless settlement.                                                                                                   |\n| `get_reconciliation`    | `GET /funding/reconciliations/{reconciliationID}`          |              | Fetches reconciliation details for a firm using cashless settlement.                                                                                                            |\n| `update_reconciliation` | `PATCH /funding/reconciliations/{reconciliationID}`        | Sandbox only | Schema states: \"NON-PROD / SANDBOX ONLY. Sensitive non-production financial operation... registered only in dev/qa/sandbox environments.\"                                       |\n| `attest_reconciliation` | `PATCH /funding/reconciliations/{reconciliationID}/attest` |              | Attests a reconciliation report if successful and not already attested; schema notes this is only available if the attestation feature is enabled for the Correspondent Client. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "get_settlements",
+            "GET /settlements",
+            "",
+            "Retrieves a list of Settlements."
+          ],
+          [
+            "get_settlement",
+            "GET /settlements/{settlementID}",
+            "",
+            "Retrieves Settlement by settlementID."
+          ],
+          [
+            "update_settlement",
+            "PATCH /settlements/{settlementID}",
+            "",
+            "Updates Settlement by settlementID."
+          ],
+          [
+            "attest_settlement",
+            "PATCH /settlements/{settlementID}/attest",
+            "",
+            "Attests a Settlement if in a successful state and not already attested; schema notes this is only available if the attestation feature is enabled for the Correspondent Client."
+          ],
+          [
+            "list_reconciliations",
+            "GET /funding/reconciliations",
+            "",
+            "Fetches a list of daily reconciliations for a firm using cashless settlement."
+          ],
+          [
+            "get_reconciliation",
+            "GET /funding/reconciliations/{reconciliationID}",
+            "",
+            "Fetches reconciliation details for a firm using cashless settlement."
+          ],
+          [
+            "update_reconciliation",
+            "PATCH /funding/reconciliations/{reconciliationID}",
+            "Sandbox only",
+            "Schema states: \"NON-PROD / SANDBOX ONLY. Sensitive non-production financial operation... registered only in dev/qa/sandbox environments.\""
+          ],
+          [
+            "attest_reconciliation",
+            "PATCH /funding/reconciliations/{reconciliationID}/attest",
+            "",
+            "Attests a reconciliation report if successful and not already attested; schema notes this is only available if the attestation feature is enabled for the Correspondent Client."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        205,
+        205
+      ],
+      "raw": "## Reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        207,
+        212
+      ],
+      "raw": "| Tool                         | Endpoint                                                           | Status | Description                                                                                                                        |\n| :--------------------------- | :----------------------------------------------------------------- | :----- | :--------------------------------------------------------------------------------------------------------------------------------- |\n| `get_correspondent_reports`  | `GET /correspondantReport`                                         |        | Fetches daily reports (positions, account activity, balances, etc.) in file format; returns a short-lived download URL per schema. |\n| `create_daily_trade_summary` | `POST /accounts/{accountID}/reports/daily-trade-summary`           |        | Creates a job to generate a DVP/RVP Report.                                                                                        |\n| `list_daily_trade_summaries` | `GET /accounts/{accountID}/reports/daily-trade-summary`            |        | Lists DVP/RVP reports.                                                                                                             |\n| `get_daily_trade_summary`    | `GET /accounts/{accountID}/reports/daily-trade-summary/{reportID}` |        | Retrieves a DVP/RVP report by reportID.                                                                                            |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "get_correspondent_reports",
+            "GET /correspondantReport",
+            "",
+            "Fetches daily reports (positions, account activity, balances, etc.) in file format; returns a short-lived download URL per schema."
+          ],
+          [
+            "create_daily_trade_summary",
+            "POST /accounts/{accountID}/reports/daily-trade-summary",
+            "",
+            "Creates a job to generate a DVP/RVP Report."
+          ],
+          [
+            "list_daily_trade_summaries",
+            "GET /accounts/{accountID}/reports/daily-trade-summary",
+            "",
+            "Lists DVP/RVP reports."
+          ],
+          [
+            "get_daily_trade_summary",
+            "GET /accounts/{accountID}/reports/daily-trade-summary/{reportID}",
+            "",
+            "Retrieves a DVP/RVP report by reportID."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        214,
+        214
+      ],
+      "raw": "## Reference Data",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reference Data",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        216,
+        218
+      ],
+      "raw": "| Tool                       | Endpoint         | Status | Description                                                                                                          |\n| :------------------------- | :--------------- | :----- | :------------------------------------------------------------------------------------------------------------------- |\n| `list_supported_countries` | `GET /countries` |        | Retrieves a list of allowed countries for onboarding. `status` (`ACTIVE`/`INACTIVE`) is a required input per schema. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "list_supported_countries",
+            "GET /countries",
+            "",
+            "Retrieves a list of allowed countries for onboarding. status (ACTIVE/INACTIVE) is a required input per schema."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        220,
+        220
+      ],
+      "raw": "## Documentation Search",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Documentation Search",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        222,
+        224
+      ],
+      "raw": "| Tool          | Endpoint        | Status | Description                                                                                                                          |\n| :------------ | :-------------- | :----- | :----------------------------------------------------------------------------------------------------------------------------------- |\n| `search_docs` | *(none stated)* |        | Search the DriveWealth API documentation for endpoint details, request/response shapes, required parameters, and field descriptions. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Tool",
+          "Endpoint",
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "search_docs",
+            "(none stated)",
+            "",
+            "Search the DriveWealth API documentation for endpoint details, request/response shapes, required parameters, and field descriptions."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    }
+  ]
+}

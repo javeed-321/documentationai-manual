@@ -1,0 +1,471 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Money Movement APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Withdrawals"
+    }
+  ],
+  "paths": {
+    "/accounts/{accountID}/funding/redemptions": {
+      "get": {
+        "tags": [
+          "Withdrawals"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountID",
+            "schema": {
+              "$ref": "#/components/schemas/accountID"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Successful,Pending",
+            "description": "Comma separated payment statuses"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "type": "string"
+            },
+            "example": "ACH,WIRE,BULK_FUNDING",
+            "description": "Comma separated deposit types"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 25
+            },
+            "example": 50,
+            "description": "The number of deposits to be returned per page. Minimum=1, Maximum=100"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "string"
+            },
+            "example": "88GY000001-1758867249744-RJJLU",
+            "description": "Should either be null or the last payment result in the previous request"
+          }
+        ],
+        "summary": "List Account Withdrawals",
+        "description": "Retrieves a list of Account Withdrawals by accountID",
+        "responses": {
+          "200": {
+            "description": "Retrieving a list of Account Withdrawals was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Redemptions"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseModel"
+                },
+                "examples": {
+                  "Limit should be greater than 0": {
+                    "value": {
+                      "errorCode": "E025",
+                      "message": "Invalid or badly formatted request. Refer to the API documentation for details. Details: Invalid value: limit. Limit should be greater than 0."
+                    }
+                  },
+                  "Limit should be less than or equal to 100": {
+                    "value": {
+                      "errorCode": "E025",
+                      "message": "Invalid or badly formatted request. Refer to the API documentation for details. Details: Invalid value: limit. Limit should be less than or equal to 100"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ErrorCode": {
+        "type": "string",
+        "description": "The error code that is returned when an error occurs.",
+        "example": "E032"
+      },
+      "ErrorCodeMessage": {
+        "type": "string",
+        "description": "The error message that is returned when an error occurs."
+      },
+      "ErrorDetails": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "JSON field name from the request body that caused an error"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "STRING",
+              "ARRAY",
+              "INT",
+              "DECIMAL",
+              "BOOL",
+              "TEXT",
+              "UUID",
+              "DATE",
+              "MAP",
+              "OBJECT"
+            ],
+            "description": "Expected data type of the field"
+          },
+          "allowedValues": {
+            "type": "string",
+            "description": "Example values which are allowed in the field"
+          }
+        }
+      },
+      "ErrorResponseModel": {
+        "type": "object",
+        "description": "The error response model that is returned when an error occurs.",
+        "required": [
+          "errorCode",
+          "message"
+        ],
+        "properties": {
+          "errorCode": {
+            "$ref": "#/components/schemas/ErrorCode"
+          },
+          "message": {
+            "$ref": "#/components/schemas/ErrorCodeMessage"
+          },
+          "errorDetails": {
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "accountID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+        "description": "The user's unique account identifier."
+      },
+      "accountNo": {
+        "type": "string",
+        "example": "DWBG000052",
+        "description": "The user's unique account number, that is human readable."
+      },
+      "accountTypeObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "LIVE",
+            "description": "The type of account that has been created."
+          },
+          "description": {
+            "type": "string",
+            "example": "Live Account",
+            "description": "A custom description of the account type."
+          }
+        }
+      },
+      "accountManagementTypeObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "SELF",
+            "description": "The type of account who has trading authority.",
+            "enum": [
+              "SELF",
+              "ADVISORY",
+              "RIA_MANAGED",
+              "CUSTODIAL",
+              "CUSTODIAL_MANAGED",
+              "RESERVED",
+              "RETIREMENT_TRADITIONAL_SELF",
+              "RETIREMENT_TRADITIONAL_ADVISORY",
+              "RETIREMENT_TRADITIONAL_RIA_MANAGED",
+              "RETIREMENT_ROTH_SELF",
+              "RETIREMENT_ROTH_ADVISORY",
+              "RETIREMENT_ROTH_RIA_MANAGED",
+              "TRUST_SELF",
+              "TRUST_ADVISORY",
+              "TRUST_RIA_MANAGED",
+              "HSA_SELF",
+              "HSA_ADVISORY",
+              "HSA_RIA_MANAGED",
+              "BUSINESS_SELF",
+              "BUSINESS_ADVISORY",
+              "BUSINESS_RIA_MANAGED",
+              "TRUMP_SELF"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "example": "Self Directed Account",
+            "description": "A custom description of the account management type."
+          }
+        }
+      },
+      "transactionCode": {
+        "type": "string",
+        "example": "JOURNAL",
+        "enum": [
+          "JOURNAL",
+          "FEE_ACH",
+          "DISBURSEMENT_ACH_SVB"
+        ]
+      },
+      "wlpFinTranTypeID": {
+        "type": "string",
+        "example": "c43bab85-2916-4831-a0db-66215150a6e4",
+        "description": "A unique identifier to id different type of transactions."
+      },
+      "currency": {
+        "type": "string",
+        "example": "USD",
+        "description": "The name of the currency in abbreviation form.",
+        "enum": [
+          "USD"
+        ]
+      },
+      "currencySymbol": {
+        "type": "string",
+        "example": "$",
+        "description": "The currency symbol.",
+        "enum": [
+          "$"
+        ]
+      },
+      "currencyObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/currency"
+          },
+          "description": {
+            "type": "string",
+            "example": "US Dollar",
+            "description": "A custom description about the currency."
+          },
+          "symbol": {
+            "$ref": "#/components/schemas/currencySymbol"
+          }
+        }
+      },
+      "finTranReference": {
+        "type": "string",
+        "example": "HG.cd22a78a-8a48-441c-89d2-ea400964a34b",
+        "description": "The unique identifier that references back to the specific transaction."
+      },
+      "redemptionID": {
+        "type": "string",
+        "example": "DWRD000042-1701234567890-4X5Y6",
+        "description": "A unique identifier for the user's account redemption/withdrawal."
+      },
+      "redemptionStatusObject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "example": 1,
+            "description": "The current status of the user's brokerage account withdraw in integer form."
+          },
+          "message": {
+            "type": "string",
+            "example": "PENDING",
+            "description": "The current status of the user's brokerage account redemption/withdrawal.",
+            "enum": [
+              "STARTED",
+              "PENDING",
+              "SUCCESSFUL",
+              "FAILED",
+              "OTHER",
+              "RIA_PENDING",
+              "RIA_APPROVED",
+              "RIA_APPROVED",
+              "APPROVED",
+              "REJECTED",
+              "-"
+            ]
+          },
+          "updated": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The last updated timestamp of the status of the user's brokerage account redemption/withdrawal."
+          }
+        }
+      },
+      "feeObject": {
+        "type": "object",
+        "required": [
+          "type",
+          "amount"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "FEE_ACH",
+            "description": "The type of fee that is being applied.",
+            "enum": [
+              "FEE_ACH"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "example": "Fee - ACH",
+            "description": "A custom description that describes the fee type."
+          },
+          "amount": {
+            "type": "number",
+            "example": -5.99,
+            "description": "The amount of the fee that is being applied."
+          },
+          "wlpFinTranTypeID": {
+            "$ref": "#/components/schemas/wlpFinTranTypeID"
+          },
+          "transactionCode": {
+            "$ref": "#/components/schemas/transactionCode"
+          },
+          "finTranReference": {
+            "$ref": "#/components/schemas/finTranReference"
+          },
+          "created": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The timestamp of when the fee was charged."
+          },
+          "currency": {
+            "$ref": "#/components/schemas/currency"
+          },
+          "symbol": {
+            "$ref": "#/components/schemas/currencySymbol"
+          }
+        }
+      },
+      "Redemption": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/redemptionID"
+          },
+          "paymentID": {
+            "$ref": "#/components/schemas/redemptionID"
+          },
+          "amount": {
+            "type": "number",
+            "example": 250.25,
+            "description": "The amount that will be withdraw from the user's brokerage account."
+          },
+          "currency": {
+            "$ref": "#/components/schemas/currencyObject"
+          },
+          "status": {
+            "$ref": "#/components/schemas/redemptionStatusObject"
+          },
+          "accountDetails": {
+            "type": "object",
+            "properties": {
+              "accountID": {
+                "$ref": "#/components/schemas/accountID"
+              },
+              "accountNo": {
+                "$ref": "#/components/schemas/accountNo"
+              },
+              "accountType": {
+                "$ref": "#/components/schemas/accountTypeObject"
+              },
+              "accountManagementType": {
+                "$ref": "#/components/schemas/accountManagementTypeObject"
+              }
+            }
+          },
+          "fees": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/feeObject"
+                }
+              ]
+            }
+          },
+          "wlpFinTranTypeID": {
+            "$ref": "#/components/schemas/wlpFinTranTypeID"
+          },
+          "finTranReference": {
+            "$ref": "#/components/schemas/finTranReference"
+          },
+          "timestamp": {
+            "type": "string",
+            "example": "2022-12-11T22:28:21.810Z",
+            "description": "The date and time of when the redemption was created."
+          }
+        }
+      },
+      "Redemptions": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/Redemption"
+            }
+          ]
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

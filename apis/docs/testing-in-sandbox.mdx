@@ -1,0 +1,50 @@
+---
+title: "Testing in sandbox"
+---
+
+In sandbox, Orders are filled by a simulator, instead of an actual execution venue.
+
+## Filling orders after hours
+
+Orders placed outside of market hours, like equities Orders placed overnight, will be filled at market open, like they would be in production. However, if you would like to test an immediate execution, even outside of market hours, set a special flag on the Account you’re testing in:
+
+```json
+PATCH /back-office/accounts/{accountID}
+{
+	"ignoreMarketHoursForTest": true
+}
+```
+
+This can be particularly helpful for Continuous Integration purposes.
+
+## Magic numbers
+
+To assist in testing specific Order workflows, the following combinations of symbols and quantities can be used to force certain behavior:
+
+| Symbol | Quantity | Handling                                                             |
+| :----- | :------- | :------------------------------------------------------------------- |
+| HL     | 176      | Execute only half of the quantity, and exchange cancel the remainder |
+| HL     | 177      | Execute in two fills, at two different prices                        |
+| HL     | 178      | Execute in 10 share increments, for a total of 18 fills              |
+| HL     | 179      | Execute in 20 share increments and send a new fill every 1 second    |
+| HL     | 1019     | Execute fully, no different from typical execution                   |
+| HL     | 1039     | Execute 1 share at a time                                            |
+| HL     | 1049     | Execute 100 shares at a time                                         |
+| HL     | 1059     | Returns NOS NAK or failure                                           |
+| HL     | 1069     | Execute a partial amount, exchange cancel remainder                  |
+| HL     | 1079     | Execute nothing, exchange cancel everything                          |
+| HL     | 1089     | Execute nothing, leave open and awaiting cancel                      |
+| HL     | 5089     | Execute nothing, leave open and await cancel request                 |
+
+These quantities can be used for a buy-side order only:
+
+```json
+POST /back-office/orders
+{
+    "accountNo": "DWCU000440",
+    "orderType": "MARKET",
+    "symbol": "HL",
+    "side": "BUY",
+    "quantity" : 1011
+}
+```

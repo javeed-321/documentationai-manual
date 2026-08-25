@@ -1,0 +1,305 @@
+{
+  "slug": "apis/docs/testing-in-sandbox",
+  "source": "https://developer.drivewealth.com/apis/docs/testing-in-sandbox.md",
+  "url": "https://developer.drivewealth.com/apis/docs/testing-in-sandbox",
+  "title": "Testing in sandbox",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:30:30.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 5,
+    "code": 2,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Testing in sandbox",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Testing in sandbox",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "In sandbox, Orders are filled by a simulator, instead of an actual execution venue.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In sandbox, Orders are filled by a simulator, instead of an actual execution venue.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Filling orders after hours",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Filling orders after hours",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Orders placed outside of market hours, like equities Orders placed overnight, will be filled at market open, like they would be in production. However, if you would like to test an immediate execution, even outside of market hours, set a special flag on the Account you’re testing in:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Orders placed outside of market hours, like equities Orders placed overnight, will be filled at market open, like they would be in production. However, if you would like to test an immediate execution, even outside of market hours, set a special flag on the Account you’re testing in:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        20
+      ],
+      "raw": "```json\nPATCH /back-office/accounts/{accountID}\n{\n\t\"ignoreMarketHoursForTest\": true\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "PATCH /back-office/accounts/{accountID}\n{\n\t\"ignoreMarketHoursForTest\": true\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "This can be particularly helpful for Continuous Integration purposes.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This can be particularly helpful for Continuous Integration purposes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "## Magic numbers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Magic numbers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "To assist in testing specific Order workflows, the following combinations of symbols and quantities can be used to force certain behavior:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To assist in testing specific Order workflows, the following combinations of symbols and quantities can be used to force certain behavior:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        28,
+        214
+      ],
+      "raw": "<Table align={[\"left\",\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Symbol\n      </th>\n\n      <th>\n        Quantity\n      </th>\n\n      <th>\n        Handling\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        176\n      </td>\n\n      <td>\n        Execute only half of the quantity, and exchange cancel the remainder\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        177\n      </td>\n\n      <td>\n        Execute in two fills, at two different prices\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        178\n      </td>\n\n      <td>\n        Execute in 10 share increments, for a total of 18 fills\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        179\n      </td>\n\n      <td>\n        Execute in 20 share increments and send a new fill every 1 second\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1019\n      </td>\n\n      <td>\n        Execute fully, no different from typical execution\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1039\n      </td>\n\n      <td>\n        Execute 1 share at a time\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1049\n      </td>\n\n      <td>\n        Execute 100 shares at a time\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1059\n      </td>\n\n      <td>\n        Returns NOS NAK or failure\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1069\n      </td>\n\n      <td>\n        Execute a partial amount, exchange cancel remainder\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1079\n      </td>\n\n      <td>\n        Execute nothing, exchange cancel everything\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        1089\n      </td>\n\n      <td>\n        Execute nothing, leave open and awaiting cancel\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        HL\n      </td>\n\n      <td>\n        5089\n      </td>\n\n      <td>\n        Execute nothing, leave open and await cancel request\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "Symbol",
+          "Quantity",
+          "Handling"
+        ],
+        "rows": [
+          [
+            "HL",
+            "176",
+            "Execute only half of the quantity, and exchange cancel the remainder"
+          ],
+          [
+            "HL",
+            "177",
+            "Execute in two fills, at two different prices"
+          ],
+          [
+            "HL",
+            "178",
+            "Execute in 10 share increments, for a total of 18 fills"
+          ],
+          [
+            "HL",
+            "179",
+            "Execute in 20 share increments and send a new fill every 1 second"
+          ],
+          [
+            "HL",
+            "1019",
+            "Execute fully, no different from typical execution"
+          ],
+          [
+            "HL",
+            "1039",
+            "Execute 1 share at a time"
+          ],
+          [
+            "HL",
+            "1049",
+            "Execute 100 shares at a time"
+          ],
+          [
+            "HL",
+            "1059",
+            "Returns NOS NAK or failure"
+          ],
+          [
+            "HL",
+            "1069",
+            "Execute a partial amount, exchange cancel remainder"
+          ],
+          [
+            "HL",
+            "1079",
+            "Execute nothing, exchange cancel everything"
+          ],
+          [
+            "HL",
+            "1089",
+            "Execute nothing, leave open and awaiting cancel"
+          ],
+          [
+            "HL",
+            "5089",
+            "Execute nothing, leave open and await cancel request"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        216,
+        216
+      ],
+      "raw": "These quantities can be used for a buy-side order only:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "These quantities can be used for a buy-side order only:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        218,
+        227
+      ],
+      "raw": "```json\nPOST /back-office/orders\n{\n    \"accountNo\": \"DWCU000440\",\n    \"orderType\": \"MARKET\",\n    \"symbol\": \"HL\",\n    \"side\": \"BUY\",\n    \"quantity\" : 1011\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "POST /back-office/orders\n{\n    \"accountNo\": \"DWCU000440\",\n    \"orderType\": \"MARKET\",\n    \"symbol\": \"HL\",\n    \"side\": \"BUY\",\n    \"quantity\" : 1011\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

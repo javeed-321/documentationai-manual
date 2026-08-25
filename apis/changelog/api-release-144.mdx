@@ -1,0 +1,22 @@
+---
+title: "API Release 1.44"
+---
+
+## API Release 1.45
+
+| Environment | Release Date                    |
+| :---------- | :------------------------------ |
+| UAT         | RELEASED                        |
+| Production  | Release Date - November 7, 2022 |
+
+### **KYC Updates**
+
+When `userType` =`INSTITUTIONAL` such as Trust, SMSF, the user will go through the KYC process.
+
+### **Validation Update**
+
+First and Last Name fields with a minimum of 1 character will be acceptable and valid.
+
+### **Tax Forms**
+
+Releasing a fix to correct any invalid or missing tax codes. This will generate `accounts.updated` events. No action is needed by the partners.

@@ -1,0 +1,207 @@
+{
+  "slug": "apis/changelog/api-release-137",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-137.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-137",
+  "title": "API Release 1.37",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "Table": 1,
+    "paragraph": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.37",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.37",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.37",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.37",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        10
+      ],
+      "raw": "| Environment | Status   |\n| :---------- | :------- |\n| UAT         | RELEASED |\n| PRODUCTION  | RELEASED |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Environment",
+          "Status"
+        ],
+        "rows": [
+          [
+            "UAT",
+            "RELEASED"
+          ],
+          [
+            "PRODUCTION",
+            "RELEASED"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "### **Update - WLP Validation**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Update - WLP Validation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "User requests sent with an invalid `wlpID` will be rejected",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "User requests sent with an invalid wlpID will be rejected",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "### **Enhancement - KYC**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Enhancement - KYC",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "KYC process optimized to minimize latency for partners who perform their own KYC.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "KYC process optimized to minimize latency for partners who perform their own KYC.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "### **Enhancement - Correspondent Report**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Enhancement - Correspondent Report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "Improved performance when generating Correspondent Report",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Improved performance when generating Correspondent Report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

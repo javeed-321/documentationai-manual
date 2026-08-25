@@ -1,0 +1,1288 @@
+{
+  "slug": "apis/docs/showing-account-performance",
+  "source": "https://developer.drivewealth.com/apis/docs/showing-account-performance.md",
+  "url": "https://developer.drivewealth.com/apis/docs/showing-account-performance",
+  "title": "Showing Account Performance",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-14T18:59:46.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 13,
+    "paragraph": 43,
+    "code": 5,
+    "list": 4,
+    "Image": 3,
+    "br": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Showing Account Performance",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Showing Account Performance",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "At the end of each trading day, DriveWealth captures several metrics for each Account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "At the end of each trading day, DriveWealth captures several metrics for each Account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Performance metrics can be accessed via the <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/reference/introduction#/versions\">Performance Endpoint</Anchor>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Performance metrics can be accessed via the Performance Endpoint",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/reference/introduction#/versions",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "**Sample Response**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        72
+      ],
+      "raw": "```javascript JSON\nGET /back-office/accounts/{accountID}/performance-returns\n{\n    \"accountID\": \"2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394\",\n    \"accountNo\": \"ABCD005972\",\n    \"startDate\": \"2025-11-11\",\n    \"endDate\": \"2025-11-18\",\n    \"lastUpdated\": \"2025-11-18\",\n    \"timeSeries\": [\n        {\n            \"date\": \"2025-11-11\",\n            \"gainLoss\": 7.18,\n            \"positionBalance\": 2273.33,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2319.71,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.003104\n        },\n        {\n            \"date\": \"2025-11-12\",\n            \"gainLoss\": 5.08,\n            \"positionBalance\": 2278.41,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2324.79,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.002188\n        }...    ],\n    \"summary\": {\n        \"beginningMarketValue\": null,\n        \"beginningPositionBalance\": null,\n        \"beginningCashBalance\": null,\n        \"endingMarketValue\": 2266.53,\n        \"endingPositionBalance\": 2220.15,\n        \"endingCashBalance\": 46.38,\n        \"periodGainLoss\": null,\n        \"periodCashFlows\": 0.00,\n        \"periodDeposits\": 0.00,\n        \"periodWithdrawals\": 0.00,\n        \"periodFees\": 0.00,\n        \"periodIncome\": 0.29,\n        \"periodReturn\": -0.022925,\n        \"mtdReturn\": -0.018631,\n        \"ytdReturn\": 0.120243,\n        \"inceptionReturn\": -0.999999,\n        \"1yearReturn\": 0.092667,\n        \"3yearReturn\": -0.999999,\n        \"5yearReturn\": null\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": "JSON",
+        "code": "GET /back-office/accounts/{accountID}/performance-returns\n{\n    \"accountID\": \"2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394\",\n    \"accountNo\": \"ABCD005972\",\n    \"startDate\": \"2025-11-11\",\n    \"endDate\": \"2025-11-18\",\n    \"lastUpdated\": \"2025-11-18\",\n    \"timeSeries\": [\n        {\n            \"date\": \"2025-11-11\",\n            \"gainLoss\": 7.18,\n            \"positionBalance\": 2273.33,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2319.71,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.003104\n        },\n        {\n            \"date\": \"2025-11-12\",\n            \"gainLoss\": 5.08,\n            \"positionBalance\": 2278.41,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2324.79,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.002188\n        }...    ],\n    \"summary\": {\n        \"beginningMarketValue\": null,\n        \"beginningPositionBalance\": null,\n        \"beginningCashBalance\": null,\n        \"endingMarketValue\": 2266.53,\n        \"endingPositionBalance\": 2220.15,\n        \"endingCashBalance\": 46.38,\n        \"periodGainLoss\": null,\n        \"periodCashFlows\": 0.00,\n        \"periodDeposits\": 0.00,\n        \"periodWithdrawals\": 0.00,\n        \"periodFees\": 0.00,\n        \"periodIncome\": 0.29,\n        \"periodReturn\": -0.022925,\n        \"mtdReturn\": -0.018631,\n        \"ytdReturn\": 0.120243,\n        \"inceptionReturn\": -0.999999,\n        \"1yearReturn\": 0.092667,\n        \"3yearReturn\": -0.999999,\n        \"5yearReturn\": null\n    }\n}"
+      },
+      "text": "JSON",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "## Performance Metrics - Definitions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Performance Metrics - Definitions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        76,
+        105
+      ],
+      "raw": "* `gainLoss` - The change in market value of the account during this time series (adjusted to remove impact of cashflows).\n* `positionBalance` - The sum of the value of the positions held in the account (excluding money market funds which are captured in cashBalance) at the beginning date of the time series. The values for a day are the closing day prices for all asset classes.\n* `cashBalance` - The total cash balance (settled and unsettled) for this day (see performance.date).\n* `marketValue` - The market value of the account at the beginning date of the time series. Market value defined as the sum of the position balance and the cash balance.\n* `cashFlows` - The sum of the inflows and outflows during this time series.\n* `deposits`: The total amount of deposits calculated from 4pm of the previous day until current time.\n* `withdrawals` - The total amount of withdrawals calculated from 4pm of the previous day until current time.\n* `fees` - The total amount of fees calculated from 4pm of the previous day until current time.\n* `income` - Income in the account for the time series. (Income defined as dividends, interest and capital gains distributions.\n* `rateOfReturn` - The rate of return for the time series calculated utilizing the Modified Dietz methodology.\n* `beginningMarketValue` - The market value of the account at the beginning date of the query. Market value defined as the sum of the position balance and the cash balance.\n* `beginningPositionBalance` - The sum of the value of the positions held in the account (excluding money market funds which are captured in cashBalance) at the beginning date or the query.\n* `beginningCashBalance` - The cash balance of the account at the beginning date of the query.\n  `endingMarketValue` - The market value of the account at the ending date of the query. Market value defined as the sum of the position balance and the cash balance.\n* `endingPositionBalance` - The sum of the value of the positions held in the account (excluding money market funds which are captured in cashBalance) at the ending date of the query\n* `endingCashBalance` - The cash balance of the account at the ending date of the query.\n* `periodGainLoss` - The gain / loss for the period defined as the delta of the `beginningMarketValue` vs\n* `endingMarketValue` adjusted for cashflows.\n* `periodCashFlows` - The sum of the inflows and outflows during this period.\n* `periodDeposits` - The sum of deposits for this period.\n* `periodWithdrawals` - The sum of withdrawals for this period.\n* `periodFees` - The sum of trading related fees accumulated during this period.\n* `periodIncome` - Income in the account for the period. (Income defined as dividends, interest and capital gains distributions.\n* `periodReturn` - The return for the period calculated by utilizing Modified Dietz methodology.\n* `mtdReturn` - The month-to-date return for the account calculated utilizing Modified Dietz methodology.\n* `ytdReturn` - The historic year-to-date year return of the account calculated by joining monthly return statistics. Query will return `NULL` values if the account has not been open for the duration.\n* `1yearReturn` - The historic 1 year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.\n* `3yearReturn` - The historic 3 year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.\n* `5yearReturn` - The historic 5 year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.\n* `inceptionReturn` - The historic return of the account calculated by joining monthly return statistics from inception of account to current date.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "gainLoss - The change in market value of the account during this time series (adjusted to remove impact of cashflows).positionBalance - The sum of the value of the positions held in the account (excluding money market funds which are captured in cashBalance) at the beginning date of the time series. The values for a day are the closing day prices for all asset classes.cashBalance - The total cash balance (settled and unsettled) for this day (see performance.date).marketValue - The market value of the account at the beginning date of the time series. Market value defined as the sum of the position balance and the cash balance.cashFlows - The sum of the inflows and outflows during this time series.deposits: The total amount of deposits calculated from 4pm of the previous day until current time.withdrawals - The total amount of withdrawals calculated from 4pm of the previous day until current time.fees - The total amount of fees calculated from 4pm of the previous day until current time.income - Income in the account for the time series. (Income defined as dividends, interest and capital gains distributions.rateOfReturn - The rate of return for the time series calculated utilizing the Modified Dietz methodology.beginningMarketValue - The market value of the account at the beginning date of the query. Market value defined as the sum of the position balance and the cash balance.beginningPositionBalance - The sum of the value of the positions held in the account (excluding money market funds which are captured in cashBalance) at the beginning date or the query.beginningCashBalance - The cash balance of the account at the beginning date of the query.\nendingMarketValue - The market value of the account at the ending date of the query. Market value defined as the sum of the position balance and the cash balance.endingPositionBalance - The sum of the value of the positions held in the account (excluding money market funds which are captured in cashBalance) at the ending date of the queryendingCashBalance - The cash balance of the account at the ending date of the query.periodGainLoss - The gain / loss for the period defined as the delta of the beginningMarketValue vsendingMarketValue adjusted for cashflows.periodCashFlows - The sum of the inflows and outflows during this period.periodDeposits - The sum of deposits for this period.periodWithdrawals - The sum of withdrawals for this period.periodFees - The sum of trading related fees accumulated during this period.periodIncome - Income in the account for the period. (Income defined as dividends, interest and capital gains distributions.periodReturn - The return for the period calculated by utilizing Modified Dietz methodology.mtdReturn - The month-to-date return for the account calculated utilizing Modified Dietz methodology.ytdReturn - The historic year-to-date year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.1yearReturn - The historic 1 year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.3yearReturn - The historic 3 year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.5yearReturn - The historic 5 year return of the account calculated by joining monthly return statistics. Query will return NULL values if the account has not been open for the duration.inceptionReturn - The historic return of the account calculated by joining monthly return statistics from inception of account to current date.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        107,
+        107
+      ],
+      "raw": "## Building a Graph",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Building a Graph",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        109,
+        109
+      ],
+      "raw": "DriveWealth supports the ability to chart historic account values and returns through the performance API. Using the various frequencies supported by the performance API, clients can craft a graph to highlight various attributes of a user’s account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth supports the ability to chart historic account values and returns through the performance API. Using the various frequencies supported by the performance API, clients can craft a graph to highlight various attributes of a user’s account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        111,
+        111
+      ],
+      "raw": "### Historic account value",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Historic account value",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        113,
+        113
+      ],
+      "raw": "When building a graph to display the value / change in account value over time, it is recommended to use the marketValue field. This represents the ending cash + position balance of the account for that time period.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When building a graph to display the value / change in account value over time, it is recommended to use the marketValue field. This represents the ending cash + position balance of the account for that time period.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        115,
+        115
+      ],
+      "raw": "### Gain / Loss of an account",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Gain / Loss of an account",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        117,
+        117
+      ],
+      "raw": "When building a graph to display the value / change in account value over time, it is recommended to use the gainLoss field. This represents the change in value of the account for that time period (after accounting for cash flows).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When building a graph to display the value / change in account value over time, it is recommended to use the gainLoss field. This represents the change in value of the account for that time period (after accounting for cash flows).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        119,
+        119
+      ],
+      "raw": "### Graph Example for Position Balance Over Time",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Graph Example for Position Balance Over Time",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        121,
+        121
+      ],
+      "raw": "Sample response for daily returns",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample response for daily returns",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        123,
+        189
+      ],
+      "raw": "```javascript JSON\n...{\n           \"date\": \"2024-07-07\",\n           \"gainLoss\": 0.00,\n           \"positionBalance\": 200.09,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.38,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000000\n       },\n       {\n           \"date\": \"2024-07-08\",\n           \"gainLoss\": 0.16,\n           \"positionBalance\": 200.25,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.54,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000050\n       },\n       {\n           \"date\": \"2024-07-09\",\n           \"gainLoss\": -0.11,\n           \"positionBalance\": 200.14,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.43,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": -0.000033\n       },\n       {\n           \"date\": \"2024-07-10\",\n           \"gainLoss\": 0.09,\n           \"positionBalance\": 200.23,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.52,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000028\n       },\n       {\n           \"date\": \"2024-07-11\",\n           \"gainLoss\": 0.75,\n           \"positionBalance\": 200.98,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3217.27,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000234\n       }...\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": "JSON",
+        "code": "...{\n           \"date\": \"2024-07-07\",\n           \"gainLoss\": 0.00,\n           \"positionBalance\": 200.09,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.38,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000000\n       },\n       {\n           \"date\": \"2024-07-08\",\n           \"gainLoss\": 0.16,\n           \"positionBalance\": 200.25,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.54,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000050\n       },\n       {\n           \"date\": \"2024-07-09\",\n           \"gainLoss\": -0.11,\n           \"positionBalance\": 200.14,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.43,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": -0.000033\n       },\n       {\n           \"date\": \"2024-07-10\",\n           \"gainLoss\": 0.09,\n           \"positionBalance\": 200.23,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3216.52,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000028\n       },\n       {\n           \"date\": \"2024-07-11\",\n           \"gainLoss\": 0.75,\n           \"positionBalance\": 200.98,\n           \"cashBalance\": 3016.29,\n           \"marketValue\": 3217.27,\n           \"cashFlows\": 0.00,\n           \"deposits\": 0.00,\n           \"withdrawals\": 0.00,\n           \"fees\": 0.00,\n           \"income\": 0.00,\n           \"rateOfReturn\": 0.000234\n       }..."
+      },
+      "text": "JSON",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        191,
+        191
+      ],
+      "raw": "<Image src=\"https://files.readme.io/f5d35c3792896f0837fc38b99cfda2afa2b10164c2dbecea1fb92718b8f10083-image.png\" align=\"center\" width=\"-2px\" border={true} />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/f5d35c3792896f0837fc38b99cfda2afa2b10164c2dbecea1fb92718b8f10083-image.png",
+        "align": "center",
+        "width": "-2px",
+        "border": "{true}"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        193,
+        193
+      ],
+      "raw": "## Displaying Performance and Attributes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Displaying Performance and Attributes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        195,
+        195
+      ],
+      "raw": "When displaying a rate of return, the rate of return will typically be displayed as a single figure which corresponds to the time frame of the associated graph. Building on the example above where we plotted the balances over a one week period, we can utilize the rateOfReturn",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When displaying a rate of return, the rate of return will typically be displayed as a single figure which corresponds to the time frame of the associated graph. Building on the example above where we plotted the balances over a one week period, we can utilize the rateOfReturn",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        197,
+        197
+      ],
+      "raw": "**Performance Example**<br />Display performance return example",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Performance ExampleDisplay performance return example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 197
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        199,
+        199
+      ],
+      "raw": "* periodReturn for 1 week period = .000277 -> .0277%",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "periodReturn for 1 week period = .000277 -> .0277%",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        201,
+        223
+      ],
+      "raw": "```javascript JSON\n\"summary\": {\n       \"beginningMarketValue\": 3216.38,\n       \"beginningPositionBalance\": 200.09,\n       \"beginningCashBalance\": 3016.29,\n       \"endingMarketValue\": 3217.27,\n       \"endingPositionBalance\": 200.98,\n       \"endingCashBalance\": 3016.29,\n       \"periodGainLoss\": 0.89,\n       \"periodCashFlows\": 0.00,\n       \"periodDeposits\": 0.00,\n       \"periodWithdrawals\": 0.00,\n       \"periodFees\": 0.00,\n       \"periodIncome\": 0.00,\n       \"periodReturn\": 0.000277,\n       \"mtdReturn\": -0.000016,\n       \"ytdReturn\": -0.000016,\n       \"inceptionReturn\": -0.655288,\n       \"1yearReturn\": 0.000018,\n       \"3yearReturn\": -0.191486,\n       \"5yearReturn\": -0.020102\n   }\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": "JSON",
+        "code": "\"summary\": {\n       \"beginningMarketValue\": 3216.38,\n       \"beginningPositionBalance\": 200.09,\n       \"beginningCashBalance\": 3016.29,\n       \"endingMarketValue\": 3217.27,\n       \"endingPositionBalance\": 200.98,\n       \"endingCashBalance\": 3016.29,\n       \"periodGainLoss\": 0.89,\n       \"periodCashFlows\": 0.00,\n       \"periodDeposits\": 0.00,\n       \"periodWithdrawals\": 0.00,\n       \"periodFees\": 0.00,\n       \"periodIncome\": 0.00,\n       \"periodReturn\": 0.000277,\n       \"mtdReturn\": -0.000016,\n       \"ytdReturn\": -0.000016,\n       \"inceptionReturn\": -0.655288,\n       \"1yearReturn\": 0.000018,\n       \"3yearReturn\": -0.191486,\n       \"5yearReturn\": -0.020102\n   }"
+      },
+      "text": "JSON",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        225,
+        225
+      ],
+      "raw": "## Rate of Return",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Rate of Return",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        227,
+        227
+      ],
+      "raw": "**Modified Dietz**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modified Dietz",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        229,
+        229
+      ],
+      "raw": "The Modified Dietz Method is a performance measurement technique used in finance to calculate the return on an investment portfolio over a specific period, accounting for external cash flows (deposits or withdrawals). It assumes cash flows occur midway through the period, providing a time-weighted approximation.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Modified Dietz Method is a performance measurement technique used in finance to calculate the return on an investment portfolio over a specific period, accounting for external cash flows (deposits or withdrawals). It assumes cash flows occur midway through the period, providing a time-weighted approximation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        231,
+        231
+      ],
+      "raw": "<Image src=\"https://files.readme.io/4f972a79cb254878a1f93b9a4691243052cbabad0fe9239979855884300a8be4-image.png\" align=\"center\" border={true} />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/4f972a79cb254878a1f93b9a4691243052cbabad0fe9239979855884300a8be4-image.png",
+        "align": "center",
+        "border": "{true}"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 27,
+      "lines": [
+        233,
+        233
+      ],
+      "raw": "<Image src=\"https://files.readme.io/a2af37e84813ced03389aee5b6a85fcfb5b4088cea7c246fa4c90afff4ef7f44-image.png\" align=\"center\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/a2af37e84813ced03389aee5b6a85fcfb5b4088cea7c246fa4c90afff4ef7f44-image.png",
+        "align": "center"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        235,
+        235
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 235
+        }
+      ]
+    },
+    {
+      "i": 29,
+      "lines": [
+        237,
+        237
+      ],
+      "raw": "**Weighted Cash Flows**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Weighted Cash Flows",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        239,
+        242
+      ],
+      "raw": "W = weighted cash flows for the period\nCi = The i-th cash flow amount.\nT = days value - 1 of current date operator (ex: 12/13/2024 | T = 12), this is because the job runs the morning of 13th for the 12th.\nti = The time (in days) from the start of the period to the date of the i-th cash flow. (ex: 12/05/2024 we have a deposit of $100 and 12/09/2024 we have a withdrawal of $50)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "W = weighted cash flows for the period\nCi = The i-th cash flow amount.\nT = days value - 1 of current date operator (ex: 12/13/2024 | T = 12), this is because the job runs the morning of 13th for the 12th.\nti = The time (in days) from the start of the period to the date of the i-th cash flow. (ex: 12/05/2024 we have a deposit of $100 and 12/09/2024 we have a withdrawal of $50)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        244,
+        244
+      ],
+      "raw": "**Example**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        246,
+        247
+      ],
+      "raw": "ex: 12/05/2024 we have a deposit of $100 and 12/09/2024 we have a withdrawal of $50)\nex: it is the 14th of the month (12/14/2024) (we calc on 13 days)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "ex: 12/05/2024 we have a deposit of $100 and 12/09/2024 we have a withdrawal of $50)\nex: it is the 14th of the month (12/14/2024) (we calc on 13 days)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        249,
+        249
+      ],
+      "raw": "$100 *((13 - 5 )/ 13) → 100* .61538 = 61.538",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "$100 ((13 - 5 )/ 13) → 100 .61538 = 61.538",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        251,
+        251
+      ],
+      "raw": "-$50 *((13 - 9)/14)) → -50* .307 = 15.384",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "-$50 ((13 - 9)/14)) → -50 .307 = 15.384",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        253,
+        253
+      ],
+      "raw": "W = 61.538 + 15.384 = 76.9226",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "W = 61.538 + 15.384 = 76.9226",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        255,
+        255
+      ],
+      "raw": "**Returns**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Returns",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        257,
+        257
+      ],
+      "raw": "R = The modified dietz return",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "R = The modified dietz return",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        259,
+        259
+      ],
+      "raw": "Be = ending balance of the portfolio",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Be = ending balance of the portfolio",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        261,
+        261
+      ],
+      "raw": "B0 = beginning balance of the portfolio",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "B0 = beginning balance of the portfolio",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        263,
+        263
+      ],
+      "raw": "C = The net sum of all cash flows during the period (inflows are positive, outflows are negative).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "C = The net sum of all cash flows during the period (inflows are positive, outflows are negative).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        265,
+        265
+      ],
+      "raw": "W = The weighted sum of cash flows, which accounts for the timing of each cash flow relative to the period's duration.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "W = The weighted sum of cash flows, which accounts for the timing of each cash flow relative to the period's duration.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        267,
+        267
+      ],
+      "raw": "**Example**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        269,
+        269
+      ],
+      "raw": "ex: our portfolio balance was 10,000 at the beginning of the period, the value is now 10,500",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "ex: our portfolio balance was 10,000 at the beginning of the period, the value is now 10,500",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        271,
+        271
+      ],
+      "raw": "ex: it is the 14th of the month (12/14/2024) (we calc on 13 days)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "ex: it is the 14th of the month (12/14/2024) (we calc on 13 days)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        273,
+        273
+      ],
+      "raw": "(10500 - 10000 - (100-50)) / 10000 + 76.9226",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "(10500 - 10000 - (100-50)) / 10000 + 76.9226",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        275,
+        275
+      ],
+      "raw": "450 / 10076.92 → .04465 → 4.465%",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "450 / 10076.92 → .04465 → 4.465%",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        277,
+        277
+      ],
+      "raw": "## Migrating from Performance V1 to Performance V2",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Migrating from Performance V1 to Performance V2",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        279,
+        279
+      ],
+      "raw": "**Performance V1 Response**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Performance V1 Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        281,
+        314
+      ],
+      "raw": "```javascript JSON\n{\n    \"accountID\": \"2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394\",\n    \"accountNo\": \"ABCD005972\",\n    \"startDate\": \"2025-11-11\",\n    \"endDate\": \"2025-11-18\",\n    \"lastUpdated\": \"2025-11-18T17:12:38.935Z\",\n    \"performance\": [\n        {\n            \"realizedDayPL\": 0,\n            \"unrealizedDayPL\": 7.2,\n            \"cumRealizedPL\": 13.57,\n            \"date\": \"2025-11-11\",\n            \"equity\": 2273.33,\n            \"cash\": 46.38,\n            \"deposits\": 11.79,\n            \"withdrawals\": 0,\n            \"fees\": 0\n        },\n        {\n            \"realizedDayPL\": 0,\n            \"unrealizedDayPL\": 5.07,\n            \"cumRealizedPL\": 13.57,\n            \"date\": \"2025-11-12\",\n            \"equity\": 2278.4,\n            \"cash\": 46.38,\n            \"deposits\": 11.79,\n            \"withdrawals\": 0,\n            \"fees\": 0\n        }...\n    ]\n}\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": "JSON",
+        "code": "{\n    \"accountID\": \"2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394\",\n    \"accountNo\": \"ABCD005972\",\n    \"startDate\": \"2025-11-11\",\n    \"endDate\": \"2025-11-18\",\n    \"lastUpdated\": \"2025-11-18T17:12:38.935Z\",\n    \"performance\": [\n        {\n            \"realizedDayPL\": 0,\n            \"unrealizedDayPL\": 7.2,\n            \"cumRealizedPL\": 13.57,\n            \"date\": \"2025-11-11\",\n            \"equity\": 2273.33,\n            \"cash\": 46.38,\n            \"deposits\": 11.79,\n            \"withdrawals\": 0,\n            \"fees\": 0\n        },\n        {\n            \"realizedDayPL\": 0,\n            \"unrealizedDayPL\": 5.07,\n            \"cumRealizedPL\": 13.57,\n            \"date\": \"2025-11-12\",\n            \"equity\": 2278.4,\n            \"cash\": 46.38,\n            \"deposits\": 11.79,\n            \"withdrawals\": 0,\n            \"fees\": 0\n        }...\n    ]\n}\n"
+      },
+      "text": "JSON",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        316,
+        316
+      ],
+      "raw": "**Performance V2 Response**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Performance V2 Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 51,
+      "lines": [
+        318,
+        375
+      ],
+      "raw": "```javascript JSON\n{\n    \"accountID\": \"2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394\",\n    \"accountNo\": \"ABCD005972\",\n    \"startDate\": \"2025-11-11\",\n    \"endDate\": \"2025-11-18\",\n    \"lastUpdated\": \"2025-11-18\",\n    \"timeSeries\": [\n        {\n            \"date\": \"2025-11-11\",\n            \"gainLoss\": 7.18,\n            \"positionBalance\": 2273.33,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2319.71,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.003104\n        },\n        {\n            \"date\": \"2025-11-12\",\n            \"gainLoss\": 5.08,\n            \"positionBalance\": 2278.41,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2324.79,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.002188\n        }...    ],\n    \"summary\": {\n        \"beginningMarketValue\": null,\n        \"beginningPositionBalance\": null,\n        \"beginningCashBalance\": null,\n        \"endingMarketValue\": 2266.53,\n        \"endingPositionBalance\": 2220.15,\n        \"endingCashBalance\": 46.38,\n        \"periodGainLoss\": null,\n        \"periodCashFlows\": 0.00,\n        \"periodDeposits\": 0.00,\n        \"periodWithdrawals\": 0.00,\n        \"periodFees\": 0.00,\n        \"periodIncome\": 0.29,\n        \"periodReturn\": -0.022925,\n        \"mtdReturn\": -0.018631,\n        \"ytdReturn\": 0.120243,\n        \"inceptionReturn\": -0.999999,\n        \"1yearReturn\": 0.092667,\n        \"3yearReturn\": -0.999999,\n        \"5yearReturn\": null\n    }\n}\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": "JSON",
+        "code": "{\n    \"accountID\": \"2345fb7a-8daf-44d7-b813-3840bc985a47.1634583495394\",\n    \"accountNo\": \"ABCD005972\",\n    \"startDate\": \"2025-11-11\",\n    \"endDate\": \"2025-11-18\",\n    \"lastUpdated\": \"2025-11-18\",\n    \"timeSeries\": [\n        {\n            \"date\": \"2025-11-11\",\n            \"gainLoss\": 7.18,\n            \"positionBalance\": 2273.33,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2319.71,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.003104\n        },\n        {\n            \"date\": \"2025-11-12\",\n            \"gainLoss\": 5.08,\n            \"positionBalance\": 2278.41,\n            \"cashBalance\": 46.38,\n            \"marketValue\": 2324.79,\n            \"cashFlows\": 0.00,\n            \"deposits\": 0.00,\n            \"withdrawals\": 0.00,\n            \"fees\": 0.00,\n            \"income\": 0.00,\n            \"rateOfReturn\": 0.002188\n        }...    ],\n    \"summary\": {\n        \"beginningMarketValue\": null,\n        \"beginningPositionBalance\": null,\n        \"beginningCashBalance\": null,\n        \"endingMarketValue\": 2266.53,\n        \"endingPositionBalance\": 2220.15,\n        \"endingCashBalance\": 46.38,\n        \"periodGainLoss\": null,\n        \"periodCashFlows\": 0.00,\n        \"periodDeposits\": 0.00,\n        \"periodWithdrawals\": 0.00,\n        \"periodFees\": 0.00,\n        \"periodIncome\": 0.29,\n        \"periodReturn\": -0.022925,\n        \"mtdReturn\": -0.018631,\n        \"ytdReturn\": 0.120243,\n        \"inceptionReturn\": -0.999999,\n        \"1yearReturn\": 0.092667,\n        \"3yearReturn\": -0.999999,\n        \"5yearReturn\": null\n    }\n}\n"
+      },
+      "text": "JSON",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 52,
+      "lines": [
+        377,
+        377
+      ],
+      "raw": "### V1 fields and status vs V2",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "V1 fields and status vs V2",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        379,
+        387
+      ],
+      "raw": "* realizedDayPL -> not supported\n* unrealizedDayPL -> not supported\n* cumRealizedPL -> not supported\n* date -> supported (V2-> `date`)\n* equity -> supported (V2 -> `positionsBalance`)\n* cash -> supported (V2 -> `cashFlows`)\n* deposits -> supported (V2 -> `deposits`)\n* withdrawals -> supported (V2 -> `withdrawals`)\n* fees -> supported (V2 -> `fees`)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "realizedDayPL -> not supportedunrealizedDayPL -> not supportedcumRealizedPL -> not supporteddate -> supported (V2-> date)equity -> supported (V2 -> positionsBalance)cash -> supported (V2 -> cashFlows)deposits -> supported (V2 -> deposits)withdrawals -> supported (V2 -> withdrawals)fees -> supported (V2 -> fees)",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 54,
+      "lines": [
+        389,
+        389
+      ],
+      "raw": "## API Considerations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Considerations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 55,
+      "lines": [
+        391,
+        391
+      ],
+      "raw": "### API Validations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "API Validations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 56,
+      "lines": [
+        393,
+        400
+      ],
+      "raw": "* User must pass `frequency`, `from`, and `to`\n  If any are omitted, API will return an error\n* If delta between from and to is less than 3 months (90 days, 13 weeks, 3 months)\n  Valid values for period are `D`,`W`,`M`\n* If delta between from and to is > 3 months and less than 12 months\n  Valid values for period are `M`\n* If delta between from and to is > 12 months\n  Valid values for period are `M`,`Y`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "User must pass frequency, from, and to\nIf any are omitted, API will return an errorIf delta between from and to is less than 3 months (90 days, 13 weeks, 3 months)\nValid values for period are D,W,MIf delta between from and to is > 3 months and less than 12 months\nValid values for period are MIf delta between from and to is > 12 months\nValid values for period are M,Y",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 57,
+      "lines": [
+        402,
+        402
+      ],
+      "raw": "### API Behavior",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "API Behavior",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 58,
+      "lines": [
+        404,
+        404
+      ],
+      "raw": "`mtdReturn`, `ytdReturn`, `1yearReturn`, `3yearReturn`, `5yearReturn`, `inceptionReturn` will return `null` if values are not available for these time periods when returning a `200` response",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "mtdReturn, ytdReturn, 1yearReturn, 3yearReturn, 5yearReturn, inceptionReturn will return null if values are not available for these time periods when returning a 200 response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 59,
+      "lines": [
+        406,
+        406
+      ],
+      "raw": "**Daily Returns**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Daily Returns",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 60,
+      "lines": [
+        408,
+        408
+      ],
+      "raw": "When requesting daily returns, the overall time period’s figures will be returned at the root level and each day’s values will be returned in the array. (ex: from = 2019-08-24 | To = 2019-08-26 | period = D",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When requesting daily returns, the overall time period’s figures will be returned at the root level and each day’s values will be returned in the array. (ex: from = 2019-08-24 | To = 2019-08-26 | period = D",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 61,
+      "lines": [
+        410,
+        410
+      ],
+      "raw": "**Weekly Returns**<br />*\"Defined as Monday to Friday.\"*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Weekly Returns\"Defined as Monday to Friday.\"",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 410
+        }
+      ]
+    },
+    {
+      "i": 62,
+      "lines": [
+        412,
+        412
+      ],
+      "raw": "When requesting weekly returns, the overall time period’s figures will be returned at the root level and each week’s values will be returned in the array. (ex: from = 2025-04-03 | To = 2025-04-08 | period = W",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When requesting weekly returns, the overall time period’s figures will be returned at the root level and each week’s values will be returned in the array. (ex: from = 2025-04-03 | To = 2025-04-08 | period = W",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 63,
+      "lines": [
+        414,
+        414
+      ],
+      "raw": "\\*Note: for weekly returns, we return the values from Monday to Friday. ex: if a user requests a Wednesday date in the From field, we will adjust this to the date of the Monday of that week and if the user requests a Wednesday in the To field, we will adjust this to the date of the Friday of that week. The date returned in the array will always be the Friday date",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "*Note: for weekly returns, we return the values from Monday to Friday. ex: if a user requests a Wednesday date in the From field, we will adjust this to the date of the Monday of that week and if the user requests a Wednesday in the To field, we will adjust this to the date of the Friday of that week. The date returned in the array will always be the Friday date",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 64,
+      "lines": [
+        416,
+        416
+      ],
+      "raw": "**Monthly Returns**<br />*\"Defined as first of the month to the last of the month.\"*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Monthly Returns\"Defined as first of the month to the last of the month.\"",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 416
+        }
+      ]
+    },
+    {
+      "i": 65,
+      "lines": [
+        418,
+        418
+      ],
+      "raw": "When requesting monthly returns, the overall time period’s figures will be returned at the root level and each month’s values will be returned in the array. (ex: from = 2025-01-05 | To = 2025-02-10 | period = M",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When requesting monthly returns, the overall time period’s figures will be returned at the root level and each month’s values will be returned in the array. (ex: from = 2025-01-05 | To = 2025-02-10 | period = M",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 66,
+      "lines": [
+        420,
+        420
+      ],
+      "raw": "\\*Note: for monthly returns, do not utilize the day value in the To | From input. ex: if a user requests a 2025-01-05 date in the From field and the user requests 2025-02-10 in the To field, we will calculate monthly returns in January and February.  The startDate will be 2025-01-01 and the end date will be 2025-02-28. The array will return 2 records (2025-01-31 and 2025-02-28)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "*Note: for monthly returns, do not utilize the day value in the To | From input. ex: if a user requests a 2025-01-05 date in the From field and the user requests 2025-02-10 in the To field, we will calculate monthly returns in January and February.  The startDate will be 2025-01-01 and the end date will be 2025-02-28. The array will return 2 records (2025-01-31 and 2025-02-28)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 67,
+      "lines": [
+        422,
+        422
+      ],
+      "raw": "**Yearly Returns**<br />*\"Defined as first of the year to last of the year.\"*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Yearly Returns\"Defined as first of the year to last of the year.\"",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 422
+        }
+      ]
+    },
+    {
+      "i": 68,
+      "lines": [
+        424,
+        424
+      ],
+      "raw": "When requesting yearly returns, the overall time period’s figures will be returned at the root level and each year’s values will be returned in the array. (ex: from = 2024-01-05 | To = 2025-02-10 | period = Y",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When requesting yearly returns, the overall time period’s figures will be returned at the root level and each year’s values will be returned in the array. (ex: from = 2024-01-05 | To = 2025-02-10 | period = Y",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 69,
+      "lines": [
+        426,
+        426
+      ],
+      "raw": "\\*Note: for yearly returns, do not utilize the day or month values in the To | From input. ex: if a user requests 2024-01-05 date in the From field and the user requests 2025-02-10 in the To field, we will calculate yearly returns for 2024 and 2025 YTD.  The startDate will be 2024-01-01 and the end date will be the last calculated performance date (ex: we run on 2025-04-08 midday, the last day will be 2025-04-07). The array will return 2 records (2025-01-31 and 2025-04-07)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "*Note: for yearly returns, do not utilize the day or month values in the To | From input. ex: if a user requests 2024-01-05 date in the From field and the user requests 2025-02-10 in the To field, we will calculate yearly returns for 2024 and 2025 YTD.  The startDate will be 2024-01-01 and the end date will be the last calculated performance date (ex: we run on 2025-04-08 midday, the last day will be 2025-04-07). The array will return 2 records (2025-01-31 and 2025-04-07)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 70,
+      "lines": [
+        428,
+        428
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 428
+        }
+      ]
+    }
+  ]
+}

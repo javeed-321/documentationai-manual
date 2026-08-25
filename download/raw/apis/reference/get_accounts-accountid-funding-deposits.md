@@ -1,0 +1,428 @@
+---
+updatedAt: 2026-05-27T16:58:23.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# List Account Deposits
+
+Retrieves a list of Account Deposits by accountID.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Money Movement APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Deposits"
+    }
+  ],
+  "paths": {
+    "/accounts/{accountID}/funding/deposits": {
+      "get": {
+        "tags": [
+          "Deposits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountID",
+            "schema": {
+              "$ref": "#/components/schemas/accountID"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Successful,Pending",
+            "description": "Comma separated payment statuses"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "type": "string"
+            },
+            "example": "ACH,WIRE,BULK_FUNDING",
+            "description": "Comma separated deposit types"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 25
+            },
+            "example": 50,
+            "description": "The number of deposits to be returned per page. Minimum=1, Maximum=100"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "string"
+            },
+            "example": "88GY000001-1758867249744-RJJLU",
+            "description": "Should either be null or the last payment result in the previous request"
+          }
+        ],
+        "summary": "List Account Deposits",
+        "description": "Retrieves a list of Account Deposits by accountID.",
+        "responses": {
+          "200": {
+            "description": "Retrieving a list of Account Deposits was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/depositsByUserIDObject"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseModel"
+                },
+                "examples": {
+                  "Limit should be greater than 0": {
+                    "value": {
+                      "errorCode": "E025",
+                      "message": "Invalid or badly formatted request. Refer to the API documentation for details. Details: Invalid value: limit. Limit should be greater than 0."
+                    }
+                  },
+                  "Limit should be less than or equal to 100": {
+                    "value": {
+                      "errorCode": "E025",
+                      "message": "Invalid or badly formatted request. Refer to the API documentation for details. Details: Invalid value: limit. Limit should be less than or equal to 100"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ErrorCode": {
+        "type": "string",
+        "description": "The error code that is returned when an error occurs.",
+        "example": "E032"
+      },
+      "ErrorCodeMessage": {
+        "type": "string",
+        "description": "The error message that is returned when an error occurs."
+      },
+      "ErrorDetails": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "JSON field name from the request body that caused an error"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "STRING",
+              "ARRAY",
+              "INT",
+              "DECIMAL",
+              "BOOL",
+              "TEXT",
+              "UUID",
+              "DATE",
+              "MAP",
+              "OBJECT"
+            ],
+            "description": "Expected data type of the field"
+          },
+          "allowedValues": {
+            "type": "string",
+            "description": "Example values which are allowed in the field"
+          }
+        }
+      },
+      "ErrorResponseModel": {
+        "type": "object",
+        "description": "The error response model that is returned when an error occurs.",
+        "required": [
+          "errorCode",
+          "message"
+        ],
+        "properties": {
+          "errorCode": {
+            "$ref": "#/components/schemas/ErrorCode"
+          },
+          "message": {
+            "$ref": "#/components/schemas/ErrorCodeMessage"
+          },
+          "errorDetails": {
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      },
+      "depositID": {
+        "type": "string",
+        "example": "DWEP000106-1619421162147-1A2B3",
+        "description": "A unique identifier for the Deposit."
+      },
+      "accountID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+        "description": "The user's unique account identifier."
+      },
+      "accountNo": {
+        "type": "string",
+        "example": "DWBG000052",
+        "description": "The user's unique account number, that is human readable."
+      },
+      "accountTypeObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "LIVE",
+            "description": "The type of account that has been created."
+          },
+          "description": {
+            "type": "string",
+            "example": "Live Account",
+            "description": "A custom description of the account type."
+          }
+        }
+      },
+      "accountManagementTypeObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "SELF",
+            "description": "The type of account who has trading authority.",
+            "enum": [
+              "SELF",
+              "ADVISORY",
+              "RIA_MANAGED",
+              "CUSTODIAL",
+              "CUSTODIAL_MANAGED",
+              "RESERVED",
+              "RETIREMENT_TRADITIONAL_SELF",
+              "RETIREMENT_TRADITIONAL_ADVISORY",
+              "RETIREMENT_TRADITIONAL_RIA_MANAGED",
+              "RETIREMENT_ROTH_SELF",
+              "RETIREMENT_ROTH_ADVISORY",
+              "RETIREMENT_ROTH_RIA_MANAGED",
+              "TRUST_SELF",
+              "TRUST_ADVISORY",
+              "TRUST_RIA_MANAGED",
+              "HSA_SELF",
+              "HSA_ADVISORY",
+              "HSA_RIA_MANAGED",
+              "BUSINESS_SELF",
+              "BUSINESS_ADVISORY",
+              "BUSINESS_RIA_MANAGED",
+              "TRUMP_SELF"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "example": "Self Directed Account",
+            "description": "A custom description of the account management type."
+          }
+        }
+      },
+      "updated": {
+        "type": "string",
+        "example": "2022-12-11T22:28:21.810Z",
+        "description": ""
+      },
+      "note": {
+        "type": "string",
+        "example": "Hey! Welcome to DriveWealth Developer Docs!",
+        "description": "A way to store a message/comment on the this object."
+      },
+      "wlpFinTranTypeID": {
+        "type": "string",
+        "example": "c43bab85-2916-4831-a0db-66215150a6e4",
+        "description": "A unique identifier to id different type of transactions."
+      },
+      "depositStatusNumber": {
+        "type": "number",
+        "example": 1,
+        "description": "The current status of the user's deposit in integer form.",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          14,
+          15,
+          16,
+          17,
+          5,
+          -1
+        ]
+      },
+      "depositStatus": {
+        "type": "string",
+        "example": "PENDING",
+        "description": "The current status of the user's deposit.",
+        "enum": [
+          "STARTED",
+          "PENDING",
+          "PROCESSING",
+          "SUCCESSFUL",
+          "FAILED",
+          "OTHER",
+          "APPROVED",
+          "REJECTED",
+          "ON_HOLD",
+          "PROCESSING",
+          "RETURNED",
+          "-"
+        ]
+      },
+      "currency": {
+        "type": "string",
+        "example": "USD",
+        "description": "The name of the currency in abbreviation form.",
+        "enum": [
+          "USD"
+        ]
+      },
+      "currencySymbol": {
+        "type": "string",
+        "example": "$",
+        "description": "The currency symbol.",
+        "enum": [
+          "$"
+        ]
+      },
+      "currencyObject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/components/schemas/currency"
+          },
+          "description": {
+            "type": "string",
+            "example": "US Dollar",
+            "description": "A custom description about the currency."
+          },
+          "symbol": {
+            "$ref": "#/components/schemas/currencySymbol"
+          }
+        }
+      },
+      "depositStatusObject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/depositStatusNumber"
+          },
+          "message": {
+            "$ref": "#/components/schemas/depositStatus"
+          },
+          "updated": {
+            "$ref": "#/components/schemas/updated",
+            "description": "The last updated timestamp of the status of the user's deposit."
+          }
+        }
+      },
+      "depositsByUserIDObject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/depositID"
+          },
+          "paymentID": {
+            "$ref": "#/components/schemas/depositID"
+          },
+          "amount": {
+            "type": "number",
+            "example": 125.22,
+            "description": "The amount of the deposit"
+          },
+          "currency": {
+            "$ref": "#/components/schemas/currencyObject"
+          },
+          "status": {
+            "$ref": "#/components/schemas/depositStatusObject"
+          },
+          "accountDetails": {
+            "type": "object",
+            "properties": {
+              "accountID": {
+                "$ref": "#/components/schemas/accountID"
+              },
+              "accountNo": {
+                "$ref": "#/components/schemas/accountNo"
+              },
+              "accountType": {
+                "$ref": "#/components/schemas/accountTypeObject"
+              },
+              "accountManagementType": {
+                "$ref": "#/components/schemas/accountManagementTypeObject"
+              }
+            }
+          },
+          "wlpFinTranTypeID": {
+            "$ref": "#/components/schemas/wlpFinTranTypeID"
+          },
+          "note": {
+            "$ref": "#/components/schemas/note"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

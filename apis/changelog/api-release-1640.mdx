@@ -1,0 +1,70 @@
+---
+title: "API Release 1.64.0"
+---
+
+Starting 2024 with another API Release! We are super excited to share with you all some changes to the platform.  If you have any questions about this release feel free to reach out to on the slack channels or send us an email at: [psg@drivewealth.com](mailto:psg@drivewealth.com).
+
+# 🚀 New Features
+
+We are building up to some great features and product launches, check back in the next few releases.
+
+# 🎉 Feature Enhancements
+
+## Cancel Rebill
+
+Currently, we restrict Cancel Rebill requests from being processed when corporate actions are applied on an instrument held during a price adjustment or cancellation.\
+Starting with this release, the request will remain in an ON\_HOLD status if the corporate action is present. With this enhancement, both DIV and DIVTAX transactions will no longer be put into the ON\_HOLD status and will be processed.
+
+## Recurring Deposits
+
+Recurring deposits today do not allow the ability to determine the start date of when the initial recurring deposit should start. We are improving the [DepositAPI](https://developer.drivewealth.com/apis/reference/post_funding-deposits), which will enable you to pass the startDate in the request.
+
+Remember, that calendar months have different amounts of days within them. So, if you specify the start date as 28th, 29th, 30th or the 31th of that month and that month doesn’t have that day then the recurring deposit will start on the last day of the month. One last thing, if you don’t specify the startDate and it's the last day of the month, the recurring will start on the day of the request and continue on the end of the month recurring basis.
+
+# 👠🐛 Squashing Bugs
+
+We are always squashing bugs but nothing to speak about this on this release.
+
+# 🪵 ChangeLog
+
+```asp title="Changelog 🪵"
+**`POST /funding/deposits`**
+
+* Request payload:
+    * Changed enum values for property `recurringFrequency`
+        * Added values `MONTHLY`
+* Modified the `200` response:
+    * Changed object property `recurring`
+        * Changed enum values for property `frequency`
+            * Added values `MONTHLY`
+
+**`DELETE /funding/recurring-deposits/{recurringID}`**
+
+* Modified the `200` response:
+    * Changed enum values for property `frequency`
+        * Added values `MONTHLY`
+
+**`GET /funding/recurring-deposits/{recurringID}`**
+
+* Modified the `200` response:
+    * Changed enum values for property `frequency`
+        * Added values `MONTHLY`
+
+**`PATCH /funding/recurring-deposits/{recurringID}`**
+
+* Request payload:
+    * Changed enum values for property `frequency`
+        * Added values `MONTHLY`
+* Modified the `200` response:
+    * Changed enum values for property `frequency`
+        * Added values `MONTHLY`
+
+**`GET /users/{userID}/recurring-deposits`**
+
+* Modified the `200` response:
+    * Changed root array
+        * Modified the schema option `DepositByUserID`
+            * Changed enum values for property `frequency`
+                * Added values `MONTHLY`
+
+```

@@ -1,0 +1,19 @@
+---
+title: "Rate Limits"
+---
+
+## Rate Limits
+
+Beginning May 11, 2022, the following rate limits will be enforced in production to allow for better security and uptime.
+
+| Method | Endpoint                     | Limit                         |
+| :----- | :--------------------------- | :---------------------------- |
+| GET    | `/users/{userID}/kyc-status` | • 10 per second • Burst: 10   |
+| GET    | `/users/{userID}`            | • 100 per second • Burst: 100 |
+| PATCH  | `/users/{userID}`            | • 100 per second • Burst: 100 |
+
+Exceeding the rate limits will provide an error - "429 - Too many requests".
+
+Please note there will be additional rate limits implemented over the next few weeks as we continue to improve our platform.
+
+See [Rate Limits](https://developer.drivewealth.com/reference/limits) for additional information on Sandbox and Production limits

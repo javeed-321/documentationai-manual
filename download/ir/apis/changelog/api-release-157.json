@@ -1,0 +1,220 @@
+{
+  "slug": "apis/changelog/api-release-157",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-157.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-157",
+  "title": "API Release 1.57",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 9,
+    "paragraph": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.57",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.57",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.57",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.57",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Deployed in Production - September 7th, 2023.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deployed in Production - September 7th, 2023.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "# 🚀New Features - What’s New?",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀New Features - What’s New?",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "#### Add new API endpoints to allow partners to consume DriveWealth's terms of service and publish these terms via API endpoints.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Add new API endpoints to allow partners to consume DriveWealth's terms of service and publish these terms via API endpoints.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "#### **Expected Behavior Change -** We are introducing 4 new endpoints to allow for a seamless process in the ability to acknowledge disclosures and gather disclosure information via API.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Expected Behavior Change - We are introducing 4 new endpoints to allow for a seamless process in the ability to acknowledge disclosures and gather disclosure information via API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "To learn more about this feature, see [here](https://developer.drivewealth.com/apis/docs/improving-disclosures).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To learn more about this feature, see here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "# 🎉Feature Enhancements - We are making it better for you!!",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉Feature Enhancements - We are making it better for you!!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "#### Existing Feature - Currently, the PDT process includes several steps in regards to unlocking and locking accounts and as well the event notification not being delivered.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Existing Feature - Currently, the PDT process includes several steps in regards to unlocking and locking accounts and as well the event notification not being delivered.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "#### What is improving? - As part of the PDT enhancements, we will be improving automation for different parts of the current process. These enhancements include automatic unrestricted of accounts by end of day, automatic restriction of accounts in real-time and event notifications for both restriction and unrestricted.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "What is improving? - As part of the PDT enhancements, we will be improving automation for different parts of the current process. These enhancements include automatic unrestricted of accounts by end of day, automatic restriction of accounts in real-time and event notifications for both restriction and unrestricted.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "To view the PDT events, see [here](https://developer.drivewealth.com/apis/docs/trading-violations#pattern-day-trades).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To view the PDT events, see here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

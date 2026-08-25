@@ -1,0 +1,144 @@
+{
+  "slug": "apis/docs/symbol-changes",
+  "source": "https://developer.drivewealth.com/apis/docs/symbol-changes.md",
+  "url": "https://developer.drivewealth.com/apis/docs/symbol-changes",
+  "title": "Symbol changes",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:39:04.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 3,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Symbol changes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Symbol changes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "A Symbol change can occur for a variety of reasons, but a symbol change does not have a conversion component, impacting underlying share number, price, etc. of the underlying symbol. Note: a symbol and instrument changes are used interchangeably.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A Symbol change can occur for a variety of reasons, but a symbol change does not have a conversion component, impacting underlying share number, price, etc. of the underlying symbol. Note: a symbol and instrument changes are used interchangeably.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Operational sequencing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Operational sequencing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "After the market close, on the last day of trading under the prior symbol, the Instrument will be marked as “Inactive” in DriveWealth’s system. By marking it inactive, will ensure that any orders being received or queued under the prior symbol are rejected, rendering them unable to be executed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After the market close, on the last day of trading under the prior symbol, the Instrument will be marked as “Inactive” in DriveWealth’s system. By marking it inactive, will ensure that any orders being received or queued under the prior symbol are rejected, rendering them unable to be executed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        19
+      ],
+      "raw": "> 📘\n>\n> Corporate Actions with only a symbol change typically trade on the open. More complex Corporate Actions, like symbol change plus a conversion merger or acquisition, are not guaranteed to trade on the open right at 9:30am, as a result of an SEC or Exchange halt.\n>\n> While DriveWealth will attempt to update all relevant information at the same time, to the extent any information is not available (e.g. RIC), and the symbol and company name information is updated, with the RIC being updated when available; this would produce 2 events.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Corporate Actions with only a symbol change typically trade on the open. More complex Corporate Actions, like symbol change plus a conversion merger or acquisition, are not guaranteed to trade on the open right at 9:30am, as a result of an SEC or Exchange halt.While DriveWealth will attempt to update all relevant information at the same time, to the extent any information is not available (e.g. RIC), and the symbol and company name information is updated, with the RIC being updated when available; this would produce 2 events.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "All other operational processes occur on DriveWealth’s side, which fundamentally ensure that the Instrument information is available via API and that the market data is active for when the symbol begins trading.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All other operational processes occur on DriveWealth’s side, which fundamentally ensure that the Instrument information is available via API and that the market data is active for when the symbol begins trading.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

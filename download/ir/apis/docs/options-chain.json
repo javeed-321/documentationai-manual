@@ -1,0 +1,822 @@
+{
+  "slug": "apis/docs/options-chain",
+  "source": "https://developer.drivewealth.com/apis/docs/options-chain.md",
+  "url": "https://developer.drivewealth.com/apis/docs/options-chain",
+  "title": "Options chains",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T16:47:03.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 20,
+    "code": 13,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Options chains",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Options chains",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Use the <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/v1.83.0/reference/get_instruments\">Instruments API</Anchor> endpoints to retrieve available options for an underlying instrument — expiration dates first, then the full chain filtered by date, type, or size.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Use the <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/v1.83.0/reference/get_instruments\">Instruments API</Anchor> endpoints to retrieve available options for an underlying instrument — expiration dates first, then the full chain filtered by date, type, or size.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/v1.83.0/reference/get_instruments",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Once you have decided to look further into options on a specific underlying stock, ETF or index fund, we can make a chain request to look through what options are available.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once you have decided to look further into options on a specific underlying stock, ETF or index fund, we can make a chain request to look through what options are available.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Get option expiration dates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Get option expiration dates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "First, we can request to see the expiration dates for the underlying security.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "First, we can request to see the expiration dates for the underlying security.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "For the detailed API Reference: <https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid-options-expiration-dates>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For the detailed API Reference: https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid-options-expiration-dates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "You can get `expiration-dates` by root symbol with:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can get expiration-dates by root symbol with:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        29
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options/expiration-dates' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options/expiration-dates' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 26
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "You can also get `expiration-dates` by instrument ID:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can also get expiration-dates by instrument ID:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        33,
+        41
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/a67422af-8504-43df-9e63-7361eb0bd99e/options/expiration-dates' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/a67422af-8504-43df-9e63-7361eb0bd99e/options/expiration-dates' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 38
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "Response:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        45,
+        59
+      ],
+      "raw": "```json\n{\n    \"symbol\": \"AAPL\",\n    \"expiration\": [\n        \"2026-06-03\",\n        \"2026-06-05\",\n        \"2026-06-08\",\n        \"2026-06-10\",\n        \"2026-06-12\",\n        \"2026-07-10\",\n        \"2026-08-21\",\n        \"2027-12-17\"\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"symbol\": \"AAPL\",\n    \"expiration\": [\n        \"2026-06-03\",\n        \"2026-06-05\",\n        \"2026-06-08\",\n        \"2026-06-10\",\n        \"2026-06-12\",\n        \"2026-07-10\",\n        \"2026-08-21\",\n        \"2027-12-17\"\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "## Option chain",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Option chain",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "There are two primary ways to get an option chain.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are two primary ways to get an option chain.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "For the detailed API Reference: <https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid-options>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For the detailed API Reference: https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid-options",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        67,
+        67
+      ],
+      "raw": "### Get around-the-money options chain",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Get around-the-money options chain",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "Get `N` number of contracts in the money (ITM), `N` number of contracts out of the money/at the money (OTM/ATM), for each `optionType` (`CALL` and `PUT`)  given a root identifier or instrument ID, where `N` = `noOfStrikes`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Get N number of contracts in the money (ITM), N number of contracts out of the money/at the money (OTM/ATM), for each optionType (CALL and PUT)  given a root identifier or instrument ID, where N = noOfStrikes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        71,
+        78
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?noOfStrikes=2' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?noOfStrikes=2' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 76
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        80,
+        80
+      ],
+      "raw": "Abbreviated response with 2 `CALL` strikes ITM, 2 `CALL` strikes OTM/ATM, 2 `PUT` strikes ITM, and 2 `PUT` strikes OTM/ATM:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Abbreviated response with 2 CALL strikes ITM, 2 CALL strikes OTM/ATM, 2 PUT strikes ITM, and 2 PUT strikes OTM/ATM:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        82,
+        176
+      ],
+      "raw": "```json\n{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"481c7930-8f94-44d7-b8a3-8ba427bc61f1\",\n            \"symbol\": \"AAPL260603C00307500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 307.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"86289b51-2e2a-4e83-a283-5baaeba8f1e4\",\n            \"symbol\": \"AAPL260603C00312500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 312.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"8b03905b-98c1-49fd-b399-b198f075d9cb\",\n            \"symbol\": \"AAPL260603C00317500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 317.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"9ac5b854-c82d-4307-93b0-7da639373188\",\n            \"symbol\": \"AAPL260603C00322500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 322.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"a1d53eeb-fa5f-4983-aa67-3c445c4c094e\",\n            \"symbol\": \"AAPL260603P00307500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 307.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"8d894796-6df8-4461-8ca3-e2c87a12661c\",\n            \"symbol\": \"AAPL260603P00312500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 312.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"d1de62dc-399e-437f-89cb-6ce5de319a02\",\n            \"symbol\": \"AAPL260603P00317500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 317.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"d1f1ed4a-d555-492e-8d92-301b74e68f9c\",\n            \"symbol\": \"AAPL260603P00322500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 322.500000,\n                ...\n            },\n            ...\n        }\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"481c7930-8f94-44d7-b8a3-8ba427bc61f1\",\n            \"symbol\": \"AAPL260603C00307500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 307.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"86289b51-2e2a-4e83-a283-5baaeba8f1e4\",\n            \"symbol\": \"AAPL260603C00312500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 312.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"8b03905b-98c1-49fd-b399-b198f075d9cb\",\n            \"symbol\": \"AAPL260603C00317500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 317.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"9ac5b854-c82d-4307-93b0-7da639373188\",\n            \"symbol\": \"AAPL260603C00322500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 322.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"a1d53eeb-fa5f-4983-aa67-3c445c4c094e\",\n            \"symbol\": \"AAPL260603P00307500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 307.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"8d894796-6df8-4461-8ca3-e2c87a12661c\",\n            \"symbol\": \"AAPL260603P00312500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 312.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"d1de62dc-399e-437f-89cb-6ce5de319a02\",\n            \"symbol\": \"AAPL260603P00317500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 317.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"d1f1ed4a-d555-492e-8d92-301b74e68f9c\",\n            \"symbol\": \"AAPL260603P00322500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 322.500000,\n                ...\n            },\n            ...\n        }\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        178,
+        178
+      ],
+      "raw": "You can also specify an `optionType` as a query parameter:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can also specify an optionType as a query parameter:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        180,
+        187
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?noOfStrikes=2&optionType=CALL' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?noOfStrikes=2&optionType=CALL' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 185
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 186
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        189,
+        189
+      ],
+      "raw": "Abbreviated response, now with only 2 `CALL` ITM and 2 `CALL` ATM/OTM:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Abbreviated response, now with only 2 CALL ITM and 2 CALL ATM/OTM:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        191,
+        241
+      ],
+      "raw": "```json\n{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"481c7930-8f94-44d7-b8a3-8ba427bc61f1\",\n            \"symbol\": \"AAPL260603C00307500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 307.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"86289b51-2e2a-4e83-a283-5baaeba8f1e4\",\n            \"symbol\": \"AAPL260603C00312500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 312.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"8b03905b-98c1-49fd-b399-b198f075d9cb\",\n            \"symbol\": \"AAPL260603C00317500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 317.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"9ac5b854-c82d-4307-93b0-7da639373188\",\n            \"symbol\": \"AAPL260603C00322500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 322.500000,\n                ...\n            },\n            ...\n        }\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"481c7930-8f94-44d7-b8a3-8ba427bc61f1\",\n            \"symbol\": \"AAPL260603C00307500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 307.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"86289b51-2e2a-4e83-a283-5baaeba8f1e4\",\n            \"symbol\": \"AAPL260603C00312500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 312.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"8b03905b-98c1-49fd-b399-b198f075d9cb\",\n            \"symbol\": \"AAPL260603C00317500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 317.500000,\n                ...\n            },\n            ...\n        },\n        {\n            \"id\": \"9ac5b854-c82d-4307-93b0-7da639373188\",\n            \"symbol\": \"AAPL260603C00322500\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 322.500000,\n                ...\n            },\n            ...\n        }\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        243,
+        243
+      ],
+      "raw": "The `expirationDate` parameter is supported as well:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The expirationDate parameter is supported as well:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        245,
+        252
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?noOfStrikes=2&optionType=CALL&expirationDate=2026-06-03' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?noOfStrikes=2&optionType=CALL&expirationDate=2026-06-03' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 250
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 251
+        }
+      ]
+    },
+    {
+      "i": 27,
+      "lines": [
+        254,
+        254
+      ],
+      "raw": "Please note that `minStrikePrice` and `maxStrikePrice` are not supported when getting by moneyness (i.e. with `noOfStrikes`), and neither is pagination.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please note that minStrikePrice and maxStrikePrice are not supported when getting by moneyness (i.e. with noOfStrikes), and neither is pagination.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        256,
+        256
+      ],
+      "raw": "### Get entire options chain for underlying/strike price range",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Get entire options chain for underlying/strike price range",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        258,
+        258
+      ],
+      "raw": "To get all options, given an underlying and an expiration date range you can leverage the following paginated request:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To get all options, given an underlying and an expiration date range you can leverage the following paginated request:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        260,
+        267
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url 'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?pageSize=20&page=1' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url 'https://bo-api.drivewealth.io/back-office/instruments/AAPL/options?pageSize=20&page=1' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 265
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 266
+        }
+      ]
+    },
+    {
+      "i": 31,
+      "lines": [
+        269,
+        269
+      ],
+      "raw": "Abbreviated response:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Abbreviated response:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        271,
+        296
+      ],
+      "raw": "```json\n{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"c04b5ea5-6aa8-4298-9ca4-59b3cce82597\",\n            \"symbol\": \"AAPL260603C00337500\",\n\t\t...\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"strikePrice\": 337.500000,\n\t\t\t...\n            }\n        },\n        {\n            \"id\": \"4b454b6e-497f-4020-863c-2165a302150b\",\n            \"symbol\": \"AAPL260603C00332500\",\n\t\t...\n                \"strikePrice\": 332.500000,\n\t\t\t...\n            }\n        },\n\t... (18 more elements, 20 total as per pageSize=20 parameter)\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"c04b5ea5-6aa8-4298-9ca4-59b3cce82597\",\n            \"symbol\": \"AAPL260603C00337500\",\n\t\t...\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"strikePrice\": 337.500000,\n\t\t\t...\n            }\n        },\n        {\n            \"id\": \"4b454b6e-497f-4020-863c-2165a302150b\",\n            \"symbol\": \"AAPL260603C00332500\",\n\t\t...\n                \"strikePrice\": 332.500000,\n\t\t\t...\n            }\n        },\n\t... (18 more elements, 20 total as per pageSize=20 parameter)\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        298,
+        298
+      ],
+      "raw": "To retrieve the second page of results, here is the subsequent call:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To retrieve the second page of results, here is the subsequent call:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        300,
+        307
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.net/back-office/instruments/AAPL/options?pageSize=20&page=2&sortOrder=desc' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.net/back-office/instruments/AAPL/options?pageSize=20&page=2&sortOrder=desc' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 305
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 306
+        }
+      ]
+    },
+    {
+      "i": 35,
+      "lines": [
+        309,
+        309
+      ],
+      "raw": "You can also get contracts with `minStrikePrice` and/or `maxStrikePrice`:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can also get contracts with minStrikePrice and/or maxStrikePrice:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        311,
+        318
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url    'https://bo-api.drivewealth.net/back-office/instruments/AAPL/options?minStrikePrice=300&maxStrikePrice=305' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url    'https://bo-api.drivewealth.net/back-office/instruments/AAPL/options?minStrikePrice=300&maxStrikePrice=305' \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 316
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 317
+        }
+      ]
+    },
+    {
+      "i": 37,
+      "lines": [
+        320,
+        320
+      ],
+      "raw": "Response:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        322,
+        366
+      ],
+      "raw": "```json\n{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"1838bd6b-6862-4ce3-b08a-7da9250fad43\",\n            \"symbol\": \"AAPL260603C00302500\",\n            \"type\": \"OPTIONS\",\n            \"exchange\": \"27\",\n            \"orderSizeMax\": 500,\n            \"orderSizeMin\": 1.0,\n            \"orderSizeStep\": 1.0,\n            \"name\": \"AAPL Jun 03 2026 $302.50 Call\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"rootId\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n                \"expirationDate\": \"2026-06-03\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 302.500000,\n                \"multiplier\": 100,\n                \"deliverable\": 100\n            }\n        },\n        {\n            \"id\": \"d0b8eb5d-5bca-437d-8b59-4ff95b00d50f\",\n            \"symbol\": \"AAPL260603P00302500\",\n            \"type\": \"OPTIONS\",\n            \"exchange\": \"27\",\n            \"orderSizeMax\": 500,\n            \"orderSizeMin\": 1.0,\n            \"orderSizeStep\": 1.0,\n            \"name\": \"AAPL Jun 03 2026 $302.50 Put\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"rootId\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n                \"expirationDate\": \"2026-06-03\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 302.500000,\n                \"multiplier\": 100,\n                \"deliverable\": 100\n            }\n        }\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"symbol\": \"AAPL\",\n    \"options\": [\n        {\n            \"id\": \"1838bd6b-6862-4ce3-b08a-7da9250fad43\",\n            \"symbol\": \"AAPL260603C00302500\",\n            \"type\": \"OPTIONS\",\n            \"exchange\": \"27\",\n            \"orderSizeMax\": 500,\n            \"orderSizeMin\": 1.0,\n            \"orderSizeStep\": 1.0,\n            \"name\": \"AAPL Jun 03 2026 $302.50 Call\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"rootId\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n                \"expirationDate\": \"2026-06-03\",\n                \"optionType\": \"CALL\",\n                \"strikePrice\": 302.500000,\n                \"multiplier\": 100,\n                \"deliverable\": 100\n            }\n        },\n        {\n            \"id\": \"d0b8eb5d-5bca-437d-8b59-4ff95b00d50f\",\n            \"symbol\": \"AAPL260603P00302500\",\n            \"type\": \"OPTIONS\",\n            \"exchange\": \"27\",\n            \"orderSizeMax\": 500,\n            \"orderSizeMin\": 1.0,\n            \"orderSizeStep\": 1.0,\n            \"name\": \"AAPL Jun 03 2026 $302.50 Put\",\n            \"optionsData\": {\n                \"rootSymbol\": \"AAPL\",\n                \"rootId\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n                \"expirationDate\": \"2026-06-03\",\n                \"optionType\": \"PUT\",\n                \"strikePrice\": 302.500000,\n                \"multiplier\": 100,\n                \"deliverable\": 100\n            }\n        }\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        368,
+        368
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 368
+        }
+      ]
+    }
+  ]
+}

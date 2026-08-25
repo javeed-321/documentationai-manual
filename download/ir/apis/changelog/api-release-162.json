@@ -1,0 +1,428 @@
+{
+  "slug": "apis/changelog/api-release-162",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-162.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-162",
+  "title": "API Release 1.62",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `@` (U+0040) in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 9,
+    "paragraph": 12,
+    "Image": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.62",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.62",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Closing out 2023 with our last API Release! We are super excited to share with you all some changes to the platform.  If you have any questions about this release feel free to reach out to us on the slack channels or send us an email at: <psg@drivewealth.com.>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Closing out 2023 with our last API Release! We are super excited to share with you all some changes to the platform.  If you have any questions about this release feel free to reach out to us on the slack channels or send us an email at: <psg@drivewealth.com.>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Nothing new but we are working on some big things for the new year! Have a great holiday season and a happy new year. See you in 2024!",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Nothing new but we are working on some big things for the new year! Have a great holiday season and a happy new year. See you in 2024!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🎉 Feature Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        16
+      ],
+      "raw": "**Performance**\\\nWe are back with some [account performance](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-performance) changes that will allow you to fetch performance information from accounts that are in a **FROZEN** status. Additionally, the API will allow you to fetch performance information from accounts that have been closed tailing **90** days after the closure date.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PerformanceWe are back with some account performance changes that will allow you to fetch performance information from accounts that are in a FROZEN status. Additionally, the API will allow you to fetch performance information from accounts that have been closed tailing 90 days after the closure date.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        18,
+        19
+      ],
+      "raw": "**Account Details**\\\nWe are introducing new fields and enhancing fields on the [Accounts API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Account DetailsWe are introducing new fields and enhancing fields on the Accounts API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "The pattern day trade Restricted **(pdtRestricted)** is specifically when the account is restricted due to pattern day trading.  The good faith violation **(gfvRestricted)** is when the account is restricted due to not paying for securities when funds are in flight. Pattern day trader is when an account/user is identified as a pattern day trader.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The pattern day trade Restricted (pdtRestricted) is specifically when the account is restricted due to pattern day trading.  The good faith violation (gfvRestricted) is when the account is restricted due to not paying for securities when funds are in flight. Pattern day trader is when an account/user is identified as a pattern day trader.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "Additionally, we are adding the “beginning of day buying power” **(bodDTBP)** calculation to the [Accounts API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid). This calculation is what is the buying power of the customer at the start of the trading day.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Additionally, we are adding the “beginning of day buying power” (bodDTBP) calculation to the Accounts API. This calculation is what is the buying power of the customer at the start of the trading day.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "This enhancement can also be viewed in DriveHub by searching the account, clicking into details, and then just below equity, a new “**BOD DTBP**” field will appear.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This enhancement can also be viewed in DriveHub by searching the account, clicking into details, and then just below equity, a new “BOD DTBP” field will appear.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "<Image align=\"center\" src=\"https://files.readme.io/ee3ead1-bodDTBP.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "src": "https://files.readme.io/ee3ead1-bodDTBP.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 13,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "To ensure this feature is activated, contact your account manager.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To ensure this feature is activated, contact your account manager.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## Orders",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "Order events are getting better. We are happy to announce that SEC and TAF fees will now be included inside the fee calculation on orders.completed.  To learn more about order events, see [here](https://developer.drivewealth.com/apis/reference/orders-events).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Order events are getting better. We are happy to announce that SEC and TAF fees will now be included inside the fee calculation on orders.completed.  To learn more about order events, see here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## ACATS",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "ACATS",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "We are adding a new field called **acatTransit** on the [listing](https://developer.drivewealth.com/apis/v1.62.0/reference/get_asset-transfers) and [fetching](https://developer.drivewealth.com/apis/v1.62.0/reference/get_asset-transfers-assettransferid) of ACATS. The new field will identify if the ACAT is to a DriveWealth account (ACAT\\_IN) or if the ACAT is to a non-DriveWealth account (ACAT\\_OUT).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are adding a new field called acatTransit on the listing and fetching of ACATS. The new field will identify if the ACAT is to a DriveWealth account (ACAT_IN) or if the ACAT is to a non-DriveWealth account (ACAT_OUT).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "# 👠🐛 Squashing Bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing Bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "## User",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "User",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "We are out here squashing bugs so you all can have a better experience. There was an issue where risk-tolerance accepted an enum value and would return the string non-enum representation of this value. We have fixed that to now return ENUM on the fetch.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are out here squashing bugs so you all can have a better experience. There was an issue where risk-tolerance accepted an enum value and would return the string non-enum representation of this value. We have fixed that to now return ENUM on the fetch.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "To see this update, check out our [documentation](https://developer.drivewealth.com/apis/reference/get_users-userid).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To see this update, check out our documentation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        49,
+        100
+      ],
+      "raw": "```objectivec 🪵 Changelog\n## Modified endpoints\n\n**`GET /accounts/{accountID}`**\n\n* Modified the `200` response:\n    * Changed object property `account`\n        * Added property `gfvRestricted`\n        * Added property `patternDayTrader`\n        * Added property `pdtRestricted`\n\n**`PATCH /accounts/{accountID}`**\n\n* Modified the `200` response:\n    * Modified the schema option `AccountDetailRes`\n        * Changed object property `account`\n            * Added property `gfvRestricted`\n            * Added property `patternDayTrader`\n            * Added property `pdtRestricted`\n\n**`GET /accounts/{accountID}/summary`**\n\n* Modified the `200` response:\n    * Changed object property `margin`\n        * Added property `bodDTBP`\n\n**`GET /accounts/{accountID}/summary/margin`**\n\n* Modified the `200` response:\n    * Changed object property `margin`\n        * Added property `bodDTBP`\n\n**`GET /asset-transfers`**\n\n* Modified the `200` response:\n    * Changed array property `data`\n\n**`POST /asset-transfers/acats`**\n\n* Modified the `200` response:\n    * Added property `acatTransit`\n\n**`POST /asset-transfers/minor-graduation`**\n\n* Modified the `200` response:\n    * Added property `acatTransit`\n\n**`GET /asset-transfers/{assetTransferID}`**\n\n* Modified the `200` response:\n    * Added property `acatTransit`\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "objectivec",
+        "title": "🪵 Changelog",
+        "code": "## Modified endpoints\n\n**`GET /accounts/{accountID}`**\n\n* Modified the `200` response:\n    * Changed object property `account`\n        * Added property `gfvRestricted`\n        * Added property `patternDayTrader`\n        * Added property `pdtRestricted`\n\n**`PATCH /accounts/{accountID}`**\n\n* Modified the `200` response:\n    * Modified the schema option `AccountDetailRes`\n        * Changed object property `account`\n            * Added property `gfvRestricted`\n            * Added property `patternDayTrader`\n            * Added property `pdtRestricted`\n\n**`GET /accounts/{accountID}/summary`**\n\n* Modified the `200` response:\n    * Changed object property `margin`\n        * Added property `bodDTBP`\n\n**`GET /accounts/{accountID}/summary/margin`**\n\n* Modified the `200` response:\n    * Changed object property `margin`\n        * Added property `bodDTBP`\n\n**`GET /asset-transfers`**\n\n* Modified the `200` response:\n    * Changed array property `data`\n\n**`POST /asset-transfers/acats`**\n\n* Modified the `200` response:\n    * Added property `acatTransit`\n\n**`POST /asset-transfers/minor-graduation`**\n\n* Modified the `200` response:\n    * Added property `acatTransit`\n\n**`GET /asset-transfers/{assetTransferID}`**\n\n* Modified the `200` response:\n    * Added property `acatTransit`"
+      },
+      "text": "🪵 Changelog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

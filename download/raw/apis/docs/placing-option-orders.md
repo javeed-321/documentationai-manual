@@ -1,0 +1,166 @@
+---
+updatedAt: 2026-07-13T16:47:34.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Placing option orders
+
+Place a single-leg options order on an equity or ETF underlying using the Orders endpoint. Options trade Monday–Friday, 9:30am–4:00pm ET; a subset of broad-based ETFs trade until 4:15pm ET `TODO: confirm which broad-based ETFs trade until 4:15pm ET — needs team input`. Only limit orders are accepted; market orders and dollar-based orders are not supported. DriveWealth currently supports Level 2 options trading — valid sides are `BUY_OPEN` and `SELL_CLOSE` only. Before placing an order, accounts must be approved for options trading — see [Enabling options access](https://developer.drivewealth.com/apis/docs/options-approval) . To find a contract to trade, see [Showing options chains](https://developer.drivewealth.com/apis/docs/filtering-options) .
+
+## Buy to open
+
+Opens a new long position by purchasing a contract.
+
+```shell
+curl --request POST \
+     --url https://bo-api.drivewealth.io/back-office/orders \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: {{yourAppKey}}' \
+     --data '
+{
+  "accountNo":   "DWPH000003",
+  "orderType":   "LIMIT",
+  "timeInForce": "DAY",
+  "symbol":      "KO280121C00075000",
+  "side":        "BUY_OPEN",
+  "quantity":    1,
+  "price":       3.42
+}
+'
+```
+
+## Sell to close
+
+Closes an existing long position by selling a contract you hold.
+
+```shell
+curl --request POST \
+     --url https://bo-api.drivewealth.io/back-office/orders \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: {{yourAppKey}}' \
+     --data '
+{
+  "accountNo":   "DWPH000003",
+  "orderType":   "LIMIT",
+  "timeInForce": "DAY",
+  "symbol":      "KO280121C00075000",
+  "side":        "SELL_CLOSE",
+  "quantity":    1,
+  "price":       3.25
+}
+'
+```
+
+## Request body parameters
+
+| Parameter     | Type    | Required | Description                                                                                                                                                                                                                                                                                 |
+| :------------ | :------ | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `accountNo`   | string  | Required | The account to place the order from.                                                                                                                                                                                                                                                        |
+| `symbol`      | string  | Required | OSI-formatted option symbol. Retrieve valid symbols from the [options chains endpoint](https://developer.drivewealth.com/apis/docs/filtering-options).                                                                                                                                      |
+| `orderType`   | string  | Required | Must be `LIMIT`. Market orders are not accepted for options.                                                                                                                                                                                                                                |
+| `side`        | string  | Required | `BUY_OPEN` to open a long position, `SELL_CLOSE` to close one.                                                                                                                                                                                                                              |
+| `quantity`    | integer | Required | Number of contracts. Must be a whole number — fractional quantities are not accepted.                                                                                                                                                                                                       |
+| `price`       | number  | Required | Limit price per share, not per contract. A price of `3.42` on a standard contract equals $342.00 notional (price × multiplier of 100). Confirm the multiplier via the [instrument details endpoint](https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid). |
+| `timeInForce` | string  | Required | Must be `DAY`.                                                                                                                                                                                                                                                                              |
+
+## Response
+
+Order creation returns a `202 Accepted`. Processing is asynchronous — the response does not reflect fill status. Use the returned `id` to poll for updates, or listen for `orders.created`, `orders.updated`, and `orders.completed` events via SQS.
+
+To check the status of an order:
+
+```shell
+curl --request GET \
+     --url https://bo-api.drivewealth.io/back-office/orders/{orderID} \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer $DW_ACCESS_TOKEN' \
+     --header 'dw-client-app-key: {{yourAppKey}}'
+```
+
+```json
+{
+  "id":                 "GB.70359e38-fe9a-412d-ab8f-364bd7e910f0",
+  "orderNo":            "GBPT000048",
+  "type":               "LIMIT",
+  "side":               "BUY_OPEN",
+  "status":             "NEW",
+  "symbol":             "KO280121C00075000",
+  "averagePrice":       0,
+  "totalOrderAmount":   0,
+  "cumulativeQuantity": 0,
+  "quantity":           1,
+  "accountNo":          "DWPH000003",
+  "created":            "2026-03-29T18:56:07.411Z"
+}
+```
+
+| Field                | Type   | Description                                                                        |
+| :------------------- | :----- | :--------------------------------------------------------------------------------- |
+| `id`                 | string | Use with `GET /back-office/orders/{orderID}` to poll for status updates.           |
+| `orderNo`            | string | Human-readable order reference.                                                    |
+| `status`             | string | Always `NEW` on creation.                                                          |
+| `averagePrice`       | number | Populated once filled. `0` until then.                                             |
+| `cumulativeQuantity` | number | Contracts filled so far. Useful when an order partially fills before cancellation. |
+| `totalOrderAmount`   | number | Notional of filled contracts (fill price × multiplier × filled quantity).          |
+
+## Order lifecycle
+
+Three statuses are terminal and will not change: `FILLED`, `CANCELED`, and `REJECTED`.
+
+| Status         | Description                                                                                        |
+| :------------- | :------------------------------------------------------------------------------------------------- |
+| `NEW`          | Assigned on creation. Persists until the order is received by the OMS.                             |
+| `PARTIAL_FILL` | The order has been partially executed.                                                             |
+| `FILLED`       | The order has been fully executed. Terminal.                                                       |
+| `CANCELED`     | The order was canceled. Terminal.                                                                  |
+| `REJECTED`     | The order was rejected before reaching the OMS — for example, insufficient buying power. Terminal. |
+
+For orders that partially fill before cancellation, use `cumulativeQuantity` to determine how many contracts executed prior to cancellation.
+
+To receive status updates without polling, consume `orders.created`, `orders.updated`, and `orders.completed` events from your SQS queue. Note that events may arrive out of sequence — a `orders.completed` event with status `FILLED` may arrive before an `orders.updated` event with status `PARTIAL_FILL`. Implement logic to handle this accordingly. For more details see <Anchor target="_blank" href="https://developer.drivewealth.com/apis/docs/events">Events</Anchor>.
+
+## Cancel an order
+
+Send a `PATCH` request to cancel an open order. A `200` response means the cancellation request was received, not that the order was canceled — the order may already be routing to an exchange.
+
+```shell
+curl --request PATCH \
+     --url https://bo-api.drivewealth.io/back-office/orders/{orderID} \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer $DW_ACCESS_TOKEN' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: {{yourAppKey}}' \
+     --data '
+{
+  "method": "CANCEL"
+}
+'
+```
+
+If cancellation succeeds you will receive an `orders.completed` SQS event with `status: "CANCELED"`. If the order was already executing it will complete as `FILLED`.
+
+> **Note:** Order cancellations are by request and may be unsuccessful. Once an order is routed to an exchange, DriveWealth cannot guarantee cancellation.
+
+## Security halts
+
+If an underlying equity is halted, all options on that instrument are also halted. Orders placed against a halted instrument will be rejected. Consume to `instruments.updated` SQS events to detect status changes before placing orders.
+
+```json
+{
+  "id":        "event_17913550-6db0-4086-9137-3fd728bd6821",
+  "type":      "instruments.updated",
+  "timestamp": "2026-08-21T16:41:53.938Z",
+  "payload": {
+    "instrumentID": "26fa9515-d1c6-44ce-93b2-b94430451508",
+    "previous": { "status": "ACTIVE" },
+    "current":  { "status": "HALTED" }
+  }
+}
+```
+
+<br />

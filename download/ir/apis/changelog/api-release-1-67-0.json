@@ -1,0 +1,283 @@
+{
+  "slug": "apis/changelog/api-release-1-67-0",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-1-67-0.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-1-67-0",
+  "title": "API Release v1.67.0",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 8,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release v1.67.0",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release v1.67.0",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Earlier this month we announced new APIs that it will make it easier to settle with DriveWealth. We called this One Settlement. So no matter your funding method \"One\" settlement to rule them all.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Earlier this month we announced new APIs that it will make it easier to settle with DriveWealth. We called this One Settlement. So no matter your funding method \"One\" settlement to rule them all.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "Please be reminded that effective **May 28, 2024** as per Securities & Exchange Commission; the industry is moving to a Trade Day + 1 (T+1). To learn more about T+1 settlement, please see [here](https://www.sec.gov/oiea/investor-alerts-and-bulletins/new-t1-settlement-cycle-what-investors-need-know-investor).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please be reminded that effective May 28, 2024 as per Securities & Exchange Commission; the industry is moving to a Trade Day + 1 (T+1). To learn more about T+1 settlement, please see here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "If you have any questions, please reach out to your assigned relations manager or contact us directly at [RMteam@drivewealth.com](mailto:rmteam@drivewealth.com).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you have any questions, please reach out to your assigned relations manager or contact us directly at RMteam@drivewealth.com.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "We noticed that a few events from our documentation were missing specifically, [`reconciliations.created`](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-created) and [`reconciliations.updated`](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-updated) . Take a look!",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We noticed that a few events from our documentation were missing specifically, reconciliations.created and reconciliations.updated . Take a look!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        15
+      ],
+      "raw": "| Status           | Environment |\n| :--------------- | :---------: |\n| ✨💃🏻 Prime Time |     PROD    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Environment"
+        ],
+        "rows": [
+          [
+            "✨💃🏻 Prime Time",
+            "PROD"
+          ]
+        ],
+        "align": [
+          "left",
+          "center"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "# 🚀 New features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "We introduced a new way for partners to listen to [`account.exclusions.created`](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-account-exclusions-created) events to notify them of accounts that we not included in the reconciliation report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We introduced a new way for partners to listen to account.exclusions.created events to notify them of accounts that we not included in the reconciliation report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "# 🎉 Feature enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "We are always improving the platform, but no new feature enhancements are happening this during this release.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are always improving the platform, but no new feature enhancements are happening this during this release.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "# 👠🐛 Squashing bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "We are always squashing bugs, but nothing significant during this release that should be called out.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are always squashing bugs, but nothing significant during this release that should be called out.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "Nothing to report here.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Nothing to report here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

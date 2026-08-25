@@ -1,0 +1,300 @@
+{
+  "slug": "apis/changelog/api-release-118",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-118.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-118",
+  "title": "API Release 1.18",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "Table": 1,
+    "paragraph": 4,
+    "CodeTabs": 1,
+    "list": 1,
+    "Callout": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.18",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.18",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.18",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.18",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Release Date | Status       |\n| :----------- | :----------- |\n| June 3, 2021 | **RELEASED** |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Release Date",
+          "Status"
+        ],
+        "rows": [
+          [
+            "June 3, 2021",
+            "RELEASED"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## IFA Restructure Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "IFA Restructure Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "For DriveWealth Partners who are implementing the new bulk deposit mechanism, new events have been created that will get triggered based upon report resource changes. At the end of each day a settlement report is generated and confirmed which triggers these new events. Once a bulk transfer has been received by DriveWealth the status is then modified to be successful.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For DriveWealth Partners who are implementing the new bulk deposit mechanism, new events have been created that will get triggered based upon report resource changes. At the end of each day a settlement report is generated and confirmed which triggers these new events. Once a bulk transfer has been received by DriveWealth the status is then modified to be successful.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Examples of the new event messages can be found below:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Examples of the new event messages can be found below:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        56
+      ],
+      "raw": "```json Settlements Created\n{\n  \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n  \"type\": \"reports.instantFundingSettlement.created\",\n  \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n  \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n  \"payload\": {\n    \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n    \"settlementDate\": \"2021-05-25\",\n    \"status\": \"PENDING\",\n    \"statusComment\": \"Created from aggregator service\",\n    \"totalAmount\": 100,\n    \"depositsAmount\": 100,\n    \"created\": \"2021-05-25T00:45:00.293Z\",\n    \"updated\": \"2021-05-25T00:45:00.293Z\",\n    \"updatedBy\": \"Instant Funding Aggregator Job\"\n  },\n  \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}\n```\n```json Settlements Updated\n{\n  \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n  \"type\": \"reports.instantFundingSettlement.updated\",\n  \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n  \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n  \"payload\": {\n    \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n    \"settlementDate\": \"2021-05-25\",\n    \"status\": \"PENDING\",\n    \"statusComment\": \"Created from aggregator service\",\n    \"totalAmount\": 100,\n    \"depositsAmount\": 100,\n    \"created\": \"2021-05-25T00:45:00.293Z\",\n    \"updated\": \"2021-05-25T19:27:00.223Z\",\n    \"updatedBy\": \"Instant Funding Aggregator Job\"\n  },\n  \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "Settlements Created",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "Settlements Created",
+          "code": "{\n  \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n  \"type\": \"reports.instantFundingSettlement.created\",\n  \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n  \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n  \"payload\": {\n    \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n    \"settlementDate\": \"2021-05-25\",\n    \"status\": \"PENDING\",\n    \"statusComment\": \"Created from aggregator service\",\n    \"totalAmount\": 100,\n    \"depositsAmount\": 100,\n    \"created\": \"2021-05-25T00:45:00.293Z\",\n    \"updated\": \"2021-05-25T00:45:00.293Z\",\n    \"updatedBy\": \"Instant Funding Aggregator Job\"\n  },\n  \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Settlements Updated",
+          "code": "{\n  \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n  \"type\": \"reports.instantFundingSettlement.updated\",\n  \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n  \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n  \"payload\": {\n    \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n    \"settlementDate\": \"2021-05-25\",\n    \"status\": \"PENDING\",\n    \"statusComment\": \"Created from aggregator service\",\n    \"totalAmount\": 100,\n    \"depositsAmount\": 100,\n    \"created\": \"2021-05-25T00:45:00.293Z\",\n    \"updated\": \"2021-05-25T19:27:00.223Z\",\n    \"updatedBy\": \"Instant Funding Aggregator Job\"\n  },\n  \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}"
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "## New Field within GET /countries Endpoint",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "New Field within GET /countries Endpoint",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "Attempting to identify countries that are acceptable values for citizenship during the onboarding process has always been difficult. In an effort to improve transparency around this DriveWealth is now releasing an additional boolean property within the `GET /countries` endpoint that is labeled: `expatsAllowed`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Attempting to identify countries that are acceptable values for citizenship during the onboarding process has always been difficult. In an effort to improve transparency around this DriveWealth is now releasing an additional boolean property within the GET /countries endpoint that is labeled: expatsAllowed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "`expatsAllowed` takes two forms:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "expatsAllowed takes two forms:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        64,
+        65
+      ],
+      "raw": "* **`true`** - The country is available for users to select as their citizenship\n* **`false`** - The country is NOT available for users to select as their citizenship",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "true - The country is available for users to select as their citizenshipfalse - The country is NOT available for users to select as their citizenship",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        67,
+        69
+      ],
+      "raw": "> 🚧 Country Status and Availability\n>\n> Not all countries will have an `expatsAllowed` property available. If a countries has `active : true` then by default `expatsAllowed` is assumed to be true.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Country Status and AvailabilityNot all countries will have an expatsAllowed property available. If a countries has active : true then by default expatsAllowed is assumed to be true.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        71,
+        90
+      ],
+      "raw": "```json\n[\n    {\n        \"id\": \"ALA\",\n        \"name\": \"Aland Islands\",\n        \"code2\": \"AX\",\n        \"code3\": \"ALA\",\n        \"active\": true,\n        \"expatsAllowed\": true\n    },\n    {\n        \"id\": \"ALB\",\n        \"name\": \"Albania\",\n        \"code2\": \"AL\",\n        \"code3\": \"ALB\",\n        \"active\": true,\n        \"expatsAllowed\": false\n    }\n]\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "[\n    {\n        \"id\": \"ALA\",\n        \"name\": \"Aland Islands\",\n        \"code2\": \"AX\",\n        \"code3\": \"ALA\",\n        \"active\": true,\n        \"expatsAllowed\": true\n    },\n    {\n        \"id\": \"ALB\",\n        \"name\": \"Albania\",\n        \"code2\": \"AL\",\n        \"code3\": \"ALB\",\n        \"active\": true,\n        \"expatsAllowed\": false\n    }\n]"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

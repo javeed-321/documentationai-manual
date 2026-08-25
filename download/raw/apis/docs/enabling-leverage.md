@@ -1,0 +1,51 @@
+---
+updatedAt: 2025-08-20T23:30:16.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Enabling leverage
+
+Leverage refers to the ability to trade more than the cash available in an Account. Leverage is often used by active traders who want to increase their risk and potential return.
+
+There are three general trading types allowed for each Account opened at DriveWealth:
+
+1. **Cash Account** — This is the most basic of the Account types and is considered low risk because the customer is never borrowing cash from DriveWealth. All transactions must be made with available cash. When buying securities in a cash Account, the customer must deposit cash to settle the trade or sell an existing position on the same trading day so that cash proceeds are available to settle the buy order.
+
+2. **Margin Account** — A more complex Account type that can be risky and affords your customer the ability to leverage their investments by borrowing cash from DriveWealth. Customers can buy more assets than the amount of cash they deposit (leverage).
+
+3. **Limited Purpose Margin Accounts (LPMA)** — A variant of a Margin Account that does not allow leverage to be enabled. This Account type is often used to enable [trading while money is en route](https://developer.drivewealth.com/apis/docs/depositing#trading-with-money-en-route) without offering leverage.
+
+## Margin agreements
+
+Whether your customer is opening an LPMA Account (no leverage), or a margin Account, the customer must sign a margin agreement to establish either type of margin account. There are two different agreements for Margin and LPMA.
+
+1. Margin Agreement: provides the disclosure and other information specific to the Margin Account functionality, including the “Trust in Lending” section with covers the information regarding margin loans.
+
+2. LPMA Agreement: is a truncated version of the margin agreement, as no margin lending is provided in the account. However, the LPMA agreement covers other information for customers specific to the LPMA being established.
+
+To show a customer the correct margin or LPMA agreement, read [Showing disclosures](https://developer.drivewealth.com/apis/docs/showing-disclosures).
+
+For both account trading types, be sure to use the [margin disclosure digital document](https://developer.drivewealth.com/apis/docs/opening-accounts) to signal that a customer has viewed the applicable margin disclosure.
+
+## Leverage requirements
+
+For true margin accounts, DriveWealth can provide up to 2:1 leverage for applicable accounts. These customers must meet the following requirements:
+
+* Total Net Worth of greater than or equal to $25,000.
+* Liquid Net Worth of greater than or equal to $5,000.
+* Annual Income greater than or equal to $25,000.
+* Customer must have some investment experience, value cannot be “None”
+
+A customer must have a minimum of $2,000 in total account equity (cash and securities) in their Account to trade with leverage. If the equity balance falls below the $2,000 minimum, leverage will be disabled automatically.
+
+When placing a trade for an Account with leverage, refer to [Retrieve money details by Account](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary-money) to determine the amount the Account can purchase. For example, if $5,000 are deposited, a leveraged Account can generally purchase $10,000 of stock.
+
+To enable or modify leverage, utilize the “leverage” field, available on the [Create Account](https://developer.drivewealth.com/apis/reference/post_accounts) API. Leverage may be enabled at account creation, but will not be granted to the customer until the initial margin requirements are met. Leverage may also be enabled by patching the account.
+
+```json
+PATCH /back-office/accounts/{accountID}
+{
+  "leverage": 0.5
+}
+```

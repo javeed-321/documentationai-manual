@@ -1,0 +1,394 @@
+{
+  "slug": "apis/docs/mcp-examples",
+  "source": "https://developer.drivewealth.com/apis/docs/mcp-examples.md",
+  "url": "https://developer.drivewealth.com/apis/docs/mcp-examples",
+  "title": "MCP examples",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-08-23T15:59:36.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 4,
+    "code": 7,
+    "thematicBreak": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# MCP examples",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "MCP examples",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "### Worked Example: `get_instrument`",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Worked Example: get_instrument",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "This section pairs real request/response examples with the underlying MCP protocol reference. Worked examples show an actual tools/call request built from a tool's schema alongside its captured response, so you can see the full round trip for that tool.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This section pairs real request/response examples with the underlying MCP protocol reference. Worked examples show an actual tools/call request built from a tool's schema alongside its captured response, so you can see the full round trip for that tool.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "**Request**, built from `inputSchema` — the only required field is `symbolOrInstrumentID`:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Request, built from inputSchema — the only required field is symbolOrInstrumentID:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        27
+      ],
+      "raw": "```json\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": \"5\",\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"get_instrument\",\n    \"arguments\": {\n      \"symbolOrInstrumentID\": \"AAPL\"\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": \"5\",\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"get_instrument\",\n    \"arguments\": {\n      \"symbolOrInstrumentID\": \"AAPL\"\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "**Response** (captured live against UAT):",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response (captured live against UAT):",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        31,
+        76
+      ],
+      "raw": "```json\n{\n  \"symbol\": \"AAPL\",\n  \"reutersPrimaryRic\": \"AAPL.O\",\n  \"name\": \"Apple, Inc.\",\n  \"description\": \"Apple Inc. designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services. Its product categories include iPhone, Mac, iPad, Wearables, Home and Accessories. Its services include advertising, AppleCare, cloud services, digital content, and payment services. The Company operates various platforms, including the App Store, that allow customers to discover and download applications and digital content, such as books, music, video, games and podcasts. It also offers digital content through subscription-based services, including Apple Arcade, Apple Fitness+, Apple Music, Apple News+, and Apple TV+. Its wearables include smartwatches, wireless headphones, and spatial computers. Its products include iPhone 16 Pro, iPhone 16, iPhone 15, iPhone 14, iPhone SE, MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio, Mac Pro, iPad Pro, iPad Air, AirPods, AirPods Pro, AirPods Max, Apple TV, Apple Vision Pro and others.\",\n  \"sector\": \"Technology\",\n  \"longOnly\": true,\n  \"orderSizeMax\": 10000,\n  \"orderSizeMin\": 1e-8,\n  \"orderSizeStep\": 1e-8,\n  \"exchangeNickelSpread\": false,\n  \"close\": 337,\n  \"descriptionChinese\": \"Apple Inc设计、制造和销售智能手机、个人电脑、平板电脑、可穿戴设备和配件，并销售各种相关服务。该公司产品类别包括iPhone、Mac、iPad以及可穿戴设备、家居和配件。该公司软件平台包括iOS、iPadOS、macOS、watchOS、visionOS和tvOS。该公司服务包括广告、AppleCare、云服务、数字内容和支付服务。该公司运营包括App Store在内的各种平台，允许客户发现和下载应用程序和数字内容，例如图书、音乐、视频、游戏和播客。该公司还通过基于订阅的服务提供数字内容，包括Apple Arcade、Apple Fitness+、Apple Music、Apple News+和Apple TV+。该公司产品包括iPhone 16 Pro、iPhone 16、iPhone 15、iPhone 14、iPhone SE、MacBook Air、MacBook Pro、iMac、Mac mini、Mac Studio、Mac Pro、iPad Pro、iPad Air、AirPods、AirPods Pro、AirPods Max、Apple TV和Apple Vision Pro。\",\n  \"enableExtendedHoursNotionalStatus\": \"ACTIVE\",\n  \"overnightTradingStatus\": \"INACTIVE\",\n  \"isOptionsEnabled\": true,\n  \"industry\": \"Communications Equipment\",\n  \"trbc2012\": \"Phones & Smart Phones\",\n  \"indexMemberships\": [\n    \"Dow Industry\",\n    \"NASDAQ 100 Index\",\n    \"S&P 500\",\n    \"TR Equity United States Index\"\n  ],\n  \"incorporatedCountry\": \"USA\",\n  \"international\": false,\n  \"priceBufferPctMOC\": 0,\n  \"marketTier\": \"Q\",\n  \"isPTP\": false,\n  \"averageLendingRate\": 0.0175,\n  \"id\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n  \"type\": \"EQUITY\",\n  \"exchange\": \"NSQ\",\n  \"url\": \"http://investor.apple.com\",\n  \"status\": \"ACTIVE\",\n  \"closePrior\": 333.02,\n  \"image\": \"https://uat-drivewealth.imgix.net/symbols/aapl.png?fit=fillmax&w=125&h=125&bg=FFFFFF\",\n  \"ISIN\": \"US0378331005\",\n  \"CUSIP\": \"037833100\",\n  \"SEDOL\": \"2046251\",\n  \"overrideReutersFieldsEnabled\": false,\n  \"VOL10DAVG\": 47546591,\n  \"871mEligible\": true\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"symbol\": \"AAPL\",\n  \"reutersPrimaryRic\": \"AAPL.O\",\n  \"name\": \"Apple, Inc.\",\n  \"description\": \"Apple Inc. designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services. Its product categories include iPhone, Mac, iPad, Wearables, Home and Accessories. Its services include advertising, AppleCare, cloud services, digital content, and payment services. The Company operates various platforms, including the App Store, that allow customers to discover and download applications and digital content, such as books, music, video, games and podcasts. It also offers digital content through subscription-based services, including Apple Arcade, Apple Fitness+, Apple Music, Apple News+, and Apple TV+. Its wearables include smartwatches, wireless headphones, and spatial computers. Its products include iPhone 16 Pro, iPhone 16, iPhone 15, iPhone 14, iPhone SE, MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio, Mac Pro, iPad Pro, iPad Air, AirPods, AirPods Pro, AirPods Max, Apple TV, Apple Vision Pro and others.\",\n  \"sector\": \"Technology\",\n  \"longOnly\": true,\n  \"orderSizeMax\": 10000,\n  \"orderSizeMin\": 1e-8,\n  \"orderSizeStep\": 1e-8,\n  \"exchangeNickelSpread\": false,\n  \"close\": 337,\n  \"descriptionChinese\": \"Apple Inc设计、制造和销售智能手机、个人电脑、平板电脑、可穿戴设备和配件，并销售各种相关服务。该公司产品类别包括iPhone、Mac、iPad以及可穿戴设备、家居和配件。该公司软件平台包括iOS、iPadOS、macOS、watchOS、visionOS和tvOS。该公司服务包括广告、AppleCare、云服务、数字内容和支付服务。该公司运营包括App Store在内的各种平台，允许客户发现和下载应用程序和数字内容，例如图书、音乐、视频、游戏和播客。该公司还通过基于订阅的服务提供数字内容，包括Apple Arcade、Apple Fitness+、Apple Music、Apple News+和Apple TV+。该公司产品包括iPhone 16 Pro、iPhone 16、iPhone 15、iPhone 14、iPhone SE、MacBook Air、MacBook Pro、iMac、Mac mini、Mac Studio、Mac Pro、iPad Pro、iPad Air、AirPods、AirPods Pro、AirPods Max、Apple TV和Apple Vision Pro。\",\n  \"enableExtendedHoursNotionalStatus\": \"ACTIVE\",\n  \"overnightTradingStatus\": \"INACTIVE\",\n  \"isOptionsEnabled\": true,\n  \"industry\": \"Communications Equipment\",\n  \"trbc2012\": \"Phones & Smart Phones\",\n  \"indexMemberships\": [\n    \"Dow Industry\",\n    \"NASDAQ 100 Index\",\n    \"S&P 500\",\n    \"TR Equity United States Index\"\n  ],\n  \"incorporatedCountry\": \"USA\",\n  \"international\": false,\n  \"priceBufferPctMOC\": 0,\n  \"marketTier\": \"Q\",\n  \"isPTP\": false,\n  \"averageLendingRate\": 0.0175,\n  \"id\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n  \"type\": \"EQUITY\",\n  \"exchange\": \"NSQ\",\n  \"url\": \"http://investor.apple.com\",\n  \"status\": \"ACTIVE\",\n  \"closePrior\": 333.02,\n  \"image\": \"https://uat-drivewealth.imgix.net/symbols/aapl.png?fit=fillmax&w=125&h=125&bg=FFFFFF\",\n  \"ISIN\": \"US0378331005\",\n  \"CUSIP\": \"037833100\",\n  \"SEDOL\": \"2046251\",\n  \"overrideReutersFieldsEnabled\": false,\n  \"VOL10DAVG\": 47546591,\n  \"871mEligible\": true\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        78,
+        78
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        80,
+        80
+      ],
+      "raw": "## Protocol Reference",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Protocol Reference",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        82,
+        82
+      ],
+      "raw": "This section pairs real request/response examples with the underlying MCP protocol reference. Worked examples show an actual tools/call request built from a tool's schema alongside its captured response, so you can see the full round trip for that tool.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This section pairs real request/response examples with the underlying MCP protocol reference. Worked examples show an actual tools/call request built from a tool's schema alongside its captured response, so you can see the full round trip for that tool.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        84,
+        84
+      ],
+      "raw": "### `tools/list` Request",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "tools/list Request",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        86,
+        93
+      ],
+      "raw": "```json\n{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"1\",\n    \"method\": \"tools/list\",\n    \"params\": {}\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"1\",\n    \"method\": \"tools/list\",\n    \"params\": {}\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "### `tools/list` Response (Shape Example)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "tools/list Response (Shape Example)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        97,
+        119
+      ],
+      "raw": "```json\n{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"1\",\n    \"result\": {\n        \"tools\": [\n            {\n                \"name\": \"get_account\",\n                \"description\": \"Retrieve account details\",\n                \"inputSchema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"account_id\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"required\": [\"account_id\"]\n                }\n            }\n        ]\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"1\",\n    \"result\": {\n        \"tools\": [\n            {\n                \"name\": \"get_account\",\n                \"description\": \"Retrieve account details\",\n                \"inputSchema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"account_id\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"required\": [\"account_id\"]\n                }\n            }\n        ]\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        121,
+        121
+      ],
+      "raw": "### `tools/call` Request",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "tools/call Request",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        123,
+        135
+      ],
+      "raw": "```json\n{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"2\",\n    \"method\": \"tools/call\",\n    \"params\": {\n        \"name\": \"get_account\",\n        \"arguments\": {\n            \"account_id\": \"A123456789\"\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"2\",\n    \"method\": \"tools/call\",\n    \"params\": {\n        \"name\": \"get_account\",\n        \"arguments\": {\n            \"account_id\": \"A123456789\"\n        }\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "### `tools/call` Error Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "tools/call Error Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        139,
+        150
+      ],
+      "raw": "```json\n{\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"[drivewealth-api] The DriveWealth API returned an error (HTTP 400).\\n{\\\"errorCode\\\":\\\"A011\\\",\\\"message\\\":\\\"A required accountID is missing or invalid. Refer to the API documentation for details.\\\"}\"\n        }\n    ],\n    \"isError\": true\n}\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"[drivewealth-api] The DriveWealth API returned an error (HTTP 400).\\n{\\\"errorCode\\\":\\\"A011\\\",\\\"message\\\":\\\"A required accountID is missing or invalid. Refer to the API documentation for details.\\\"}\"\n        }\n    ],\n    \"isError\": true\n}\n"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        152,
+        152
+      ],
+      "raw": "### `tools/call` Auth Error Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "tools/call Auth Error Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        154,
+        164
+      ],
+      "raw": "```json\n{\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"[drivewealth-api] The DriveWealth back-office API returned an error (HTTP 401).\\n{\\\"errorCode\\\":\\\"L025\\\",\\\"message\\\":\\\"Auth Token expired. Please log in Again. Details: Auth Token expired. Please log in Again.\\\"}\"\n        }\n    ],\n    \"isError\": true\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"[drivewealth-api] The DriveWealth back-office API returned an error (HTTP 401).\\n{\\\"errorCode\\\":\\\"L025\\\",\\\"message\\\":\\\"Auth Token expired. Please log in Again. Details: Auth Token expired. Please log in Again.\\\"}\"\n        }\n    ],\n    \"isError\": true\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

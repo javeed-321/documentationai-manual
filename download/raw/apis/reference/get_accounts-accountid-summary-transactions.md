@@ -1,0 +1,366 @@
+---
+updatedAt: 2026-05-27T16:57:55.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Retrieve Account Transaction Summary
+
+Retrives an Account Transaction Summary details by accountID.
+
+This API has been deprecated. Instead, use List Account Transactions to retrieve historical Transactions. To retrieve orders, use List Account historical Orders.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Core APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Transactions"
+    }
+  ],
+  "paths": {
+    "/accounts/{accountID}/summary/transactions": {
+      "get": {
+        "deprecated": true,
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountID",
+            "schema": {
+              "$ref": "#/components/schemas/accountID"
+            },
+            "required": true
+          }
+        ],
+        "summary": "Retrieve Account Transaction Summary",
+        "description": "Retrives an Account Transaction Summary details by accountID.\n\nThis API has been deprecated. Instead, use List Account Transactions to retrieve historical Transactions. To retrieve orders, use List Account historical Orders.",
+        "responses": {
+          "200": {
+            "description": "Retrieving Account Transaction Summary details was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionSummaryRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "orderID": {
+        "type": "string",
+        "example": "IC.0e352bb7-9869-4233-9861-9673544efedd",
+        "description": "A unique DriveWealth order identifier created when an order is placed."
+      },
+      "orderNo": {
+        "type": "string",
+        "example": "ICDU023727",
+        "description": "A unique, human-readable DriveWealth order number."
+      },
+      "orderStatusNumber": {
+        "type": "number",
+        "example": 2,
+        "description": "The current status of the order, represented as a number.",
+        "enum": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          7,
+          8
+        ]
+      },
+      "stopPrice": {
+        "type": "number",
+        "example": 200,
+        "description": "The stop price of a limit order."
+      },
+      "accountID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+        "description": "The user's unique account identifier."
+      },
+      "accountNo": {
+        "type": "string",
+        "example": "DWBG000052",
+        "description": "The user's unique account number, that is human readable."
+      },
+      "tradingType": {
+        "type": "string",
+        "example": "CASH",
+        "description": "The type of trading the account will participate in.",
+        "enum": [
+          "CASH",
+          "MARGIN"
+        ]
+      },
+      "created": {
+        "type": "string",
+        "example": "2022-12-11T22:28:21.810Z",
+        "description": ""
+      },
+      "instrumentSymbol": {
+        "type": "string",
+        "nullable": true,
+        "example": "MS",
+        "description": "The ticker symbol of the Instrument. Debt Instruments and Global Mutual Funds do not have symbols and are referred to buy their `instrumentID` or `ISIN`."
+      },
+      "instrumentISIN": {
+        "description": "An `International Securities Identification Number` (ISIN) uniquely identifies a security. Its structure is defined in ISO 6166. ISINs are commonly used when an Instrument does not have a `symbol`, such as Debt Instruments and Global Mutual Funds.",
+        "type": "string",
+        "minLength": 12,
+        "maxLength": 14,
+        "example": "US023135BX34"
+      },
+      "instrumentType": {
+        "type": "string",
+        "example": "EQUITY",
+        "description": "The classification of the instrument.",
+        "enum": [
+          "EQUITY",
+          "ALTERNATIVE_ASSET",
+          "MUTUAL_FUND",
+          "DEBT",
+          "OPTION",
+          "CRYPTO"
+        ]
+      },
+      "currency": {
+        "type": "string",
+        "example": "USD",
+        "description": "The name of the currency in abbreviation form.",
+        "enum": [
+          "USD"
+        ]
+      },
+      "sideAbbreviated": {
+        "type": "string",
+        "example": "B",
+        "description": "The side of the order.",
+        "enum": [
+          "B",
+          "S",
+          "BUY_OPEN",
+          "BUY_CLOSE",
+          "SELL_OPEN",
+          "SELL_CLOSE"
+        ]
+      },
+      "orderQuantity": {
+        "type": "number",
+        "example": 0.7219,
+        "description": "The amount of the instrument in shares."
+      },
+      "orderCumulativeQuantity": {
+        "type": "number",
+        "example": 0.7219,
+        "description": "The amount of shares currently being transacted; larger orders may execute in chunks."
+      },
+      "limitPrice": {
+        "type": "number",
+        "example": null,
+        "description": "The price set for the limit order."
+      },
+      "transactionObj": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "$ref": "#/components/schemas/orderID"
+          },
+          "orderNo": {
+            "$ref": "#/components/schemas/orderNo"
+          },
+          "symbol": {
+            "$ref": "#/components/schemas/instrumentSymbol"
+          },
+          "ISIN": {
+            "$ref": "#/components/schemas/instrumentISIN"
+          },
+          "instrumentType": {
+            "$ref": "#/components/schemas/instrumentType"
+          },
+          "cumQty": {
+            "$ref": "#/components/schemas/orderCumulativeQuantity"
+          },
+          "orderStatus": {
+            "$ref": "#/components/schemas/orderStatusNumber"
+          },
+          "orderType": {
+            "type": "string",
+            "example": "1",
+            "description": "The type of order that is placed.",
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "6",
+              "7",
+              "m"
+            ]
+          },
+          "orderQty": {
+            "$ref": "#/components/schemas/orderQuantity"
+          },
+          "limitPrice": {
+            "$ref": "#/components/schemas/limitPrice"
+          },
+          "stopPrice": {
+            "$ref": "#/components/schemas/stopPrice"
+          },
+          "executedPrice": {
+            "type": "number",
+            "example": 122.47,
+            "description": "The price at which the order was executed."
+          },
+          "side": {
+            "$ref": "#/components/schemas/sideAbbreviated"
+          },
+          "createdWhen": {
+            "$ref": "#/components/schemas/created"
+          },
+          "updatedWhen": {
+            "type": "string",
+            "example": "2017-06-16T15:35:30.617Z",
+            "description": "NEEDS DESCRIPTION"
+          },
+          "updatedReason": {
+            "type": "string",
+            "example": "market_order-buy-new",
+            "description": "A reason for the update."
+          },
+          "commission": {
+            "type": "number",
+            "example": 0,
+            "description": "Commission for the transaction if applicable."
+          },
+          "commissionDesc": {
+            "type": "string",
+            "example": "Free",
+            "description": "A short description about the commission."
+          },
+          "isoTimeRestingOrderExpires": {
+            "type": "string",
+            "example": null,
+            "description": "The time when the limit order expires."
+          },
+          "executedWhen": {
+            "type": "string",
+            "example": "017-06-16T15:35:27.856Z",
+            "description": "The time when the transaction was executed."
+          },
+          "realizedPL": {
+            "type": "number",
+            "example": 3564.38,
+            "description": "Realized profit and loss for position."
+          },
+          "orderCashAmt": {
+            "type": "number",
+            "example": null,
+            "description": "The amount of cash requested for an order (fractional shares only)."
+          },
+          "salesCredit": {
+            "$ref": "#/components/schemas/SalesCredit"
+          },
+          "currency": {
+            "$ref": "#/components/schemas/currency"
+          }
+        }
+      },
+      "SalesCredit": {
+        "type": "object",
+        "description": "If set, the unit price will be marked up or marked down based on the prescribed amount. Only applicable to Orders for Debt Instruments.",
+        "properties": {
+          "currency": {
+            "$ref": "#/components/schemas/currency"
+          },
+          "amount": {
+            "type": "integer",
+            "example": 14,
+            "description": "The sales credit amount in cents."
+          }
+        }
+      },
+      "TransactionSummaryRes": {
+        "type": "object",
+        "properties": {
+          "accountID": {
+            "$ref": "#/components/schemas/accountID"
+          },
+          "accountNo": {
+            "$ref": "#/components/schemas/accountNo"
+          },
+          "tradingType": {
+            "$ref": "#/components/schemas/tradingType"
+          },
+          "updated": {
+            "type": "string",
+            "example": "2017-06-16T15:35:30.617Z",
+            "description": "Time of last update."
+          },
+          "transactions": {
+            "type": "array",
+            "description": "An Array of transactions.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/transactionObj"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

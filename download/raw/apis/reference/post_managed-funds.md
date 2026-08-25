@@ -1,0 +1,268 @@
+---
+updatedAt: 2026-05-27T16:58:45.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create Fund
+
+Creates a Fund.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Advisor APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Funds"
+    }
+  ],
+  "paths": {
+    "/managed/funds": {
+      "post": {
+        "deprecated": true,
+        "tags": [
+          "Funds"
+        ],
+        "summary": "Create Fund",
+        "description": "Creates a Fund.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/fundsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Creating a Fund was Successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/fundsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "clientFundID": {
+        "type": "string",
+        "example": "AAABBB-1222-3344.123456789",
+        "description": "A user defined identifier attached to the fund."
+      },
+      "managedAccountsUserID": {
+        "type": "string",
+        "example": "66304da9-3h6f-2234-935f-ac6b7933d706",
+        "description": "The unique identifier of the registered investment advisors account."
+      },
+      "holdingsObject": {
+        "type": "object",
+        "description": "An object in the holdings array that holds the instrumentID and target.",
+        "properties": {
+          "instrumentID": {
+            "type": "string",
+            "example": "5b85fabb-d57c-44e6-a7f6-a3efc760226c",
+            "description": "A unique ID created by DriveWealth to identify a specific instrument."
+          },
+          "target": {
+            "type": "number",
+            "example": 0.5,
+            "description": "The target percentage for the specific instrumentID within a fund."
+          }
+        }
+      },
+      "clientListID": {
+        "type": "string",
+        "example": "SUMS_CUSTOM_ALLOCATION_TEST",
+        "description": "An advisor created identifier for a specific allocation."
+      },
+      "fundsRequest": {
+        "type": "object",
+        "required": [
+          "userID",
+          "name",
+          "clientFundID",
+          "description",
+          "holdings",
+          "triggers"
+        ],
+        "properties": {
+          "userID": {
+            "type": "string",
+            "example": "66304da9-3h6f-2234-935f-ac6b7933d706",
+            "description": "The unique identifier of the registered investment advisors account."
+          },
+          "name": {
+            "type": "string",
+            "example": "TECH",
+            "description": "A name given to the Fund by the RIA."
+          },
+          "clientFundID": {
+            "$ref": "#/components/schemas/clientListID"
+          },
+          "description": {
+            "type": "string",
+            "example": "Top 10 US Tech",
+            "description": "A short description for the Fund."
+          },
+          "holdings": {
+            "type": "array",
+            "description": "An array of objects that hold the type of securities in a Fund.",
+            "items": {
+              "$ref": "#/components/schemas/holdingsObject"
+            }
+          },
+          "triggers": {
+            "type": "array",
+            "description": "An array of objects that hold information on when to trigger a rebalance in a Fund.",
+            "items": {
+              "$ref": "#/components/schemas/triggersObject"
+            }
+          }
+        }
+      },
+      "triggersObject": {
+        "type": "object",
+        "description": "An object that holds the details of when to trigger a rebalance of the Fund.",
+        "required": [
+          "type",
+          "child",
+          "maxAllowed",
+          "lowerBound",
+          "upperBound"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "TOTAL_DRIFT",
+            "description": "The type of trigger specified to enable a rebalance.",
+            "enum": [
+              "TOTAL_DRIFT",
+              "RELATIVE_DRIFT",
+              "ABSOLUTE_DRIFT"
+            ]
+          },
+          "maxAllowed": {
+            "type": "number",
+            "example": 0.05,
+            "description": "The maximum allowed drift for the Fund."
+          },
+          "child": {
+            "type": "string",
+            "example": null
+          },
+          "lowerBound": {
+            "type": "number",
+            "example": 0.01,
+            "description": "The lowest bound range of the drift parameters."
+          },
+          "upperBound": {
+            "type": "number",
+            "example": 0.02,
+            "description": "The highest bound range of the drift parameter."
+          }
+        }
+      },
+      "fundsResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "fund_3d7d00d1-f09e-4f86-9cbf-893c75cf77fe",
+            "description": "The unique identifier associated with the Fund."
+          },
+          "userID": {
+            "$ref": "#/components/schemas/managedAccountsUserID"
+          },
+          "name": {
+            "type": "string",
+            "example": "TECH",
+            "description": "A name given to the Fund by the RIA."
+          },
+          "type": {
+            "type": "string",
+            "example": "FUND"
+          },
+          "clientFundID": {
+            "$ref": "#/components/schemas/clientFundID"
+          },
+          "description": {
+            "type": "string",
+            "example": "Top 10 US Tech",
+            "description": "A short description for the Fund."
+          },
+          "holdings": {
+            "type": "array",
+            "description": "An array of objects that hold the type of securities in a Fund.",
+            "items": {
+              "$ref": "#/components/schemas/holdingsObject"
+            }
+          },
+          "triggers": {
+            "type": "array",
+            "description": "An array of objects that hold information on when to trigger a rebalance.",
+            "items": {
+              "$ref": "#/components/schemas/triggersObject"
+            }
+          },
+          "isInstrumentTargetsChanged": {
+            "type": "boolean",
+            "example": false
+          },
+          "instrumentTargetsChanged": {
+            "type": "boolean",
+            "example": false
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

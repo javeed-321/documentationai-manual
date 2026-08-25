@@ -1,0 +1,574 @@
+{
+  "slug": "apis/changelog/api-release-161",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-161.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-161",
+  "title": "API Release 1.61",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `@` (U+0040) in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 15,
+    "paragraph": 15,
+    "list": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.61",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.61",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "We are back with another release and we are super excited to share with you all some changes to the platform.  This release is a relatively small one but we are working hard behind the scenes to bring you more features and fix issues on the platform. If you have any questions about this release feel free to reach out to us on the slack channels or send us an email at: <psg@drivewealth.com.>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are back with another release and we are super excited to share with you all some changes to the platform.  This release is a relatively small one but we are working hard behind the scenes to bring you more features and fix issues on the platform. If you have any questions about this release feel free to reach out to us on the slack channels or send us an email at: <psg@drivewealth.com.>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Bummer, nothing new this go around but check out things that are in the pipeline.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Bummer, nothing new this go around but check out things that are in the pipeline.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🎉 Feature Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Instant Funding",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Instant Funding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Instant funding is getting a sexy new name in our deposit and withdrawal APIs and it's called Bulk Funding. The functionality stays the same but the API will now accept `BULK_FUNDING` as the type.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Instant funding is getting a sexy new name in our deposit and withdrawal APIs and it's called Bulk Funding. The functionality stays the same but the API will now accept BULK_FUNDING as the type.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Please note, the platform will continue to accept `INSTANT_FUNDING` as an argument until further notice. We will update our partners to when this will be phased out. So, stay tuned.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please note, the platform will continue to accept INSTANT_FUNDING as an argument until further notice. We will update our partners to when this will be phased out. So, stay tuned.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "What is bulk funding, check out this [article](https://developer.drivewealth.com/apis/v1.61.0/docs/depositing#bulk-deposits) on the topic.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "What is bulk funding, check out this article on the topic.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## Withdrawing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Withdrawing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "Withdrawing cash from the platform has always been easy but in some rare occasions when liquidating and closing accounts there would be residual funds in the account normally less than a few dollars. The account would be closed and withdrawing from the account any further would be ceased.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Withdrawing cash from the platform has always been easy but in some rare occasions when liquidating and closing accounts there would be residual funds in the account normally less than a few dollars. The account would be closed and withdrawing from the account any further would be ceased.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "We are now introducing the ability to withdraw residual funds from these closed accounts. So, simply call the [withdrawal API](https://developer.drivewealth.com/apis/reference/post_funding-redemptions)as normally, and the withdrawal will be processed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are now introducing the ability to withdraw residual funds from these closed accounts. So, simply call the withdrawal APIas normally, and the withdrawal will be processed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "Please note that it is specifically for Robo Advisory accounts that are settling in bulk to DriveWealth. Additionally, please reach out to your **account manager** to enable this feature.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please note that it is specifically for Robo Advisory accounts that are settling in bulk to DriveWealth. Additionally, please reach out to your account manager to enable this feature.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## Instruments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Instruments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "### Fundamental Data",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Fundamental Data",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "Our instruments API is getting better and we are adding more data in the `fundamentalDataModel` object, that will help you build more intelligent user experiences for your customers. We are adding the following:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Our instruments API is getting better and we are adding more data in the fundamentalDataModel object, that will help you build more intelligent user experiences for your customers. We are adding the following:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        35,
+        39
+      ],
+      "raw": "* **`percentchangeMTD`**\n* **`percentchangeYTD`**\n* **`percentchange13week`**\n* **`percentchange26week`**\n* **`percentchange52week`**",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "percentchangeMTDpercentchangeYTDpercentchange13weekpercentchange26weekpercentchange52week",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "Check out our [instruments API](https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid) to learn more.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Check out our instruments API to learn more.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "### Filters",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Filters",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "More in instruments, we are improving the instruments filter API to better handle operators and making the name such as ISIN, CUSIP and more filterable as well. To learn more, see the [instruments filter API](https://developer.drivewealth.com/apis/reference/filterinstruments)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "More in instruments, we are improving the instruments filter API to better handle operators and making the name such as ISIN, CUSIP and more filterable as well. To learn more, see the instruments filter API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "## ACATs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "ACATs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "We are now making it easier for you to view the status of ACATs right in the DriveHub UI. All you have to do is search the account in question, click on the pencil labeled notes, then filter the notes by ACAT delivery, “ba da bing ba da boom.”",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are now making it easier for you to view the status of ACATs right in the DriveHub UI. All you have to do is search the account in question, click on the pencil labeled notes, then filter the notes by ACAT delivery, “ba da bing ba da boom.”",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "# 👠🐛 Squashing Bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing Bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "## Closing Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Closing Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "In some cases there were issues around closing customer accounts. The API would return a **403** error when making the call to close the account. We deployed a fix for this issue. Thank you for your patience.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In some cases there were issues around closing customer accounts. The API would return a 403 error when making the call to close the account. We deployed a fix for this issue. Thank you for your patience.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "# 👤 🆙  Heads Up",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👤 🆙  Heads Up",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "## KYC",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "KYC",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "In order to resolve issues with customers KYC statuses not in an approved state after 30 days, we are working on moving those customer accounts to a “FROZEN” state. Customer’s will no longer be able to trade in the account until they complete the KYC approval process. After the customer is approved, the account will automatically be set to an “OPEN” state.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In order to resolve issues with customers KYC statuses not in an approved state after 30 days, we are working on moving those customer accounts to a “FROZEN” state. Customer’s will no longer be able to trade in the account until they complete the KYC approval process. After the customer is approved, the account will automatically be set to an “OPEN” state.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "#### 🗒️ Important Note",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "🗒️ Important Note",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        65,
+        67
+      ],
+      "raw": "This is for all partners, who have reliance provisions with DriveWealth. Unsure, if this is you. Reach out to your account manager, for more details.\\\nAn **effective date** for this change **has not yet been** determined.\\\nStay on the lookout for communication with more information in the near future.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is for all partners, who have reliance provisions with DriveWealth. Unsure, if this is you. Reach out to your account manager, for more details.An effective date for this change has not yet been determined.Stay on the lookout for communication with more information in the near future.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        71,
+        168
+      ],
+      "raw": "```groovy CHANGELOG.md\n## Modified endpoints\n\n**`POST /funding/deposits`**\n\n* Request payload:\n    * Changed enum values for property `type`\n        * Added values `BULK_FUNDING`, `CASH_TRANSFER`\n        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_DEPOSITS`\n* Modified the `200` response:\n    * Changed object property `source`\n        * Changed enum values for property `id`\n            * Added values `BULK_FUNDING`, `CASH_TRANSFER`\n            * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_DEPOSITS`\n\n**`GET /funding/redemptions`**\n\n* Path parameters:\n* Modified the `200` response:\n    * Changed root array\n        * Modified the schema option `WithdrawalForTheFirm`\n            * Changed enum values for property `type`\n                * Added values `BULK_FUNDING`\n                * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n\n**`POST /funding/redemptions`**\n\n* Request payload:\n    * Changed enum values for property `type`\n        * Added values `BULK_FUNDING`\n        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n* Modified the `200` response:\n    * Changed object property `source`\n        * Changed enum values for property `id`\n            * Added values `BULK_FUNDING`\n            * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n\n**`GET /funding/redemptions/{redemptionID}`**\n\n* Modified the `200` response:\n    * Changed enum values for property `type`\n        * Added values `BULK_FUNDING`\n        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n\n**`GET /instruments`**\n\n* Modified the `200` response:\n    * Changed root array\n        * Removed 2 schema options: InstrumentInList, DebtInstrumentDetails\n\n**`POST /instruments/filter`**\n\n* Request payload:\n    * Changed root array\n        * Changed nested object schema\n            * Changed enum values for property `field`\n                * Added values `ISIN`, `CUSIP`, `payFrequency`, `spRating`, `couponRate`, `maturityDate`, `spRating`, `bidPrice`, `askPrice`, `askYieldToMaturity`, `bidYieldToMaturity`, `status`, `bondType`, `issuer.primaryName`, `issuer.domicileCountry`, `issuer.country`, `coupon.dayCount`, `coupon.couponType`, `coupon.nextCouponDate`, `minimumInvestmentAmount`, `incrementalInvestmentAmount`\n* Modified the `200` response:\n    * Changed root array\n        * Removed 2 schema options: InstrumentInList, DebtInstrumentDetails\n\n**`GET /instruments/{symbolOrInstrumentID}`**\n\n* Modified the `200` response:\n    * Modified the schema option `DebtInstrumentDetails`\n        * Added property `bondType`\n        * Added property `maturityDate`\n        * Added property `coupon`\n        * Added property `payFrequency`\n        * Added property `minimumInvestmentAmount`\n        * Added property `debtType`\n        * Added property `couponRate`\n        * Added property `incrementalInvestmentAmount`\n        * Added property `issuePrice`\n        * Added property `issueAmount`\n        * Added property `datedDate`\n        * Added property `issueDate`\n        * Added property `accruedInterest`\n        * Added property `issuer`\n        * Added property `spRating`\n        * Removed property `debtData`\n    * Modified the schema option `EquityInstrumentDetails`\n        * Changed object property `fundamentalDataModel`\n            * Added property `percentchange26week`\n            * Added property `percentchange52week`\n            * Added property `percentchange13week`\n            * Added property `percentchangeYTD`\n            * Added property `percentchangeMTD`\n    * Modified the schema option `MutualFundInstrumentDetails`\n        * Changed object property `mutualFundData`\n            * Added property `domicile`\n            * Added property `summaryRiskIndicator`\n            * Added property `managementFee`\n            * Added property `UCITS`\n            * Added property `prospectusUrl`\n            * Removed property `settlementDays`\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "groovy",
+        "title": "CHANGELOG.md",
+        "code": "## Modified endpoints\n\n**`POST /funding/deposits`**\n\n* Request payload:\n    * Changed enum values for property `type`\n        * Added values `BULK_FUNDING`, `CASH_TRANSFER`\n        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_DEPOSITS`\n* Modified the `200` response:\n    * Changed object property `source`\n        * Changed enum values for property `id`\n            * Added values `BULK_FUNDING`, `CASH_TRANSFER`\n            * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_DEPOSITS`\n\n**`GET /funding/redemptions`**\n\n* Path parameters:\n* Modified the `200` response:\n    * Changed root array\n        * Modified the schema option `WithdrawalForTheFirm`\n            * Changed enum values for property `type`\n                * Added values `BULK_FUNDING`\n                * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n\n**`POST /funding/redemptions`**\n\n* Request payload:\n    * Changed enum values for property `type`\n        * Added values `BULK_FUNDING`\n        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n* Modified the `200` response:\n    * Changed object property `source`\n        * Changed enum values for property `id`\n            * Added values `BULK_FUNDING`\n            * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n\n**`GET /funding/redemptions/{redemptionID}`**\n\n* Modified the `200` response:\n    * Changed enum values for property `type`\n        * Added values `BULK_FUNDING`\n        * Removed values `INSTANT_FUNDING`, `CASH_TRANSFER_WITHDRAWALS`\n\n**`GET /instruments`**\n\n* Modified the `200` response:\n    * Changed root array\n        * Removed 2 schema options: InstrumentInList, DebtInstrumentDetails\n\n**`POST /instruments/filter`**\n\n* Request payload:\n    * Changed root array\n        * Changed nested object schema\n            * Changed enum values for property `field`\n                * Added values `ISIN`, `CUSIP`, `payFrequency`, `spRating`, `couponRate`, `maturityDate`, `spRating`, `bidPrice`, `askPrice`, `askYieldToMaturity`, `bidYieldToMaturity`, `status`, `bondType`, `issuer.primaryName`, `issuer.domicileCountry`, `issuer.country`, `coupon.dayCount`, `coupon.couponType`, `coupon.nextCouponDate`, `minimumInvestmentAmount`, `incrementalInvestmentAmount`\n* Modified the `200` response:\n    * Changed root array\n        * Removed 2 schema options: InstrumentInList, DebtInstrumentDetails\n\n**`GET /instruments/{symbolOrInstrumentID}`**\n\n* Modified the `200` response:\n    * Modified the schema option `DebtInstrumentDetails`\n        * Added property `bondType`\n        * Added property `maturityDate`\n        * Added property `coupon`\n        * Added property `payFrequency`\n        * Added property `minimumInvestmentAmount`\n        * Added property `debtType`\n        * Added property `couponRate`\n        * Added property `incrementalInvestmentAmount`\n        * Added property `issuePrice`\n        * Added property `issueAmount`\n        * Added property `datedDate`\n        * Added property `issueDate`\n        * Added property `accruedInterest`\n        * Added property `issuer`\n        * Added property `spRating`\n        * Removed property `debtData`\n    * Modified the schema option `EquityInstrumentDetails`\n        * Changed object property `fundamentalDataModel`\n            * Added property `percentchange26week`\n            * Added property `percentchange52week`\n            * Added property `percentchange13week`\n            * Added property `percentchangeYTD`\n            * Added property `percentchangeMTD`\n    * Modified the schema option `MutualFundInstrumentDetails`\n        * Changed object property `mutualFundData`\n            * Added property `domicile`\n            * Added property `summaryRiskIndicator`\n            * Added property `managementFee`\n            * Added property `UCITS`\n            * Added property `prospectusUrl`\n            * Removed property `settlementDays`\n"
+      },
+      "text": "CHANGELOG.md",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

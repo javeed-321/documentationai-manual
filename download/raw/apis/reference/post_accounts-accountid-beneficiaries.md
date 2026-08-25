@@ -1,0 +1,462 @@
+---
+updatedAt: 2026-05-27T16:58:08.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create Account Beneficiaries
+
+Creates an Account Beneficiary by accountID.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Account Management APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Beneficiaries"
+    }
+  ],
+  "paths": {
+    "/accounts/{accountID}/beneficiaries": {
+      "post": {
+        "tags": [
+          "Beneficiaries"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountID",
+            "schema": {
+              "$ref": "#/components/schemas/accountID"
+            },
+            "required": true
+          }
+        ],
+        "summary": "Create Account Beneficiaries",
+        "description": "Creates an Account Beneficiary by accountID.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BeneficiaryReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Creating an Account Beneficiary was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BeneficiaryRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "accountID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+        "description": "The user's unique account identifier."
+      },
+      "name": {
+        "type": "string",
+        "example": "Tom Ace",
+        "description": "Full name or entity name of type."
+      },
+      "EntityBeneficiariesReqObject": {
+        "type": "object",
+        "required": [
+          "type",
+          "name",
+          "percentage",
+          "primaryContact",
+          "formationDate",
+          "relationship",
+          "idType",
+          "idNo",
+          "address",
+          "formationCountry"
+        ],
+        "description": "An object containing the request information of a beneficiary.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "ENTITY",
+            "description": "Type of beneficiary.",
+            "enum": [
+              "ENTITY"
+            ]
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "percentage": {
+            "type": "number",
+            "example": 0.25,
+            "description": "Percentage ownership beneficiary has in the account. Must total 1 (aka 100%) across all beneficiaries."
+          },
+          "email": {
+            "type": "string",
+            "example": "tom@ac.com",
+            "description": "The email of the beneficiary."
+          },
+          "formationDate": {
+            "type": "string",
+            "example": "2010-10-25",
+            "description": "Entity formation date. Must follow the YYYY-MM-DD format."
+          },
+          "primaryContact": {
+            "type": "string",
+            "example": "5512478089",
+            "description": "Primary phone contact of entity."
+          },
+          "phone": {
+            "type": "string",
+            "example": "4153647890",
+            "description": "Phone number of beneficiary."
+          },
+          "address": {
+            "type": "string",
+            "example": "123 Main Street, New York, NY 10001",
+            "description": "Address of the beneficiary."
+          },
+          "relationship": {
+            "type": "string",
+            "example": "Trust",
+            "description": "Relationship to account holder.",
+            "enum": [
+              "Trust",
+              "Organization"
+            ]
+          },
+          "idType": {
+            "type": "string",
+            "example": "EIN",
+            "description": "Type of identification.",
+            "enum": [
+              "EIN",
+              "FTIN",
+              "OTHER"
+            ]
+          },
+          "idNo": {
+            "type": "string",
+            "example": "123456789",
+            "description": "Identification number. For EIN, must be 9 digit numbers only."
+          },
+          "formationCountry": {
+            "type": "string",
+            "example": "USA",
+            "description": "Country of formation in ISO3 format (3-letter country code)."
+          }
+        }
+      },
+      "PersonBeneficiariesReqObject": {
+        "type": "object",
+        "required": [
+          "type",
+          "name",
+          "percentage",
+          "dob",
+          "relationship",
+          "idType",
+          "idNo",
+          "address",
+          "citizenship"
+        ],
+        "description": "An object containing the request information of a beneficiary.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "PERSON",
+            "description": "Type of beneficiary.",
+            "enum": [
+              "PERSON"
+            ]
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "percentage": {
+            "type": "number",
+            "example": 0.25,
+            "description": "Percentage ownership beneficiary has in the account. Must total 1 (aka 100%) across all beneficiaries."
+          },
+          "dob": {
+            "type": "string",
+            "example": "1999-10-10",
+            "description": "Date of birth of the beneficiary."
+          },
+          "email": {
+            "type": "string",
+            "example": "tom@ac.com",
+            "description": "The email of the beneficiary."
+          },
+          "phone": {
+            "type": "string",
+            "example": "4153647890",
+            "description": "Phone number of beneficiary."
+          },
+          "address": {
+            "type": "string",
+            "example": "123 Main Street, New York, NY 10001",
+            "description": "Address of the beneficiary."
+          },
+          "relationship": {
+            "type": "string",
+            "example": "Spouse",
+            "description": "Relationship to account holder.",
+            "enum": [
+              "Spouse",
+              "Children",
+              "Grandchildren",
+              "Parents",
+              "Other"
+            ]
+          },
+          "idType": {
+            "type": "string",
+            "example": "SSN",
+            "description": "Type of identification.",
+            "enum": [
+              "SSN",
+              "FTIN",
+              "OTHER"
+            ]
+          },
+          "idNo": {
+            "type": "string",
+            "example": "123456789",
+            "description": "Identification number. For SSN, must be 9 digit numbers only."
+          },
+          "citizenship": {
+            "type": "string",
+            "example": "USA",
+            "description": "Citizenship in ISO3 format (3-letter country code)."
+          },
+          "documentID": {
+            "type": "string",
+            "example": "1b798a36-5837-45e4-9000-5cd8d3e2dde7",
+            "description": "Identifier of the uploaded/associated document record (for example, the UUID returned when the document was uploaded)."
+          }
+        }
+      },
+      "beneficiariesResObject": {
+        "type": "object",
+        "description": "An object containing the response information of a beneficiary.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "ENTITY",
+            "description": "Type of beneficiary.",
+            "enum": [
+              "PERSON",
+              "ENTITY"
+            ]
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "percentage": {
+            "type": "number",
+            "example": "0.25",
+            "description": "Percentage ownership beneficiary has in the account. Must total 1 (aka 100%) across all beneficiaries."
+          },
+          "dob": {
+            "type": "string",
+            "example": "1999-10-10",
+            "description": "Date of birth of the beneficiary. Only required if type: `PERSON`."
+          },
+          "email": {
+            "type": "string",
+            "example": "tom@ac.com",
+            "description": "The email of the entity."
+          },
+          "formationDate": {
+            "type": "string",
+            "example": "2010-10-25",
+            "description": "Entity formation date. Must follow the YYYY-MM-DD format. Only required if type: `ENTITY`."
+          },
+          "primaryContact": {
+            "type": "string",
+            "example": "5512478089",
+            "description": "Primary phone contact of entity. Only required if type: `ENTITY`"
+          },
+          "phone": {
+            "type": "string",
+            "example": "4153647890",
+            "description": "Phone number of beneficiary."
+          },
+          "created": {
+            "type": "string",
+            "example": "2022-12-29T18:32:15.533Z",
+            "description": "The when the beneficiary was added to the account."
+          },
+          "address": {
+            "type": "string",
+            "example": "123 Main Street, New York, NY 10001",
+            "description": "Address of the beneficiary."
+          },
+          "relationship": {
+            "type": "string",
+            "example": "Trust",
+            "description": "Relationship to account holder. For ENTITY type: Trust, Organization. For PERSON type: Spouse, Children, Grandchildren, Parents, Other.",
+            "enum": [
+              "Trust",
+              "Organization",
+              "Spouse",
+              "Children",
+              "Grandchildren",
+              "Parents",
+              "Other"
+            ]
+          },
+          "idType": {
+            "type": "string",
+            "example": "EIN",
+            "description": "Type of identification. For ENTITY type: EIN, FTIN, OTHER. For PERSON type: SSN, FTIN, OTHER.",
+            "enum": [
+              "SSN",
+              "EIN",
+              "FTIN",
+              "OTHER"
+            ]
+          },
+          "idNo": {
+            "type": "string",
+            "example": "123456789",
+            "description": "Identification number. For SSN and EIN, must be 9 digit numbers only."
+          },
+          "citizenship": {
+            "type": "string",
+            "example": "USA",
+            "description": "Citizenship in ISO3 format (3-letter country code). Only required if type: `PERSON`."
+          },
+          "formationCountry": {
+            "type": "string",
+            "example": "USA",
+            "description": "Country of formation in ISO3 format (3-letter country code). Only required if type: `ENTITY`."
+          },
+          "documentID": {
+            "type": "string",
+            "example": "1b798a36-5837-45e4-9000-5cd8d3e2dde7",
+            "description": "Document identification number. Only valid if type: `PERSON`."
+          }
+        }
+      },
+      "BeneficiaryReq": {
+        "type": "object",
+        "required": [
+          "primary"
+        ],
+        "properties": {
+          "primary": {
+            "type": "array",
+            "description": "An array of objects containing the primary beneficiary details",
+            "minItems": 1,
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/EntityBeneficiariesReqObject"
+                },
+                {
+                  "$ref": "#/components/schemas/PersonBeneficiariesReqObject"
+                }
+              ]
+            }
+          },
+          "contingent": {
+            "type": "array",
+            "description": "An array of objects containing the contingent beneficiary details.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/EntityBeneficiariesReqObject"
+                },
+                {
+                  "$ref": "#/components/schemas/PersonBeneficiariesReqObject"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "BeneficiaryRes": {
+        "type": "object",
+        "properties": {
+          "primary": {
+            "type": "array",
+            "description": "An array of objects containing the primary beneficiary details",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/beneficiariesResObject"
+                }
+              ]
+            }
+          },
+          "contingent": {
+            "type": "array",
+            "description": "An array of objects containing the contingent beneficiary details.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/beneficiariesResObject"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
+```

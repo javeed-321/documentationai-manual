@@ -1,0 +1,373 @@
+{
+  "slug": "apis/changelog/api-release-1-68-1",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-1-68-1.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-1-68-1",
+  "title": "API Release v1.68.1",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 10,
+    "paragraph": 7,
+    "Table": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release v1.68.1",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release v1.68.1",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Hey, we are back with another release. We are always improving the platform and if you have any questions regarding any release, feel free to contact your relations manager or email us directly at [RMteam@drivewealth.com](mailto:rmteam@drivewealth.com).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Hey, we are back with another release. We are always improving the platform and if you have any questions regarding any release, feel free to contact your relations manager or email us directly at RMteam@drivewealth.com.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Status           | Environment |\n| :--------------- | :---------: |\n| ✨💃🏻 Prime Time |     PROD    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Environment"
+        ],
+        "rows": [
+          [
+            "✨💃🏻 Prime Time",
+            "PROD"
+          ]
+        ],
+        "align": [
+          "left",
+          "center"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🚀 New features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Health savings accounts (HSA)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Health savings accounts (HSA)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "We are super excited to announce the launch of our Health Savings Account (HSA) **investing** account. With this new account [type](https://developer.drivewealth.com/apis/reference/enums#account-type), customers will be able to use HSA funds to make investments in their HSA account; to use towards furture medical expenses. We are offering the flowing investment flows for HSA accounts: Self directed, Robo Advisory, and Managed. To learn more about these different types of investment flows, [see here](https://developer.drivewealth.com/apis/reference/enums).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are super excited to announce the launch of our Health Savings Account (HSA) investing account. With this new account type, customers will be able to use HSA funds to make investments in their HSA account; to use towards furture medical expenses. We are offering the flowing investment flows for HSA accounts: Self directed, Robo Advisory, and Managed. To learn more about these different types of investment flows, see here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "In order to get started with HSA accounts, please contact your relations manager or email us directly at [RMteam@drivewealth.com](mailto:rmteam@drivewealth.com). Please be aware this account type is only for U.S. residents whom have a valid social security number.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In order to get started with HSA accounts, please contact your relations manager or email us directly at RMteam@drivewealth.com. Please be aware this account type is only for U.S. residents whom have a valid social security number.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "# 🎉 Feature enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## Countries",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Countries",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "We are now introducing a feature where users that trying to be onboarded from a [non active country](https://developer.drivewealth.com/apis/reference/get_countries), the user is automatically rejected from being created on the platform.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are now introducing a feature where users that trying to be onboarded from a non active country, the user is automatically rejected from being created on the platform.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "## ACATs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "ACATs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "We enhanced our [asset transfer](https://developer.drivewealth.com/apis/reference/post_asset-transfers-acats) api. Starting this release, if an incorrect DTCC code known as `clearingNo` is passed; we will now reject the api request.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We enhanced our asset transfer api. Starting this release, if an incorrect DTCC code known as clearingNo is passed; we will now reject the api request.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## KYC",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "KYC",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "We enhanced the ability to send users to phsyical document review if the user is living in the United State but has a citizenship in a DOC country list.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We enhanced the ability to send users to phsyical document review if the user is living in the United State but has a citizenship in a DOC country list.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "# 👠🐛 Squashing bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## One Settlement",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "One Settlement",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "We had an issue with [One Settlement](https://developer.drivewealth.com/apis/reference/get_settlements-settlementid). When settlement reports finished processing they would stay in `PENDING` and not move into a `SUCCESSFUL` state. We corrected that issue with this release.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We had an issue with One Settlement. When settlement reports finished processing they would stay in PENDING and not move into a SUCCESSFUL state. We corrected that issue with this release.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        41,
+        166
+      ],
+      "raw": "```markdown\n## Modified endpoints\n\n**`GET /accounts/{accountID}/options/positions`**\n\n- Modified the `200` response:\n    - Changed array property `data`\n        - Modified the schema option `0`\n\n**`GET /orders/options`**\n\n- Path parameters:\n    - Added new query parameter `partnerID`\n    - Added new query parameter `from`\n    - Added new query parameter `to`\n    - Added new query parameter `limit`\n    - Added new query parameter `offset`\n    - Removed query parameter `partnerIBID`\n    - Removed query parameter `fromDate`\n    - Removed query parameter `toDate`\n    - Removed query parameter `pageSize`\n    - Removed query parameter `pageNo`\n- Modified the `200` response:\n    - Added property `data`\n    - Added property `nextPageOffset`\n    - Added property `prevPageOffset`\n    - Removed property `pageNo`\n    - Removed property `pageSize`\n    - Removed property `results`\n    - Removed property `totalPages`\n    - Removed property `type`\n\n**`POST /accounts`**\n\n- Request payload:\n    - Changed enum values for property `accountManagementType`\n        - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n- Modified the `200` response:\n    - Changed object property `accountMgmtType`\n        - Changed enum values for property `name`\n            - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`GET /accounts/{accountID}`**\n\n- Modified the `200` response:\n    - Changed object property `account`\n        - Changed object property `accountMgmtType`\n            - Changed enum values for property `name`\n                - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`PATCH /accounts/{accountID}`**\n\n- Modified the `200` response:\n    - Modified the schema option `0`\n    - Modified the schema option `1`\n\n**`GET /accounts/{accountID}/funding/deposits`**\n\n- Modified the `200` response:\n    - Changed object property `accountDetails`\n        - Changed object property `accountManagementType`\n            - Changed enum values for property `name`\n                - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`GET /accounts/{accountID}/funding/redemptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /funding/deposits/{depositID}`**\n\n- Modified the `200` response:\n    - Changed array property `accountDetails`\n        - Modified the schema option `0`\n\n**`GET /funding/redemptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /funding/redemptions/{redemptionID}`**\n\n- Modified the `200` response:\n    - Changed object property `accountDetails`\n        - Changed object property `accountManagementType`\n            - Changed enum values for property `name`\n                - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`PATCH /users/{userID}`**\n\n- Request payload:\n    - Changed array property `documents`\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/accounts`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/funding/deposits`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/funding/redemptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/kyc-status`**\n\n- Modified the `200` response:\n    - Changed array property `accounts`\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/subscriptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "markdown",
+        "title": null,
+        "code": "## Modified endpoints\n\n**`GET /accounts/{accountID}/options/positions`**\n\n- Modified the `200` response:\n    - Changed array property `data`\n        - Modified the schema option `0`\n\n**`GET /orders/options`**\n\n- Path parameters:\n    - Added new query parameter `partnerID`\n    - Added new query parameter `from`\n    - Added new query parameter `to`\n    - Added new query parameter `limit`\n    - Added new query parameter `offset`\n    - Removed query parameter `partnerIBID`\n    - Removed query parameter `fromDate`\n    - Removed query parameter `toDate`\n    - Removed query parameter `pageSize`\n    - Removed query parameter `pageNo`\n- Modified the `200` response:\n    - Added property `data`\n    - Added property `nextPageOffset`\n    - Added property `prevPageOffset`\n    - Removed property `pageNo`\n    - Removed property `pageSize`\n    - Removed property `results`\n    - Removed property `totalPages`\n    - Removed property `type`\n\n**`POST /accounts`**\n\n- Request payload:\n    - Changed enum values for property `accountManagementType`\n        - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n- Modified the `200` response:\n    - Changed object property `accountMgmtType`\n        - Changed enum values for property `name`\n            - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`GET /accounts/{accountID}`**\n\n- Modified the `200` response:\n    - Changed object property `account`\n        - Changed object property `accountMgmtType`\n            - Changed enum values for property `name`\n                - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`PATCH /accounts/{accountID}`**\n\n- Modified the `200` response:\n    - Modified the schema option `0`\n    - Modified the schema option `1`\n\n**`GET /accounts/{accountID}/funding/deposits`**\n\n- Modified the `200` response:\n    - Changed object property `accountDetails`\n        - Changed object property `accountManagementType`\n            - Changed enum values for property `name`\n                - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`GET /accounts/{accountID}/funding/redemptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /funding/deposits/{depositID}`**\n\n- Modified the `200` response:\n    - Changed array property `accountDetails`\n        - Modified the schema option `0`\n\n**`GET /funding/redemptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /funding/redemptions/{redemptionID}`**\n\n- Modified the `200` response:\n    - Changed object property `accountDetails`\n        - Changed object property `accountManagementType`\n            - Changed enum values for property `name`\n                - Added values `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`\n\n**`PATCH /users/{userID}`**\n\n- Request payload:\n    - Changed array property `documents`\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/accounts`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/funding/deposits`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/funding/redemptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/kyc-status`**\n\n- Modified the `200` response:\n    - Changed array property `accounts`\n        - Modified the schema option `0`\n\n**`GET /users/{userID}/subscriptions`**\n\n- Modified the `200` response:\n    - Changed root array\n        - Modified the schema option `0`"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

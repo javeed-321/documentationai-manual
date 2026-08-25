@@ -1,352 +1,445 @@
 {
-  "site": "https://techdocs.akamai.com",
+  "site": "https://developer.drivewealth.com",
   "generatedFrom": "llms.txt",
-  "pages": 1000,
-  "blocks": 6824,
+  "pages": 217,
+  "blocks": 4439,
   "parseFallbacks": [
-    "adaptive-media-delivery/docs/best-practices-use-case-based-prov",
-    "adaptive-media-delivery/docs/cache-key-query-param-amd",
-    "adaptive-media-delivery/docs/client-charac-amd",
-    "adaptive-media-delivery/docs/content-charac-amd",
-    "adaptive-media-delivery/docs/content-provider-code-amd",
-    "adaptive-media-delivery/docs/create-new-prop",
-    "adaptive-media-delivery/docs/define-prop-hn",
-    "adaptive-media-delivery/docs/origin-charac-amd",
-    "adaptive-media-delivery/docs/origin-server-amd",
-    "adaptive-media-delivery/docs/prepare-your-environment",
-    "adaptive-media-delivery/docs/segmented-media-deliv-mode-amd",
-    "adaptive-media-delivery/docs/understand-the-request-flow",
-    "adaptive-media-delivery/docs/welcome-adaptive-media-deliv",
-    "linode-api/reference/identity-and-access/llms.txt",
-    "linode-api/reference/llms.txt",
-    "linode-api/reference/placement-groups/llms.txt"
+    "apis/changelog/api-release-129",
+    "apis/changelog/api-release-158",
+    "apis/changelog/api-release-160",
+    "apis/changelog/api-release-161",
+    "apis/changelog/api-release-162",
+    "apis/changelog/api-release-1640",
+    "apis/changelog/api-release-1660",
+    "apis/docs/creating-an-order",
+    "apis/docs/delistings-going-private",
+    "apis/docs/options-1",
+    "apis/docs/options-chain",
+    "apis/docs/retirement-accounts",
+    "apis/docs/setting-up-ssowith-okta",
+    "apis/docs/single-sign-on-sso",
+    "apis/reference/accountperformance",
+    "apis/reference/enums"
   ],
   "components": [
     {
-      "name": "heading",
+      "name": "paragraph",
       "syntax": "markdown",
-      "count": 2757,
-      "pages": 1000,
+      "count": 1650,
+      "pages": 211,
       "target": {
         "component": null,
         "status": "direct"
       },
       "examples": [
-        "adaptive-acceleration/changelog/llms.txt#0",
-        "adaptive-acceleration/changelog/llms.txt#3",
-        "adaptive-acceleration/docs/llms.txt#0",
-        "adaptive-acceleration/docs/llms.txt#3",
-        "adaptive-acceleration/docs/llms.txt#5"
+        "apis/changelog/247-cash-rewards#3",
+        "apis/changelog/247-cash-rewards#4",
+        "apis/changelog/247-cash-rewards#5",
+        "apis/changelog/247-cash-rewards#6",
+        "apis/changelog/247-cash-rewards#9"
+      ]
+    },
+    {
+      "name": "heading",
+      "syntax": "markdown",
+      "count": 1369,
+      "pages": 217,
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "examples": [
+        "apis/changelog/247-cash-rewards#1",
+        "apis/changelog/247-cash-rewards#2",
+        "apis/changelog/ach-deposits-withdrawals#1",
+        "apis/changelog/ach-deposits-withdrawals#2",
+        "apis/changelog/api-release-1-67-0#1"
+      ]
+    },
+    {
+      "name": "code",
+      "syntax": "markdown",
+      "count": 379,
+      "pages": 139,
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "examples": [
+        "apis/changelog/247-cash-rewards#8",
+        "apis/changelog/ach-deposits-withdrawals#5",
+        "apis/changelog/api-release-1-68-1#19",
+        "apis/changelog/api-release-1-69-0#23",
+        "apis/changelog/api-release-117#6"
       ]
     },
     {
       "name": "list",
       "syntax": "markdown",
-      "count": 1750,
-      "pages": 1000,
+      "count": 266,
+      "pages": 94,
       "target": {
         "component": null,
         "status": "transform",
         "note": "normalise `*`/`+` markers to `-`"
       },
       "examples": [
-        "adaptive-acceleration/changelog/llms.txt#4",
-        "adaptive-acceleration/docs/llms.txt#4",
-        "adaptive-acceleration/docs/llms.txt#6",
-        "adaptive-acceleration/docs/llms.txt#8",
-        "adaptive-acceleration/docs/manage-your-reports/llms.txt#4"
-      ]
-    },
-    {
-      "name": "blockquote",
-      "syntax": "markdown",
-      "count": 982,
-      "pages": 982,
-      "target": {
-        "component": null,
-        "status": "direct"
-      },
-      "examples": [
-        "adaptive-acceleration/changelog/llms.txt#1",
-        "adaptive-acceleration/docs/llms.txt#1",
-        "adaptive-acceleration/docs/manage-your-reports/llms.txt#1",
-        "adaptive-acceleration/docs/reporting/llms.txt#1",
-        "adaptive-acceleration/docs/welcome/llms.txt#1"
+        "apis/changelog/247-cash-rewards#7",
+        "apis/changelog/247-cash-rewards#10",
+        "apis/changelog/247-cash-rewards#12",
+        "apis/changelog/api-release-117#9",
+        "apis/changelog/api-release-118#11"
       ]
     },
     {
       "name": "boilerplate",
       "syntax": "markdown",
-      "count": 917,
-      "pages": 917,
+      "count": 217,
+      "pages": 217,
       "target": {
         "component": null,
         "status": "drop",
         "note": "ReadMe's injected llms.txt preamble"
       },
       "examples": [
-        "adaptive-acceleration/changelog/llms.txt#2",
-        "adaptive-acceleration/docs/llms.txt#2",
-        "adaptive-acceleration/docs/manage-your-reports/llms.txt#2",
-        "adaptive-acceleration/docs/reporting/llms.txt#2",
-        "adaptive-acceleration/docs/welcome/llms.txt#2"
+        "apis/changelog/247-cash-rewards#0",
+        "apis/changelog/ach-deposits-withdrawals#0",
+        "apis/changelog/api-release-1-67-0#0",
+        "apis/changelog/api-release-1-67-2#0",
+        "apis/changelog/api-release-1-68-1#0"
       ]
     },
     {
-      "name": "paragraph",
+      "name": "Table",
       "syntax": "markdown",
-      "count": 307,
-      "pages": 101,
+      "count": 209,
+      "pages": 78,
       "target": {
         "component": null,
-        "status": "direct"
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
       },
       "examples": [
-        "adaptive-acceleration/llms.txt#2",
-        "adaptive-acceleration/llms.txt#3",
-        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#2",
-        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#4",
-        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#6"
-      ]
-    },
-    {
-      "name": "td",
-      "syntax": "html",
-      "count": 43,
-      "pages": 2,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#17",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#19",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#21",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#23",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#25"
-      ]
-    },
-    {
-      "name": "div",
-      "syntax": "html",
-      "count": 22,
-      "pages": 12,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#9",
-        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#14",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#7",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#40",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#43"
-      ]
-    },
-    {
-      "name": "tr",
-      "syntax": "html",
-      "count": 18,
-      "pages": 1,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#36",
-        "adaptive-media-delivery/docs/content-charac-amd#39",
-        "adaptive-media-delivery/docs/content-charac-amd#42",
-        "adaptive-media-delivery/docs/content-charac-amd#48",
-        "adaptive-media-delivery/docs/content-charac-amd#49"
+        "apis/changelog/api-release-1-67-0#6",
+        "apis/changelog/api-release-1-67-2#4",
+        "apis/changelog/api-release-1-68-1#3",
+        "apis/changelog/api-release-1-69-0#3",
+        "apis/changelog/api-release-117#3"
       ]
     },
     {
       "name": "Callout",
       "syntax": "markdown",
-      "count": 11,
-      "pages": 9,
+      "count": 121,
+      "pages": 59,
       "target": {
         "component": "Callout",
         "status": "direct",
         "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
         "attrs": {
-          "kind": "info"
+          "kind": "alert"
         }
       },
       "examples": [
-        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#15",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#13",
-        "adaptive-media-delivery/docs/client-charac-amd#6",
-        "adaptive-media-delivery/docs/content-charac-amd#22",
-        "adaptive-media-delivery/docs/content-provider-code-amd#11"
+        "apis/changelog/api-release-118#12",
+        "apis/changelog/api-release-151#9",
+        "apis/changelog/api-release-151#16",
+        "apis/changelog/api-release-151#19",
+        "apis/changelog/api-release-152#14"
       ]
     },
     {
-      "name": "table",
+      "name": "br",
       "syntax": "html",
-      "count": 3,
-      "pages": 2,
+      "count": 97,
+      "pages": 55,
       "target": {
         "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
       },
       "examples": [
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#15",
-        "adaptive-media-delivery/docs/content-charac-amd#28",
-        "adaptive-media-delivery/docs/content-charac-amd#108"
+        "apis/changelog/api-release-140#4",
+        "apis/changelog/api-release-140#7",
+        "apis/changelog/api-release-140#11",
+        "apis/changelog/api-release-142#4",
+        "apis/changelog/api-release-142#8"
       ]
     },
     {
-      "name": "code",
+      "name": "Image",
+      "syntax": "jsx",
+      "count": 42,
+      "pages": 24,
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "examples": [
+        "apis/changelog/247-cash-rewards#13",
+        "apis/changelog/api-release-162#12",
+        "apis/changelog/dh-release-2154#10",
+        "apis/changelog/dh-release-2154#17",
+        "apis/changelog/dh-release-217#7"
+      ]
+    },
+    {
+      "name": "thematicBreak",
       "syntax": "markdown",
-      "count": 2,
-      "pages": 1,
+      "count": 42,
+      "pages": 11,
       "target": {
         "component": null,
         "status": "direct"
       },
       "examples": [
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#9",
-        "adaptive-media-delivery/docs/cache-key-query-param-amd#11"
+        "apis/changelog/api-release-160#24",
+        "apis/changelog/api-release-160#29",
+        "apis/changelog/api-release-160#34",
+        "apis/docs/api-lifecycle-guide#11",
+        "apis/docs/api-lifecycle-guide#17"
       ]
     },
     {
-      "name": "caption",
+      "name": "CodeTabs",
+      "syntax": "markdown",
+      "count": 26,
+      "pages": 17,
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "examples": [
+        "apis/changelog/api-release-118#7",
+        "apis/changelog/api-release-128#14",
+        "apis/changelog/api-release-152#25",
+        "apis/docs/automated-trading#25",
+        "apis/docs/automated-trading#29"
+      ]
+    },
+    {
+      "name": "blockquote",
+      "syntax": "markdown",
+      "count": 14,
+      "pages": 13,
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "examples": [
+        "apis/docs/automated-trading#11",
+        "apis/docs/enabling-options-features#11",
+        "apis/docs/fixed-income-depth-of-book#4",
+        "apis/docs/fractionalized-assets#12",
+        "apis/docs/fractionalized-assets#14"
+      ]
+    },
+    {
+      "name": "button",
       "syntax": "html",
-      "count": 2,
-      "pages": 1,
+      "count": 3,
+      "pages": 3,
       "target": {
         "component": null,
         "status": "manual",
         "note": "raw HTML — check it against the Documentation.AI components"
       },
       "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#29",
-        "adaptive-media-delivery/docs/content-charac-amd#30"
+        "apis/changelog/release-notes-2026-08-13#5",
+        "apis/changelog/release-notes-2026-08-19#5",
+        "apis/changelog/release-notes-2026-08-25#4"
       ]
     },
     {
-      "name": "colgroup",
-      "syntax": "html",
-      "count": 2,
+      "name": "TutorialTile",
+      "syntax": "jsx",
+      "count": 1,
       "pages": 1,
       "target": {
         "component": null,
         "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
+        "note": "deprecated alias of Recipe"
       },
       "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#31",
-        "adaptive-media-delivery/docs/content-charac-amd#34"
+        "apis/docs/fixed-income#3"
       ]
     },
     {
-      "name": "col",
-      "syntax": "html",
-      "count": 2,
+      "name": "Embed",
+      "syntax": "jsx",
+      "count": 1,
+      "pages": 1,
+      "target": {
+        "component": "Video",
+        "status": "transform",
+        "note": "YouTube/Vimeo/Loom -> <Video src>; anything else -> <Iframe src width height>"
+      },
+      "examples": [
+        "apis/docs/getting-started-w-drivehub#3"
+      ]
+    },
+    {
+      "name": "HTMLBlock",
+      "syntax": "jsx",
+      "count": 1,
       "pages": 1,
       "target": {
         "component": null,
         "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
+        "note": "raw HTML+CSS+JS has no equivalent — rebuild with Cards/Columns/Steps, or drop"
       },
       "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#32",
-        "adaptive-media-delivery/docs/content-charac-amd#33"
+        "apis/docs/showing-disclosures#2"
       ]
     },
     {
-      "name": "thead",
-      "syntax": "html",
-      "count": 2,
+      "name": "RssCopyButton",
+      "syntax": "jsx",
+      "count": 1,
       "pages": 1,
       "target": {
         "component": null,
         "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
+        "note": "unrecognised component — not in the ReadMe reference or the Documentation.AI set"
       },
       "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#35",
-        "adaptive-media-delivery/docs/content-charac-amd#40"
-      ]
-    },
-    {
-      "name": "th",
-      "syntax": "html",
-      "count": 2,
-      "pages": 1,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#37",
-        "adaptive-media-delivery/docs/content-charac-amd#38"
-      ]
-    },
-    {
-      "name": "tbody",
-      "syntax": "html",
-      "count": 2,
-      "pages": 1,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "adaptive-media-delivery/docs/content-charac-amd#41",
-        "adaptive-media-delivery/docs/content-charac-amd#107"
+        "apis/docs/subscribe-to-api-updates#9"
       ]
     }
   ],
   "inline": [
     {
-      "kind": "refLink",
-      "count": 1684,
-      "pages": 138,
+      "kind": "breakTag",
+      "count": 200,
+      "pages": 59,
       "examples": [
-        "ref:post-revocation-list-ids",
-        "ref:post-unrevoke-revocation-list-ids",
-        "ref:post-revocation-list-ids",
-        "ref:post-unrevoke-revocation-list-ids",
-        "ref:get-active-alert-firings"
+        "<br />",
+        "<br />",
+        "<br />",
+        "<br />",
+        "<br />"
       ]
     },
     {
-      "kind": "docLink",
-      "count": 82,
-      "pages": 26,
+      "kind": "handlebars",
+      "count": 180,
+      "pages": 59,
       "examples": [
-        "doc:get-policy-rules",
-        "doc:put-policy-rapid-rule-action",
-        "doc:put-policy-rapid-rule-action",
-        "doc:put-policy-rapid-rule-action",
-        "doc:post-subscribe"
+        "{{bo-username}}",
+        "{{bo-password}}",
+        "{{bo-url}}",
+        "{{acctid}}",
+        "{{bo-url}}"
       ]
     },
     {
-      "kind": "variable",
-      "count": 2,
-      "pages": 2,
+      "kind": "absoluteInternalLink",
+      "count": 36,
+      "pages": 17,
       "examples": [
-        "LB",
-        "LB"
+        "https://developer.drivewealth.com/reference/errors-1",
+        "https://developer.drivewealth.com/reference/simulate-kyc-failures",
+        "https://developer.drivewealth.com/reference/subscription-events",
+        "https://developer.drivewealth.com/reference/bank-account-events",
+        "https://developer.drivewealth.com/reference/edit-account"
+      ]
+    },
+    {
+      "kind": "anchorJsx",
+      "count": 36,
+      "pages": 11,
+      "examples": [
+        "https://developer.drivewealth.com/apis/docs/api-lifecycle-guide",
+        "https://developer.drivewealth.com/apis/docs/common-data-types",
+        "https://developer.drivewealth.com/apis/docs/retrieve-account-summary-migration-guide",
+        "https://developer.drivewealth.com/apis/changelog",
+        "https://developer.drivewealth.com/apis/changelog"
+      ]
+    },
+    {
+      "kind": "markdownImage",
+      "count": 20,
+      "pages": 9,
+      "examples": [
+        "https://files.readme.io/ce188d1-Screenshot_2023-04-23_at_10.31.49_PM.png",
+        "https://files.readme.io/8b3b462-Screenshot_2023-04-23_at_10.32.13_PM.png",
+        "https://files.readme.io/ee0c936-Screenshot_2023-04-23_at_10.32.23_PM.png",
+        "https://files.readme.io/2e8011b-Screenshot_2023-09-05_at_12.43.18_PM.png",
+        "https://files.readme.io/1e6db6a-Screenshot_2023-09-05_at_12.41.46_PM.png"
       ]
     },
     {
       "kind": "escapedAngle",
-      "count": 1,
-      "pages": 1,
+      "count": 3,
+      "pages": 2,
       "examples": [
-        "\\<Media Format>"
+        "\\<data>",
+        "\\<partnerID>",
+        "\\<partnerID>"
       ]
     }
   ],
-  "notes": []
+  "notes": [
+    {
+      "note": "no alt text — Documentation.AI pages need one",
+      "count": 38,
+      "examples": [
+        "apis/changelog/247-cash-rewards#13",
+        "apis/changelog/api-release-162#12",
+        "apis/changelog/dh-release-2154#10",
+        "apis/changelog/dh-release-2154#17",
+        "apis/changelog/dh-release-217#7"
+      ]
+    },
+    {
+      "note": "`curl` is not a highlighter language — use bash",
+      "count": 11,
+      "examples": [
+        "apis/docs/self-managed-super-fund-smsf-account-onboarding-guide#11",
+        "apis/docs/self-managed-super-fund-smsf-account-onboarding-guide#17",
+        "apis/docs/self-managed-super-fund-smsf-account-onboarding-guide#21",
+        "apis/docs/self-managed-super-fund-smsf-account-onboarding-guide#24",
+        "apis/docs/self-managed-super-fund-smsf-account-onboarding-guide#37"
+      ]
+    },
+    {
+      "note": "className=\"border\" is redundant with border={true}",
+      "count": 9,
+      "examples": [
+        "apis/docs/official-documents#6",
+        "apis/docs/official-documents#9",
+        "apis/docs/official-documents#10",
+        "apis/docs/setting-up-ssowith-okta#5",
+        "apis/docs/setting-up-ssowith-okta#12"
+      ]
+    },
+    {
+      "note": "reassembled from several raw-HTML chunks — this page needed the lenient parser",
+      "count": 4,
+      "examples": [
+        "apis/docs/creating-an-order#28",
+        "apis/docs/options-1#22",
+        "apis/docs/single-sign-on-sso#3",
+        "apis/docs/single-sign-on-sso#10"
+      ]
+    },
+    {
+      "note": "string style=\"…\" outside HTMLBlock is invalid MDX",
+      "count": 3,
+      "examples": [
+        "apis/changelog/release-notes-2026-08-13#5",
+        "apis/changelog/release-notes-2026-08-19#5",
+        "apis/changelog/release-notes-2026-08-25#4"
+      ]
+    },
+    {
+      "note": "width=\"smart\" is a legacy RDMD value — drop it",
+      "count": 1,
+      "examples": [
+        "apis/docs/official-documents#6"
+      ]
+    }
+  ]
 }

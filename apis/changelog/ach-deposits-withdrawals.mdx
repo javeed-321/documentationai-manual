@@ -1,0 +1,16 @@
+---
+title: "ACH Deposits & Withdrawals"
+---
+
+## ACH Deposits & Withdrawals
+
+Before May 1, 2022, a validation was added to prevent Non US residents from initiating an ACH deposit or withdrawal.
+
+If a customer that is not a US resident attempts to create an ACH deposit or withdrawal request, an [error](https://developer.drivewealth.com/reference/errors-1) will be given:
+
+```json title="ACH Error - Y025"
+{
+  "errorCode": "Y025",
+  "message": "Unable to initiate/authorize payment. Reason: ACH payments are allowed for US residents only."
+}
+```

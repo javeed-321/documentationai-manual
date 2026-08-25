@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Authentication APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Auth"
+    }
+  ],
+  "paths": {
+    "/auth/tokens": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Create Session Token",
+        "description": "Creates a session token for an implementer to utilize for subsequent API requests.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSessTokenReq"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Creating Session Token was Successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSessToken"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateSessToken": {
+        "type": "object",
+        "properties": {
+          "token_type": {
+            "type": "string",
+            "example": "Bearer",
+            "description": "The type of token that was generated.",
+            "enum": [
+              "Bearer"
+            ]
+          },
+          "expires_in": {
+            "type": "string",
+            "example": "3600",
+            "description": "The length of time in seconds for which the session token is valid."
+          },
+          "access_token": {
+            "type": "string",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+            "description": "The session token."
+          },
+          "scope": {
+            "type": "string",
+            "example": "all_trading",
+            "description": "The scope of permission set for the JSON Web Token (JWT)."
+          }
+        }
+      },
+      "CreateSessTokenReq": {
+        "type": "object",
+        "required": [
+          "clientID",
+          "clientSecret"
+        ],
+        "properties": {
+          "clientID": {
+            "type": "string",
+            "example": "0oafccTendies67BTx113",
+            "description": "The identifier of the client accessing the DriveWealth system."
+          },
+          "clientSecret": {
+            "type": "string",
+            "example": "8WfNzC4oTendiesTradingCompanyPuQNwg7BPByWqQOj",
+            "description": "The secret of the client accessing the DriveWealth system."
+          }
+        }
+      }
+    }
+  }
+}

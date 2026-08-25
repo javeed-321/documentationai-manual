@@ -1,0 +1,114 @@
+{
+  "slug": "apis/reference/get_accounts-accountid-violations",
+  "source": "https://developer.drivewealth.com/apis/reference/get_accounts-accountid-violations.md",
+  "url": "https://developer.drivewealth.com/apis/reference/get_accounts-accountid-violations",
+  "title": "List Account Violations",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:58:08.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# List Account Violations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "List Account Violations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Retrives a list of Account Violations by accountID.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrives a list of Account Violations by accountID.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        300
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Account Management APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Violations\"\n    }\n  ],\n  \"paths\": {\n    \"/accounts/{accountID}/violations\": {\n      \"get\": {\n        \"tags\": [\n          \"Violations\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"accountID\",\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/accountID\"\n            },\n            \"required\": true\n          }\n        ],\n        \"summary\": \"List Account Violations\",\n        \"description\": \"Retrives a list of Account Violations by accountID.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Retrieving a list of Account Violations by accountID was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ViolationDetailsRes\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"orderID\": {\n        \"type\": \"string\",\n        \"example\": \"IC.0e352bb7-9869-4233-9861-9673544efedd\",\n        \"description\": \"A unique DriveWealth order identifier created when an order is placed.\"\n      },\n      \"orderNo\": {\n        \"type\": \"string\",\n        \"example\": \"ICDU023727\",\n        \"description\": \"A unique, human-readable DriveWealth order number.\"\n      },\n      \"accountID\": {\n        \"type\": \"string\",\n        \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n        \"description\": \"The user's unique account identifier.\"\n      },\n      \"created\": {\n        \"type\": \"string\",\n        \"example\": \"2022-12-11T22:28:21.810Z\",\n        \"description\": \"\"\n      },\n      \"instrumentSymbol\": {\n        \"type\": \"string\",\n        \"nullable\": true,\n        \"example\": \"MS\",\n        \"description\": \"The ticker symbol of the Instrument. Debt Instruments and Global Mutual Funds do not have symbols and are referred to buy their `instrumentID` or `ISIN`.\"\n      },\n      \"instrumentID\": {\n        \"type\": \"string\",\n        \"format\": \"uuid\",\n        \"example\": \"3fb1e8a9-f7d5-4d90-95e2-43e7326b5636\",\n        \"description\": \"A unique ID created by DriveWealth to identify a specific instrument.\"\n      },\n      \"sideAbbreviated\": {\n        \"type\": \"string\",\n        \"example\": \"B\",\n        \"description\": \"The side of the order.\",\n        \"enum\": [\n          \"B\",\n          \"S\",\n          \"BUY_OPEN\",\n          \"BUY_CLOSE\",\n          \"SELL_OPEN\",\n          \"SELL_CLOSE\"\n        ]\n      },\n      \"orderQuantity\": {\n        \"type\": \"number\",\n        \"example\": 0.7219,\n        \"description\": \"The amount of the instrument in shares.\"\n      },\n      \"goodFaithViolations\": {\n        \"type\": \"number\",\n        \"example\": 0,\n        \"description\": \"The total number of good faith violations.\"\n      },\n      \"violationsObj\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"goodFaithViolations\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"count\": {\n                \"$ref\": \"#/components/schemas/goodFaithViolations\"\n              }\n            }\n          },\n          \"patternDayTrades\": {\n            \"type\": \"object\",\n            \"deprecated\": true,\n            \"properties\": {\n              \"count\": {\n                \"$ref\": \"#/components/schemas/patternDayTrades\"\n              }\n            }\n          },\n          \"details\": {\n            \"type\": \"string\",\n            \"example\": \"/back-office/accounts/b5421694-65c6-4e48-9f8f-d90596e2f471.1616427127842/violations\",\n            \"description\": \"A string containing the direct path to the [violations API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-violations) for further detail\"\n          }\n        }\n      },\n      \"patternDayTradesObj\": {\n        \"type\": \"object\",\n        \"deprecated\": true,\n        \"properties\": {\n          \"id\": {\n            \"$ref\": \"#/components/schemas/instrumentID\"\n          },\n          \"symbol\": {\n            \"$ref\": \"#/components/schemas/instrumentSymbol\"\n          },\n          \"qty\": {\n            \"$ref\": \"#/components/schemas/orderQuantity\"\n          },\n          \"amount\": {\n            \"type\": \"number\",\n            \"example\": 100,\n            \"description\": \"The amount of shares being transacted.\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/sideAbbreviated\"\n          },\n          \"createdWhen\": {\n            \"$ref\": \"#/components/schemas/created\"\n          },\n          \"orderID\": {\n            \"$ref\": \"#/components/schemas/orderID\"\n          },\n          \"orderNo\": {\n            \"$ref\": \"#/components/schemas/orderNo\"\n          },\n          \"violationSells\": {\n            \"type\": \"array\",\n            \"description\": \"An array which orders are in violation.\",\n            \"items\": {\n              \"oneOf\": [\n                {\n                  \"$ref\": \"#/components/schemas/violationSells\"\n                }\n              ]\n            }\n          },\n          \"legacyGoodFaithViolations\": {\n            \"type\": \"number\",\n            \"example\": 0,\n            \"description\": \"NEEDS DESCRIPTION\"\n          },\n          \"message\": {\n            \"type\": \"string\",\n            \"example\": \"This transaction resulted in your third Pattern Day Trade.  Note that pending orders (such as limits) may trigger a 4th Pattern Day Trade.  If you have 4 or more day trades in a 5 day period, your account will be designated as a Pattern Day Trader and must maintain equity of at least $25,000.  Failure to do so will put your account on 90-Restriction. You will receive an email notification with more details.\",\n            \"description\": \"A description of the violation.\"\n          }\n        }\n      },\n      \"accountEquityBreakdownObj\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"longMarketValue\": {\n            \"type\": \"number\",\n            \"example\": 30000,\n            \"description\": \"The current long market value.\"\n          },\n          \"debitBalance\": {\n            \"type\": \"number\",\n            \"example\": 2000,\n            \"description\": \"The current debit balance.\"\n          },\n          \"accountEquity\": {\n            \"type\": \"number\",\n            \"example\": 28000,\n            \"description\": \"The current total account equity (longMarketValue - debitBalance).\"\n          }\n        }\n      },\n      \"violationSells\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"qty\": {\n            \"$ref\": \"#/components/schemas/orderQuantity\"\n          },\n          \"amount\": {\n            \"type\": \"number\",\n            \"example\": 20,\n            \"description\": \"The amount of shares being transacted.\"\n          },\n          \"createdWhen\": {\n            \"$ref\": \"#/components/schemas/created\"\n          },\n          \"orderID\": {\n            \"$ref\": \"#/components/schemas/orderID\"\n          },\n          \"orderNo\": {\n            \"$ref\": \"#/components/schemas/orderNo\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/sideAbbreviated\"\n          }\n        }\n      },\n      \"ViolationDetailsRes\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"goodFaithViolations\": {\n            \"$ref\": \"#/components/schemas/violationsObj/properties/goodFaithViolations\"\n          },\n          \"patternDayTrades\": {\n            \"type\": \"array\",\n            \"description\": \"An array of pattern day trade violations.\",\n            \"deprecated\": true,\n            \"items\": {\n              \"oneOf\": [\n                {\n                  \"$ref\": \"#/components/schemas/patternDayTradesObj\"\n                }\n              ]\n            }\n          },\n          \"accountEquityBreakdown\": {\n            \"$ref\": \"#/components/schemas/accountEquityBreakdownObj\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Account Management APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Violations\"\n    }\n  ],\n  \"paths\": {\n    \"/accounts/{accountID}/violations\": {\n      \"get\": {\n        \"tags\": [\n          \"Violations\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"accountID\",\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/accountID\"\n            },\n            \"required\": true\n          }\n        ],\n        \"summary\": \"List Account Violations\",\n        \"description\": \"Retrives a list of Account Violations by accountID.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Retrieving a list of Account Violations by accountID was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ViolationDetailsRes\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"orderID\": {\n        \"type\": \"string\",\n        \"example\": \"IC.0e352bb7-9869-4233-9861-9673544efedd\",\n        \"description\": \"A unique DriveWealth order identifier created when an order is placed.\"\n      },\n      \"orderNo\": {\n        \"type\": \"string\",\n        \"example\": \"ICDU023727\",\n        \"description\": \"A unique, human-readable DriveWealth order number.\"\n      },\n      \"accountID\": {\n        \"type\": \"string\",\n        \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n        \"description\": \"The user's unique account identifier.\"\n      },\n      \"created\": {\n        \"type\": \"string\",\n        \"example\": \"2022-12-11T22:28:21.810Z\",\n        \"description\": \"\"\n      },\n      \"instrumentSymbol\": {\n        \"type\": \"string\",\n        \"nullable\": true,\n        \"example\": \"MS\",\n        \"description\": \"The ticker symbol of the Instrument. Debt Instruments and Global Mutual Funds do not have symbols and are referred to buy their `instrumentID` or `ISIN`.\"\n      },\n      \"instrumentID\": {\n        \"type\": \"string\",\n        \"format\": \"uuid\",\n        \"example\": \"3fb1e8a9-f7d5-4d90-95e2-43e7326b5636\",\n        \"description\": \"A unique ID created by DriveWealth to identify a specific instrument.\"\n      },\n      \"sideAbbreviated\": {\n        \"type\": \"string\",\n        \"example\": \"B\",\n        \"description\": \"The side of the order.\",\n        \"enum\": [\n          \"B\",\n          \"S\",\n          \"BUY_OPEN\",\n          \"BUY_CLOSE\",\n          \"SELL_OPEN\",\n          \"SELL_CLOSE\"\n        ]\n      },\n      \"orderQuantity\": {\n        \"type\": \"number\",\n        \"example\": 0.7219,\n        \"description\": \"The amount of the instrument in shares.\"\n      },\n      \"goodFaithViolations\": {\n        \"type\": \"number\",\n        \"example\": 0,\n        \"description\": \"The total number of good faith violations.\"\n      },\n      \"violationsObj\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"goodFaithViolations\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"count\": {\n                \"$ref\": \"#/components/schemas/goodFaithViolations\"\n              }\n            }\n          },\n          \"patternDayTrades\": {\n            \"type\": \"object\",\n            \"deprecated\": true,\n            \"properties\": {\n              \"count\": {\n                \"$ref\": \"#/components/schemas/patternDayTrades\"\n              }\n            }\n          },\n          \"details\": {\n            \"type\": \"string\",\n            \"example\": \"/back-office/accounts/b5421694-65c6-4e48-9f8f-d90596e2f471.1616427127842/violations\",\n            \"description\": \"A string containing the direct path to the [violations API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-violations) for further detail\"\n          }\n        }\n      },\n      \"patternDayTradesObj\": {\n        \"type\": \"object\",\n        \"deprecated\": true,\n        \"properties\": {\n          \"id\": {\n            \"$ref\": \"#/components/schemas/instrumentID\"\n          },\n          \"symbol\": {\n            \"$ref\": \"#/components/schemas/instrumentSymbol\"\n          },\n          \"qty\": {\n            \"$ref\": \"#/components/schemas/orderQuantity\"\n          },\n          \"amount\": {\n            \"type\": \"number\",\n            \"example\": 100,\n            \"description\": \"The amount of shares being transacted.\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/sideAbbreviated\"\n          },\n          \"createdWhen\": {\n            \"$ref\": \"#/components/schemas/created\"\n          },\n          \"orderID\": {\n            \"$ref\": \"#/components/schemas/orderID\"\n          },\n          \"orderNo\": {\n            \"$ref\": \"#/components/schemas/orderNo\"\n          },\n          \"violationSells\": {\n            \"type\": \"array\",\n            \"description\": \"An array which orders are in violation.\",\n            \"items\": {\n              \"oneOf\": [\n                {\n                  \"$ref\": \"#/components/schemas/violationSells\"\n                }\n              ]\n            }\n          },\n          \"legacyGoodFaithViolations\": {\n            \"type\": \"number\",\n            \"example\": 0,\n            \"description\": \"NEEDS DESCRIPTION\"\n          },\n          \"message\": {\n            \"type\": \"string\",\n            \"example\": \"This transaction resulted in your third Pattern Day Trade.  Note that pending orders (such as limits) may trigger a 4th Pattern Day Trade.  If you have 4 or more day trades in a 5 day period, your account will be designated as a Pattern Day Trader and must maintain equity of at least $25,000.  Failure to do so will put your account on 90-Restriction. You will receive an email notification with more details.\",\n            \"description\": \"A description of the violation.\"\n          }\n        }\n      },\n      \"accountEquityBreakdownObj\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"longMarketValue\": {\n            \"type\": \"number\",\n            \"example\": 30000,\n            \"description\": \"The current long market value.\"\n          },\n          \"debitBalance\": {\n            \"type\": \"number\",\n            \"example\": 2000,\n            \"description\": \"The current debit balance.\"\n          },\n          \"accountEquity\": {\n            \"type\": \"number\",\n            \"example\": 28000,\n            \"description\": \"The current total account equity (longMarketValue - debitBalance).\"\n          }\n        }\n      },\n      \"violationSells\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"qty\": {\n            \"$ref\": \"#/components/schemas/orderQuantity\"\n          },\n          \"amount\": {\n            \"type\": \"number\",\n            \"example\": 20,\n            \"description\": \"The amount of shares being transacted.\"\n          },\n          \"createdWhen\": {\n            \"$ref\": \"#/components/schemas/created\"\n          },\n          \"orderID\": {\n            \"$ref\": \"#/components/schemas/orderID\"\n          },\n          \"orderNo\": {\n            \"$ref\": \"#/components/schemas/orderNo\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/sideAbbreviated\"\n          }\n        }\n      },\n      \"ViolationDetailsRes\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"goodFaithViolations\": {\n            \"$ref\": \"#/components/schemas/violationsObj/properties/goodFaithViolations\"\n          },\n          \"patternDayTrades\": {\n            \"type\": \"array\",\n            \"description\": \"An array of pattern day trade violations.\",\n            \"deprecated\": true,\n            \"items\": {\n              \"oneOf\": [\n                {\n                  \"$ref\": \"#/components/schemas/patternDayTradesObj\"\n                }\n              ]\n            }\n          },\n          \"accountEquityBreakdown\": {\n            \"$ref\": \"#/components/schemas/accountEquityBreakdownObj\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 43
+        }
+      ]
+    }
+  ]
+}

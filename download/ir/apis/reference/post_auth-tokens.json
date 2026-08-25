@@ -1,0 +1,139 @@
+{
+  "slug": "apis/reference/post_auth-tokens",
+  "source": "https://developer.drivewealth.com/apis/reference/post_auth-tokens.md",
+  "url": "https://developer.drivewealth.com/apis/reference/post_auth-tokens",
+  "title": "Create Session Token",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:57:45.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "Callout": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Create Session Token",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Create Session Token",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Creates a session token for an implementer to utilize for subsequent API requests.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Creates a session token for an implementer to utilize for subsequent API requests.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        26
+      ],
+      "raw": "> 📘 Authentication FAQs\n>\n> 1. **What's the TTL?**\\\n>    Every generated access\\_token has a 60min (1hr) expiry time.\n>\n> 2. **Can i have multiple active auth tokens at the same time?**\\\n>    Yes, requesting for a new token does not expire the previously retrieved token. Every token's expiry time (60 mins) is always determined by when it was initially requested.\n>\n> 3. **What's the rate limit?**\\\n>    Token should be cached and recycled. So no more than 5-10 Api calls per hour is expected.\n>\n> 4. **Can we get multiple pairs of clientID and clientSecret?**\\\n>    Due to the nature of the authentication model, you shouldn't be requiring more than 1 pair, however, if absolutely needed, we can provision accordingly. Please contact DriveWealth if this is a requirement.\n>\n> 5. **How do i use the retrieved auth token?**\\\n>    You'll pass it into the header of all API calls as \"Authorization\": \"Bearer \\{access\\_token}\"",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Authentication FAQsWhat's the TTL?Every generated access_token has a 60min (1hr) expiry time.Can i have multiple active auth tokens at the same time?Yes, requesting for a new token does not expire the previously retrieved token. Every token's expiry time (60 mins) is always determined by when it was initially requested.What's the rate limit?Token should be cached and recycled. So no more than 5-10 Api calls per hour is expected.Can we get multiple pairs of clientID and clientSecret?Due to the nature of the authentication model, you shouldn't be requiring more than 1 pair, however, if absolutely needed, we can provision accordingly. Please contact DriveWealth if this is a requirement.How do i use the retrieved auth token?You'll pass it into the header of all API calls as \"Authorization\": \"Bearer {access_token}\"",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        30,
+        149
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Authentication APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Auth\"\n    }\n  ],\n  \"paths\": {\n    \"/auth/tokens\": {\n      \"post\": {\n        \"tags\": [\n          \"Auth\"\n        ],\n        \"summary\": \"Create Session Token\",\n        \"description\": \"Creates a session token for an implementer to utilize for subsequent API requests.\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/CreateSessTokenReq\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Creating Session Token was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/CreateSessToken\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"CreateSessToken\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"token_type\": {\n            \"type\": \"string\",\n            \"example\": \"Bearer\",\n            \"description\": \"The type of token that was generated.\",\n            \"enum\": [\n              \"Bearer\"\n            ]\n          },\n          \"expires_in\": {\n            \"type\": \"string\",\n            \"example\": \"3600\",\n            \"description\": \"The length of time in seconds for which the session token is valid.\"\n          },\n          \"access_token\": {\n            \"type\": \"string\",\n            \"example\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\",\n            \"description\": \"The session token.\"\n          },\n          \"scope\": {\n            \"type\": \"string\",\n            \"example\": \"all_trading\",\n            \"description\": \"The scope of permission set for the JSON Web Token (JWT).\"\n          }\n        }\n      },\n      \"CreateSessTokenReq\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"clientID\",\n          \"clientSecret\"\n        ],\n        \"properties\": {\n          \"clientID\": {\n            \"type\": \"string\",\n            \"example\": \"0oafccTendies67BTx113\",\n            \"description\": \"The identifier of the client accessing the DriveWealth system.\"\n          },\n          \"clientSecret\": {\n            \"type\": \"string\",\n            \"example\": \"8WfNzC4oTendiesTradingCompanyPuQNwg7BPByWqQOj\",\n            \"description\": \"The secret of the client accessing the DriveWealth system.\"\n          }\n        }\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Authentication APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Auth\"\n    }\n  ],\n  \"paths\": {\n    \"/auth/tokens\": {\n      \"post\": {\n        \"tags\": [\n          \"Auth\"\n        ],\n        \"summary\": \"Create Session Token\",\n        \"description\": \"Creates a session token for an implementer to utilize for subsequent API requests.\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/CreateSessTokenReq\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Creating Session Token was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/CreateSessToken\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"CreateSessToken\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"token_type\": {\n            \"type\": \"string\",\n            \"example\": \"Bearer\",\n            \"description\": \"The type of token that was generated.\",\n            \"enum\": [\n              \"Bearer\"\n            ]\n          },\n          \"expires_in\": {\n            \"type\": \"string\",\n            \"example\": \"3600\",\n            \"description\": \"The length of time in seconds for which the session token is valid.\"\n          },\n          \"access_token\": {\n            \"type\": \"string\",\n            \"example\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\",\n            \"description\": \"The session token.\"\n          },\n          \"scope\": {\n            \"type\": \"string\",\n            \"example\": \"all_trading\",\n            \"description\": \"The scope of permission set for the JSON Web Token (JWT).\"\n          }\n        }\n      },\n      \"CreateSessTokenReq\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"clientID\",\n          \"clientSecret\"\n        ],\n        \"properties\": {\n          \"clientID\": {\n            \"type\": \"string\",\n            \"example\": \"0oafccTendies67BTx113\",\n            \"description\": \"The identifier of the client accessing the DriveWealth system.\"\n          },\n          \"clientSecret\": {\n            \"type\": \"string\",\n            \"example\": \"8WfNzC4oTendiesTradingCompanyPuQNwg7BPByWqQOj\",\n            \"description\": \"The secret of the client accessing the DriveWealth system.\"\n          }\n        }\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 56
+        }
+      ]
+    }
+  ]
+}

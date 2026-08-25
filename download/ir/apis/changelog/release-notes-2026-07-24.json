@@ -1,0 +1,491 @@
+{
+  "slug": "apis/changelog/release-notes-2026-07-24",
+  "source": "https://developer.drivewealth.com/apis/changelog/release-notes-2026-07-24.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/release-notes-2026-07-24",
+  "title": "Release Notes 2026-07-24",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "Table": 1,
+    "paragraph": 6,
+    "list": 6,
+    "br": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# Release Notes 2026-07-24",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Release Notes 2026-07-24",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "# API Release 2026-07-24",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 2026-07-24",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        12
+      ],
+      "raw": "| Status                      | Environment |\n| :-------------------------- | :---------: |\n| 🧱👷🏽‍♂️ Under development |     DEV     |\n| 🧪👨🏾‍🔬 Quality testing   |      QA     |\n| 👌🤌 Try it                 |     SDX     |\n| ✨💃🏻 Prime Time            |     PROD    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Environment"
+        ],
+        "rows": [
+          [
+            "🧱👷🏽‍♂️ Under development",
+            "DEV"
+          ],
+          [
+            "🧪👨🏾‍🔬 Quality testing",
+            "QA"
+          ],
+          [
+            "👌🤌 Try it",
+            "SDX"
+          ],
+          [
+            "✨💃🏻 Prime Time",
+            "PROD"
+          ]
+        ],
+        "align": [
+          "left",
+          "center"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "Accounts API/Users API:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Accounts API/Users API:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        20
+      ],
+      "raw": "* **FPSL Program Support**\n  * Accounts now include `fpslEnrolled` field indicating enrollment status in the Fully Paid Securities Lending program\n  * New `FPSL_Disclosure` type for capturing user agreement acceptance",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "FPSL Program SupportAccounts now include fpslEnrolled field indicating enrollment status in the Fully Paid Securities Lending programNew FPSL_Disclosure type for capturing user agreement acceptance",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "# 🎉 Feature Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "# 👠🐛 Bug Fixes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Bug Fixes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## Modified endpoints",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Modified endpoints",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "`POST /accounts`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "POST /accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        36,
+        37
+      ],
+      "raw": "* Request payload:\n* Modified the `200` response:",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Request payload:Modified the 200 response:",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "`GET /accounts/{accountID}`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "GET /accounts/{accountID}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "* Modified the `200` response:",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modified the 200 response:",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "`PATCH /accounts/{accountID}`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PATCH /accounts/{accountID}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        45,
+        46
+      ],
+      "raw": "* Request payload:\n* Modified the `200` response:",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Request payload:Modified the 200 response:",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "`POST /users`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "POST /users",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        50,
+        51
+      ],
+      "raw": "* Request payload:\n* Modified the `200` response:",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Request payload:Modified the 200 response:",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "`PATCH /users/{userID}`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PATCH /users/{userID}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "* Request payload:",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Request payload:",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 57
+        }
+      ]
+    }
+  ]
+}

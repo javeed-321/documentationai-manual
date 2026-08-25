@@ -1,0 +1,59 @@
+---
+title: "API Release 1.49"
+---
+
+## API Release 1.49
+
+| Environment | Release Date                 |
+| :---------- | :--------------------------- |
+| UAT         | RELEASED                     |
+| Production  | Release Date - March 9, 2023 |
+
+### **New Feature - Start Date for Recurring Deposits**
+
+New field `startDate` has been added to the [Deposits API](https://developer.drivewealth.com/reference/post_funding-deposits). This allows a future start date to be specified only for recurring deposits.
+
+Details:
+
+- Start date can only be entered if recurring frequency is specified, otherwise an error will be thrown
+- Start date can be entered in any ISO format but the time portion will default to midnight UTC time of that date
+- Start date can only be in the future and cannot be farther than 90 days from current date
+
+If you would like to enable this feature, please contact your relationship manager.
+
+### **API Update - Trusted Contact**
+
+The [Create Account API](https://developer.drivewealth.com/reference/post_accounts) and [Update Account API](https://developer.drivewealth.com/reference/patch_accounts-accountid) will allow for the adding and editing of a Trusted Contact on the user's account.
+
+If adding a Trusted Contact, the following information is required:
+
+- First Name and Last Name
+- Address
+- Email
+- Phone number
+
+If added, the Trusted Contact will be visible in DriveHub under a new Trusted Contact tab on the account. One Trusted Contact is allowed per account. Adding a Trusted Contact is not mandatory.
+
+#### Please Note:
+
+_A trusted contact is a person you authorize your financial firm to contact in limited circumstances,\
+such as if there is a concern about activity in your account and they have been unable to get in touch with you._
+
+_A trusted contact may be a family member, attorney, accountant or another third-party who you believe would respect your privacy and know how to handle the responsibility._
+
+_Naming someone as a trusted contact does not give that person any authority to act on your behalf,\
+execute transactions or engage in activity in your account._
+
+_Designation as a trusted contact does not provide the designated person with authority to make\
+transactions in your account and does not make that person a power of attorney, legal guardian,\
+trustee or executor._
+
+_By designating a trusted contact, you are authorizing the firm to contact someone you trust and\
+disclose information about your account only in limited circumstances. A firm may only disclose\
+reasonable categories of information with a trusted contact, including information that will assist the\
+firm in administering the customer’s account._
+
+_Unless separately authorized, a trusted contact:_
+
+1. _cannot make trades in your account and_
+2. _cannot make decisions about your account_

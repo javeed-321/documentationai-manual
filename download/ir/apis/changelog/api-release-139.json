@@ -1,0 +1,173 @@
+{
+  "slug": "apis/changelog/api-release-139",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-139.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-139",
+  "title": "API Release 1.39",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "Table": 1,
+    "paragraph": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.39",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.39",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.39",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.39",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        10
+      ],
+      "raw": "| Environment | Released           |\n| :---------- | :----------------- |\n| UAT         | RELEASED           |\n| PRODUCTION  | RELEASED - 6/23/22 |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Environment",
+          "Released"
+        ],
+        "rows": [
+          [
+            "UAT",
+            "RELEASED"
+          ],
+          [
+            "PRODUCTION",
+            "RELEASED - 6/23/22"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "### **API Update - Managed Accounts - Allocations API**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "API Update - Managed Accounts - Allocations API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "For partners using the POST `https://bo-api.drivewealth.io/back-office/managed/allocations` endpoint  - We recently identified a bug in the `comment` field of this API endpoint and have applied a fix and introduced a new field - `clientComment` -  in the /GET request.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For partners using the POST https://bo-api.drivewealth.io/back-office/managed/allocations endpoint  - We recently identified a bug in the comment field of this API endpoint and have applied a fix and introduced a new field - clientComment -  in the /GET request.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "Prior to this fix, when a comment was passed, the response returned in the GET `https://bo-api.drivewealth.io/back-office/managed/allocations/{allocationID}` was an internal DriveWealth comment. We have now updated the response to include both the internal DriveWealth comment and the comment that was supplied by the /POST request now called `clientComment` on the /GET request. The payload from the /POST request will not change however the /GET will now include `comment` and `clientComment` inside of the allocations object.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Prior to this fix, when a comment was passed, the response returned in the GET https://bo-api.drivewealth.io/back-office/managed/allocations/{allocationID} was an internal DriveWealth comment. We have now updated the response to include both the internal DriveWealth comment and the comment that was supplied by the /POST request now called clientComment on the /GET request. The payload from the /POST request will not change however the /GET will now include comment and clientComment inside of the allocations object.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        18,
+        19
+      ],
+      "raw": "It is advised that you make the necessary updates on your end to avoid any potential issues.\\\nPlease let us know if you have any questions or seek clarifications.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "It is advised that you make the necessary updates on your end to avoid any potential issues.Please let us know if you have any questions or seek clarifications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

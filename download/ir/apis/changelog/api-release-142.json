@@ -1,0 +1,296 @@
+{
+  "slug": "apis/changelog/api-release-142",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-142.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-142",
+  "title": "API Release 1.42",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "Table": 1,
+    "br": 3,
+    "paragraph": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.42",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.42",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.42",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.42",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        10
+      ],
+      "raw": "| Environment | Release Date                  |\n| :---------- | :---------------------------- |\n| UAT         | RELEASED                      |\n| Production  | RELEASED - September 15, 2022 |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Environment",
+          "Release Date"
+        ],
+        "rows": [
+          [
+            "UAT",
+            "RELEASED"
+          ],
+          [
+            "Production",
+            "RELEASED - September 15, 2022"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "### **Error Code Updates**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Error Code Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "The following error code has been updated:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following error code has been updated:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "`E032` will display message `Bank Routing Number Validation Response: Routing number is invalid` when an invalid `beneficiarySwiftABA` is passed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "E032 will display message Bank Routing Number Validation Response: Routing number is invalid when an invalid beneficiarySwiftABA is passed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "### **Update  - Custodial User Creation**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Update  - Custodial User Creation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "When creating a user where `userType` = `CUSTODIAL`, the `username` and `password` fields are no longer required.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When creating a user where userType = CUSTODIAL, the username and password fields are no longer required.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "### **Update - Maximum Order Quantity**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Update - Maximum Order Quantity",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "The maximum order quantity allowed has been increased from 10,000 shares to 20,000 shares.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The maximum order quantity allowed has been increased from 10,000 shares to 20,000 shares.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

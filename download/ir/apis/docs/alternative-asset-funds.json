@@ -1,0 +1,325 @@
+{
+  "slug": "apis/docs/alternative-asset-funds",
+  "source": "https://developer.drivewealth.com/apis/docs/alternative-asset-funds.md",
+  "url": "https://developer.drivewealth.com/apis/docs/alternative-asset-funds",
+  "title": "Buying Alternative Asset Funds",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T22:55:11.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "paragraph": 9,
+    "code": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Buying Alternative Asset Funds ",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Buying Alternative Asset Funds",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Trading in alternative asset funds",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Trading in alternative asset funds",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Clients can use the DriveWealth platform to enable their customers to search, trade, and settle alternative asset funds. These funds behave differently from traditional mutual funds and equities, and there are specific considerations for investment.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Clients can use the DriveWealth platform to enable their customers to search, trade, and settle alternative asset funds. These funds behave differently from traditional mutual funds and equities, and there are specific considerations for investment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Searching for alternative funds",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Searching for alternative funds",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Clients can use the same fund search endpoints available for all mutual funds. Once results are returned, filter on the alternative fund attribute to determine which funds are categorized as alternatives. This allows you to clearly indicate to customers which funds fall into this category.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Clients can use the same fund search endpoints available for all mutual funds. Once results are returned, filter on the alternative fund attribute to determine which funds are categorized as alternatives. This allows you to clearly indicate to customers which funds fall into this category.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "## Identifying alternative funds",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Identifying alternative funds",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "When retrieving available funds through the API, each fund object includes an asset class and sub-asset class attribute that indicates whether the fund is categorized as an alternative asset fund. You can see from the example below that `mutualFundData.AssetClass ` is Alternatives and `mutualFundData.subAssetClass` includes the fund’s specific alternatives category with an AL prefix.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When retrieving available funds through the API, each fund object includes an asset class and sub-asset class attribute that indicates whether the fund is categorized as an alternative asset fund. You can see from the example below that mutualFundData.AssetClass  is Alternatives and mutualFundData.subAssetClass includes the fund’s specific alternatives category with an AL prefix.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "The `subscriptionNoticeDays`  and `redemptionNoticeDays`provide the number of days of notice that an investor must provide to the fund for an order to be accepted for that Fund’s pricing cycle. So if an order for a weekly-priced Alternative Mutual Fund is placed and received by DriveWealth after the Fund’s notice days, the transaction will not be booked and confirmed until the next pricing period at the next pricing period’s NAV",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The subscriptionNoticeDays  and redemptionNoticeDaysprovide the number of days of notice that an investor must provide to the fund for an order to be accepted for that Fund’s pricing cycle. So if an order for a weekly-priced Alternative Mutual Fund is placed and received by DriveWealth after the Fund’s notice days, the transaction will not be booked and confirmed until the next pricing period at the next pricing period’s NAV",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        41
+      ],
+      "raw": "```json\n{\n    \"mutualFundData\": {\n        \"loadType\": \"NO_LOAD\",\n        \"subAssetClass\": \"AL - Private Debt\",\n        \"shareClass\": \"PB\",\n        \"shortTermRedemptionRules\": true,\n        \"subscriptionNoticeDays\": 6,\n        \"redemptionNoticeDays\": 30,\n        \"assetClass\": \"Alternatives\",\n        \"subscriptionCommission\": 0,\n        \"fundType\": \"OFFSHORE_US_DOLLAR\",\n        \"managementCommission\": 1.5,\n        \"subscriptionSettlementPeriodDays\": 2,\n        \"maximumPurchaseAmount\": 99999999.99,\n        \"purchaseCutOff\": \"13:30Z\",\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"mutualFundData\": {\n        \"loadType\": \"NO_LOAD\",\n        \"subAssetClass\": \"AL - Private Debt\",\n        \"shareClass\": \"PB\",\n        \"shortTermRedemptionRules\": true,\n        \"subscriptionNoticeDays\": 6,\n        \"redemptionNoticeDays\": 30,\n        \"assetClass\": \"Alternatives\",\n        \"subscriptionCommission\": 0,\n        \"fundType\": \"OFFSHORE_US_DOLLAR\",\n        \"managementCommission\": 1.5,\n        \"subscriptionSettlementPeriodDays\": 2,\n        \"maximumPurchaseAmount\": 99999999.99,\n        \"purchaseCutOff\": \"13:30Z\",\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "## Pricing Considerations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Pricing Considerations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "Unlike equities and traditional mutual funds, alternative funds are not priced daily. Instead, pricing timelines vary and are defined on a per-fund basis. Alternative funds typically are more illiquid and are priced at a monthly to an annual frequency.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Unlike equities and traditional mutual funds, alternative funds are not priced daily. Instead, pricing timelines vary and are defined on a per-fund basis. Alternative funds typically are more illiquid and are priced at a monthly to an annual frequency.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "Clients should surface this information to customers so they understand that their orders will not be filled immediately. The proceeds will be blocked till the pricing date and the positions will be made available to the account only after the fund is priced.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Clients should surface this information to customers so they understand that their orders will not be filled immediately. The proceeds will be blocked till the pricing date and the positions will be made available to the account only after the fund is priced.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "For redemptions, the settlement period can be around a month or more. These are defined at a fund level. This means that the funds will be made available almost a month after it is priced.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For redemptions, the settlement period can be around a month or more. These are defined at a fund level. This means that the funds will be made available almost a month after it is priced.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "## Order execution and pricing/settlement timing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Order execution and pricing/settlement timing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "When a customer places an order in an alternative asset fund:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When a customer places an order in an alternative asset fund:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        55,
+        58
+      ],
+      "raw": "1. Depending on the type of fund, customers can place orders based on the fund’s most recent published valuation\n2. Once a customer submits an order, that order will be queued until the fund releases its NAV (e.g., the first of the following month)\n3. Once the NAV and price is published, the order is executed in a similar fashion to other mutual fund orders. Depending upon the pricing frequency, this can vary from a month to a year.\n4. For a redemption, the settlement periods can be longer than a month. This means that the proceeds will be made available almost a month after the fund was priced. Each fund will include the  `subscriptionSettlementPeriodDays` parameter that indicates settlement timing.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Depending on the type of fund, customers can place orders based on the fund’s most recent published valuationOnce a customer submits an order, that order will be queued until the fund releases its NAV (e.g., the first of the following month)Once the NAV and price is published, the order is executed in a similar fashion to other mutual fund orders. Depending upon the pricing frequency, this can vary from a month to a year.For a redemption, the settlement periods can be longer than a month. This means that the proceeds will be made available almost a month after the fund was priced. Each fund will include the  subscriptionSettlementPeriodDays parameter that indicates settlement timing.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "It is important to distinguish between order execution and settlement. While execution confirms the customer’s order, settlement determines when the customer’s position and funds are fully available. Timing between settlement and execution will differ depending on the fund’s settlement period.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "It is important to distinguish between order execution and settlement. While execution confirms the customer’s order, settlement determines when the customer’s position and funds are fully available. Timing between settlement and execution will differ depending on the fund’s settlement period.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

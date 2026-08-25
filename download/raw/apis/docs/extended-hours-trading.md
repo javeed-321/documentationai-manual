@@ -1,0 +1,189 @@
+---
+updatedAt: 2026-07-13T22:54:34.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Extended hours trading
+
+DriveWealth supports extended hours trading for U.S. equities, enabling your customers to place trades during the pre-market (4:00 AM – 9:30 AM ET) and post-market (4:00 PM – 8:00 PM ET) sessions. This guide outlines how to configure user accounts, disclosures, and order attributes to support trading outside regular market hours.
+
+<Callout icon="🚧" theme="warn">
+  ### Reach out to your Drivewealth Relationship Management to enable Extended Hours.
+</Callout>
+
+### Step 1 : Accept Extended Hours Agreement
+
+For fully disclosed clients, users must accept the [Extended Hours Trading Agreement](https://legal.drivewealth.com/extended-hours-trading-disclosures) before they can place trades in the extended session.
+
+Include `extendedHoursAgreement` set to `true` within the `DISCLOSURES` object while [Creating a User](https://developer.drivewealth.com/apis/reference/post_users)
+
+```json Create User
+POST /back-office/users
+{
+  "userType": "INDIVIDUAL_TRADER",
+  "documents": [
+    {
+      "type": "BASIC_INFO",
+      "data": {
+        "firstName": "Justin",
+        "lastName": "Smith",
+        "country": "USA",
+        "emailAddress": "jj@drivewealth.dev",
+        "language": "en_US",
+        "phone": "18004612680"
+      }
+    },
+....
+..
+...
+   {  
+      "type": "DISCLOSURES",  
+      "data": {  
+        "extendedHoursAgreement": true       <-- extended hours flag
+      }  
+    } 
+  ]
+}
+
+```
+
+For existing users, use the [Update User](https://developer.drivewealth.com/apis/reference/patch_users-userid) endpoint with the `extendedHoursAgreement` set to `true` to enable.
+
+```json
+PATCH /back-office/users/{userID}  
+{  
+  "documents": [  
+    {  
+      "type": "DISCLOSURES",  
+      "data": {  
+        "extendedHoursAgreement": true  
+      }  
+    }  
+  ]  
+}
+```
+
+### Step 2 : Enabling Brokerage Account for Extended Hours
+
+Include `extendedHoursEnrolled`as `true` as part of the [Create Account](https://developer.drivewealth.com/apis/reference/post_accounts) request
+
+```json
+POST /back-office/accounts
+{
+  "accountType": "LIVE",
+  "accountManagementType": "SELF",
+  "tradingType": "CASH",
+  "userID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932",
+  "extendedHoursEnrolled": true                     <-- extended hours flag
+}
+```
+
+For existing accounts, use the [Update Account](https://developer.drivewealth.com/apis/reference/patch_accounts-accountid) endpoint to enroll the account for Extended Hours Trading.
+
+```json
+PATCH /back-office/accounts/{accountID}  
+{
+"extendedHoursEnrolled": true      <-- false if you want to opt out
+}
+```
+
+**Note**: Both Steps 1 & 2 are **required** in order to place Extended Hours trades.
+
+### Step 3: Verifying Instrument Eligibility (Notional Trading)
+
+DriveWealth supports notional (fractional dollar-based) trading during extended hours for a limited subset of \~1,000 eligible symbols.
+
+To verify if a ticker is enabled for Notional Extended Hours trading, use the [List Instruments](https://developer.drivewealth.com/apis/reference/get_instruments) endpoint and check for the  `enableExtendedHoursNotionalStatus` field.
+
+**Possible values:**
+
+* `ACTIVE` — Buy and sell notional orders allowed in extended hours
+* `CLOSE_ONLY` — Only sell notional orders allowed
+* `INACTIVE` — Notional trading not allowed in extended hours
+
+  **Note**: Whole-share orders are eligible across all symbols — this restriction applies only to notional orders.
+
+**Market Order Collaring (Fractional only)**
+To allow for market orders to be accepted in the pre and post markets, DriveWealth takes incoming market orders and send them through as limit orders. These orders are considered "collared" and follow the structure below:
+
+* Buy order: Limit price = NBBO ask price +2.5%
+* Sell order: Limit price = NBBO bid price -2.5%
+
+**Example**: we submit a buy order (99 by 100).  We stamp it at 101.5 but it executes at 100 as long as the price stays. If the price changes in the time it takes us to get the order in, it will execute with the + 2.5%.
+
+#### **Order Type Support Matrix**
+
+| Order Type | Order Mode             | Extended Hours Eligible | Symbol Eligiblity              |
+| :--------- | :--------------------- | :---------------------- | :----------------------------- |
+| **MARKET** | Whole Share (quantity) | Yes                     | \~ 1,000 eligible symbols only |
+| **MARKET** | Notional (amountCash)  | Yes                     | \~ 1,000 eligible symbols only |
+| **LIMIT**  | Whole Share (quantity) | Yes                     | All symbols                    |
+| **LIMIT**  | Notional (amountCash)  | Not supported           | N/A                            |
+
+### Step 4: Submitting an Extended Hours Order
+
+When placing an order to be executed in the pre- or post-market session, you must include `extendedHours` as `true` and `timeInForce` as `GTX`
+
+```json Market Order - Notional EH
+{
+  "accountNo": "abc123",
+  "symbol": "AAPL",
+  "side": "BUY",
+  "orderType": "MARKET",
+  "amountCash": 100.00,
+  "timeInForce": "GTX",
+  "extendedHours": true
+}
+```
+```json Market Order - Whole Shares EH
+{  
+  "accountNo": "abc123",  
+  "symbol": "MSFT",  
+  "side": "buy",  
+  "orderType": "MARKET",  
+  "quantity": 2,  
+  "timeInForce": "GTX",  
+  "extendedHours": true  
+}
+```
+```json Limit Order - EH
+{  
+  "accountNo": "abc123",  
+  "symbol": "GOOGL",  
+  "side": "buy",  
+  "orderType": "LIMIT",  
+  "quantity": 1,  
+  "limitPrice": 2800.00,  
+  "timeInForce": "GTX",  
+  "extendedHours": true  
+}
+```
+
+<Callout icon="🚧" theme="warn">
+  ### Things To Remember
+
+  - `extendedHours` must be set to true per order — it does not persist at the account level.
+  - Ensure customers are informed about the risks of extended hours trading, such as lower liquidity, higher volatility, and potential for partial fills.
+</Callout>
+
+### **Common Errors during Extended Hours**
+
+| Error Code | Error Response                        | Error Description                                                                     |
+| :--------- | :------------------------------------ | :------------------------------------------------------------------------------------ |
+| **O005**   | *ORDER\_INVALID\_ORDER\_TYPE*         | Invalid order type.                                                                   |
+| **O006**   | *ORDER\_INVALID\_ORDER\_SIDE*         | Invalid order side.                                                                   |
+| **O010**   | *ORDER\_INVALID\_STOP\_REQUEST*       | Incomplete stop order. One or more parameters may be missing or invalid.              |
+| **O011**   | *ORDER\_INVALID\_LIMIT\_REQUEST*      | Incomplete limit order. One or more parameters may be missing or invalid.             |
+| **O012**   | *ORDER\_INVALID\_MARKET\_REQUEST*     | Invalid market order. One or more parameters may be missing or invalid.               |
+| **O015**   | *ORDER\_EITHER\_QTY\_OR\_CASH*        | Invalid order. Enter one from amount OR order quantity.                               |
+| **O016**   | *ORDER\_INVALID\_ORDER\_METHOD*       | Invalid order method.                                                                 |
+| **O017**   | *ORDER\_INVALID\_MIT\_REQUEST*        | Incomplete `marketIfTouched` order. One or more parameters may be missing or invalid. |
+| **O018**   | *ORDER\_INVALID\_TIF\_REQUEST*        | Invalid Time In Force. One or more parameters may be missing or invalid.              |
+| **O019**   | *ORDER\_INVALID\_EXPIRATION\_REQUEST* | Invalid order expiration. One or more parameters may be missing or invalid.           |
+| **O050**   | *ORDER\_NOT\_FOUND*                   | Requested order resource was not found.                                               |
+| **O098**   | *ORDER\_ACCOUNT\_ERROR*               | Orders can only be placed on open accounts.                                           |
+| **O099**   | *ORDER\_ERROR*                        | There was an error processing your order.                                             |
+| **O123**   | *ORDER\_EXPIRED*                      | The order has expired.                                                                |
+
+**For a list of all errors refer to:** [API Error Reference](https://developer.drivewealth.com/apis/reference/errors#error-code-reference-tables)

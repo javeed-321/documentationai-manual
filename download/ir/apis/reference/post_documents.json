@@ -1,0 +1,114 @@
+{
+  "slug": "apis/reference/post_documents",
+  "source": "https://developer.drivewealth.com/apis/reference/post_documents.md",
+  "url": "https://developer.drivewealth.com/apis/reference/post_documents",
+  "title": "Upload Physical Document",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:58:08.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Upload Physical Document",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Upload Physical Document",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Uploads a Physical Document.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Uploads a Physical Document.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        200
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Account Management APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Physical Documents\"\n    }\n  ],\n  \"paths\": {\n    \"/documents\": {\n      \"post\": {\n        \"tags\": [\n          \"Physical Documents\"\n        ],\n        \"summary\": \"Upload Physical Document\",\n        \"description\": \"Uploads a Physical Document.\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/UploadUserPhysicalDocumentReq\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Uploading a Physical Document was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/UploadUserPhysicalDocument\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"userID\": {\n        \"type\": \"string\",\n        \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932\",\n        \"description\": \"A unique identifier created for each User on DriveWealth's platform.\"\n      },\n      \"physicalDocumentTypes\": {\n        \"type\": \"string\",\n        \"example\": \"DRIVER_LICENSE\",\n        \"description\": \"The type of physical document.\",\n        \"enum\": [\n          \"DRIVER_LICENSE\",\n          \"PASSPORT\",\n          \"NATIONAL_ID_CARD\",\n          \"VOTER_ID\",\n          \"WORK_PERMIT\",\n          \"VISA\",\n          \"RESIDENCE_PERMIT\",\n          \"ACATS_IN\",\n          \"ACATS_OUT\",\n          \"TRANSFER_ON_DEATH\",\n          \"BENEFICIARY_DOCUMENT\",\n          \"BUSINESS_DOCUMENT\",\n          \"TRUST_DOCUMENTS\"\n        ]\n      },\n      \"physicalDocumentSides\": {\n        \"type\": \"string\",\n        \"example\": \"FRONT\",\n        \"description\": \"The actual side of the physical document.\"\n      },\n      \"physicalDocumentBase64\": {\n        \"type\": \"string\",\n        \"example\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCMR\",\n        \"description\": \"The Base64 encoded string of the document.\",\n        \"maximum\": 10\n      },\n      \"physicalDocumentID\": {\n        \"type\": \"string\",\n        \"example\": \"532e1b7d-09fd-4a1b-956f-d4e91ad71b4f\",\n        \"description\": \"The unique identifier of the document.\"\n      },\n      \"physicalDocumentStatus\": {\n        \"type\": \"string\",\n        \"example\": \"NOT_SUBMITTED\",\n        \"description\": \"The current status of the physical document.\",\n        \"enum\": [\n          \"NOT_SUBMITTED\",\n          \"PENDING\",\n          \"APPROVED\",\n          \"REJECTED\"\n        ]\n      },\n      \"physicalDocumentStatusObject\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentStatus\"\n          },\n          \"description\": {\n            \"type\": \"string\",\n            \"example\": \"Document has not been submitted for approval.\",\n            \"description\": \"A custom description that describes the document current status.\"\n          }\n        }\n      },\n      \"UploadUserPhysicalDocument\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentID\"\n          },\n          \"type\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentTypes\"\n          },\n          \"status\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentStatusObject\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentSides\"\n          }\n        }\n      },\n      \"UploadUserPhysicalDocumentReq\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"userID\",\n          \"type\",\n          \"document\"\n        ],\n        \"properties\": {\n          \"userID\": {\n            \"$ref\": \"#/components/schemas/userID\"\n          },\n          \"type\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentTypes\"\n          },\n          \"document\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentBase64\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentSides\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Account Management APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Physical Documents\"\n    }\n  ],\n  \"paths\": {\n    \"/documents\": {\n      \"post\": {\n        \"tags\": [\n          \"Physical Documents\"\n        ],\n        \"summary\": \"Upload Physical Document\",\n        \"description\": \"Uploads a Physical Document.\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/UploadUserPhysicalDocumentReq\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Uploading a Physical Document was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/UploadUserPhysicalDocument\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"userID\": {\n        \"type\": \"string\",\n        \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932\",\n        \"description\": \"A unique identifier created for each User on DriveWealth's platform.\"\n      },\n      \"physicalDocumentTypes\": {\n        \"type\": \"string\",\n        \"example\": \"DRIVER_LICENSE\",\n        \"description\": \"The type of physical document.\",\n        \"enum\": [\n          \"DRIVER_LICENSE\",\n          \"PASSPORT\",\n          \"NATIONAL_ID_CARD\",\n          \"VOTER_ID\",\n          \"WORK_PERMIT\",\n          \"VISA\",\n          \"RESIDENCE_PERMIT\",\n          \"ACATS_IN\",\n          \"ACATS_OUT\",\n          \"TRANSFER_ON_DEATH\",\n          \"BENEFICIARY_DOCUMENT\",\n          \"BUSINESS_DOCUMENT\",\n          \"TRUST_DOCUMENTS\"\n        ]\n      },\n      \"physicalDocumentSides\": {\n        \"type\": \"string\",\n        \"example\": \"FRONT\",\n        \"description\": \"The actual side of the physical document.\"\n      },\n      \"physicalDocumentBase64\": {\n        \"type\": \"string\",\n        \"example\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCMR\",\n        \"description\": \"The Base64 encoded string of the document.\",\n        \"maximum\": 10\n      },\n      \"physicalDocumentID\": {\n        \"type\": \"string\",\n        \"example\": \"532e1b7d-09fd-4a1b-956f-d4e91ad71b4f\",\n        \"description\": \"The unique identifier of the document.\"\n      },\n      \"physicalDocumentStatus\": {\n        \"type\": \"string\",\n        \"example\": \"NOT_SUBMITTED\",\n        \"description\": \"The current status of the physical document.\",\n        \"enum\": [\n          \"NOT_SUBMITTED\",\n          \"PENDING\",\n          \"APPROVED\",\n          \"REJECTED\"\n        ]\n      },\n      \"physicalDocumentStatusObject\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentStatus\"\n          },\n          \"description\": {\n            \"type\": \"string\",\n            \"example\": \"Document has not been submitted for approval.\",\n            \"description\": \"A custom description that describes the document current status.\"\n          }\n        }\n      },\n      \"UploadUserPhysicalDocument\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentID\"\n          },\n          \"type\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentTypes\"\n          },\n          \"status\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentStatusObject\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentSides\"\n          }\n        }\n      },\n      \"UploadUserPhysicalDocumentReq\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"userID\",\n          \"type\",\n          \"document\"\n        ],\n        \"properties\": {\n          \"userID\": {\n            \"$ref\": \"#/components/schemas/userID\"\n          },\n          \"type\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentTypes\"\n          },\n          \"document\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentBase64\"\n          },\n          \"side\": {\n            \"$ref\": \"#/components/schemas/physicalDocumentSides\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 43
+        }
+      ]
+    }
+  ]
+}

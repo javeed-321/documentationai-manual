@@ -1,0 +1,119 @@
+{
+  "slug": "apis/reference/post_managed-autopilot-partnerid",
+  "source": "https://developer.drivewealth.com/apis/reference/post_managed-autopilot-partnerid.md",
+  "url": "https://developer.drivewealth.com/apis/reference/post_managed-autopilot-partnerid",
+  "title": "Create Autopilot Run",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:58:45.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Create Autopilot Run",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Create Autopilot Run",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Create an Autopilot Run.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Create an Autopilot Run.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        173
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Advisor APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"AutoPilot\"\n    }\n  ],\n  \"paths\": {\n    \"/managed/autopilot/{partnerID}\": {\n      \"post\": {\n        \"deprecated\": true,\n        \"tags\": [\n          \"AutoPilot\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"partnerID\",\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"required\": true,\n            \"example\": \"66304da9-3h6f-2234-935f-ac6b7933d706\",\n            \"description\": \"This is the parentIBID or userID of the registered investment advisor.\"\n          }\n        ],\n        \"summary\": \"Create Autopilot Run\",\n        \"description\": \"Create an Autopilot Run.\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/autopilotReq\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Creating an Autopilot Run was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/autopilotRes\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"accountID\": {\n        \"type\": \"string\",\n        \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n        \"description\": \"The user's unique account identifier.\"\n      },\n      \"riaID\": {\n        \"type\": \"string\",\n        \"example\": \"66304da9-3h6f-2234-935f-ac6b7933d706\",\n        \"description\": \"This is the parentIBID or userID of the registered investment advisor creating the re-balance run.\"\n      },\n      \"autopilotReq\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"reviewOnly\",\n          \"forceRebalance\"\n        ],\n        \"properties\": {\n          \"reviewOnly\": {\n            \"type\": \"boolean\",\n            \"example\": true,\n            \"description\": \"True, if a review should occur without a forced rebalance.\"\n          },\n          \"forceRebalance\": {\n            \"type\": \"boolean\",\n            \"example\": true,\n            \"description\": \"True, if a forces rebalance should occur.\"\n          },\n          \"subAccounts\": {\n            \"type\": \"array\",\n            \"description\": \"A list of user's accountIDs to be rebalanced.\",\n            \"items\": {\n              \"oneOf\": [\n                {\n                  \"$ref\": \"#/components/schemas/accountID\"\n                }\n              ]\n            }\n          }\n        }\n      },\n      \"autopilotRes\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"example\": \"ria_rebalance_ebf7e764-e2d6-4b3d-a333-b8ff05b92b89\",\n            \"description\": \"The unique re-balance run identifier `rebalanceRunID` associated with a specific re-balance.\"\n          },\n          \"created\": {\n            \"type\": \"string\",\n            \"example\": \"2022-12-27T06:06:28.955Z\",\n            \"description\": \"A timestamp of when the re-balance run was created.\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"example\": \"REBALANCE_NOT_STARTED\",\n            \"description\": \"Status of the re-balance run. See [Autopilot Run Status](https://developer.drivewealth.com/reference/get-autopilot-run-status) for status values.\"\n          },\n          \"riaID\": {\n            \"$ref\": \"#/components/schemas/riaID\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Advisor APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"AutoPilot\"\n    }\n  ],\n  \"paths\": {\n    \"/managed/autopilot/{partnerID}\": {\n      \"post\": {\n        \"deprecated\": true,\n        \"tags\": [\n          \"AutoPilot\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"partnerID\",\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"required\": true,\n            \"example\": \"66304da9-3h6f-2234-935f-ac6b7933d706\",\n            \"description\": \"This is the parentIBID or userID of the registered investment advisor.\"\n          }\n        ],\n        \"summary\": \"Create Autopilot Run\",\n        \"description\": \"Create an Autopilot Run.\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/autopilotReq\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Creating an Autopilot Run was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/autopilotRes\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"accountID\": {\n        \"type\": \"string\",\n        \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n        \"description\": \"The user's unique account identifier.\"\n      },\n      \"riaID\": {\n        \"type\": \"string\",\n        \"example\": \"66304da9-3h6f-2234-935f-ac6b7933d706\",\n        \"description\": \"This is the parentIBID or userID of the registered investment advisor creating the re-balance run.\"\n      },\n      \"autopilotReq\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"reviewOnly\",\n          \"forceRebalance\"\n        ],\n        \"properties\": {\n          \"reviewOnly\": {\n            \"type\": \"boolean\",\n            \"example\": true,\n            \"description\": \"True, if a review should occur without a forced rebalance.\"\n          },\n          \"forceRebalance\": {\n            \"type\": \"boolean\",\n            \"example\": true,\n            \"description\": \"True, if a forces rebalance should occur.\"\n          },\n          \"subAccounts\": {\n            \"type\": \"array\",\n            \"description\": \"A list of user's accountIDs to be rebalanced.\",\n            \"items\": {\n              \"oneOf\": [\n                {\n                  \"$ref\": \"#/components/schemas/accountID\"\n                }\n              ]\n            }\n          }\n        }\n      },\n      \"autopilotRes\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"example\": \"ria_rebalance_ebf7e764-e2d6-4b3d-a333-b8ff05b92b89\",\n            \"description\": \"The unique re-balance run identifier `rebalanceRunID` associated with a specific re-balance.\"\n          },\n          \"created\": {\n            \"type\": \"string\",\n            \"example\": \"2022-12-27T06:06:28.955Z\",\n            \"description\": \"A timestamp of when the re-balance run was created.\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"example\": \"REBALANCE_NOT_STARTED\",\n            \"description\": \"Status of the re-balance run. See [Autopilot Run Status](https://developer.drivewealth.com/reference/get-autopilot-run-status) for status values.\"\n          },\n          \"riaID\": {\n            \"$ref\": \"#/components/schemas/riaID\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 43
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/get-autopilot-run-status",
+          "line": 156
+        }
+      ]
+    }
+  ]
+}

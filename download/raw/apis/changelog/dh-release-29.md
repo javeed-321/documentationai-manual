@@ -1,0 +1,61 @@
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# DH Release 2.9
+
+## DH Release 2.9
+
+| Environment | Status              |
+| :---------- | :------------------ |
+| UAT         | RELEASED            |
+| PRODUCTION  | RELEASED- 5/17/2022 |
+
+New features have been added to DriveHub to provide easier navigation between accounts, display additional user and account information, and new filter and report options.
+
+Updates include:
+
+## Improved Account Page
+
+The Account page has been redesigned for an easier and cleaner display of customer accounts.
+
+![](https://files.readme.io/e968346-2022-05-16_14_18_55-Q2.2022.05.12_-_Drivehub_2.9.0_Release_-_Account_Page.png "2022-05-16 14_18_55-Q2.2022.05.12 - Drivehub 2.9.0 Release - Account Page.png")
+
+User accounts are accessible through the Account tab which is located on the left side menu (see highlighted).\
+The Accounts tab displays a table that contains the following:
+
+* The account number as a link to the account
+* The account type
+* The account nick-name
+* The status of the account (Active/Inactive)
+
+The overflow menu (3 dots) indicates actions  and there is an ability to easily switch between accounts.
+
+All existing account features are listed as tabs on top of the sheet once you click into an account:
+
+![](https://files.readme.io/3ca0d5e-2022-05-16_14_45_23-Q2.2022.05.12_-_Drivehub_2.9.0_Release_-_tabs.png "2022-05-16 14_45_23-Q2.2022.05.12 - Drivehub 2.9.0 Release - tabs.png")
+
+## Positions and Orders Tab Updates
+
+The Positions tab and the Orders tab allow the user to update and change the columns shown
+
+![](https://files.readme.io/343c934-Positions_Page.png "Positions Page.png")
+
+## Reconciliation Tab Updates
+
+The Reconciliation tab has been updated to include the following features:
+
+* Custom filters
+* Tab that provides a breakdown of purchases, sales, dividends, fees and other data
+
+## Pattern Day Trader Status
+
+This update includes a Pattern Day Trader (PDT) indicator visible in DriveHub.
+
+If `patternDayTrader` is set to `true`, DriveHub will display "Yes" under Pattern Day Trader
+
+For more information on the PDT counter for LPMA accounts, please see this [API Highlight](https://guides.drivewealth.com/changelog/api-highlights-pdt-for-lpma-accounts)
+
+![](https://files.readme.io/9c6d170-2022-05-16_15_14_18-Q2.2022.05.12_-_Drivehub_2.9.0_Release_-_PDT.png "2022-05-16 15_14_18-Q2.2022.05.12 - Drivehub 2.9.0 Release - PDT.png")
+
+##
+
+If you have any questions about the updates, please feel free to contact your PSG Account Manager.

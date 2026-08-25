@@ -1,0 +1,31 @@
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# API Release v1.67.0
+
+Earlier this month we announced new APIs that it will make it easier to settle with DriveWealth. We called this One Settlement. So no matter your funding method "One" settlement to rule them all.
+
+Please be reminded that effective **May 28, 2024** as per Securities & Exchange Commission; the industry is moving to a Trade Day + 1 (T+1). To learn more about T+1 settlement, please see [here](https://www.sec.gov/oiea/investor-alerts-and-bulletins/new-t1-settlement-cycle-what-investors-need-know-investor).
+
+If you have any questions, please reach out to your assigned relations manager or contact us directly at [RMteam@drivewealth.com](mailto:rmteam@drivewealth.com).
+
+We noticed that a few events from our documentation were missing specifically, [`reconciliations.created`](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-created) and [`reconciliations.updated`](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-updated) . Take a look!
+
+| Status           | Environment |
+| :--------------- | :---------: |
+| ✨💃🏻 Prime Time |     PROD    |
+
+# 🚀 New features
+
+We introduced a new way for partners to listen to [`account.exclusions.created`](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-account-exclusions-created) events to notify them of accounts that we not included in the reconciliation report.
+
+# 🎉 Feature enhancements
+
+We are always improving the platform, but no new feature enhancements are happening this during this release.
+
+# 👠🐛 Squashing bugs
+
+We are always squashing bugs, but nothing significant during this release that should be called out.
+
+# 🪵 ChangeLog
+
+Nothing to report here.

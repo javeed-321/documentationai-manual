@@ -1,0 +1,1022 @@
+{
+  "slug": "apis/docs/common-data-types",
+  "source": "https://developer.drivewealth.com/apis/docs/common-data-types.md",
+  "url": "https://developer.drivewealth.com/apis/docs/common-data-types",
+  "title": "Common data types",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T22:46:02.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 11,
+    "paragraph": 18,
+    "Table": 4,
+    "code": 6,
+    "list": 4,
+    "thematicBreak": 5,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Common data types",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Common data types",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## **Name Field Requirements**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Name Field Requirements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "DriveWealth's clearing system requires that `firstName` and `lastName` contain only **ASCII-compatible Latin characters**. Accounts submitted with unsupported characters will fail at the clearing stage with an `Invalid Account Name` error and will need to be corrected before the account can be activated.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth's clearing system requires that firstName and lastName contain only ASCII-compatible Latin characters. Accounts submitted with unsupported characters will fail at the clearing stage with an Invalid Account Name error and will need to be corrected before the account can be activated.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## **Supported Characters**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Supported Characters",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        19
+      ],
+      "raw": "| Type                         | Examples                    |\n| :--------------------------- | :-------------------------- |\n| Standard Latin letters       | `A–Z`, `a–z`                |\n| Hyphens                      | `O-Brien`, `Al-Saadi`       |\n| Spaces, apostrophes, periods | `Mary J. Blige`, `O'Connor` |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Type",
+          "Examples"
+        ],
+        "rows": [
+          [
+            "Standard Latin letters",
+            "A–Z, a–z"
+          ],
+          [
+            "Hyphens",
+            "O-Brien, Al-Saadi"
+          ],
+          [
+            "Spaces, apostrophes, periods",
+            "Mary J. Blige, O'Connor"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## **Unsupported Characters**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Unsupported Characters",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        23,
+        28
+      ],
+      "raw": "| Type                             | Examples             |\n| :------------------------------- | :------------------- |\n| Arabic script                    | `أحمد`, `فارازانجوم` |\n| CJK characters                   | `振廙`, `范`            |\n| Accented/diacritic characters    | `José`, `Müller`     |\n| Any non-Latin Unicode characters | —                    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Type",
+          "Examples"
+        ],
+        "rows": [
+          [
+            "Arabic script",
+            "أحمد, فارازانجوم"
+          ],
+          [
+            "CJK characters",
+            "振廙, 范"
+          ],
+          [
+            "Accented/diacritic characters",
+            "José, Müller"
+          ],
+          [
+            "Any non-Latin Unicode characters",
+            "—"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "## **Handling International Customers**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Handling International Customers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "Transliterate the name to its Latin ASCII equivalent before submitting. The transliterated name should match how the customer's name appears on their government-issued ID in Latin characters (many international IDs include this).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Transliterate the name to its Latin ASCII equivalent before submitting. The transliterated name should match how the customer's name appears on their government-issued ID in Latin characters (many international IDs include this).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        34,
+        40
+      ],
+      "raw": "```json\n// ❌ Will fail\n{ \"firstName\": \"أحمد\", \"lastName\": \"السعدي\" }\n\n// ✅ Correct\n{ \"firstName\": \"Ahmed\", \"lastName\": \"Al-Saadi\" }\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "// ❌ Will fail\n{ \"firstName\": \"أحمد\", \"lastName\": \"السعدي\" }\n\n// ✅ Correct\n{ \"firstName\": \"Ahmed\", \"lastName\": \"Al-Saadi\" }"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "⚠️ **Note:** The transliterated name must still match the customer's official ID. If their ID only shows non-Latin script, submit the most commonly accepted romanization.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "⚠️ Note: The transliterated name must still match the customer's official ID. If their ID only shows non-Latin script, submit the most commonly accepted romanization.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "## **Dates & Times**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Dates & Times",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "All timestamps across the DriveWealth API are expressed in **ISO 8601 format** and returned in **UTC**.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All timestamps across the DriveWealth API are expressed in ISO 8601 format and returned in UTC.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        48,
+        50
+      ],
+      "raw": "```\n2024-03-15T14:30:00.000Z\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "2024-03-15T14:30:00.000Z"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "When submitting date parameters in query strings (e.g. for filtering transactions or statements), use the `YYYY-MM-DD` format:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When submitting date parameters in query strings (e.g. for filtering transactions or statements), use the YYYY-MM-DD format:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        54,
+        56
+      ],
+      "raw": "```\nGET /back-office/accounts/{accountID}/transactions?from=2024-01-01&to=2024-03-31\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/transactions?from=2024-01-01&to=2024-03-31"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "**Key conventions:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Key conventions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        60,
+        62
+      ],
+      "raw": "* All API responses return timestamps in UTC — your platform is responsible for converting to the user's local timezone for display\n* Market hours and settlement cutoffs are expressed in **US Eastern Time (ET)** in this documentation\n* Settlement dates follow the **T+N** convention, where T is the trade date and N is the number of business days to settlement",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "All API responses return timestamps in UTC — your platform is responsible for converting to the user's local timezone for displayMarket hours and settlement cutoffs are expressed in US Eastern Time (ET) in this documentationSettlement dates follow the T+N convention, where T is the trade date and N is the number of business days to settlement",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "📘 **Note:** Weekend and US market holidays are not counted as business days for settlement purposes.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "📘 Note: Weekend and US market holidays are not counted as business days for settlement purposes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "## **Monetary Amounts**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Monetary Amounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "All monetary values in the DriveWealth API are expressed as **floating point numbers in USD**, unless otherwise specified.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All monetary values in the DriveWealth API are expressed as floating point numbers in USD, unless otherwise specified.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        72,
+        77
+      ],
+      "raw": "```json\n{\n  \"cashAvailableForTrade\": 1250.75,\n  \"cashBalance\": 1500.00\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"cashAvailableForTrade\": 1250.75,\n  \"cashBalance\": 1500.00\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "**Key conventions:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Key conventions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        81,
+        84
+      ],
+      "raw": "* All amounts are in USD by default\n* Fractional amounts are supported and returned with up to 8 decimal places for share quantities (e.g. `\"openQty\": 0.00250000`)\n* Monetary values (cash, market value) are typically returned with 2 decimal places\n* Never round monetary values before submitting to the API — pass the full precision received",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "All amounts are in USD by defaultFractional amounts are supported and returned with up to 8 decimal places for share quantities (e.g. \"openQty\": 0.00250000)Monetary values (cash, market value) are typically returned with 2 decimal placesNever round monetary values before submitting to the API — pass the full precision received",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        86,
+        86
+      ],
+      "raw": "🚧 **Important:** DriveWealth does not perform currency conversion. Non-USD clients should handle FX conversion on their side before submitting funding amounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "🚧 Important: DriveWealth does not perform currency conversion. Non-USD clients should handle FX conversion on their side before submitting funding amounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        88,
+        88
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        90,
+        90
+      ],
+      "raw": "##",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        92,
+        92
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        94,
+        94
+      ],
+      "raw": "## **Error Handling**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Error Handling",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        96,
+        96
+      ],
+      "raw": "DriveWealth uses standard **HTTP status codes** alongside a structured error response body to communicate failures.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth uses standard HTTP status codes alongside a structured error response body to communicate failures.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "**HTTP status codes used:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "HTTP status codes used:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        100,
+        110
+      ],
+      "raw": "| Code  | Meaning                                                                                  |\n| :---- | :--------------------------------------------------------------------------------------- |\n| `200` | Success                                                                                  |\n| `400` | Bad Request — invalid parameters or missing required fields                              |\n| `401` | Unauthorized — invalid or expired session token                                          |\n| `403` | Forbidden — valid credentials but insufficient permissions                               |\n| `404` | Not Found — the requested resource does not exist                                        |\n| `409` | Conflict — duplicate request or state conflict                                           |\n| `422` | Unprocessable Entity — request is valid but cannot be executed (e.g. insufficient funds) |\n| `429` | Too Many Requests — rate limit exceeded                                                  |\n| `500` | Internal Server Error — contact DriveWealth support                                      |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Code",
+          "Meaning"
+        ],
+        "rows": [
+          [
+            "200",
+            "Success"
+          ],
+          [
+            "400",
+            "Bad Request — invalid parameters or missing required fields"
+          ],
+          [
+            "401",
+            "Unauthorized — invalid or expired session token"
+          ],
+          [
+            "403",
+            "Forbidden — valid credentials but insufficient permissions"
+          ],
+          [
+            "404",
+            "Not Found — the requested resource does not exist"
+          ],
+          [
+            "409",
+            "Conflict — duplicate request or state conflict"
+          ],
+          [
+            "422",
+            "Unprocessable Entity — request is valid but cannot be executed (e.g. insufficient funds)"
+          ],
+          [
+            "429",
+            "Too Many Requests — rate limit exceeded"
+          ],
+          [
+            "500",
+            "Internal Server Error — contact DriveWealth support"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        112,
+        112
+      ],
+      "raw": "**Error response format:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Error response format:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        114,
+        120
+      ],
+      "raw": "```json\n{\n  \"errorCode\": \"INSUFFICIENT_FUNDS\",\n  \"errorMessage\": \"The account does not have sufficient cash available for trade.\",\n  \"statusCode\": 422\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"errorCode\": \"INSUFFICIENT_FUNDS\",\n  \"errorMessage\": \"The account does not have sufficient cash available for trade.\",\n  \"statusCode\": 422\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        122,
+        122
+      ],
+      "raw": "**Best practices:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Best practices:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        124,
+        127
+      ],
+      "raw": "* Always parse the `errorCode` field programmatically — do not rely solely on `errorMessage` strings, which may change\n* Implement retry logic with **exponential backoff** for `500` and `429` errors\n* `409` conflicts on order submission should be investigated before retrying — do not auto-retry blindly\n* Surface meaningful error states to your users rather than generic failure messages",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Always parse the errorCode field programmatically — do not rely solely on errorMessage strings, which may changeImplement retry logic with exponential backoff for 500 and 429 errors409 conflicts on order submission should be investigated before retrying — do not auto-retry blindlySurface meaningful error states to your users rather than generic failure messages",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        129,
+        129
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        131,
+        131
+      ],
+      "raw": "## **Idempotency**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Idempotency",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        133,
+        133
+      ],
+      "raw": "For critical operations such as deposits, withdrawals, and order submissions, DriveWealth supports idempotency keys to prevent duplicate transactions in the event of network failures or timeouts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For critical operations such as deposits, withdrawals, and order submissions, DriveWealth supports idempotency keys to prevent duplicate transactions in the event of network failures or timeouts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        135,
+        135
+      ],
+      "raw": "Pass a unique idempotency key in the request header:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Pass a unique idempotency key in the request header:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        137,
+        139
+      ],
+      "raw": "```\nIdempotency-Key: {your-unique-uuid}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "Idempotency-Key: {your-unique-uuid}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        141,
+        141
+      ],
+      "raw": "**Key conventions:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Key conventions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        143,
+        146
+      ],
+      "raw": "* Idempotency keys must be a **UUID v4**\n* Keys are valid for 3 days\n* If a request is retried with the same key, the original response is returned without executing the operation again\n* Each unique operation should use a fresh idempotency key — never reuse keys across different transactions",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Idempotency keys must be a UUID v4Keys are valid for 3 daysIf a request is retried with the same key, the original response is returned without executing the operation againEach unique operation should use a fresh idempotency key — never reuse keys across different transactions",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        148,
+        148
+      ],
+      "raw": "🚧 **Important:** Submitting an order or funding request without an idempotency key in an unreliable network environment risks duplicate execution. Always use idempotency keys for money movement and order operations.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "🚧 Important: Submitting an order or funding request without an idempotency key in an unreliable network environment risks duplicate execution. Always use idempotency keys for money movement and order operations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        150,
+        150
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        152,
+        152
+      ],
+      "raw": "### **Generating a UUID v4**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Generating a UUID v4",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        154,
+        159
+      ],
+      "raw": "| Language | Library / Method                 | Docs                                                                                   |\n| :------- | :------------------------------- | :------------------------------------------------------------------------------------- |\n| Node.js  | `crypto.randomUUID()` (built-in) | [nodejs.org](https://nodejs.org/api/crypto.html#cryptorandomuuidoptions)               |\n| Python   | `uuid.uuid4()` (stdlib)          | [docs.python.org](https://docs.python.org/3/library/uuid.html)                         |\n| Ruby     | `SecureRandom.uuid` (stdlib)     | [ruby-doc.org](https://ruby-doc.org/stdlib/libdoc/securerandom/rdoc/SecureRandom.html) |\n| PHP      | `ramsey/uuid`                    | [uuid.ramsey.dev](https://uuid.ramsey.dev)                                             |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Language",
+          "Library / Method",
+          "Docs"
+        ],
+        "rows": [
+          [
+            "Node.js",
+            "crypto.randomUUID() (built-in)",
+            "nodejs.org"
+          ],
+          [
+            "Python",
+            "uuid.uuid4() (stdlib)",
+            "docs.python.org"
+          ],
+          [
+            "Ruby",
+            "SecureRandom.uuid (stdlib)",
+            "ruby-doc.org"
+          ],
+          [
+            "PHP",
+            "ramsey/uuid",
+            "uuid.ramsey.dev"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        161,
+        161
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 161
+        }
+      ]
+    }
+  ]
+}

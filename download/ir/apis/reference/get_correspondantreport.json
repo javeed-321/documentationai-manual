@@ -1,0 +1,114 @@
+{
+  "slug": "apis/reference/get_correspondantreport",
+  "source": "https://developer.drivewealth.com/apis/reference/get_correspondantreport.md",
+  "url": "https://developer.drivewealth.com/apis/reference/get_correspondantreport",
+  "title": "Retrieve Correspondent Reports",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:57:55.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Retrieve Correspondent Reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Retrieve Correspondent Reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Fetch daily reports generated to provide positions, account activity, balances, and more in file format",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Fetch daily reports generated to provide positions, account activity, balances, and more in file format",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        200
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Core APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Correspondent Reports\"\n    }\n  ],\n  \"paths\": {\n    \"/correspondantReport\": {\n      \"get\": {\n        \"tags\": [\n          \"Correspondent Reports\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"query\",\n            \"name\": \"date\",\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"required\": true,\n            \"example\": \"2023-03-21\",\n            \"description\": \"The date for which the Correspondent Report is being requested\"\n          }\n        ],\n        \"summary\": \"Retrieve Correspondent Reports\",\n        \"description\": \"Fetch daily reports generated to provide positions, account activity, balances, and more in file format\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Fetching Correspondent reports was successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"properties\": {\n                    \"url\": {\n                      \"$ref\": \"#/components/schemas/fileURL\"\n                    }\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Bad Request\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ErrorResponseModel\"\n                },\n                \"examples\": {\n                  \"Invalid request missing date\": {\n                    \"value\": {\n                      \"errorCode\": \"E031\",\n                      \"message\": \"Invalid or missing parameters in the request URL or body. Refer to the API documentation for details. Details: Required : [date]\"\n                    }\n                  },\n                  \"Invalid request\": {\n                    \"value\": {\n                      \"errorCode\": \"E033\",\n                      \"message\": \"Invalid parameter in message body. Refer to the API documentation for details.\"\n                    }\n                  }\n                }\n              }\n            }\n          },\n          \"500\": {\n            \"description\": \"Internal Server Error\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ErrorResponseModel\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"ErrorCode\": {\n        \"type\": \"string\",\n        \"description\": \"The error code that is returned when an error occurs.\",\n        \"example\": \"E032\"\n      },\n      \"ErrorCodeMessage\": {\n        \"type\": \"string\",\n        \"description\": \"The error message that is returned when an error occurs.\"\n      },\n      \"ErrorDetails\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\",\n            \"description\": \"JSON field name from the request body that caused an error\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"STRING\",\n              \"ARRAY\",\n              \"INT\",\n              \"DECIMAL\",\n              \"BOOL\",\n              \"TEXT\",\n              \"UUID\",\n              \"DATE\",\n              \"MAP\",\n              \"OBJECT\"\n            ],\n            \"description\": \"Expected data type of the field\"\n          },\n          \"allowedValues\": {\n            \"type\": \"string\",\n            \"description\": \"Example values which are allowed in the field\"\n          }\n        }\n      },\n      \"ErrorResponseModel\": {\n        \"type\": \"object\",\n        \"description\": \"The error response model that is returned when an error occurs.\",\n        \"required\": [\n          \"errorCode\",\n          \"message\"\n        ],\n        \"properties\": {\n          \"errorCode\": {\n            \"$ref\": \"#/components/schemas/ErrorCode\"\n          },\n          \"message\": {\n            \"$ref\": \"#/components/schemas/ErrorCodeMessage\"\n          },\n          \"errorDetails\": {\n            \"$ref\": \"#/components/schemas/ErrorDetails\"\n          }\n        }\n      },\n      \"fileURL\": {\n        \"type\": \"string\",\n        \"example\": \"https://dzb6emi8pracf.cloudfront.net/5a013513-8af1-4078-be75-36a5250953f7.1488219178676/Stmt_DRVW_001_DWJM000019_Apr2017.pdf?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vZHpiNmVtaThwcmFjZi5jbG91ZGZyb250Lm5ldC81YTAxMzUxMy04YWYxLTQwNzgtYmU3NS0zNmE1MjUwOTUzZjcuMTQ4ODIxOTE3ODY3Ni9TdG10X0RSVldfMDAxX0RXSk0wMDAwMTlfQXByMjAxNy5wZGYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0OTk3MTc1NDV9LCJJcEFkZHJlc3MiOnsiQVdTOlNvdXJjZUlwIjoiMC4wLjAuMC8wIn19fV19&Signature=UWZRPku4IWoqkp4fyQ179auFVrImZUYDXswjjO-zPGW9-XKno3-TG9O2OHxWG-j7NfEHMXtZbCha~lQwpjt~g58YpL1NYk9xhlp7~HR-skC3J3W8GFVWxbR5TQUXPFOdU-KNwYlTnlE1Wr81nUyoNWrrF-8afyiHVnfm2w35GpZavAKhOiKNDHn7kTorQz3rbkYDks9u1CGPU7TCeZ-GzupVqsUN7xDOxPUnH0KCVGY86PT8bEpPkhpc3jNmtLnB~WB3YdrFg0bSbrbU4M-sVyp49AqK~xq5uDu3Bx22vdyJlKUClEsVvKhQLOArkpMdHYwyPZC~Kz85sroGqnP3oQ__&Key-Pair-Id=APKAJP3MFGZ6DRA4CW4Q\",\n        \"description\": \"A short-lived URL that can be accessed to download the file.\"\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Core APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Correspondent Reports\"\n    }\n  ],\n  \"paths\": {\n    \"/correspondantReport\": {\n      \"get\": {\n        \"tags\": [\n          \"Correspondent Reports\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"query\",\n            \"name\": \"date\",\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"required\": true,\n            \"example\": \"2023-03-21\",\n            \"description\": \"The date for which the Correspondent Report is being requested\"\n          }\n        ],\n        \"summary\": \"Retrieve Correspondent Reports\",\n        \"description\": \"Fetch daily reports generated to provide positions, account activity, balances, and more in file format\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Fetching Correspondent reports was successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"properties\": {\n                    \"url\": {\n                      \"$ref\": \"#/components/schemas/fileURL\"\n                    }\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Bad Request\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ErrorResponseModel\"\n                },\n                \"examples\": {\n                  \"Invalid request missing date\": {\n                    \"value\": {\n                      \"errorCode\": \"E031\",\n                      \"message\": \"Invalid or missing parameters in the request URL or body. Refer to the API documentation for details. Details: Required : [date]\"\n                    }\n                  },\n                  \"Invalid request\": {\n                    \"value\": {\n                      \"errorCode\": \"E033\",\n                      \"message\": \"Invalid parameter in message body. Refer to the API documentation for details.\"\n                    }\n                  }\n                }\n              }\n            }\n          },\n          \"500\": {\n            \"description\": \"Internal Server Error\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ErrorResponseModel\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"ErrorCode\": {\n        \"type\": \"string\",\n        \"description\": \"The error code that is returned when an error occurs.\",\n        \"example\": \"E032\"\n      },\n      \"ErrorCodeMessage\": {\n        \"type\": \"string\",\n        \"description\": \"The error message that is returned when an error occurs.\"\n      },\n      \"ErrorDetails\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\",\n            \"description\": \"JSON field name from the request body that caused an error\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"STRING\",\n              \"ARRAY\",\n              \"INT\",\n              \"DECIMAL\",\n              \"BOOL\",\n              \"TEXT\",\n              \"UUID\",\n              \"DATE\",\n              \"MAP\",\n              \"OBJECT\"\n            ],\n            \"description\": \"Expected data type of the field\"\n          },\n          \"allowedValues\": {\n            \"type\": \"string\",\n            \"description\": \"Example values which are allowed in the field\"\n          }\n        }\n      },\n      \"ErrorResponseModel\": {\n        \"type\": \"object\",\n        \"description\": \"The error response model that is returned when an error occurs.\",\n        \"required\": [\n          \"errorCode\",\n          \"message\"\n        ],\n        \"properties\": {\n          \"errorCode\": {\n            \"$ref\": \"#/components/schemas/ErrorCode\"\n          },\n          \"message\": {\n            \"$ref\": \"#/components/schemas/ErrorCodeMessage\"\n          },\n          \"errorDetails\": {\n            \"$ref\": \"#/components/schemas/ErrorDetails\"\n          }\n        }\n      },\n      \"fileURL\": {\n        \"type\": \"string\",\n        \"example\": \"https://dzb6emi8pracf.cloudfront.net/5a013513-8af1-4078-be75-36a5250953f7.1488219178676/Stmt_DRVW_001_DWJM000019_Apr2017.pdf?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vZHpiNmVtaThwcmFjZi5jbG91ZGZyb250Lm5ldC81YTAxMzUxMy04YWYxLTQwNzgtYmU3NS0zNmE1MjUwOTUzZjcuMTQ4ODIxOTE3ODY3Ni9TdG10X0RSVldfMDAxX0RXSk0wMDAwMTlfQXByMjAxNy5wZGYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0OTk3MTc1NDV9LCJJcEFkZHJlc3MiOnsiQVdTOlNvdXJjZUlwIjoiMC4wLjAuMC8wIn19fV19&Signature=UWZRPku4IWoqkp4fyQ179auFVrImZUYDXswjjO-zPGW9-XKno3-TG9O2OHxWG-j7NfEHMXtZbCha~lQwpjt~g58YpL1NYk9xhlp7~HR-skC3J3W8GFVWxbR5TQUXPFOdU-KNwYlTnlE1Wr81nUyoNWrrF-8afyiHVnfm2w35GpZavAKhOiKNDHn7kTorQz3rbkYDks9u1CGPU7TCeZ-GzupVqsUN7xDOxPUnH0KCVGY86PT8bEpPkhpc3jNmtLnB~WB3YdrFg0bSbrbU4M-sVyp49AqK~xq5uDu3Bx22vdyJlKUClEsVvKhQLOArkpMdHYwyPZC~Kz85sroGqnP3oQ__&Key-Pair-Id=APKAJP3MFGZ6DRA4CW4Q\",\n        \"description\": \"A short-lived URL that can be accessed to download the file.\"\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 43
+        }
+      ]
+    }
+  ]
+}

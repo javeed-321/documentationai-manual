@@ -1,0 +1,108 @@
+{
+  "slug": "apis/reference/stock-splits",
+  "source": "https://developer.drivewealth.com/apis/reference/stock-splits.md",
+  "url": "https://developer.drivewealth.com/apis/reference/stock-splits",
+  "title": "Stock Split Events",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-22T15:01:34.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 2,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Stock Split Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Stock Split Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "A stock split is a decision made by a company's board of directors to increase or decrease the number of shares that are outstanding. When a stock split happens, we will provide an updated `openQty` and `avgPrice`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A stock split is a decision made by a company's board of directors to increase or decrease the number of shares that are outstanding. When a stock split happens, we will provide an updated openQty and avgPrice.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        35
+      ],
+      "raw": "```json Updated\n{\n    \"id\": \"event_c4b2c210-ce32-41d4-a9a1-cfad4fdf191c\",\n    \"type\": \"positions.updated\",\n    \"timestamp\": \"2019-03-29T07:02:33.200962333Z\",\n    \"payload\": {\n        \"accountID\": \"272472de-6522-41be-85a6-31af662251dc.1520386265152\",\n        \"accountNo\": \"DWFE000039\",\n        \"userID\": \"272472de-6522-41be-85a6-31af662251dc\",\n        \"updateReason\": \"STOCK_SPLIT\",\n        \"previous\": {\n            \"costBasis\": 2.8,\n            \"openQty\": 1,\n            \"symbol\": \"CPLP\",\n            \"avgPrice\": 2.8\n        },\n        \"current\": {\n            \"costBasis\": 2.8,\n            \"openQty\": 2,\n            \"symbol\": \"CPLP\",\n            \"avgPrice\": 1.4\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n    \"id\": \"event_c4b2c210-ce32-41d4-a9a1-cfad4fdf191c\",\n    \"type\": \"positions.updated\",\n    \"timestamp\": \"2019-03-29T07:02:33.200962333Z\",\n    \"payload\": {\n        \"accountID\": \"272472de-6522-41be-85a6-31af662251dc.1520386265152\",\n        \"accountNo\": \"DWFE000039\",\n        \"userID\": \"272472de-6522-41be-85a6-31af662251dc\",\n        \"updateReason\": \"STOCK_SPLIT\",\n        \"previous\": {\n            \"costBasis\": 2.8,\n            \"openQty\": 1,\n            \"symbol\": \"CPLP\",\n            \"avgPrice\": 2.8\n        },\n        \"current\": {\n            \"costBasis\": 2.8,\n            \"openQty\": 2,\n            \"symbol\": \"CPLP\",\n            \"avgPrice\": 1.4\n        }\n    }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "In this example there was a 2:1 stock split where the customers `openQty` and `avgPrice` was adjusted to match this split.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In this example there was a 2:1 stock split where the customers openQty and avgPrice was adjusted to match this split.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

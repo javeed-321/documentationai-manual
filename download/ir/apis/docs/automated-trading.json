@@ -1,0 +1,1038 @@
+{
+  "slug": "apis/docs/automated-trading",
+  "source": "https://developer.drivewealth.com/apis/docs/automated-trading.md",
+  "url": "https://developer.drivewealth.com/apis/docs/automated-trading",
+  "title": "Automated trading",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-14T15:57:51.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 10,
+    "Callout": 5,
+    "paragraph": 24,
+    "list": 2,
+    "Image": 1,
+    "blockquote": 1,
+    "code": 3,
+    "CodeTabs": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Automated trading",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Automated trading",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        13
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ###\n\n  This page discusses features principally used when DriveWealth’s [Account Management product](https://developer.drivewealth.com/apis/docs/choosing-your-integration-model) is enabled. Clients managing customers on their own won’t have these workflows available.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "This page discusses features principally used when DriveWealth’s Account Management product is enabled. Clients managing customers on their own won’t have these workflows available.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            10,
+            10
+          ],
+          "raw": "  ###",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 3,
+          "lines": [
+            12,
+            12
+          ],
+          "raw": "  This page discusses features principally used when DriveWealth’s [Account Management product](https://developer.drivewealth.com/apis/docs/choosing-your-integration-model) is enabled. Clients managing customers on their own won’t have these workflows available.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "This page discusses features principally used when DriveWealth’s Account Management product is enabled. Clients managing customers on their own won’t have these workflows available.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "DriveWealth supports automated trading and robo-advisory experiences through a series of features called **AutoPilot**. AutoPilot handles all aspects of automated trading, from portfolio construction to automatically placing buy and sell orders for your customers account based on predefined market conditions.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth supports automated trading and robo-advisory experiences through a series of features called AutoPilot. AutoPilot handles all aspects of automated trading, from portfolio construction to automatically placing buy and sell orders for your customers account based on predefined market conditions.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        17,
+        21
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ###\n\n  AutoPilot is supported for Equities orders only.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "AutoPilot is supported for Equities orders only.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 6,
+          "lines": [
+            18,
+            18
+          ],
+          "raw": "  ###",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 7,
+          "lines": [
+            20,
+            20
+          ],
+          "raw": "  AutoPilot is supported for Equities orders only.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "AutoPilot is supported for Equities orders only.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        23,
+        27
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ###\n\n  AutoPilot is designed to trade automatically and in bulk across multiple customers. It’s important to consider if your regulatory licenses allow you to act in this manner.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "AutoPilot is designed to trade automatically and in bulk across multiple customers. It’s important to consider if your regulatory licenses allow you to act in this manner.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 9,
+          "lines": [
+            24,
+            24
+          ],
+          "raw": "  ###",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 10,
+          "lines": [
+            26,
+            26
+          ],
+          "raw": "  AutoPilot is designed to trade automatically and in bulk across multiple customers. It’s important to consider if your regulatory licenses allow you to act in this manner.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "AutoPilot is designed to trade automatically and in bulk across multiple customers. It’s important to consider if your regulatory licenses allow you to act in this manner.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## Portfolio composition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Portfolio composition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "AutoPilot defines two new entities to use in determining trading activity: Funds and Portfolios.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AutoPilot defines two new entities to use in determining trading activity: Funds and Portfolios.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        33,
+        34
+      ],
+      "raw": "1. **Funds** - Funds are composed of one or more individual securities.\n2. **Portfolios** - Portfolios are collections of one or more Funds.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Funds - Funds are composed of one or more individual securities.Portfolios - Portfolios are collections of one or more Funds.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "![](https://files.readme.io/957246f-Funds.png \"Funds.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/957246f-Funds.png",
+        "title": "Funds.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/957246f-Funds.png",
+          "line": 36
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 10,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "It's important to note that portfolios are linked directly to customer accounts: each managed account must be linked to an individual portfolio. However, single portfolios can be assigned to many customer accounts. For example:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "It's important to note that portfolios are linked directly to customer accounts: each managed account must be linked to an individual portfolio. However, single portfolios can be assigned to many customer accounts. For example:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "> Acme Advisor creates a portfolio called “The Balanced Portfolio”. The Balanced Portfolio is composed of two funds: 90% Capital Preservation Fund (containing some ETF’s and Stocks), and 10% Speculative Stocks Fund (containing 4 individual tech stocks). Garrett’s account is linked to The Balanced Portfolio, and he deposits $100. Justin also creates an account, which is also linked to The Balanced portfolio based on his suitability. Justin deposits $200. Both Garrett and Justin are invested in the same allocations, but can invest in these allocations at their own desired cadence.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Acme Advisor creates a portfolio called “The Balanced Portfolio”. The Balanced Portfolio is composed of two funds: 90% Capital Preservation Fund (containing some ETF’s and Stocks), and 10% Speculative Stocks Fund (containing 4 individual tech stocks). Garrett’s account is linked to The Balanced Portfolio, and he deposits $100. Justin also creates an account, which is also linked to The Balanced portfolio based on his suitability. Justin deposits $200. Both Garrett and Justin are invested in the same allocations, but can invest in these allocations at their own desired cadence.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "Both Funds and Portfolios can be created and updated via API, or DriveHub. To create a Fund in DriveHub, navigate to your assigned RIA Page and select the \"Funds\" tab. Similar to Funds, you can create a Portfolio by navigating to the “Portfolios” tab. Whether you create a Portfolio or Fund by API or by DriveHub, parameters will need to be set at both the portfolio level and the fund level.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Both Funds and Portfolios can be created and updated via API, or DriveHub. To create a Fund in DriveHub, navigate to your assigned RIA Page and select the \"Funds\" tab. Similar to Funds, you can create a Portfolio by navigating to the “Portfolios” tab. Whether you create a Portfolio or Fund by API or by DriveHub, parameters will need to be set at both the portfolio level and the fund level.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "Note that each Instrument declared as part of a Fund utilizes DriveWealths internal instrument identifier, not the stock symbol, to ensure that corporate actions do not affect the composition of the Fund.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note that each Instrument declared as part of a Fund utilizes DriveWealths internal instrument identifier, not the stock symbol, to ensure that corporate actions do not affect the composition of the Fund.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        46,
+        90
+      ],
+      "raw": "```javascript\nPOST /back-office/managed/funds\n{\n  \"userID\": \"{{ria-user-id}}\",\n  \"name\": \"Tech Fund\",\n  \"clientFundID\": \"{{$timestamp}}\",\n  \"description\": \"A collection of tech stocks, to be used in portfolios\",\n  \"holdings\": [\n      {\n          \"instrumentID\":\"{{inst-AAPL}}\",\n          \"target\":0.3\n      },\n      {\n          \"instrumentID\":\"{{inst-AMZN}}\",\n          \"target\":0.25\n      },\n      {\n          \"instrumentID\":\"{{inst-TSLA}}\",\n          \"target\":0.1\n      },\n      {\n          \"instrumentID\":\"{{inst-MSFT}}\",\n          \"target\":0.35\n      }\n  ],\n  \"triggers\": [\n      {\n        \"type\": \"TOTAL_DRIFT\",\n        \"maxAllowed\": 0.05\n      },\n      {\n        \"type\": \"RELATIVE_DRIFT\",\n        \"child\": null,\n        \"lowerBound\": 0.02,\n        \"upperBound\": null\n      },\n      {\n        \"type\": \"ABSOLUTE_DRIFT\",\n        \"child\": null,\n        \"lowerBound\": 0.01,\n        \"upperBound\": 0.01\n      }\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "POST /back-office/managed/funds\n{\n  \"userID\": \"{{ria-user-id}}\",\n  \"name\": \"Tech Fund\",\n  \"clientFundID\": \"{{$timestamp}}\",\n  \"description\": \"A collection of tech stocks, to be used in portfolios\",\n  \"holdings\": [\n      {\n          \"instrumentID\":\"{{inst-AAPL}}\",\n          \"target\":0.3\n      },\n      {\n          \"instrumentID\":\"{{inst-AMZN}}\",\n          \"target\":0.25\n      },\n      {\n          \"instrumentID\":\"{{inst-TSLA}}\",\n          \"target\":0.1\n      },\n      {\n          \"instrumentID\":\"{{inst-MSFT}}\",\n          \"target\":0.35\n      }\n  ],\n  \"triggers\": [\n      {\n        \"type\": \"TOTAL_DRIFT\",\n        \"maxAllowed\": 0.05\n      },\n      {\n        \"type\": \"RELATIVE_DRIFT\",\n        \"child\": null,\n        \"lowerBound\": 0.02,\n        \"upperBound\": null\n      },\n      {\n        \"type\": \"ABSOLUTE_DRIFT\",\n        \"child\": null,\n        \"lowerBound\": 0.01,\n        \"upperBound\": 0.01\n      }\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ria-user-id}}",
+          "line": 49
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{$timestamp}}",
+          "line": 51
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{inst-AAPL}}",
+          "line": 55
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{inst-AMZN}}",
+          "line": 59
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{inst-TSLA}}",
+          "line": 63
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{inst-MSFT}}",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        92,
+        92
+      ],
+      "raw": "Upon successful creation of the fund, you will immediately receive a Fund ID that can be used in the composition of a Portfolio.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Upon successful creation of the fund, you will immediately receive a Fund ID that can be used in the composition of a Portfolio.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        94,
+        127
+      ],
+      "raw": "```javascript\nPOST /back-office/managed/portfolios\n{\n  \"userID\": \"{{ria-userID}}\",\n  \"name\": \"Balanced Portfolio\",\n  \"clientPortfolioID\": \"{{$timestamp}}\",\n  \"description\": \"A portfolio containing the tech stocks fund\",\n  \"holdings\": [{\n    \"id\": \"fund_1234324\",\n    \"target\": 0.95\n  },{\n    \"type\": \"CASH_RESERVE\",\n    \"target\": 0.05\n  }],\n  \"triggers\": [\n      {\n        \"type\": \"TOTAL_DRIFT\",\n        \"maxAllowed\": 0.05\n      },\n      {\n        \"type\": \"RELATIVE_DRIFT\",\n        \"child\": null,\n        \"lowerBound\": 0.02,\n        \"upperBound\": null\n      },\n      {\n        \"type\": \"ABSOLUTE_DRIFT\",\n        \"child\": \"CASH\",\n        \"lowerBound\": 0.05,\n        \"upperBound\": null\n      }\n    ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "POST /back-office/managed/portfolios\n{\n  \"userID\": \"{{ria-userID}}\",\n  \"name\": \"Balanced Portfolio\",\n  \"clientPortfolioID\": \"{{$timestamp}}\",\n  \"description\": \"A portfolio containing the tech stocks fund\",\n  \"holdings\": [{\n    \"id\": \"fund_1234324\",\n    \"target\": 0.95\n  },{\n    \"type\": \"CASH_RESERVE\",\n    \"target\": 0.05\n  }],\n  \"triggers\": [\n      {\n        \"type\": \"TOTAL_DRIFT\",\n        \"maxAllowed\": 0.05\n      },\n      {\n        \"type\": \"RELATIVE_DRIFT\",\n        \"child\": null,\n        \"lowerBound\": 0.02,\n        \"upperBound\": null\n      },\n      {\n        \"type\": \"ABSOLUTE_DRIFT\",\n        \"child\": \"CASH\",\n        \"lowerBound\": 0.05,\n        \"upperBound\": null\n      }\n    ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ria-userID}}",
+          "line": 97
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{$timestamp}}",
+          "line": 99
+        }
+      ]
+    },
+    {
+      "i": 17,
+      "lines": [
+        129,
+        133
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Cash reserve\n\n  Cash reserve is an available Fund at the Portfolio level, that allows you to keep a portion of the customers Portfolio in cash. The cash reserve Fund utilizes the same rebalance parameters that a normal Fund does, and will replenish when low. Cash reserves are commonly utilized to deduct AUM Fees without liquidating positions.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "Cash reserveCash reserve is an available Fund at the Portfolio level, that allows you to keep a portion of the customers Portfolio in cash. The cash reserve Fund utilizes the same rebalance parameters that a normal Fund does, and will replenish when low. Cash reserves are commonly utilized to deduct AUM Fees without liquidating positions.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 23,
+          "lines": [
+            130,
+            130
+          ],
+          "raw": "  ### Cash reserve",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Cash reserve",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 24,
+          "lines": [
+            132,
+            132
+          ],
+          "raw": "  Cash reserve is an available Fund at the Portfolio level, that allows you to keep a portion of the customers Portfolio in cash. The cash reserve Fund utilizes the same rebalance parameters that a normal Fund does, and will replenish when low. Cash reserves are commonly utilized to deduct AUM Fees without liquidating positions.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Cash reserve is an available Fund at the Portfolio level, that allows you to keep a portion of the customers Portfolio in cash. The cash reserve Fund utilizes the same rebalance parameters that a normal Fund does, and will replenish when low. Cash reserves are commonly utilized to deduct AUM Fees without liquidating positions.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        135,
+        135
+      ],
+      "raw": "## Rebalance capabilities",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Rebalance capabilities",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "Over time, as the market value of all securities are constantly changing, the market value of your customers' positions will change as well. The implication of this market movement is that the actual weights of your defined Portfolios and Funds can become misaligned with the target weights specified. **Drift** refers to parameters that AutoPilot will use when evaluating whether a customer account needs to be rebalanced.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Over time, as the market value of all securities are constantly changing, the market value of your customers' positions will change as well. The implication of this market movement is that the actual weights of your defined Portfolios and Funds can become misaligned with the target weights specified. Drift refers to parameters that AutoPilot will use when evaluating whether a customer account needs to be rebalanced.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        139,
+        139
+      ],
+      "raw": "Currently, there are two different Drift Parameters available to define:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Currently, there are two different Drift Parameters available to define:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        141,
+        142
+      ],
+      "raw": "1. **Holding Drift**: refers to how far individual securities within a Fund, or Funds within a Portfolio, may drift from their target allocations.\n2. **Maximum Drift**: refers to the aggregate percentage of how far the entire Fund or Portfolio has drifted (calculated by summing each individual holding's percentage change).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Holding Drift: refers to how far individual securities within a Fund, or Funds within a Portfolio, may drift from their target allocations.Maximum Drift: refers to the aggregate percentage of how far the entire Fund or Portfolio has drifted (calculated by summing each individual holding's percentage change).",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        144,
+        144
+      ],
+      "raw": "AutoPilot evaluates your customers' eligibility for a rebalance based on the frequency defined by the client in DriveHub. If any drift parameters are breached, across the entire Portfolio, the customer's account will be rebalanced.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AutoPilot evaluates your customers' eligibility for a rebalance based on the frequency defined by the client in DriveHub. If any drift parameters are breached, across the entire Portfolio, the customer's account will be rebalanced.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        146,
+        146
+      ],
+      "raw": "## Investing in an Autopilot-enabled account",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Investing in an Autopilot-enabled account",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        148,
+        148
+      ],
+      "raw": "To begin investing in a managed account, the first step is to assign the customer Account to a Portfolio that you have created via API or DriveHub. Each Portfolio available will have a corresponding Portfolio ID that can be assigned to an account. To assign a Portfolio to a customer Account, simply set the `riaPortfolioID` on Account creation or update:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To begin investing in a managed account, the first step is to assign the customer Account to a Portfolio that you have created via API or DriveHub. Each Portfolio available will have a corresponding Portfolio ID that can be assigned to an account. To assign a Portfolio to a customer Account, simply set the riaPortfolioID on Account creation or update:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        150,
+        167
+      ],
+      "raw": "```json POST /accounts\nPOST /back-office/accounts\n{\n  \"userID\": \"{{userID}}\" ,\n  \"accountType\": \"LIVE\",\n  \"accountManagementType\": \"RIA_MANAGED\",\n  \"tradingType\": \"CASH\",\n  \"riaUserID\": \"{{ria-userid}}\",                  // parentIBID\n  \"riaProductID\": \"{{ria-productid}}\",            // productID\n  \"riaPortfolioID\" : \"{{myPortfolioID}}\"            \n}\n```\n```json PATCH /accounts\nPOST /back-office/accounts/{{accountID}}\n{\n  \"riaPortfolioID\" : \"{{myPortfolioID}}\"\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "POST /accounts",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{userID}}",
+          "line": 153
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{ria-userid}}",
+          "line": 157
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{ria-productid}}",
+          "line": 158
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{myPortfolioID}}",
+          "line": 159
+        }
+      ],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "POST /accounts",
+          "code": "POST /back-office/accounts\n{\n  \"userID\": \"{{userID}}\" ,\n  \"accountType\": \"LIVE\",\n  \"accountManagementType\": \"RIA_MANAGED\",\n  \"tradingType\": \"CASH\",\n  \"riaUserID\": \"{{ria-userid}}\",                  // parentIBID\n  \"riaProductID\": \"{{ria-productid}}\",            // productID\n  \"riaPortfolioID\" : \"{{myPortfolioID}}\"            \n}"
+        },
+        {
+          "lang": "json",
+          "title": "PATCH /accounts",
+          "code": "POST /back-office/accounts/{{accountID}}\n{\n  \"riaPortfolioID\" : \"{{myPortfolioID}}\"\n}"
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "lines": [
+        169,
+        173
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ### Extra fields required\n\n  `riaUserID` and `riaProductID` are created and assigned during client integration, by DriveWealths client onboarding team. While DriveWealth can provision more than one `riaUserID` or `riaProductId`, the typical integration only utilizes one `riaUserId` and one `riaProductId`.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "Extra fields requiredriaUserID and riaProductID are created and assigned during client integration, by DriveWealths client onboarding team. While DriveWealth can provision more than one riaUserID or riaProductId, the typical integration only utilizes one riaUserId and one riaProductId.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 35,
+          "lines": [
+            170,
+            170
+          ],
+          "raw": "  ### Extra fields required",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Extra fields required",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 36,
+          "lines": [
+            172,
+            172
+          ],
+          "raw": "  `riaUserID` and `riaProductID` are created and assigned during client integration, by DriveWealths client onboarding team. While DriveWealth can provision more than one `riaUserID` or `riaProductId`, the typical integration only utilizes one `riaUserId` and one `riaProductId`.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "riaUserID and riaProductID are created and assigned during client integration, by DriveWealths client onboarding team. While DriveWealth can provision more than one riaUserID or riaProductId, the typical integration only utilizes one riaUserId and one riaProductId.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        175,
+        175
+      ],
+      "raw": "Once a Portfolio has been linked to the customer account, the customer may begin investing in their Portfolio by simply triggering a deposit into their account. Because a deposit is required to trigger AutoPilot investments, [Cashless accounts](https://developer.drivewealth.com/apis/docs/cashless-accounts) are not supported.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once a Portfolio has been linked to the customer account, the customer may begin investing in their Portfolio by simply triggering a deposit into their account. Because a deposit is required to trigger AutoPilot investments, Cashless accounts are not supported.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        177,
+        177
+      ],
+      "raw": "AutoPilot scans for available cash in a customer's Account every day at 10:00AM EST. If funds are available in the account, AutoPilot will automatically invest the funds into the underlying portfolio. Note that AutoPilot deposits are smart enough to see which securities are underweight based on the market value of the holding, and will attempt to buy more of an underweight security in an attempt to avoid a future rebalance.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AutoPilot scans for available cash in a customer's Account every day at 10:00AM EST. If funds are available in the account, AutoPilot will automatically invest the funds into the underlying portfolio. Note that AutoPilot deposits are smart enough to see which securities are underweight based on the market value of the holding, and will attempt to buy more of an underweight security in an attempt to avoid a future rebalance.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        179,
+        200
+      ],
+      "raw": "```json Deposits(BULK)\nPOST /back-office/funding/deposits\n{\n     \"accountNo\": \"DWXK000001\",\n     \"amount\": 25.12,\n     \"currency\": \"USD\",\n     \"type\": \"BULK_FUNDING\",\n     \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n     \"note\": \"Deposit to my autopilot managed account\"\n}\n```\n```json Deposits(ACH)\nPOST /back-office/funding/deposits\n{\n     \"accountNo\": \"DWXK000001\",\n     \"amount\": 25.12,\n     \"currency\": \"USD\",\n     \"type\": \"ACH\",\n     \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n     \"note\": \"Deposit to my autopilot managed account\"\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "Deposits(BULK)",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "Deposits(BULK)",
+          "code": "POST /back-office/funding/deposits\n{\n     \"accountNo\": \"DWXK000001\",\n     \"amount\": 25.12,\n     \"currency\": \"USD\",\n     \"type\": \"BULK_FUNDING\",\n     \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n     \"note\": \"Deposit to my autopilot managed account\"\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Deposits(ACH)",
+          "code": "POST /back-office/funding/deposits\n{\n     \"accountNo\": \"DWXK000001\",\n     \"amount\": 25.12,\n     \"currency\": \"USD\",\n     \"type\": \"ACH\",\n     \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n     \"note\": \"Deposit to my autopilot managed account\"\n}"
+        }
+      ]
+    },
+    {
+      "i": 30,
+      "lines": [
+        202,
+        202
+      ],
+      "raw": "When creating a Withdrawal in an AutoPilot-enabled account, AutoPilot will automatically create a series of sell orders to generate the requested amount of cash to be withdrawn. All sell orders will take place at approximately 10AM EST at the next available AutoPilot trading window. Note that AutoPilots Sell methodology is First in, First Out (FIFO).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When creating a Withdrawal in an AutoPilot-enabled account, AutoPilot will automatically create a series of sell orders to generate the requested amount of cash to be withdrawn. All sell orders will take place at approximately 10AM EST at the next available AutoPilot trading window. Note that AutoPilots Sell methodology is First in, First Out (FIFO).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        204,
+        204
+      ],
+      "raw": "To learn more about creating Withdrawals, read [Withdrawing](https://developer.drivewealth.com/apis/docs/withdrawing).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To learn more about creating Withdrawals, read Withdrawing.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        206,
+        206
+      ],
+      "raw": "When attempting to completely liquidate an AutoPilot-enabled account, use the `liquidate` field to express this:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When attempting to completely liquidate an AutoPilot-enabled account, use the liquidate field to express this:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        208,
+        234
+      ],
+      "raw": "```json Liquidate(BULK)\nPOST /back-office/funding/redemptions\n{\n    \"accountNo\": \"DWKU000293\",\n    \"currency\": \"USD\",\n    \"type\": \"BULK_FUNDING\",\n    \"liquidate\": true,\n    \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n    \"note\": \"Give me all my money\"\n}\n```\n```json Liquidate(ACH)\nPOST /back-office/funding/redemptions\n{\n    \"accountNo\": \"DWKU000293\",\n    \"currency\": \"USD\",\n    \"type\": \"ACH\",\n    \"liquidate\": true,\n    \"details\": {\n       \"beneficiaryName\": \"Joe Sudia\",\n       \"beneficiaryAccountNumber\": \"7442393174\",\n       \"beneficiaryAccountType\": \"CHECKING\",\n       \"beneficiaryRoutingNumber\": \"7442393174\"\n    },\n    \"note\": \"Give me all my money\"\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "Liquidate(BULK)",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "Liquidate(BULK)",
+          "code": "POST /back-office/funding/redemptions\n{\n    \"accountNo\": \"DWKU000293\",\n    \"currency\": \"USD\",\n    \"type\": \"BULK_FUNDING\",\n    \"liquidate\": true,\n    \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n    \"note\": \"Give me all my money\"\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Liquidate(ACH)",
+          "code": "POST /back-office/funding/redemptions\n{\n    \"accountNo\": \"DWKU000293\",\n    \"currency\": \"USD\",\n    \"type\": \"ACH\",\n    \"liquidate\": true,\n    \"details\": {\n       \"beneficiaryName\": \"Joe Sudia\",\n       \"beneficiaryAccountNumber\": \"7442393174\",\n       \"beneficiaryAccountType\": \"CHECKING\",\n       \"beneficiaryRoutingNumber\": \"7442393174\"\n    },\n    \"note\": \"Give me all my money\"\n}"
+        }
+      ]
+    },
+    {
+      "i": 34,
+      "lines": [
+        236,
+        236
+      ],
+      "raw": "Whether you submit a Withdrawal through bulk funding or individual funding, the API returns a trackable `redemptionID`. When a Withdrawal is first created, its status will reflect as “pending”. After DriveWealth runs basic validation on the redemption request (ex: checking to see if the customer account has a market value greater than the requested amount), the status will automatically move to “Approved”. AutoPilot will create sell orders at the next given trade window only for approved requests. Once the sell orders have completed, and the transfer is initiated, the redemption status will be marked as “Successful”.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Whether you submit a Withdrawal through bulk funding or individual funding, the API returns a trackable redemptionID. When a Withdrawal is first created, its status will reflect as “pending”. After DriveWealth runs basic validation on the redemption request (ex: checking to see if the customer account has a market value greater than the requested amount), the status will automatically move to “Approved”. AutoPilot will create sell orders at the next given trade window only for approved requests. Once the sell orders have completed, and the transfer is initiated, the redemption status will be marked as “Successful”.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        238,
+        238
+      ],
+      "raw": "## Automated fee deductions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Automated fee deductions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        240,
+        240
+      ],
+      "raw": "Many RIAs wish to include an AUM fee deduction in their investment offering. DriveWealth helps clients automate this process.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Many RIAs wish to include an AUM fee deduction in their investment offering. DriveWealth helps clients automate this process.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        242,
+        242
+      ],
+      "raw": "To charge a fee to an Account, use the [Create Withdrawal](https://developer.drivewealth.com/apis/reference/post_funding-redemptions) API by setting `type` to `CASH_TRANSFER`and `transactionCode` to `FEE_AUM` . When the fee is deducted from the Account, Transactions will automatically reflect that a fee was deducted.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To charge a fee to an Account, use the Create Withdrawal API by setting type to CASH_TRANSFERand transactionCode to FEE_AUM . When the fee is deducted from the Account, Transactions will automatically reflect that a fee was deducted.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        244,
+        257
+      ],
+      "raw": "```javascript json\nPOST /back-office/funding/redemptions\n{\n  \"accountNo\":\"DWGC000003\",\n  \"amount\":5,\n  \"currency\":\"USD\",\n  \"type\":\"CASH_TRANSFER\",\n  \"transactionCode\":\"FEE_AUM\",\n  \"details\":{\n     \"partnerAccountNo\":\"{{partnerAccountNo}}\"\n   },\n  \"note\":\"AUM Fee Feb 2024\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": "json",
+        "code": "POST /back-office/funding/redemptions\n{\n  \"accountNo\":\"DWGC000003\",\n  \"amount\":5,\n  \"currency\":\"USD\",\n  \"type\":\"CASH_TRANSFER\",\n  \"transactionCode\":\"FEE_AUM\",\n  \"details\":{\n     \"partnerAccountNo\":\"{{partnerAccountNo}}\"\n   },\n  \"note\":\"AUM Fee Feb 2024\"\n}"
+      },
+      "text": "json",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{partnerAccountNo}}",
+          "line": 253
+        }
+      ]
+    },
+    {
+      "i": 39,
+      "lines": [
+        259,
+        259
+      ],
+      "raw": "When a fee is charged to an Account, AutoPilot will look to liquidate the cash balance of the account before liquidating any Positions to generate cash.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When a fee is charged to an Account, AutoPilot will look to liquidate the cash balance of the account before liquidating any Positions to generate cash.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

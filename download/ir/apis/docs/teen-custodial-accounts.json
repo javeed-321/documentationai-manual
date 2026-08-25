@@ -1,0 +1,241 @@
+{
+  "slug": "apis/docs/teen-custodial-accounts",
+  "source": "https://developer.drivewealth.com/apis/docs/teen-custodial-accounts.md",
+  "url": "https://developer.drivewealth.com/apis/docs/teen-custodial-accounts",
+  "title": "Teen & custodial accounts",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:54:45.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 5,
+    "Callout": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Teen & custodial accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Teen & custodial accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "# Teen accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Teen accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Teen accounts are owned by an adult (someone at, or above, the age of majority in their state of residence) who grants trade authorization to a minor (someone below the age of majority in their state of residence).  Generally, it is a parent or legal guardian who has opened the account with the intention of allowing the minor to invest.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Teen accounts are owned by an adult (someone at, or above, the age of majority in their state of residence) who grants trade authorization to a minor (someone below the age of majority in their state of residence).  Generally, it is a parent or legal guardian who has opened the account with the intention of allowing the minor to invest.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "The account owner grants trade authorization to the minor, giving them the ability to place trades in the account.  The account owner’s Social Security Number (SSN) is primary and is used for tax reporting purposes. The account owner can remove all assets from the account and funds are not the property of the minor.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The account owner grants trade authorization to the minor, giving them the ability to place trades in the account.  The account owner’s Social Security Number (SSN) is primary and is used for tax reporting purposes. The account owner can remove all assets from the account and funds are not the property of the minor.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        20
+      ],
+      "raw": "> 📘 Restrictions\n>\n> Parental controls are typically built into the accounts in order to limit misuse by the minor, some example include:\n>\n> * All trades above $25.00 must be reviewed and approved by the parent/guardian (trades below that amount are auto-approved).\n> * All withdrawals must be reviewed and approved by the parent/guardian.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "RestrictionsParental controls are typically built into the accounts in order to limit misuse by the minor, some example include:All trades above $25.00 must be reviewed and approved by the parent/guardian (trades below that amount are auto-approved).All withdrawals must be reviewed and approved by the parent/guardian.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        22,
+        24
+      ],
+      "raw": "> 🚧\n>\n> Not all security types are supported in Teen accounts. Currently, only Stocks can be purchased using this account type.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Not all security types are supported in Teen accounts. Currently, only Stocks can be purchased using this account type.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "# Custodial accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Custodial accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "Custodial accounts are commonly known as UTMA/UGMA accounts.  The Uniform Transfers to Minors Act and the Uniform Gifts to Minors Act are laws which allow an adult to gift assets to a minor.  UTMA accounts can hold gifts of cash, investments, real estate, and other assets.  UGMA accounts are limited to cash and securities.  DriveWealth offers UTMA accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Custodial accounts are commonly known as UTMA/UGMA accounts.  The Uniform Transfers to Minors Act and the Uniform Gifts to Minors Act are laws which allow an adult to gift assets to a minor.  UTMA accounts can hold gifts of cash, investments, real estate, and other assets.  UGMA accounts are limited to cash and securities.  DriveWealth offers UTMA accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "The assets in a custodial account are irrevocable and owned by the minor.  As such, the minor’s SSN is primary and is used for tax reporting purposes. Although the account assets are the property of the minor, only the gifter can take action in the account.  The minor cannot be given any access to, or information about, the account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The assets in a custodial account are irrevocable and owned by the minor.  As such, the minor’s SSN is primary and is used for tax reporting purposes. Although the account assets are the property of the minor, only the gifter can take action in the account.  The minor cannot be given any access to, or information about, the account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "This account type requires account assets and control be transferred to the minor once they reach the age of majority (AOM) in their state (AOM varies between states).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This account type requires account assets and control be transferred to the minor once they reach the age of majority (AOM) in their state (AOM varies between states).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        34,
+        36
+      ],
+      "raw": "> 🚧\n>\n> Not all security types are supported in Custodial accounts. Currently, only Stocks can be purchased using this account type.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Not all security types are supported in Custodial accounts. Currently, only Stocks can be purchased using this account type.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "slug": "apis/docs/individual-funding",
+  "source": "https://developer.drivewealth.com/apis/docs/individual-funding.md",
+  "url": "https://developer.drivewealth.com/apis/docs/individual-funding",
+  "title": "Individual Funding",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:38:20.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "Callout": 1,
+    "paragraph": 9
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Individual Funding",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Individual Funding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        11
+      ],
+      "raw": "> 🚧 💵 Accepted Currencies\n>\n> DriveWealth only accepts United States Dollars (USD) for deposits and withdrawals.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "💵 Accepted CurrenciesDriveWealth only accepts United States Dollars (USD) for deposits and withdrawals.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Customers can fund or withdraw from their brokerage accounts through two primary methods: ACH (Automated Clearing House) transfers and Wire transfers. Each method offers distinct benefits depending on the customer's needs for speed, cost, and convenience.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Customers can fund or withdraw from their brokerage accounts through two primary methods: ACH (Automated Clearing House) transfers and Wire transfers. Each method offers distinct benefits depending on the customer's needs for speed, cost, and convenience.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## 🔁 ACH Transfers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "🔁 ACH Transfers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "**Overview:** ACH is a widely used method for electronically moving money between bank accounts within the United States.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Overview: ACH is a widely used method for electronically moving money between bank accounts within the United States.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "**Processing Time:** Typically 4-5 business days.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Processing Time: Typically 4-5 business days.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "**Fees:** Generally low or no fees, depending on the bank. DriveWealth charges a $0.25 fee for outbound ACH transfers",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Fees: Generally low or no fees, depending on the bank. DriveWealth charges a $0.25 fee for outbound ACH transfers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "**Eligibility:** Requires a linked U.S. bank account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Eligibility: Requires a linked U.S. bank account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "## ⚡ Wire Transfers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "⚡ Wire Transfers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "**Overview:** Wire transfers provide a faster way to move funds electronically between financial institutions.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Overview: Wire transfers provide a faster way to move funds electronically between financial institutions.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "**Processing Time:** Same business day if initiated before the bank's cutoff time; otherwise, next business day. For Outbound wires, DriveWealth processes these same day if requested prior to 5PM ET.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Processing Time: Same business day if initiated before the bank's cutoff time; otherwise, next business day. For Outbound wires, DriveWealth processes these same day if requested prior to 5PM ET.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "**Fees:** Typically higher fees, which vary by bank. DriveWealth charges outbound WIRE transfer fee for each individual wire.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Fees: Typically higher fees, which vary by bank. DriveWealth charges outbound WIRE transfer fee for each individual wire.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "**Eligibility:** Requires accurate wiring instructions, including customer's Virtual Account Number details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Eligibility: Requires accurate wiring instructions, including customer's Virtual Account Number details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

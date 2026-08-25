@@ -1,0 +1,88 @@
+---
+title: "Regulatory Reporting"
+---
+
+In the US, registered broker-dealers are required to comply with CAT (Consolidated Audit Trail) and CAIS (Customer and Account Information System) reporting obligations.
+
+Accordingly, applicable clients must adhere to the following processes:
+
+## Accounts
+
+Each account must be assigned an `accountHolderType` during initial creation, the accepted values are as follows:
+
+`A` Institutional – An institutional account as defined in FINRA Rule 4512(c)
+
+`E` Employee – An employee or associated person of the industry member
+
+`F` Foreign - A non-broker-dealer foreign affiliate or non-reporting foreign broker-dealer
+
+`I` Individual – An account that does not meet the definition of “institution” as defined in FINRA Rule 4512(c) and is also not a proprietary account.
+
+`O` Market Making – Please refer to CAT FAQ C5 and B68
+
+`V` Firm agency average price account
+
+`P` Other Proprietary account
+
+`X` Error – Error account of the firm
+
+```json
+{
+  "accountType": "LIVE",
+  "accountManagementType": "SELF",
+  "tradingType": "CASH",
+  "userID": "cc11f91b-7ee1-4868-b8fc-823c70a1b932",
+  "accountHolderType": "I"
+}
+```
+
+## Orders
+
+### POST
+
+Two additional fields are required to be appended to the create request:
+
+```json
+{
+    "accountNo": "ABCD000123",
+    "orderType": "MARKET",
+    "symbol": "A",
+    "side": "BUY",
+    "quantity" : 1,
+    "clientOrderTransactionTime": "2024-07-30T22:13:18.000Z",
+    "clientOrderID": "89ccfedd-9e1e-48f9-a4c5-a83fecdf92cf"
+}
+```
+
+`clientOrderTransactionTime` The timestamp indicating when the client received the order request from the user
+
+`clientOrderID` The internal unique identifier of the order within the client's system
+
+### PATCH
+
+An additional object is required to be appended to the cancel request:
+
+```json
+{
+    "method": "CANCEL",
+    "cancelDetails": 
+        {
+            "initiator": "C",
+            "requestedTimestamp": "2023-07-30T22:13:18.000Z",
+            "manualCancel": true,
+            "comment": "This order is cancelled"
+        }
+}
+```
+
+`initiator` The party who initiated the cancel request. Acceptable values are `C` (Customer) or `F` (Firm)
+
+`requestedTimestamp` The timestamp indicating when the client received the cancel request
+
+`manualCancel` Whether the cancel request was received outside of automated processes
+
+`comment` A freeform text field for any additional notes
+
+## Daily Order Cancel File
+
+Since it's not feasible for a client to provide an internal order cancel completion timestamp in the PATCH request before receiving an acknowledgment from DW, an SFTP folder will be provisioned to allow clients to easily upload a daily file containing completion timestamps. The file format must follow the CSV template provided by DW. These files should be uploaded on business days after market close and must include all cancel requests completed between 4:15 PM ET on the previous trading day and 4:15 PM ET on the current trading day.

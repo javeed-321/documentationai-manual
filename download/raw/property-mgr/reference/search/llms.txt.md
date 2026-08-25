@@ -1,8 +1,0 @@
-# Property Manager Documentation
-
-> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.
-
-Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
-
-## API Reference: Search
-- [Search properties or includes](https://techdocs.akamai.com/property-mgr/reference/post-search-find-by-value.md): This operation searches includes by name, or properties either by name, hostname, or edge hostname for which they're currently active. Specify a search request object with a single query member. The response lists the matching set of currently active property or include versions, and also the latest version if inactive. Each of the response's versions features additional context for the property or include in which it appears, or the account, contract, or group under which it's deployed. Note that to perform more complex searches for content within a rule tree, run [Bulk search a set of properties or includes](ref:post-bulk-search) instead.

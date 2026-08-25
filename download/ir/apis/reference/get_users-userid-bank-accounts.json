@@ -1,0 +1,114 @@
+{
+  "slug": "apis/reference/get_users-userid-bank-accounts",
+  "source": "https://developer.drivewealth.com/apis/reference/get_users-userid-bank-accounts.md",
+  "url": "https://developer.drivewealth.com/apis/reference/get_users-userid-bank-accounts",
+  "title": "List User Linked Bank Accounts",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T16:58:23.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# List User Linked Bank Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "List User Linked Bank Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Retrieves a list of User Linked Bank Accounts by userID.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrieves a list of User Linked Bank Accounts by userID.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        188
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Money Movement APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Linked Bank Accounts\"\n    }\n  ],\n  \"paths\": {\n    \"/users/{userID}/bank-accounts\": {\n      \"get\": {\n        \"tags\": [\n          \"Linked Bank Accounts\"\n        ],\n        \"summary\": \"List User Linked Bank Accounts\",\n        \"description\": \"Retrieves a list of User Linked Bank Accounts by userID.\",\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"userID\",\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"required\": true,\n            \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932\",\n            \"description\": \"Unique ID of the User to fetch their stored bank accounts.\"\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Retrieving a list of User Linked Bank Accounts was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/BankAccountsArray\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"bankAccountID\": {\n        \"type\": \"string\",\n        \"example\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n        \"description\": \"The unique DriveWealth identifier that identifies each linked bank account.\"\n      },\n      \"created\": {\n        \"type\": \"string\",\n        \"example\": \"2022-12-11T22:28:21.810Z\",\n        \"description\": \"\"\n      },\n      \"updated\": {\n        \"type\": \"string\",\n        \"example\": \"2022-12-11T22:28:21.810Z\",\n        \"description\": \"\"\n      },\n      \"bankAccountNickName\": {\n        \"type\": \"string\",\n        \"example\": \"PREFERRED CHECKING\",\n        \"description\": \"The linked bank account nickname defined by the user.\"\n      },\n      \"bankRoutingNumber\": {\n        \"type\": \"string\",\n        \"example\": \"110000000\",\n        \"description\": \"The routing number of the user's external bank.\"\n      },\n      \"bankAccountNumberLastFour\": {\n        \"type\": \"string\",\n        \"example\": \"****3174\",\n        \"description\": \"The last four digits of the user's external bank account number.\"\n      },\n      \"bankAccountStatus\": {\n        \"type\": \"string\",\n        \"example\": \"ACTIVE\",\n        \"description\": \"The current status of the user's external linked bank account.\",\n        \"enum\": [\n          \"ACTIVE\",\n          \"DELETED\",\n          \"DISABLED\"\n        ]\n      },\n      \"BankAccount\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"$ref\": \"#/components/schemas/bankAccountID\"\n          },\n          \"bankAccountDetails\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"bankAccountNickName\": {\n                \"$ref\": \"#/components/schemas/bankAccountNickName\"\n              },\n              \"bankAccountNumber\": {\n                \"$ref\": \"#/components/schemas/bankAccountNumberLastFour\"\n              },\n              \"bankRoutingNumber\": {\n                \"$ref\": \"#/components/schemas/bankRoutingNumber\"\n              }\n            }\n          },\n          \"default\": {\n            \"type\": \"string\",\n            \"example\": true,\n            \"description\": \"True, if this is the default bank account set by the customer.\"\n          },\n          \"status\": {\n            \"$ref\": \"#/components/schemas/bankAccountStatus\"\n          },\n          \"created\": {\n            \"$ref\": \"#/components/schemas/created\",\n            \"description\": \"The date and time the User's bank account was linked.\"\n          },\n          \"updated\": {\n            \"$ref\": \"#/components/schemas/updated\",\n            \"description\": \"The date and time the User's bank account was updated.\"\n          }\n        }\n      },\n      \"BankAccountsArray\": {\n        \"type\": \"array\",\n        \"description\": \"A list of all the User's linked bank accounts.\",\n        \"items\": {\n          \"oneOf\": [\n            {\n              \"$ref\": \"#/components/schemas/BankAccount\"\n            }\n          ]\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"Money Movement APIs\",\n    \"version\": \"2026-08-25\",\n    \"contact\": {\n      \"email\": \"producteng@drivewealth.tech\"\n    }\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://bo-api.drivewealth.io/back-office\",\n      \"description\": \"Sandbox (No Real World Financial/Trading Impact)\"\n    },\n    {\n      \"url\": \"https://bo-api.drivewealth.net/back-office\",\n      \"description\": \"Production\"\n    }\n  ],\n  \"security\": [\n    {\n      \"bearerAuth\": []\n    }\n  ],\n  \"x-readme\": {\n    \"explorer-enabled\": false,\n    \"headers\": [\n      {\n        \"key\": \"dw-client-app-key\",\n        \"value\": \"{{yourAppKey}}\"\n      }\n    ]\n  },\n  \"tags\": [\n    {\n      \"name\": \"Linked Bank Accounts\"\n    }\n  ],\n  \"paths\": {\n    \"/users/{userID}/bank-accounts\": {\n      \"get\": {\n        \"tags\": [\n          \"Linked Bank Accounts\"\n        ],\n        \"summary\": \"List User Linked Bank Accounts\",\n        \"description\": \"Retrieves a list of User Linked Bank Accounts by userID.\",\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"userID\",\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"required\": true,\n            \"example\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932\",\n            \"description\": \"Unique ID of the User to fetch their stored bank accounts.\"\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Retrieving a list of User Linked Bank Accounts was Successful.\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/BankAccountsArray\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"bankAccountID\": {\n        \"type\": \"string\",\n        \"example\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\",\n        \"description\": \"The unique DriveWealth identifier that identifies each linked bank account.\"\n      },\n      \"created\": {\n        \"type\": \"string\",\n        \"example\": \"2022-12-11T22:28:21.810Z\",\n        \"description\": \"\"\n      },\n      \"updated\": {\n        \"type\": \"string\",\n        \"example\": \"2022-12-11T22:28:21.810Z\",\n        \"description\": \"\"\n      },\n      \"bankAccountNickName\": {\n        \"type\": \"string\",\n        \"example\": \"PREFERRED CHECKING\",\n        \"description\": \"The linked bank account nickname defined by the user.\"\n      },\n      \"bankRoutingNumber\": {\n        \"type\": \"string\",\n        \"example\": \"110000000\",\n        \"description\": \"The routing number of the user's external bank.\"\n      },\n      \"bankAccountNumberLastFour\": {\n        \"type\": \"string\",\n        \"example\": \"****3174\",\n        \"description\": \"The last four digits of the user's external bank account number.\"\n      },\n      \"bankAccountStatus\": {\n        \"type\": \"string\",\n        \"example\": \"ACTIVE\",\n        \"description\": \"The current status of the user's external linked bank account.\",\n        \"enum\": [\n          \"ACTIVE\",\n          \"DELETED\",\n          \"DISABLED\"\n        ]\n      },\n      \"BankAccount\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"$ref\": \"#/components/schemas/bankAccountID\"\n          },\n          \"bankAccountDetails\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"bankAccountNickName\": {\n                \"$ref\": \"#/components/schemas/bankAccountNickName\"\n              },\n              \"bankAccountNumber\": {\n                \"$ref\": \"#/components/schemas/bankAccountNumberLastFour\"\n              },\n              \"bankRoutingNumber\": {\n                \"$ref\": \"#/components/schemas/bankRoutingNumber\"\n              }\n            }\n          },\n          \"default\": {\n            \"type\": \"string\",\n            \"example\": true,\n            \"description\": \"True, if this is the default bank account set by the customer.\"\n          },\n          \"status\": {\n            \"$ref\": \"#/components/schemas/bankAccountStatus\"\n          },\n          \"created\": {\n            \"$ref\": \"#/components/schemas/created\",\n            \"description\": \"The date and time the User's bank account was linked.\"\n          },\n          \"updated\": {\n            \"$ref\": \"#/components/schemas/updated\",\n            \"description\": \"The date and time the User's bank account was updated.\"\n          }\n        }\n      },\n      \"BankAccountsArray\": {\n        \"type\": \"array\",\n        \"description\": \"A list of all the User's linked bank accounts.\",\n        \"items\": {\n          \"oneOf\": [\n            {\n              \"$ref\": \"#/components/schemas/BankAccount\"\n            }\n          ]\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"bearerAuth\": {\n        \"type\": \"http\",\n        \"scheme\": \"bearer\",\n        \"bearerFormat\": \"JWT\"\n      }\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 43
+        }
+      ]
+    }
+  ]
+}

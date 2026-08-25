@@ -1,0 +1,703 @@
+{
+  "slug": "apis/docs/exercising-contracts-managing-expiration",
+  "source": "https://developer.drivewealth.com/apis/docs/exercising-contracts-managing-expiration.md",
+  "url": "https://developer.drivewealth.com/apis/docs/exercising-contracts-managing-expiration",
+  "title": "Exercising contracts & managing expiration",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-08-13T18:04:37.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 12,
+    "paragraph": 11,
+    "list": 2,
+    "code": 7,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Exercising contracts & managing expiration ",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Exercising contracts & managing expiration",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Manage the lifecycle of options positions approaching or on expiration day. DriveWealth provides endpoints for submitting exercise instructions and do-not-exercise requests on behalf of accountholders, as well as retrieving the status of pending requests.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Manage the lifecycle of options positions approaching or on expiration day. DriveWealth provides endpoints for submitting exercise instructions and do-not-exercise requests on behalf of accountholders, as well as retrieving the status of pending requests.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Expiration risk",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Expiration risk",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "If a contract is in-the-money by at least $0.01 at expiration, it is subject to auto-exercise by the OCC. Due to the leveraged nature of options, exercising a contract can generate a large underlying equity position, exposing the account to substantial market risk overnight or over a weekend.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If a contract is in-the-money by at least $0.01 at expiration, it is subject to auto-exercise by the OCC. Due to the leveraged nature of options, exercising a contract can generate a large underlying equity position, exposing the account to substantial market risk overnight or over a weekend.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "In cash accounts, sufficient buying power is required to cover the exercise of a long call, and sufficient shares are required to cover the exercise of a long put. Accounts that lack the necessary buying power or shares are at risk of a mistaken exercise resulting in a negative cash balance or short stock position.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In cash accounts, sufficient buying power is required to cover the exercise of a long call, and sufficient shares are required to cover the exercise of a long put. Accounts that lack the necessary buying power or shares are at risk of a mistaken exercise resulting in a negative cash balance or short stock position.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "DriveWealth will attempt to take proactive action to prevent the exercise of option contracts that an account cannot support if they remain open after market close on expiration day.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth will attempt to take proactive action to prevent the exercise of option contracts that an account cannot support if they remain open after market close on expiration day.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## Managing expiration risk",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Managing expiration risk",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "Before expiration day cutoff, verify that every account holding an options position has sufficient resources to support exercise:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before expiration day cutoff, verify that every account holding an options position has sufficient resources to support exercise:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        24
+      ],
+      "raw": "* For long calls: the account must have enough buying power to cover the purchase of the underlying stock.\n* For long puts: the account must have enough shares to cover the sale of the underlying stock.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "For long calls: the account must have enough buying power to cover the purchase of the underlying stock.For long puts: the account must have enough shares to cover the sale of the underlying stock.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "If an account cannot support exercise, the position should be liquidated or a do-not-exercise request submitted before the cutoff.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If an account cannot support exercise, the position should be liquidated or a do-not-exercise request submitted before the cutoff.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "Take weekends and market holidays into account — if expiration falls on a Friday or the day before a market holiday, the resulting equity position cannot be managed until the next trading day, increasing overnight market risk exposure.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Take weekends and market holidays into account — if expiration falls on a Friday or the day before a market holiday, the resulting equity position cannot be managed until the next trading day, increasing overnight market risk exposure.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "## DriveWealth risk mitigation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "DriveWealth risk mitigation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "DriveWealth will attempt to take proactive action to prevent the exercise of option contracts that an account cannot support if they remain open after market close on expiration day.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth will attempt to take proactive action to prevent the exercise of option contracts that an account cannot support if they remain open after market close on expiration day.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "## Exercise contract",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Exercise contract",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "Submit an exercise request to enact a transaction on the contract's underlying security. Exercise requests are processed immediately upon receipt — the option position is removed from the account and the resulting equity position is added. Requests can be submitted ahead of expiration day as an early exercise, or on expiration day itself prior to market close.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Submit an exercise request to enact a transaction on the contract's underlying security. Exercise requests are processed immediately upon receipt — the option position is removed from the account and the resulting equity position is added. Requests can be submitted ahead of expiration day as an early exercise, or on expiration day itself prior to market close.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "## Submit an exercise request",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Submit an exercise request",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        40,
+        60
+      ],
+      "raw": "```bash\ncurl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/exercise \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"tradingType\": \"CASH\",\n  \"instrumentID\": \"{{instrumentID}}\",\n  \"quantity\": 1,\n  \"miscFees\": [\n    {\n      \"feeType\": \"string\",\n      \"feeAmount\": 1.00\n    }\n  ]\n}\n'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "bash",
+        "title": null,
+        "code": "curl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/exercise \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"tradingType\": \"CASH\",\n  \"instrumentID\": \"{{instrumentID}}\",\n  \"quantity\": 1,\n  \"miscFees\": [\n    {\n      \"feeType\": \"string\",\n      \"feeAmount\": 1.00\n    }\n  ]\n}\n'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{accountID}}",
+          "line": 42
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 44
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 46
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{instrumentID}}",
+          "line": 50
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "## Response",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        64,
+        68
+      ],
+      "raw": "```json\n{\n  \"instructionID\": \"string\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"instructionID\": \"string\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "## Submit a do-not-exercise request",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Submit a do-not-exercise request",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "Prevent an in-the-money option position from being auto-exercised by the OCC on expiration day.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Prevent an in-the-money option position from being auto-exercised by the OCC on expiration day.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        74,
+        76
+      ],
+      "raw": "* DNE requests are only supported on expiration day and will be rejected if submitted in advance of expiration day.\n* Do-not-exercise requests are held and applied at market close — the quantity exercised will be reduced to the lesser of the requested quantity or the current position quantity.\n* Submitting a do-not-exercise request does not restrict trading out of the position prior to expiration.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DNE requests are only supported on expiration day and will be rejected if submitted in advance of expiration day.Do-not-exercise requests are held and applied at market close — the quantity exercised will be reduced to the lesser of the requested quantity or the current position quantity.Submitting a do-not-exercise request does not restrict trading out of the position prior to expiration.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        78,
+        78
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "i": 24,
+      "lines": [
+        80,
+        100
+      ],
+      "raw": "```bash\ncurl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/do-not-exercise \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"tradingType\": \"CASH\",\n  \"instrumentID\": \"{{instrumentID}}\",\n  \"quantity\": 1,\n  \"miscFees\": [\n    {\n      \"feeType\": \"{{TODO}}\",\n      \"feeAmount\": 0\n    }\n  ]\n}\n'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "bash",
+        "title": null,
+        "code": "curl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/do-not-exercise \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{yourAppKey}}' \\\n     --data '\n{\n  \"tradingType\": \"CASH\",\n  \"instrumentID\": \"{{instrumentID}}\",\n  \"quantity\": 1,\n  \"miscFees\": [\n    {\n      \"feeType\": \"{{TODO}}\",\n      \"feeAmount\": 0\n    }\n  ]\n}\n'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{accountID}}",
+          "line": 82
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 84
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 86
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{instrumentID}}",
+          "line": 90
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{TODO}}",
+          "line": 94
+        }
+      ]
+    },
+    {
+      "i": 25,
+      "lines": [
+        102,
+        102
+      ],
+      "raw": "## Get request details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Get request details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        104,
+        104
+      ],
+      "raw": "Retrieve the status of pending exercise and do-not-exercise requests for an account. Two endpoints are available — details returns the full request objects, summary returns aggregate totals by instrument.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrieve the status of pending exercise and do-not-exercise requests for an account. Two endpoints are available — details returns the full request objects, summary returns aggregate totals by instrument.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        106,
+        112
+      ],
+      "raw": "```bash\ncurl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/requests/details \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "bash",
+        "title": null,
+        "code": "curl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/requests/details \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{accountID}}",
+          "line": 108
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 110
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 111
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        114,
+        114
+      ],
+      "raw": "### Response",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        116,
+        178
+      ],
+      "raw": "```json\n{\n  \"data\": [\n    {\n      \"accountID\": \"8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944\",\n      \"accountNo\": \"QWUT001074\",\n      \"clientID\": \"\",\n      \"instructionID\": \"b928b317-831c-4f10-b94a-b89ed1318979\",\n      \"instrumentID\": \"2ec28a9c-e8b2-4c9c-ad45-9a66ad499636\",\n      \"miscFees\": [],\n      \"osiSymbol\": \"F280121C00015000\",\n      \"partnerID\": \"ca6aa9a6-a56c-43b4-a575-16d532b3b5c0\",\n      \"quantity\": 1,\n      \"requestType\": \"OPXRC\",\n      \"requestedAt\": \"2026-08-07T13:18:52.627005\",\n      \"settlementDate\": \"2026-08-10\",\n      \"status\": \"INITIATED\",\n      \"tradeDate\": \"2026-08-07\",\n      \"tradingType\": \"CASH\",\n      \"updatedAt\": \"2026-08-07T13:18:52.627005\"\n    },\n    {\n      \"accountID\": \"8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944\",\n      \"accountNo\": \"QWUT001074\",\n      \"clientID\": \"\",\n      \"instructionID\": \"41312d2f-5b47-4d12-9467-1f4a53dbd214\",\n      \"instrumentID\": \"ab1a9e7b-0eeb-44d7-90f1-13577c0def43\",\n      \"miscFees\": [],\n      \"osiSymbol\": \"SPY271217P00050000\",\n      \"partnerID\": \"ca6aa9a6-a56c-43b4-a575-16d532b3b5c0\",\n      \"quantity\": 1,\n      \"requestType\": \"OPXRC\",\n      \"requestedAt\": \"2026-08-12T14:59:01.518976\",\n      \"settlementDate\": \"2026-08-13\",\n      \"status\": \"REJECTED\",\n      \"tradeDate\": \"2026-08-12\",\n      \"tradingType\": \"CASH\",\n      \"updatedAt\": \"2026-08-12T14:59:18.549344\"\n    },\n    {\n      \"accountID\": \"8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944\",\n      \"accountNo\": \"QWUT001074\",\n      \"clientID\": \"\",\n      \"instructionID\": \"20f18d29-ef83-4ca3-988e-7f23a44df9a3\",\n      \"instrumentID\": \"8ad20482-e05b-4954-a30f-b350d675e14c\",\n      \"miscFees\": [],\n      \"osiSymbol\": \"SPY271217C00765000\",\n      \"partnerID\": \"ca6aa9a6-a56c-43b4-a575-16d532b3b5c0\",\n      \"quantity\": 1,\n      \"requestType\": \"OPXRC\",\n      \"requestedAt\": \"2026-08-12T13:30:31.760102\",\n      \"settlementDate\": \"2026-08-13\",\n      \"status\": \"PROCESSED\",\n      \"tradeDate\": \"2026-08-12\",\n      \"tradingType\": \"CASH\",\n      \"updatedAt\": \"2026-08-12T13:30:32.782570\"\n    }\n  ],\n  \"page\": {\n    \"hasMore\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"data\": [\n    {\n      \"accountID\": \"8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944\",\n      \"accountNo\": \"QWUT001074\",\n      \"clientID\": \"\",\n      \"instructionID\": \"b928b317-831c-4f10-b94a-b89ed1318979\",\n      \"instrumentID\": \"2ec28a9c-e8b2-4c9c-ad45-9a66ad499636\",\n      \"miscFees\": [],\n      \"osiSymbol\": \"F280121C00015000\",\n      \"partnerID\": \"ca6aa9a6-a56c-43b4-a575-16d532b3b5c0\",\n      \"quantity\": 1,\n      \"requestType\": \"OPXRC\",\n      \"requestedAt\": \"2026-08-07T13:18:52.627005\",\n      \"settlementDate\": \"2026-08-10\",\n      \"status\": \"INITIATED\",\n      \"tradeDate\": \"2026-08-07\",\n      \"tradingType\": \"CASH\",\n      \"updatedAt\": \"2026-08-07T13:18:52.627005\"\n    },\n    {\n      \"accountID\": \"8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944\",\n      \"accountNo\": \"QWUT001074\",\n      \"clientID\": \"\",\n      \"instructionID\": \"41312d2f-5b47-4d12-9467-1f4a53dbd214\",\n      \"instrumentID\": \"ab1a9e7b-0eeb-44d7-90f1-13577c0def43\",\n      \"miscFees\": [],\n      \"osiSymbol\": \"SPY271217P00050000\",\n      \"partnerID\": \"ca6aa9a6-a56c-43b4-a575-16d532b3b5c0\",\n      \"quantity\": 1,\n      \"requestType\": \"OPXRC\",\n      \"requestedAt\": \"2026-08-12T14:59:01.518976\",\n      \"settlementDate\": \"2026-08-13\",\n      \"status\": \"REJECTED\",\n      \"tradeDate\": \"2026-08-12\",\n      \"tradingType\": \"CASH\",\n      \"updatedAt\": \"2026-08-12T14:59:18.549344\"\n    },\n    {\n      \"accountID\": \"8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944\",\n      \"accountNo\": \"QWUT001074\",\n      \"clientID\": \"\",\n      \"instructionID\": \"20f18d29-ef83-4ca3-988e-7f23a44df9a3\",\n      \"instrumentID\": \"8ad20482-e05b-4954-a30f-b350d675e14c\",\n      \"miscFees\": [],\n      \"osiSymbol\": \"SPY271217C00765000\",\n      \"partnerID\": \"ca6aa9a6-a56c-43b4-a575-16d532b3b5c0\",\n      \"quantity\": 1,\n      \"requestType\": \"OPXRC\",\n      \"requestedAt\": \"2026-08-12T13:30:31.760102\",\n      \"settlementDate\": \"2026-08-13\",\n      \"status\": \"PROCESSED\",\n      \"tradeDate\": \"2026-08-12\",\n      \"tradingType\": \"CASH\",\n      \"updatedAt\": \"2026-08-12T13:30:32.782570\"\n    }\n  ],\n  \"page\": {\n    \"hasMore\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        180,
+        180
+      ],
+      "raw": "## Get request summary",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Get request summary",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        182,
+        188
+      ],
+      "raw": "```bash\ncurl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/requests/summary \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "bash",
+        "title": null,
+        "code": "curl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/requests/summary \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{accountID}}",
+          "line": 184
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 186
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 187
+        }
+      ]
+    },
+    {
+      "i": 32,
+      "lines": [
+        190,
+        190
+      ],
+      "raw": "### Response",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        192,
+        209
+      ],
+      "raw": "```json\n{\n  \"data\": [\n    {\n      \"accountID\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n      \"instrumentID\": \"3fb1e8a9-f7d5-4d90-95e2-43e7326b5636\",\n      \"totals\": {\n        \"EXERCISE\": 2,\n        \"DO_NOT_EXERCISE\": 1\n      }\n    }\n  ],\n  \"page\": {\n    \"nextCursor\": \"eyJzb3J0S2V5IjoxNzIzNDU2Nzg5MTIzLCJpZCI6IlAxMjMifQ==\",\n    \"hasMore\": true\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"data\": [\n    {\n      \"accountID\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n      \"instrumentID\": \"3fb1e8a9-f7d5-4d90-95e2-43e7326b5636\",\n      \"totals\": {\n        \"EXERCISE\": 2,\n        \"DO_NOT_EXERCISE\": 1\n      }\n    }\n  ],\n  \"page\": {\n    \"nextCursor\": \"eyJzb3J0S2V5IjoxNzIzNDU2Nzg5MTIzLCJpZCI6IlAxMjMifQ==\",\n    \"hasMore\": true\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

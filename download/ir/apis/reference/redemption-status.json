@@ -1,0 +1,185 @@
+{
+  "slug": "apis/reference/redemption-status",
+  "source": "https://developer.drivewealth.com/apis/reference/redemption-status.md",
+  "url": "https://developer.drivewealth.com/apis/reference/redemption-status",
+  "title": "Withdrawal Status",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:31:59.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "Callout": 1,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Withdrawal Status",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Withdrawal Status",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        11
+      ],
+      "raw": "> 📘 Status Number vs. Status Enum\n>\n> \"Status Number\" should be referenced when retrieving (`GET`) all deposits requests. \"Status Enum\" should only be used when updating (`PATCH`) a deposit request.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Status Number vs. Status Enum\"Status Number\" should be referenced when retrieving (GET) all deposits requests. \"Status Enum\" should only be used when updating (PATCH) a deposit request.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        13,
+        26
+      ],
+      "raw": "| Status Description | Status Number | Status Enum      |                                                                                                                                                                                                                                                                                              |\n| :----------------- | :------------ | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| **Started**        | `0`           | `\"STARTED\"`      | Withdrawal has been initiated.                                                                                                                                                                                                                                                               |\n| **Pending**        | `1`           | `\"PENDING\"`      | Every new redemption for a self-directed account is set to \"Pending\". From here, the redemption can be marked as \"Rejected\", \"On Hold\" or \"Approved\".                                                                                                                                        |\n| **Successful**     | `2`           | `\"SUCCESSFUL\"`   | A Redemption has been successfully processed and completed.                                                                                                                                                                                                                                  |\n| **Failed**         | `3`           | `\"FAILED\"`       | The Redemption was unable to be completed. If a redemption is marked as \"RIA Rejected\" or \"Rejected\", the redemption will immediately be set to \"Failed\".                                                                                                                                    |\n| **Other**          | `4`           | `\"OTHER\"`        |                                                                                                                                                                                                                                                                                              |\n| **RIA Pending**    | `11`          | `\"RIA_PENDING\"`  | Every new redemption for a managed account is set to \"RIA Pending\". It is the RIA's responsibility to review and arrange the appropriate liquidation events to facilitate the redemption request. Note that clients will not be able to request more funds than their total portfolio value. |\n| **RIA Approved**   | `12`          | `\"RIA_APPROVED\"` | Once the funds have settled, the RIA should update the status to \"RIA Approved\". Once updated, it's status will be set to \"Pending\" and DriveWealth will process the redemption.                                                                                                             |\n| **RIA Rejected**   | `13`          | `\"RIA_REJECTED\"` | The \"RIA Rejected\" status should be used when an RIA wants to reject a redemption request. Once updated to \"RIA Rejected\", the redemption will immediately be set to \"Failed\".                                                                                                               |\n| **Approved**       | `14`          | `\"APPROVED\"`     | Once marked as \"Approved\", the redemption will be processed for disbursements.                                                                                                                                                                                                               |\n| **Rejected**       | `15`          | `\"REJECTED\"`     | Updating a redemption to \"Rejected\" will immediately set it 's status to \"Failed\"                                                                                                                                                                                                            |\n| **On Hold**        | `16`          | `\"On_Hold\"`      | The \"On Hold\" status is reserved for redemptions that aren't ready to be processed. E.g. Funds are still settling.                                                                                                                                                                           |\n| **Unknown**        | `-1`          | –                | Reserved for errors.                                                                                                                                                                                                                                                                         |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status Description",
+          "Status Number",
+          "Status Enum",
+          ""
+        ],
+        "rows": [
+          [
+            "Started",
+            "0",
+            "\"STARTED\"",
+            "Withdrawal has been initiated."
+          ],
+          [
+            "Pending",
+            "1",
+            "\"PENDING\"",
+            "Every new redemption for a self-directed account is set to \"Pending\". From here, the redemption can be marked as \"Rejected\", \"On Hold\" or \"Approved\"."
+          ],
+          [
+            "Successful",
+            "2",
+            "\"SUCCESSFUL\"",
+            "A Redemption has been successfully processed and completed."
+          ],
+          [
+            "Failed",
+            "3",
+            "\"FAILED\"",
+            "The Redemption was unable to be completed. If a redemption is marked as \"RIA Rejected\" or \"Rejected\", the redemption will immediately be set to \"Failed\"."
+          ],
+          [
+            "Other",
+            "4",
+            "\"OTHER\"",
+            ""
+          ],
+          [
+            "RIA Pending",
+            "11",
+            "\"RIA_PENDING\"",
+            "Every new redemption for a managed account is set to \"RIA Pending\". It is the RIA's responsibility to review and arrange the appropriate liquidation events to facilitate the redemption request. Note that clients will not be able to request more funds than their total portfolio value."
+          ],
+          [
+            "RIA Approved",
+            "12",
+            "\"RIA_APPROVED\"",
+            "Once the funds have settled, the RIA should update the status to \"RIA Approved\". Once updated, it's status will be set to \"Pending\" and DriveWealth will process the redemption."
+          ],
+          [
+            "RIA Rejected",
+            "13",
+            "\"RIA_REJECTED\"",
+            "The \"RIA Rejected\" status should be used when an RIA wants to reject a redemption request. Once updated to \"RIA Rejected\", the redemption will immediately be set to \"Failed\"."
+          ],
+          [
+            "Approved",
+            "14",
+            "\"APPROVED\"",
+            "Once marked as \"Approved\", the redemption will be processed for disbursements."
+          ],
+          [
+            "Rejected",
+            "15",
+            "\"REJECTED\"",
+            "Updating a redemption to \"Rejected\" will immediately set it 's status to \"Failed\""
+          ],
+          [
+            "On Hold",
+            "16",
+            "\"On_Hold\"",
+            "The \"On Hold\" status is reserved for redemptions that aren't ready to be processed. E.g. Funds are still settling."
+          ],
+          [
+            "Unknown",
+            "-1",
+            "–",
+            "Reserved for errors."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    }
+  ]
+}

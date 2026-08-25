@@ -1,0 +1,401 @@
+{
+  "slug": "apis/docs/block-trading-for-multiple-accounts",
+  "source": "https://developer.drivewealth.com/apis/docs/block-trading-for-multiple-accounts.md",
+  "url": "https://developer.drivewealth.com/apis/docs/block-trading-for-multiple-accounts",
+  "title": "Block trading for multiple accounts",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:55:26.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "paragraph": 11,
+    "Callout": 1,
+    "code": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Block trading for multiple accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Block trading for multiple accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Investment advisors often have use cases which require trading once on behalf of many customers. DriveWealth can facilitate this via APIs specifically designed for managing money.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Investment advisors often have use cases which require trading once on behalf of many customers. DriveWealth can facilitate this via APIs specifically designed for managing money.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        13
+      ],
+      "raw": "> 🚧\n>\n> Block trading is supported for Equities orders only.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Block trading is supported for Equities orders only.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Accounts that use this flow must be setup as managed by an advisor:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Accounts that use this flow must be setup as managed by an advisor:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        43
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/:accountID\n{\n  \"id\": \"e41ec4b9-2c65...\",\n  \"accountNo\": \"ABCD000001\",\n  \"accountType\": {\n    \"name\": \"LIVE\",\n    \"description\": \"Live Account\"\n  },\n  \"accountMgmtType\": {\n    \"name\": \"RIA_MANAGED\",\n    \"description\": \"Robo Advisor Managed Account\"\n  },\n  \"tradingType\": {\n    \"name\": \"CASH\",\n    \"description\": \"Cash account\"\n  },   \n  \"nickname\": \"Daryl's Robo Advisor Managed Account\",\n  \"userID\": \"e41ec4b9-2c65...\",\n  \"ria\": {\n    \"advisorID\": \"c85b6469-a426...\",\n    \"productID\": \"product_5a5d538e...\",\n    \"portfolioID\": \"portfolio_f12cf2d6...\"\n  },\n  ...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/:accountID\n{\n  \"id\": \"e41ec4b9-2c65...\",\n  \"accountNo\": \"ABCD000001\",\n  \"accountType\": {\n    \"name\": \"LIVE\",\n    \"description\": \"Live Account\"\n  },\n  \"accountMgmtType\": {\n    \"name\": \"RIA_MANAGED\",\n    \"description\": \"Robo Advisor Managed Account\"\n  },\n  \"tradingType\": {\n    \"name\": \"CASH\",\n    \"description\": \"Cash account\"\n  },   \n  \"nickname\": \"Daryl's Robo Advisor Managed Account\",\n  \"userID\": \"e41ec4b9-2c65...\",\n  \"ria\": {\n    \"advisorID\": \"c85b6469-a426...\",\n    \"productID\": \"product_5a5d538e...\",\n    \"portfolioID\": \"portfolio_f12cf2d6...\"\n  },\n  ...\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "Refer to [Opening accounts](https://developer.drivewealth.com/apis/docs/opening-accounts) to learn more about the Account creation process.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Refer to Opening accounts to learn more about the Account creation process.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "## Step-by-step",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step-by-step",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "### **Step 1: Getting the Beginning of Day file (optional)**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 1: Getting the Beginning of Day file (optional)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "Many advisors need to know all of their customers’ positions at the start of the day. This is usually piped into Portfolio Management Software or other advisor tools. If you need this, refer to the [Get Beginning of Day API](https://developer.drivewealth.com/apis/reference/get_users-userid-managed-bod).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Many advisors need to know all of their customers’ positions at the start of the day. This is usually piped into Portfolio Management Software or other advisor tools. If you need this, refer to the Get Beginning of Day API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "### **Step 2: Place a block trade**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 2: Place a block trade",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "Placing a block trade follows the same workflows described in [Creating an order](https://developer.drivewealth.com/apis/docs/creating-an-order). However, rather than specifying a customer’s Account, DriveWealth will provide you the details for a unique **Master Trading Account**. This Account is in your firm’s name, and does not need to be separately funded.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Placing a block trade follows the same workflows described in Creating an order. However, rather than specifying a customer’s Account, DriveWealth will provide you the details for a unique Master Trading Account. This Account is in your firm’s name, and does not need to be separately funded.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        57,
+        73
+      ],
+      "raw": "```javascript\nPOST /back-office/orders\n{\n  \"accountNo\": \"{masterAccountNum}\",\n  \"orderType\": \"LIMIT\",\n  \"symbol\": \"ABCD\",\n  \"side\": \"BUY\",\n  \"quantity\": 1000,\n  \"price\": 135\n}\n\nResponse:\n{\n  \"orderNo\": \"ORDA000321\",\n  \"orderID\": \"FJ.40456fd3-\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "POST /back-office/orders\n{\n  \"accountNo\": \"{masterAccountNum}\",\n  \"orderType\": \"LIMIT\",\n  \"symbol\": \"ABCD\",\n  \"side\": \"BUY\",\n  \"quantity\": 1000,\n  \"price\": 135\n}\n\nResponse:\n{\n  \"orderNo\": \"ORDA000321\",\n  \"orderID\": \"FJ.40456fd3-\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "### **Step 3: Allocating the execution**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 3: Allocating the execution",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "After the trade has been executed, you must now indicate which customers participated in that trade. You do so by creating an Allocation:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After the trade has been executed, you must now indicate which customers participated in that trade. You do so by creating an Allocation:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        79,
+        101
+      ],
+      "raw": "```javascript\nPOST /back-office/managed/allocations\n{\n  \"userID\": \"{advisorUserID}\",\n  \"orders\": [\n    {\n      \"orderID\": \"FJ.40456fd3-\",\n      \"allocations\": [\n        {\n          \"accountID\": \"ABCD000023\",\n          \"qty\": 10.3,\n          \"useClientFunds\": true\n        },\n        {\n          \"accountID\": \"ABCD000038\",\n          \"qty\": 32.932,\n          \"useClientFunds\": true\n        }\n      ]\n    }\n  ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "POST /back-office/managed/allocations\n{\n  \"userID\": \"{advisorUserID}\",\n  \"orders\": [\n    {\n      \"orderID\": \"FJ.40456fd3-\",\n      \"allocations\": [\n        {\n          \"accountID\": \"ABCD000023\",\n          \"qty\": 10.3,\n          \"useClientFunds\": true\n        },\n        {\n          \"accountID\": \"ABCD000038\",\n          \"qty\": 32.932,\n          \"useClientFunds\": true\n        }\n      ]\n    }\n  ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        103,
+        103
+      ],
+      "raw": "All customers receive the same unit price. They will also receive a Trade Confirmation, Order, and Transaction posted to each Account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All customers receive the same unit price. They will also receive a Trade Confirmation, Order, and Transaction posted to each Account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        105,
+        105
+      ],
+      "raw": "## Step 4: Cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 4: Cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        107,
+        107
+      ],
+      "raw": "All trades done in the Master Trading Account need to be allocated somewhere. This Account won’t permanently hold any cash or securities.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All trades done in the Master Trading Account need to be allocated somewhere. This Account won’t permanently hold any cash or securities.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        109,
+        109
+      ],
+      "raw": "To aid in finding unallocated trades, use the [Advisor List All Orders API](https://developer.drivewealth.com/apis/reference/get_users-userid-managed-orders-summary). This is similar to listing all Orders for an Account, but also shows whether these Orders are fully allocated to customers.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To aid in finding unallocated trades, use the Advisor List All Orders API. This is similar to listing all Orders for an Account, but also shows whether these Orders are fully allocated to customers.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        111,
+        111
+      ],
+      "raw": "Sometimes, some quantity of shares will not be allocated by the advisor, purposely. This can happen when customers participated in a trade equally, but the amount of shares purchased or sold was not evenly divisible. Each day, DriveWealth will look for unallocated shares from the previous day, and if it finds any, will automatically allocate them to a unique **Cleanup Account**. This is another Account in the firm’s name that can permanently hold assets.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sometimes, some quantity of shares will not be allocated by the advisor, purposely. This can happen when customers participated in a trade equally, but the amount of shares purchased or sold was not evenly divisible. Each day, DriveWealth will look for unallocated shares from the previous day, and if it finds any, will automatically allocate them to a unique Cleanup Account. This is another Account in the firm’s name that can permanently hold assets.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        113,
+        113
+      ],
+      "raw": "By default, DriveWealth will also automatically liquidate any securities held in the Cleanup Account each day, to avoid long term exposure.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "By default, DriveWealth will also automatically liquidate any securities held in the Cleanup Account each day, to avoid long term exposure.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

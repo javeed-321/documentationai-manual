@@ -1,0 +1,561 @@
+{
+  "slug": "apis/changelog/dh-release-2154",
+  "source": "https://developer.drivewealth.com/apis/changelog/dh-release-2154.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/dh-release-2154",
+  "title": "DH Release 2.15.4",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "Table": 1,
+    "paragraph": 15,
+    "list": 4,
+    "Image": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# DH Release 2.15.4",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "DH Release 2.15.4",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## DH Release 2.15.4",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "DH Release 2.15.4",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Date         | Version | Status       |\n| :----------- | :------ | :----------- |\n| June 1, 2023 | 2.15.4  | **RELEASED** |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Date",
+          "Version",
+          "Status"
+        ],
+        "rows": [
+          [
+            "June 1, 2023",
+            "2.15.4",
+            "RELEASED"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Hi folks! It's been a while since we've posted updates about DriveHub. But we're back in the swing of things! For this release, the main changes we've made are to the Bulk Funding and Reports pages. We've also shipped a handful of smaller enhancements and bug fixes. Please see below for details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Hi folks! It's been a while since we've posted updates about DriveHub. But we're back in the swing of things! For this release, the main changes we've made are to the Bulk Funding and Reports pages. We've also shipped a handful of smaller enhancements and bug fixes. Please see below for details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Bulk Funding Page",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Bulk Funding Page",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "The Bulk Funding Page has been slightly modified to use our new design system. The key change to highlight: All of the previous filter options are still available, but they have been packaged up and moved into the upper right hand corner of the data table. Whenever applying a new filter, please remember to “Apply” those changes to reflect changes. You also have the option to quickly “Reset” all filters.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Bulk Funding Page has been slightly modified to use our new design system. The key change to highlight: All of the previous filter options are still available, but they have been packaged up and moved into the upper right hand corner of the data table. Whenever applying a new filter, please remember to “Apply” those changes to reflect changes. You also have the option to quickly “Reset” all filters.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Why did we make these changes? We have been upgrading to a new design system that in the big picture will offer a higher-performing and less buggy user experience, and allow us to develop future enhancements and fix bugs faster than before!",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Why did we make these changes? We have been upgrading to a new design system that in the big picture will offer a higher-performing and less buggy user experience, and allow us to develop future enhancements and fix bugs faster than before!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "The key items to call out:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The key items to call out:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        21,
+        31
+      ],
+      "raw": "* Table structure and fields have been preserved and not changed\n* All filters have been preserved, but moved to the upper right corner of the table: Partner\n* Search, Status, Date Range (date range offers a quick filter for 7-day, 30-day lookbacks and beyond)\n* Added filter: Category (Deposit, Withdrawal)\n* Features have been preserved: Copy Report ID, Settle button, Export\n* Default display: All partners, Approved, Today’s date for created date (based on user feedback, we will expand the default date range to the past 7 days, as a fast-follow)\n* Added pagination, and the ability to define how many records to display at a time\n* Fixed bugs:\n  * Date filters not registering, which was preventing data from being pulled in and displayed\n  * Partner filter auto-suggest not working\n  * Tangential issue: Fixed issue on Reconciliations page where ‘Reco Date’ field was incorrectly displaying previous day’s date",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Table structure and fields have been preserved and not changedAll filters have been preserved, but moved to the upper right corner of the table: PartnerSearch, Status, Date Range (date range offers a quick filter for 7-day, 30-day lookbacks and beyond)Added filter: Category (Deposit, Withdrawal)Features have been preserved: Copy Report ID, Settle button, ExportDefault display: All partners, Approved, Today’s date for created date (based on user feedback, we will expand the default date range to the past 7 days, as a fast-follow)Added pagination, and the ability to define how many records to display at a timeFixed bugs:Date filters not registering, which was preventing data from being pulled in and displayedPartner filter auto-suggest not workingTangential issue: Fixed issue on Reconciliations page where ‘Reco Date’ field was incorrectly displaying previous day’s date",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "![](https://files.readme.io/ce188d1-Screenshot_2023-04-23_at_10.31.49_PM.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/ce188d1-Screenshot_2023-04-23_at_10.31.49_PM.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/ce188d1-Screenshot_2023-04-23_at_10.31.49_PM.png",
+          "line": 33
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## Other Reports Page",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Other Reports Page",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "The Reports landing page and individual report pages have been slightly modified to use our new design system. For the reports landing page, we have stretched it out to a full-page view, but all report names and categorization have remained unchanged. For individual report pages, where applicable, we have consolidated the “Generate” and “Download” buttons into a single action to download the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Reports landing page and individual report pages have been slightly modified to use our new design system. For the reports landing page, we have stretched it out to a full-page view, but all report names and categorization have remained unchanged. For individual report pages, where applicable, we have consolidated the “Generate” and “Download” buttons into a single action to download the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "Why did we make these changes? We have been upgrading to a new design system that in the big picture will offer a higher-performing and less buggy user experience, and allow us to develop future enhancements and fix bugs faster than before! We developed a landing page that better supported our growing number of reports. Finally, we streamlined the workflow involved to download certain reports.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Why did we make these changes? We have been upgrading to a new design system that in the big picture will offer a higher-performing and less buggy user experience, and allow us to develop future enhancements and fix bugs faster than before! We developed a landing page that better supported our growing number of reports. Finally, we streamlined the workflow involved to download certain reports.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "They key changes to call out:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "They key changes to call out:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        43,
+        46
+      ],
+      "raw": "* Reports menu has been stretched to a full page view. Naming conventions and categorization have been preserved. This better supports the growing volume of reports.\n* For certain reports, where applicable, consolidated the “Generate” and “Download” buttons into one single download button click. This eliminates the friction of generating a report but then neglecting to subsequently download it. Made “Generate” vs “Download” language consistent across reports.\n* For each report, no changes to the corresponding input fields. No changes to the report download.\n* Fixed bugs: Resolved multiple issues of reports crashing (End of Day, Orders, Positions)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Reports menu has been stretched to a full page view. Naming conventions and categorization have been preserved. This better supports the growing volume of reports.For certain reports, where applicable, consolidated the “Generate” and “Download” buttons into one single download button click. This eliminates the friction of generating a report but then neglecting to subsequently download it. Made “Generate” vs “Download” language consistent across reports.For each report, no changes to the corresponding input fields. No changes to the report download.Fixed bugs: Resolved multiple issues of reports crashing (End of Day, Orders, Positions)",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "![](https://files.readme.io/8b3b462-Screenshot_2023-04-23_at_10.32.13_PM.png)With the BestEx Quarterly report, for example, we’ve consolidated the “Generate” and “Download” buttons and functions into one. To return to the main reports landing page, you can click on your browser’s back button, or the “Back to Other Reports” link in the upper left corner of the page.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "With the BestEx Quarterly report, for example, we’ve consolidated the “Generate” and “Download” buttons and functions into one. To return to the main reports landing page, you can click on your browser’s back button, or the “Back to Other Reports” link in the upper left corner of the page.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/8b3b462-Screenshot_2023-04-23_at_10.32.13_PM.png",
+          "line": 48
+        }
+      ]
+    },
+    {
+      "i": 17,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "![](https://files.readme.io/ee0c936-Screenshot_2023-04-23_at_10.32.23_PM.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/ee0c936-Screenshot_2023-04-23_at_10.32.23_PM.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/ee0c936-Screenshot_2023-04-23_at_10.32.23_PM.png",
+          "line": 50
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "## Other Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Other Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "**Extended Hours Trading**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Extended Hours Trading",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        56,
+        58
+      ],
+      "raw": "* Order entry screen enhanced to allow for extended hours order entry (for partners that have Extended Hours feature toggle enabled)\n* Display appropriate attributes for extended hours trades\n* On instrument screen, added “Extended Hours Notional Enabled” field, and the ability for users to enable/disable Extended Hours Notional for a symbol",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Order entry screen enhanced to allow for extended hours order entry (for partners that have Extended Hours feature toggle enabled)Display appropriate attributes for extended hours tradesOn instrument screen, added “Extended Hours Notional Enabled” field, and the ability for users to enable/disable Extended Hours Notional for a symbol",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "**Onboarding -** Removed page where user had to select from one of four options, as it was confusing to the user at this stage.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Onboarding - Removed page where user had to select from one of four options, as it was confusing to the user at this stage.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "**Share Transfer -** Enhanced Share Transfer UI to allow for easy in-line editing of fields. Note: This functionality is turned off at the moment.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Share Transfer - Enhanced Share Transfer UI to allow for easy in-line editing of fields. Note: This functionality is turned off at the moment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "## Bug Fixes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Bug Fixes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "**Partner Onboarding**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Partner Onboarding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        68,
+        70
+      ],
+      "raw": "* Resolved issue where it was failing when leaving a trailing space at the end of the company name\n* Resolved issue where login username was case sensitive\n* Display “username already exists” error message",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Resolved issue where it was failing when leaving a trailing space at the end of the company nameResolved issue where login username was case sensitiveDisplay “username already exists” error message",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "**Edit User Details -** Resolved issue where app crashed when attempting to edit user details (due to an invalid date issue)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Edit User Details - Resolved issue where app crashed when attempting to edit user details (due to an invalid date issue)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "**Notes -** Display messages if there are no notes to display or if there is an error fetching notesCrypto - Resolved issues with retrieving trade confirmations and monthly statements in DriveHub",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Notes - Display messages if there are no notes to display or if there is an error fetching notesCrypto - Resolved issues with retrieving trade confirmations and monthly statements in DriveHub",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        76,
+        76
+      ],
+      "raw": "**Reconciliations -** Removed the ability to double-click Update button in modal so that it doesn’t get submitted more than once",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Reconciliations - Removed the ability to double-click Update button in modal so that it doesn’t get submitted more than once",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

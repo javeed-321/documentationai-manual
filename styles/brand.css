@@ -1,15 +1,15 @@
 /*
- * Brand palette, read from https://techdocs.akamai.com/adaptive-media-delivery/docs/welcome-adaptive-media-deliv.
+ * Brand palette, read from https://developer.drivewealth.com/apis/docs/intro.
  *
  * Variables only — no rules — so including this file cannot change the theme.
  * The theme itself comes from `colors` in documentation.json.
  */
 :root {
-  --rm-brand: #017ac6;
-  --rm-brand-light: #017ac6;
-  --rm-brand-dark: #0187da;
+  --rm-brand: #96700a;
+  --rm-brand-light: #96700a;
+  --rm-brand-dark: #a47b0b;
 }
 
 [data-theme="dark"] {
-  --rm-brand: #0187da;
+  --rm-brand: #a47b0b;
 }

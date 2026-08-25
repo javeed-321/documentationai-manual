@@ -1,0 +1,192 @@
+{
+  "slug": "apis/changelog/api-release-126",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-126.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-126",
+  "title": "API Release 1.26",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "Table": 1,
+    "paragraph": 2,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.26",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.26",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.26",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.26",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Release Date     | Status   |\n| :--------------- | :------- |\n| October 19, 2021 | RELEASED |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Release Date",
+          "Status"
+        ],
+        "rows": [
+          [
+            "October 19, 2021",
+            "RELEASED"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Features and Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Features and Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "### **Reject redemptions if cash available for withdrawal is less than or equal to fees**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Reject redemptions if cash available for withdrawal is less than or equal to fees",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "An error message will be returned and redemption will be rejected if cash available for withdrawal is less than or equal to fees.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An error message will be returned and redemption will be rejected if cash available for withdrawal is less than or equal to fees.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Endpoint: \\{bo-url}}/back-office/funding/redemptions **POST**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Endpoint: {bo-url}}/back-office/funding/redemptions POST",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        24
+      ],
+      "raw": "```json Sample Response\n{\n \"errorCode\": \"Y075\",\n \"message\": \"The redemption amount is more than the cash available. Details: Available balance: 25.00, Fees: 25\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Sample Response",
+        "code": "{\n \"errorCode\": \"Y075\",\n \"message\": \"The redemption amount is more than the cash available. Details: Available balance: 25.00, Fees: 25\"\n}"
+      },
+      "text": "Sample Response",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

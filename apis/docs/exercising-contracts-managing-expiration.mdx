@@ -1,0 +1,203 @@
+---
+title: "Exercising contracts & managing expiration"
+---
+
+Manage the lifecycle of options positions approaching or on expiration day. DriveWealth provides endpoints for submitting exercise instructions and do-not-exercise requests on behalf of accountholders, as well as retrieving the status of pending requests.
+
+## Expiration risk
+
+If a contract is in-the-money by at least $0.01 at expiration, it is subject to auto-exercise by the OCC. Due to the leveraged nature of options, exercising a contract can generate a large underlying equity position, exposing the account to substantial market risk overnight or over a weekend.
+
+In cash accounts, sufficient buying power is required to cover the exercise of a long call, and sufficient shares are required to cover the exercise of a long put. Accounts that lack the necessary buying power or shares are at risk of a mistaken exercise resulting in a negative cash balance or short stock position.
+
+DriveWealth will attempt to take proactive action to prevent the exercise of option contracts that an account cannot support if they remain open after market close on expiration day.
+
+## Managing expiration risk
+
+Before expiration day cutoff, verify that every account holding an options position has sufficient resources to support exercise:
+
+- For long calls: the account must have enough buying power to cover the purchase of the underlying stock.
+- For long puts: the account must have enough shares to cover the sale of the underlying stock.
+
+If an account cannot support exercise, the position should be liquidated or a do-not-exercise request submitted before the cutoff.
+
+Take weekends and market holidays into account — if expiration falls on a Friday or the day before a market holiday, the resulting equity position cannot be managed until the next trading day, increasing overnight market risk exposure.
+
+## DriveWealth risk mitigation
+
+DriveWealth will attempt to take proactive action to prevent the exercise of option contracts that an account cannot support if they remain open after market close on expiration day.
+
+## Exercise contract
+
+Submit an exercise request to enact a transaction on the contract's underlying security. Exercise requests are processed immediately upon receipt — the option position is removed from the account and the resulting equity position is added. Requests can be submitted ahead of expiration day as an early exercise, or on expiration day itself prior to market close.
+
+## Submit an exercise request
+
+```bash
+curl --request POST \
+     --url https://bo-api.drivewealth.io/back-office/accounts/{{accountID}}/positions/options/exercise \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer \{\{ACCESS_TOKEN}}' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '
+{
+  "tradingType": "CASH",
+  "instrumentID": "\{\{instrumentID}}",
+  "quantity": 1,
+  "miscFees": [
+    {
+      "feeType": "string",
+      "feeAmount": 1.00
+    }
+  ]
+}
+'
+```
+
+## Response
+
+```json
+{
+  "instructionID": "string"
+}
+```
+
+## Submit a do-not-exercise request
+
+Prevent an in-the-money option position from being auto-exercised by the OCC on expiration day.
+
+- DNE requests are only supported on expiration day and will be rejected if submitted in advance of expiration day.
+- Do-not-exercise requests are held and applied at market close — the quantity exercised will be reduced to the lesser of the requested quantity or the current position quantity.
+- Submitting a do-not-exercise request does not restrict trading out of the position prior to expiration.
+
+```bash
+curl --request POST \
+     --url https://bo-api.drivewealth.io/back-office/accounts/\{\{accountID}}/positions/options/do-not-exercise \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer \{\{ACCESS_TOKEN}}' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '
+{
+  "tradingType": "CASH",
+  "instrumentID": "\{\{instrumentID}}",
+  "quantity": 1,
+  "miscFees": [
+    {
+      "feeType": "\{\{TODO}}",
+      "feeAmount": 0
+    }
+  ]
+}
+'
+```
+
+## Get request details
+
+Retrieve the status of pending exercise and do-not-exercise requests for an account. Two endpoints are available — details returns the full request objects, summary returns aggregate totals by instrument.
+
+```bash
+curl --request GET \
+     --url https://bo-api.drivewealth.io/back-office/accounts/\{\{accountID}}/positions/options/requests/details \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer \{\{ACCESS_TOKEN}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}'
+```
+
+### Response
+
+```json
+{
+  "data": [
+    {
+      "accountID": "8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944",
+      "accountNo": "QWUT001074",
+      "clientID": "",
+      "instructionID": "b928b317-831c-4f10-b94a-b89ed1318979",
+      "instrumentID": "2ec28a9c-e8b2-4c9c-ad45-9a66ad499636",
+      "miscFees": [],
+      "osiSymbol": "F280121C00015000",
+      "partnerID": "ca6aa9a6-a56c-43b4-a575-16d532b3b5c0",
+      "quantity": 1,
+      "requestType": "OPXRC",
+      "requestedAt": "2026-08-07T13:18:52.627005",
+      "settlementDate": "2026-08-10",
+      "status": "INITIATED",
+      "tradeDate": "2026-08-07",
+      "tradingType": "CASH",
+      "updatedAt": "2026-08-07T13:18:52.627005"
+    },
+    {
+      "accountID": "8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944",
+      "accountNo": "QWUT001074",
+      "clientID": "",
+      "instructionID": "41312d2f-5b47-4d12-9467-1f4a53dbd214",
+      "instrumentID": "ab1a9e7b-0eeb-44d7-90f1-13577c0def43",
+      "miscFees": [],
+      "osiSymbol": "SPY271217P00050000",
+      "partnerID": "ca6aa9a6-a56c-43b4-a575-16d532b3b5c0",
+      "quantity": 1,
+      "requestType": "OPXRC",
+      "requestedAt": "2026-08-12T14:59:01.518976",
+      "settlementDate": "2026-08-13",
+      "status": "REJECTED",
+      "tradeDate": "2026-08-12",
+      "tradingType": "CASH",
+      "updatedAt": "2026-08-12T14:59:18.549344"
+    },
+    {
+      "accountID": "8cf83ab0-5345-4df8-ab6d-ce0af4e9e4bc.1786035933944",
+      "accountNo": "QWUT001074",
+      "clientID": "",
+      "instructionID": "20f18d29-ef83-4ca3-988e-7f23a44df9a3",
+      "instrumentID": "8ad20482-e05b-4954-a30f-b350d675e14c",
+      "miscFees": [],
+      "osiSymbol": "SPY271217C00765000",
+      "partnerID": "ca6aa9a6-a56c-43b4-a575-16d532b3b5c0",
+      "quantity": 1,
+      "requestType": "OPXRC",
+      "requestedAt": "2026-08-12T13:30:31.760102",
+      "settlementDate": "2026-08-13",
+      "status": "PROCESSED",
+      "tradeDate": "2026-08-12",
+      "tradingType": "CASH",
+      "updatedAt": "2026-08-12T13:30:32.782570"
+    }
+  ],
+  "page": {
+    "hasMore": false
+  }
+}
+```
+
+## Get request summary
+
+```bash
+curl --request GET \
+     --url https://bo-api.drivewealth.io/back-office/accounts/\{\{accountID}}/positions/options/requests/summary \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer \{\{ACCESS_TOKEN}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}'
+```
+
+### Response
+
+```json
+{
+  "data": [
+    {
+      "accountID": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+      "instrumentID": "3fb1e8a9-f7d5-4d90-95e2-43e7326b5636",
+      "totals": {
+        "EXERCISE": 2,
+        "DO_NOT_EXERCISE": 1
+      }
+    }
+  ],
+  "page": {
+    "nextCursor": "eyJzb3J0S2V5IjoxNzIzNDU2Nzg5MTIzLCJpZCI6IlAxMjMifQ==",
+    "hasMore": true
+  }
+}
+```

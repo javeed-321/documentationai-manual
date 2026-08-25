@@ -1,0 +1,206 @@
+{
+  "slug": "apis/changelog/api-release-138",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-138.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-138",
+  "title": "API Release 1.38",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "Table": 1,
+    "paragraph": 2,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.38",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.38",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.38",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.38",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        10
+      ],
+      "raw": "| Environment | Release Date            |\n| :---------- | :---------------------- |\n| UAT         | RELEASED                |\n| PRODUCTION  | RELEASED - June 2, 2022 |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Environment",
+          "Release Date"
+        ],
+        "rows": [
+          [
+            "UAT",
+            "RELEASED"
+          ],
+          [
+            "PRODUCTION",
+            "RELEASED - June 2, 2022"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "### **Update - LPMA Accounts and PDT Counter**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Update - LPMA Accounts and PDT Counter",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "PDT Counter will display correct number of Pattern Day Trades on 5th day. See [API Highlight](https://guides.drivewealth.com/changelog/api-highlights-pdt-for-lpma-accounts) for more information on PDT for LPMA accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PDT Counter will display correct number of Pattern Day Trades on 5th day. See API Highlight for more information on PDT for LPMA accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "### **New - Error Messages**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "New - Error Messages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "The following validations and error messages have been implemented:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following validations and error messages have been implemented:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        20,
+        23
+      ],
+      "raw": "* When creating a Portfolio with a `RELATIVE_DRIFT` or `ABSOLUTE_DRIFT` that contains an `upperBound` value that is less than the `lowerBound` value, the request will be rejected and a 400 error will be received\n* When creating an RIA Fund with a `RELATIVE_DRIFT` or `ABSOLUTE_DRIFT` that contains an `upperBound` value that is less than the `lowerBound` value, the request will be rejected and a 400 error will be received\n* Added validation and error message to `{{bo-url}}/back-office/documents/`:\n  * Validation to check if `data:[<MIME-type>]` is present in the document. If not present, \"Please use correct format : Data URI with base 64 encoding for the document. data:\\[;base64],\\<data>\" error message will be received.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "When creating a Portfolio with a RELATIVE_DRIFT or ABSOLUTE_DRIFT that contains an upperBound value that is less than the lowerBound value, the request will be rejected and a 400 error will be receivedWhen creating an RIA Fund with a RELATIVE_DRIFT or ABSOLUTE_DRIFT that contains an upperBound value that is less than the lowerBound value, the request will be rejected and a 400 error will be receivedAdded validation and error message to {{bo-url}}/back-office/documents/:Validation to check if data:[<MIME-type>] is present in the document. If not present, \"Please use correct format : Data URI with base 64 encoding for the document. data:[;base64],<data>\" error message will be received.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{bo-url}}",
+          "line": 22
+        },
+        {
+          "kind": "escapedAngle",
+          "value": "\\<data>",
+          "line": 23
+        }
+      ]
+    }
+  ]
+}

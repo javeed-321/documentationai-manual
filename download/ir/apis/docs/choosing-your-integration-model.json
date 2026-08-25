@@ -1,0 +1,1615 @@
+{
+  "slug": "apis/docs/choosing-your-integration-model",
+  "source": "https://developer.drivewealth.com/apis/docs/choosing-your-integration-model.md",
+  "url": "https://developer.drivewealth.com/apis/docs/choosing-your-integration-model",
+  "title": "Choosing your integration model",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T22:45:28.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 22,
+    "paragraph": 35,
+    "thematicBreak": 7,
+    "Table": 2,
+    "list": 11,
+    "code": 3,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Choosing your integration model",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Choosing your integration model",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Before building your funding integration, you need to decide how money moves between your customers and DriveWealth. This decision affects your API architecture, your regulatory obligations, your settlement operations, and what your customers experience.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before building your funding integration, you need to decide how money moves between your customers and DriveWealth. This decision affects your API architecture, your regulatory obligations, your settlement operations, and what your customers experience.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "DriveWealth supports four funding models. The right one depends on whether you custody customer cash, how many customers you're funding at once, and how visible the brokerage layer is to your end users.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth supports four funding models. The right one depends on whether you custody customer cash, how many customers you're funding at once, and how visible the brokerage layer is to your end users.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## **The four models at a glance**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "The four models at a glance",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        27
+      ],
+      "raw": "|                               | Individual      | Bulk             | Cashless              | Omnibus                 |\n| :---------------------------- | :-------------- | :--------------- | :-------------------- | :---------------------- |\n| Customer accounts at DW       | Yes             | Yes              | Yes                   | No — one master account |\n| Who holds customer cash       | DriveWealth     | Client           | Client                | Client                  |\n| Customer initiates deposit    | Yes             | No — client does | No — no deposit step  | No — no deposit step    |\n| DW tracks individual balances | Yes             | Yes              | Yes                   | No                      |\n| Settlement method             | Per transaction | Net T+1 wire     | Net T+1 (trades only) | Pre-fund or T+1         |\n| Client needs books & records  | No              | No               | No                    | Yes                     |\n| DW generates tax docs         | Yes             | Yes              | Yes                   | No                      |\n| DW provides market data       | Yes             | Yes              | Yes                   | No                      |\n| Travel Rule required          | No              | Yes              | Yes                   | Client responsibility   |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "",
+          "Individual",
+          "Bulk",
+          "Cashless",
+          "Omnibus"
+        ],
+        "rows": [
+          [
+            "Customer accounts at DW",
+            "Yes",
+            "Yes",
+            "Yes",
+            "No — one master account"
+          ],
+          [
+            "Who holds customer cash",
+            "DriveWealth",
+            "Client",
+            "Client",
+            "Client"
+          ],
+          [
+            "Customer initiates deposit",
+            "Yes",
+            "No — client does",
+            "No — no deposit step",
+            "No — no deposit step"
+          ],
+          [
+            "DW tracks individual balances",
+            "Yes",
+            "Yes",
+            "Yes",
+            "No"
+          ],
+          [
+            "Settlement method",
+            "Per transaction",
+            "Net T+1 wire",
+            "Net T+1 (trades only)",
+            "Pre-fund or T+1"
+          ],
+          [
+            "Client needs books & records",
+            "No",
+            "No",
+            "No",
+            "Yes"
+          ],
+          [
+            "DW generates tax docs",
+            "Yes",
+            "Yes",
+            "Yes",
+            "No"
+          ],
+          [
+            "DW provides market data",
+            "Yes",
+            "Yes",
+            "Yes",
+            "No"
+          ],
+          [
+            "Travel Rule required",
+            "No",
+            "Yes",
+            "Yes",
+            "Client responsibility"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## **Individual funding**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Individual funding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "**The customer funds their own account directly.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The customer funds their own account directly.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "In this model, each customer links their personal bank account to their DriveWealth brokerage account and initiates their own deposits and withdrawals. DriveWealth handles all cash custody and tracks each customer's balance independently.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In this model, each customer links their personal bank account to their DriveWealth brokerage account and initiates their own deposits and withdrawals. DriveWealth handles all cash custody and tracks each customer's balance independently.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "There are two transfer methods available:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are two transfer methods available:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        39,
+        40
+      ],
+      "raw": "* **ACH** — typically 4–5 business days. DriveWealth charges $0.25 for outbound ACH transfers. Requires a linked US bank account. Buying power is only available after funds settle.\n* **Wire** — same business day if initiated before the bank's cutoff time. Faster but higher fees. Funds are sent to each account's unique Virtual Account number.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "ACH — typically 4–5 business days. DriveWealth charges $0.25 for outbound ACH transfers. Requires a linked US bank account. Buying power is only available after funds settle.Wire — same business day if initiated before the bank's cutoff time. Faster but higher fees. Funds are sent to each account's unique Virtual Account number.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "❗️ ACH deposits are subject to a seasoning period before funds can be withdrawn — typically 5 days, up to 30 days. Wire deposits carry no seasoning period. These defaults can be customized as part of your integration.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "❗️ ACH deposits are subject to a seasoning period before funds can be withdrawn — typically 5 days, up to 30 days. Wire deposits carry no seasoning period. These defaults can be customized as part of your integration.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "### **When to use it**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "When to use it",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "Individual funding is best when your customers manage their own banking relationship and you want DriveWealth to handle the full funding lifecycle on your behalf.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Individual funding is best when your customers manage their own banking relationship and you want DriveWealth to handle the full funding lifecycle on your behalf.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "### **Key guides**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Key guides",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        50,
+        52
+      ],
+      "raw": "* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/depositing-1\">Depositing</Anchor>\n* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/withdrawing-1\">Withdrawing</Anchor>\n* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/using-plaid\">Using Plaid</Anchor>",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DepositingWithdrawingUsing Plaid",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/depositing-1",
+          "line": 50
+        },
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/withdrawing-1",
+          "line": 51
+        },
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/using-plaid",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "## **Bulk funding**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Bulk funding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "**The client aggregates customer funds and settles daily with DriveWealth.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The client aggregates customer funds and settles daily with DriveWealth.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "In this model, you custody customer cash yourself (or through a banking-as-a-service provider). You notify DriveWealth about each customer's deposit or withdrawal via API, but the actual money movement between your organization and DriveWealth happens as a single daily net wire.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In this model, you custody customer cash yourself (or through a banking-as-a-service provider). You notify DriveWealth about each customer's deposit or withdrawal via API, but the actual money movement between your organization and DriveWealth happens as a single daily net wire.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "DriveWealth aggregates all transactions across your client environment over a 24-hour window (8PM–8PM ET), computes a net settlement amount, and publishes a settlement report. Your organization then remits or receives the net amount by T+1.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth aggregates all transactions across your client environment over a 24-hour window (8PM–8PM ET), computes a net settlement amount, and publishes a settlement report. Your organization then remits or receives the net amount by T+1.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        64,
+        78
+      ],
+      "raw": "```shell\ncurl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/funding/deposits \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{YOUR_ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{YOUR_APP_KEY}}' \\\n     --data '{\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 100.00,\n  \"currency\": \"USD\",\n  \"type\": \"BULK_FUNDING\",\n  \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\"\n}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request POST \\\n     --url https://bo-api.drivewealth.io/back-office/funding/deposits \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{YOUR_ACCESS_TOKEN}}' \\\n     --header 'content-type: application/json' \\\n     --header 'dw-client-app-key: {{YOUR_APP_KEY}}' \\\n     --data '{\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 100.00,\n  \"currency\": \"USD\",\n  \"type\": \"BULK_FUNDING\",\n  \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\"\n}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{YOUR_ACCESS_TOKEN}}",
+          "line": 68
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{YOUR_APP_KEY}}",
+          "line": 70
+        }
+      ]
+    },
+    {
+      "i": 24,
+      "lines": [
+        80,
+        80
+      ],
+      "raw": "**Instant trading** is available under bulk funding for margin accounts with 1:1 leverage — customers can trade on funds in transit before the settlement wire clears.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Instant trading is available under bulk funding for margin accounts with 1:1 leverage — customers can trade on funds in transit before the settlement wire clears.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        82,
+        82
+      ],
+      "raw": "❗️ Travel Rule compliance is required for every bulk deposit and withdrawal. You must create a Bank Account object with `bankAccountPurpose: \"TRAVEL_RULE\"` and pass the resulting `bankAccountID` with each transaction. See <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/travel-rule\">Travel Rule</Anchor>.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "❗️ Travel Rule compliance is required for every bulk deposit and withdrawal. You must create a Bank Account object with bankAccountPurpose: \"TRAVEL_RULE\" and pass the resulting bankAccountID with each transaction. See Travel Rule.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/travel-rule",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "lines": [
+        84,
+        84
+      ],
+      "raw": "### **Settlement direction**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Settlement direction",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        86,
+        87
+      ],
+      "raw": "* If credits > debits (total > 0): your organization owes DriveWealth the net amount.\n* If credits < debits (total < 0): DriveWealth owes your organization the net amount.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "If credits > debits (total > 0): your organization owes DriveWealth the net amount.If credits < debits (total < 0): DriveWealth owes your organization the net amount.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "Settlement wires are due by 1:30PM ET. DriveWealth remits outbound wires by 12 noon ET.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Settlement wires are due by 1:30PM ET. DriveWealth remits outbound wires by 12 noon ET.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "### **Settlement profiles**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Settlement profiles",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "Clients with multiple lines of business, regions, or banking relationships can request additional `settlementProfileID` values to segment settlements independently. Contact DriveWealth Support to configure custom profiles.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Clients with multiple lines of business, regions, or banking relationships can request additional settlementProfileID values to segment settlements independently. Contact DriveWealth Support to configure custom profiles.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "### **When to use it**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "When to use it",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "Bulk funding is best when you already hold customer cash — for example, if you operate a banking-as-a-service platform — and want to control the banking relationship while DriveWealth handles the brokerage layer.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Bulk funding is best when you already hold customer cash — for example, if you operate a banking-as-a-service platform — and want to control the banking relationship while DriveWealth handles the brokerage layer.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "### **Key guides**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Key guides",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        101,
+        102
+      ],
+      "raw": "* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/bulk-funding\">Bulk Funding</Anchor>\n* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/travel-rule\">Travel Rule</Anchor>",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Bulk FundingTravel Rule",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/bulk-funding",
+          "line": 101
+        },
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/travel-rule",
+          "line": 102
+        }
+      ]
+    },
+    {
+      "i": 35,
+      "lines": [
+        104,
+        104
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        106,
+        106
+      ],
+      "raw": "## **Cashless settlement**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Cashless settlement",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        108,
+        108
+      ],
+      "raw": "**The client removes the deposit step entirely — trades settle directly against customer banking balances.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The client removes the deposit step entirely — trades settle directly against customer banking balances.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        110,
+        110
+      ],
+      "raw": "Cashless is a variant of bulk funding designed for embedded investing products. There are no explicit deposit or withdrawal steps. Customers place orders directly, and you move money behind the scenes to settle trades. The customer never sees a brokerage balance.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Cashless is a variant of bulk funding designed for embedded investing products. There are no explicit deposit or withdrawal steps. Customers place orders directly, and you move money behind the scenes to settle trades. The customer never sees a brokerage balance.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        112,
+        114
+      ],
+      "raw": "* **Purchases** pull funds from the customer's banking balance at your platform.\n* **Sales and dividends** return funds directly to that same balance.\n* **Buying power validation** is your responsibility — DriveWealth will execute any order regardless of brokerage account balance.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Purchases pull funds from the customer's banking balance at your platform.Sales and dividends return funds directly to that same balance.Buying power validation is your responsibility — DriveWealth will execute any order regardless of brokerage account balance.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        116,
+        116
+      ],
+      "raw": "❗️ It is critical to validate that a customer has sufficient funds before submitting an order. If DriveWealth receives a buy order for any amount, it will be executed. Clients must place holds on customer funds at their banking layer before submitting orders to DriveWealth.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "❗️ It is critical to validate that a customer has sufficient funds before submitting an order. If DriveWealth receives a buy order for any amount, it will be executed. Clients must place holds on customer funds at their banking layer before submitting orders to DriveWealth.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        118,
+        118
+      ],
+      "raw": "Each day, DriveWealth aggregates all trade activity (purchases, sales, dividends, fees) across your client environment and publishes a reconciliation report. You settle the net buy/sell difference by T+1.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Each day, DriveWealth aggregates all trade activity (purchases, sales, dividends, fees) across your client environment and publishes a reconciliation report. You settle the net buy/sell difference by T+1.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        120,
+        120
+      ],
+      "raw": "❗️ Travel Rule compliance is required. Unlike bulk funding, the Bank Account object must be created *before* creating the brokerage account. API sequencing is: Create User → Create Bank Account (with `bankAccountPurpose: \"TRAVEL_RULE\"`) → Create Account. See <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/travel-rule\">Travel Rule</Anchor>.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "❗️ Travel Rule compliance is required. Unlike bulk funding, the Bank Account object must be created before creating the brokerage account. API sequencing is: Create User → Create Bank Account (with bankAccountPurpose: \"TRAVEL_RULE\") → Create Account. See Travel Rule.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/travel-rule",
+          "line": 120
+        }
+      ]
+    },
+    {
+      "i": 43,
+      "lines": [
+        122,
+        122
+      ],
+      "raw": "🚧 Cashless account functionality must be enabled by DriveWealth for your client environment before these workflows are available.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "🚧 Cashless account functionality must be enabled by DriveWealth for your client environment before these workflows are available.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        124,
+        124
+      ],
+      "raw": "### **Reconciliation vs. settlement**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Reconciliation vs. settlement",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        126,
+        126
+      ],
+      "raw": "Under cashless, the daily report is a **reconciliation** (not a settlement). It is based on trade activity — purchases, sales, dividends, fees, and commissions — not on explicit deposit and withdrawal requests.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Under cashless, the daily report is a reconciliation (not a settlement). It is based on trade activity — purchases, sales, dividends, fees, and commissions — not on explicit deposit and withdrawal requests.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        128,
+        134
+      ],
+      "raw": "```shell\ncurl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/funding/reconciliations/reconciliationID \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "shell",
+        "title": null,
+        "code": "curl --request GET \\\n     --url https://bo-api.drivewealth.io/back-office/funding/reconciliations/reconciliationID \\\n     --header 'accept: application/json' \\\n     --header 'authorization: Bearer {{ACCESS_TOKEN}}' \\\n     --header 'dw-client-app-key: {{yourAppKey}}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{ACCESS_TOKEN}}",
+          "line": 132
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{yourAppKey}}",
+          "line": 133
+        }
+      ]
+    },
+    {
+      "i": 47,
+      "lines": [
+        136,
+        151
+      ],
+      "raw": "```json\n{\n  \"amounts\": {\n    \"total\": -1263.56,\n    \"purchases\": -1680.07,\n    \"sales\": 416.51,\n    \"dividends\": 0,\n    \"fees\": 0,\n    \"other\": 0\n  },\n  \"transferAmounts\": {\n    \"payablesToDW\": 1263.56,\n    \"receivablesFromDW\": 0\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"amounts\": {\n    \"total\": -1263.56,\n    \"purchases\": -1680.07,\n    \"sales\": 416.51,\n    \"dividends\": 0,\n    \"fees\": 0,\n    \"other\": 0\n  },\n  \"transferAmounts\": {\n    \"payablesToDW\": 1263.56,\n    \"receivablesFromDW\": 0\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        153,
+        154
+      ],
+      "raw": "* `payablesToDW` — funds DriveWealth expects to receive from you.\n* `receivablesFromDW` — funds DriveWealth expects to remit to you.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "payablesToDW — funds DriveWealth expects to receive from you.receivablesFromDW — funds DriveWealth expects to remit to you.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        156,
+        156
+      ],
+      "raw": "📘 After settlement, DriveWealth creates `CSR` (deposit) and `CSD` (redemption) transactions on customer accounts for internal accounting. These should be ignored when computing reconciliation numbers on your end.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "📘 After settlement, DriveWealth creates CSR (deposit) and CSD (redemption) transactions on customer accounts for internal accounting. These should be ignored when computing reconciliation numbers on your end.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        158,
+        158
+      ],
+      "raw": "### **Settlement profiles**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Settlement profiles",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 51,
+      "lines": [
+        160,
+        160
+      ],
+      "raw": "Like bulk funding, cashless clients can segment customers across multiple settlement profiles by region or line of business. Settlement profiles are set at the user level via the `settlementProfileID` field on Create User or Update User.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Like bulk funding, cashless clients can segment customers across multiple settlement profiles by region or line of business. Settlement profiles are set at the user level via the settlementProfileID field on Create User or Update User.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 52,
+      "lines": [
+        162,
+        162
+      ],
+      "raw": "### **When to use it**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "When to use it",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        164,
+        164
+      ],
+      "raw": "Cashless is best for embedded investing products — neobanks, spend-and-invest apps, or any experience where the brokerage layer is invisible and you fully control the customer's cash.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Cashless is best for embedded investing products — neobanks, spend-and-invest apps, or any experience where the brokerage layer is invisible and you fully control the customer's cash.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 54,
+      "lines": [
+        166,
+        166
+      ],
+      "raw": "### **Key guides**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Key guides",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 55,
+      "lines": [
+        168,
+        169
+      ],
+      "raw": "* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/bulk-fundingcashless\">Cashless Settlement</Anchor>\n* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/travel-rule\">Travel Rule</Anchor>",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cashless SettlementTravel Rule",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/bulk-fundingcashless",
+          "line": 168
+        },
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/travel-rule",
+          "line": 169
+        }
+      ]
+    },
+    {
+      "i": 56,
+      "lines": [
+        171,
+        171
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 57,
+      "lines": [
+        173,
+        173
+      ],
+      "raw": "## **Omnibus**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Omnibus",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 58,
+      "lines": [
+        175,
+        175
+      ],
+      "raw": "**The client operates a single master account at DriveWealth and manages everything customer-facing themselves.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The client operates a single master account at DriveWealth and manages everything customer-facing themselves.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 59,
+      "lines": [
+        177,
+        177
+      ],
+      "raw": "Under the omnibus model, DriveWealth has no knowledge of your individual customers. You hold a single omnibus account at DriveWealth that represents all of your customers combined. You maintain your own \"books and records\" — tracking each customer's positions, balances, and cash independently.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Under the omnibus model, DriveWealth has no knowledge of your individual customers. You hold a single omnibus account at DriveWealth that represents all of your customers combined. You maintain your own \"books and records\" — tracking each customer's positions, balances, and cash independently.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 60,
+      "lines": [
+        179,
+        179
+      ],
+      "raw": "DriveWealth provides only the underlying execution and clearing infrastructure. Everything else — KYC, customer onboarding, market data, reporting, tax documents, corporate actions — is your responsibility.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth provides only the underlying execution and clearing infrastructure. Everything else — KYC, customer onboarding, market data, reporting, tax documents, corporate actions — is your responsibility.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 61,
+      "lines": [
+        181,
+        181
+      ],
+      "raw": "### **Funding an omnibus account**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Funding an omnibus account",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 62,
+      "lines": [
+        183,
+        183
+      ],
+      "raw": "There are two ways to maintain buying power in your omnibus account:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are two ways to maintain buying power in your omnibus account:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 63,
+      "lines": [
+        185,
+        185
+      ],
+      "raw": "1. **Pre-funding** — you wire funds to the master account in advance. If the balance is insufficient when a customer attempts to trade, the order will be rejected.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Pre-funding — you wire funds to the master account in advance. If the balance is insufficient when a customer attempts to trade, the order will be rejected.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 64,
+      "lines": [
+        187,
+        187
+      ],
+      "raw": "❗️ Under pre-funding, you must track and replenish the omnibus buying power yourself. Insufficient balance = rejected trades.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "❗️ Under pre-funding, you must track and replenish the omnibus buying power yourself. Insufficient balance = rejected trades.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 65,
+      "lines": [
+        189,
+        189
+      ],
+      "raw": "2. **Cashless reconciliation** — instead of pre-funding, you settle trades on a T+1 basis. See <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/bulk-fundingcashless\">Cashless Settlement</Anchor> for details.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cashless reconciliation — instead of pre-funding, you settle trades on a T+1 basis. See Cashless Settlement for details.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/bulk-fundingcashless",
+          "line": 189
+        }
+      ]
+    },
+    {
+      "i": 66,
+      "lines": [
+        191,
+        191
+      ],
+      "raw": "### **ClientID requirements**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "ClientID requirements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 67,
+      "lines": [
+        193,
+        193
+      ],
+      "raw": "Every order placed through an omnibus account must include a `clientID` that identifies the originating end customer. DriveWealth enforces three rules:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Every order placed through an omnibus account must include a clientID that identifies the originating end customer. DriveWealth enforces three rules:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 68,
+      "lines": [
+        195,
+        199
+      ],
+      "raw": "| Requirement            | Description                                                                  |\n| :--------------------- | :--------------------------------------------------------------------------- |\n| Coverage               | Populated on every order — no blanks or placeholders                         |\n| Stability              | The same customer always sends the same value, across all sessions and days  |\n| Per-customer semantics | One value maps to exactly one customer — never a firm-wide or order-level ID |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Requirement",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Coverage",
+            "Populated on every order — no blanks or placeholders"
+          ],
+          [
+            "Stability",
+            "The same customer always sends the same value, across all sessions and days"
+          ],
+          [
+            "Per-customer semantics",
+            "One value maps to exactly one customer — never a firm-wide or order-level ID"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 69,
+      "lines": [
+        201,
+        201
+      ],
+      "raw": "Accepted formats include stable numeric IDs, stable alphanumeric IDs, and stable per-customer hashes. Rotating hashes, constant firm codes, timestamps, and blank values are not accepted.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Accepted formats include stable numeric IDs, stable alphanumeric IDs, and stable per-customer hashes. Rotating hashes, constant firm codes, timestamps, and blank values are not accepted.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 70,
+      "lines": [
+        203,
+        203
+      ],
+      "raw": "### **Client responsibilities under omnibus**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Client responsibilities under omnibus",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 71,
+      "lines": [
+        205,
+        209
+      ],
+      "raw": "* Customer onboarding and KYC\n* Individual customer buying power and balance tracking\n* Live market data (DriveWealth does not provide quotes for omnibus setups)\n* All customer-level reporting: performance, transaction history, trade confirmations, statements, and tax documents\n* Corporate actions handling for each customer",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Customer onboarding and KYCIndividual customer buying power and balance trackingLive market data (DriveWealth does not provide quotes for omnibus setups)All customer-level reporting: performance, transaction history, trade confirmations, statements, and tax documentsCorporate actions handling for each customer",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 72,
+      "lines": [
+        211,
+        211
+      ],
+      "raw": "### **When to use it**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "When to use it",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 73,
+      "lines": [
+        213,
+        213
+      ],
+      "raw": "Omnibus is best for sophisticated clients — often international — who want to use DriveWealth purely as an execution and clearing layer and have the operational infrastructure to manage the full customer-facing brokerage experience themselves.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Omnibus is best for sophisticated clients — often international — who want to use DriveWealth purely as an execution and clearing layer and have the operational infrastructure to manage the full customer-facing brokerage experience themselves.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 74,
+      "lines": [
+        215,
+        215
+      ],
+      "raw": "### **Key guides**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Key guides",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 75,
+      "lines": [
+        217,
+        218
+      ],
+      "raw": "* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/omnibus-trading\">Omnibus Trading</Anchor>\n* <Anchor target=\"_blank\" href=\"https://developer.drivewealth.com/apis/docs/bulk-fundingcashless\">Cashless Settlement</Anchor>",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Omnibus TradingCashless Settlement",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/omnibus-trading",
+          "line": 217
+        },
+        {
+          "kind": "anchorJsx",
+          "value": "https://developer.drivewealth.com/apis/docs/bulk-fundingcashless",
+          "line": 218
+        }
+      ]
+    },
+    {
+      "i": 76,
+      "lines": [
+        220,
+        220
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 77,
+      "lines": [
+        222,
+        222
+      ],
+      "raw": "## **Holidays and weekends**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Holidays and weekends",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 78,
+      "lines": [
+        224,
+        224
+      ],
+      "raw": "All four models are subject to the US bank holiday schedule. Settlements and reconciliations are only processed when US banks are open.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All four models are subject to the US bank holiday schedule. Settlements and reconciliations are only processed when US banks are open.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 79,
+      "lines": [
+        226,
+        226
+      ],
+      "raw": "On market holidays and weekends, transactions are aggregated across the non-business days and settled on the next business day. When US banks are closed but markets remain open (for example, Veterans Day), you will receive daily settlement or reconciliation reports as usual — but the actual wire settlement is deferred to the next banking day, resulting in a double settlement on that day.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "On market holidays and weekends, transactions are aggregated across the non-business days and settled on the next business day. When US banks are closed but markets remain open (for example, Veterans Day), you will receive daily settlement or reconciliation reports as usual — but the actual wire settlement is deferred to the next banking day, resulting in a double settlement on that day.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 80,
+      "lines": [
+        228,
+        228
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 81,
+      "lines": [
+        230,
+        230
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 230
+        }
+      ]
+    }
+  ]
+}

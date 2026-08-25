@@ -1,0 +1,173 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Core APIs",
+    "version": "2026-08-25",
+    "contact": {
+      "email": "producteng@drivewealth.tech"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://bo-api.drivewealth.io/back-office",
+      "description": "Sandbox (No Real World Financial/Trading Impact)"
+    },
+    {
+      "url": "https://bo-api.drivewealth.net/back-office",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "dw-client-app-key",
+        "value": "{{yourAppKey}}"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "name": "Position Management"
+    },
+    {
+      "name": "Options"
+    }
+  ],
+  "paths": {
+    "/accounts/{accountID}/positions/options/exercise": {
+      "post": {
+        "x-audience": "beta",
+        "tags": [
+          "Position Management",
+          "Options"
+        ],
+        "summary": "Request Exercise for options position",
+        "description": "![beta](https://img.shields.io/badge/beta-0ea5e9?style=flat-square)\n\nRequest Exercise for options positions by accountID.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountID",
+            "schema": {
+              "$ref": "#/components/schemas/accountID"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExerciseDetailsRequest"
+              },
+              "examples": {
+                "Sample": {
+                  "value": {
+                    "tradingType": "CASH",
+                    "instrumentID": "2ec28a9c-e8b2-4c9c-ad45-9a66ad499636",
+                    "quantity": 1,
+                    "miscFees": []
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Exercise request submitted successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "instructionID": {
+                      "type": "string",
+                      "description": "Unique identifier for the exercise request."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "accountID": {
+        "type": "string",
+        "example": "cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759",
+        "description": "The user's unique account identifier."
+      },
+      "instrumentID": {
+        "type": "string",
+        "format": "uuid",
+        "example": "3fb1e8a9-f7d5-4d90-95e2-43e7326b5636",
+        "description": "A unique ID created by DriveWealth to identify a specific instrument."
+      },
+      "ExerciseDetailsRequest": {
+        "type": "object",
+        "required": [
+          "instrumentID",
+          "quantity"
+        ],
+        "properties": {
+          "tradingType": {
+            "type": "string",
+            "enum": [
+              "CASH",
+              "MARGIN"
+            ],
+            "default": "CASH",
+            "example": "CASH",
+            "description": "Trading type for the exercise request. Optional — defaults to CASH if not provided. Should match the trading type on the account. Only CASH is currently supported; MARGIN will be rejected with a 400 error."
+          },
+          "instrumentID": {
+            "$ref": "#/components/schemas/instrumentID"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of contracts to exercise or do not exercise. Must be a positive whole number."
+          },
+          "miscFees": {
+            "type": "array",
+            "description": "Optional miscellaneous fees to include.",
+            "items": {
+              "type": "object",
+              "required": [
+                "feeType",
+                "feeAmount"
+              ],
+              "properties": {
+                "feeType": {
+                  "type": "string",
+                  "description": "Type/category of fee."
+                },
+                "feeAmount": {
+                  "type": "number",
+                  "description": "Fee amount."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

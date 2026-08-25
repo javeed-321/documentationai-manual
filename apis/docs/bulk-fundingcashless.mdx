@@ -1,0 +1,353 @@
+---
+title: "Cashless Settlement"
+---
+
+Cashless brokerage Accounts are a way for clients to seamlessly move cash between customer brokerage Accounts and their originating banking sources without requiring customers the step of depositing and withdrawing money.
+
+<Image src="https://files.readme.io/db405e4-swap.png" alt="Swap" caption=" " />
+
+Clients are eligible to use this functionality if they or their third party provider (e.g. banking-as-a-service platform) have the ability to custody and control customer cash. Clients should also be able to put temporary holds and apply journals to such cash.
+
+<Callout kind="alert">
+  The cashless Account functionality must be enabled by DriveWealth for your client environment, which will allow for the workflows seen on this page.
+</Callout>
+
+## Cashless workflow
+
+The customer experience for a new customer investing in an asset starts with Order creation. There is no first step to fund the account by following a Deposit workflow.
+
+Instead, a customer can place any size Order, regardless of their Account having no Buying Power at DriveWealth. Whether that Order is accepted is controlled by you, and dependent on the amount of cash you already custody for that customer.
+
+This also means the customer never sees a "brokerage balance" or "investing balance"—hence the label of Cashless. Purchase orders use funds directly from a customer's linked banking system, and sale orders (or other cash events like dividends) return funds directly to that same banking balance.
+
+<Callout kind="danger">
+  **Travel Rule Compliance**
+
+  For accounts utilizing Bulk Funding(Cashless), DriveWealth requires Travel Rule information to be tied to the Customer.
+
+  **Requirement:** Include Travel Rule details in each transaction request. **Purpose:** Ensure compliance with regulatory standards for fund transfers
+
+  To learn more about this see: [Travel Rule](https://developer.drivewealth.com/apis/docs/travel-rule) PS: Travel rule will **NOT** be required for Omnibus account setups.
+</Callout>
+
+<Callout kind="alert">
+  **Order validation**
+
+  It is **extremely important** to create additional validation on all sized orders. Clients who utilize Cashless Accounts understand that all orders—no matter the size—will be executed without buying power checks on the individual customer’s brokerage Account.
+
+  If DriveWealth receives an Order for a buy a million dollars worth of stock, that Order will be accepted, because it is assumed that the client validated the customer had the funds to pay for the securities first.
+</Callout>
+
+As purchase orders are placed, clients should be able to move funds into an omnibus settlement account on their banking system to settle with DriveWealth on settlement day T+1. It's common for this account to be titled "For Benefit Of" your customers or "Exclusive Benefit Of" your customers.
+
+<Callout kind="info">
+  **About temporary holds**
+
+  **Holds are critical** to prevent customers from double-spending funds earmarked for security purchases.
+
+  While not required, it's **strongly recommended** to verify that a customer has slightly more than the intended purchase amount—especially for market orders—when assessing available cash.
+
+  Example: Marcus has $100.00 in his Acme Bank account and places a market order to buy 1 share of ABCD, currently trading at $100.00. Since market prices can fluctuate, the actual purchase price could exceed $100.00. Therefore, this order should be denied before submission to DriveWealth, as Marcus may not have sufficient funds to cover the difference.
+
+  Instead, Marcus resubmits the order as a cash amount order for $95.00. This guarantees he will not spend more than $95.00.
+
+  Before submitting the order to DriveWealth, Acme Bank places a hold on Marcus’s account for $95.00. Once the order executes and is confirmed at $95.00, Acme Bank moves those funds from Marcus’s account to an omnibus settlement account to settle with DriveWealth on T+1 (Trade Date + 1).
+</Callout>
+
+Clients—and by extension, customers—will automatically receive funds from the sale of securities on the respective settlement date.
+
+Each day, DriveWealth and its clients reconcile settlements, and corresponding deposit or withdrawal journal entries are automatically posted to accounts. For example, if a customer purchases an equity on Wednesday, a purchase transaction will be journaled immediately. Then, on Thursday (the settlement date), a deposit journal will appear once the funds are received from the client.
+
+## Reconciliation Report Analysis
+
+This section outlines the parameters derived from the reconciliation report, along with the corresponding transaction types categorized under each.
+
+```json title="GET /back-office/funding/reconciliations/{{reconciliation-id}}"
+{
+  "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240417",
+  "date": "2024-04-17",
+  "status": "APPROVED",
+  "statusComment": "Finished processing breakdown",
+  "amounts": {
+    "total": -1263.56,
+    "purchases": -1680.07,
+    "sales": 416.51,
+    "dividends": 0,
+    "fees": 0,
+    "other": 0
+  },
+  "transferAmounts": {
+    "currency": "USD",
+    "payablesToDW": 1263.56,
+    "receivablesFromDW": 0
+  },
+  "reconciliationBreakdown": "https://du2c4wzqz90h1.cloudfront.net/reconcilationReport....",
+  "partnerID": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+  "created": "2024-04-15T22:28:21.810Z",
+  "updated": "2024-04-17T22:28:21.810Z",
+  "updatedBy": "SYSTEM"
+}
+```
+
+| Value                          | Description                                                                                                                                                       |
+| :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `purchases`                    | Total notional value of all buy orders.                                                                                                                           |
+| `sales`                        | Total notional value of all sell orders.                                                                                                                          |
+| `dividends`                    | Total notional value of all dividends paid out on the settlement date.                                                                                            |
+| `fees`                         | Schedule B fees such as ACAT fees, account opening fees, etc (as applicable)                                                                                      |
+| `other`                        | Total notional value of other charges, including commissions and SEC/TAF fees.                                                                                    |
+| `offset`                       | Amount withheld from settlement due to other trading activities. This is a legacy field from T+2 settlement days and will always be 0.                            |
+| `date`                         | Settlement date.                                                                                                                                                  |
+| `payablesToDW`                 | Funds DriveWealth expects to receive from the client.                                                                                                             |
+| `receivablesFromDW`            | Funds DriveWealth expects to remit to the client.                                                                                                                 |
+| `total`                        | Net amount to be settled. A positive value indicates DriveWealth will wire funds to the client; a negative value means the client must send funds to DriveWealth. |
+| `reconciliationBreakdown.JSON` | A downloadable JSON containing a full breakdown of all transactions, including corporate actions, by account. The URL has a 15-minute time-to-live (TTL).         |
+
+## Reconciliations
+
+Under the cashless brokerage model, DriveWealth aggregates various transactions—such as asset purchases/sales, corporate actions, fees, and commissions—on a per-customer basis.
+
+### Retrieving Reconciliation Reports
+
+You can retrieve a list of all settlements over a given period by using the [Retrieve Cashless Reconciliations API](https://developer.drivewealth.com/apis/reference/get_funding-reconciliations)
+
+```json title="GET /back-office/funding/reconciliations"
+[
+  {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240417",
+    "date": "2024-04-17",
+    "status": "APPROVED",
+    "statusComment": "Finished processing breakdown",
+    "totalAmount": 12001.01,
+    "created": "2024-04-15T22:28:21.810Z",
+    "updated": "2024-04-17T22:28:21.810Z",
+    "updatedBy": "SYSTEM"
+  },
+{
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240418",
+    "date": "2024-04-18",
+    "status": "PENDING",
+    "statusComment": "Finished processing breakdown",
+    "totalAmount": 12001.01,
+    "created": "2024-04-16T22:28:21.810Z",
+    "updated": "2024-04-17T22:28:21.810Z",
+    "updatedBy": "SYSTEM"
+  }
+]
+```
+
+Further, you can drill down into a particular settlement by using the[Retrieve Cashless Reconcilation by ID API](https://developer.drivewealth.com/apis/reference/get_funding-reconciliations-reconciliationid) and passing in the reconciliation `id`from the previous API response.
+
+```json title="GET /back-office/funding/reconciliations/{{reconciliation-id}}"
+{
+  "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240417",
+  "date": "2024-04-17",
+  "status": "APPROVED",
+  "statusComment": "Finished processing breakdown",
+  "amounts": {
+    "total": -1263.56,
+    "purchases": -1680.07,
+    "sales": 416.51,
+    "dividends": 0,
+    "fees": 0,
+    "other": 0
+  },
+  "transferAmounts": {
+    "currency": "USD",
+    "payablesToDW": 1263.56,
+    "receivablesFromDW": 0
+  },
+  "reconciliationBreakdown": "https://du2c4wzqz90h1.cloudfront.net/reconcilationReport....",
+  "partnerID": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+  "created": "2024-04-15T22:28:21.810Z",
+  "updated": "2024-04-17T22:28:21.810Z",
+  "updatedBy": "SYSTEM"
+}
+```
+
+The `reconciliationBreakdown` will provide ALL the underlying transactions(credits/debits) in the client accounts  which are used to compute the settlement numbers.
+
+```json title="reconciliationBreakdown"
+[
+  {
+    "accountID": "aab5eaa9-4843-42c7-8954-9637ae6c6bd1.1706204727286",
+    "accountNo": "C1NT000015",
+    "userID": "aab5eaa9-4843-42c7-8954-9637ae6c6bd1",
+    "amount": -10,
+    "partnerID": "30f8af51-6a63-4922-a536-3e625b4e0b14",
+    "transactions": [
+      {
+        "amount": -10,
+        "finTranCode": "SPUR",
+        "finTranID": "ME.7fa61f9d-2aa6-40be-a8d9-b581b9e72be3",
+        "created": "2025-05-02T15:15:31.164Z",
+        "orderID": "ME.8ff417d1-d9ea-453a-afa2-63a8fed874f7",
+        "orderNo": "MEWX000062"
+      }
+    ]
+  },
+  {
+    "accountID": "e5707dda-076d-421f-80c7-1c60d77633f1.1725980997577",
+    "accountNo": "C1CG000031",
+    "userID": "e5707dda-076d-421f-80c7-1c60d77633f1",
+    "amount": -10,
+    "partnerID": "30f8af51-6a63-4922-a536-3e625b4e0b14",
+    "transactions": [
+      {
+        "amount": -10,
+        "finTranCode": "SPUR",
+        "finTranID": "ME.a2de941a-78e6-4286-9f85-55ca857a43b6",
+        "created": "2025-05-02T15:09:23.665Z",
+        "orderID": "ME.7975e0e0-3775-4490-8f8f-d0dc50a9ff82",
+        "orderNo": "MESR000054"
+      }
+    ]
+  },
+  {
+    "accountID": "3e3a6949-3c94-4f2e-a08d-781d2102c4b3.1718735016454",
+    "accountNo": "C1EC000023",
+    "userID": "3e3a6949-3c94-4f2e-a08d-781d2102c4b3",
+    "amount": -10,
+    "partnerID": "30f8af51-6a63-4922-a536-3e625b4e0b14",
+    "transactions": [
+      {
+        "amount": -10,
+        "finTranCode": "SPUR",
+        "finTranID": "ME.592dc8ae-7c44-408d-a2d4-a91d5a7db130",
+        "created": "2025-05-02T13:30:05.083Z",
+        "orderID": "ME.cc9f34a7-9e73-4a24-b81d-423ca0cc6e71",
+        "orderNo": "MEFZ000039"
+      }
+    ]
+  },...
+]
+```
+
+### Simulating Reconciliations in Sandbox
+
+To simulate an end-to-end settlement in the Sandbox environment, clients can use a Sandbox-only API to “settle” the settlement, which credits settled cash to the underlying customer accounts. This mimics the exact process our Cash Management team follows in Production when they settle the settlement upon receiving the settlement wire on T+1. Refer: [Update Cashless Reconciliations](https://developer.drivewealth.com/apis/reference/patch_funding-reconciliations-reconciliationid)
+
+```json
+PATCH /back-office/funding/reconciliations/\{\{reconcilation-id}}
+
+{
+  "status": "Successful",
+  "statusComment": "Manually approving reconciliation for testing purposes."
+
+}
+```
+
+### Reconciliation Statuses, Timelines & Events
+
+1. DriveWealth system starts aggregating all credits and debit transactions under a client environment starting at 8PM ET. As soon as we start the computing process, a reconciliation object is created with the status `PENDING`. This generates a `reconciliations.created` event as documented here: [Reconciliations Created Event](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-created) with status `PENDING`.
+2. All transactions are aggregated over a 24 hr period (from 8 PM ET to 8 PM ET), following which we compute and publish the `reconciliationBreakdown`which can retrieved from the reconciliation object. The status of the report moves to an `APPROVED`status, also generating a `reconciliations.updated`event with an `APPROVED`status as documented here: [Reconciliations Updated Event](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-updated). The settlement amounts are finalized at this point and are due for settlement. **Account-Level Netting:** Each customer's transactions are netted individually, and then aggregated, resulting in `payablesToDW` and `receivablesFromDW` amounts. **Settlement Direction:** If `payablesToDW` > `receivablesFromDW`, the organization owes DriveWealth the net amount. If `payablesToDW` \< `receivablesFromDW`, DriveWealth owes the organization the net amount.
+3. Once settlement wires are received(latest by 1:30 PM ET) or remitted by DriveWealth(latest by 12 noon ET) , the settlement is deemed completed and the status of the reconciliation object is moved to `SUCCESSFUL`, which also further generates a `reconcilations.completed` event with the `SUCCESSFUL`status as documented here: [Reconciliations Completed Event](https://developer.drivewealth.com/apis/reference/settlements-events#reconciliation-completed).
+
+<Callout kind="info">
+  **Deposit/Redemptions Transaction Handling**
+
+  Under the Cashless Reconciliations model, post the settlement, DriveWealth creates Deposit(`CSR`) and Redemption(`CSD`) transactions for accounting reasons in order to flatten the account balances of any credits or debits, these transactions should be ignored while computing reconciliation numbers on the client's end.
+</Callout>
+
+<Callout kind="info">
+  **Market/Bank holiday schedule**
+
+  **Settlements are only processed when U.S. banks are open**
+
+  On market holidays and weekends, settlements are deferred to the next business day. For example, if markets are closed for Memorial Day (the last Monday of May), all transactions from Thursday 8 PM ET through Monday 8 PM ET are combined. The reconciliation report is generated end-of-day Monday for settlement on Tuesday morning.
+
+  **Double settlement day** - When U.S. banks are closed but markets remain open, you'll receive daily reconciliation reports as usual, but the actual settlements are deferred. For instance, if Veterans Day falls on a Tuesday, you'll get reports for both Monday and Tuesday. However, since Tuesday is a bank holiday, settlements for both days will occur on Wednesday.
+</Callout>
+
+### Wallet Settlement Profiles
+
+DriveWealth allows clients using Cashless accounts to segment customer transactions into distinct settlement profiles based on factors such as lines of business, banking relationships, and regions. Each profile receives a unique `settlementProfileID`, separate settlement numbers, and DriveWealth generates a dedicated set of events for each profile. To implement this, you can [Create User](https://developer.drivewealth.com/apis/reference/post_users) or [Update User](https://developer.drivewealth.com/apis/reference/patch_users-userid) and associate the user with the appropriate `settlementProfileID`
+
+```json title="Create User"
+POST /back-office/users
+{
+  "userType": "INDIVIDUAL_TRADER",
+  "settlementProfileID": "profile_bank_1",
+  "documents": [
+    {
+      "type": "BASIC_INFO",
+      "data": {
+        "firstName": "Justin",
+        "lastName": "Smith",
+        "country": "United States",
+        "phone": "18004612680",
+        "emailAddress": "jj@drivewealth.dev",
+        "language": "en_US"
+      }
+    }
+  ]
+}
+```
+
+```json title="Edit User"
+PATCH /back-office/users/{{userID}}
+{
+  "settlementProfileID": "profile_bank_2",
+}
+```
+
+**Default Profile:** If only one settlement preference is configured, the default profile is used automatically. This applies to most clients. **Custom Profiles:** Clients with multiple banks or business units can request additional settlementProfileIDs to manage settlements independently.
+
+If using Settlement profiles, Settlement reports will  include `settlementProfileID` for each individual settlement profile.
+
+```json title="GET /back-office/funding/reconciliations"
+[
+  {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240417_profile_bank_1",
+    "date": "2024-04-17",
+    "status": "APPROVED",
+    "statusComment": "Finished processing breakdown",
+    "totalAmount": 12001.01,
+    "created": "2024-04-15T22:28:21.810Z",
+    "updated": "2024-04-17T22:28:21.810Z",
+    "updatedBy": "SYSTEM",
+    "settlementProfileID": "profile_bank_1"
+  },
+  {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240417_profile_bank_2",
+    "date": "2024-04-17",
+    "status": "APPROVED",
+    "statusComment": "Finished processing breakdown",
+    "totalAmount": 12001.01,
+    "created": "2024-04-15T22:28:21.810Z",
+    "updated": "2024-04-17T22:28:21.810Z",
+    "updatedBy": "SYSTEM",
+    "settlementProfileID": "profile_bank_2"
+  }
+]
+```
+
+To further drill-down, you'd need to use the [Retrieve Reconciliation details API](https://developer.drivewealth.com/apis/reference/get_funding-reconciliations) for each settlement profile to determine settlement numbers.
+
+```json title="GET /back-office/funding/reconciliations/{reconciliationID}"
+{  
+  "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9_20240417_profile_bank_1",  
+  "date": "2024-04-17",  
+  "status": "APPROVED",  
+  "statusComment": "Finished processing breakdown",  
+  "amounts": {  
+    "total": -1263.56,  
+    "purchases": -1680.07,  
+    "sales": 416.51,  
+    "dividends": 0,  
+    "fees": 0,  
+    "other": 0  
+  },  
+  "transferAmounts": {  
+    "currency": "USD",  
+    "payablesToDW": 1263.56,  
+    "receivablesFromDW": 0  
+  },  
+  "reconciliationBreakdown": "string",  
+  "partnerID": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",  
+  "created": "2024-04-15T22:28:21.810Z",  
+  "updated": "2024-04-17T22:28:21.810Z",  
+  "updatedBy": "SYSTEM",
+  "settlementProfileID": "profile_bank_1"
+}
+```

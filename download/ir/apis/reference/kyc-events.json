@@ -1,0 +1,173 @@
+{
+  "slug": "apis/reference/kyc-events",
+  "source": "https://developer.drivewealth.com/apis/reference/kyc-events.md",
+  "url": "https://developer.drivewealth.com/apis/reference/kyc-events",
+  "title": "KYC Events",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-22T15:01:57.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 2,
+    "code": 1,
+    "CodeTabs": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# KYC Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "KYC Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## KYC Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "KYC Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "A user's KYC details have been created, provides details on submitted information.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A user's KYC details have been created, provides details on submitted information.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        27
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_b84d304f-d434-4610-859a-ebdcda33ffcb\",\n    \"type\": \"kyc.created\",\n    \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n    \"ibID\": \"cf11ef03-f489-42ec-b263-35f444808f7e\",\n    \"object\": \"kyc_created\",\n    \"payload\": {\n        \"userID\": \"104c4f1e-bd1f-4fca-afa7-74aaab0409fa\",\n        \"status\": \"KYC_APPROVED\",\n        \"statusMessage\": \"KYC Approved\",\n        \"verificationType\": \"NON_DOC\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_b84d304f-d434-4610-859a-ebdcda33ffcb\",\n    \"type\": \"kyc.created\",\n    \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n    \"ibID\": \"cf11ef03-f489-42ec-b263-35f444808f7e\",\n    \"object\": \"kyc_created\",\n    \"payload\": {\n        \"userID\": \"104c4f1e-bd1f-4fca-afa7-74aaab0409fa\",\n        \"status\": \"KYC_APPROVED\",\n        \"statusMessage\": \"KYC Approved\",\n        \"verificationType\": \"NON_DOC\"\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## KYC Updated",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "KYC Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "A user's KYC details have been updated, provides details on update reason.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A user's KYC details have been updated, provides details on update reason.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        33,
+        73
+      ],
+      "raw": "```json Updated\n{\n    \"id\": \"event_789ca9ba-312b-4480-9f36-3805ceb00f63\",\n    \"type\": \"kyc.updated\",\n    \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n    \"ibID\": \"cf11ef03-f489-42ec-b263-35f444808f7e\",\n    \"object\": \"kyc_updated\",\n    \"payload\": {\n        \"current\": {\n            \"status\": \"KYC_APPROVED\",\n            \"statusMessage\": \"KYC Approved\"\n        },\n        \"previous\": {\n            \"status\": \"KYC_PROCESSING\",\n            \"statusMessage\": \"User is sent for KYC\"\n        },\n        \"userID\": \"104c4f1e-bd1f-4fca-afa7-74aaab0409fa\"\n    }\n}\n```\n```json Updated [kyc error]\n{\n    \"id\": \"event_789ca9ba-312b-4480-9f36-3805ceb00f63\",\n    \"type\": \"kyc.updated\",\n    \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n    \"ibID\": \"cf11ef03-f489-42ec-b263-35f444808f7e\",\n    \"object\": \"kyc_updated\",\n    \"payload\": {\n        \"current\": {\n            \"status\": \"KYC_DOC_REQUIRED\",\n            \"statusMessage\": \"User needs to submit a document for verification. Please check kyc errors for more detail\",\n            \"errors\": [\"SSN_NOT_MATCH\"]\n        },\n        \"previous\": {\n            \"status\": \"KYC_PROCESSING\",\n            \"statusMessage\": \"User is sent for KYC\"\n        },\n        \"userID\": \"104c4f1e-bd1f-4fca-afa7-74aaab0409fa\"\n    }\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "Updated",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "Updated",
+          "code": "{\n    \"id\": \"event_789ca9ba-312b-4480-9f36-3805ceb00f63\",\n    \"type\": \"kyc.updated\",\n    \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n    \"ibID\": \"cf11ef03-f489-42ec-b263-35f444808f7e\",\n    \"object\": \"kyc_updated\",\n    \"payload\": {\n        \"current\": {\n            \"status\": \"KYC_APPROVED\",\n            \"statusMessage\": \"KYC Approved\"\n        },\n        \"previous\": {\n            \"status\": \"KYC_PROCESSING\",\n            \"statusMessage\": \"User is sent for KYC\"\n        },\n        \"userID\": \"104c4f1e-bd1f-4fca-afa7-74aaab0409fa\"\n    }\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Updated [kyc error]",
+          "code": "{\n    \"id\": \"event_789ca9ba-312b-4480-9f36-3805ceb00f63\",\n    \"type\": \"kyc.updated\",\n    \"timestamp\": \"2019-03-28T22:50:02.073327862Z\",\n    \"ibID\": \"cf11ef03-f489-42ec-b263-35f444808f7e\",\n    \"object\": \"kyc_updated\",\n    \"payload\": {\n        \"current\": {\n            \"status\": \"KYC_DOC_REQUIRED\",\n            \"statusMessage\": \"User needs to submit a document for verification. Please check kyc errors for more detail\",\n            \"errors\": [\"SSN_NOT_MATCH\"]\n        },\n        \"previous\": {\n            \"status\": \"KYC_PROCESSING\",\n            \"statusMessage\": \"User is sent for KYC\"\n        },\n        \"userID\": \"104c4f1e-bd1f-4fca-afa7-74aaab0409fa\"\n    }\n}"
+        }
+      ]
+    }
+  ]
+}

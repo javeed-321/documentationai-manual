@@ -1,0 +1,84 @@
+---
+title: "Omnibus Trading"
+---
+
+To establish an Omnibus setup with DriveWealth, clients are responsible for managing the technical integration and the entire customer-facing brokerage experience. Under this model, DriveWealth provides the underlying brokerage infrastructure, while the client holds **ALL** of the operational responsibility for the end-user relationship.
+
+## Client-Specific Responsibilities
+
+- **Customer Onboarding & KYC:** Clients must independently handle all identity verification and regulatory onboarding for their users.
+- **Customer Financials:** Clients are solely responsible for maintaining individual customer buying power and managing all user-level deposits, withdrawals, and reconciliations.
+- **Live Market Data:** DriveWealth does not provide real-time quotes for Omnibus setups. Clients must source their own market data from a third-party vendor.
+- **Reporting & Communications:** All customer-level reporting including performance data, transaction history, trade confirmations, monthly statements, and tax documents, must be generated and provided by the Client.
+- **Corporate Actions:** The client is responsible for the handling and processing of all customer-level corporate actions.
+
+## Shared Technical Integration
+
+- **Generate an Authentication Token:** Securely authorize your client app to make requests on behalf of users via DriveWealth's API.
+- **Build Instrument and Charting Data:** Develop the user interface for your Security Master and charts using DriveWealth’s instrument and bar data.
+- **Fund the Omni Account:** Maintain the master account balance via pre-funding or using Cashless reconciliation to settle trades on T+1.
+- **Make a Trade:** Execute buy and sell orders via the DriveWealth Orders API.
+
+## Core API Workflows
+
+The following section outlines the essential API interactions required to manage your Omnibus account. These workflows provide the programmatic foundation for authorizing your application, managing funding flows, executing trades, and retrieving the necessary data to power your user interface.
+
+### Authentication
+
+To generate a token, invoke the [Create Session Tokens API](https://developer.drivewealth.com/apis/reference/post_auth-tokens)
+
+### Security Master
+
+Client can fetch instrument details and charting data directly from DriveWealth's [Instrument Details](https://developer.drivewealth.com/apis/reference/get_instruments-symbolorinstrumentid) and [Charting Data](https://developer.drivewealth.com/apis/reference/get_bars) endpoints.
+
+### Funding
+
+Funding in an Omnibus setup can follow either of the 2 methods:
+
+1. **Prefunding:** Clients are provided with wire details to fund the master Omnibus account. Events: A deposits.updated event is triggered when funds arrive in the account.
+
+<Callout kind="danger">
+  **NOTE**: Under the Pre-funding model, clients must track and replenish Omni buying power; if the balance is insufficient, underlying customer trades will be REJECTED.
+</Callout>
+
+2. **Cashless Reconciliation:** Instead of pre-funding the Omnibus account, clients can choose to settle trades on a T+1 basis. For more information refer: [Cashless Settlement](https://developer.drivewealth.com/apis/docs/bulk-fundingcashless)
+
+### Trading
+
+Use [Create Orders API](https://developer.drivewealth.com/apis/reference/post_orders) to place orders.
+
+```shell
+curl --request POST \
+     --url https://bo-api.drivewealth.io/back-office/orders \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: {{yourAppKey}}' \
+     --data '{
+    "orderType": "MARKET",
+    "side": "BUY",
+    "accountNo": "CSSW000001",
+    "symbol": "MS",
+    "clientID": "1abc234xyz789"
+  }'
+
+```
+
+## ClientID population requirements
+
+|   | Requirement            | Description                                                                                                                                                                               |
+| - | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | Coverage               | Populated on every order message without exception. No blanks, defaults, or placeholder values; 100% of orders must carry a value.                                                        |
+| 2 | Stability              | Persistent per customer. The same customer sends the same value across all orders, sessions, and days; the value is never regenerated per order, per session, or per day.                 |
+| 3 | Per-customer semantics | One value maps to exactly one end customer, and one end customer maps to exactly one value. Identifies the originating customer — not the order, session, client firm, desk, or strategy. |
+
+## ClientID accepted formats
+
+| Format                                                  | Example shape                                 | Accepted?                                      |
+| ------------------------------------------------------- | --------------------------------------------- | ---------------------------------------------- |
+| Stable numeric customer ID                              | `123456789`                                   | ✅ Yes — preferred                              |
+| Stable alphanumeric customer ID                         | `CUST0A19F`                                   | ✅ Yes                                          |
+| Stable per-customer hash (assigned once, never rotated) | 64-char hex, constant per customer            | ✅ Yes — only if requirement 2 is genuinely met |
+| Per-message / per-day rotating hash                     | 64-char hex that changes per order or per day | ❌ No — violates requirement 2                  |
+| Constant firm / product code                            | `ACMECO`, `GLOBAL`                            | ❌ No — violates requirement 3                  |
+| Date or timestamp string                                | `20260604`, `0604`                            | ❌ No — violates requirement 3                  |
+| Blank / null                                            | (empty)                                       | ❌ No — violates requirement 1                  |

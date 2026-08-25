@@ -1,0 +1,541 @@
+---
+updatedAt: 2026-08-25T00:23:35.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Enumerations
+
+Everything enum related.
+
+DriveWealth uses enums in different places to represent specific meanings. Below is a list of
+available enums.
+
+> 👀 Enum, not here?
+>
+> Our apologies, drop us an email at <devex@drivewealth.com> or on the right hand side click on ✏️
+> Suggest Edits with the specifics of what is missing.
+
+# Users
+
+#### User Status
+
+| ENUM     | Definition                  |
+| :------- | :-------------------------- |
+| PENDING  | A user is pending approval. |
+| APPROVED | A user has been approved.   |
+| REVOKED  | A user has been rejected.   |
+| CLOSED   | A user has been closed.     |
+
+#### Identification Types
+
+| ENUM    | Definition                                |
+| :------ | :---------------------------------------- |
+| SSN     | Social Security Number                    |
+| US\_TIN | Tax ID Number                             |
+| FTIN    | Foreign Tax ID Number                     |
+| EIN     | Employer Identification Number            |
+| GIIN    | Global Intermediary Identification Number |
+| FTNLO   | Foreign TIN Not Legally Required          |
+
+#### Investment profile - Trading Knowledge
+
+Used by `investmentOptionsKnowledge` and `investmentEquitiesKnowledge` fields.
+
+| ENUM      | Definition                                            |
+| :-------- | :---------------------------------------------------- |
+| NONE      | No trading knowledge or experience.                   |
+| LIMITED   | Limited trading knowledge or experience.              |
+| GOOD      | Good trading knowledge and experience.                |
+| EXCELLENT | Excellent trading knowledge and extensive experience. |
+
+#### Investment profile - Options Transaction Types
+
+Used by `investmentOptionsTransactionTypes` to indicate types of options transactions the user has experience with.
+
+| ENUM         | Definition                                                      |
+| :----------- | :-------------------------------------------------------------- |
+| COVERED      | Covered options strategies (e.g., covered calls).               |
+| LONG         | Long options strategies (e.g., buying calls or puts).           |
+| SPREADS      | Spread options strategies (e.g., vertical or calendar spreads). |
+| NAKED\_PUTS  | Naked (uncovered) put writing.                                  |
+| NAKED\_CALLS | Naked (uncovered) call writing.                                 |
+
+#### Investment profile - Trading Objectives
+
+Used by `investmentObjectives` and `secondaryInvestmentObjectives` to indicate the user's trading objectives.
+
+| ENUM                  | Definition                                         |
+| :-------------------- | :------------------------------------------------- |
+| LONG\_TERM            | Long-term buy and hold strategy. ⚠️ **Deprecated** |
+| INFREQUENT            | Infrequent trading activity. ⚠️ **Deprecated**     |
+| FREQUENT              | Frequent trading activity. ⚠️ **Deprecated**       |
+| ACTIVE\_DAILY         | Active daily trading. ⚠️ **Deprecated**            |
+| NEW                   | New to trading with no prior experience.           |
+| CAPITAL\_PRESERVATION | Capital Preservation                               |
+| GROWTH                | Growth                                             |
+| INCOME                | Income                                             |
+| SPECULATION           | Speculation                                        |
+
+**Migration Guide:** The following legacy values are retained for backward compatibility with existing clients but should not be used for new implementations:
+
+| Legacy Value  | Recommended Replacement(s)    |
+| :------------ | :---------------------------- |
+| LONG\_TERM    | CAPITAL\_PRESERVATION, GROWTH |
+| INFREQUENT    | CAPITAL\_PRESERVATION, INCOME |
+| FREQUENT      | GROWTH, INCOME                |
+| ACTIVE\_DAILY | GROWTH, SPECULATION           |
+
+#### Investment profile - Equities Transaction Types
+
+Used by `investmentEquitiesTransactionTypes` to indicate position types the user has experience with.
+
+| ENUM   | Definition                |
+| :----- | :------------------------ |
+| LONG   | Long equity positions.    |
+| SHORT  | Short equity positions.   |
+| MARGIN | Margin trading positions. |
+
+#### Investment profile - Investment Experience
+
+Used by `investmentExperience` to indicate years of overall experience a user has with trading.
+
+| ENUM       | Definition |
+| :--------- | :--------- |
+| NONE       | None       |
+| YRS\_1\_2  | 1-2 yrs    |
+| YRS\_3\_5  | 3-5 yrs    |
+| YRS\_5\_10 | 5-10 yrs   |
+| YRS*10*    | 10+ yrs    |
+
+#### Document Types
+
+Used by the `type` field within each object in the `documents` array on POST/PATCH `/users`.
+
+| ENUM                    | Definition                                                        |
+| :---------------------- | :---------------------------------------------------------------- |
+| BASIC\_INFO             | Basic personal information (name, country, phone, email).         |
+| IDENTIFICATION\_INFO    | Government-issued identification (SSN, FTIN, passport, etc.).     |
+| TAX\_INFO               | Tax treaty and taxpayer status information.                       |
+| PERSONAL\_INFO          | Date of birth and marital status.                                 |
+| ADDRESS\_INFO           | Residential address.                                              |
+| EMPLOYMENT\_INFO        | Employment status, employer, and industry details.                |
+| INVESTOR\_PROFILE\_INFO | Investment objectives, risk tolerance, and experience.            |
+| DISCLOSURES             | Acceptance of standard DriveWealth agreements.                    |
+| MARGIN\_DISCLOSURE      | Acceptance of the DriveWealth Margin Agreement.                   |
+| FPSL\_DISCLOSURE        | Acceptance of the Fully Paid Securities Lending (FPSL) Agreement. |
+| KYC\_VERIFICATION\_INFO | Partner-supplied KYC verification result.                         |
+| CUSTODIAN\_INFO         | Custodian user for custodial accounts.                            |
+| DIRECTOR\_INFO          | Directors/beneficial owners for institutional accounts.           |
+| INSTITUTIONAL\_INFO     | Physical address and structure for institutional accounts.        |
+| TRUST\_INFO             | Trust name, date established, and trustee authority.              |
+
+# Accounts
+
+#### Account Management Types
+
+| ENUM                                     | Code | Definition                                                                                                                                            |
+| :--------------------------------------- | :--- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SELF                                     | 0    | A user directs **without** any advice trades their own account.                                                                                       |
+| ADVISORY                                 | 1    | A user's account is accessible to an Investment Advisor or Investment Advisor Representative, but trades are placed only by the user's authorization. |
+| RIA\_MANAGED                             | 2    | An Investment Advisor has discretion to exercise trades in the user's account.                                                                        |
+| CUSTODIAL                                | 3    | An account for the benefit of a minor.                                                                                                                |
+| SMSF                                     | 7    | SMSF (Self-Managed Super Fund) Account.                                                                                                               |
+| SMSF\_MANAGED                            | 8    | Managed SMSF Account.                                                                                                                                 |
+| RESERVE                                  | 15   | Credit Reserve Account. A cash management account, only for deposit and not for purchasing securities.                                                |
+| RETIREMENT\_TRADITIONAL\_SELF            | 17   | Traditional Retirement Self Directed Account.                                                                                                         |
+| RETIREMENT\_TRADITIONAL\_ADVISORY        | 18   | Traditional Retirement Managed Account.                                                                                                               |
+| RETIREMENT\_TRADITIONAL\_RIA\_MANAGED    | 19   | Traditional Retirement RIA Managed Account.                                                                                                           |
+| RETIREMENT\_ROTH\_SELF                   | 20   | Roth Retirement Self Directed Account.                                                                                                                |
+| RETIREMENT\_ROTH\_ADVISORY               | 21   | Roth Retirement Managed Account.                                                                                                                      |
+| RETIREMENT\_ROTH\_RIA\_MANAGED           | 22   | Roth Retirement RIA Managed Account.                                                                                                                  |
+| TRUST\_SELF                              | 23   | Self Directed Trust Account.                                                                                                                          |
+| TRUST\_ADVISORY                          | 24   | Trust Managed Account.                                                                                                                                |
+| TRUST\_RIA\_MANAGED                      | 25   | Trust RIA Managed Account.                                                                                                                            |
+| INHERITED\_RETIREMENT\_TRADITIONAL\_SELF | 27   | Inherited Traditional Retirement Self Directed Account.                                                                                               |
+| INHERITED\_RETIREMENT\_ROTH\_SELF        | 28   | Inherited Roth Retirement Self Directed Account.                                                                                                      |
+| HSA\_SELF                                | 29   | Health Savings Self Directed Account.                                                                                                                 |
+| HSA\_ADVISORY                            | 30   | Health Savings Managed Account.                                                                                                                       |
+| HSA\_RIA\_MANAGED                        | 31   | Health Savings RIA Managed Account.                                                                                                                   |
+| BUSINESS\_SELF                           | 35   | Self Directed Business Account.                                                                                                                       |
+| BUSINESS\_ADVISORY                       | 36   | Self Directed Advised Business Account.                                                                                                               |
+| BUSINESS\_RIA\_MANAGED                   | 37   | Robo Advisor Managed Business Account.                                                                                                                |
+| TRUMP\_SELF                              | 41   | Trump Self Directed Account.                                                                                                                          |
+
+#### Options Level
+
+Used by `optionsLevel` and `requestedLevel` fields on account options features.
+
+| ENUM     | Definition                                                  |
+| :------- | :---------------------------------------------------------- |
+| LEVEL\_2 | Level 2 options trading — covered calls and protective puts |
+
+#### Account Status
+
+| ENUM                  | NUM | Definition                                                            |
+| :-------------------- | :-- | :-------------------------------------------------------------------- |
+| PENDING               | 1   | The account is in a pending state, most likely due to KYC.            |
+| OPEN                  | 2   | The account is open and trades allowed to be placed into the account. |
+| OPEN\_NO\_NEW\_TRADES | 3   | The account is open and no new trades can be placed.                  |
+| FROZEN                | 4   | The account is frozen and no new trades can be placed.                |
+| CLOSED                | 9   | The account is closed.                                                |
+
+#### Account Status Change Reason
+
+| ENUM                   | Code | Definition                                             |
+| :--------------------- | :--- | :----------------------------------------------------- |
+| OTHER                  | 0    | Other                                                  |
+| ACAT                   | 1    | ACATS is processing                                    |
+| ACCOUNT\_TRANSFERRED   | 2    | Account has been transferred                           |
+| COMPLIANCE\_RESTRICTED | 3    | Partner has restricted the account                     |
+| DECEASED               | 4    | The person is deceased                                 |
+| DUPLICATE\_ACCOUNT     | 5    | Duplicate Account                                      |
+| FINRA\_RESTRICTIONS    | 6    | FINRA restriction applied on the account               |
+| LEGAL\_AML             | 7    | Legal Restriction (Fraud/AML)                          |
+| MARGIN\_CALLS          | 8    | Margin call occurred on the account                    |
+| PARTNER\_RESTRICTED    | 9    | Partner has restricted the account                     |
+| PAYMENT\_FAILURE       | 10   | Payment failed on the account                          |
+| PDT\_RESTRICTIONS      | 11   | **DEPRECATED.** PDT restriction applied on the account |
+| ACCOUNT\_REOPENING     | 12   | Account is being reopened                              |
+
+#### Margin Methodology
+
+Used by the `methodology` field within `accountFeatures.margin` and `margin` on WLP partner objects.
+
+| ENUM   | Definition                                               |
+| :----- | :------------------------------------------------------- |
+| REG\_T | Regulation T margin methodology (standard 2:1 leverage). |
+
+# Deposits
+
+#### Deposit Status
+
+| ENUM       | NUM    | Definition                                                          |
+| :--------- | :----- | :------------------------------------------------------------------ |
+| STARTED    | **0**  | A new deposit request was received.                                 |
+| PENDING    | **1**  | The deposit details was accepted.                                   |
+| SUCCESSFUL | **2**  | The deposit was successful.                                         |
+| FAILED     | **3**  | The deposit was not successful, thus failed.                        |
+| OTHER      | **4**  | The deposit is in a suspended state.                                |
+| RETURNED   | **5**  | The deposit was returned to the originating bank.                   |
+| APPROVED   | **14** | The deposit was approved.                                           |
+| REJECTED   | **15** | The deposit was rejected.                                           |
+| ON\_HOLD   | **16** | The deposit details was accepted, but is not ready to be processed. |
+| PROCESSING | **17** | The deposit is in Processing status.                                |
+| -          | **-1** | An error occurred during the deposit.                               |
+
+#### Ira Contribution Types
+
+| ENUM                    | Definition                      |
+| :---------------------- | :------------------------------ |
+| CURRENT\_YEAR           | Current Year Contribution       |
+| PRIOR\_YEAR             | Prior Year Contribution         |
+| POSTPONED\_CONTRIBUTION | Postponed Contribution          |
+| DIRECT\_ROLLOVER        | Direct Rollover Contribution    |
+| INDIRECT\_ROLLOVER      | Indirect Rollover Contribution  |
+| DIRECT\_TRANSFER        | Direct Transfer Contribution    |
+| CONVERSION              | Conversion Contribution         |
+| RECHARACTERIZATION      | Recharacterization Contribution |
+| REPAYMENT               | Repayment Contribution          |
+
+#### Ira Contribution Subtypes
+
+| ENUM | Definition                                                         |
+| :--- | :----------------------------------------------------------------- |
+| SC   | The self certification procedure for a late rollover contribution. |
+| PO   | A rollover of a qualified plan loan offset.                        |
+| FD   | Due to a federally designated disaster  .                          |
+| EO   | Combat zone or hazardous duty area, declared by Executive Order.   |
+| PL   | Combat zone or hazardous duty area, not declared by EO.            |
+| QR   | Repayment of a qualified reservist distribution.                   |
+| DD   | Repayment of a qualified disaster recovery distribution.           |
+| BA   | Repayment of a qualified birth or adoption distribution.           |
+| EP   | Repayment of an emergency personal expense.                        |
+| DA   | Repayment of a domestic abuse victim distribution.                 |
+| TI   | Repayment of a terminally ill individual distribution.             |
+
+#### Trump Contribution Types
+
+| ENUM                | Definition                                                               |
+| :------------------ | :----------------------------------------------------------------------- |
+| SEC\_128\_EMPLOYER  | Employer contribution                                                    |
+| OTHER\_SOURCE       | Individual contributions                                                 |
+| QUALIFIED\_ROLLOVER | Trustee-to-Trustee transfer of entire balance from another Trump Account |
+| PILOT\_PROGRAM      | U.S. Treasury Program                                                    |
+| QUALIFIED\_GENERAL  | Grants from Govt, Tribes, or 501(c)(3) orgs                              |
+
+# Withdrawals
+
+#### Withdrawals Status
+
+| ENUM          | VAR    | Definition                                                                                                                              |
+| :------------ | :----- | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| STARTED       | **0**  | A new withdrawal was received.                                                                                                          |
+| PENDING       | **1**  | The withdrawal details was accepted.                                                                                                    |
+| SUCCESSFUL    | **2**  | The withdrawal was successful.                                                                                                          |
+| FAILED        | **3**  | The withdrawal was not successful, thus failed.                                                                                         |
+| OTHER         | **4**  | The withdrawal is in a suspended state.                                                                                                 |
+| RIA\_PENDING  | **11** | The withdrawal is being handled by the RIA (AutoPilot) and the withdrawal details was accepted.                                         |
+| RIA\_APPROVED | **12** | The withdrawal is approved when cash has settled against the managed account via AutoPilot.                                             |
+| RIA\_REJECTED | **13** | The withdrawal is rejected when there is not enough has in the account after the selling of securities to cover the withdrawal request. |
+| APPROVED      | **14** | The withdrawal was approved.                                                                                                            |
+| REJECTED      | **15** | The withdrawal was rejected.                                                                                                            |
+| ON\_HOLD      | **16** | The withdrawal details was accepted, but is not ready to be processed.                                                                  |
+| -             | **-1** | An error occurred during the withdrawal.                                                                                                |
+
+#### Ira Distribution Types
+
+| ENUM                                    | Definition                             |
+| :-------------------------------------- | :------------------------------------- |
+| NORMAL\_DISTRIBUTION                    | Normal Distribution                    |
+| EARLY\_DISTRIBUTION                     | Early Distribution                     |
+| EARLY\_DISTRIBUTION\_PENALTY\_EXCEPTION | Early Distribution - Penalty Exception |
+| DIRECT\_ROLLOVER                        | Direct Rollover                        |
+| INDIRECT\_ROLLOVER                      | Indirect Rollover                      |
+| DIRECT\_TRANSFER                        | Direct Transfer                        |
+| CONVERSION                              | Conversion                             |
+| RECHARACTERIZATION                      | Recharacterization                     |
+| REQUIRED\_MINIMUM\_DISTRIBUTION         | Required Minimum Distribution          |
+| DISTRIBUTION\_TO\_BENEFICIARY           | Distribution to Beneficiary            |
+| RETURN\_OF\_EXCESS\_CONTRIBUTION        | Return of Excess Contribution          |
+| QUALIFIED\_CHARITABLE\_CONTRIBUTION     | Qualified Charitable Contribution      |
+
+#### Ira Distribution Subtypes
+
+| ENUM                                                | Definition                                                        |
+| :-------------------------------------------------- | :---------------------------------------------------------------- |
+| SUBSTANTIALLY\_EQUAL\_PERIODIC\_PAYMENTS\_SEPP\_72T | Structured periodic withdrawals                                   |
+| DISABILITY\_OR\_DEATH                               | Exempt from the penalty for beneficiaries or disabled individuals |
+| HIGHER\_EDUCATION\_EXPENSES                         | Tuition, books, and fees for qualified institutions               |
+| FIRST\_TIME\_HOME\_PURCHASE                         | Up to $10,000 for a first home                                    |
+| MEDICAL\_EXPENSES                                   | If exceeding 7.5% of adjusted gross income (AGI)                  |
+| HEALTH\_INSURANCE\_PREMIUMS                         | If unemployed for 12+ weeks                                       |
+| RESERVIST\_DISTRIBUTIONS                            | For active-duty military service                                  |
+
+#### Trump Distribution Types
+
+Note: For external account transfers, excess contributions, or distributions due to death or disability,
+please contact Partner Support or your Relationship Manager for manual processing.
+
+# Orders
+
+#### Order Status
+
+| ENUM            | NUM   | Definition                                    |
+| :-------------- | :---- | :-------------------------------------------- |
+| NEW             | **0** | A newly created order received by the system. |
+| PARTIAL\_FILL   | **1** | An order was partially filled.                |
+| FILL            | **2** | An order was fully filled.                    |
+| CANCELED        | **4** | An order was canceled.                        |
+| PENDING\_CANCEL | **6** | An order was submitted to be canceled.        |
+| REJECTED        | **8** | An order was rejected.                        |
+| SUSPENDED       | **9** |                                               |
+| PENDING\_NEW    | **A** |                                               |
+| CALCULATED      | **B** |                                               |
+| EXPIRED         | **C** |                                               |
+
+#### Order Type
+
+| ENUM                | VAR   | Definition                 |
+| :------------------ | :---- | :------------------------- |
+| MARKET              | **1** | A market order.            |
+| LIMIT               | **2** | A limit order.             |
+| STOP                | **3** | A stop order.              |
+| STOP\_LIMIT         | **4** | A stop limit order.        |
+| MARKET\_IF\_TOUCHED | **6** | A market if touched order. |
+| UNKNOWN             | **m** | An unknown order.          |
+
+#### TimeInForce type
+
+| ENUM | VAR   | Definition                       |
+| :--- | :---- | :------------------------------- |
+| DAY  | **0** | Order expires at next close.     |
+| GTC  | **1** | Order expires at specified date. |
+| MOO  | **2** | Market On Open.                  |
+| GTX  | **5** | Order placed in extended hours.  |
+| MOC  | **7** | Market On Close.                 |
+| IOC  | **3** | Immediate Or Cancel.             |
+| FOK  | **4** | Fill Or Kill.                    |
+
+#### Exercise Status
+
+| ENUM      | Definition                                                   |
+| :-------- | :----------------------------------------------------------- |
+| SUBMITTED | Exercise Request submitted by Ops.                           |
+| REJECTED  | Exercise Request Rejected for some reason by Ops.            |
+| ACCEPTED  | Exercise Request Accepted. Need to lock up position / cash.  |
+| COMPLETED | Exercise Request Completed and  entered into ABN - terminal. |
+| ERROR     | Error while submit Exercise Request.                         |
+
+#### Exercise Type
+
+| ENUM      | Definition             |
+| :-------- | :--------------------- |
+| EARLY     | Early Exercise.        |
+| EXCEPTION | Exercise by Exception. |
+| DNE       | Do Not Exercise.       |
+
+# Instruments
+
+#### Instrument Type
+
+| ENUM               | Code   | Definition                                                                                        |
+| :----------------- | :----- | :------------------------------------------------------------------------------------------------ |
+| EQUITY\_INDICES    | **1**  | Represents indices that track the performance of equity markets.                                  |
+| METALS             | **2**  | Represents commodities like gold, silver, and other precious metals.                              |
+| ENERGY             | **3**  | Represents energy-related commodities like oil and natural gas.                                   |
+| INTEREST\_RATES    | **4**  | Represents instruments tied to interest rate movements.                                           |
+| FX                 | **5**  | Represents foreign exchange or currency trading.                                                  |
+| EQUITIES           | **6**  | Represents individual stocks or shares of companies.                                              |
+| ETFS               | **7**  | Represents Exchange-Traded Funds, which are investment funds traded on stock exchanges.           |
+| MUTUAL\_FUNDS      | **8**  | Represents pooled investment funds managed by professionals.                                      |
+| CYBER\_SECURITY    | **9**  | Represents securities related to cybersecurity companies or technologies.                         |
+| ETN                | **10** | Represents Exchange-Traded Notes, which are debt securities.                                      |
+| ADR                | **11** | Represents American Depositary Receipts, which are stocks of foreign companies traded in the U.S. |
+| ALTERNATIVE\_ASSET | **12** | Represents non-traditional assets like private equity or hedge funds.                             |
+| IPO                | **13** | Represents Initial Public Offerings, where companies go public.                                   |
+| CRYPTO             | **14** | Represents cryptocurrencies like Bitcoin, Ethereum, etc.                                          |
+| OPTIONS            | **15** | Represents financial derivatives that give the right to buy or sell an asset.                     |
+| DEBT               | **16** | Represents fixed-income securities like bonds or loans.                                           |
+
+#### Instrument Status
+
+| ENUM        | Definition |
+| :---------- | :--------- |
+| INACTIVE    | Inactive   |
+| ACTIVE      | Active     |
+| CLOSE\_ONLY | Closed     |
+| EXPIRED     | Expired    |
+
+## Mutual Funds
+
+#### Dividend Frequency
+
+Used by `mutualFundData.dividendFrequency`.
+
+| ENUM                | Definition                                      |
+| :------------------ | :---------------------------------------------- |
+| DAILY               | Dividends are paid out daily.                   |
+| WEEKLY              | Dividends are paid out weekly.                  |
+| FORTNIGHTLY         | Dividends are paid out every two weeks.         |
+| MONTHLY             | Dividends are paid out monthly.                 |
+| BI\_MONTHLY         | Dividends are paid out every two months.        |
+| EVERY\_FOUR\_MONTHS | Dividends are paid out every four months.       |
+| QUARTERLY           | Dividends are paid out quarterly.               |
+| SEMI\_ANNUALLY      | Dividends are paid out twice a year.            |
+| ANNUALLY            | Dividends are paid out once a year.             |
+| OTHER               | Dividends are paid out at some other frequency. |
+
+#### Fund Frequency
+
+Used by `mutualFundData.frequencyValuation`, `mutualFundData.frequencySubscriptions`, and `mutualFundData.frequencyRedemptions`.
+
+| ENUM           | Definition                                 |
+| :------------- | :----------------------------------------- |
+| DAILY          | The fund operation occurs daily.           |
+| WEEKLY         | The fund operation occurs weekly.          |
+| FORTNIGHTLY    | The fund operation occurs every two weeks. |
+| MONTHLY        | The fund operation occurs monthly.         |
+| QUARTERLY      | The fund operation occurs quarterly.       |
+| SEMI\_ANNUALLY | The fund operation occurs twice a year.    |
+| ANNUALLY       | The fund operation occurs once a year.     |
+
+# Asset Transfers
+
+#### Asset Transfer Status
+
+| ENUM       | Definition                                              |
+| :--------- | :------------------------------------------------------ |
+| STARTED    | Asset transfer request has been initiated.              |
+| PENDING    | Asset transfer request is pending.                      |
+| SUCCESSFUL | Asset transfer request has been successfully completed. |
+| ON\_HOLD   | Asset transfer request is on hold.                      |
+| FAILED     | Asset transfer is failed.                               |
+
+### ACAT
+
+#### ACAT Source Account Type
+
+| ENUM           | Definition                    |
+| :------------- | :---------------------------- |
+| INDIVIDUAL     | Individual Account            |
+| JOINT          | Joint Account                 |
+| CORPORATE      | Corporate or Trust Account    |
+| CUSTODIAL      | Custodial/Minor/Teen Account  |
+| IRA            | Individual Retirement Account |
+| RIA\_MANAGED   | Robo Advisor Managed Account  |
+| TRUMP\_ACCOUNT | Trump Account                 |
+
+#### ACAT Transfer type
+
+| ENUM    | Definition             |
+| :------ | :--------------------- |
+| FULL    | Full Acats Transfer    |
+| PARTIAL | Partial Acats Transfer |
+
+#### ACAT Transit Type
+
+| ENUM      | Definition             |
+| :-------- | :--------------------- |
+| ACAT\_IN  | Incoming ACAT Transfer |
+| ACAT\_OUT | Outgoing ACAT Transfer |
+
+#### ACAT Settlement Codes
+
+| ENUM                           | Code |
+| :----------------------------- | :--- |
+| ACAT\_RECEIVED                 | 000  |
+| ACAT\_READY                    | 1ED  |
+| ACAT\_READY\_AFTER\_CUTOFF     | 1EL  |
+| ACAT\_SENT                     | TXX  |
+| ACAT\_SENT                     | TIF  |
+| ACAT\_SENT                     | TIL  |
+| ACAT\_ACK                      | 100  |
+| ACAT\_ADJUST                   | 110  |
+| ACAT\_ADJUST                   | 120  |
+| ACAT\_IN\_PROGRESS             | 130  |
+| ACAT\_UNDER\_REVIEW            | 200  |
+| ACAT\_REVIEW\_ACK              | 2ED  |
+| ACAT\_REVIEW\_ACK              | 2EL  |
+| ACAT\_REVIEW\_SENT             | 2XX  |
+| ACAT\_REVIEW\_ADJUST           | 210  |
+| ACAT\_REVIEW\_ERROR            | 220  |
+| ACAT\_REVIEW\_ACK              | 22D  |
+| ACAT\_REVIEW\_ACK              | 22L  |
+| ACAT\_REVIEW\_ACK              | 22X  |
+| ACAT\_REVIEW\_ACCEPTED         | 230  |
+| ACAT\_PTR\_IN\_PROGRESS        | 500  |
+| ACAT\_SETTLEMENT\_IN\_PROGRESS | 300  |
+| ACAT\_SETTLED                  | 310  |
+| ACAT\_REJECTED                 | 140  |
+| ACAT\_PURGE                    | 400  |
+| ACAT\_REJECTED                 | 600  |
+| ACAT\_PTR\_REJECTED            | 510  |
+
+#### ACAT Rejection Codes
+
+| ENUM                   | Code        | Description                                   |
+| :--------------------- | :---------- | :-------------------------------------------- |
+| UNKNOWN                | **Unknown** | Unknown                                       |
+| SSN\_NOT\_MATCH        | **01**      | SSN/Tax ID Mismatch                           |
+| ACCOUNT\_NOT\_MATCH    | **02**      | Account Title Mismatch                        |
+| DOC\_REQUIRED          | **03**      | Documentation Needed                          |
+| ACCOUNT\_FLAT          | **04**      | Account Flat                                  |
+| BROKER\_NOT\_MATCH     | **05**      | Invalid Broker Account Number                 |
+| DUPLICATE\_REQUEST     | **06**      | Duplicate                                     |
+| ACCOUNT\_IN\_TRANSIT   | **07**      | Account in Distribution or Transfer           |
+| BROKER\_REJECTED       | **08**      | Client Rescinded                              |
+| MISSING\_AUTH\_SIGN    | **09**      | Missing Authorized Signature                  |
+| MISSING\_FUND          | **21**      | Insufficient portfolio value to support debit |
+| SYMBOL\_NOT\_SUPPORTED | **22**      | Instrument not supported                      |
+| QUANTITY\_MISMATCH     | **23**      | Instrument quantity mismatch                  |
+
+#### Payment Status Phase
+
+Used by Deposit Event `statusPhase`.
+
+| ENUM                       | Definition                                    |
+| :------------------------- | :-------------------------------------------- |
+| BUYING\_POWER\_WITHHELD    | Buying Power On Hold; Seasoning Period Begins |
+| BUYING\_POWER\_GRANTED     | Buying Power Granted                          |
+| WITHDRAWAL\_POWER\_GRANTED | Withdrawal Power Granted                      |

@@ -1,0 +1,143 @@
+---
+updatedAt: 2025-08-20T23:30:41.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Corporate actions
+
+Corporate actions affect all customers who hold security positions, and encompass a wide variety of different situations. For example, an issuer may decide to pay a dividend to all shareholders, where each receives a cash amount for every share owned. Or, one company could get purchased by another, and existing shareholders exchange their shares for stock in the acquirer. Situations like these occur frequently, and your product will need to display these changes appropriately for customers to understand what's happening to their account.
+
+## Mandatory actions
+
+Brokerage firms like DriveWealth that handle customer-facing account adjustments receive corporate action details reported to the DTCC, the central custodian in the United States. Corporate actions are one of the most operationally intensive processes firms are required to fulfill. Many of these actions are mandatory, meaning they are automatically applied to customer accounts.
+
+Imagine that ABCD is being acquired by WXYZ, in an all-stock deal. Existing ABCD shareholders will automatically see their ABCD position removed, and a new WXYZ position added. Often this is not one-for-one (meaning the position quantities will differ), or there may also be cash credited. Ensure that you are displaying the full details of this transaction in the customer's activity view, and consider having support staff prepared to answer questions regarding this event.
+
+## Voluntary actions
+
+Some corporate actions are optional, and not applied to an account automatically. The most common example of this is a proxy vote opportunity, when shareholders can cast votes for an upcoming shareholder meeting. Customers can choose to take advantage of this opportunity, or do nothing, and there will be no impact on their account.
+
+Sometimes, a corporate action occurs which is voluntary for the shareholder, but if opted-in, triggers a mandatory change. For example, a tender offer could be announced to tender ABCD stock at $10 per share. If a shareholder opts-in, their position will be frozen until pay date and automatically swapped for cash. You can learn more about [tender offers](https://developer.drivewealth.com/apis/docs/tender-offers) and other voluntary action types from the sidebar.
+
+## Corporate action timeline
+
+In general, a corporate action has several important dates:
+
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Date
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Announcement date
+      </td>
+
+      <td>
+        The day an upcoming action is made publicly known
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Record date
+      </td>
+
+      <td>
+        The last day by which a customer must own a security to benefit from the corporate action
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Ex date
+      </td>
+
+      <td>
+        The first day the security will trade with its price will be adjusted by the corporate action
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Pay date
+      </td>
+
+      <td>
+        The expected day that shareholders (as of the record date) will be paid cash or stock, or have their position adjusted
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Post date
+      </td>
+
+      <td>
+        The day that DriveWealth posts the corporate action event. This date may differ from pay date.
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+Both the Transactions API and Events system will reflect corporate action updates overnight after the pay date.
+
+## Corporate action notifications
+
+You will receive real-time notifications of corporate actions via the [Events API](https://developer.drivewealth.com/apis/reference/stock-splits), and in turn be able to send real-time notifications to customers and better understand/anticipate corresponding updates to positions and/or cash entries to underlying customer accounts that will be processed by DriveWealth.
+
+## Displaying action details
+
+When requesting current account information via the [Transactions API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary-transactions) or [Account Summary API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary), positions and cash will automatically be updated for any corporate actions that take place.
+
+DriveWealth will send emails to shareholders of record when a voluntary corporate action occurs. Read [Shareholder communications](https://developer.drivewealth.com/apis/docs/shareholder-communications)  to learn more about these communications.
+
+## Adjustments to orders
+
+Orders that are pending for a security can be modified unless a corporate action takes place and it falls under on the dates outlined below.
+
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Corporate Action Type
+      </th>
+
+      <th>
+        Date
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Dividends
+      </td>
+
+      <td>
+        EX date
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        All other events
+      </td>
+
+      <td>
+        Post date
+      </td>
+    </tr>
+  </tbody>
+</Table>

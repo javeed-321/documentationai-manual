@@ -1,9 +1,0 @@
-# CloudTest Documentation
-
-> Using Akamai's CloudTest to optimize your approach to load testing with a scalable, global platform. CloudTest provides testing capabilities for web and mobile apps, APIs, databases, and web services. Realtime analytics and customizable dashboards provide actionable intelligence, allowing for root-cause analysis while tests run.
-
-Fetch the complete documentation index at: https://techdocs.akamai.com/cloudtest/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
-
-## API Reference: Server management
-- [List servers](https://techdocs.akamai.com/cloudtest/reference/get-servers.md): Get a list of all servers listed in the server list.  You need to have server access privileges to access this operation.
-- [Get a server](https://techdocs.akamai.com/cloudtest/reference/get-server.md): Returns server info for the specified server. You need to have server access privileges to access this operation.

@@ -1,0 +1,278 @@
+{
+  "slug": "apis/changelog/api-release-133",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-133.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-133",
+  "title": "API Release 1.33",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "Table": 1,
+    "paragraph": 4,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.33",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.33",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.33",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.33",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        10
+      ],
+      "raw": "| Environment | Status                       |\n| :---------- | :--------------------------- |\n| UAT         | RELEASED                     |\n| Production  | RELEASED - February 17, 2022 |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Environment",
+          "Status"
+        ],
+        "rows": [
+          [
+            "UAT",
+            "RELEASED"
+          ],
+          [
+            "Production",
+            "RELEASED - February 17, 2022"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "### **Tax Forms Updated**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Tax Forms Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "W-9, W-8BEN, and W-8BEN-E form templates have been updated to the newest version.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "W-9, W-8BEN, and W-8BEN-E form templates have been updated to the newest version.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "### **Process Improvement - Reconciliation**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Process Improvement - Reconciliation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "Enhanced reconciliation remediation process for late dividends",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Enhanced reconciliation remediation process for late dividends",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "### **Process Improvements - Virtual Accounts**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Process Improvements - Virtual Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        22,
+        24
+      ],
+      "raw": "* Enhanced deposit instructions to include details to distinguish between model domestic wire, international wire, or ACH.\n* Added validation to provide deposit instructions for live accounts only.\n* Users can only deposit money when the account status for the virtual account is listed `OPEN` or `OPEN_NO_NEW_TRADES`.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Enhanced deposit instructions to include details to distinguish between model domestic wire, international wire, or ACH.Added validation to provide deposit instructions for live accounts only.Users can only deposit money when the account status for the virtual account is listed OPEN or OPEN_NO_NEW_TRADES.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "### **Seasoning Validation**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Seasoning Validation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "Validation added to ensure seasoning has been updated prior to creating a financial transaction.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Validation added to ensure seasoning has been updated prior to creating a financial transaction.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "### **Process Improvement - Deposits**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Process Improvement - Deposits",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "Deposits will be prohibited if the account status is `PENDING`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Deposits will be prohibited if the account status is PENDING",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

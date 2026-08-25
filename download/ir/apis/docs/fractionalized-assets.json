@@ -1,0 +1,291 @@
+{
+  "slug": "apis/docs/fractionalized-assets",
+  "source": "https://developer.drivewealth.com/apis/docs/fractionalized-assets.md",
+  "url": "https://developer.drivewealth.com/apis/docs/fractionalized-assets",
+  "title": "Fractionalized assets",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:55:25.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 8,
+    "code": 1,
+    "list": 1,
+    "blockquote": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Fractionalized assets",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Fractionalized assets",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Equities and Mutual Funds on DriveWealth’s platform can support fractional purchases, sales, and holdings.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Equities and Mutual Funds on DriveWealth’s platform can support fractional purchases, sales, and holdings.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Determining fractional support",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Determining fractional support",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "To verify that an asset is supported fractionally, refer to its Instrument details:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To verify that an asset is supported fractionally, refer to its Instrument details:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        29
+      ],
+      "raw": "```javascript\nGET /back-office/instruments/AAPL\n{\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple, Inc.\",\n  \"sector\": \"Technology\",\n  \"longOnly\": true,\n  \"orderSizeMax\": 10000,\n  \"orderSizeMin\": 0.00000001,\n  \"orderSizeStep\": 0.00000001,\n  \"id\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n  \"type\": \"EQUITY\",\n  ...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/instruments/AAPL\n{\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple, Inc.\",\n  \"sector\": \"Technology\",\n  \"longOnly\": true,\n  \"orderSizeMax\": 10000,\n  \"orderSizeMin\": 0.00000001,\n  \"orderSizeStep\": 0.00000001,\n  \"id\": \"a67422af-8504-43df-9e63-7361eb0bd99e\",\n  \"type\": \"EQUITY\",\n  ...\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "This equity asset can be traded in increments of 0.00000001 share. This is common across nearly all equities on the platform, though in very rare circumstances, an equity asset may need to be disabled for fractional trading by updating these values.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This equity asset can be traded in increments of 0.00000001 share. This is common across nearly all equities on the platform, though in very rare circumstances, an equity asset may need to be disabled for fractional trading by updating these values.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "Note that some assets, like mutual funds, have a minimum purchase amount. These can still be traded fractionally, but the Order will need to meet the minimum requirement.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note that some assets, like mutual funds, have a minimum purchase amount. These can still be traded fractionally, but the Order will need to meet the minimum requirement.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## Trading fractionally",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Trading fractionally",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "Order creation allows for two fields to specify an amount:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Order creation allows for two fields to specify an amount:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        39,
+        40
+      ],
+      "raw": "* **quantity** — An exact number of units to buy or sell\n* **amountCash** — An exact amount of USD to buy or sell",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "quantity — An exact number of units to buy or sellamountCash — An exact amount of USD to buy or sell",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "Choose one based on the intended experience. For example:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Choose one based on the intended experience. For example:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        44,
+        46
+      ],
+      "raw": "> The last price of ABCD was $40/share. Andre places an order to purchase 3 shares. The Order is completed, and Andre receives exactly 3 shares, but pays $122.94, since the price of ABCD changed while the Order was being submitted.\n>\n> The last price of WXYZ was $20/share. Joseph places an order to purchase $1,000 worth of stock. The Order is completed, and Joseph receives exactly $1,000 worth of shares, which is equal to 50.0531 shares by the time the Order is completed.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "The last price of ABCD was $40/share. Andre places an order to purchase 3 shares. The Order is completed, and Andre receives exactly 3 shares, but pays $122.94, since the price of ABCD changed while the Order was being submitted.The last price of WXYZ was $20/share. Joseph places an order to purchase $1,000 worth of stock. The Order is completed, and Joseph receives exactly $1,000 worth of shares, which is equal to 50.0531 shares by the time the Order is completed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "When a customer is selling stock, be cautious of submitting cash-denominated trades that are very close to their total position. For example:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When a customer is selling stock, be cautious of submitting cash-denominated trades that are very close to their total position. For example:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "> The last price of EFGH was $10/share. Isaiah holds 5 shares, worth $50, and submits an order to sell $50 worth of stock. When the order is completed, Isaiah receives $50 in cash, but still has $0.01 worth of stock left in his account, because the price changed while the order was being placed.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "The last price of EFGH was $10/share. Isaiah holds 5 shares, worth $50, and submits an order to sell $50 worth of stock. When the order is completed, Isaiah receives $50 in cash, but still has $0.01 worth of stock left in his account, because the price changed while the order was being placed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "To avoid this edge case, it is common for an implementation to switch an Order’s definition to being denominated in a quantity before being sent to DriveWealth, if the customer is clearly intending to sell their entire position.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To avoid this edge case, it is common for an implementation to switch an Order’s definition to being denominated in a quantity before being sent to DriveWealth, if the customer is clearly intending to sell their entire position.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

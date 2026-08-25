@@ -1,0 +1,577 @@
+{
+  "slug": "apis/docs/w-9-b-notice-remediation",
+  "source": "https://developer.drivewealth.com/apis/docs/w-9-b-notice-remediation.md",
+  "url": "https://developer.drivewealth.com/apis/docs/w-9-b-notice-remediation",
+  "title": "W-9 B-Notice remediation",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-10-24T15:24:38.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 15,
+    "code": 4,
+    "list": 2,
+    "blockquote": 1,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# W-9 B-Notice remediation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "W-9 B-Notice remediation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "When a customer receives a B Notice from the IRS, it indicates a mismatch between the customer's name and Taxpayer Identification Number. In such cases, DriveWealth will send the required communication to your customers in accordance with IRS regulations.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When a customer receives a B Notice from the IRS, it indicates a mismatch between the customer's name and Taxpayer Identification Number. In such cases, DriveWealth will send the required communication to your customers in accordance with IRS regulations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Customers have approximately 15 business days to respond to the B notice. At the end of the grace period, DriveWealth will flag any users who did not respond and send an event notification to your system. Failure to take action within this window will result in TEFRA backup withholding.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Customers have approximately 15 business days to respond to the B notice. At the end of the grace period, DriveWealth will flag any users who did not respond and send an event notification to your system. Failure to take action within this window will result in TEFRA backup withholding.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "For the W-9 B Notice remediation process, you can either direct users to DriveClient for self-service recertification, or build your own UI following the steps outlined below.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For the W-9 B Notice remediation process, you can either direct users to DriveClient for self-service recertification, or build your own UI following the steps outlined below.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "### Step 1: Monitor Users with B notice due",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 1: Monitor Users with B notice due",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "To determine if user remediation is required, you can check if `validTaxForm` is `false` on the [Retrieve User](https://developer.drivewealth.com/apis/reference/get_users-userid) API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To determine if user remediation is required, you can check if validTaxForm is false on the Retrieve User API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "**Sample response:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample response:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        28
+      ],
+      "raw": "```json\n{\n...\n  \"validTaxForm\": false,\n  \"validTaxFormWhen\": \"2025-09-30T18:48:55Z\",\n...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n...\n  \"validTaxForm\": false,\n  \"validTaxFormWhen\": \"2025-09-30T18:48:55Z\",\n...\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "Alternatively, you can also subscribe to the user.inforequired.created event to be notified when remediation is needed.  Please refer to User Info Required Created [event](https://developer.drivewealth.com/apis/reference/user-events) documentation for payload details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Alternatively, you can also subscribe to the user.inforequired.created event to be notified when remediation is needed.  Please refer to User Info Required Created event documentation for payload details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "### Step 2: Verify User Information",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 2: Verify User Information",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "Use [Retrieve User](https://developer.drivewealth.com/apis/reference/get_users-userid) API to retrieve and display key identity details for customer verification, including the following key user identification attributes:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Use Retrieve User API to retrieve and display key identity details for customer verification, including the following key user identification attributes:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        36,
+        38
+      ],
+      "raw": "* first name, last name\n* ID type, ID number\n* citizenship",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "first name, last nameID type, ID numbercitizenship",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "### Step 3A: Update User info (if required)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 3A: Update User info (if required)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "If the customer identifies any incorrect information, update their profile via the [Update User](https://developer.drivewealth.com/apis/reference/patch_users-userid) API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If the customer identifies any incorrect information, update their profile via the Update User API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "**Sample payload:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample payload:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        46,
+        58
+      ],
+      "raw": "```json\n{\n  \"documents\": [\n    {\n      \"type\": \"BASIC_INFO\",\n      \"data\": {\n        \"firstName\": \"New\",\n        \"lastName\": \"Name\"\n      }\n    }\n  ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"documents\": [\n    {\n      \"type\": \"BASIC_INFO\",\n      \"data\": {\n        \"firstName\": \"New\",\n        \"lastName\": \"Name\"\n      }\n    }\n  ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "### Step 3B: Provide attestation (if no changes required)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 3B: Provide attestation (if no changes required)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "In rare cases, the IRS may have outdated or incorrect data but the customer's profile with DriveWealth is accurate. If the customer affirms their information is correct and chooses not to update it, they must provide attestation and agree to the following terms:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In rare cases, the IRS may have outdated or incorrect data but the customer's profile with DriveWealth is accurate. If the customer affirms their information is correct and chooses not to update it, they must provide attestation and agree to the following terms:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        64,
+        66
+      ],
+      "raw": "> You are acknowledging, under penalty of perjury, that the information provided is complete and accurate.\n>\n> You are acknowledging, under penalty of perjury, that the information provided is complete and accurate. You further acknowledge that you will be providing electronic signatures as part of your tax certification process (W-9 for U.S. taxpayers), and that the information you have entered is complete and accurate for IRS filing purposes.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "You are acknowledging, under penalty of perjury, that the information provided is complete and accurate.You are acknowledging, under penalty of perjury, that the information provided is complete and accurate. You further acknowledge that you will be providing electronic signatures as part of your tax certification process (W-9 for U.S. taxpayers), and that the information you have entered is complete and accurate for IRS filing purposes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "**Sample payload:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample payload:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        70,
+        83
+      ],
+      "raw": "```json\n{\n  \"documents\": [\n    {\n      \"type\": \"TAX_INFO\",\n      \"data\": {\n        \"attestation\": {\n          \"signedBy\": \"babe99fe-21cc-41e4-aa8a-d13c3c90767a\"\n        }\n      }\n    }\n  ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"documents\": [\n    {\n      \"type\": \"TAX_INFO\",\n      \"data\": {\n        \"attestation\": {\n          \"signedBy\": \"babe99fe-21cc-41e4-aa8a-d13c3c90767a\"\n        }\n      }\n    }\n  ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "The `signedBy` field must match the user's `userID`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The signedBy field must match the user's userID.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        87,
+        87
+      ],
+      "raw": "### Step 4: Display New W-9 PDF",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Step 4: Display New W-9 PDF",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "After user info update or attestation submission, a new W-9 PDF is generated and you should display the PDF form for the customer to review. You can do so by using the [Retrieve Physical Document URL](https://developer.drivewealth.com/apis/reference/get_documents-documentid-url) API or by listening to the `documents.create` event.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After user info update or attestation submission, a new W-9 PDF is generated and you should display the PDF form for the customer to review. You can do so by using the Retrieve Physical Document URL API or by listening to the documents.create event.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "#### Using the API:",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Using the API:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        93,
+        96
+      ],
+      "raw": "1. Retrieve a list of documents associated with a user: [List User Physical Documents](https://developer.drivewealth.com/apis/reference/get_users-userid-documents) API\n2. Filter for latest tax document: select the document with type `TAX` and the latest `receivedWhen` timestamp\n3. Retrieve document URL: [Retrieve Physical Document URL](https://developer.drivewealth.com/apis/reference/get_documents-documentid-url) API\n4. Use the returned URL to open and display tax form in PDF format",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Retrieve a list of documents associated with a user: List User Physical Documents APIFilter for latest tax document: select the document with type TAX and the latest receivedWhen timestampRetrieve document URL: Retrieve Physical Document URL APIUse the returned URL to open and display tax form in PDF format",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "#### Using the event:",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Using the event:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        100,
+        100
+      ],
+      "raw": "If you subscribe to the `documents.created` event, a notification will be sent to your system once a new W-9 PDF is generated. You can directly open up the PDF from the `s3UrlLink` field returned in the event.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you subscribe to the documents.created event, a notification will be sent to your system once a new W-9 PDF is generated. You can directly open up the PDF from the s3UrlLink field returned in the event.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        102,
+        102
+      ],
+      "raw": "**Sample payload:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample payload:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        104,
+        119
+      ],
+      "raw": "```json\n{\n  \"id\": \"event_313154b9-6dd6-447d-b7fa-bf0e3e8aa365\",\n  \"type\": \"documents.created\",\n  \"object\": \"TAX\",\n  \"timestamp\": \"2025-09-29T21:19:45.278Z\",\n  \"payload\": {\n    \"userID\": \"500055f6-2f18-44f4-a69b-b010d74acf58\",\n    \"documentID\": \"8664bfad-69e5-46b7-9355-22f9123a8163\",\n    \"taxForm\": {\n      \"s3UrlLink\": \"https://d3fsvf73xdspxh.cloudfront.net/8664bfad-69e5-46b7-9355-22f9123a8163.png?...\"\n    }\n  }\n}\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"event_313154b9-6dd6-447d-b7fa-bf0e3e8aa365\",\n  \"type\": \"documents.created\",\n  \"object\": \"TAX\",\n  \"timestamp\": \"2025-09-29T21:19:45.278Z\",\n  \"payload\": {\n    \"userID\": \"500055f6-2f18-44f4-a69b-b010d74acf58\",\n    \"documentID\": \"8664bfad-69e5-46b7-9355-22f9123a8163\",\n    \"taxForm\": {\n      \"s3UrlLink\": \"https://d3fsvf73xdspxh.cloudfront.net/8664bfad-69e5-46b7-9355-22f9123a8163.png?...\"\n    }\n  }\n}\n"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        121,
+        121
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 121
+        }
+      ]
+    }
+  ]
+}

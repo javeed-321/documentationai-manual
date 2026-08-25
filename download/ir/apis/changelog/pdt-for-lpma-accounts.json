@@ -1,0 +1,356 @@
+{
+  "slug": "apis/changelog/pdt-for-lpma-accounts",
+  "source": "https://developer.drivewealth.com/apis/changelog/pdt-for-lpma-accounts.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/pdt-for-lpma-accounts",
+  "title": "PDT for LPMA Accounts",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "paragraph": 9,
+    "Image": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# PDT for LPMA Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PDT for LPMA Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## New Feature - PDT Violations for LPMA Accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "New Feature - PDT Violations for LPMA Accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "Beginning April 14, 2022, DriveWealth will implement new functionality that will allow for counting of Pattern Day Trades in the UAT environment for LPMA accounts. This new feature will provide a counter of PDT violations that can be used to restrict accounts from further violations.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Beginning April 14, 2022, DriveWealth will implement new functionality that will allow for counting of Pattern Day Trades in the UAT environment for LPMA accounts. This new feature will provide a counter of PDT violations that can be used to restrict accounts from further violations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "The change will include updates to DriveHub as well as API updates to the [Account Summary](https://developer.drivewealth.com/reference/get-account-summary) and [Violation Details](https://developer.drivewealth.com/reference/violation-details) endpoints.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The change will include updates to DriveHub as well as API updates to the Account Summary and Violation Details endpoints.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/get-account-summary",
+          "line": 9
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/violation-details",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "**This feature is currently available for testing in UAT.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This feature is currently available for testing in UAT.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## **DriveHub Updates**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "DriveHub Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "A Pattern Day Trades section will be accessible for LPMA Accounts. This section will display data for pattern day trades:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A Pattern Day Trades section will be accessible for LPMA Accounts. This section will display data for pattern day trades:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "![](https://files.readme.io/c90a4d8-2022-04-08_13_43_13-LPMA_PDT_Updates_-_Hub.png \"2022-04-08 13_43_13-LPMA PDT Updates - Hub.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/c90a4d8-2022-04-08_13_43_13-LPMA_PDT_Updates_-_Hub.png",
+        "title": "2022-04-08 13_43_13-LPMA PDT Updates - Hub.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/c90a4d8-2022-04-08_13_43_13-LPMA_PDT_Updates_-_Hub.png",
+          "line": 17
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## **API Updates**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "The Account Summary endpoint will display additional data in the margin and violation attributes.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Account Summary endpoint will display additional data in the margin and violation attributes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "See example below:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "See example below:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        25,
+        49
+      ],
+      "raw": "```json Account Summary Example  - margin and violations\n\"margin\": {\n            \"marginRequirement\": null,\n            \"longMarketValue\": null,\n            \"debitBalance\": null,\n            \"equity\": null,\n            \"equityFraction\": null,\n            \"equityRequired\": null,\n            \"accruedInterest\": null,\n            \"patternDayTrader\": true,\n            \"restricted\": false,\n            \"daySMA\": null,\n            \"rtExcessEquity\": null,\n            \"effectiveSMA\": null,\n            \"noBuyingPowerReason\": null,\n            \"marginCall\": null,\n            \"restingOrders\": null,\n            \"bodDTBP\": 19967.12\n        },\n        \"violations\": {\n            \"goodFaithViolations\": null,\n            \"patternDayTrades\": {\n            \t\"count\": 1\n            }\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Account Summary Example  - margin and violations",
+        "code": "\"margin\": {\n            \"marginRequirement\": null,\n            \"longMarketValue\": null,\n            \"debitBalance\": null,\n            \"equity\": null,\n            \"equityFraction\": null,\n            \"equityRequired\": null,\n            \"accruedInterest\": null,\n            \"patternDayTrader\": true,\n            \"restricted\": false,\n            \"daySMA\": null,\n            \"rtExcessEquity\": null,\n            \"effectiveSMA\": null,\n            \"noBuyingPowerReason\": null,\n            \"marginCall\": null,\n            \"restingOrders\": null,\n            \"bodDTBP\": 19967.12\n        },\n        \"violations\": {\n            \"goodFaithViolations\": null,\n            \"patternDayTrades\": {\n            \t\"count\": 1\n            }"
+      },
+      "text": "Account Summary Example  - margin and violations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "Full PDT details will be shown in the [Violation Details](https://developer.drivewealth.com/reference/violation-details) endpoint.  For the PDT counts, use the [Account Summary](https://developer.drivewealth.com/reference/get-account-summary) endpoint. Note that for LPMA accounts, the additional fields are not applicable with the exception of    `patternDayTrader` and `restricted` which will be updated if a user is flagged as a pattern day trader.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Full PDT details will be shown in the Violation Details endpoint.  For the PDT counts, use the Account Summary endpoint. Note that for LPMA accounts, the additional fields are not applicable with the exception of    patternDayTrader and restricted which will be updated if a user is flagged as a pattern day trader.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/violation-details",
+          "line": 51
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://developer.drivewealth.com/reference/get-account-summary",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "## **Next Steps**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Next Steps",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "Please test this functionality in your sandbox environment and make any necessary updates to accommodate the changes in the API. If changes are required to avoid disruption, please have these updates completed and tested as soon as possible. At a future date to be determined, the API will be updated for all partners in production. If you have any questions, please contact your PSG Account Manager.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please test this functionality in your sandbox environment and make any necessary updates to accommodate the changes in the API. If changes are required to avoid disruption, please have these updates completed and tested as soon as possible. At a future date to be determined, the API will be updated for all partners in production. If you have any questions, please contact your PSG Account Manager.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "## **Useful links:**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Useful links:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        59,
+        60
+      ],
+      "raw": "[PDT and Trading Violations](https://guides.drivewealth.com/docs/trading-restrictions)\\\n[FAQs](https://support.drivewealth.com/hc/en-us/articles/4408129699095-Pattern-Day-Trader-PDT-)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PDT and Trading ViolationsFAQs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

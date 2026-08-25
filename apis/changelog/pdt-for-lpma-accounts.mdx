@@ -1,0 +1,60 @@
+---
+title: "PDT for LPMA Accounts"
+---
+
+## New Feature - PDT Violations for LPMA Accounts
+
+Beginning April 14, 2022, DriveWealth will implement new functionality that will allow for counting of Pattern Day Trades in the UAT environment for LPMA accounts. This new feature will provide a counter of PDT violations that can be used to restrict accounts from further violations.
+
+The change will include updates to DriveHub as well as API updates to the [Account Summary](https://developer.drivewealth.com/reference/get-account-summary) and [Violation Details](https://developer.drivewealth.com/reference/violation-details) endpoints.
+
+**This feature is currently available for testing in UAT.**
+
+## **DriveHub Updates**
+
+A Pattern Day Trades section will be accessible for LPMA Accounts. This section will display data for pattern day trades:
+
+<Image src="https://files.readme.io/c90a4d8-2022-04-08_13_43_13-LPMA_PDT_Updates_-_Hub.png" alt="2022 04 08 13 43 13 LPMA PDT Updates Hub" caption=" " />
+
+## **API Updates**
+
+The Account Summary endpoint will display additional data in the margin and violation attributes.
+
+See example below:
+
+```json title="Account Summary Example  - margin and violations"
+"margin": {
+            "marginRequirement": null,
+            "longMarketValue": null,
+            "debitBalance": null,
+            "equity": null,
+            "equityFraction": null,
+            "equityRequired": null,
+            "accruedInterest": null,
+            "patternDayTrader": true,
+            "restricted": false,
+            "daySMA": null,
+            "rtExcessEquity": null,
+            "effectiveSMA": null,
+            "noBuyingPowerReason": null,
+            "marginCall": null,
+            "restingOrders": null,
+            "bodDTBP": 19967.12
+        },
+        "violations": {
+            "goodFaithViolations": null,
+            "patternDayTrades": {
+            	"count": 1
+            }
+```
+
+Full PDT details will be shown in the [Violation Details](https://developer.drivewealth.com/reference/violation-details) endpoint.  For the PDT counts, use the [Account Summary](https://developer.drivewealth.com/reference/get-account-summary) endpoint. Note that for LPMA accounts, the additional fields are not applicable with the exception of    `patternDayTrader` and `restricted` which will be updated if a user is flagged as a pattern day trader.
+
+## **Next Steps**
+
+Please test this functionality in your sandbox environment and make any necessary updates to accommodate the changes in the API. If changes are required to avoid disruption, please have these updates completed and tested as soon as possible. At a future date to be determined, the API will be updated for all partners in production. If you have any questions, please contact your PSG Account Manager.
+
+## **Useful links:**
+
+[PDT and Trading Violations](https://guides.drivewealth.com/docs/trading-restrictions)\
+[FAQs](https://support.drivewealth.com/hc/en-us/articles/4408129699095-Pattern-Day-Trader-PDT-)

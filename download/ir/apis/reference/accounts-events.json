@@ -1,0 +1,242 @@
+{
+  "slug": "apis/reference/accounts-events",
+  "source": "https://developer.drivewealth.com/apis/reference/accounts-events.md",
+  "url": "https://developer.drivewealth.com/apis/reference/accounts-events",
+  "title": "Account Events",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-26T14:58:07.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 3,
+    "code": 3,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Account Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Account Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Accounts Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Accounts Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "A new account has been created for a user.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A new account has been created for a user.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        24
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_19c419d4-abb7-43ab-95df-86b3185f41e8\",\n    \"type\": \"accounts.created\",\n    \"timestamp\": \"2019-03-28T22:43:13.929517111Z\",\n    \"payload\": {\n        \"accountNo\": \"DWPR000088\",\n        \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1553812993200\",\n        \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_19c419d4-abb7-43ab-95df-86b3185f41e8\",\n    \"type\": \"accounts.created\",\n    \"timestamp\": \"2019-03-28T22:43:13.929517111Z\",\n    \"payload\": {\n        \"accountNo\": \"DWPR000088\",\n        \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1553812993200\",\n        \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\"\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "## Accounts Updated",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Accounts Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "The detail of the user's account has been updated. This event will show the previous state and the current state of the object.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The detail of the user's account has been updated. This event will show the previous state and the current state of the object.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "> **⚠️ DEPRECATED:** Pattern Day Trading (PDT) fields are deprecated. The `pdt` object and its properties (`patternDayTrader`, `pdtRestricted`, `pdtRestrictedWhen`) will be removed in a future release.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "⚠️"
+      },
+      "text": "DEPRECATED: Pattern Day Trading (PDT) fields are deprecated. The pdt object and its properties (patternDayTrader, pdtRestricted, pdtRestrictedWhen) will be removed in a future release.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        32,
+        86
+      ],
+      "raw": "```json Updated\n{\n    \"id\": \"event_773a8a45-75fc-4143-8673-9dcfef576328\",\n    \"type\": \"accounts.updated\",\n    \"timestamp\": \"2019-03-28T22:46:47.821071506Z\",\n    \"payload\": {\n        \"previous\": {\n            \"status\": {\n                \"name\": \"OPEN\",\n                \"description\": \"Open\"\n            },\n            \"pdt\": {\n                \"patternDayTrader\": false,\n                \"pdtRestricted\": false,\n                \"pdtRestrictedWhen\": null\n            },\n            \"bod\": {\n                \"moneyMarket\": 0,\n                \"equityValue\": 22738.32,\n                \"cashAvailableForWithdrawal\": 0,\n                \"cashAvailableForTrading\": 0,\n                \"updatedWhen\": \"2019-03-28T07:18:02.879Z\",\n                \"cashBalance\": 0\n            }\n        },\n        \"current\": {\n            \"status\": {\n                \"name\": \"OPEN_NO_NEW_TRADES\",\n                \"description\": \"Open - No new trades\"\n            },\n            \"pdt\": {\n                \"patternDayTrader\": true,\n                \"pdtRestricted\": true,\n                \"pdtRestrictedWhen\": \"2019-02-28T07:18:02.879Z\"\n            },\n            \"bod\": {\n                \"moneyMarket\": 0,\n                \"equityValue\": 22738.32,\n                \"cashAvailableForWithdrawal\": 0,\n                \"cashAvailableForTrading\": 0,\n                \"updatedWhen\": \"2019-03-28T22:46:47.777Z\",\n                \"cashBalance\": 0\n            }\n        },\n        \"accountEquityBreakdown\": {\n            \"longMarketValue\": 0,\n            \"debitBalance\": 0,\n            \"accountEquity\": 22738.32\n        },\n        \"accountID\": \"711c012d-7a3c-4c25-be20-a6613ede1a3a.1559212256121\",\n        \"accountNo\": \"DWYZ000001\",\n        \"userID\": \"711c012d-7a3c-4c25-be20-a6613ede1a3a\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n    \"id\": \"event_773a8a45-75fc-4143-8673-9dcfef576328\",\n    \"type\": \"accounts.updated\",\n    \"timestamp\": \"2019-03-28T22:46:47.821071506Z\",\n    \"payload\": {\n        \"previous\": {\n            \"status\": {\n                \"name\": \"OPEN\",\n                \"description\": \"Open\"\n            },\n            \"pdt\": {\n                \"patternDayTrader\": false,\n                \"pdtRestricted\": false,\n                \"pdtRestrictedWhen\": null\n            },\n            \"bod\": {\n                \"moneyMarket\": 0,\n                \"equityValue\": 22738.32,\n                \"cashAvailableForWithdrawal\": 0,\n                \"cashAvailableForTrading\": 0,\n                \"updatedWhen\": \"2019-03-28T07:18:02.879Z\",\n                \"cashBalance\": 0\n            }\n        },\n        \"current\": {\n            \"status\": {\n                \"name\": \"OPEN_NO_NEW_TRADES\",\n                \"description\": \"Open - No new trades\"\n            },\n            \"pdt\": {\n                \"patternDayTrader\": true,\n                \"pdtRestricted\": true,\n                \"pdtRestrictedWhen\": \"2019-02-28T07:18:02.879Z\"\n            },\n            \"bod\": {\n                \"moneyMarket\": 0,\n                \"equityValue\": 22738.32,\n                \"cashAvailableForWithdrawal\": 0,\n                \"cashAvailableForTrading\": 0,\n                \"updatedWhen\": \"2019-03-28T22:46:47.777Z\",\n                \"cashBalance\": 0\n            }\n        },\n        \"accountEquityBreakdown\": {\n            \"longMarketValue\": 0,\n            \"debitBalance\": 0,\n            \"accountEquity\": 22738.32\n        },\n        \"accountID\": \"711c012d-7a3c-4c25-be20-a6613ede1a3a.1559212256121\",\n        \"accountNo\": \"DWYZ000001\",\n        \"userID\": \"711c012d-7a3c-4c25-be20-a6613ede1a3a\"\n    }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        88,
+        88
+      ],
+      "raw": "## Account Commission Update",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Account Commission Update",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        90,
+        90
+      ],
+      "raw": "A user's account commission has been updated.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A user's account commission has been updated.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        92,
+        104
+      ],
+      "raw": "```json Updated Commissions\n{\n    \"id\": \"event_5a11c5b9-ad97-4e25-a1d6-7ff27378c08c\",\n    \"type\": \"accounts.commission.updated\",\n    \"timestamp\": \"2019-03-28T22:44:19.745615563Z\",\n    \"payload\": {\n        \"commissionID\": \"b3e985dd-9679-63dc-5dd5-9bd7982efecd\",\n        \"accountNo\": \"DWZR000001\",\n        \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1403540676095\",\n        \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated Commissions",
+        "code": "{\n    \"id\": \"event_5a11c5b9-ad97-4e25-a1d6-7ff27378c08c\",\n    \"type\": \"accounts.commission.updated\",\n    \"timestamp\": \"2019-03-28T22:44:19.745615563Z\",\n    \"payload\": {\n        \"commissionID\": \"b3e985dd-9679-63dc-5dd5-9bd7982efecd\",\n        \"accountNo\": \"DWZR000001\",\n        \"accountID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd.1403540676095\",\n        \"userID\": \"b25f0d36-b4e4-41f8-b3d9-9249e46402cd\"\n    }\n}"
+      },
+      "text": "Updated Commissions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

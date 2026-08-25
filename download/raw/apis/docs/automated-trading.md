@@ -1,0 +1,259 @@
+---
+updatedAt: 2026-07-14T15:57:51.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Automated trading
+
+<Callout icon="📘" theme="info">
+  ###
+
+  This page discusses features principally used when DriveWealth’s [Account Management product](https://developer.drivewealth.com/apis/docs/choosing-your-integration-model) is enabled. Clients managing customers on their own won’t have these workflows available.
+</Callout>
+
+DriveWealth supports automated trading and robo-advisory experiences through a series of features called **AutoPilot**. AutoPilot handles all aspects of automated trading, from portfolio construction to automatically placing buy and sell orders for your customers account based on predefined market conditions.
+
+<Callout icon="🚧" theme="warn">
+  ###
+
+  AutoPilot is supported for Equities orders only.
+</Callout>
+
+<Callout icon="🚧" theme="warn">
+  ###
+
+  AutoPilot is designed to trade automatically and in bulk across multiple customers. It’s important to consider if your regulatory licenses allow you to act in this manner.
+</Callout>
+
+## Portfolio composition
+
+AutoPilot defines two new entities to use in determining trading activity: Funds and Portfolios.
+
+1. **Funds** - Funds are composed of one or more individual securities.
+2. **Portfolios** - Portfolios are collections of one or more Funds.
+
+![](https://files.readme.io/957246f-Funds.png "Funds.png")
+
+It's important to note that portfolios are linked directly to customer accounts: each managed account must be linked to an individual portfolio. However, single portfolios can be assigned to many customer accounts. For example:
+
+> Acme Advisor creates a portfolio called “The Balanced Portfolio”. The Balanced Portfolio is composed of two funds: 90% Capital Preservation Fund (containing some ETF’s and Stocks), and 10% Speculative Stocks Fund (containing 4 individual tech stocks). Garrett’s account is linked to The Balanced Portfolio, and he deposits $100. Justin also creates an account, which is also linked to The Balanced portfolio based on his suitability. Justin deposits $200. Both Garrett and Justin are invested in the same allocations, but can invest in these allocations at their own desired cadence.
+
+Both Funds and Portfolios can be created and updated via API, or DriveHub. To create a Fund in DriveHub, navigate to your assigned RIA Page and select the "Funds" tab. Similar to Funds, you can create a Portfolio by navigating to the “Portfolios” tab. Whether you create a Portfolio or Fund by API or by DriveHub, parameters will need to be set at both the portfolio level and the fund level.
+
+Note that each Instrument declared as part of a Fund utilizes DriveWealths internal instrument identifier, not the stock symbol, to ensure that corporate actions do not affect the composition of the Fund.
+
+```javascript
+POST /back-office/managed/funds
+{
+  "userID": "{{ria-user-id}}",
+  "name": "Tech Fund",
+  "clientFundID": "{{$timestamp}}",
+  "description": "A collection of tech stocks, to be used in portfolios",
+  "holdings": [
+      {
+          "instrumentID":"{{inst-AAPL}}",
+          "target":0.3
+      },
+      {
+          "instrumentID":"{{inst-AMZN}}",
+          "target":0.25
+      },
+      {
+          "instrumentID":"{{inst-TSLA}}",
+          "target":0.1
+      },
+      {
+          "instrumentID":"{{inst-MSFT}}",
+          "target":0.35
+      }
+  ],
+  "triggers": [
+      {
+        "type": "TOTAL_DRIFT",
+        "maxAllowed": 0.05
+      },
+      {
+        "type": "RELATIVE_DRIFT",
+        "child": null,
+        "lowerBound": 0.02,
+        "upperBound": null
+      },
+      {
+        "type": "ABSOLUTE_DRIFT",
+        "child": null,
+        "lowerBound": 0.01,
+        "upperBound": 0.01
+      }
+    ]
+}
+```
+
+Upon successful creation of the fund, you will immediately receive a Fund ID that can be used in the composition of a Portfolio.
+
+```javascript
+POST /back-office/managed/portfolios
+{
+  "userID": "{{ria-userID}}",
+  "name": "Balanced Portfolio",
+  "clientPortfolioID": "{{$timestamp}}",
+  "description": "A portfolio containing the tech stocks fund",
+  "holdings": [{
+    "id": "fund_1234324",
+    "target": 0.95
+  },{
+    "type": "CASH_RESERVE",
+    "target": 0.05
+  }],
+  "triggers": [
+      {
+        "type": "TOTAL_DRIFT",
+        "maxAllowed": 0.05
+      },
+      {
+        "type": "RELATIVE_DRIFT",
+        "child": null,
+        "lowerBound": 0.02,
+        "upperBound": null
+      },
+      {
+        "type": "ABSOLUTE_DRIFT",
+        "child": "CASH",
+        "lowerBound": 0.05,
+        "upperBound": null
+      }
+    ]
+}
+```
+
+<Callout icon="📘" theme="info">
+  ### Cash reserve
+
+  Cash reserve is an available Fund at the Portfolio level, that allows you to keep a portion of the customers Portfolio in cash. The cash reserve Fund utilizes the same rebalance parameters that a normal Fund does, and will replenish when low. Cash reserves are commonly utilized to deduct AUM Fees without liquidating positions.
+</Callout>
+
+## Rebalance capabilities
+
+Over time, as the market value of all securities are constantly changing, the market value of your customers' positions will change as well. The implication of this market movement is that the actual weights of your defined Portfolios and Funds can become misaligned with the target weights specified. **Drift** refers to parameters that AutoPilot will use when evaluating whether a customer account needs to be rebalanced.
+
+Currently, there are two different Drift Parameters available to define:
+
+1. **Holding Drift**: refers to how far individual securities within a Fund, or Funds within a Portfolio, may drift from their target allocations.
+2. **Maximum Drift**: refers to the aggregate percentage of how far the entire Fund or Portfolio has drifted (calculated by summing each individual holding's percentage change).
+
+AutoPilot evaluates your customers' eligibility for a rebalance based on the frequency defined by the client in DriveHub. If any drift parameters are breached, across the entire Portfolio, the customer's account will be rebalanced.
+
+## Investing in an Autopilot-enabled account
+
+To begin investing in a managed account, the first step is to assign the customer Account to a Portfolio that you have created via API or DriveHub. Each Portfolio available will have a corresponding Portfolio ID that can be assigned to an account. To assign a Portfolio to a customer Account, simply set the `riaPortfolioID` on Account creation or update:
+
+```json POST /accounts
+POST /back-office/accounts
+{
+  "userID": "{{userID}}" ,
+  "accountType": "LIVE",
+  "accountManagementType": "RIA_MANAGED",
+  "tradingType": "CASH",
+  "riaUserID": "{{ria-userid}}",                  // parentIBID
+  "riaProductID": "{{ria-productid}}",            // productID
+  "riaPortfolioID" : "{{myPortfolioID}}"            
+}
+```
+```json PATCH /accounts
+POST /back-office/accounts/{{accountID}}
+{
+  "riaPortfolioID" : "{{myPortfolioID}}"
+}
+```
+
+<Callout icon="🚧" theme="warn">
+  ### Extra fields required
+
+  `riaUserID` and `riaProductID` are created and assigned during client integration, by DriveWealths client onboarding team. While DriveWealth can provision more than one `riaUserID` or `riaProductId`, the typical integration only utilizes one `riaUserId` and one `riaProductId`.
+</Callout>
+
+Once a Portfolio has been linked to the customer account, the customer may begin investing in their Portfolio by simply triggering a deposit into their account. Because a deposit is required to trigger AutoPilot investments, [Cashless accounts](https://developer.drivewealth.com/apis/docs/cashless-accounts) are not supported.
+
+AutoPilot scans for available cash in a customer's Account every day at 10:00AM EST. If funds are available in the account, AutoPilot will automatically invest the funds into the underlying portfolio. Note that AutoPilot deposits are smart enough to see which securities are underweight based on the market value of the holding, and will attempt to buy more of an underweight security in an attempt to avoid a future rebalance.
+
+```json Deposits(BULK)
+POST /back-office/funding/deposits
+{
+     "accountNo": "DWXK000001",
+     "amount": 25.12,
+     "currency": "USD",
+     "type": "BULK_FUNDING",
+     "bankAccountID": "bank_a4656e60-321e-425b-aa0d-a2e75c38885f",
+     "note": "Deposit to my autopilot managed account"
+}
+```
+```json Deposits(ACH)
+POST /back-office/funding/deposits
+{
+     "accountNo": "DWXK000001",
+     "amount": 25.12,
+     "currency": "USD",
+     "type": "ACH",
+     "bankAccountID": "bank_a4656e60-321e-425b-aa0d-a2e75c38885f",
+     "note": "Deposit to my autopilot managed account"
+}
+```
+
+When creating a Withdrawal in an AutoPilot-enabled account, AutoPilot will automatically create a series of sell orders to generate the requested amount of cash to be withdrawn. All sell orders will take place at approximately 10AM EST at the next available AutoPilot trading window. Note that AutoPilots Sell methodology is First in, First Out (FIFO).
+
+To learn more about creating Withdrawals, read [Withdrawing](https://developer.drivewealth.com/apis/docs/withdrawing).
+
+When attempting to completely liquidate an AutoPilot-enabled account, use the `liquidate` field to express this:
+
+```json Liquidate(BULK)
+POST /back-office/funding/redemptions
+{
+    "accountNo": "DWKU000293",
+    "currency": "USD",
+    "type": "BULK_FUNDING",
+    "liquidate": true,
+    "bankAccountID": "bank_a4656e60-321e-425b-aa0d-a2e75c38885f",
+    "note": "Give me all my money"
+}
+```
+```json Liquidate(ACH)
+POST /back-office/funding/redemptions
+{
+    "accountNo": "DWKU000293",
+    "currency": "USD",
+    "type": "ACH",
+    "liquidate": true,
+    "details": {
+       "beneficiaryName": "Joe Sudia",
+       "beneficiaryAccountNumber": "7442393174",
+       "beneficiaryAccountType": "CHECKING",
+       "beneficiaryRoutingNumber": "7442393174"
+    },
+    "note": "Give me all my money"
+}
+```
+
+Whether you submit a Withdrawal through bulk funding or individual funding, the API returns a trackable `redemptionID`. When a Withdrawal is first created, its status will reflect as “pending”. After DriveWealth runs basic validation on the redemption request (ex: checking to see if the customer account has a market value greater than the requested amount), the status will automatically move to “Approved”. AutoPilot will create sell orders at the next given trade window only for approved requests. Once the sell orders have completed, and the transfer is initiated, the redemption status will be marked as “Successful”.
+
+## Automated fee deductions
+
+Many RIAs wish to include an AUM fee deduction in their investment offering. DriveWealth helps clients automate this process.
+
+To charge a fee to an Account, use the [Create Withdrawal](https://developer.drivewealth.com/apis/reference/post_funding-redemptions) API by setting `type` to `CASH_TRANSFER`and `transactionCode` to `FEE_AUM` . When the fee is deducted from the Account, Transactions will automatically reflect that a fee was deducted.
+
+```javascript json
+POST /back-office/funding/redemptions
+{
+  "accountNo":"DWGC000003",
+  "amount":5,
+  "currency":"USD",
+  "type":"CASH_TRANSFER",
+  "transactionCode":"FEE_AUM",
+  "details":{
+     "partnerAccountNo":"{{partnerAccountNo}}"
+   },
+  "note":"AUM Fee Feb 2024"
+}
+```
+
+When a fee is charged to an Account, AutoPilot will look to liquidate the cash balance of the account before liquidating any Positions to generate cash.

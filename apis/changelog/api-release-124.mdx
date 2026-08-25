@@ -1,0 +1,21 @@
+---
+title: "API Release 1.24"
+---
+
+## API Release 1.24
+
+| Release Date         | Status   |
+| :------------------- | :------- |
+| September 16th, 2021 | RELEASED |
+
+## Features and Enhancements
+
+#### :fireworks:  **Virtual Accounts** :fireworks:
+
+DriveWealth is releasing a core product update that would allow Partners to create virtual accounts for their end customers to reduce the number of deposits that fall into suspense. More information can be found on the [Virtual Bank Account](https://developer.drivewealth.com/apis/reference/virtual-accounts-1) reference page or on the [benefit of using virtual accounts](https://developer.drivewealth.com/apis/docs/benefit-of-using-virtual-accounts) Playbook guide. To take advantage of this new service or for additional information please reach out to your Account Manager!
+
+#### **Bulk Funding Event**
+
+A new event type has been added for Partners that are utilizing the [Bulk Funding](https://developer.drivewealth.com/apis/reference/customer-deposit) method of depositing funds into customer accounts. The previously mentioned [IFA Report Updated](https://developer.drivewealth.com/apis/reference/ifa-report-updated) has been broken out into an individual event for the`SUCCESSFUL` status mutation, for more information please see [IFA Report Completed](https://developer.drivewealth.com/apis/reference/ifa-report-completed). The event type will be added on the release date to Partners who are actively using the bulk funding service.
+
+Additionally, when a bulk funding request gets moved to an `APPROVED` status on the customer side a [Deposits Updated](https://developer.drivewealth.com/apis/reference/deposits-updated) event is now triggered.

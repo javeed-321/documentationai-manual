@@ -1,0 +1,601 @@
+{
+  "slug": "apis/docs/getting-balances-and-positions",
+  "source": "https://developer.drivewealth.com/apis/docs/getting-balances-and-positions.md",
+  "url": "https://developer.drivewealth.com/apis/docs/getting-balances-and-positions",
+  "title": "Getting balances and positions",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-08-20T23:55:44.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 15,
+    "code": 7,
+    "list": 4,
+    "blockquote": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Getting balances and positions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Getting balances and positions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Real-time APIs are updated as transactions occur to reflect a comprehensive view of a customer’s investments and the performance of their portfolio.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Real-time APIs are updated as transactions occur to reflect a comprehensive view of a customer’s investments and the performance of their portfolio.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Cash balances",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Cash balances",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Use the [Money Endpoint](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary-money) to access realtime snapshots of an account's cash balance.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Use the Money Endpoint to access realtime snapshots of an account's cash balance.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        38
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/summary/money\n\n{\n  \"accountID\": \"35fae684-4a96...\",\n  \"accountNo\": \"ABCD000040\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2021-04-23T18:41:32.440Z\",\n  \"cash\": {\n    \"cashAvailableForTrade\": 400,\n    \"cashAvailableForWithdrawal\": 100,\n    \"cashBalance\": 500,\n    \"noBuyingPowerReason\": null,\n    \"cashSettlement\": [\n      {\n        \"utcTime\": \"2021-04-27T13:30:00.001Z\",\n        \"cash\": 300\n      }\n    ],\n    \"pendingPaymentsAmount\": 0\n  },\n  ...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/summary/money\n\n{\n  \"accountID\": \"35fae684-4a96...\",\n  \"accountNo\": \"ABCD000040\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2021-04-23T18:41:32.440Z\",\n  \"cash\": {\n    \"cashAvailableForTrade\": 400,\n    \"cashAvailableForWithdrawal\": 100,\n    \"cashBalance\": 500,\n    \"noBuyingPowerReason\": null,\n    \"cashSettlement\": [\n      {\n        \"utcTime\": \"2021-04-27T13:30:00.001Z\",\n        \"cash\": 300\n      }\n    ],\n    \"pendingPaymentsAmount\": 0\n  },\n  ...\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "There are multiple types of cash balances shown above, all of which you’ll want to use differently:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are multiple types of cash balances shown above, all of which you’ll want to use differently:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        42,
+        44
+      ],
+      "raw": "* **Buying Power** (`cashAvailableForTrade`) — This represents the amount of cash a user can use to buy securities. The customer above can place $400 worth of buy trades right now.\n* **Available for withdrawal** (`cashAvailableForWithdrawal`) — The amount of money that can be withdrawn from the Account. This customer can only withdraw $100 today. This is due to $300 that is not yet settled (likely from a recent sale), and displayed in the cashSettlement array.\n* **Cash Balance** (`cashBalance`) — The amount of cash this customer owns. This customer holds $500, but can only invest $400. This is likely due to an outstanding buy order that has not yet been completed.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Buying Power (cashAvailableForTrade) — This represents the amount of cash a user can use to buy securities. The customer above can place $400 worth of buy trades right now.Available for withdrawal (cashAvailableForWithdrawal) — The amount of money that can be withdrawn from the Account. This customer can only withdraw $100 today. This is due to $300 that is not yet settled (likely from a recent sale), and displayed in the cashSettlement array.Cash Balance (cashBalance) — The amount of cash this customer owns. This customer holds $500, but can only invest $400. This is likely due to an outstanding buy order that has not yet been completed.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "## Asset positions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Asset positions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "The [Positions Endpoint](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary-positions) will return a list of held Positions in an Account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Positions Endpoint will return a list of held Positions in an Account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        50,
+        99
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/summary/positions\n\nResponse:\n{\n\t\"accountID\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n\t\"accountNo\": \"DWBG000052\",\n\t\"tradingType\": \"CASH\",\n\t\"updated\": \"2017-06-16T15:35:30.617Z\",\n\t\"equityValue\": 34275565.44,\n\t\"optionsValue\": 12345.67,\n\t\"positionsValue\": 34287911.11,\n\t\"equityPositions\": [\n\t\t{\n\t\t\t\"symbol\": \"MS\",\n\t\t\t\"instrumentID\": \"3fb1e8a9-f7d5-4d90-95e2-43e7326b5636\",\n\t\t\t\"openQty\": 31.65120151,\n\t\t\t\"availableForWithdrawalQty\": null,\n\t\t\t\"costBasis\": 975.98,\n\t\t\t\"marketValue\": 4540.36,\n\t\t\t\"side\": \"B\",\n\t\t\t\"priorClose\": 144.29,\n\t\t\t\"availableForTradingQty\": 31.65120151,\n\t\t\t\"avgPrice\": 30.84,\n\t\t\t\"mktPrice\": 143.45,\n\t\t\t\"unrealizedPL\": 3564.38,\n\t\t\t\"unrealizedDayPLPercent\": -0.58,\n\t\t\t\"unrealizedDayPL\": -26.59\n\t\t}\n\t],\n\t\"optionPositions\": [\n\t\t{\n\t\t\t\"symbol\": \"AAPL210331C00300000\",\n\t\t\t\"instrumentID\": \"2cbd5648-7afa-4347-8c82-743fd74a123a\",\n\t\t\t\"openQty\": 5,\n\t\t\t\"availableForWithdrawalQty\": null,\n\t\t\t\"costBasis\": 4300.12,\n\t\t\t\"marketValue\": 4400.12,\n\t\t\t\"side\": \"B\",\n\t\t\t\"priorClose\": 400.53,\n\t\t\t\"availableForTradingQty\": 5,\n\t\t\t\"avgPrice\": 330.07,\n\t\t\t\"mktPrice\": 440.75,\n\t\t\t\"unrealizedPL\": 14.24,\n\t\t\t\"unrealizedDayPLPercent\": 1.65,\n\t\t\t\"unrealizedDayPL\": 0.54\n\t\t}\n\t]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/summary/positions\n\nResponse:\n{\n\t\"accountID\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n\t\"accountNo\": \"DWBG000052\",\n\t\"tradingType\": \"CASH\",\n\t\"updated\": \"2017-06-16T15:35:30.617Z\",\n\t\"equityValue\": 34275565.44,\n\t\"optionsValue\": 12345.67,\n\t\"positionsValue\": 34287911.11,\n\t\"equityPositions\": [\n\t\t{\n\t\t\t\"symbol\": \"MS\",\n\t\t\t\"instrumentID\": \"3fb1e8a9-f7d5-4d90-95e2-43e7326b5636\",\n\t\t\t\"openQty\": 31.65120151,\n\t\t\t\"availableForWithdrawalQty\": null,\n\t\t\t\"costBasis\": 975.98,\n\t\t\t\"marketValue\": 4540.36,\n\t\t\t\"side\": \"B\",\n\t\t\t\"priorClose\": 144.29,\n\t\t\t\"availableForTradingQty\": 31.65120151,\n\t\t\t\"avgPrice\": 30.84,\n\t\t\t\"mktPrice\": 143.45,\n\t\t\t\"unrealizedPL\": 3564.38,\n\t\t\t\"unrealizedDayPLPercent\": -0.58,\n\t\t\t\"unrealizedDayPL\": -26.59\n\t\t}\n\t],\n\t\"optionPositions\": [\n\t\t{\n\t\t\t\"symbol\": \"AAPL210331C00300000\",\n\t\t\t\"instrumentID\": \"2cbd5648-7afa-4347-8c82-743fd74a123a\",\n\t\t\t\"openQty\": 5,\n\t\t\t\"availableForWithdrawalQty\": null,\n\t\t\t\"costBasis\": 4300.12,\n\t\t\t\"marketValue\": 4400.12,\n\t\t\t\"side\": \"B\",\n\t\t\t\"priorClose\": 400.53,\n\t\t\t\"availableForTradingQty\": 5,\n\t\t\t\"avgPrice\": 330.07,\n\t\t\t\"mktPrice\": 440.75,\n\t\t\t\"unrealizedPL\": 14.24,\n\t\t\t\"unrealizedDayPLPercent\": 1.65,\n\t\t\t\"unrealizedDayPL\": 0.54\n\t\t}\n\t]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        101,
+        101
+      ],
+      "raw": "A full description of properties can be found in the API specification. As an example, for this customer:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A full description of properties can be found in the API specification. As an example, for this customer:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        103,
+        108
+      ],
+      "raw": "* $4540.36 worth of Equity MS is owned\n  * A total of $975.98 was invested into ABCD, meaning a total profit of $3564.38\n  * All 31.65120151 held shares are available to be sold\n* $4400.12 worth of Option AAPL210331C00300000 is owned\n  * A total of $4300.12 was invested into AAPL210331C00300000, meaning a total profit of $14.24\n  * All 5 held contracts are available to be sold",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "$4540.36 worth of Equity MS is ownedA total of $975.98 was invested into ABCD, meaning a total profit of $3564.38All 31.65120151 held shares are available to be sold$4400.12 worth of Option AAPL210331C00300000 is ownedA total of $4300.12 was invested into AAPL210331C00300000, meaning a total profit of $14.24All 5 held contracts are available to be sold",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        110,
+        110
+      ],
+      "raw": "## Account performance",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Account performance",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        112,
+        112
+      ],
+      "raw": "At the end of each trading day, DriveWealth captures several metrics for each Account. These metrics can be used to show a change in value over time, and include the following:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "At the end of each trading day, DriveWealth captures several metrics for each Account. These metrics can be used to show a change in value over time, and include the following:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        114,
+        121
+      ],
+      "raw": "* **Realized P/L** – The actual (realized) profit or loss.\n* **Unrealized Day P/L** – The daily, uncaptured, profit or loss on open positions\n* **Cumulative Realized P/L** – The aggregate realized P/L from inception of the account (each day adds to previous days)\n* **Equity** – The total invested equity (excluding cash)\n* **Cash** – The total cash balance (settled and unsettled)\n* **Deposits** – The cumulative amount in deposits since inception\n* **Withdrawals** – The cumulative amount in withdrawals since inception\n* **Fees** – Total dollar amount of fees calculated from 4pm ET of previous day until current time.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Realized P/L – The actual (realized) profit or loss.Unrealized Day P/L – The daily, uncaptured, profit or loss on open positionsCumulative Realized P/L – The aggregate realized P/L from inception of the account (each day adds to previous days)Equity – The total invested equity (excluding cash)Cash – The total cash balance (settled and unsettled)Deposits – The cumulative amount in deposits since inceptionWithdrawals – The cumulative amount in withdrawals since inceptionFees – Total dollar amount of fees calculated from 4pm ET of previous day until current time.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        123,
+        123
+      ],
+      "raw": "Access these metrics via the [Performance Endpoint](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-performance):",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Access these metrics via the Performance Endpoint:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        125,
+        148
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/performance\n\n{\n  \"accountID\": \"cc07f91b-7ee1...\",\n  \"accountNo\": \"ABCD000040\",\n  \"startDate\": \"2018-09-18\",\n  \"endDate\": \"2018-09-18\",\n  \"lastUpdated\": \"2018-09-18T17:34:00.370Z\",\n  \"performance\": [\n    {\n      \"realizedDayPL\": 0,\n      \"unrealizedDayPL\": 13.11,\n      \"cumRealizedPL\": 0,\n      \"date\": \"2018-09-18\",\n      \"equity\": 9941.59,\n      \"cash\": 2698.49,\n      \"deposits\": 100,\n      \"withdrawals\": 0,\n      \"fees\": 0\n    }\n  ]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/performance\n\n{\n  \"accountID\": \"cc07f91b-7ee1...\",\n  \"accountNo\": \"ABCD000040\",\n  \"startDate\": \"2018-09-18\",\n  \"endDate\": \"2018-09-18\",\n  \"lastUpdated\": \"2018-09-18T17:34:00.370Z\",\n  \"performance\": [\n    {\n      \"realizedDayPL\": 0,\n      \"unrealizedDayPL\": 13.11,\n      \"cumRealizedPL\": 0,\n      \"date\": \"2018-09-18\",\n      \"equity\": 9941.59,\n      \"cash\": 2698.49,\n      \"deposits\": 100,\n      \"withdrawals\": 0,\n      \"fees\": 0\n    }\n  ]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        150,
+        150
+      ],
+      "raw": "The “performance” array will hold a performance object based on the date range or period set in the query parameters. For example, if you want to retrieve the performance metrics from January to April:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The “performance” array will hold a performance object based on the date range or period set in the query parameters. For example, if you want to retrieve the performance metrics from January to April:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        152,
+        154
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/performance?from=2023-01-01&to=2023-04-30\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/performance?from=2023-01-01&to=2023-04-30"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        156,
+        156
+      ],
+      "raw": "Likewise, if you want to retrieve the performance for a specific period (e.g 2 weeks, 1 month, 10 days) from the current day then you can make the following type of  request:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Likewise, if you want to retrieve the performance for a specific period (e.g 2 weeks, 1 month, 10 days) from the current day then you can make the following type of  request:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        158,
+        160
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/performance?period=2w\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/performance?period=2w"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        162,
+        162
+      ],
+      "raw": "## Margin details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Margin details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        164,
+        164
+      ],
+      "raw": "Customers trading with leverage have additional balances they need to monitor in addition to the other metrics shown above. Read [Enabling leverage](https://developer.drivewealth.com/apis/docs/enabling-leverage) to learn how to create an Account that tracks these values.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Customers trading with leverage have additional balances they need to monitor in addition to the other metrics shown above. Read Enabling leverage to learn how to create an Account that tracks these values.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        166,
+        192
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/summary/margin\n{\n  \"accountID\": \"35fae684-4a96-424d-add0-d235d7b1e6d2.1445614025578\",\n  \"accountNo\": \"DWHM000040\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2021-04-23T18:41:32.440Z\",\n  \"margin\": {\n        \"marginRequirement\": 0.5,\n        \"longMarketValue\": 9000,\n        \"debitBalance\": -1000,\n        \"equity\": 4000,\n        \"equityFraction\": 1,\n        \"equityRequired\": 3500,\n        \"accruedInterest\": 0,\n        \"patternDayTrader\": false,\n        \"restricted\": false,\n        \"daySMA\": 3335.66,\n        \"rtExcessEquity\": 1500,\n        \"effectiveSMA\": 3335.66,\n        \"noBuyingPowerReason\": null,\n        \"marginCall\": null,\n        \"restingOrders\": 0\n    }\n\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/summary/margin\n{\n  \"accountID\": \"35fae684-4a96-424d-add0-d235d7b1e6d2.1445614025578\",\n  \"accountNo\": \"DWHM000040\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2021-04-23T18:41:32.440Z\",\n  \"margin\": {\n        \"marginRequirement\": 0.5,\n        \"longMarketValue\": 9000,\n        \"debitBalance\": -1000,\n        \"equity\": 4000,\n        \"equityFraction\": 1,\n        \"equityRequired\": 3500,\n        \"accruedInterest\": 0,\n        \"patternDayTrader\": false,\n        \"restricted\": false,\n        \"daySMA\": 3335.66,\n        \"rtExcessEquity\": 1500,\n        \"effectiveSMA\": 3335.66,\n        \"noBuyingPowerReason\": null,\n        \"marginCall\": null,\n        \"restingOrders\": 0\n    }\n\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        194,
+        194
+      ],
+      "raw": "For this Account, there are some prudent details important to show to a customer:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For this Account, there are some prudent details important to show to a customer:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        196,
+        200
+      ],
+      "raw": "* **longMarketValue** –  The real time dollar value of the current holdings in the margin account.\n* **debitBalance** – This represents the real time value of debt in the margin account. A positive number is a debit balance while a negative amount is a credit balance. A customer will pay interest on any debit balance amount.\n* **equity** – The amount of equity the user holds based on their contributions to the account.\n* **equityRequired** – Minimum equity required to stay above a DriveWealth house margin call. If the account is in a margin call (house or exchange) this field will also appear in the `marginCall` object.\n* **rtExcessEquity** – Equity in excess of equityRequired calculated in real time (more is good).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "longMarketValue –  The real time dollar value of the current holdings in the margin account.debitBalance – This represents the real time value of debt in the margin account. A positive number is a debit balance while a negative amount is a credit balance. A customer will pay interest on any debit balance amount.equity – The amount of equity the user holds based on their contributions to the account.equityRequired – Minimum equity required to stay above a DriveWealth house margin call. If the account is in a margin call (house or exchange) this field will also appear in the marginCall object.rtExcessEquity – Equity in excess of equityRequired calculated in real time (more is good).",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        202,
+        202
+      ],
+      "raw": "Trading on margin refers to the practice of borrowing money from a broker (DriveWealth) to trade securities. This allows traders to potentially increase their returns by leveraging their capital, but it also increases the risk of losses. The borrowed money is known as a margin loan, and the trader is required to maintain a minimum level of equity in their account, known as the minimum margin (`equityRequired`), to cover potential losses. A margin call occurs when the value of a trader's securities in a margin account drops to a level where the equity falls below the minimum margin requirement set by the broker.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Trading on margin refers to the practice of borrowing money from a broker (DriveWealth) to trade securities. This allows traders to potentially increase their returns by leveraging their capital, but it also increases the risk of losses. The borrowed money is known as a margin loan, and the trader is required to maintain a minimum level of equity in their account, known as the minimum margin (equityRequired), to cover potential losses. A margin call occurs when the value of a trader's securities in a margin account drops to a level where the equity falls below the minimum margin requirement set by the broker.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        204,
+        204
+      ],
+      "raw": "> John purchases $10,000 worth of stock using a 2:1 margin loan. This means John contributed $5,000 of his own money and borrowed an additional $5,000 on margin. DriveWealth requires a minimum margin of 30-35%, so John must maintain at least $3,500 in equity in the account. If the value of the stock (`longMarketValue`) drops to $8,000, John's equity would fall to $3,000 ($8,000 value of stock - $5,000 margin loan), which is below the minimum margin requirement (`equityRequired`). This would trigger a margin call, and John would be required to deposit additional funds or securities into the account to bring the equity back up to the minimum level.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "John purchases $10,000 worth of stock using a 2:1 margin loan. This means John contributed $5,000 of his own money and borrowed an additional $5,000 on margin. DriveWealth requires a minimum margin of 30-35%, so John must maintain at least $3,500 in equity in the account. If the value of the stock (longMarketValue) drops to $8,000, John's equity would fall to $3,000 ($8,000 value of stock - $5,000 margin loan), which is below the minimum margin requirement (equityRequired). This would trigger a margin call, and John would be required to deposit additional funds or securities into the account to bring the equity back up to the minimum level.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        206,
+        206
+      ],
+      "raw": "It's important to note that if a customer is unable to meet a margin call, DriveWealth can sell securities in the account to bring the equity back up to the minimum level, which could result in significant realized losses for the customer.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "It's important to note that if a customer is unable to meet a margin call, DriveWealth can sell securities in the account to bring the equity back up to the minimum level, which could result in significant realized losses for the customer.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        208,
+        208
+      ],
+      "raw": "If a customer is issued a margin call because they haven’t contributed enough equity to the Account, you’ll see additional data in that same API:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If a customer is issued a margin call because they haven’t contributed enough equity to the Account, you’ll see additional data in that same API:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        210,
+        239
+      ],
+      "raw": "```javascript\nGET /back-office/accounts/{accountID}/summary/margin\n{\n  \"accountID\": \"35fae684-4a96-424d-add0-d235d7b1e6d2.1445614025578\",\n  \"accountNo\": \"DWHM000040\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2021-04-23T18:41:32.440Z\",\n  \"margin\": {\n    \"marginRequirement\": .5,\n    \"longMarketValue\": 8000,\n    \"debitBalance\": -2000,\n    \"equity\": 3000,\n    \"equityFraction\": 1,\n    \"equityRequired\": 3500,\n    \"accruedInterest\": 0,\n    \"patternDayTrader\": false,\n    \"restricted\": false,\n    \"daySMA\": 0,\n    \"rtExcessEquity\": 0,\n    \"effectiveSMA\": 0,\n    \"noBuyingPowerReason\": null,\n    \"marginCall\":{\n      \"marginCallType\": \"HOUSE\",\n      \"equityRequired\": 500,\n      \"callAmount\": 500\n    }\n    \"restingOrders\": 0\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/summary/margin\n{\n  \"accountID\": \"35fae684-4a96-424d-add0-d235d7b1e6d2.1445614025578\",\n  \"accountNo\": \"DWHM000040\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2021-04-23T18:41:32.440Z\",\n  \"margin\": {\n    \"marginRequirement\": .5,\n    \"longMarketValue\": 8000,\n    \"debitBalance\": -2000,\n    \"equity\": 3000,\n    \"equityFraction\": 1,\n    \"equityRequired\": 3500,\n    \"accruedInterest\": 0,\n    \"patternDayTrader\": false,\n    \"restricted\": false,\n    \"daySMA\": 0,\n    \"rtExcessEquity\": 0,\n    \"effectiveSMA\": 0,\n    \"noBuyingPowerReason\": null,\n    \"marginCall\":{\n      \"marginCallType\": \"HOUSE\",\n      \"equityRequired\": 500,\n      \"callAmount\": 500\n    }\n    \"restingOrders\": 0\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        241,
+        241
+      ],
+      "raw": "This customer must deposit $500 to clear the margin call.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This customer must deposit $500 to clear the margin call.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

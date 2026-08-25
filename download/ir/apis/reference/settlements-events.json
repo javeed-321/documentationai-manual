@@ -1,0 +1,703 @@
+{
+  "slug": "apis/reference/settlements-events",
+  "source": "https://developer.drivewealth.com/apis/reference/settlements-events.md",
+  "url": "https://developer.drivewealth.com/apis/reference/settlements-events",
+  "title": "Settlement Events",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-22T15:02:02.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 13,
+    "paragraph": 12,
+    "code": 12
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Settlement Events",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Settlement Events",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Settlements Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Settlements Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "The bulk funding report generation has started; the event provides the metadata about the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The bulk funding report generation has started; the event provides the metadata about the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        33
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n    \"type\": \"reports.instantFundingSettlement.created\",\n    \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n    \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n    \"payload\": {\n        \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n        \"settlementProfileID\": \"settlement-profile-bank-account-1\",\n        \"settlementDate\": \"2021-05-25\",\n        \"status\": \"PENDING\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 100,\n        \"depositsAmount\": 100,\n        \"created\": \"2021-05-25T00:00:00.293Z\",\n        \"updated\": \"2021-05-25T00:00:00.293Z\",\n        \"updatedBy\": \"Instant Funding Aggregator Job\"\n    },\n    \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n    \"type\": \"reports.instantFundingSettlement.created\",\n    \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n    \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n    \"payload\": {\n        \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n        \"settlementProfileID\": \"settlement-profile-bank-account-1\",\n        \"settlementDate\": \"2021-05-25\",\n        \"status\": \"PENDING\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 100,\n        \"depositsAmount\": 100,\n        \"created\": \"2021-05-25T00:00:00.293Z\",\n        \"updated\": \"2021-05-25T00:00:00.293Z\",\n        \"updatedBy\": \"Instant Funding Aggregator Job\"\n    },\n    \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## Settlements Updates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Settlements Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "The bulk funding report generation has been updated; the event provides the metadata about the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The bulk funding report generation has been updated; the event provides the metadata about the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        39,
+        59
+      ],
+      "raw": "```json Updated\n{\n    \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n    \"type\": \"reports.instantFundingSettlement.updated\",\n    \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n    \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n    \"payload\": {\n        \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n        \"settlementProfileID\": \"settlement-profile-bank-account-1\",\n        \"settlementDate\": \"2021-05-25\",\n        \"status\": \"APPROVED\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 100,\n        \"depositsAmount\": 100,\n        \"created\": \"2021-05-25T00:00:00.293Z\",\n        \"updated\": \"2021-05-26T00:15:00.223Z\",\n        \"updatedBy\": \"Instant Funding Aggregator Job\"\n    },\n    \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n    \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n    \"type\": \"reports.instantFundingSettlement.updated\",\n    \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n    \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n    \"payload\": {\n        \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n        \"settlementProfileID\": \"settlement-profile-bank-account-1\",\n        \"settlementDate\": \"2021-05-25\",\n        \"status\": \"APPROVED\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 100,\n        \"depositsAmount\": 100,\n        \"created\": \"2021-05-25T00:00:00.293Z\",\n        \"updated\": \"2021-05-26T00:15:00.223Z\",\n        \"updatedBy\": \"Instant Funding Aggregator Job\"\n    },\n    \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "## Settlements Completed",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Settlements Completed",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "The bulk funding report has been marked as successful; the event provides the metadata about the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The bulk funding report has been marked as successful; the event provides the metadata about the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        65,
+        85
+      ],
+      "raw": "```json Completed\n{\n    \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n    \"type\": \"reports.instantFundingSettlement.completed\",\n    \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n    \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n    \"payload\": {\n        \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n        \"settlementProfileID\": \"settlement-profile-bank-account-1\",\n        \"settlementDate\": \"2021-05-25\",\n        \"status\": \"SUCCESSFUL\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 100,\n        \"depositsAmount\": 100,\n        \"created\": \"2021-05-25T00:00:00.293Z\",\n        \"updated\": \"2021-05-26T00:15:00.223Z\",\n        \"updatedBy\": \"Instant Funding Aggregator Job\"\n    },\n    \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Completed",
+        "code": "{\n    \"id\": \"event_5c489c65-fd17-48f8-bfbf-146b46f01ee5\",\n    \"type\": \"reports.instantFundingSettlement.completed\",\n    \"object\": \"INSTANT_FUNDING_SETTLEMENT_REPORT\",\n    \"timestamp\": \"2021-05-25T19:27:00.231Z\",\n    \"payload\": {\n        \"settlementID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca_20210525\",\n        \"settlementProfileID\": \"settlement-profile-bank-account-1\",\n        \"settlementDate\": \"2021-05-25\",\n        \"status\": \"SUCCESSFUL\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 100,\n        \"depositsAmount\": 100,\n        \"created\": \"2021-05-25T00:00:00.293Z\",\n        \"updated\": \"2021-05-26T00:15:00.223Z\",\n        \"updatedBy\": \"Instant Funding Aggregator Job\"\n    },\n    \"ibID\": \"1b06c469-9706-4ea0-90a6-9ad8f441d6ca\"\n}"
+      },
+      "text": "Completed",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        87,
+        87
+      ],
+      "raw": "## Reconciliation Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "The cashless brokerage report has been created; the event provides metadata about the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The cashless brokerage report has been created; the event provides metadata about the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        91,
+        108
+      ],
+      "raw": "```json Created\n{\n    \"id\": \"event_86511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\": \"reconciliations.created\",\n    \"timestamp\": \"2022-09-26T04:20:03.528998301Z\",\n    \"payload\": {\n        \"id\": \"3396978d-ebb2-4466-95c5-43ade57b9c8f_20220928\",\n        \"date\": \"2022-09-28\",\n        \"status\": \"Pending\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 0,\n        \"created\": \"2022-09-26T04:20:03.514Z\",\n        \"updated\": \"2022-09-26T04:20:03.514Z\",\n        \"updatedBy\": \"SYSTEM AGGREGATOR JOB\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\": \"event_86511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\": \"reconciliations.created\",\n    \"timestamp\": \"2022-09-26T04:20:03.528998301Z\",\n    \"payload\": {\n        \"id\": \"3396978d-ebb2-4466-95c5-43ade57b9c8f_20220928\",\n        \"date\": \"2022-09-28\",\n        \"status\": \"Pending\",\n        \"statusComment\": \"Created from aggregator service\",\n        \"totalAmount\": 0,\n        \"created\": \"2022-09-26T04:20:03.514Z\",\n        \"updated\": \"2022-09-26T04:20:03.514Z\",\n        \"updatedBy\": \"SYSTEM AGGREGATOR JOB\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        110,
+        110
+      ],
+      "raw": "## Reconciliation Updated",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        112,
+        112
+      ],
+      "raw": "The cashless brokerage report has been updated; the event provides metadata about the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The cashless brokerage report has been updated; the event provides metadata about the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        114,
+        131
+      ],
+      "raw": "```json Updated\n{\n  \"id\": \"event_1c2bfd41-677b-47df-823f-81d41bdd2aba\",\n  \"type\": \"reconciliations.updated\",\n  \"timestamp\": \"2024-05-09T00:07:00.269229259Z\",\n  \"payload\": {\n    \"id\": \"2b37a45d-341e-48a2-b838-0f9912ac8598_20240509\",\n    \"date\": \"2024-05-09\",\n    \"status\": \"Approved\",\n    \"statusComment\": \"Finished processing breakdown\",\n    \"totalAmount\": 0.05,\n    \"created\": \"2024-05-07T12:06:32.077Z\",\n    \"updated\": \"2024-05-09T00:07:00.258Z\",\n    \"updatedBy\": \"SYSTEM BREAKDOWN JOB\",\n    \"settlementProfileID\": \"profile1\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n  \"id\": \"event_1c2bfd41-677b-47df-823f-81d41bdd2aba\",\n  \"type\": \"reconciliations.updated\",\n  \"timestamp\": \"2024-05-09T00:07:00.269229259Z\",\n  \"payload\": {\n    \"id\": \"2b37a45d-341e-48a2-b838-0f9912ac8598_20240509\",\n    \"date\": \"2024-05-09\",\n    \"status\": \"Approved\",\n    \"statusComment\": \"Finished processing breakdown\",\n    \"totalAmount\": 0.05,\n    \"created\": \"2024-05-07T12:06:32.077Z\",\n    \"updated\": \"2024-05-09T00:07:00.258Z\",\n    \"updatedBy\": \"SYSTEM BREAKDOWN JOB\",\n    \"settlementProfileID\": \"profile1\"\n  }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        133,
+        133
+      ],
+      "raw": "## Reconciliation Completed",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation Completed",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        135,
+        135
+      ],
+      "raw": "The cashless brokerage report has been completed; the event provides metadata about the report.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The cashless brokerage report has been completed; the event provides metadata about the report.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        137,
+        155
+      ],
+      "raw": "```json Completed\n{\n  \"id\": \"event_4768be2d-562a-4361-a6b7-ea97300ff8f6\",\n  \"type\": \"reconciliations.completed\",\n  \"timestamp\": \"2024-05-09T00:30:46.778617825Z\",\n  \"payload\": {\n    \"id\": \"358e058e-3b71-40e0-91e3-204c8afeaf03_20240509\",\n    \"date\": \"2024-05-09\",\n    \"status\": \"Successful\",\n    \"statusComment\": \"Simulated completed on 2024-05-09\",\n    \"totalAmount\": -99.38,\n    \"batchID\": \"320428ae-fec9-4a94-a64e-1f8471c238d9\",\n    \"created\": \"2024-05-07T12:01:11.975Z\",\n    \"updated\": \"2024-05-09T00:30:46.755Z\",\n    \"updatedBy\": \"9387dd35-f6f3-4a71-932d-42dd49cd8c9d\",\n    \"settlementProfileID\": \"profile1\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Completed",
+        "code": "{\n  \"id\": \"event_4768be2d-562a-4361-a6b7-ea97300ff8f6\",\n  \"type\": \"reconciliations.completed\",\n  \"timestamp\": \"2024-05-09T00:30:46.778617825Z\",\n  \"payload\": {\n    \"id\": \"358e058e-3b71-40e0-91e3-204c8afeaf03_20240509\",\n    \"date\": \"2024-05-09\",\n    \"status\": \"Successful\",\n    \"statusComment\": \"Simulated completed on 2024-05-09\",\n    \"totalAmount\": -99.38,\n    \"batchID\": \"320428ae-fec9-4a94-a64e-1f8471c238d9\",\n    \"created\": \"2024-05-07T12:01:11.975Z\",\n    \"updated\": \"2024-05-09T00:30:46.755Z\",\n    \"updatedBy\": \"9387dd35-f6f3-4a71-932d-42dd49cd8c9d\",\n    \"settlementProfileID\": \"profile1\"\n  }\n}"
+      },
+      "text": "Completed",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        157,
+        157
+      ],
+      "raw": "## \\[NEW] Settlement Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "[NEW] Settlement Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        159,
+        159
+      ],
+      "raw": "The settlement generation has started.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The settlement generation has started.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        161,
+        180
+      ],
+      "raw": "```json Created\n{\n    \"id\" : \"event_96511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\" : \"settlements.created\",\n    \"object\" : \"SETTLEMENTS_REPORT\",\n    \"timestamp\" : \"2024-03-24T22:28:21.810Z\",\n    \"payload\" : {\n        \"settlementID\": \"sett_63ccb073-a7b6-4b33-af77-5baec5cc4494_profile1_20240324\",\n        \"settlementDate\": \"2024-03-24\",\n        \"partnerID\": \"63ccb073-a7b6-4b33-af77-5baec5cc4494\",\n        \"status\": \"PENDING\",\n        \"statusComment\": \"Report generated via aggregator cron job.\",\n        \"totalAmount\": -14250,\n        \"createdAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedBy\": \"SYSTEM\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n    \"id\" : \"event_96511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\" : \"settlements.created\",\n    \"object\" : \"SETTLEMENTS_REPORT\",\n    \"timestamp\" : \"2024-03-24T22:28:21.810Z\",\n    \"payload\" : {\n        \"settlementID\": \"sett_63ccb073-a7b6-4b33-af77-5baec5cc4494_profile1_20240324\",\n        \"settlementDate\": \"2024-03-24\",\n        \"partnerID\": \"63ccb073-a7b6-4b33-af77-5baec5cc4494\",\n        \"status\": \"PENDING\",\n        \"statusComment\": \"Report generated via aggregator cron job.\",\n        \"totalAmount\": -14250,\n        \"createdAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedBy\": \"SYSTEM\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        182,
+        182
+      ],
+      "raw": "## \\[NEW] Settlement Approved",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "[NEW] Settlement Approved",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        184,
+        184
+      ],
+      "raw": "The settlement has been approved.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The settlement has been approved.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        186,
+        205
+      ],
+      "raw": "```json Updated\n{\n    \"id\" : \"event_96511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\" : \"settlements.updated\",\n    \"object\" : \"SETTLEMENTS_REPORT\",\n    \"timestamp\" : \"2024-03-24T22:28:21.810Z\",\n    \"payload\" : {\n        \"settlementID\": \"sett_63ccb073-a7b6-4b33-af77-5baec5cc4494_profile1_20240324\",\n        \"settlementDate\": \"2024-03-24\",\n        \"partnerID\": \"63ccb073-a7b6-4b33-af77-5baec5cc4494\",\n        \"status\": \"APPROVED\",\n        \"statusComment\": \"Finished processing breakdown.\",\n        \"totalAmount\": -14250,\n        \"createdAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedBy\": \"SYSTEM\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n    \"id\" : \"event_96511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\" : \"settlements.updated\",\n    \"object\" : \"SETTLEMENTS_REPORT\",\n    \"timestamp\" : \"2024-03-24T22:28:21.810Z\",\n    \"payload\" : {\n        \"settlementID\": \"sett_63ccb073-a7b6-4b33-af77-5baec5cc4494_profile1_20240324\",\n        \"settlementDate\": \"2024-03-24\",\n        \"partnerID\": \"63ccb073-a7b6-4b33-af77-5baec5cc4494\",\n        \"status\": \"APPROVED\",\n        \"statusComment\": \"Finished processing breakdown.\",\n        \"totalAmount\": -14250,\n        \"createdAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedBy\": \"SYSTEM\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        207,
+        207
+      ],
+      "raw": "## \\[NEW] Settlement Completed",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "[NEW] Settlement Completed",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        209,
+        209
+      ],
+      "raw": "The settlement has been completed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The settlement has been completed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        211,
+        230
+      ],
+      "raw": "```json Completed\n{\n    \"id\" : \"event_96511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\" : \"settlements.completed\",\n    \"object\" : \"SETTLEMENTS_REPORT\",\n    \"timestamp\" : \"2024-03-24T22:28:21.810Z\",\n    \"payload\" : {\n        \"settlementID\": \"sett_63ccb073-a7b6-4b33-af77-5baec5cc4494_profile1_20240324\",\n        \"settlementDate\": \"2024-03-24\",\n        \"partnerID\": \"63ccb073-a7b6-4b33-af77-5baec5cc4494\",\n        \"status\": \"SUCCESSFUL\",\n        \"statusComment\": \"Settlement report is settled.\",\n        \"totalAmount\": -14250,\n        \"createdAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedBy\": \"SYSTEM\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Completed",
+        "code": "{\n    \"id\" : \"event_96511a83-3189-409e-8a08-b27b8eb06f75\",\n    \"type\" : \"settlements.completed\",\n    \"object\" : \"SETTLEMENTS_REPORT\",\n    \"timestamp\" : \"2024-03-24T22:28:21.810Z\",\n    \"payload\" : {\n        \"settlementID\": \"sett_63ccb073-a7b6-4b33-af77-5baec5cc4494_profile1_20240324\",\n        \"settlementDate\": \"2024-03-24\",\n        \"partnerID\": \"63ccb073-a7b6-4b33-af77-5baec5cc4494\",\n        \"status\": \"SUCCESSFUL\",\n        \"statusComment\": \"Settlement report is settled.\",\n        \"totalAmount\": -14250,\n        \"createdAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedAt\": \"2024-03-24T22:28:21.810Z\",\n        \"updatedBy\": \"SYSTEM\",\n        \"settlementProfileID\": \"profile1\"\n    }\n}"
+      },
+      "text": "Completed",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        232,
+        232
+      ],
+      "raw": "## Reconciliation Account Exclusions Created",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation Account Exclusions Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        234,
+        234
+      ],
+      "raw": "The account exclusion has been created.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The account exclusion has been created.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        236,
+        251
+      ],
+      "raw": "```json Created\n{\n  \"id\": \"event_11eba312-529f-43ea-a8b2-3251637b567e\",\n  \"type\": \"account.exclusions.created\",\n  \"timestamp\": \"2024-03-20T08:55:27.096Z\",\n  \"payload\": {\n    \"current\": {\n      \"reason\": \"CANCEL_REBILL\",\n      \"comment\": null\n    },\n    \"accountID\": \"8e714a37-ece1-4af2-a2d8-b30dc727e530.1688760093299\",\n    \"accountNo\": \"DWQU000080\",\n    \"partnerID\": \"ac5de50f-2297-e2e7-7b31-2c54872ae231\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Created",
+        "code": "{\n  \"id\": \"event_11eba312-529f-43ea-a8b2-3251637b567e\",\n  \"type\": \"account.exclusions.created\",\n  \"timestamp\": \"2024-03-20T08:55:27.096Z\",\n  \"payload\": {\n    \"current\": {\n      \"reason\": \"CANCEL_REBILL\",\n      \"comment\": null\n    },\n    \"accountID\": \"8e714a37-ece1-4af2-a2d8-b30dc727e530.1688760093299\",\n    \"accountNo\": \"DWQU000080\",\n    \"partnerID\": \"ac5de50f-2297-e2e7-7b31-2c54872ae231\"\n  }\n}"
+      },
+      "text": "Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        253,
+        253
+      ],
+      "raw": "## Reconciliation Account Exclusions Updated",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation Account Exclusions Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        255,
+        255
+      ],
+      "raw": "The account exclusion has been updated.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The account exclusion has been updated.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        257,
+        276
+      ],
+      "raw": "```json Updated\n{\n  \"id\": \"event_11eba312-529f-43ea-a8b2-3251637b567e\",\n  \"type\": \"account.exclusions.updated\",\n  \"timestamp\": \"2024-03-20T08:55:27.096Z\",\n  \"payload\": {\n    \"previous\": {\n      \"reason\": \"CANCEL_REBILL\",\n      \"comment\": null\n    },\n    \"current\": {\n      \"reason\": \"OFAC_SANCTIONED\",\n      \"comment\": null\n    },\n    \"accountID\": \"8e714a37-ece1-4af2-a2d8-b30dc727e530.1688760093299\",\n    \"accountNo\": \"DWQU000080\",\n    \"partnerID\": \"ac5de50f-2297-e2e7-7b31-2c54872ae231\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Updated",
+        "code": "{\n  \"id\": \"event_11eba312-529f-43ea-a8b2-3251637b567e\",\n  \"type\": \"account.exclusions.updated\",\n  \"timestamp\": \"2024-03-20T08:55:27.096Z\",\n  \"payload\": {\n    \"previous\": {\n      \"reason\": \"CANCEL_REBILL\",\n      \"comment\": null\n    },\n    \"current\": {\n      \"reason\": \"OFAC_SANCTIONED\",\n      \"comment\": null\n    },\n    \"accountID\": \"8e714a37-ece1-4af2-a2d8-b30dc727e530.1688760093299\",\n    \"accountNo\": \"DWQU000080\",\n    \"partnerID\": \"ac5de50f-2297-e2e7-7b31-2c54872ae231\"\n  }\n}"
+      },
+      "text": "Updated",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        278,
+        278
+      ],
+      "raw": "## Reconciliation Account Exclusions Deleted",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation Account Exclusions Deleted",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        280,
+        280
+      ],
+      "raw": "The account exclusion has been deleted.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The account exclusion has been deleted.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        282,
+        297
+      ],
+      "raw": "```json Deleted\n{\n  \"id\": \"event_11eba312-529f-43ea-a8b2-3251637b567e\",\n  \"type\": \"account.exclusions.deleted\",\n  \"timestamp\": \"2024-03-20T08:55:27.096Z\",\n  \"payload\": {\n    \"previous\": {\n      \"reason\": \"OFAC_SANCTIONED\",\n      \"comment\": null\n    },\n    \"accountID\": \"8e714a37-ece1-4af2-a2d8-b30dc727e530.1688760093299\",\n    \"accountNo\": \"DWQU000080\",\n    \"partnerID\": \"ac5de50f-2297-e2e7-7b31-2c54872ae231\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Deleted",
+        "code": "{\n  \"id\": \"event_11eba312-529f-43ea-a8b2-3251637b567e\",\n  \"type\": \"account.exclusions.deleted\",\n  \"timestamp\": \"2024-03-20T08:55:27.096Z\",\n  \"payload\": {\n    \"previous\": {\n      \"reason\": \"OFAC_SANCTIONED\",\n      \"comment\": null\n    },\n    \"accountID\": \"8e714a37-ece1-4af2-a2d8-b30dc727e530.1688760093299\",\n    \"accountNo\": \"DWQU000080\",\n    \"partnerID\": \"ac5de50f-2297-e2e7-7b31-2c54872ae231\"\n  }\n}"
+      },
+      "text": "Deleted",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

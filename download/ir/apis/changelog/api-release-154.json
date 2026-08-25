@@ -1,0 +1,634 @@
+{
+  "slug": "apis/changelog/api-release-154",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-154.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-154",
+  "title": "API Release 1.54",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 25,
+    "Callout": 5,
+    "code": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release 1.54",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release 1.54",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## API Release 1.54",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Release 1.54",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "### Deployed in UAT - Yes, available to test.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Deployed in UAT - Yes, available to test.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "### Deployed in Production - June 15, 2023.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Deployed in Production - June 15, 2023.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 1. 🚀New Features - What’s New?",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "1. 🚀New Features - What’s New?",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## 1.1 Add a new standard document type called KYC\\_VERIFICATION\\_INFO to the users object on Create User & Update User endpoints",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "1.1 Add a new standard document type called KYC_VERIFICATION_INFO to the users object on Create User & Update User endpoints",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "#### **Description -**  We are introducing a dedicated object for KYC as verification information under the /users endpoint where partners will send data to evidence KYC Verification.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Description -  We are introducing a dedicated object for KYC as verification information under the /users endpoint where partners will send data to evidence KYC Verification.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "## 1.2 Also add an optional fields block customFields to allow adding up to 5 extra custom entries.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "1.2 Also add an optional fields block customFields to allow adding up to 5 extra custom entries.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "#### **Description -**&#x54;he size of these custom entries should follow the same rules as the metadata entries map we use in other places.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Description -The size of these custom entries should follow the same rules as the metadata entries map we use in other places.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "#### Feature Toggle? - Yes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Feature Toggle? - Yes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "#### **Expected Behavior Change -**",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Expected Behavior Change -",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "> 👍 This new document is optional, however if uploaded, all fields in the object should be mandatory except the custom fields. The custom fields if entered should be used for KYC related information ONLY.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "This new document is optional, however if uploaded, all fields in the object should be mandatory except the custom fields. The custom fields if entered should be used for KYC related information ONLY.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        27,
+        52
+      ],
+      "raw": "```Text POST /users & PATCH /users\n{\n  \"userType\": \"INDIVIDUAL_TRADER\",\n  ...\n  \"documents\": [\n    {\n      \"type\": \"KYC_VERIFICATION_INFO\",\n      \"data\": {\n            \"verification\":\"APPROVED/FAILED\",\n            \"verificationIDType\":\"DRIVER_LICENSE/NATIONAL_ID/RESIDENCE_PERMIT/PASSPORT/VISA/TAX_ID/ VOTER_ID/WORK_PERMIT/TRUST/TRUST_CORP/CORPORATE”,\n            \"verificationFullName\":\"{{vendorResponse}}\",\n            \"verificiationTimestamp\":\"ISO 8601 standard\",\n            \"verificationTransactionID\":\"{{vendorResponse}}\",\n\n            // Allow this only if this is possible or it can be a map of custom fields such as \"customeFields\": Map<String, String>\n            \"customField1\": \"value1\",\n            \"customField2\": \"value2\",\n            \"customField3\": \"value3\",\n            \"customField4\": \"value4\",\n            \"customField5\": \"value5\"\n        },\n    \n    },\n    ...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "POST /users & PATCH /users",
+        "code": "{\n  \"userType\": \"INDIVIDUAL_TRADER\",\n  ...\n  \"documents\": [\n    {\n      \"type\": \"KYC_VERIFICATION_INFO\",\n      \"data\": {\n            \"verification\":\"APPROVED/FAILED\",\n            \"verificationIDType\":\"DRIVER_LICENSE/NATIONAL_ID/RESIDENCE_PERMIT/PASSPORT/VISA/TAX_ID/ VOTER_ID/WORK_PERMIT/TRUST/TRUST_CORP/CORPORATE”,\n            \"verificationFullName\":\"{{vendorResponse}}\",\n            \"verificiationTimestamp\":\"ISO 8601 standard\",\n            \"verificationTransactionID\":\"{{vendorResponse}}\",\n\n            // Allow this only if this is possible or it can be a map of custom fields such as \"customeFields\": Map<String, String>\n            \"customField1\": \"value1\",\n            \"customField2\": \"value2\",\n            \"customField3\": \"value3\",\n            \"customField4\": \"value4\",\n            \"customField5\": \"value5\"\n        },\n    \n    },\n    ...\n}"
+      },
+      "text": "POST /users & PATCH /users",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "handlebars",
+          "value": "{{vendorResponse}}",
+          "line": 37
+        },
+        {
+          "kind": "handlebars",
+          "value": "{{vendorResponse}}",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "## 1.3 Add new document types to upload new documents related to ACATS and TOD for a user.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "1.3 Add new document types to upload new documents related to ACATS and TOD for a user.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "#### **Description -** Currently there are multiple document types such as PROOF\\_OF\\_ADDRESS, VISA, DRIVERS\\_LICENCE etc that can up uploaded from the documents endpoints. We are now introducing 3 new document types:",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Description - Currently there are multiple document types such as PROOF_OF_ADDRESS, VISA, DRIVERS_LICENCE etc that can up uploaded from the documents endpoints. We are now introducing 3 new document types:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        58,
+        64
+      ],
+      "raw": "> 👍 3 new document types. These will be available in DriveHub under the Compliance tab\n>\n> ACATS\\_IN - Transfer log of positions that were moved into an account via ACATS\n>\n> ACATS\\_OUT - Transfer log of positions that were moved out of an account via ACATS\n>\n> TRANSFER\\_ON\\_DEATH - Transfer on death deed",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "3 new document types. These will be available in DriveHub under the Compliance tabACATS_IN - Transfer log of positions that were moved into an account via ACATSACATS_OUT - Transfer log of positions that were moved out of an account via ACATSTRANSFER_ON_DEATH - Transfer on death deed",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "# 2. 🎉Feature Enhancements - We are making it better for you!!",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "2. 🎉Feature Enhancements - We are making it better for you!!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "## 2.1 Add statusReason whenever DriveWealth or the partner changes the account status",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "2.1 Add statusReason whenever DriveWealth or the partner changes the account status",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "#### Existing Feature - Current account status change feature doesn't capture the process and individual who initiated the status change .",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Existing Feature - Current account status change feature doesn't capture the process and individual who initiated the status change .",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "#### For example: The reason behind status change to OPEN\\_NO\\_NEW\\_TRADE is not evident whether it is because of Payment failure, KYC failure or PDT restrictions. Can we re-open the account. Similarly if the account is Frozen we don't know the reason behind the change in status whether it was due to FINRA notice or Asset transfer.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "For example: The reason behind status change to OPEN_NO_NEW_TRADE is not evident whether it is because of Payment failure, KYC failure or PDT restrictions. Can we re-open the account. Similarly if the account is Frozen we don't know the reason behind the change in status whether it was due to FINRA notice or Asset transfer.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "#### What is improving? - As part of the change we are capturing statusReason field in the accounts PATCH API which will track the reason behind the status change. Currently we have a field namely closingReason which is primarily used when we close an account. The closingReason field will be deprecated and statusReason need to be utilized to capture the account closing reason.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "What is improving? - As part of the change we are capturing statusReason field in the accounts PATCH API which will track the reason behind the status change. Currently we have a field namely closingReason which is primarily used when we close an account. The closingReason field will be deprecated and statusReason need to be utilized to capture the account closing reason.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        76,
+        76
+      ],
+      "raw": "#### Expected change - When the account status is changed to Frozen, any recurring deposits and withdrawals will be rejected. The associated error message will look like this",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Expected change - When the account status is changed to Frozen, any recurring deposits and withdrawals will be rejected. The associated error message will look like this",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        78,
+        83
+      ],
+      "raw": "```Text ERROR CODE: 403\n{\n\"errorCode\": \"A051\",\n\"message\": \"Account has been restricted. Check account status and notes for details. Forbidden: Account Status: FROZEN\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "ERROR CODE: 403",
+        "code": "{\n\"errorCode\": \"A051\",\n\"message\": \"Account has been restricted. Check account status and notes for details. Forbidden: Account Status: FROZEN\"\n}"
+      },
+      "text": "ERROR CODE: 403",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        85,
+        94
+      ],
+      "raw": "> 📘 Good to know\n>\n> 1. if statusReason is not passed then OTHER should be by default\n> 2. If Partner has changed the status then they can change the next status.\n> 3. DW ops should have full access to change any status. Even if the status was updated by the partner\n> 4. If statusReason=OTHER then statusComment is required.\n> 5. Reasons available to Partners to choose from at this time:\n>    1. **DUPLICATE\\_ACCOUNT**\n>    2. **PARTNER\\_RESTRICTED**\n>    3. **OTHER**",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Good to knowif statusReason is not passed then OTHER should be by defaultIf Partner has changed the status then they can change the next status.DW ops should have full access to change any status. Even if the status was updated by the partnerIf statusReason=OTHER then statusComment is required.Reasons available to Partners to choose from at this time:DUPLICATE_ACCOUNTPARTNER_RESTRICTEDOTHER",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        96,
+        96
+      ],
+      "raw": "# 3. 🔧Bug Fixes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "3. 🔧Bug Fixes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "## 3.1 Quick fix time adjustment to release branch",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "3.1 Quick fix time adjustment to release branch",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        100,
+        100
+      ],
+      "raw": "#### **What is improving?** - This quick fix will improve the time it takes to identify PDT accounts when the market opens. We will be able to identify accounts with PDT violations within 5 minutes delay of market open. Once this threshold is met, the goal is to lower this time to a shorter amount.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "What is improving? - This quick fix will improve the time it takes to identify PDT accounts when the market opens. We will be able to identify accounts with PDT violations within 5 minutes delay of market open. Once this threshold is met, the goal is to lower this time to a shorter amount.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        102,
+        102
+      ],
+      "raw": "# 4. 🎁New API endpoints",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "4. 🎁New API endpoints",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        104,
+        104
+      ],
+      "raw": "## 4.1  GET /accounts/\\{accountID}/regulatory-inserts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "4.1  GET /accounts/{accountID}/regulatory-inserts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        106,
+        106
+      ],
+      "raw": "#### **Description -** This new endpoint  will replace the need for DriveWealth to send several email communications to customers to deliver the annual audited financial statement, privacy notice, BCP, updates to customer agreements, or really any official documentation that should be delivered to the customer for regulatory purposes.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 4,
+      "text": "Description - This new endpoint  will replace the need for DriveWealth to send several email communications to customers to deliver the annual audited financial statement, privacy notice, BCP, updates to customer agreements, or really any official documentation that should be delivered to the customer for regulatory purposes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        108,
+        117
+      ],
+      "raw": "> 👍 Following are the new types of regulatory inserts\n>\n> * Privacy Policy\n> * Account Agreement - Update\n> * Audited Financial Statements - Custodian\n> * Unaudited Financial Statements - Custodian\n> * Trading Disclosure - Update\n> * Regulatory Insert\n> * Account Notification - Important Information\n> * Cyber Security Notification",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "Following are the new types of regulatory insertsPrivacy PolicyAccount Agreement - UpdateAudited Financial Statements - CustodianUnaudited Financial Statements - CustodianTrading Disclosure - UpdateRegulatory InsertAccount Notification - Important InformationCyber Security Notification",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        119,
+        119
+      ],
+      "raw": "> 🚧 These regulatory inserts will only be available via API at this time. Not applicable to DriveHub.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "These regulatory inserts will only be available via API at this time. Not applicable to DriveHub.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

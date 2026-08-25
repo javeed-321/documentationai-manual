@@ -1,0 +1,726 @@
+{
+  "slug": "apis/changelog/api-release-v1820",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-v1820.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-v1820",
+  "title": "API Release v1.82.0",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 18,
+    "paragraph": 19,
+    "Table": 1,
+    "code": 1,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release v1.82.0",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release v1.82.0",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Hey, we are back with another release. We are always improving the platform and if you have any questions regarding any release, feel free to contact your relations manager or email us directly at [RMteam@drivewealth.com](mailto:rmteam@drivewealth.com).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Hey, we are back with another release. We are always improving the platform and if you have any questions regarding any release, feel free to contact your relations manager or email us directly at RMteam@drivewealth.com.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Status           | Environment |\n| :--------------- | :---------: |\n| ✨💃🏻 Prime Time |     PROD    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Environment"
+        ],
+        "rows": [
+          [
+            "✨💃🏻 Prime Time",
+            "PROD"
+          ]
+        ],
+        "align": [
+          "left",
+          "center"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Redemption remittance information",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Redemption remittance information",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "We have added support for `remittanceInformation` on funding redemptions. This gives partners additional flexibility when submitting and reviewing redemption details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have added support for remittanceInformation on funding redemptions. This gives partners additional flexibility when submitting and reviewing redemption details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "## Account funding type",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Account funding type",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "We have added `accountFundingType` to account creation, account updates, and account retrieval endpoints so partners can better classify account funding behavior.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have added accountFundingType to account creation, account updates, and account retrieval endpoints so partners can better classify account funding behavior.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## Expanded identification document support",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Expanded identification document support",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "The documents object on user endpoints now accepts a broader set of ID types and metadata fields, enabling account opening for international and non-citizen users.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The documents object on user endpoints now accepts a broader set of ID types and metadata fields, enabling account opening for international and non-citizen users.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "New document types: `PASSPORT`, `ALIEN_ID`, and `OTHER` are now valid values for the type field. `FTNLO` has been removed. New metadata fields: `issueDate`, `expiryDate`, `issuingCountry`, `issuingProvince`, and `description` are now accepted on `POST /users and PATCH /users/{userID}`. Read support: `GET /users/{userID}` now returns `idIssueDate`, `idExpiryDate`, `idIssuingCountry`, and `idIssuingProvince` at the top level of the user object.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New document types: PASSPORT, ALIEN_ID, and OTHER are now valid values for the type field. FTNLO has been removed. New metadata fields: issueDate, expiryDate, issuingCountry, issuingProvince, and description are now accepted on POST /users and PATCH /users/{userID}. Read support: GET /users/{userID} now returns idIssueDate, idExpiryDate, idIssuingCountry, and idIssuingProvince at the top level of the user object.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "Affected endpoints: `POST /users`, `PATCH /users/{userID}`, `GET /users/{userID}`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Affected endpoints: POST /users, PATCH /users/{userID}, GET /users/{userID}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## Trust and entity enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Trust and entity enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "We enhanced our entity and account support for trust workflows, including new trust account management types and expanded entity role modeling.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We enhanced our entity and account support for trust workflows, including new trust account management types and expanded entity role modeling.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "## Deposits API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deposits API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "We have added a new deposit endpoint to support updates the ACH settlement dates for a deposit by depositID.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have added a new deposit endpoint to support updates the ACH settlement dates for a deposit by depositID.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "New endpoints:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New endpoints:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "`PATCH /funding/deposits/{depositID}/achSettlement`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PATCH /funding/deposits/{depositID}/achSettlement",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "# 🎉 Feature Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "## Deposit processing status updates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deposit processing status updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "We expanded deposit status handling to support the new `PROCESSING` state across deposit, recurring deposit, and user funding deposit responses. This gives partners more visibility into in-flight deposit activity.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We expanded deposit status handling to support the new PROCESSING state across deposit, recurring deposit, and user funding deposit responses. This gives partners more visibility into in-flight deposit activity.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "## Deposit seasoning details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deposit seasoning details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "We enhanced deposit retrieval responses by adding `seasoningDetails` to deposit details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We enhanced deposit retrieval responses by adding seasoningDetails to deposit details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "## Funding redemption filtering",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Funding redemption filtering",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "We added new query parameters to redemption listing so partners can filter and paginate redemption activity more effectively.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We added new query parameters to redemption listing so partners can filter and paginate redemption activity more effectively.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "## Remittance information documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Remittance information documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "We corrected and clarified the description for `remittanceInformation` across redemption request and response payloads.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We corrected and clarified the description for remittanceInformation across redemption request and response payloads.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "## Account funding and overnight trading support",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Account funding and overnight trading support",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "We improved account configuration support with `accountFundingType`, `overnightHoursEnrolled`, and additional money summary visibility through `cashAvailableForTradeNonMarginable`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We improved account configuration support with accountFundingType, overnightHoursEnrolled, and additional money summary visibility through cashAvailableForTradeNonMarginable.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "## Instrument data improvements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Instrument data improvements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "We enhanced instrument responses with `averageLendingRate` for equities and expanded mutual fund metadata support, including new fields and validation updates.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We enhanced instrument responses with averageLendingRate for equities and expanded mutual fund metadata support, including new fields and validation updates.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        67,
+        67
+      ],
+      "raw": "## Identification and beneficiary cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Identification and beneficiary cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "We removed the legacy `FTNLO` identification type from supported schemas and improved beneficiary modeling with document support and refined request/response structures.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We removed the legacy FTNLO identification type from supported schemas and improved beneficiary modeling with document support and refined request/response structures.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "## IRA enum cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "IRA enum cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        73,
+        73
+      ],
+      "raw": "We removed unsupported IRA contribution and distribution enum values while also expanding shared enum support for newer retirement use cases.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We removed unsupported IRA contribution and distribution enum values while also expanding shared enum support for newer retirement use cases.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "# 👠🐛 Squashing bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "We are always squashing bugs, but nothing significant during this release that should be called out.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are always squashing bugs, but nothing significant during this release that should be called out.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        81,
+        335
+      ],
+      "raw": "```markdown\n## New endpoints\n\n**`PATCH /funding/deposits/{depositID}/achSettlement`**\n  - Added new endpoint\n\n## Modified endpoints\n\n**`POST /funding/redemptions`**\n- Request payload:\n  - Added property `remittanceInformation`\n  - Updated description for `remittanceInformation`\n  - Updated description for `amount`\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n- Modified the `200` response:\n  - Added property `remittanceInformation`\n  - Updated description for `amount`\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n\n**`GET /funding/redemptions/{redemptionID}`**\n- Modified the `200` response:\n  - Added property `remittanceInformation`\n  - Updated description for `remittanceInformation`\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n\n**`GET /funding/redemptions`**\n- Path parameters:\n  - Added query parameters `from`, `to`, `limit`, `direction`, `offset`, and `parentIBID`\n- Modified the `200` response:\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n\n**`GET /funding/deposits`**\n- Updated request description\n- Updated recurringFrequency description to clarify retirement schedules are CURRENT_YEAR only\n- Path parameters:\n  - Added query parameter `parentIBID`\n\n**`GET /funding/deposits/{depositID}`**\n- Modified the `200` response:\n  - Added property `seasoningDetails`\n  - Added `PROCESSING` as a supported `status` value\n  - Added status history support for status code `17`\n  - Added `PROCESSING` as a supported `statusMessage` value\n  - Removed IRA contribution values `DIRECT_ROLLOVER`, `INDIRECT_ROLLOVER`, `DIRECT_TRANSFER`, `CONVERSION`, and `RECHARACTERIZATION`\n\n**`POST /funding/deposits`**\n- Request payload:\n  - Added new `400` response\n  - Updated `originatorBankDetails` to use `bankCountry`\n  - Removed `bankAccountCountry`\n  - Removed IRA contribution values `DIRECT_ROLLOVER`, `INDIRECT_ROLLOVER`, `DIRECT_TRANSFER`, `CONVERSION`, and `RECHARACTERIZATION`\n- Modified the `200` response:\n  - Added `PROCESSING` as a supported `status` value\n  - Removed IRA contribution values `DIRECT_ROLLOVER`, `INDIRECT_ROLLOVER`, `DIRECT_TRANSFER`, `CONVERSION`, and `RECHARACTERIZATION`\n\n**`GET /accounts/{accountID}/funding/deposits`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n- Modified the `200` response:\n  - Added status code `17`\n  - Added `PROCESSING` as a supported status message\n\n**`GET /accounts/{accountID}/funding/redemptions`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n\n**`GET /users/{userID}/funding/deposits`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n- Modified the `200` response:\n  - Added status code `17`\n  - Added `PROCESSING` as a supported status message\n\n**`GET /users/{userID}/funding/redemptions`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n\n**`DELETE /funding/recurring-deposits/{recurringID}`**\n- Modified the `200` response:\n  - Added `PROCESSING` as a supported deposit history status\n\n**`GET /funding/recurring-deposits/{recurringID}`**\n- Modified the `200` response:\n  - Added `PROCESSING` as a supported deposit history status\n\n**`POST /accounts`**\n- Request payload:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n  - Added trust account management types `TRUST_SELF`, `TRUST_ADVISORY`, and `TRUST_RIA_MANAGED`\n- Modified the `200` response:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n\n**`GET /accounts/{accountID}`**\n- Modified the `200` response:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n\n**`PATCH /accounts/{accountID}`**\n- Request payload:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n- Modified the `200` response:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n\n**`GET /accounts/{accountID}/summary`**\n- Modified the `200` response:\n  - Added property `cashAvailableForTradeNonMarginable`\n\n**`GET /accounts/{accountID}/summary/money`**\n- Modified the `200` response:\n  - Added property `cashAvailableForTradeNonMarginable`\n\n**`GET /accounts/{accountID}/summary/violations`**\n- Modified the `200` response:\n  - Updated description for `violations.details`\n\n**`POST /users`**\n- Request payload:\n  - Added identification document properties `expiryDate`, `issueDate`, `issuingCountry`, `issuingProvince`, and `description`\n  - Expanded identification type enum values to include `PASSPORT`, `ALIEN_ID`, and `OTHER`\n  - Removed `FTNLO`\n  - Updated description for identification `type`\n  - Added property `dateOfDeath`\n  - Added `walletSettlementProfileID`-related tax model cleanup with `usTaxpayer`\n  - Updated director information modeling\n- Modified the `200` response:\n  - Added identification document properties `expiryDate`, `issueDate`, `issuingCountry`, `issuingProvince`, and `description`\n  - Expanded identification type enum values to include `PASSPORT`, `ALIEN_ID`, and `OTHER`\n  - Removed `FTNLO`\n  - Updated description for identification `type`\n  - Added property `dateOfDeath`\n  - Added `usTaxpayer`\n  - Updated director information modeling\n\n**`GET /users/{userID}`**\n- Modified the `200` response:\n  - Added properties `idIssuingCountry`, `idIssueDate`, `idIssuingProvince`, and `idExpiryDate`\n  - Added property `dateOfDeath`\n  - Added properties `w8received` and `w8expires`\n  - Added property `institutionalDirectorInfo`\n\n**`PATCH /users/{userID}`**\n- Request payload:\n  - Added identification document properties `description`, `issueDate`, `issuingProvince`, `issuingCountry`, and `expiryDate`\n  - Expanded identification type enum values to include `PASSPORT`, `ALIEN_ID`, and `OTHER`\n  - Removed `FTNLO`\n  - Updated description for identification `type`\n  - Added property `dateOfDeath`\n  - Removed `usTaxPayer`\n  - Added `usTaxpayer`\n  - Updated director information modeling\n- Modified the `200` response:\n  - Added properties `idIssuingProvince`, `idExpiryDate`, `idIssuingCountry`, and `idIssueDate`\n  - Added property `dateOfDeath`\n  - Added properties `w8received` and `w8expires`\n  - Added property `institutionalDirectorInfo`\n\n**`GET /accounts/{accountID}/beneficiaries`**\n- Modified the `200` response:\n  - Added property `documentID`\n  - Removed `FTNLO` from `idType`\n  - Updated description for `idType`\n\n**`POST /accounts/{accountID}/beneficiaries`**\n- Request payload:\n  - Property `primary` is now required\n  - Split beneficiary request modeling into entity and person beneficiary schemas\n- Modified the `200` response:\n  - Added property `documentID`\n  - Removed `FTNLO` from `idType`\n  - Updated description for `idType`\n\n**`GET /settlements`**\n- Modified the `200` response:\n  - Removed `REJECTED` from supported settlement status values\n\n**`GET /settlements/{settlementID}`**\n- Modified the `200` response:\n  - Removed `REJECTED` from supported settlement status values\n\n**`PATCH /funding/reconciliations/{reconciliationID}`**\n- Modified the `200` response:\n  - Removed schema `ReconciliationDetails`\n\n**`PATCH /funding/reconciliations/{reconciliationID}/attest`**\n- Modified the `200` response:\n  - Updated attestation response schema handling\n  - Removed previously exposed reconciliation detail properties from the root response\n\n**`PATCH /settlements/{settlementID}/attest`**\n- Modified the `200` response:\n  - Updated attestation response schema handling\n  - Removed previously exposed settlement detail properties from the root response\n\n**`GET /instruments/{symbolOrInstrumentID}`**\n- Modified the `200` response:\n  - Added property `averageLendingRate`\n  - Added mutual fund properties `minimumHoldingAmount` and `subAssetClassCategory`\n  - Expanded `mutualFundData.shareClass` to include `OTHER`\n  - Updated `mutualFundData.maximumPurchaseAmount` to support decimal values\n\n**`POST /entities`**\n- Request payload:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Updated description for `subType`\n- Modified the `201` response:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Added director properties `percentage` and `controlContact`\n  - Expanded supported director roles to include `TRUSTEE`, `GRANTOR`, and `BENEFICIARY`\n\n**`GET /entities/{entityId}`**\n- Modified the `200` response:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Added director properties `percentage` and `controlContact`\n  - Expanded supported director roles to include `TRUSTEE`, `GRANTOR`, and `BENEFICIARY`\n\n**`PATCH /entities/{entityId}`**\n- Request payload:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Updated description for `subType`\n- Modified the `200` response:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Added director properties `percentage` and `controlContact`\n  - Expanded supported director roles to include `TRUSTEE`, `GRANTOR`, and `BENEFICIARY`\n\n## Documentation updates\n\n**Deposit event documentation**\n- Added `depositBuyingPowerHoldExpires`, `seasoningPeriodExpires`, and `recurringDepositID` to deposit created and updated event examples\n- Updated expiration field examples to use RFC 3339 / ISO-8601 timestamp formatting\n- Added `statusPhase` and `statusPhaseComment` to the `deposits.updated` example payload\n\n**Funding schema documentation**\n- Updated `recurringFrequency` description to clarify it is only available for ACH deposits\n- Updated withdrawal `amount` description to clarify positive and negative value handling\n\n**Cash presentation updates**\n- Reordered cash-related attributes so `cashAvailableForTradeNonMarginable` appears before `cashAvailableForWithdrawal`\n\n**Shared retirement enum updates**\n- Expanded shared IRA enum support for additional retirement classifications, including `UNKNOWN` and other new contribution and distribution types\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "markdown",
+        "title": null,
+        "code": "## New endpoints\n\n**`PATCH /funding/deposits/{depositID}/achSettlement`**\n  - Added new endpoint\n\n## Modified endpoints\n\n**`POST /funding/redemptions`**\n- Request payload:\n  - Added property `remittanceInformation`\n  - Updated description for `remittanceInformation`\n  - Updated description for `amount`\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n- Modified the `200` response:\n  - Added property `remittanceInformation`\n  - Updated description for `amount`\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n\n**`GET /funding/redemptions/{redemptionID}`**\n- Modified the `200` response:\n  - Added property `remittanceInformation`\n  - Updated description for `remittanceInformation`\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n\n**`GET /funding/redemptions`**\n- Path parameters:\n  - Added query parameters `from`, `to`, `limit`, `direction`, `offset`, and `parentIBID`\n- Modified the `200` response:\n  - Removed IRA distribution values `CONVERSION` and `RECHARACTERIZATION`\n\n**`GET /funding/deposits`**\n- Updated request description\n- Updated recurringFrequency description to clarify retirement schedules are CURRENT_YEAR only\n- Path parameters:\n  - Added query parameter `parentIBID`\n\n**`GET /funding/deposits/{depositID}`**\n- Modified the `200` response:\n  - Added property `seasoningDetails`\n  - Added `PROCESSING` as a supported `status` value\n  - Added status history support for status code `17`\n  - Added `PROCESSING` as a supported `statusMessage` value\n  - Removed IRA contribution values `DIRECT_ROLLOVER`, `INDIRECT_ROLLOVER`, `DIRECT_TRANSFER`, `CONVERSION`, and `RECHARACTERIZATION`\n\n**`POST /funding/deposits`**\n- Request payload:\n  - Added new `400` response\n  - Updated `originatorBankDetails` to use `bankCountry`\n  - Removed `bankAccountCountry`\n  - Removed IRA contribution values `DIRECT_ROLLOVER`, `INDIRECT_ROLLOVER`, `DIRECT_TRANSFER`, `CONVERSION`, and `RECHARACTERIZATION`\n- Modified the `200` response:\n  - Added `PROCESSING` as a supported `status` value\n  - Removed IRA contribution values `DIRECT_ROLLOVER`, `INDIRECT_ROLLOVER`, `DIRECT_TRANSFER`, `CONVERSION`, and `RECHARACTERIZATION`\n\n**`GET /accounts/{accountID}/funding/deposits`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n- Modified the `200` response:\n  - Added status code `17`\n  - Added `PROCESSING` as a supported status message\n\n**`GET /accounts/{accountID}/funding/redemptions`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n\n**`GET /users/{userID}/funding/deposits`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n- Modified the `200` response:\n  - Added status code `17`\n  - Added `PROCESSING` as a supported status message\n\n**`GET /users/{userID}/funding/redemptions`**\n- Path parameters:\n  - Added query parameters `status`, `type`, `limit`, and `offset`\n  - Added new `400` response\n\n**`DELETE /funding/recurring-deposits/{recurringID}`**\n- Modified the `200` response:\n  - Added `PROCESSING` as a supported deposit history status\n\n**`GET /funding/recurring-deposits/{recurringID}`**\n- Modified the `200` response:\n  - Added `PROCESSING` as a supported deposit history status\n\n**`POST /accounts`**\n- Request payload:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n  - Added trust account management types `TRUST_SELF`, `TRUST_ADVISORY`, and `TRUST_RIA_MANAGED`\n- Modified the `200` response:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n\n**`GET /accounts/{accountID}`**\n- Modified the `200` response:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n\n**`PATCH /accounts/{accountID}`**\n- Request payload:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n- Modified the `200` response:\n  - Added property `accountFundingType`\n  - Added property `overnightHoursEnrolled` under `accountFeatures.equities`\n\n**`GET /accounts/{accountID}/summary`**\n- Modified the `200` response:\n  - Added property `cashAvailableForTradeNonMarginable`\n\n**`GET /accounts/{accountID}/summary/money`**\n- Modified the `200` response:\n  - Added property `cashAvailableForTradeNonMarginable`\n\n**`GET /accounts/{accountID}/summary/violations`**\n- Modified the `200` response:\n  - Updated description for `violations.details`\n\n**`POST /users`**\n- Request payload:\n  - Added identification document properties `expiryDate`, `issueDate`, `issuingCountry`, `issuingProvince`, and `description`\n  - Expanded identification type enum values to include `PASSPORT`, `ALIEN_ID`, and `OTHER`\n  - Removed `FTNLO`\n  - Updated description for identification `type`\n  - Added property `dateOfDeath`\n  - Added `walletSettlementProfileID`-related tax model cleanup with `usTaxpayer`\n  - Updated director information modeling\n- Modified the `200` response:\n  - Added identification document properties `expiryDate`, `issueDate`, `issuingCountry`, `issuingProvince`, and `description`\n  - Expanded identification type enum values to include `PASSPORT`, `ALIEN_ID`, and `OTHER`\n  - Removed `FTNLO`\n  - Updated description for identification `type`\n  - Added property `dateOfDeath`\n  - Added `usTaxpayer`\n  - Updated director information modeling\n\n**`GET /users/{userID}`**\n- Modified the `200` response:\n  - Added properties `idIssuingCountry`, `idIssueDate`, `idIssuingProvince`, and `idExpiryDate`\n  - Added property `dateOfDeath`\n  - Added properties `w8received` and `w8expires`\n  - Added property `institutionalDirectorInfo`\n\n**`PATCH /users/{userID}`**\n- Request payload:\n  - Added identification document properties `description`, `issueDate`, `issuingProvince`, `issuingCountry`, and `expiryDate`\n  - Expanded identification type enum values to include `PASSPORT`, `ALIEN_ID`, and `OTHER`\n  - Removed `FTNLO`\n  - Updated description for identification `type`\n  - Added property `dateOfDeath`\n  - Removed `usTaxPayer`\n  - Added `usTaxpayer`\n  - Updated director information modeling\n- Modified the `200` response:\n  - Added properties `idIssuingProvince`, `idExpiryDate`, `idIssuingCountry`, and `idIssueDate`\n  - Added property `dateOfDeath`\n  - Added properties `w8received` and `w8expires`\n  - Added property `institutionalDirectorInfo`\n\n**`GET /accounts/{accountID}/beneficiaries`**\n- Modified the `200` response:\n  - Added property `documentID`\n  - Removed `FTNLO` from `idType`\n  - Updated description for `idType`\n\n**`POST /accounts/{accountID}/beneficiaries`**\n- Request payload:\n  - Property `primary` is now required\n  - Split beneficiary request modeling into entity and person beneficiary schemas\n- Modified the `200` response:\n  - Added property `documentID`\n  - Removed `FTNLO` from `idType`\n  - Updated description for `idType`\n\n**`GET /settlements`**\n- Modified the `200` response:\n  - Removed `REJECTED` from supported settlement status values\n\n**`GET /settlements/{settlementID}`**\n- Modified the `200` response:\n  - Removed `REJECTED` from supported settlement status values\n\n**`PATCH /funding/reconciliations/{reconciliationID}`**\n- Modified the `200` response:\n  - Removed schema `ReconciliationDetails`\n\n**`PATCH /funding/reconciliations/{reconciliationID}/attest`**\n- Modified the `200` response:\n  - Updated attestation response schema handling\n  - Removed previously exposed reconciliation detail properties from the root response\n\n**`PATCH /settlements/{settlementID}/attest`**\n- Modified the `200` response:\n  - Updated attestation response schema handling\n  - Removed previously exposed settlement detail properties from the root response\n\n**`GET /instruments/{symbolOrInstrumentID}`**\n- Modified the `200` response:\n  - Added property `averageLendingRate`\n  - Added mutual fund properties `minimumHoldingAmount` and `subAssetClassCategory`\n  - Expanded `mutualFundData.shareClass` to include `OTHER`\n  - Updated `mutualFundData.maximumPurchaseAmount` to support decimal values\n\n**`POST /entities`**\n- Request payload:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Updated description for `subType`\n- Modified the `201` response:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Added director properties `percentage` and `controlContact`\n  - Expanded supported director roles to include `TRUSTEE`, `GRANTOR`, and `BENEFICIARY`\n\n**`GET /entities/{entityId}`**\n- Modified the `200` response:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Added director properties `percentage` and `controlContact`\n  - Expanded supported director roles to include `TRUSTEE`, `GRANTOR`, and `BENEFICIARY`\n\n**`PATCH /entities/{entityId}`**\n- Request payload:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Updated description for `subType`\n- Modified the `200` response:\n  - Added entity identification property `ssn`\n  - Added entity type `TRUST`\n  - Added director properties `percentage` and `controlContact`\n  - Expanded supported director roles to include `TRUSTEE`, `GRANTOR`, and `BENEFICIARY`\n\n## Documentation updates\n\n**Deposit event documentation**\n- Added `depositBuyingPowerHoldExpires`, `seasoningPeriodExpires`, and `recurringDepositID` to deposit created and updated event examples\n- Updated expiration field examples to use RFC 3339 / ISO-8601 timestamp formatting\n- Added `statusPhase` and `statusPhaseComment` to the `deposits.updated` example payload\n\n**Funding schema documentation**\n- Updated `recurringFrequency` description to clarify it is only available for ACH deposits\n- Updated withdrawal `amount` description to clarify positive and negative value handling\n\n**Cash presentation updates**\n- Reordered cash-related attributes so `cashAvailableForTradeNonMarginable` appears before `cashAvailableForWithdrawal`\n\n**Shared retirement enum updates**\n- Expanded shared IRA enum support for additional retirement classifications, including `UNKNOWN` and other new contribution and distribution types\n"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        337,
+        337
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 337
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "slug": "apis/changelog/autopilot-updates",
+  "source": "https://developer.drivewealth.com/apis/changelog/autopilot-updates.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/autopilot-updates",
+  "title": "Autopilot Updates",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 3,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# Autopilot Updates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Autopilot Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "## Autopilot Updates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Autopilot Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "Beginning May 26, 2022, the following enhancements to Autopilot will be enabled in production. These updates will reduce the need for manual rebalances as well as automatically liquidate orphaned positions:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Beginning May 26, 2022, the following enhancements to Autopilot will be enabled in production. These updates will reduce the need for manual rebalances as well as automatically liquidate orphaned positions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        11
+      ],
+      "raw": "* Accounts will be automatically rebalanced by autopilot if changes are made to the composition of its underlying portfolio. This includes assigning a new portfolio to the account.\n\n* During full rebalances, orphaned positions will be automatically sold in the next money movement rebalance and those proceeds will be reinvested pursuant to the target weightings of the account's current portfolio",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Accounts will be automatically rebalanced by autopilot if changes are made to the composition of its underlying portfolio. This includes assigning a new portfolio to the account.During full rebalances, orphaned positions will be automatically sold in the next money movement rebalance and those proceeds will be reinvested pursuant to the target weightings of the account's current portfolio",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        14
+      ],
+      "raw": "**Next Steps:**\\\nThe above updates are available for testing in your UAT environment. If applicable, ***please review and test before May 26, 2022***.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Next Steps:The above updates are available for testing in your UAT environment. If applicable, please review and test before May 26, 2022.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "If you have any questions, please contact your PSG Account Manager.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you have any questions, please contact your PSG Account Manager.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

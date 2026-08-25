@@ -1,0 +1,217 @@
+{
+  "slug": "apis/changelog/release-notes-2026-08-13",
+  "source": "https://developer.drivewealth.com/apis/changelog/release-notes-2026-08-13.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/release-notes-2026-08-13",
+  "title": "Release Notes 2026-08-13",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 3,
+    "br": 1,
+    "button": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# Release Notes 2026-08-13",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Release Notes 2026-08-13",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "The DriveWealth platform is periodically updated with new API features, additional<br />documentation, and fixes for known issues. These release notes document these updates<br />with new notes at every release of an updated API or new API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The DriveWealth platform is periodically updated with new API features, additionaldocumentation, and fixes for known issues. These release notes document these updateswith new notes at every release of an updated API or new API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 5
+        },
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Subscribe to the DriveWealth Changelog RSS feed. Click below to copy the feed link directly to your clipboard.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Subscribe to the DriveWealth Changelog RSS feed. Click below to copy the feed link directly to your clipboard.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        11,
+        27
+      ],
+      "raw": "<button id=\"cleanRssCopyBtn\" style=\"\n  background-color: #f1b924;\n  color: #000000;\n  padding: 12px 24px;\n  font-size: 14px;\n  font-weight: 600;\n  border: none;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background-color 0.2s ease, color 0.2s ease;\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.05);\n\">\n  📋 Copy RSS Feed Link\n</button>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "button",
+      "attrs": {
+        "id": "cleanRssCopyBtn",
+        "style": "\nbackground-color: #f1b924;\ncolor: #000000;\npadding: 12px 24px;\nfont-size: 14px;\nfont-weight: 600;\nborder: none;\nborder-radius: 6px;\ncursor: pointer;\ntransition: background-color 0.2s ease, color 0.2s ease;\ndisplay: inline-flex;\nalign-items: center;\ngap: 8px;\nbox-shadow: 0 2px 4px rgba(0,0,0,0.05);\n"
+      },
+      "text": "📋 Copy RSS Feed Link",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": [],
+      "notes": [
+        "string style=\"…\" outside HTMLBlock is invalid MDX"
+      ]
+    },
+    {
+      "i": 6,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## API Lifecycle Updates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Lifecycle Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "**Position Management API** is now available as **BETA**.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Position Management API is now available as BETA.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        35,
+        37
+      ],
+      "raw": "* Exercise or decline equity options\n* Request details and summary information\n* Full lifecycle management for account positions",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Exercise or decline equity optionsRequest details and summary informationFull lifecycle management for account positions",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

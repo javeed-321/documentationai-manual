@@ -1,0 +1,851 @@
+{
+  "slug": "apis/changelog/api-release-v1810",
+  "source": "https://developer.drivewealth.com/apis/changelog/api-release-v1810.md",
+  "url": "https://developer.drivewealth.com/apis/changelog/api-release-v1810",
+  "title": "API Release v1.81.0",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 18,
+    "paragraph": 19,
+    "Table": 1,
+    "list": 5,
+    "br": 2,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# API Release v1.81.0",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Release v1.81.0",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Hey, we are back with another release. We are always improving the platform and if you have any questions regarding any release, feel free to contact your relations manager or email us directly at [RMteam@drivewealth.com](mailto:rmteam@drivewealth.com).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Hey, we are back with another release. We are always improving the platform and if you have any questions regarding any release, feel free to contact your relations manager or email us directly at RMteam@drivewealth.com.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        9
+      ],
+      "raw": "| Status           | Environment |\n| :--------------- | :---------: |\n| ✨💃🏻 Prime Time |     PROD    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Environment"
+        ],
+        "rows": [
+          [
+            "✨💃🏻 Prime Time",
+            "PROD"
+          ]
+        ],
+        "align": [
+          "left",
+          "center"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# 🚀 New Features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🚀 New Features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Travel Rule Attestation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Travel Rule Attestation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "We have added new attestation endpoints for settlements and funding reconciliations. This allows partners to formally attest operational records directly through the API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have added new attestation endpoints for settlements and funding reconciliations. This allows partners to formally attest operational records directly through the API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "New endpoints:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New endpoints:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        19,
+        20
+      ],
+      "raw": "* `POST /settlements/{settlementID}/attest`\n* `POST /funding/reconciliations/{reconciliationID}/attest`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "POST /settlements/{settlementID}/attestPOST /funding/reconciliations/{reconciliationID}/attest",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "i": 10,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "## Bank accounts APIs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Bank accounts APIs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "We have added new bank account endpoints to support bank account management workflows.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have added new bank account endpoints to support bank account management workflows.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "New endpoints:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New endpoints:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        30,
+        31
+      ],
+      "raw": "* `GET /bank-accounts`\n* `GET /bank-accounts/{bankAccountID}`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "GET /bank-accountsGET /bank-accounts/{bankAccountID}",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "## Entities APIs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Entities APIs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "We have added new entity endpoints to support entity management workflows.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have added new entity endpoints to support entity management workflows.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "New endpoints:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New endpoints:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        39,
+        40
+      ],
+      "raw": "* `GET /entities/{entityId}`\n* `POST /entities`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "GET /entities/{entityId}POST /entities",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "# 🎉 Feature Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🎉 Feature Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "## Settlement and reconciliation visibility",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Settlement and reconciliation visibility",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "We enhanced settlement and reconciliation responses to include attestation metadata such as `attestedAt` and `attestedBy`, giving partners clearer operational tracking.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We enhanced settlement and reconciliation responses to include attestation metadata such as attestedAt and attestedBy, giving partners clearer operational tracking.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "## Funding and retirement flows",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Funding and retirement flows",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "We continued expanding retirement funding support across deposits and redemptions, including richer IRA contribution and distribution subtype handling.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We continued expanding retirement funding support across deposits and redemptions, including richer IRA contribution and distribution subtype handling.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "## Business account management support",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Business account management support",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "We expanded business account support across accounts, documents, funding, subscriptions, and KYC-related responses with the following account management types:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We expanded business account support across accounts, documents, funding, subscriptions, and KYC-related responses with the following account management types:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        56,
+        58
+      ],
+      "raw": "* `BUSINESS_SELF`\n* `BUSINESS_ADVISORY`\n* `BUSINESS_RIA_MANAGED`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "BUSINESS_SELFBUSINESS_ADVISORYBUSINESS_RIA_MANAGED",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "## User settlement profile and tax metadata",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "User settlement profile and tax metadata",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "We improved user funding-related metadata and tax form details in user responses and update flows.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We improved user funding-related metadata and tax form details in user responses and update flows.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "## Deposit event documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Deposit event documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "We updated our public event documentation for deposit notifications to reflect newly available expiration and hold fields in deposit event payloads.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We updated our public event documentation for deposit notifications to reflect newly available expiration and hold fields in deposit event payloads.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "Added fields:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Added fields:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        70,
+        71
+      ],
+      "raw": "* `depositBuyingPowerHoldExpires`\n* `seasoningPeriodExpires`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "depositBuyingPowerHoldExpiresseasoningPeriodExpires",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        73,
+        73
+      ],
+      "raw": "## Settlement profile field alignment",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Settlement profile field alignment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "We aligned user settlement profile handling by restoring `walletSettlementProfileID` in user payloads and responses where applicable.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We aligned user settlement profile handling by restoring walletSettlementProfileID in user payloads and responses where applicable.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "## Originator bank details cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Originator bank details cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "We corrected the originator bank detail field naming by replacing `bankAccountCountry` with `bankCountry`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We corrected the originator bank detail field naming by replacing bankAccountCountry with bankCountry.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "## Redemption request validation cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Redemption request validation cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        83,
+        83
+      ],
+      "raw": "We updated funding redemptions so `details` is no longer required in the request payload. We also Removed fee enum values `FEE_STATE_TAX` and `FEE_FEDERAL_TAX`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We updated funding redemptions so details is no longer required in the request payload. We also Removed fee enum values FEE_STATE_TAX and FEE_FEDERAL_TAX.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "## IRA enum cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "IRA enum cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        87,
+        87
+      ],
+      "raw": "We removed unsupported IRA contribution and distribution enum values to better align the API schema with supported platform behavior.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We removed unsupported IRA contribution and distribution enum values to better align the API schema with supported platform behavior.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "## Cash field ordering cleanup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Cash field ordering cleanup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "We updated the ordering of cash-related attributes in account money details to present cash available for trade values before cash available for withdrawal.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We updated the ordering of cash-related attributes in account money details to present cash available for trade values before cash available for withdrawal.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "# 👠🐛 Squashing bugs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "👠🐛 Squashing bugs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "We are always squashing bugs, but nothing significant during this release that should be called out.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are always squashing bugs, but nothing significant during this release that should be called out.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "# 🪵 ChangeLog",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "🪵 ChangeLog",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        99,
+        265
+      ],
+      "raw": "```markdown\n## New endpoints\n\n**`POST /settlements/{settlementID}/attest`**\n- Added new endpoint\n\n**`POST /funding/reconciliations/{reconciliationID}/attest`**\n- Added new endpoint\n\n**`GET /bank-accounts`**\n- Added new endpoint\n\n**`GET /bank-accounts/{bankAccountID}`**\n- Added new endpoint\n\n## Modified endpoints\n\n**`POST /asset-transfers/minor-graduation`**\n- Modified the `400` response\n\n**`GET /funding/reconciliations`**\n- Modified the `200` response:\n  - Added property `attestedAt`\n\n**`GET /funding/reconciliations/{reconciliationID}`**\n- Modified the `200` response:\n  - Added properties `attestedAt` and `attestedBy`\n\n**`PATCH /funding/reconciliations/{reconciliationID}`**\n- Modified the `200` response:\n  - Added properties `attestedAt` and `attestedBy`\n\n**`GET /settlements`**\n- Modified the `200` response:\n  - Added property `attestedAt`\n\n**`GET /settlements/{settlementID}`**\n- Modified the `200` response:\n  - Added properties `attestedAt` and `attestedBy`\n\n**`POST /accounts`**\n- Request payload:\n  - Added business account management types `BUSINESS_SELF`, `BUSINESS_ADVISORY`, and `BUSINESS_RIA_MANAGED`\n- Modified the `200` response:\n  - Added business account management types in account management metadata\n\n**`GET /accounts/{accountID}`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`PATCH /accounts/{accountID}`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`GET /accounts/{accountID}/funding/deposits`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /accounts/{accountID}/funding/redemptions`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`POST /documents`**\n- Request payload and `200` response:\n  - Added `BUSINESS_DOCUMENT` as a supported document type\n\n**`POST /funding/deposits`**\n- Request payload:\n  - Added property `iraContributionSubType`\n  - Expanded `iraContribution` enum values\n  - Added property `bankCountry`\n  - Removed property `bankAccountCountry`\n  - Added new `400` response\n- Modified the `200` response:\n  - Added `iraContributionSubType`\n  - Added `iraContribution`\n\n**`GET /funding/deposits/{depositID}`**\n- Modified the `200` response:\n  - Added `iraContributionSubType`\n  - Added `iraContribution`\n  - Added business account management types in account details\n  - Added `settlementProfileID`\n  - Removed `walletSettlementProfileID`\n\n**`GET /funding/redemptions`**\n- Modified the `200` response:\n  - Added `iraDistribution`\n  - Added `iraDistributionSubType`\n  - Added business account management types in account details\n  - Added `settlementProfileID`\n  - Removed `walletSettlementProfileID`\n\n**`POST /funding/redemptions`**\n- Request payload:\n  - Added `iraDistributionSubType`\n  - `iraDistribution` is no longer deprecated\n  - Expanded `iraDistribution` enum values\n  - Property `details` is no longer required\n  - Removed fee enum values FEE_STATE_TAX and FEE_FEDERAL_TAX \n- Modified the `200` response:\n  - Added `iraDistribution`\n  - Added `iraDistributionSubType`\n\n**`GET /funding/redemptions/{redemptionID}`**\n- Modified the `200` response:\n  - Added `iraDistribution`\n  - Added `iraDistributionSubType`\n  - Added business account management types in account details\n  - Added `settlementProfileID`\n  - Removed `walletSettlementProfileID` and enum values `FEE_STATE_TAX` and `FEE_FEDERAL_TAX`\n\n**`POST /users`**\n- Request payload:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Added director `roles`\n- Modified the `200` response:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n\n**`GET /users/{userID}`**\n- Modified the `200` response:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Added `taxCountry`, `validTaxFormWhen`, and `taxAttestation`\n  - Updated description for `taxTreatyWithUS`\n\n**`PATCH /users/{userID}`**\n- Request payload:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Updated patch document schema handling\n- Modified the `200` response:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Added `taxCountry`, `validTaxFormWhen`, and `taxAttestation`\n\n**`GET /users/{userID}/accounts`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`GET /users/{userID}/documents`**\n- Modified the `200` response:\n  - Added `BUSINESS_DOCUMENT` as a supported document type\n\n**`GET /users/{userID}/funding/deposits`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /users/{userID}/funding/redemptions`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /users/{userID}/kyc-status`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`GET /users/{userID}/subscriptions`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /accounts/{accountID}/summary/violations`**\n- Modified the `200` response:\n  - Updated description for `violations.details`\n\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "markdown",
+        "title": null,
+        "code": "## New endpoints\n\n**`POST /settlements/{settlementID}/attest`**\n- Added new endpoint\n\n**`POST /funding/reconciliations/{reconciliationID}/attest`**\n- Added new endpoint\n\n**`GET /bank-accounts`**\n- Added new endpoint\n\n**`GET /bank-accounts/{bankAccountID}`**\n- Added new endpoint\n\n## Modified endpoints\n\n**`POST /asset-transfers/minor-graduation`**\n- Modified the `400` response\n\n**`GET /funding/reconciliations`**\n- Modified the `200` response:\n  - Added property `attestedAt`\n\n**`GET /funding/reconciliations/{reconciliationID}`**\n- Modified the `200` response:\n  - Added properties `attestedAt` and `attestedBy`\n\n**`PATCH /funding/reconciliations/{reconciliationID}`**\n- Modified the `200` response:\n  - Added properties `attestedAt` and `attestedBy`\n\n**`GET /settlements`**\n- Modified the `200` response:\n  - Added property `attestedAt`\n\n**`GET /settlements/{settlementID}`**\n- Modified the `200` response:\n  - Added properties `attestedAt` and `attestedBy`\n\n**`POST /accounts`**\n- Request payload:\n  - Added business account management types `BUSINESS_SELF`, `BUSINESS_ADVISORY`, and `BUSINESS_RIA_MANAGED`\n- Modified the `200` response:\n  - Added business account management types in account management metadata\n\n**`GET /accounts/{accountID}`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`PATCH /accounts/{accountID}`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`GET /accounts/{accountID}/funding/deposits`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /accounts/{accountID}/funding/redemptions`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`POST /documents`**\n- Request payload and `200` response:\n  - Added `BUSINESS_DOCUMENT` as a supported document type\n\n**`POST /funding/deposits`**\n- Request payload:\n  - Added property `iraContributionSubType`\n  - Expanded `iraContribution` enum values\n  - Added property `bankCountry`\n  - Removed property `bankAccountCountry`\n  - Added new `400` response\n- Modified the `200` response:\n  - Added `iraContributionSubType`\n  - Added `iraContribution`\n\n**`GET /funding/deposits/{depositID}`**\n- Modified the `200` response:\n  - Added `iraContributionSubType`\n  - Added `iraContribution`\n  - Added business account management types in account details\n  - Added `settlementProfileID`\n  - Removed `walletSettlementProfileID`\n\n**`GET /funding/redemptions`**\n- Modified the `200` response:\n  - Added `iraDistribution`\n  - Added `iraDistributionSubType`\n  - Added business account management types in account details\n  - Added `settlementProfileID`\n  - Removed `walletSettlementProfileID`\n\n**`POST /funding/redemptions`**\n- Request payload:\n  - Added `iraDistributionSubType`\n  - `iraDistribution` is no longer deprecated\n  - Expanded `iraDistribution` enum values\n  - Property `details` is no longer required\n  - Removed fee enum values FEE_STATE_TAX and FEE_FEDERAL_TAX \n- Modified the `200` response:\n  - Added `iraDistribution`\n  - Added `iraDistributionSubType`\n\n**`GET /funding/redemptions/{redemptionID}`**\n- Modified the `200` response:\n  - Added `iraDistribution`\n  - Added `iraDistributionSubType`\n  - Added business account management types in account details\n  - Added `settlementProfileID`\n  - Removed `walletSettlementProfileID` and enum values `FEE_STATE_TAX` and `FEE_FEDERAL_TAX`\n\n**`POST /users`**\n- Request payload:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Added director `roles`\n- Modified the `200` response:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n\n**`GET /users/{userID}`**\n- Modified the `200` response:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Added `taxCountry`, `validTaxFormWhen`, and `taxAttestation`\n  - Updated description for `taxTreatyWithUS`\n\n**`PATCH /users/{userID}`**\n- Request payload:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Updated patch document schema handling\n- Modified the `200` response:\n  - Added `walletSettlementProfileID`\n  - Removed `settlementProfileID`\n  - Added `taxCountry`, `validTaxFormWhen`, and `taxAttestation`\n\n**`GET /users/{userID}/accounts`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`GET /users/{userID}/documents`**\n- Modified the `200` response:\n  - Added `BUSINESS_DOCUMENT` as a supported document type\n\n**`GET /users/{userID}/funding/deposits`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /users/{userID}/funding/redemptions`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /users/{userID}/kyc-status`**\n- Modified the `200` response:\n  - Added business account management types in account metadata\n\n**`GET /users/{userID}/subscriptions`**\n- Modified the `200` response:\n  - Added business account management types in account details\n\n**`GET /accounts/{accountID}/summary/violations`**\n- Modified the `200` response:\n  - Updated description for `violations.details`\n"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        267,
+        267
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 267
+        }
+      ]
+    }
+  ]
+}

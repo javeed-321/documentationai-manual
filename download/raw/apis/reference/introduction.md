@@ -1,0 +1,23 @@
+---
+updatedAt: 2025-09-23T14:49:44.000Z
+---
+
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Introduction
+
+The DriveWealth REST API uses standard HTTP verbs to communicate and returns a variety of HTTP codes and JSON messages to indicate statuses and errors.
+
+You can use our production-replica sandbox (often referred to as UAT), to test your integration both during development and after launch. The hostname that you use in your request determines whether it will be received by our sandbox or production environment.
+
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail. Unless otherwise noted, API requests without authentication will also fail. To learn more about authentication, please see the [Create session token](https://developer.drivewealth.com/apis/reference/post_auth-tokens) API.
+
+All requests are sent server-to-server. Your app or website should never be directly communicating with the DriveWealth APIs, as your private connection keys may be exposed in transit.
+
+## Protecting your API credentials
+
+* **Do not store API tokens inside your applications source control**: If you store API tokens in property or configuration files, keep these files outside your source control systems. This is especially important if you use a public source code management system such as GitHub. You may want to rely on environment variables or similar runtime injection techniques rather than keeping sensitive keys on disk.
+* **Do not embed API keys directly in code**: Instead of embedding API keys in your application's code, put them in environment variables or include files that are stored separately from the bulk of your code – outside the source repository of your application.
+* **Limit employee access to production API keys**: While keys to access our sandbox environment will likely be shared by many developers, access to production keys (when provided) should be limited to only necessary personnel.
+
+<br />

@@ -1,0 +1,551 @@
+{
+  "slug": "apis/docs/withdrawing-1",
+  "source": "https://developer.drivewealth.com/apis/docs/withdrawing-1.md",
+  "url": "https://developer.drivewealth.com/apis/docs/withdrawing-1",
+  "title": "Withdrawing",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T23:06:22.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 11,
+    "Callout": 2,
+    "code": 3,
+    "Image": 2,
+    "blockquote": 1,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Withdrawing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Withdrawing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Withdrawing customer funds is the process of transferring money from a customer’s brokerage account to their designated bank account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Withdrawing customer funds is the process of transferring money from a customer’s brokerage account to their designated bank account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        15
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Redemptions vs Withdrawals?\n\n  Redemptions and withdrawals mean the same thing and are used throughout the Guides and API Reference interchangeably.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "Redemptions vs Withdrawals?Redemptions and withdrawals mean the same thing and are used throughout the Guides and API Reference interchangeably.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 3,
+          "lines": [
+            12,
+            12
+          ],
+          "raw": "  ### Redemptions vs Withdrawals?",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Redemptions vs Withdrawals?",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 4,
+          "lines": [
+            14,
+            14
+          ],
+          "raw": "  Redemptions and withdrawals mean the same thing and are used throughout the Guides and API Reference interchangeably.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Redemptions and withdrawals mean the same thing and are used throughout the Guides and API Reference interchangeably.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Each account has a specified balance available for withdrawal, referred to as the Cash Available for Withdrawal. This information can be accessed via the [Retrieve Money Details by Account API](https://developer.drivewealth.com/apis/reference/get_accounts-accountid-summary-money):",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Each account has a specified balance available for withdrawal, referred to as the Cash Available for Withdrawal. This information can be accessed via the Retrieve Money Details by Account API:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        19,
+        41
+      ],
+      "raw": "```json\nGET /back-office/accounts/{accountID}/summary/money\n{\n  \"accountID\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n  \"accountNo\": \"DWBG000052\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2022-12-25T18:41:32.440Z\",\n  \"cash\": {\n    \"cashAvailableForTrade\": 400.0,\n    \"cashAvailableForWithdrawal\": 200.0,\n    \"cashBalance\": 400,\n    \"noBuyingPowerReason\": [],\n    \"cashSettlement\": [\n      {\n        \"utcTime\": \"2021-04-26T13:30:00.001Z\",\n        \"cash\": 200.0\n      }\n    ],\n    \"pendingPaymentsAmount\": 0.00\n  },\n  ...\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "GET /back-office/accounts/{accountID}/summary/money\n{\n  \"accountID\": \"cc07f91b-7ee1-4868-b8fc-823c70a1b932.1407775317759\",\n  \"accountNo\": \"DWBG000052\",\n  \"tradingType\": \"CASH\",\n  \"updated\": \"2022-12-25T18:41:32.440Z\",\n  \"cash\": {\n    \"cashAvailableForTrade\": 400.0,\n    \"cashAvailableForWithdrawal\": 200.0,\n    \"cashBalance\": 400,\n    \"noBuyingPowerReason\": [],\n    \"cashSettlement\": [\n      {\n        \"utcTime\": \"2021-04-26T13:30:00.001Z\",\n        \"cash\": 200.0\n      }\n    ],\n    \"pendingPaymentsAmount\": 0.00\n  },\n  ...\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "**NOTE:** The Account above has $200 that can be withdrawn.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "NOTE: The Account above has $200 that can be withdrawn.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "## Withdrawal Lifecycle Overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Withdrawal Lifecycle Overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "Withdrawals follow a defined lifecycle that allows clients to track and receive updates on the status of each transaction. The stages in this lifecycle provide transparency and help ensure timely processing.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Withdrawals follow a defined lifecycle that allows clients to track and receive updates on the status of each transaction. The stages in this lifecycle provide transparency and help ensure timely processing.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "![](https://files.readme.io/301f750-Screen_Shot_2023-01-27_at_4.30.29_PM.png \"Screen Shot 2023-01-27 at 4.30.29 PM.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/301f750-Screen_Shot_2023-01-27_at_4.30.29_PM.png",
+        "title": "Screen Shot 2023-01-27 at 4.30.29 PM.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/301f750-Screen_Shot_2023-01-27_at_4.30.29_PM.png",
+          "line": 49
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 10,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "## Advisory flow lifecycle",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Advisory flow lifecycle",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "Managing advisory withdrawals differs from regular withdrawals. In self-directed accounts, customers typically sell positions themselves to generate available cash. However, in managed accounts, customers may be fully invested in securities without the ability to initiate sales independently.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Managing advisory withdrawals differs from regular withdrawals. In self-directed accounts, customers typically sell positions themselves to generate available cash. However, in managed accounts, customers may be fully invested in securities without the ability to initiate sales independently.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "If you utilize DriveWealth’s [AutoPilot functionality](https://developer.drivewealth.com/apis/docs/automated-trading), it automates this process by generating sell orders during its next run to raise sufficient funds for the withdrawal, based on the portfolio’s target weights.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you utilize DriveWealth’s AutoPilot functionality, it automates this process by generating sell orders during its next run to raise sufficient funds for the withdrawal, based on the portfolio’s target weights.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "Without AutoPilot, advisors must manually sell securities within the individual customer’s brokerage account to free up cash. Once the funds are available, the advisory can submit the withdrawal request.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Without AutoPilot, advisors must manually sell securities within the individual customer’s brokerage account to free up cash. Once the funds are available, the advisory can submit the withdrawal request.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "> Justin requests a $250 withdrawal from his robo-advisory brokerage account on January 3, 2023, before 10:00 AM ET. AutoPilot detects the request and places sell orders at 10:30 AM ET the same day. The securities are successfully sold, raising the required $250. The platform then waits for settlement (Trade Day + 1, or T+1), making the cash available on January 4, 2023. Once settled, the system automatically initiates the withdrawal process.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Justin requests a $250 withdrawal from his robo-advisory brokerage account on January 3, 2023, before 10:00 AM ET. AutoPilot detects the request and places sell orders at 10:30 AM ET the same day. The securities are successfully sold, raising the required $250. The platform then waits for settlement (Trade Day + 1, or T+1), making the cash available on January 4, 2023. Once settled, the system automatically initiates the withdrawal process.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        61,
+        65
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ###\n\n  Withdrawals from AutoPilot-enabled accounts require a minimum lead time of one business day. This is because securities must first be sold to generate the necessary funds, and the resulting proceeds must fully settle before the cash becomes available for withdrawal. This settlement process ensures compliance with regulatory requirements and maintains the integrity of the withdrawal process.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "Withdrawals from AutoPilot-enabled accounts require a minimum lead time of one business day. This is because securities must first be sold to generate the necessary funds, and the resulting proceeds must fully settle before the cash becomes available for withdrawal. This settlement process ensures compliance with regulatory requirements and maintains the integrity of the withdrawal process.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 17,
+          "lines": [
+            62,
+            62
+          ],
+          "raw": "  ###",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 18,
+          "lines": [
+            64,
+            64
+          ],
+          "raw": "  Withdrawals from AutoPilot-enabled accounts require a minimum lead time of one business day. This is because securities must first be sold to generate the necessary funds, and the resulting proceeds must fully settle before the cash becomes available for withdrawal. This settlement process ensures compliance with regulatory requirements and maintains the integrity of the withdrawal process.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Withdrawals from AutoPilot-enabled accounts require a minimum lead time of one business day. This is because securities must first be sold to generate the necessary funds, and the resulting proceeds must fully settle before the cash becomes available for withdrawal. This settlement process ensures compliance with regulatory requirements and maintains the integrity of the withdrawal process.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        67,
+        67
+      ],
+      "raw": "![](https://files.readme.io/2d7228b-Withdrawal_AutoPilot_Flow.png \"Withdrawal AutoPilot Flow.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/2d7228b-Withdrawal_AutoPilot_Flow.png",
+        "title": "Withdrawal AutoPilot Flow.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/2d7228b-Withdrawal_AutoPilot_Flow.png",
+          "line": 67
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 17,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "## ACH Withdrawals",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "ACH Withdrawals",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "Customers can initiate ACH withdrawals from their brokerage account to a designated U.S. bank account using the [Create Withdrawal API](https://developer.drivewealth.com/apis/reference/post_funding-redemptions).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Customers can initiate ACH withdrawals from their brokerage account to a designated U.S. bank account using the Create Withdrawal API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        73,
+        82
+      ],
+      "raw": "```json\nPOST - /back-office/funding/redemptions\n{\n  \"currency\": \"USD\",\n  \"type\": \"ACH\",\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 125.92,\n  \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "POST - /back-office/funding/redemptions\n{\n  \"currency\": \"USD\",\n  \"type\": \"ACH\",\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 125.92,\n  \"bankAccountID\": \"bank_a4656e60-321e-425b-aa0d-a2e75c38885f\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        84,
+        84
+      ],
+      "raw": "## Wire Withdrawals",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Wire Withdrawals",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        86,
+        86
+      ],
+      "raw": "Customers can initiate Wire withdrawals from their brokerage account using the [Create Withdrawal API](https://developer.drivewealth.com/apis/reference/post_funding-redemptions).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Customers can initiate Wire withdrawals from their brokerage account using the Create Withdrawal API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        88,
+        107
+      ],
+      "raw": "```json\nPOST - /back-office/funding/redemptions\n{\n  \"currency\": \"USD\",\n  \"type\": \"WIRE\",\n  \"details\": {\n    \"beneficiaryName\": \"Justin Smith\",\n    \"beneficiaryAccountNumber\": \"00257596002028990212396\",\n    \"beneficiaryRoutingNumber\": \"021000322\",\n    \"beneficiaryBankName\": \"Bank of America\",\n    \"beneficiaryBankAddress\": \"222 BROADWAY\",\n    \"beneficiaryBankCity\": \"New York City\",\n    \"beneficiaryBankProvince\": \"New York\",\n    \"beneficiaryBankZip\": \"10038\",\n    \"beneficiaryBankCountry\": \"USA\"\n  },\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 125.92\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "POST - /back-office/funding/redemptions\n{\n  \"currency\": \"USD\",\n  \"type\": \"WIRE\",\n  \"details\": {\n    \"beneficiaryName\": \"Justin Smith\",\n    \"beneficiaryAccountNumber\": \"00257596002028990212396\",\n    \"beneficiaryRoutingNumber\": \"021000322\",\n    \"beneficiaryBankName\": \"Bank of America\",\n    \"beneficiaryBankAddress\": \"222 BROADWAY\",\n    \"beneficiaryBankCity\": \"New York City\",\n    \"beneficiaryBankProvince\": \"New York\",\n    \"beneficiaryBankZip\": \"10038\",\n    \"beneficiaryBankCountry\": \"USA\"\n  },\n  \"accountNo\": \"DWBG000052\",\n  \"amount\": 125.92\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        109,
+        109
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 109
+        }
+      ]
+    }
+  ]
+}

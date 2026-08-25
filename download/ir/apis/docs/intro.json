@@ -1,0 +1,402 @@
+{
+  "slug": "apis/docs/intro",
+  "source": "https://developer.drivewealth.com/apis/docs/intro.md",
+  "url": "https://developer.drivewealth.com/apis/docs/intro",
+  "title": "Introduction",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-13T22:41:56.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "Callout": 2,
+    "paragraph": 6,
+    "thematicBreak": 3,
+    "list": 2,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Introduction",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Introduction",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        11
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### **Welcome to DriveWealth's developer documentation.** Everything your technical team needs to integrate the full investment lifecycle into your product.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "Welcome to DriveWealth's developer documentation. Everything your technical team needs to integrate the full investment lifecycle into your product.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            10,
+            10
+          ],
+          "raw": "  ### **Welcome to DriveWealth's developer documentation.** Everything your technical team needs to integrate the full investment lifecycle into your product.",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Welcome to DriveWealth's developer documentation. Everything your technical team needs to integrate the full investment lifecycle into your product.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "DriveWealth is a fully regulated, API-first brokerage infrastructure platform purpose-built for financial institutions, global banks, and technology companies seeking to embed world-class investing experiences into their products.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth is a fully regulated, API-first brokerage infrastructure platform purpose-built for financial institutions, global banks, and technology companies seeking to embed world-class investing experiences into their products.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Trusted by clients across the United States, Latin America, EMEA, and APAC, DriveWealth powers the full investment lifecycle — from account opening and funding to trading, custody, clearing, and regulatory reporting — through a single, modern API integration.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Trusted by clients across the United States, Latin America, EMEA, and APAC, DriveWealth powers the full investment lifecycle — from account opening and funding to trading, custody, clearing, and regulatory reporting — through a single, modern API integration.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## What You Can Build",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "What You Can Build",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "DriveWealth's platform supports a wide range of investment products and client models, including:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth's platform supports a wide range of investment products and client models, including:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        27
+      ],
+      "raw": "* **Embedded brokerage** — offer self-directed trading of US equities, ETFs, mutual funds, options, and fixed income natively within your existing product\n* **Robo-advisory & managed accounts** — automate portfolio construction, rebalancing, and AUM fee collection via AutoPilot\n* **Round-up & fractional investing** — DriveWealth pioneered fractional share investing and provides the infrastructure to support micro-investment experiences at scale\n* **Retirement accounts** — offer traditional and Roth IRAs alongside standard brokerage accounts\n* **Global access** — enable non-US customers to invest in US markets with built-in KYC, AML, and cross-border compliance support",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Embedded brokerage — offer self-directed trading of US equities, ETFs, mutual funds, options, and fixed income natively within your existing productRobo-advisory & managed accounts — automate portfolio construction, rebalancing, and AUM fee collection via AutoPilotRound-up & fractional investing — DriveWealth pioneered fractional share investing and provides the infrastructure to support micro-investment experiences at scaleRetirement accounts — offer traditional and Roth IRAs alongside standard brokerage accountsGlobal access — enable non-US customers to invest in US markets with built-in KYC, AML, and cross-border compliance support",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## Built for Enterprise",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Built for Enterprise",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "DriveWealth's platform is designed to meet the standards of the world's leading financial institutions:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DriveWealth's platform is designed to meet the standards of the world's leading financial institutions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        35,
+        38
+      ],
+      "raw": "* **Regulatory compliance** — fully FINRA and SEC registered, with built-in support for KYC, AML, tax withholding (W-8/W-9, 1446(f), 871(m)), and required investor disclosures\n* **Reliability at scale** — modern cloud-native architecture built to handle high transaction volumes across global markets\n* **Real-time infrastructure** — event-driven notifications via SQS keep your platform in sync with every order, position, and account change as it happens\n* **Shared technical support** — every client is assigned a Relationship Manager and has access to our Solutions Engineering team to guide integration and ongoing product expansion",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Regulatory compliance — fully FINRA and SEC registered, with built-in support for KYC, AML, tax withholding (W-8/W-9, 1446(f), 871(m)), and required investor disclosuresReliability at scale — modern cloud-native architecture built to handle high transaction volumes across global marketsReal-time infrastructure — event-driven notifications via SQS keep your platform in sync with every order, position, and account change as it happensShared technical support — every client is assigned a Relationship Manager and has access to our Solutions Engineering team to guide integration and ongoing product expansion",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "## Getting Started",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Getting Started",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "This documentation provides everything your technical team needs to integrate with DriveWealth, including step-by-step guides and a UAT environment for end-to-end testing. Quick Start guides are available to get your first test trade executing in minutes.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This documentation provides everything your technical team needs to integrate with DriveWealth, including step-by-step guides and a UAT environment for end-to-end testing. Quick Start guides are available to get your first test trade executing in minutes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        46,
+        50
+      ],
+      "raw": "<Callout icon=\"🚧\" theme=\"warn\">\n  ###\n\n  **Note:** This documentation supports the technical integration process, does not constitute official operating procedures or legal, tax, or regulatory advice, and is subject to change.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧",
+        "theme": "warn"
+      },
+      "text": "Note: This documentation supports the technical integration process, does not constitute official operating procedures or legal, tax, or regulatory advice, and is subject to change.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "children": [
+        {
+          "i": 17,
+          "lines": [
+            47,
+            47
+          ],
+          "raw": "  ###",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 18,
+          "lines": [
+            49,
+            49
+          ],
+          "raw": "  **Note:** This documentation supports the technical integration process, does not constitute official operating procedures or legal, tax, or regulatory advice, and is subject to change.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Note: This documentation supports the technical integration process, does not constitute official operating procedures or legal, tax, or regulatory advice, and is subject to change.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 52
+        }
+      ]
+    }
+  ]
+}

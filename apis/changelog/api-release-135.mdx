@@ -1,0 +1,47 @@
+---
+title: "API Release 1.35"
+---
+
+## API Release 1.35
+
+| Environment | Status                    |
+| :---------- | :------------------------ |
+| UAT         | RELEASED                  |
+| Production  | RELEASED - March 24, 2022 |
+
+### **Improvement - Correspondent Report**
+
+Performance improvement implemented to reduce time to load Correspondent Report
+
+### **Feature Enhancement - KYC**
+
+Validation added to not allow closed accounts to reopen if KYC is triggered and approved in any way.
+
+### **Feature Enhancement - Allow Custom Fees for Redemptions**
+
+Partners can add custom fees via `POST {{bo-url}}/back-office/funding/redemption` endpoint, allowing partners to add different fees based on their customer loyalty and tiers.
+
+### **New Field - Create User API**
+
+New field `displayName` added to `POST {{bo-url}}/back-office/users/` and `PATCH {{bo-url}}/back-office/users/` endpoints' request and response. It is an optional field that can be used to capture the user's name in non-Latin characters for UI and display purposes. Field also added to GET user details and GET search user endpoint.
+
+### **Update - User Notes**
+
+The account number has been added to the user note header to identify which account the note is associated with in the event the user has multiple accounts.
+
+### **Update - Account Summary for LPMA**
+
+The following fields will be present in the account summary endpoint for LPMA accounts:
+
+In margin attribute -
+
+- "patternDayTrader":
+  - values: true, false
+- "restricted":
+  - values: true, false
+
+In violations attribute -
+
+- "patternDayTrades": \{\
+  "count": 0
+- “details”

@@ -1,0 +1,76 @@
+Fetch the complete documentation index at: https://developer.drivewealth.com/apis/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# DH Release 2.15.4
+
+## DH Release 2.15.4
+
+| Date         | Version | Status       |
+| :----------- | :------ | :----------- |
+| June 1, 2023 | 2.15.4  | **RELEASED** |
+
+Hi folks! It's been a while since we've posted updates about DriveHub. But we're back in the swing of things! For this release, the main changes we've made are to the Bulk Funding and Reports pages. We've also shipped a handful of smaller enhancements and bug fixes. Please see below for details.
+
+## Bulk Funding Page
+
+The Bulk Funding Page has been slightly modified to use our new design system. The key change to highlight: All of the previous filter options are still available, but they have been packaged up and moved into the upper right hand corner of the data table. Whenever applying a new filter, please remember to “Apply” those changes to reflect changes. You also have the option to quickly “Reset” all filters.
+
+Why did we make these changes? We have been upgrading to a new design system that in the big picture will offer a higher-performing and less buggy user experience, and allow us to develop future enhancements and fix bugs faster than before!
+
+The key items to call out:
+
+* Table structure and fields have been preserved and not changed
+* All filters have been preserved, but moved to the upper right corner of the table: Partner
+* Search, Status, Date Range (date range offers a quick filter for 7-day, 30-day lookbacks and beyond)
+* Added filter: Category (Deposit, Withdrawal)
+* Features have been preserved: Copy Report ID, Settle button, Export
+* Default display: All partners, Approved, Today’s date for created date (based on user feedback, we will expand the default date range to the past 7 days, as a fast-follow)
+* Added pagination, and the ability to define how many records to display at a time
+* Fixed bugs:
+  * Date filters not registering, which was preventing data from being pulled in and displayed
+  * Partner filter auto-suggest not working
+  * Tangential issue: Fixed issue on Reconciliations page where ‘Reco Date’ field was incorrectly displaying previous day’s date
+
+![](https://files.readme.io/ce188d1-Screenshot_2023-04-23_at_10.31.49_PM.png)
+
+## Other Reports Page
+
+The Reports landing page and individual report pages have been slightly modified to use our new design system. For the reports landing page, we have stretched it out to a full-page view, but all report names and categorization have remained unchanged. For individual report pages, where applicable, we have consolidated the “Generate” and “Download” buttons into a single action to download the report.
+
+Why did we make these changes? We have been upgrading to a new design system that in the big picture will offer a higher-performing and less buggy user experience, and allow us to develop future enhancements and fix bugs faster than before! We developed a landing page that better supported our growing number of reports. Finally, we streamlined the workflow involved to download certain reports.
+
+They key changes to call out:
+
+* Reports menu has been stretched to a full page view. Naming conventions and categorization have been preserved. This better supports the growing volume of reports.
+* For certain reports, where applicable, consolidated the “Generate” and “Download” buttons into one single download button click. This eliminates the friction of generating a report but then neglecting to subsequently download it. Made “Generate” vs “Download” language consistent across reports.
+* For each report, no changes to the corresponding input fields. No changes to the report download.
+* Fixed bugs: Resolved multiple issues of reports crashing (End of Day, Orders, Positions)
+
+![](https://files.readme.io/8b3b462-Screenshot_2023-04-23_at_10.32.13_PM.png)With the BestEx Quarterly report, for example, we’ve consolidated the “Generate” and “Download” buttons and functions into one. To return to the main reports landing page, you can click on your browser’s back button, or the “Back to Other Reports” link in the upper left corner of the page.
+
+![](https://files.readme.io/ee0c936-Screenshot_2023-04-23_at_10.32.23_PM.png)
+
+## Other Enhancements
+
+**Extended Hours Trading**
+
+* Order entry screen enhanced to allow for extended hours order entry (for partners that have Extended Hours feature toggle enabled)
+* Display appropriate attributes for extended hours trades
+* On instrument screen, added “Extended Hours Notional Enabled” field, and the ability for users to enable/disable Extended Hours Notional for a symbol
+
+**Onboarding -** Removed page where user had to select from one of four options, as it was confusing to the user at this stage.
+
+**Share Transfer -** Enhanced Share Transfer UI to allow for easy in-line editing of fields. Note: This functionality is turned off at the moment.
+
+## Bug Fixes
+
+**Partner Onboarding**
+
+* Resolved issue where it was failing when leaving a trailing space at the end of the company name
+* Resolved issue where login username was case sensitive
+* Display “username already exists” error message
+
+**Edit User Details -** Resolved issue where app crashed when attempting to edit user details (due to an invalid date issue)
+
+**Notes -** Display messages if there are no notes to display or if there is an error fetching notesCrypto - Resolved issues with retrieving trade confirmations and monthly statements in DriveHub
+
+**Reconciliations -** Removed the ability to double-click Update button in modal so that it doesn’t get submitted more than once
