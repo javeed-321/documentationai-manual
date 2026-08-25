@@ -1,0 +1,440 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create or Update Tax Residency Information for an Application Associate
+
+Creates or updates the list of countries where an individual/associate is considered tax-resident, supporting compliance with CRS/FATCA and local tax rules.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Customers",
+      "description": "Operations on Customers"
+    }
+  ],
+  "paths": {
+    "/applications/{applicationId}/compliance/associates/{associateId}/tax-residencies": {
+      "put": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Create or Update Tax Residency Information for an Application Associate",
+        "description": "Creates or updates the list of countries where an individual/associate is considered tax-resident, supporting compliance with CRS/FATCA and local tax rules.",
+        "operationId": "updateTaxResidenciesForAssociate_1",
+        "parameters": [
+          {
+            "name": "applicationId",
+            "in": "path",
+            "description": "ID of application",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "associateId",
+            "in": "path",
+            "description": "ID of associate",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/customercompliance.TaxResidenciesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid Parameters",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/customercompliance.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Incorrect permissions"
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "customercompliance.TaxResidenciesRequest": {
+        "type": "object",
+        "properties": {
+          "taxResidencies": {
+            "type": "array",
+            "description": "List of ISO Alpha-2 country codes where the associate is tax-resident (e.g., [\"ES\", \"FR\"])",
+            "items": {
+              "type": "string",
+              "enum": [
+                "AT",
+                "BE",
+                "BG",
+                "CY",
+                "CZ",
+                "DK",
+                "EE",
+                "FI",
+                "FR",
+                "DE",
+                "GR",
+                "HR",
+                "HU",
+                "IS",
+                "IE",
+                "IT",
+                "LV",
+                "LI",
+                "LT",
+                "LU",
+                "MT",
+                "NL",
+                "NO",
+                "PL",
+                "PT",
+                "RO",
+                "SK",
+                "SI",
+                "ES",
+                "SE",
+                "GB",
+                "MQ",
+                "YT",
+                "GP",
+                "GF",
+                "RE",
+                "MF",
+                "GI",
+                "GG",
+                "IM",
+                "JE",
+                "MC",
+                "CH",
+                "AD",
+                "SM",
+                "VA",
+                "AX",
+                "PM",
+                "BL",
+                "AL",
+                "MD",
+                "ME",
+                "MK",
+                "RS",
+                "AF",
+                "DZ",
+                "AS",
+                "AO",
+                "AI",
+                "AQ",
+                "AG",
+                "AR",
+                "AM",
+                "AW",
+                "AU",
+                "AZ",
+                "BS",
+                "BH",
+                "BD",
+                "BB",
+                "BY",
+                "BZ",
+                "BJ",
+                "BM",
+                "BT",
+                "BO",
+                "BQ",
+                "BA",
+                "BW",
+                "BV",
+                "BR",
+                "IO",
+                "VG",
+                "BN",
+                "BF",
+                "BI",
+                "KH",
+                "CM",
+                "CA",
+                "CV",
+                "KY",
+                "CF",
+                "TD",
+                "CL",
+                "CN",
+                "CX",
+                "CC",
+                "CO",
+                "KM",
+                "CK",
+                "CR",
+                "CU",
+                "CW",
+                "CD",
+                "DJ",
+                "DM",
+                "DO",
+                "TL",
+                "EC",
+                "EG",
+                "SV",
+                "GQ",
+                "ER",
+                "SZ",
+                "ET",
+                "FK",
+                "FO",
+                "FJ",
+                "PF",
+                "TF",
+                "GA",
+                "GM",
+                "GE",
+                "GH",
+                "GL",
+                "GD",
+                "GU",
+                "GT",
+                "GN",
+                "GW",
+                "GY",
+                "HT",
+                "HM",
+                "HN",
+                "HK",
+                "IN",
+                "ID",
+                "IR",
+                "IQ",
+                "IL",
+                "CI",
+                "JM",
+                "JP",
+                "JO",
+                "KZ",
+                "KE",
+                "KI",
+                "XK",
+                "KW",
+                "KG",
+                "LA",
+                "LB",
+                "LS",
+                "LR",
+                "LY",
+                "MO",
+                "MG",
+                "MW",
+                "MY",
+                "MV",
+                "ML",
+                "MH",
+                "MR",
+                "MU",
+                "MX",
+                "FM",
+                "MN",
+                "MS",
+                "MA",
+                "MZ",
+                "MM",
+                "NA",
+                "NR",
+                "NP",
+                "AN",
+                "NC",
+                "NZ",
+                "NI",
+                "NE",
+                "NG",
+                "NU",
+                "NF",
+                "KP",
+                "MP",
+                "OM",
+                "PK",
+                "PW",
+                "PS",
+                "PA",
+                "PG",
+                "PY",
+                "PE",
+                "PH",
+                "PN",
+                "PR",
+                "QA",
+                "CG",
+                "RU",
+                "RW",
+                "SH",
+                "KN",
+                "LC",
+                "VC",
+                "WS",
+                "ST",
+                "SA",
+                "SN",
+                "SC",
+                "SL",
+                "SG",
+                "SX",
+                "SB",
+                "SO",
+                "ZA",
+                "KR",
+                "GS",
+                "SS",
+                "LK",
+                "SD",
+                "SR",
+                "SY",
+                "SJ",
+                "TW",
+                "TJ",
+                "TZ",
+                "TH",
+                "TG",
+                "TK",
+                "TO",
+                "TT",
+                "TN",
+                "TR",
+                "TM",
+                "TC",
+                "TV",
+                "UG",
+                "UA",
+                "AE",
+                "UM",
+                "US",
+                "UY",
+                "UZ",
+                "VU",
+                "VE",
+                "VN",
+                "VI",
+                "WF",
+                "EH",
+                "YE",
+                "ZM",
+                "ZW"
+              ]
+            }
+          }
+        }
+      },
+      "customercompliance.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

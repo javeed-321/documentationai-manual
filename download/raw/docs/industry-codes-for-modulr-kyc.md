@@ -1,0 +1,48 @@
+---
+updatedAt: 2025-09-05T18:54:55.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Industry Codes for Modulr KYC
+
+### Modulr KYC
+
+When Modulr are completing Customer Due Diligence for your new customers, please use the single letter code from the list below:
+
+| Code | Description                                     |
+| :--- | :---------------------------------------------- |
+| I    | Accommodation and food services                 |
+| M2   | Accountancy services                            |
+| N    | Administrative and support services             |
+| A    | Agriculture, forestry and fishing               |
+| C2   | Arms and Defence                                |
+| R    | Arts, entertainment and recreation              |
+| T    | Charity and non Profits                         |
+| F    | Construction                                    |
+| U    | Cryptocurrency and crypto assets                |
+| V    | Dedicated adult entertainment                   |
+| P    | Education                                       |
+| N2   | Employment services                             |
+| D    | Energy                                          |
+| K    | Financial and insurance services                |
+| X    | Gambling or gaming                              |
+| Q    | Human health and social work                    |
+| J    | Information and communication                   |
+| M3   | Legal services and trusts                       |
+| C    | Manufacturing                                   |
+| W    | Merchant services                               |
+| B    | Mining and quarrying                            |
+| K2   | Money service business                          |
+| M    | Professional, scientific and technical services |
+| L    | Estate agency and lettings                      |
+| L2   | Property                                        |
+| O    | Public administration                           |
+| S    | Retail services                                 |
+| F2   | Specialist Trade Services                       |
+| H2   | Supply chain management                         |
+| J2   | Technology services                             |
+| H    | Transport, storage and logistics                |
+| N3   | Travel                                          |
+| E    | Water supply, sewerage and waste management     |
+| G    | Wholesale and retail trade; vehicle repair      |

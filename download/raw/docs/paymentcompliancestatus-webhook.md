@@ -1,0 +1,50 @@
+---
+updatedAt: 2025-09-19T09:17:23.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Webhook - Payment Compliance Status
+
+The `PAYMENTCOMPLIANCESTATUS` webhook will inform the customers if a payment has been held for compliance review. It applies to FPS, BACS, CHAPS, and SEPA.
+
+The `ComplianceStatus` will give customers updates on the status of a payment.
+
+| Compliance Status           | Description                                                                                                                        |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| Held                        | A payment has been held for compliance review                                                                                      |
+| Released                    | A payment has been sent to the recipient, following compliance review.                                                             |
+| Returned (Inbound payment)  | An inbound payment has been returned to the sender, following compliance review.                                                   |
+| Declined (Outbound Payment) | An outbound payment request has been declined and funds have been released back to the account owner, following compliance review. |
+
+**Inbound**
+
+```text
+{
+  "EventId": "23f51ffc-4917-4cb9-8840-ce86fcedaac2",
+  "EventName": "PAYMENTCOMPLIANCESTATUS",
+  "EventTime": "2021-10-28T11:52:50+0000",
+  "AccountBid": "A110Z7JH",
+  "PaymentBid": "P1100UHXMV",
+  "SchemeInfo": {
+    "Id": "bdb4c487f0f4c199f9071d0fd7ddc6c61418694c464889f98502faa17d28e92b-61091DW7",
+    "Name": "BACS"
+  },
+  "CustomerBid": "C110QUFV",
+  "ComplianceStatus": "HELD"
+}
+```
+
+**Outbound**
+
+```text
+{
+  "EventId": "a35aec8f-4666-4ad1-9266-c8ce46775d4b",
+  "EventName": "PAYMENTCOMPLIANCESTATUS",
+  "EventTime": "2021-10-28T11:43:52+0000",
+  "AccountBid": "A110Z2CX",
+  "PaymentBid": "P1100UHWB1",
+  "CustomerBid": "C110QUFV",
+  "ComplianceStatus": "HELD"
+}
+```

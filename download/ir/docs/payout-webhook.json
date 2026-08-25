@@ -1,0 +1,560 @@
+{
+  "slug": "docs/payout-webhook",
+  "source": "https://modulr.readme.io/docs/payout-webhook.md",
+  "url": "https://modulr.readme.io/docs/payout-webhook",
+  "title": "Webhook - Outbound Payments",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:48:16.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 11,
+    "paragraph": 4,
+    "Table": 1,
+    "code": 7,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Webhook - Outbound Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Webhook - Outbound Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "### Outbound Payment",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Outbound Payment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "The `PAYOUT` event is triggered when a Payment request reaches any [final status](https://modulr.readme.io/docs/payment-statuses) (*It doesn't trigger for payments that are rejected. To subscribe to Payment Approvel/Rejection notifications see our guide here:[Individual Payment Approval/Rejections](https://modulr.readme.io/docs/payment-approval-rejection-webhook)*) or a Settlement is processed in a card that's associated with one of your accounts",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The PAYOUT event is triggered when a Payment request reaches any final status (It doesn't trigger for payments that are rejected. To subscribe to Payment Approvel/Rejection notifications see our guide here:Individual Payment Approval/Rejections) or a Settlement is processed in a card that's associated with one of your accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-statuses",
+          "line": 11
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-approval-rejection-webhook",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        27
+      ],
+      "raw": "| Parameter            | Description                                                                                                                                                                                                        |\n| :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Amount               | Amount of the Payment.                                                                                                                                                                                             |\n| Status               | Final status of the payment .                                                                                                                                                                                      |\n| EventId              | Unique id for the webhook event. This can change if webhook needs to be resent.                                                                                                                                    |\n| DateTime             | The Date and timestamp when the Payment was posted to Modulr - All Dates and times are UTC based.                                                                                                                  |\n| AccountId            | Modulr Unique Account reference for the account that the payment was made from.                                                                                                                                    |\n| EventName            | Type of event: PAYOUT - Payment has reached a final status.                                                                                                                                                        |\n| EventTime            | Date and Timestamp for the Event - All Dates and times are UTC based.                                                                                                                                              |\n| PaymentSubmittedTime | Date and Timestamp for when the payment has been sent externally from Modulr.                                                                                                                                      |\n| PaymentId            | Modulr Unique Payment Reference for the payment sent.                                                                                                                                                              |\n| Reference            | Reference to be used for the Payment. This will appear on the Account statement/the recipient's bank account.                                                                                                      |\n| SchemeInfo           | Scheme information for the sent payment in this example this is a FPID and the response code from the Scheme.                                                                                                      |\n| TransactionId        | Modulr Unique Transaction Reference for the payment sent. Transactions are only created when a payment is sent successfully in case of failed payment it is possible to receive a webhook without a TransactionId. |\n| ExternalReference    | This is the reference you can set on the payment request to correlate back to your system.                                                                                                                         |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Parameter",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Amount",
+            "Amount of the Payment."
+          ],
+          [
+            "Status",
+            "Final status of the payment ."
+          ],
+          [
+            "EventId",
+            "Unique id for the webhook event. This can change if webhook needs to be resent."
+          ],
+          [
+            "DateTime",
+            "The Date and timestamp when the Payment was posted to Modulr - All Dates and times are UTC based."
+          ],
+          [
+            "AccountId",
+            "Modulr Unique Account reference for the account that the payment was made from."
+          ],
+          [
+            "EventName",
+            "Type of event: PAYOUT - Payment has reached a final status."
+          ],
+          [
+            "EventTime",
+            "Date and Timestamp for the Event - All Dates and times are UTC based."
+          ],
+          [
+            "PaymentSubmittedTime",
+            "Date and Timestamp for when the payment has been sent externally from Modulr."
+          ],
+          [
+            "PaymentId",
+            "Modulr Unique Payment Reference for the payment sent."
+          ],
+          [
+            "Reference",
+            "Reference to be used for the Payment. This will appear on the Account statement/the recipient's bank account."
+          ],
+          [
+            "SchemeInfo",
+            "Scheme information for the sent payment in this example this is a FPID and the response code from the Scheme."
+          ],
+          [
+            "TransactionId",
+            "Modulr Unique Transaction Reference for the payment sent. Transactions are only created when a payment is sent successfully in case of failed payment it is possible to receive a webhook without a TransactionId."
+          ],
+          [
+            "ExternalReference",
+            "This is the reference you can set on the payment request to correlate back to your system."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## Duplication Check",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Duplication Check",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "PaymentId should be used as your main duplication check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty. This is important particularly if a webhook has failed and needs to be resent.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PaymentId should be used as your main duplication check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty. This is important particularly if a webhook has failed and needs to be resent.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "## Example PAYOUT Webhook",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Example PAYOUT Webhook",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "### Internal Transfer Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Internal Transfer Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        37,
+        50
+      ],
+      "raw": "```json Payout Example\n{\n    \"Amount\": \"19.28\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"a13bd641-4a19-4814-b121-2d58adc15623\",\n    \"DateTime\": \"2024-02-02T02:02:022+0000\",\n    \"AccountId\": \"A1201HT721\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2024-02-02T02:02:024+0000\",\n    \"PaymentId\": \"P120DD1AB2\",\n    \"TransactionId\": \"T120A3VX22\",\n    \"TransactionType\": \"INT_INTERC\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Payout Example",
+        "code": "{\n    \"Amount\": \"19.28\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"a13bd641-4a19-4814-b121-2d58adc15623\",\n    \"DateTime\": \"2024-02-02T02:02:022+0000\",\n    \"AccountId\": \"A1201HT721\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2024-02-02T02:02:024+0000\",\n    \"PaymentId\": \"P120DD1AB2\",\n    \"TransactionId\": \"T120A3VX22\",\n    \"TransactionType\": \"INT_INTERC\"\n}"
+      },
+      "text": "Payout Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "### Faster Payment Out Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Faster Payment Out Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        54,
+        74
+      ],
+      "raw": "```json PAYOUT Example\n{\n    \"Amount\": \"40\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"46915325-a6db-46c5-a3d8-606f35bde2ef\",\n    \"DateTime\": \"2020-01-01T10:53:38+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T10:53:382+0000\",\n    \"PaymentSubmittedTime\": \"2021-01-01T10:54:42.715+0000\",\n    \"PaymentId\": \"P12000MWFB\",\n    \"Reference\": \"Sent from Tony Stark\",\n    \"SchemeInfo\": {\n        \"Id\": \"MODULO00P12000MWFB020200101826040010\",\n        \"ResponseCode\": \"0000\"\n    },\n    \"TransactionId\": \"T12000N5TN\",\n    \"ExternalReference\": \"887adb57-9960-4a3d-bfa1-f0c6cacc7c97\",\n    \"TransactionType\": \"PO_FAST\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "PAYOUT Example",
+        "code": "{\n    \"Amount\": \"40\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"46915325-a6db-46c5-a3d8-606f35bde2ef\",\n    \"DateTime\": \"2020-01-01T10:53:38+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T10:53:382+0000\",\n    \"PaymentSubmittedTime\": \"2021-01-01T10:54:42.715+0000\",\n    \"PaymentId\": \"P12000MWFB\",\n    \"Reference\": \"Sent from Tony Stark\",\n    \"SchemeInfo\": {\n        \"Id\": \"MODULO00P12000MWFB020200101826040010\",\n        \"ResponseCode\": \"0000\"\n    },\n    \"TransactionId\": \"T12000N5TN\",\n    \"ExternalReference\": \"887adb57-9960-4a3d-bfa1-f0c6cacc7c97\",\n    \"TransactionType\": \"PO_FAST\"\n}"
+      },
+      "text": "PAYOUT Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        76,
+        76
+      ],
+      "raw": "### CHAPS Payment Out Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "CHAPS Payment Out Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        78,
+        96
+      ],
+      "raw": "```json CHAPS Webhook Example\n{\n    \"Amount\": \"266726.74\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"f747b093-40f1-4438-b3a5-6ad3ce66f2dd\",\n    \"DateTime\": \"2020-01-01T10:07:03+0000\",\n    \"AccountId\": \"A120E8C3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T10:07:03+0000\",\n    \"PaymentId\": \"P12000EWFQ\",\n    \"Reference\": \"Hulk Smash\",\n    \"SchemeInfo\": {\n        \"Id\": \"+H4Bu6HbDww7jdgI\",\n        \"Name\": \"CHAPS\"\n    },\n    \"TransactionId\": \"T12000N5GQ\",\n    \"TransactionType\": \"PO_CHAPS\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "CHAPS Webhook Example",
+        "code": "{\n    \"Amount\": \"266726.74\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"f747b093-40f1-4438-b3a5-6ad3ce66f2dd\",\n    \"DateTime\": \"2020-01-01T10:07:03+0000\",\n    \"AccountId\": \"A120E8C3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T10:07:03+0000\",\n    \"PaymentId\": \"P12000EWFQ\",\n    \"Reference\": \"Hulk Smash\",\n    \"SchemeInfo\": {\n        \"Id\": \"+H4Bu6HbDww7jdgI\",\n        \"Name\": \"CHAPS\"\n    },\n    \"TransactionId\": \"T12000N5GQ\",\n    \"TransactionType\": \"PO_CHAPS\"\n}"
+      },
+      "text": "CHAPS Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "### Direct Debit Out Payment Out Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Direct Debit Out Payment Out Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        100,
+        113
+      ],
+      "raw": "```json DD Out Webhook Example\n{\n    \"Amount\": \"107.03\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"f3a48f9a-dd7a-42d2-b0de-87ed234f92ef\",\n    \"DateTime\": \"2020-01-01T15:00:19+0000\",\n    \"AccountId\": \"A120Q8Q3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T15:00:19+0000\",\n    \"PaymentId\": \"D210NER0\",\n    \"TransactionId\": \"T12000R5RQ\",\n    \"TransactionType\": \"PO_DD\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "DD Out Webhook Example",
+        "code": "{\n    \"Amount\": \"107.03\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"f3a48f9a-dd7a-42d2-b0de-87ed234f92ef\",\n    \"DateTime\": \"2020-01-01T15:00:19+0000\",\n    \"AccountId\": \"A120Q8Q3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T15:00:19+0000\",\n    \"PaymentId\": \"D210NER0\",\n    \"TransactionId\": \"T12000R5RQ\",\n    \"TransactionType\": \"PO_DD\"\n}"
+      },
+      "text": "DD Out Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        115,
+        115
+      ],
+      "raw": "### Direct Debit Internal Transfer Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Direct Debit Internal Transfer Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        117,
+        130
+      ],
+      "raw": "```Text Direct Debit Internal Transfer Example\n{\n  \"Amount\": \"341.40\",\n  \"Status\": \"PROCESSED\",\n  \"EventId\": \"79e2926b-ccd2-40f8-82e5-868242ca4129\",\n  \"DateTime\": \"2025-01-01T10:04:18+0000\",\n  \"AccountId\": \"A2105JXXXX\",\n  \"EventName\": \"PAYOUT\",\n  \"EventTime\": \"2025-01-01T10:04:18+0000\",\n  \"PaymentId\": \"K21004XXXX\",\n  \"TransactionId\": \"T2117XXXXX\",\n  \"TransactionType\": \"PO_DD_PEND\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "Direct Debit Internal Transfer Example",
+        "code": "{\n  \"Amount\": \"341.40\",\n  \"Status\": \"PROCESSED\",\n  \"EventId\": \"79e2926b-ccd2-40f8-82e5-868242ca4129\",\n  \"DateTime\": \"2025-01-01T10:04:18+0000\",\n  \"AccountId\": \"A2105JXXXX\",\n  \"EventName\": \"PAYOUT\",\n  \"EventTime\": \"2025-01-01T10:04:18+0000\",\n  \"PaymentId\": \"K21004XXXX\",\n  \"TransactionId\": \"T2117XXXXX\",\n  \"TransactionType\": \"PO_DD_PEND\"\n}"
+      },
+      "text": "Direct Debit Internal Transfer Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        132,
+        132
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 132
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        134,
+        134
+      ],
+      "raw": "### SEPA Credit Transfer Payment Out Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "SEPA Credit Transfer Payment Out Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        136,
+        151
+      ],
+      "raw": "```json SEPA Out Webhook Example\n{\n    \"Amount\": \"100.0\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"4193b4d3-5dff-422c-be7e-66c79f69a10e\",\n    \"DateTime\": \"2020-01-01T09:15:00+0000\",\n    \"AccountId\": \"A120S8H3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T09:15:00+0000\",\n    \"PaymentId\": \"P12000EWVV\",\n    \"Reference\": \"JARVIS\",\n    \"TransactionId\": \"T12000R5EE\",\n    \"ExternalReference\": \"TYbJv7RRpDwHxmx\",\n    \"TransactionType\": \"SEPA_SCT\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "SEPA Out Webhook Example",
+        "code": "{\n    \"Amount\": \"100.0\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"4193b4d3-5dff-422c-be7e-66c79f69a10e\",\n    \"DateTime\": \"2020-01-01T09:15:00+0000\",\n    \"AccountId\": \"A120S8H3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T09:15:00+0000\",\n    \"PaymentId\": \"P12000EWVV\",\n    \"Reference\": \"JARVIS\",\n    \"TransactionId\": \"T12000R5EE\",\n    \"ExternalReference\": \"TYbJv7RRpDwHxmx\",\n    \"TransactionType\": \"SEPA_SCT\"\n}"
+      },
+      "text": "SEPA Out Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        153,
+        153
+      ],
+      "raw": "### Card Settlement Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Card Settlement Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        155,
+        155
+      ],
+      "raw": "The PaymentId field contains the card activity BID which you can use to query additional details from the card [activities](https://modulr.readme.io/reference/getcardactivities) API",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The PaymentId field contains the card activity BID which you can use to query additional details from the card activities API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcardactivities",
+          "line": 155
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        157,
+        157
+      ],
+      "raw": "Some of our clients will also use the Order ID to match the settlement to the authorisation record as part of their internal reconciliation",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Some of our clients will also use the Order ID to match the settlement to the authorisation record as part of their internal reconciliation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        159,
+        173
+      ],
+      "raw": "```json\n{\n    \"Amount\": \"107.03\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"f3a48f9a-dd7a-42d2-b0de-87ed234f92ef\",\n    \"DateTime\": \"2020-01-01T15:00:19+0000\",\n    \"AccountId\": \"A120Q8Q3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T15:00:19+0000\",\n    \"PaymentId\": \"X11000DYTA\", // Card Activity ID\n    \"ExternalReference\": \"10\", // Order ID\n    \"TransactionId\": \"T12000R5RQ\",\n    \"TransactionType\": \"PO_VISA\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"Amount\": \"107.03\",\n    \"Status\": \"PROCESSED\",\n    \"EventId\": \"f3a48f9a-dd7a-42d2-b0de-87ed234f92ef\",\n    \"DateTime\": \"2020-01-01T15:00:19+0000\",\n    \"AccountId\": \"A120Q8Q3\",\n    \"EventName\": \"PAYOUT\",\n    \"EventTime\": \"2020-01-01T15:00:19+0000\",\n    \"PaymentId\": \"X11000DYTA\", // Card Activity ID\n    \"ExternalReference\": \"10\", // Order ID\n    \"TransactionId\": \"T12000R5RQ\",\n    \"TransactionType\": \"PO_VISA\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

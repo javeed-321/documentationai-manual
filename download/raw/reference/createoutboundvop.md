@@ -1,0 +1,251 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create Verification of Payee (VOP) request
+
+This endpoint allows you to get information on the accuracy of the payee details the user is going to send a payment to.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "paths": {
+    "/verify-payee": {
+      "post": {
+        "tags": [
+          "Verification of Payee"
+        ],
+        "summary": "Create Verification of Payee (VOP) request",
+        "description": "This endpoint allows you to get information on the accuracy of the payee details the user is going to send a payment to.",
+        "operationId": "createOutboundVop",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/verificationofpayee.OutboundVopRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/verificationofpayee.OutboundVopResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation Errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/verificationofpayee.OutboundVopErrorResponse"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/verificationofpayee.OutboundVopErrorResponse"
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/verificationofpayee.OutboundVopErrorResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/verificationofpayee.OutboundVopErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "verificationofpayee.OutboundVopErrorResponse": {
+        "type": "object",
+        "description": "Verify Payee Error Response",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "verificationofpayee.OutboundVopResponse": {
+        "type": "object",
+        "description": "Verify Payee Response",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique id of verify payee request.",
+            "example": "PAV0000001"
+          },
+          "result": {
+            "$ref": "#/components/schemas/verificationofpayee.OutboundVopResponseResult",
+            "description": "The result of verify payee."
+          }
+        },
+        "required": [
+          "id",
+          "result"
+        ]
+      },
+      "verificationofpayee.OutboundVopRequest": {
+        "type": "object",
+        "description": "Verify Payee Request",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the payee.",
+            "example": "John Smith",
+            "maxLength": 140,
+            "minLength": 1
+          },
+          "iban": {
+            "type": "string",
+            "description": "The IBAN of the payee.",
+            "example": "AD1200012030200359100100"
+          },
+          "paymentAccountId": {
+            "type": "string",
+            "description": "The bid of the account the payment will be initiated from.",
+            "example": "A123AAA4"
+          },
+          "customerId": {
+            "type": "string",
+            "description": "The bid of the customer that is making this request.",
+            "example": "C1100001"
+          }
+        },
+        "required": [
+          "iban",
+          "name",
+          "paymentAccountId"
+        ]
+      },
+      "verificationofpayee.OutboundVopResponseResult": {
+        "type": "object",
+        "description": "Verify Payee Result",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "The result of verify payee.",
+            "enum": [
+              "MATCH",
+              "NO_MATCH",
+              "CLOSE_MATCH",
+              "CHECK_NOT_POSSIBLE"
+            ],
+            "example": "MATCH"
+          },
+          "matchedName": {
+            "type": "string",
+            "description": "The actual name of the payee",
+            "example": "Joseph Bloggs"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

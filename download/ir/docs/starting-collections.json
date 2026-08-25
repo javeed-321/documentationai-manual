@@ -1,0 +1,1936 @@
+{
+  "slug": "docs/starting-collections",
+  "source": "https://modulr.readme.io/docs/starting-collections.md",
+  "url": "https://modulr.readme.io/docs/starting-collections",
+  "title": "Starting Collections",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-24T14:44:24.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 10,
+    "paragraph": 46,
+    "Image": 5,
+    "list": 12,
+    "code": 2,
+    "Callout": 14,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Starting Collections",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Starting Collections",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Collection Schedule",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Collection Schedule",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "The Collection Schedule is used to hold the information on the payment’s frequency, the payment amount, and currency. For example, a Collection Schedule can be set up to collect £100 on 15th of every month for the next 12 months. Modulr will then automatically create individual Collections to receive payments as per the schedule. Collection Schedules can also be set up to collect a one-off payment.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Collection Schedule is used to hold the information on the payment’s frequency, the payment amount, and currency. For example, a Collection Schedule can be set up to collect £100 on 15th of every month for the next 12 months. Modulr will then automatically create individual Collections to receive payments as per the schedule. Collection Schedules can also be set up to collect a one-off payment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Collection Schedules can be set up to collect a certain amount as a first payment and a different amount as the regular recurring payment. For example, you can specify that the first payment is for £200 on 20th April, and the regular recurring payments should be on a monthly basis for of £100 to be collected on the 1st of every month. The regular recurring amount needs to be for the same amount. If the collection amount will vary then a new Collection Schedule needs to be made for each collection. Please note that every time a new single collection is requested the Payer needs to be notified of this new amount; this is something you will need to make sure happens as it is a rule of the Direct Debit scheme.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Collection Schedules can be set up to collect a certain amount as a first payment and a different amount as the regular recurring payment. For example, you can specify that the first payment is for £200 on 20th April, and the regular recurring payments should be on a monthly basis for of £100 to be collected on the 1st of every month. The regular recurring amount needs to be for the same amount. If the collection amount will vary then a new Collection Schedule needs to be made for each collection. Please note that every time a new single collection is requested the Payer needs to be notified of this new amount; this is something you will need to make sure happens as it is a rule of the Direct Debit scheme.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "For details on all the parameters needed for the POST /mandates/id/collectionschedules endpoint the documentation is here: [Create a scheduled collection](https://modulr.readme.io/reference/createcollectionschedule)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For details on all the parameters needed for the POST /mandates/id/collectionschedules endpoint the documentation is here: Create a scheduled collection",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createcollectionschedule",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "**Advance Notice**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Advance Notice",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "At least 3 working days’ Advance notice must be given by our Partner to their customers before the first Direct Debit is collected in the form of an email.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "At least 3 working days’ Advance notice must be given by our Partner to their customers before the first Direct Debit is collected in the form of an email.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "Advance notice must be given before the first collection but is not required for subsequent collections. Advance notice must also be given if the Service User makes any changes to the Direct Debit amount, due date or frequency. The timescale of this communication, or advance notice period, must adhere to what was originally advised in the Direct Debit Guarantee, and must also be delivered by the method of communication as advised to the Payer. For re-presentable collections, no advance notice is needed again.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Advance notice must be given before the first collection but is not required for subsequent collections. Advance notice must also be given if the Service User makes any changes to the Direct Debit amount, due date or frequency. The timescale of this communication, or advance notice period, must adhere to what was originally advised in the Direct Debit Guarantee, and must also be delivered by the method of communication as advised to the Payer. For re-presentable collections, no advance notice is needed again.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "[Contact us](https://www.modulrfinance.com/contact-us) to get the BACS' guidelines on the UI for signing up new customers and Advance Notices for Direct Debit.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Contact us to get the BACS' guidelines on the UI for signing up new customers and Advance Notices for Direct Debit.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "## Core Referencing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Core Referencing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "When creating the collection schedule, an additional optional parameter `collectionReference` can be included which will be suffixed to the mandate reference on collection requests. This change makes it easier for payers to identify corresponding debits on their account when using a mandate (DDI) for multiple purposes.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When creating the collection schedule, an additional optional parameter collectionReference can be included which will be suffixed to the mandate reference on collection requests. This change makes it easier for payers to identify corresponding debits on their account when using a mandate (DDI) for multiple purposes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "Each collection can now have a core reference inherited from the Mandate (DDI) and separate suffix, allowing the collection of multiple Direct Debit agreements under the same mandate and on the same day.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Each collection can now have a core reference inherited from the Mandate (DDI) and separate suffix, allowing the collection of multiple Direct Debit agreements under the same mandate and on the same day.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "The `collectionReference` and core mandate reference combined can be up to a maximum of 18 characters.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The collectionReference and core mandate reference combined can be up to a maximum of 18 characters.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "***Examples***",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Examples",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "A schedule is set up using`collectionReference -JUNE 24`for a mandate with reference `GB/1234LT`. The Direct Debit is collected with a combined reference `GB/1234LT-JUNE 24`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A schedule is set up usingcollectionReference -JUNE 24for a mandate with reference GB/1234LT. The Direct Debit is collected with a combined reference GB/1234LT-JUNE 24.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "Multiple one-off schedules are set up with invoice numbers for a  mandate with ‘core’ reference `GG/567998` . Using collectionReference of `INV1298` or `INV4578` results  in DD Collections with `GG/567998-INV1298` and `GG/567998-INV4578` respectively.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Multiple one-off schedules are set up with invoice numbers for a  mandate with ‘core’ reference GG/567998 . Using collectionReference of INV1298 or INV4578 results  in DD Collections with GG/567998-INV1298 and GG/567998-INV4578 respectively.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## Collection Request",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Collection Request",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "**New mandate and first collection**<br />The diagram below displays the flow from Mandate creation when a payer signs up for a Direct Debit through to collection. It gives a high-level overview of the process with the shortest timeline needed to do a first collection including the returns (ARUDD) process. Note: customer communications on the Direct Debit not illustrated - the Advance Notice must be given to the payer ahead of the first collection.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "New mandate and first collection<br />The diagram below displays the flow from Mandate creation when a payer signs up for a Direct Debit through to collection. It gives a high-level overview of the process with the shortest timeline needed to do a first collection including the returns (ARUDD) process. Note: customer communications on the Direct Debit not illustrated - the Advance Notice must be given to the payer ahead of the first collection.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "Included in the diagram are the mandate creation, collection schedule, main collection and returns (ARUDD) cycles. Funds from successful collections should only be withdrawn from the collection account on Day 5 of the collections cycle when the Collection Schedule status is \"SUCCESSFUL\"",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Included in the diagram are the mandate creation, collection schedule, main collection and returns (ARUDD) cycles. Funds from successful collections should only be withdrawn from the collection account on Day 5 of the collections cycle when the Collection Schedule status is \"SUCCESSFUL\"",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "<Image src=\"https://files.readme.io/96ce028831c5149fedc9aca3bbf9c57325f8679bc4a0838c87fee8c67967efaa-DD_Collections_cycle_at_Modulr.drawio.png\" align=\"center\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/96ce028831c5149fedc9aca3bbf9c57325f8679bc4a0838c87fee8c67967efaa-DD_Collections_cycle_at_Modulr.drawio.png",
+        "align": "center"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "**Existing mandate and new collection**<br />For existing mandates and collection schedules, the Partner can be assured that Modulr will create and send the collection request two working days before the collection date. The Partner does not have to do anything else and the timeline is shorten because of an existing mandate on a customer's account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Existing mandate and new collection<br />For existing mandates and collection schedules, the Partner can be assured that Modulr will create and send the collection request two working days before the collection date. The Partner does not have to do anything else and the timeline is shorten because of an existing mandate on a customer's account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "i": 22,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "![](https://files.readme.io/801f143-DD_Collection_Process.png \"DD Collection Process.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/801f143-DD_Collection_Process.png",
+        "title": "DD Collection Process.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/801f143-DD_Collection_Process.png",
+          "line": 49
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "## Timeline of events for Collections",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Timeline of events for Collections",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "*Note: Timings are current UK Timezone GMT/BST as appropriate*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note: Timings are current UK Timezone GMT/BST as appropriate",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "**Happy Path**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Happy Path",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "Day 1:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 1:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        59,
+        63
+      ],
+      "raw": "1. The Collection Schedule triggers Collection request to start the process of collecting funds from the Partner’s customer.\n2. Modulr generates a file that includes collection amount from the customer.\n3. Modulr’s cut-off time is at 3:30PM, as Modulr needs to transform the file into a format accepted by BACS. The status changes to “**Processing**”.\n4. At 5:10PM, Modulr sends the file to the Scheme\n5. Collection Schedule creates a collection request for the next due date.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The Collection Schedule triggers Collection request to start the process of collecting funds from the Partner’s customer.Modulr generates a file that includes collection amount from the customer.Modulr’s cut-off time is at 3:30PM, as Modulr needs to transform the file into a format accepted by BACS. The status changes to “Processing”.At 5:10PM, Modulr sends the file to the SchemeCollection Schedule creates a collection request for the next due date.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "Day 2:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 2:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        67,
+        68
+      ],
+      "raw": "1. The Paying bank receives the collection request from the Scheme.\n2. Modulr sends the [Webhook - Upcoming Collection Credit](https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus) at 4:45PM to tell the Partners that funds will arrive in their account tomorrow.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The Paying bank receives the collection request from the Scheme.Modulr sends the Webhook - Upcoming Collection Credit at 4:45PM to tell the Partners that funds will arrive in their account tomorrow.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "i": 30,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "Day 3:<br />The funds are debited from the Paying bank regardless if the customer has any sufficient funds or not.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 3:<br />The funds are debited from the Paying bank regardless if the customer has any sufficient funds or not.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 70
+        }
+      ]
+    },
+    {
+      "i": 31,
+      "lines": [
+        72,
+        73
+      ],
+      "raw": "1. Modulr receives the funds from the Paying Bank and transfers the funds into the Partner's account at 03:00 AM to 07:00AM.\n2. When Modulr credits the funds into the Partner's account, we send the [PayIn Webhook](https://modulr.readme.io/docs/payin-webhook) to notify them.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr receives the funds from the Paying Bank and transfers the funds into the Partner's account at 03:00 AM to 07:00AM.When Modulr credits the funds into the Partner's account, we send the PayIn Webhook to notify them.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payin-webhook",
+          "line": 73
+        }
+      ]
+    },
+    {
+      "i": 32,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "Day 5:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 5:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "1. Modulr sets the collection's status to \"Success\", if the collection does not receive an [ARUDD](https://www.bacs.co.uk/Services/bacsschemes/directdebit/services/Pages/Services.aspx#:~:text=ARUDD%20is%20the%20automated%20system,return%20unpaid%20Direct%20Debit%20payments.)(Automated Return of Unpaid Direct Debits Service).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr sets the collection's status to \"Success\", if the collection does not receive an ARUDD(Automated Return of Unpaid Direct Debits Service).",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "![](https://files.readme.io/3ceaced-New_Mandate_and_Collection-New_Collection_-_Happy_3.jpg \"New Mandate and Collection-New Collection - Happy (3).jpg\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/3ceaced-New_Mandate_and_Collection-New_Collection_-_Happy_3.jpg",
+        "title": "New Mandate and Collection-New Collection - Happy (3).jpg"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/3ceaced-New_Mandate_and_Collection-New_Collection_-_Happy_3.jpg",
+          "line": 79
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 35,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "**Unhappy Path**<br />ARUDDs are messages to tell Modulr that a collection was unsuccessful due to a variety of reasons (i.e. Insufficient funds, no DDI, and more). It will trigger the process of returning funds to the Paying bank on Day 4 and Day 5.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Unhappy Path<br />ARUDDs are messages to tell Modulr that a collection was unsuccessful due to a variety of reasons (i.e. Insufficient funds, no DDI, and more). It will trigger the process of returning funds to the Paying bank on Day 4 and Day 5.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 81
+        }
+      ]
+    },
+    {
+      "i": 36,
+      "lines": [
+        83,
+        83
+      ],
+      "raw": "Day 3:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 3:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        85,
+        87
+      ],
+      "raw": "1. Modulr receives the funds from the Paying Bank and transfers the funds into the Partner's account at 03:00 AM to 07:00AM.\n2. When Modulr credits the funds into the Partner's account, we send the [Webhook - Inbound Payments](https://modulr.readme.io/docs/payin-webhook)  to notify them.\n3. The Paying bank generates an ARUDDs file against a collection and sends the file to the Scheme.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr receives the funds from the Paying Bank and transfers the funds into the Partner's account at 03:00 AM to 07:00AM.When Modulr credits the funds into the Partner's account, we send the Webhook - Inbound Payments  to notify them.The Paying bank generates an ARUDDs file against a collection and sends the file to the Scheme.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payin-webhook",
+          "line": 86
+        }
+      ]
+    },
+    {
+      "i": 38,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "Day 4:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 4:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        91,
+        92
+      ],
+      "raw": "1. The scheme processes the ARUDD file and tells Modulr that a collection has an ARUDDs.\n2. Modulr sends [Webhook - Direct Debit, DD Collection Status](https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus) to our Partner informing them of the failed collection at 10:15 AM.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The scheme processes the ARUDD file and tells Modulr that a collection has an ARUDDs.Modulr sends Webhook - Direct Debit, DD Collection Status to our Partner informing them of the failed collection at 10:15 AM.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus",
+          "line": 92
+        }
+      ]
+    },
+    {
+      "i": 40,
+      "lines": [
+        94,
+        94
+      ],
+      "raw": "Day 5:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 5:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        96,
+        96
+      ],
+      "raw": "1. Modulr debits the Partner's account and returns the amount to the Paying bank. The collection’s status is “Failed”.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr debits the Partner's account and returns the amount to the Paying bank. The collection’s status is “Failed”.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "**Late Unhappy Collections**<br />In the vast majority of cases, the Paying Bank sends an ARUDD on Day 3. However, in a minority of cases they send the ARUDD on Day 4. The process will be similar to the unhappy collection but will start at **Day 4** where the Paying bank generates the file and sends to the scheme and so on.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Late Unhappy Collections<br />In the vast majority of cases, the Paying Bank sends an ARUDD on Day 3. However, in a minority of cases they send the ARUDD on Day 4. The process will be similar to the unhappy collection but will start at Day 4 where the Paying bank generates the file and sends to the scheme and so on.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 98
+        }
+      ]
+    },
+    {
+      "i": 43,
+      "lines": [
+        100,
+        100
+      ],
+      "raw": "![](https://files.readme.io/ba28de0-New_Mandate_and_Collection-New_Collection_-_Unhappy_Path_4.jpg \"New Mandate and Collection-New Collection - Unhappy Path (4).jpg\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/ba28de0-New_Mandate_and_Collection-New_Collection_-_Unhappy_Path_4.jpg",
+        "title": "New Mandate and Collection-New Collection - Unhappy Path (4).jpg"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/ba28de0-New_Mandate_and_Collection-New_Collection_-_Unhappy_Path_4.jpg",
+          "line": 100
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 44,
+      "lines": [
+        102,
+        102
+      ],
+      "raw": "**Updates on Collection progress**<br />Modulr provides a [GET /collections endpoint](https://modulr.readme.io/reference/getcollections) which will give the Partner a list of collection activities related to an account, these will account for collections and any indemnities.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Updates on Collection progress<br />Modulr provides a GET /collections endpoint which will give the Partner a list of collection activities related to an account, these will account for collections and any indemnities.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 102
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcollections",
+          "line": 102
+        }
+      ]
+    },
+    {
+      "i": 45,
+      "lines": [
+        104,
+        104
+      ],
+      "raw": "## Collection Statuses",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Collection Statuses",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        106,
+        112
+      ],
+      "raw": "* **Scheduled** - Collection Request is created and waiting to be sent to BACS.\n* **Processing** - Collection Request has been sent to BACS.\n* **Success** - Collection has not received an ARUDDs and on Day 5, we consider them a successful collection.\n* **Cancelled** - Partner cancels the collection request.\n* **Failed** - Partner cancels the collections request or collection is failed because the reason was not representable.\n* **Representable** - Upon receiving an ARUDDs, BACS tells Modulr if the collection can be retried.\n* **Represented** - Partner retries on a representable collection.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Scheduled - Collection Request is created and waiting to be sent to BACS.Processing - Collection Request has been sent to BACS.Success - Collection has not received an ARUDDs and on Day 5, we consider them a successful collection.Cancelled - Partner cancels the collection request.Failed - Partner cancels the collections request or collection is failed because the reason was not representable.Representable - Upon receiving an ARUDDs, BACS tells Modulr if the collection can be retried.Represented - Partner retries on a representable collection.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        114,
+        114
+      ],
+      "raw": "\\_Representable means a failed collection can be retried following the scheme representment guidance (see below)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "_Representable means a failed collection can be retried following the scheme representment guidance (see below)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        116,
+        116
+      ],
+      "raw": "## APIs and Webhooks related to Collections",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "APIs and Webhooks related to Collections",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        118,
+        118
+      ],
+      "raw": "![](https://files.readme.io/245c0f5-collection_api_flow.png \"collection api flow.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/245c0f5-collection_api_flow.png",
+        "title": "collection api flow.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/245c0f5-collection_api_flow.png",
+          "line": 118
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 50,
+      "lines": [
+        120,
+        120
+      ],
+      "raw": "**Create Collection Schedule API** - <https://modulr.readme.io/reference/createcollectionschedule><br />**Get All Collection Schedule API**  - <https://modulr.readme.io/reference/getcollectionschedules><br />**Get All Collection Activities of an account API** - <https://modulr.readme.io/reference/getcollections><br />**Cancel Collection Request API** - <https://modulr.readme.io/reference/cancelcollection>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Create Collection Schedule API - https://modulr.readme.io/reference/createcollectionschedule<br />Get All Collection Schedule API  - https://modulr.readme.io/reference/getcollectionschedules<br />Get All Collection Activities of an account API - https://modulr.readme.io/reference/getcollections<br />Cancel Collection Request API - https://modulr.readme.io/reference/cancelcollection",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 120
+        },
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 120
+        },
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 120
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createcollectionschedule><br",
+          "line": 120
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcollectionschedules><br",
+          "line": 120
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcollections><br",
+          "line": 120
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/cancelcollection>",
+          "line": 120
+        }
+      ]
+    },
+    {
+      "i": 51,
+      "lines": [
+        122,
+        122
+      ],
+      "raw": "**PAYIN Webhook** - <https://modulr.readme.io/docs/payin-webhook><br />**UPCOMINGDDCOLLECTIONCREDIT Webhook** - <https://modulr.readme.io/docs/upcomingddcollectioncredit-webhook><br />**DDCOLLECTIONSTATUS** -  <https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PAYIN Webhook - https://modulr.readme.io/docs/payin-webhook<br />UPCOMINGDDCOLLECTIONCREDIT Webhook - https://modulr.readme.io/docs/upcomingddcollectioncredit-webhook<br />DDCOLLECTIONSTATUS -  https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 122
+        },
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 122
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payin-webhook><br",
+          "line": 122
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/upcomingddcollectioncredit-webhook><br",
+          "line": 122
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus>",
+          "line": 122
+        }
+      ]
+    },
+    {
+      "i": 52,
+      "lines": [
+        124,
+        124
+      ],
+      "raw": "## Representment of unpaid Direct Debits",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Representment of unpaid Direct Debits",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        126,
+        126
+      ],
+      "raw": "A Direct Debit that has been returned unpaid with a status of **Representable** may be retried using the [represent collection ](https://modulr.readme.io/reference/representcollection)endpoint. There are specific scheme rules about the ability to represent and process in the Service Users Guide and Rules to the Direct Debit Scheme that must be followed - see extract below:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A Direct Debit that has been returned unpaid with a status of Representable may be retried using the represent collection endpoint. There are specific scheme rules about the ability to represent and process in the Service Users Guide and Rules to the Direct Debit Scheme that must be followed - see extract below:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/representcollection",
+          "line": 126
+        }
+      ]
+    },
+    {
+      "i": 54,
+      "lines": [
+        128,
+        128
+      ],
+      "raw": "*Re-presentation of an unpaid Direct Debit may continue for****one month****&#x20;from the date on which first presentation was made.*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Re-presentation of an unpaid Direct Debit may continue forone month** from the date on which first presentation was made.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 55,
+      "lines": [
+        130,
+        130
+      ],
+      "raw": "*Rule: If payment has not been made within this period, the service user must make other arrangements directly with the payer for collecting the amount due or give advance notice of the new collection date and amount. Refer to section 4B ‘Advance notice’.f the Service Users Guide and Rules to the Direct Debit Scheme]\\_&#xA;*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Rule: If payment has not been made within this period, the service user must make other arrangements directly with the payer for collecting the amount due or give advance notice of the new collection date and amount. Refer to section 4B ‘Advance notice’.f the Service Users Guide and Rules to the Direct Debit Scheme]_",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 56,
+      "lines": [
+        132,
+        132
+      ],
+      "raw": "*Guidance:*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Guidance:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 57,
+      "lines": [
+        134,
+        135
+      ],
+      "raw": "* *If a Direct Debit is returned unpaid by the paying PSP it is recommended that the service user should liaise with the payer to offer a new collection date. A service user should give at least 5 working days’ notice to the payer of the new collection date*\n* *If the Direct Debit has been returned for the reason ‘refer to payer’ then additional advance notice is not mandatory but is recommended.*",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "If a Direct Debit is returned unpaid by the paying PSP it is recommended that the service user should liaise with the payer to offer a new collection date. A service user should give at least 5 working days’ notice to the payer of the new collection dateIf the Direct Debit has been returned for the reason ‘refer to payer’ then additional advance notice is not mandatory but is recommended.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 58,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "Following these rules, it is only practical to represent an unpaid Direct Debit 3 times (following the initial collection attempt) within the one month limit.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Following these rules, it is only practical to represent an unpaid Direct Debit 3 times (following the initial collection attempt) within the one month limit.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 59,
+      "lines": [
+        139,
+        139
+      ],
+      "raw": "## Sandbox",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Sandbox",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 60,
+      "lines": [
+        141,
+        141
+      ],
+      "raw": "**Creating your first mandate on the Sandbox**<br />Once set up, the first logical step is to try to use the POST /accounts/\\{id}/mandates endpoint to [create a mandate](https://modulr.readme.io/reference/createmandate). Typically, when you have built your user interface, your app will be using this endpoint to send through the information to Modulr that was entered by your customers in your mandate form.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Creating your first mandate on the Sandbox<br />Once set up, the first logical step is to try to use the POST /accounts/{id}/mandates endpoint to create a mandate. Typically, when you have built your user interface, your app will be using this endpoint to send through the information to Modulr that was entered by your customers in your mandate form.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 141
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createmandate",
+          "line": 141
+        }
+      ]
+    },
+    {
+      "i": 61,
+      "lines": [
+        143,
+        143
+      ],
+      "raw": "Please note that reference for each mandate needs to be provided. This will be the reference lodged with BACS scheme.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please note that reference for each mandate needs to be provided. This will be the reference lodged with BACS scheme.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 62,
+      "lines": [
+        145,
+        145
+      ],
+      "raw": "Reference field requirements are:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Reference field requirements are:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 63,
+      "lines": [
+        147,
+        149
+      ],
+      "raw": "* Must be between 6 and 10 characters long, inclusive. May only contain alphanumeric characters.\n* Must be unique.\n* Only upper case characters are allowed, so any alphabetic characters supplied in this string will be converted to upper case before processing.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Must be between 6 and 10 characters long, inclusive. May only contain alphanumeric characters.Must be unique.Only upper case characters are allowed, so any alphabetic characters supplied in this string will be converted to upper case before processing.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 64,
+      "lines": [
+        151,
+        151
+      ],
+      "raw": "Once set up with access to Sandbox, you will be able start looking at integrating with the Modulr Direct Debit Collection endpoints.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once set up with access to Sandbox, you will be able start looking at integrating with the Modulr Direct Debit Collection endpoints.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 65,
+      "lines": [
+        153,
+        153
+      ],
+      "raw": "To arrive at this point we assume you have:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To arrive at this point we assume you have:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 66,
+      "lines": [
+        155,
+        156
+      ],
+      "raw": "* Been onboarded as a customer on Sandbox. As part of this have a collection account set up as well as a general account and users set up that can access Direct Debit Collections. For help [contact us](https://www.modulrfinance.com/contact-us).\n* Worked out how to securely connect to the Modulr API using the credentials you received in the onboarding process.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Been onboarded as a customer on Sandbox. As part of this have a collection account set up as well as a general account and users set up that can access Direct Debit Collections. For help contact us.Worked out how to securely connect to the Modulr API using the credentials you received in the onboarding process.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 67,
+      "lines": [
+        158,
+        158
+      ],
+      "raw": "**Mocking collection activity**<br />Since there are no actual collections on Sandbox, there needs to be some way to test the integration. In order to achieve this we have a Sandbox-only endpoint, POST /external-services-mock/collections, that allows you to add the required collections and then call GET /collections to retrieve the expected collection activity.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Mocking collection activity<br />Since there are no actual collections on Sandbox, there needs to be some way to test the integration. In order to achieve this we have a Sandbox-only endpoint, POST /external-services-mock/collections, that allows you to add the required collections and then call GET /collections to retrieve the expected collection activity.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 158
+        }
+      ]
+    },
+    {
+      "i": 68,
+      "lines": [
+        160,
+        160
+      ],
+      "raw": "An example would be that a request using POST /external-services-mock/collections, such as:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An example would be that a request using POST /external-services-mock/collections, such as:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 69,
+      "lines": [
+        162,
+        177
+      ],
+      "raw": "```json\n[   \n    {\n      \"activityDate\": \"2020-06-25\",\n      \"amount\": 50.00,\n      \"collectionScheduleBid\": \"Q120026P\",\n      \"customerReference\" :  \"DDI12347\",\n      \"originalActivityDate\": \"2020-06-25\",\n      \"reconciliationReference\" : 14,\n      \"reconciliationDate\" : \"2020-06-25\",\n      \"status\" : \"H\",\n      \"type\": \"COLLECTION\",\n      \"payerName\": \"Arakere\"\n    }\n]\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "[   \n    {\n      \"activityDate\": \"2020-06-25\",\n      \"amount\": 50.00,\n      \"collectionScheduleBid\": \"Q120026P\",\n      \"customerReference\" :  \"DDI12347\",\n      \"originalActivityDate\": \"2020-06-25\",\n      \"reconciliationReference\" : 14,\n      \"reconciliationDate\" : \"2020-06-25\",\n      \"status\" : \"H\",\n      \"type\": \"COLLECTION\",\n      \"payerName\": \"Arakere\"\n    }\n]"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 70,
+      "lines": [
+        179,
+        179
+      ],
+      "raw": "**Things to note:**<br />The dates in the call should be tomorrow's date, or date for which you will attempt to GET collections. We process mocked collections on daily schedule. I.e. if you create a mock call today, you will be able to retrieve the collections through the GET call tomorrow.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Things to note:<br />The dates in the call should be tomorrow's date, or date for which you will attempt to GET collections. We process mocked collections on daily schedule. I.e. if you create a mock call today, you will be able to retrieve the collections through the GET call tomorrow.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "i": 71,
+      "lines": [
+        181,
+        181
+      ],
+      "raw": "Please note:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please note:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 72,
+      "lines": [
+        183,
+        187
+      ],
+      "raw": "* There can only be 1 collection for a given combination of **activityDate** & **customerReference**\n* **collectionScheduleBid** should be a valid schedule ID (\"Q Id\"), in a format of Qxxxxxxx\n* **customerReference** should be a valid mandate customer reference and mandate should be ACTIVE\n* **status:** Valid statuses are “H” Success, “F” Failed\n* **activityDate** must be the **currentDate**, if the GET call has to return the collection",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "There can only be 1 collection for a given combination of activityDate & customerReferencecollectionScheduleBid should be a valid schedule ID (\"Q Id\"), in a format of QxxxxxxxcustomerReference should be a valid mandate customer reference and mandate should be ACTIVEstatus: Valid statuses are “H” Success, “F” FailedactivityDate must be the currentDate, if the GET call has to return the collection",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 73,
+      "lines": [
+        189,
+        189
+      ],
+      "raw": "The aforementioned POST request would then produce, when calling GET /collections, the following response:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The aforementioned POST request would then produce, when calling GET /collections, the following response:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 74,
+      "lines": [
+        191,
+        205
+      ],
+      "raw": "```json\n{\n      \"activityDate\": \"2018-01-09\",\n      \"amount\": 100,\n      \"collectionScheduleId\": \"Q9200001\",\n      \"mandateId\": \"G0000001\",\n      \"message\": \"Instruction Cancelled\",\n      \"originalActivityDate\": \"2021-01-09\",\n      \"payerName\": \"Mr John Doe\",\n      \"reconciliationDate\": \"2021-01-09\",\n      \"reconciliationReference\": \"2021-01-09\",\n      \"status\": \"FAILED\",\n      \"type\": \"COLLECTION\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n      \"activityDate\": \"2018-01-09\",\n      \"amount\": 100,\n      \"collectionScheduleId\": \"Q9200001\",\n      \"mandateId\": \"G0000001\",\n      \"message\": \"Instruction Cancelled\",\n      \"originalActivityDate\": \"2021-01-09\",\n      \"payerName\": \"Mr John Doe\",\n      \"reconciliationDate\": \"2021-01-09\",\n      \"reconciliationReference\": \"2021-01-09\",\n      \"status\": \"FAILED\",\n      \"type\": \"COLLECTION\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 75,
+      "lines": [
+        207,
+        211
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Sandbox and Direct Debit collection endpoints\n\n  Please note that in the Sandbox environment we do not connect to the Direct Debit scheme, as this is just a test environment. In Sandbox we do offer the ability to use all the endpoints available in our production environment, but some of these need to have data set up by you prior to using them. How to do this is detailed below.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 76,
+      "lines": [
+        213,
+        213
+      ],
+      "raw": "## FAQs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "FAQs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 77,
+      "lines": [
+        215,
+        221
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### How are returned direct debits treated?\n\n  If there is a collection failure due to any reason (such as insufficient funds), you will know the next working day via [Webhook - Direct Debit, DD Collection Status](https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus) after the funds has been credited to your account.\n\n  On rare occasions, you might be made aware of a rejected one more day later. This is referred to as a \"late cancellation\" and is deemed an exceptional scenario, but one that the BACS scheme allows to happen. The funds of that return will be deducted from the settlement account.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 78,
+      "lines": [
+        223,
+        227
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### There is no longer any paperwork involved, this is all automated. Correct?\n\n  Absolutely!\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 79,
+      "lines": [
+        229,
+        233
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### What are the timelines of Mandate and Collection creation?\n\n  Please see the image above (A Mandate takes 4 working days to set up from the time the API call is posted on the Modulr platform. A collection can happen at the soonest 2 days after requested on the platform. Therefore the first collection can be a minimum of 6 working days from the Mandate request.)\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 80,
+      "lines": [
+        235,
+        239
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Can we submit Direct Debit requests via file?\n\n  That is not a supported method (You can build a UI that enables the upload of a file that then parses it, and then connects to our API if you like, but Modulr will not support the UI.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 81,
+      "lines": [
+        241,
+        247
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### When are collection funds available in the Modulr collection account?\n\n  We credit the funds into the Partner's account after two working days from the collection request (Day 3 of the Bacs cycle).\n\n  **Note: These funds are still subject to potential Automated Return of Unpaid Direct Debit (ARUDD) and must** not \\*\\*be removed from the account until end of day 4 working days from the collection request (Day 5 of the Bacs cycle) unless specifically agreed with Modulr.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 82,
+      "lines": [
+        249,
+        253
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### What types of checks are needed/guarantees required to be a DD customer?\n\n  There is an application process, where any specific collateral (reserve) requirements and limits are set, and the Service User must sign a Indemnity deed. There is a separate onboarding process where your Direct Debit collection experience is verified and a SUN is provided.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 83,
+      "lines": [
+        255,
+        259
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### How do I get notification of cancelled or amended collections?\n\n  As part of the activity is response to GET /collections\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 84,
+      "lines": [
+        261,
+        265
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Can we transfer our current SUN?\n\n  We can work with your current provider to transfer ownership of the SUN. If we can't transfer ownership of your existing SUN to Modulr, we can set up one of our own SUNs and migrate your existing Direct Debit Instructions over.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 85,
+      "lines": [
+        267,
+        275
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### What is the indemnity claim challenge  process?\n\n  If you are a Service User with contacts on the Bacs Payment Services website (PSW) you will be notified of Direct Debit Indemnity Claims (DDIC) via this channel & can manage challenges here.\n\n  If Modulr is the service user on you behalf, you should contact Modulr customer services (after having found out about the indemnity via email) to challenge the claim. Modulr will then pass on to the Direct Debit scheme.\n\n  A Direct Debit Indemnity claim can be challenged in certain circumstances by providing evidence to refute the claim, this must be done within 10 days of the claim being received. If successful the claim will be cancelled by the paying PSP; their decision is final on any DDIC challenge.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 86,
+      "lines": [
+        277,
+        281
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Is the Direct Debit collection account only able to be used for Direct Debit collections?\n\n  Technically the account is a Faster Payments account that has the Direct Debit collection product added to it, and the collection payments are actually Faster Payments. Also payments out would be Faster Payments and can be made as needed. Payments in should be restricted to DD collections as otherwise other payments will confuse any reconciliation. If you need another way to get funds, e.g. for customers to make non DD ad-hoc payments, then you should create other accounts for that purpose (ideally one per one of your customers).\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 87,
+      "lines": [
+        283,
+        287
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### Are custom schedules (different amounts per collection) available?\n\n  Yes, but not in the same collection schedule; to collect a different amount you will need to set up a new scheduled collection (with \"ONCE\" frequency) for each different amount under the same mandate.&#x20;\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 88,
+      "lines": [
+        289,
+        293
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### How do you handle retries?\n\n  If a collection fails for a reason that can be retried (e.g. Refer to payer), the transaction status will be updated to REPRESENTABLE and notified the [Webhook - Direct Debit, DD Collection Status](https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus).<br />A transaction with this status can be resubmitted using the /[represent ](https://modulr.readme.io/reference/representcollection)endpoint - the Direct Debit scheme rules must be followed. Practically as representation should only take place up to one month from the original collection date, this allows for a maximum of 3 representations (allowing for notice)\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 89,
+      "lines": [
+        295,
+        299
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  ### When does collection activity get updated?\n\n  We get activity updated at 10:30AM every working day.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 90,
+      "lines": [
+        301,
+        301
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 301
+        }
+      ]
+    }
+  ]
+}

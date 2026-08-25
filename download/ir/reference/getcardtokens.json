@@ -1,0 +1,108 @@
+{
+  "slug": "reference/getcardtokens",
+  "source": "https://modulr.readme.io/reference/getcardtokens.md",
+  "url": "https://modulr.readme.io/reference/getcardtokens",
+  "title": "Get card tokens",
+  "description": "Retrieves all payment card tokens for the given card",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T10:50:49.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Get card tokens",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Get card tokens",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Retrieves all payment card tokens for the given card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrieves all payment card tokens for the given card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        341
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Cards\",\n      \"description\": \"Cards API\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/tokens\": {\n      \"get\": {\n        \"tags\": [\n          \"Cards\"\n        ],\n        \"summary\": \"Get card tokens\",\n        \"description\": \"Retrieves all payment card tokens for the given card\",\n        \"operationId\": \"getCardTokens\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"Card ID\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"example\": \"V110000001\"\n          },\n          {\n            \"name\": \"includeDeletedDevices\",\n            \"in\": \"query\",\n            \"description\": \"Include deleted devices in results\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\"\n            },\n            \"example\": true\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Card tokens retrieved successfully\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.GetCardTokensResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.CardTokenDevice\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Device ID\",\n            \"example\": \"D110000001\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"Device type\",\n            \"enum\": [\n              \"CLOTHING\",\n              \"MEDIA_GAMING\",\n              \"CARD\",\n              \"DOMESTIC_APPLIANCE\",\n              \"FOB\",\n              \"MOBILE_TAG\",\n              \"FASHION\",\n              \"JEWELRY\",\n              \"MOBILE_PHONE\",\n              \"PERSONAL_COMPUTER\",\n              \"WRISTBAND\",\n              \"STICKER\",\n              \"TABLET\",\n              \"UNKNOWN\",\n              \"VEHICLE\",\n              \"WATCH\",\n              \"MOBILE_PHONE_OR_TABLET\"\n            ],\n            \"example\": \"MOBILE_PHONE\"\n          },\n          \"ip\": {\n            \"type\": \"string\",\n            \"description\": \"IPv4 address of the device. Either in hex format (i.e FFFFFFFF) or decimal format (i.e. 255.255.255.255)\",\n            \"example\": \"255.255.255.255\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"Device name, as given by the cardholder\",\n            \"example\": \"iPhone 12\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Device status\",\n            \"enum\": [\n              \"PENDING_PROVISIONING\",\n              \"PROVISIONED\",\n              \"DELETED\",\n              \"UNKNOWN\"\n            ],\n            \"example\": \"ACTIVE\"\n          },\n          \"externalId\": {\n            \"type\": \"string\",\n            \"description\": \"Device External Id\"\n          }\n        },\n        \"required\": [\n          \"externalId\",\n          \"id\",\n          \"ip\",\n          \"name\",\n          \"status\",\n          \"type\"\n        ]\n      },\n      \"card.GetCardTokensResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Number of elements in content\",\n            \"example\": 1\n          },\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of response elements\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.CardToken\"\n            }\n          }\n        },\n        \"required\": [\n          \"content\",\n          \"size\"\n        ]\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"card.CardToken\": {\n        \"type\": \"object\",\n        \"description\": \"Payment token details for a card\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Card token ID\",\n            \"example\": \"T110000001\"\n          },\n          \"expiry\": {\n            \"type\": \"string\",\n            \"format\": \"date\",\n            \"description\": \"Token expiry date (ISO 8601 format)\",\n            \"example\": \"2021-10-31\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"Type of system the token is encoded onto\",\n            \"enum\": [\n              \"BROWSER_ACCESSIBLE_WALLET\",\n              \"CONTACTLESS_DEVICE_PAN\",\n              \"CARD_ON_FILE_PAN\",\n              \"REAL_PAN\",\n              \"UNKNOWN\",\n              \"VIRTUAL_PAN\",\n              \"SECURE_ELEMENT\",\n              \"CLOUD_BASED\"\n            ],\n            \"example\": \"SECURE_ELEMENT\"\n          },\n          \"wallet\": {\n            \"type\": \"string\",\n            \"description\": \"Wallet the token belongs to\",\n            \"enum\": [\n              \"APPLE\",\n              \"GOOGLE\",\n              \"MRCHTOKEN\"\n            ],\n            \"example\": \"APPLE\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Card token status\",\n            \"enum\": [\n              \"APPROVED\",\n              \"ACTIVE\",\n              \"AWAITING_AUTHENTICATION\",\n              \"AUTHENTICATION_FAILED\",\n              \"AUTO_SUSPENDED\",\n              \"SUSPENDED\",\n              \"DEACTIVATED\",\n              \"UNKNOWN\"\n            ],\n            \"example\": \"PROVISIONED\"\n          },\n          \"language\": {\n            \"type\": \"string\",\n            \"description\": \"2-digit ISO 639-1 language code\",\n            \"example\": \"EN\"\n          },\n          \"devices\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.CardTokenDevice\"\n            }\n          },\n          \"maskedDpan\": {\n            \"type\": \"string\",\n            \"description\": \"Masked DPAN (last 4 digits) to the associated token ID\",\n            \"example\": \"1234\"\n          }\n        },\n        \"required\": [\n          \"expiry\",\n          \"id\",\n          \"language\",\n          \"status\",\n          \"type\",\n          \"wallet\"\n        ]\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Cards\",\n      \"description\": \"Cards API\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/tokens\": {\n      \"get\": {\n        \"tags\": [\n          \"Cards\"\n        ],\n        \"summary\": \"Get card tokens\",\n        \"description\": \"Retrieves all payment card tokens for the given card\",\n        \"operationId\": \"getCardTokens\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"Card ID\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"example\": \"V110000001\"\n          },\n          {\n            \"name\": \"includeDeletedDevices\",\n            \"in\": \"query\",\n            \"description\": \"Include deleted devices in results\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\"\n            },\n            \"example\": true\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Card tokens retrieved successfully\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.GetCardTokensResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.CardTokenDevice\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Device ID\",\n            \"example\": \"D110000001\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"Device type\",\n            \"enum\": [\n              \"CLOTHING\",\n              \"MEDIA_GAMING\",\n              \"CARD\",\n              \"DOMESTIC_APPLIANCE\",\n              \"FOB\",\n              \"MOBILE_TAG\",\n              \"FASHION\",\n              \"JEWELRY\",\n              \"MOBILE_PHONE\",\n              \"PERSONAL_COMPUTER\",\n              \"WRISTBAND\",\n              \"STICKER\",\n              \"TABLET\",\n              \"UNKNOWN\",\n              \"VEHICLE\",\n              \"WATCH\",\n              \"MOBILE_PHONE_OR_TABLET\"\n            ],\n            \"example\": \"MOBILE_PHONE\"\n          },\n          \"ip\": {\n            \"type\": \"string\",\n            \"description\": \"IPv4 address of the device. Either in hex format (i.e FFFFFFFF) or decimal format (i.e. 255.255.255.255)\",\n            \"example\": \"255.255.255.255\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"Device name, as given by the cardholder\",\n            \"example\": \"iPhone 12\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Device status\",\n            \"enum\": [\n              \"PENDING_PROVISIONING\",\n              \"PROVISIONED\",\n              \"DELETED\",\n              \"UNKNOWN\"\n            ],\n            \"example\": \"ACTIVE\"\n          },\n          \"externalId\": {\n            \"type\": \"string\",\n            \"description\": \"Device External Id\"\n          }\n        },\n        \"required\": [\n          \"externalId\",\n          \"id\",\n          \"ip\",\n          \"name\",\n          \"status\",\n          \"type\"\n        ]\n      },\n      \"card.GetCardTokensResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Number of elements in content\",\n            \"example\": 1\n          },\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of response elements\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.CardToken\"\n            }\n          }\n        },\n        \"required\": [\n          \"content\",\n          \"size\"\n        ]\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"card.CardToken\": {\n        \"type\": \"object\",\n        \"description\": \"Payment token details for a card\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Card token ID\",\n            \"example\": \"T110000001\"\n          },\n          \"expiry\": {\n            \"type\": \"string\",\n            \"format\": \"date\",\n            \"description\": \"Token expiry date (ISO 8601 format)\",\n            \"example\": \"2021-10-31\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"Type of system the token is encoded onto\",\n            \"enum\": [\n              \"BROWSER_ACCESSIBLE_WALLET\",\n              \"CONTACTLESS_DEVICE_PAN\",\n              \"CARD_ON_FILE_PAN\",\n              \"REAL_PAN\",\n              \"UNKNOWN\",\n              \"VIRTUAL_PAN\",\n              \"SECURE_ELEMENT\",\n              \"CLOUD_BASED\"\n            ],\n            \"example\": \"SECURE_ELEMENT\"\n          },\n          \"wallet\": {\n            \"type\": \"string\",\n            \"description\": \"Wallet the token belongs to\",\n            \"enum\": [\n              \"APPLE\",\n              \"GOOGLE\",\n              \"MRCHTOKEN\"\n            ],\n            \"example\": \"APPLE\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Card token status\",\n            \"enum\": [\n              \"APPROVED\",\n              \"ACTIVE\",\n              \"AWAITING_AUTHENTICATION\",\n              \"AUTHENTICATION_FAILED\",\n              \"AUTO_SUSPENDED\",\n              \"SUSPENDED\",\n              \"DEACTIVATED\",\n              \"UNKNOWN\"\n            ],\n            \"example\": \"PROVISIONED\"\n          },\n          \"language\": {\n            \"type\": \"string\",\n            \"description\": \"2-digit ISO 639-1 language code\",\n            \"example\": \"EN\"\n          },\n          \"devices\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.CardTokenDevice\"\n            }\n          },\n          \"maskedDpan\": {\n            \"type\": \"string\",\n            \"description\": \"Masked DPAN (last 4 digits) to the associated token ID\",\n            \"example\": \"1234\"\n          }\n        },\n        \"required\": [\n          \"expiry\",\n          \"id\",\n          \"language\",\n          \"status\",\n          \"type\",\n          \"wallet\"\n        ]\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

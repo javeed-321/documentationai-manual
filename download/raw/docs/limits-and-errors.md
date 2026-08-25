@@ -1,0 +1,155 @@
+---
+updatedAt: 2025-09-05T18:35:07.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Limits and Errors
+
+## Idempotent Requests
+
+The API supports idempotency for safely retrying non-idempotent requests without accidentally performing the same operation twice. This is typically used where you are unsure of the status of the request. For example, if a POST request to create a payment fails due to a network connection error you can retry the request with the same x-mod-nonce to guarantee that only a single payment is created.
+
+To retry a POST request idempotently you can:
+
+* Reuse the same x-mod-nonce as the original POST request and
+* Set the header` x-mod-retry = true`
+
+This will send back the same response for requests made with the same `x-mod-nonce` for 48 hours. Do not retry after 48 hours as the request could be executed as a new request after this.\
+Do not use the same nonce for GET requests as this will just return an error. You also cannot use the same nonce with different request parameters.\
+If you wish to resend a payment request because a previous one has failed, e.g. the account did not have enough balance at the time, then you will need to use a new nonce. Please refer to [Error handling](https://modulr.readme.io/docs/error-handling) .
+
+## Rate Limiting & Quotas
+
+In order to protect all system clients from the actions of a single client limits are placed on how many requests can be made in a short period (rate limit) and over a longer period (quota)
+
+You should not experience these errors in the course of normal operations for the vast majority of clients. If you do please look into the volume/pattern of requests you are making and check for any issues. Note: Limits and quotas work across all your requests
+
+All endpoints are rate limited (X requests in X seconds), and each API key has a quota. These are to protect the service from a particular user's unusual activity.
+
+Our standard rate profile is:
+
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Number of Requests
+      </th>
+
+      <th>
+        Period of Time
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        8000
+      </td>
+
+      <td>
+        10 minutes
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        4 Million
+      </td>
+
+      <td>
+        1 week
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+If you have reason to be doing a high volume of api requests in a short period (e.g. over 6000 in 10 minutes) or believe you will be doing a large number of api calls in a week (e.g. over 2.4 million a week) please discuss these use cases in advance with us.
+
+You can check the returned HTTP headers of any API request to see your current quota status, for example:\
+`x-ratelimit-limit: 30000`\
+`x-ratelimit-remaining: 989`\
+`x-ratelimit-reset: 1480359249`
+
+`x-ratelimit-reset` uses Unix time to indicate when the quota is due to reset.
+
+Exceeding the quota results in:\
+`403 {"error": "Quota exceeded"}`\
+`429 {"error": "Rate limit exceeded"}`
+
+## Backwards compatibility
+
+The following api changes are considered backwards compatible, and should be handled by you:
+
+* Adding new API endpoints
+* Adding new properties to the responses from existing API endpoints
+* Reordering properties returned from existing API endpoints
+* Adding optional request parameters to existing API endpoints
+* Altering the format or length of IDs
+* Altering the `message` attributes returned by validation failures / other errors
+* Sending webhooks for new event types
+
+## MIME Types
+
+All requests and responses are JSON-formatted. You must pass the standard JSON MIME type (application/json). Other content types will return a `500 error – “Content type not supported”`
+
+## Response Status Codes
+
+The API uses the following response status codes:
+
+| Code | Description                                                                                                                |
+| ---- | -------------------------------------------------------------------------------------------------------------------------- |
+| 200  | OK - The request has succeeded. The client can read the result of the request in the body and the headers of the response. |
+| 201  | Created - The resource was created successfully. The response may have information about the newly created resource.       |
+| 400  | Bad Request - This is likely caused by validation errors, response body will provide further information.                  |
+| 403  | Forbidden - The client is not allowed to access the resource                                                               |
+| 404  | Not Found - The requested resource doesn’t exist. Please check documentation and the request.                              |
+| 405  | Method Not Allowed - HTTP method used to access this resource is incorrect, please check documentation                     |
+| 500  | Internal Server Error - Response body may contain further information                                                      |
+
+For information on how to handle different errors please refer to [Error handling](https://modulr.readme.io/docs/error-handling)
+
+Please ensure that your application is able to process additional / new json fields in the body of responses without erroring. Addition of fields in the response will not be considered a breaking change by us.
+
+## Error detail
+
+Errors on the Modulr API will return a 4XX or a 5XX HTTP response code. Additional information about the error will be returned in the response body, in the format:
+
+```
+{
+"field": "id",
+"code": "NOTFOUND",
+"message": "Customer not found for id: C0200002"
+}
+```
+
+## Pagination
+
+Responses for list endpoints (Accounts, Transactions, Beneficiaries) are paginated by default.
+
+### Request
+
+The following options are available on all cursor-paginated endpoints:
+
+* Page - Page to fetch (0-indexed)
+* Size - number of elements to return. Maximum value is 500
+
+### Response
+
+Paginated results are always returned in an array, and include the following meta data:
+
+```
+ {	
+"size": 15,
+"totalSize": 189,
+"page": 1,
+"totalPages": 13
+}
+```
+
+## Time zones
+
+All timestamps are formatted as ISO8601 with timezone information. For API calls that allow for a timestamp to be specified, we use that exact timestamp. These timestamps look something like `2016-06-01T12:00:00.111Z`. All times should be sent in UTC time zone.
+
+For endpoints that require dates, we expect a date string of the format `YYYY-MM-DD`, where an example would look like `2016-06-01`.

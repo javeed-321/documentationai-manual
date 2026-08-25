@@ -1,0 +1,221 @@
+{
+  "slug": "docs/webhooks",
+  "source": "https://modulr.readme.io/docs/webhooks.md",
+  "url": "https://modulr.readme.io/docs/webhooks",
+  "title": "Webhooks",
+  "description": "Making Best Use of the Modulr webhooks",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-30T09:33:18.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 3,
+    "list": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Making Best Use of the Modulr webhooks",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Making Best Use of the Modulr webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "We advise that you subscribe to the following webhooks for all use cases. Depending on your proposition, there are other webhooks that also should be utilised. A full list of webhook notifications is [available here](https://modulr.readme.io/docs/notifications-1) and includes examples of the full data set available for each webhook.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We advise that you subscribe to the following webhooks for all use cases. Depending on your proposition, there are other webhooks that also should be utilised. A full list of webhook notifications is available here and includes examples of the full data set available for each webhook.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/notifications-1",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        18
+      ],
+      "raw": "* [PAYIN](https://modulr.readme.io/docs/payin-webhook): for individual notifications of all payments received into an account (credits)\n* [PAYOUT](https://modulr.readme.io/docs/payout-webhook): for individual notifications of all payments made from an account (debits)\n* [Payment Compliance Status](https://modulr.readme.io/docs/paymentcompliancestatus-webhook): for notification of a payment being held/released by Modulr\n* [Account Status Change](https://modulr.readme.io/docs/webhook-account-status-change): for notification of an account suspension by Modulr because subsequent action will be needed by the Partner",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "PAYIN: for individual notifications of all payments received into an account (credits)PAYOUT: for individual notifications of all payments made from an account (debits)Payment Compliance Status: for notification of a payment being held/released by ModulrAccount Status Change: for notification of an account suspension by Modulr because subsequent action will be needed by the Partner",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payin-webhook",
+          "line": 15
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payout-webhook",
+          "line": 16
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/paymentcompliancestatus-webhook",
+          "line": 17
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-account-status-change",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "## PAYIN Webhook",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "PAYIN Webhook",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "For all inbound payments, whether it is triggered by you loading your account, a scheme reversed payment or any other unexpected payment into an account, the[ PAYIN webhook](https://modulr.readme.io/docs/payin-webhook) will provide the following key data parameters:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For all inbound payments, whether it is triggered by you loading your account, a scheme reversed payment or any other unexpected payment into an account, the PAYIN webhook will provide the following key data parameters:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payin-webhook",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        24,
+        29
+      ],
+      "raw": "* [Payment Types](https://modulr.readme.io/docs/payment-types) which includes PO\\_REV for any scheme reversals back into the account\n* Payer Name and Details which may match the destination account you have sent a payment to\n* Modulr References of receiving AccountID, PaymentID and TransactionID\n* ReturnReason Code – refer to the [Payment Return Reasons](https://modulr.readme.io/docs/payment-return-reasons) for the description relating to each code\n* Payment Reference – passed via the scheme, but note that on a return it might be different from the one you used on the outbound payment\n* OriginalSchemeId – this is the original scheme reference for the earlier outbound payment but only when reversed",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Payment Types which includes PO_REV for any scheme reversals back into the accountPayer Name and Details which may match the destination account you have sent a payment toModulr References of receiving AccountID, PaymentID and TransactionIDReturnReason Code – refer to the Payment Return Reasons for the description relating to each codePayment Reference – passed via the scheme, but note that on a return it might be different from the one you used on the outbound paymentOriginalSchemeId – this is the original scheme reference for the earlier outbound payment but only when reversed",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-types",
+          "line": 24
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-return-reasons",
+          "line": 27
+        }
+      ]
+    }
+  ]
+}

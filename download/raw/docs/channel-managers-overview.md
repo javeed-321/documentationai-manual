@@ -1,0 +1,73 @@
+---
+updatedAt: 2025-11-05T09:37:58.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Channel Managers - Overview
+
+## Getting Started
+
+As a Channel Manager, you are being given access to your own service with your own API endpoints to send the requests through on behalf for the Online Travel Agent (OTA) that you are working with.
+
+You will have gone through your onboarding, as anyone would at Modulr, and would have been issued your own API keys with permission set for Card Requests on the Channel Manager service.  You should have both a Sandbox and a Production API key, if you don’t have these please speak with the account manager who can get these arranged for you.
+
+> 📘 PGP Keys
+>
+> You will need to have supplied your PGP key to Modulr for the creation of the API keys you will receive, without this we wont be able to connect you correctly to the service
+
+Also, as a part of the onboarding process, the team will assign you to the relevant OTA’s, please make sure that you give them details of who you are to be assigned to so they can complete their internal checks and add the relevant links in.
+
+You will also need some detail from the OTA that you are working with to pass through requests, these are:
+
+**Account ID** – This is the ID of the specific account you are creating cards on
+
+**Product ID** – This is the specific product that you are creating cards on
+
+**External Reference** – This is a reference the OTA can use to reference cards; you may wish to ask them what they would like you to send through on each card created
+
+**Custom Fields** – These are the extra details that the OTA requires to have on the card, you will need a list of what they want to be able to provide that detail
+
+> 📘 OTA Specific Information
+>
+> This information will not be provided by Modulr and will need to be sourced from the OTA’s you are working with once the connections on our platform have been made.
+
+<br />
+
+## Channel Manager Service
+
+As stated above, you have your own service that you can access to help support OTA’s with their requests.  Details of the endpoints are as follows:
+
+**Create Cards** - [POST/channel-managers/accounts/\{aid}/cards](https://modulr.readme.io/reference/channelmanagercreatecard) – This is where all requests for a new card take place
+
+**Update Cards** - [POST/channel-managers/cards/\{id}](https://modulr.readme.io/reference/channelmanagerupdatecard) – This is where you can update specific details on the card
+
+**Update Cards** - [PATCH/channel-managers/cards/\{id}](https://modulr.readme.io/reference/channelmanagerupdatecard_1) – This is where you can remove the authorisation window and the cancellation date
+
+**Retrieve Cards** - [GET/channel-managers/cards](https://modulr.readme.io/reference/channelmanagergetcards) – This is where you can retrieve all the cards that you have created
+
+**Custom Fields** - [POST/channel-managers/cards/\{id}/custom-fields](https://modulr.readme.io/reference/channelmanagerupdatecardcustomfields) – This is where you can add extra details to the card (please note that you cant set your own fields and will need to add what the OTA requests)
+
+> 🚧 Custom Field Creation
+>
+> You will not be able to create new custom fields on behalf of an OTA, they will need to create the fields they require you to update and give you the details of what the custom field is
+
+**Card Enquiry** - [POST/channel-managers/enquiry](https://modulr.readme.io/reference/channelmanagercardenquiry) – This is where you can enquire the status on cards that you have created
+
+**Card Activities** - [GET/channel-managers/activities](https://modulr.readme.io/reference/channelmanagergetcardactivities) – This is where you can retrieve all the activities that have taken place on a card you have created
+
+**Reports** - [GET/channel-managers/card-reports](https://modulr.readme.io/reference/channelmanagersearchcardreports) – This is where you can get the report ID’s for the reports that are generated for you by Modulr
+
+**Download Reports** - [GET/channel-managers/card-reports/\{id}/report](https://modulr.readme.io/reference/channelmanagerretrievereport) – This is where you use the report ID’s given to download a csv document of the report
+
+<br />
+
+## PCI-DSS Compliance
+
+If you are a PCI compliant Channel Manager you will need to provide proof in the form of your PCI-DSS certificate to the onboarding team as soon as you start proceeds to being implemented at Modulr, failure to do so will result in not receiving any secured card details when creating cards on behalf of OTA’s.
+
+Once you supply the relevant information then this will be marked on your profile so that when you do anything relating to cards, you will receive the secured card details in the response.
+
+<Callout icon="🚧">
+  If you are not PCI compliant then follow the [Secure Card Details](https://modulr.readme.io/docs/retrieve-secure-card-details#/) flow to be able to obtain these.
+</Callout>

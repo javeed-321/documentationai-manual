@@ -1,0 +1,395 @@
+{
+  "slug": "docs/reversals",
+  "source": "https://modulr.readme.io/docs/reversals.md",
+  "url": "https://modulr.readme.io/docs/reversals",
+  "title": "Reversals and Reconciliation",
+  "description": "When payments come back",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-30T09:33:26.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 8,
+    "list": 3,
+    "Image": 2,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Reversals and Reconciliation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Reversals and Reconciliation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "When payments come back",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When payments come back",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Reversals",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reversals",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "A payment reversed by a payment scheme will appear with the type as either as PI\\_REV or more commonly a PO\\_REV. If you are sending money out, then a PO\\_REV means that it is a Return of Previously Sent Outbound Payment. You will need to track back to your original payment request to reconcile.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A payment reversed by a payment scheme will appear with the type as either as PI_REV or more commonly a PO_REV. If you are sending money out, then a PO_REV means that it is a Return of Previously Sent Outbound Payment. You will need to track back to your original payment request to reconcile.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## How they happen",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "How they happen",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "For disbursement use cases and accounts both the Payin webhook and Get Payments endpoint are vital if payments are received into your account and need reviewing / reconciliation / returning to source. An unexpected credit into your account might be one of 4 scenarios:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For disbursement use cases and accounts both the Payin webhook and Get Payments endpoint are vital if payments are received into your account and need reviewing / reconciliation / returning to source. An unexpected credit into your account might be one of 4 scenarios:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        22
+      ],
+      "raw": "1. A genuine scheme return of an outbound payment (type is PO\\_REV)\n2. A credit which relates to an outbound payment, but actually appears as a new payment from your payee account (types will start PI\\_)\n3. A credit which relates to an outbound payment, but appears as a new payment from a different account or even a different Sort Code and account (types will start PI\\_)\n4. A credit sent to your account incorrectly as the wrong destination account and should be sent back to source, no further reconciliation needed (types will start PI\\_).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "A genuine scheme return of an outbound payment (type is PO_REV)A credit which relates to an outbound payment, but actually appears as a new payment from your payee account (types will start PI_)A credit which relates to an outbound payment, but appears as a new payment from a different account or even a different Sort Code and account (types will start PI_)A credit sent to your account incorrectly as the wrong destination account and should be sent back to source, no further reconciliation needed (types will start PI_).",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "For option 4, a mis-keyed or unwanted payment that arrives unexpectedly can be paid to the sender using the Payer Details from the PAYIN webhook or GetPayments endpoint. You must copy their inbound payment reference into the PaymentReference field on your payment out. This enables the receiving institution to reconcile their mistake quickly.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For option 4, a mis-keyed or unwanted payment that arrives unexpectedly can be paid to the sender using the Payer Details from the PAYIN webhook or GetPayments endpoint. You must copy their inbound payment reference into the PaymentReference field on your payment out. This enables the receiving institution to reconcile their mistake quickly.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "It is only for a Scheme Reversal (PO\\_REV), that a direct connection can be made to your payment out. Any of the other situations (2-4 listed above) will require a decision based on your investigations into the payer details, amount, description timing of payment out vs ‘new’ payment in, etc. Modulr can only provide the data available, we cannot signpost these for you when the inbound payment is not a formal scheme reversal.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "It is only for a Scheme Reversal (PO_REV), that a direct connection can be made to your payment out. Any of the other situations (2-4 listed above) will require a decision based on your investigations into the payer details, amount, description timing of payment out vs ‘new’ payment in, etc. Modulr can only provide the data available, we cannot signpost these for you when the inbound payment is not a formal scheme reversal.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "For all ‘returns’ that are not scheme reversed and appear as a new inbound payment, the type will be one of PI\\_FAST, PI\\_SECT, PI\\_SEPA\\_INST, etc.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For all ‘returns’ that are not scheme reversed and appear as a new inbound payment, the type will be one of PI_FAST, PI_SECT, PI_SEPA_INST, etc.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "## Reconciliation for a Scheme Return - no webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation for a Scheme Return - no webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "*An outbound payment returned via the scheme (Type = POREV) and the PAYIN/PAYOUT webhooks are not in use*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An outbound payment returned via the scheme (Type = POREV) and the PAYIN/PAYOUT webhooks are not in use",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        34,
+        38
+      ],
+      "raw": "1. A Get Transactions API response will identify a PO\\_REV in “type”, extract the “sourceId”. This is the Modulr Payment Reference (PBID) for the scheme inbound reversal.\n2. Call Get Payments (2a) and in the “Id” field enter the “sourceId” from above, (the only query parameter needed). The API response (2b) will contain the JSON payload “returnDetails” which includes the “originalSchemeId” and “returnReasonCode”. SchemeId is the payment scheme reference that links the inbound reversal and your original outbound payment.\n3. Call Get Payments (a second call), and in the “schemeId” field enter the “originalSchemeId (3a) prepended\\* with “PAYPORT:” and a date within the last 6 months; PAYPORT:MODULO00P210FTW87G102067091562604 noting there is a longer example of the call below. The API response (3b) will return both: the “id” which is the Modulr PBID for the original outbound payment request and your “externalReference”, which is your system reference for the payment added at the time of the original payout request.\n   1. These steps and data will allow you to reconcile the Inbound Reversal in an automated manner.\n   2. \\*prepend is “PAYPORT:” because this is a GBP payment. For SEPA Payments in EUR, you would instead need to prepend with “BOL:” instead. Without this necessary identifier an empty list will be returned.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "A Get Transactions API response will identify a PO_REV in “type”, extract the “sourceId”. This is the Modulr Payment Reference (PBID) for the scheme inbound reversal.Call Get Payments (2a) and in the “Id” field enter the “sourceId” from above, (the only query parameter needed). The API response (2b) will contain the JSON payload “returnDetails” which includes the “originalSchemeId” and “returnReasonCode”. SchemeId is the payment scheme reference that links the inbound reversal and your original outbound payment.Call Get Payments (a second call), and in the “schemeId” field enter the “originalSchemeId (3a) prepended* with “PAYPORT:” and a date within the last 6 months; PAYPORT:MODULO00P210FTW87G102067091562604 noting there is a longer example of the call below. The API response (3b) will return both: the “id” which is the Modulr PBID for the original outbound payment request and your “externalReference”, which is your system reference for the payment added at the time of the original payout request.These steps and data will allow you to reconcile the Inbound Reversal in an automated manner.*prepend is “PAYPORT:” because this is a GBP payment. For SEPA Payments in EUR, you would instead need to prepend with “BOL:” instead. Without this necessary identifier an empty list will be returned.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "![](https://files.readme.io/ba66eabad5aef37e07fabbfaf2dbb25678e7271bed6ed871ac766bb26944bcec-image.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/ba66eabad5aef37e07fabbfaf2dbb25678e7271bed6ed871ac766bb26944bcec-image.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/ba66eabad5aef37e07fabbfaf2dbb25678e7271bed6ed871ac766bb26944bcec-image.png",
+          "line": 40
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "## Reconciliation for a Scheme Return - with webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Reconciliation for a Scheme Return - with webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "*An outbound payment returned via the scheme (Type = PO\\_REV) and the PAYIN/PAYOUT webhooks are subscribed to*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An outbound payment returned via the scheme (Type = PO_REV) and the PAYIN/PAYOUT webhooks are subscribed to",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        46,
+        50
+      ],
+      "raw": "1. When Modulr process your outbound payment request the PAYOUT webhook will trigger. We advise you store, PBid, TBid and the payment schemeId (schemeInfo \\ Id) against your payment record.\n2. If a payment is reversed via the scheme, then the PAYIN Webhook will identify a PO\\_REV in “type”, along with the “ReturnReasonCode” and the “OriginalSchemeId”. Note that the SchemeIno \\ Id relates to the inbound payment. “OriginalSchemeId” links the inbound reversal and your original outbound payment.\n3. Call Get Payments and in the “schemeId” field enter the “originalSchemeId (3a) prepended\\* with “PAYPORT:” and a date within the last 6 months; PAYPORT:MODULO00P210FTW87G102067091562604 noting there is a longer example of the call below. The API response (3b) will return both: the “id” which is the Modulr PBID for the original outbound payment request and your “externalReference” which is your system reference for the payment added at the time of the original payout request.\n   1. These steps and data will allow you to reconcile the Inbound Reversal in an automated manner.\n   2. prepend is “PAYPORT:” because this is a GBP payment. For SEPA Payments in EUR, you would instead need to prepend with “BOL:” instead. Without this necessary identifier an empty list will be returned.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "When Modulr process your outbound payment request the PAYOUT webhook will trigger. We advise you store, PBid, TBid and the payment schemeId (schemeInfo \\ Id) against your payment record.If a payment is reversed via the scheme, then the PAYIN Webhook will identify a PO_REV in “type”, along with the “ReturnReasonCode” and the “OriginalSchemeId”. Note that the SchemeIno \\ Id relates to the inbound payment. “OriginalSchemeId” links the inbound reversal and your original outbound payment.Call Get Payments and in the “schemeId” field enter the “originalSchemeId (3a) prepended* with “PAYPORT:” and a date within the last 6 months; PAYPORT:MODULO00P210FTW87G102067091562604 noting there is a longer example of the call below. The API response (3b) will return both: the “id” which is the Modulr PBID for the original outbound payment request and your “externalReference” which is your system reference for the payment added at the time of the original payout request.These steps and data will allow you to reconcile the Inbound Reversal in an automated manner.prepend is “PAYPORT:” because this is a GBP payment. For SEPA Payments in EUR, you would instead need to prepend with “BOL:” instead. Without this necessary identifier an empty list will be returned.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "![](https://files.readme.io/3878726bac166830938dc12d758e156a038b6c70481d64bb5451f5c57eb3ab9a-image.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/3878726bac166830938dc12d758e156a038b6c70481d64bb5451f5c57eb3ab9a-image.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/3878726bac166830938dc12d758e156a038b6c70481d64bb5451f5c57eb3ab9a-image.png",
+          "line": 54
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    }
+  ]
+}

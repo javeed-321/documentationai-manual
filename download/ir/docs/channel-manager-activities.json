@@ -1,0 +1,237 @@
+{
+  "slug": "docs/channel-manager-activities",
+  "source": "https://modulr.readme.io/docs/channel-manager-activities.md",
+  "url": "https://modulr.readme.io/docs/channel-manager-activities",
+  "title": "Channel Manager - Activities",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:57:09.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 10
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Channel Manager - Activities",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Channel Manager - Activities",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Card Activities",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Card Activities",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "This is a self-managed report function that enables you to retrieve the activities that have happened on cards that you have created",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is a self-managed report function that enables you to retrieve the activities that have happened on cards that you have created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "When calling [GET/channel-managers/activities](https://modulr.readme.io/reference/channelmanagergetcardactivities) you have a list of parameters that you are able to search by, these are:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When calling GET/channel-managers/activities you have a list of parameters that you are able to search by, these are:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagergetcardactivities",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "**Created Dates** – Both FROM and TO dates are available however the data will only return back cards created in the last 7 days",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Created Dates – Both FROM and TO dates are available however the data will only return back cards created in the last 7 days",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "**Statuses** – This is the specific state the transaction is in (DECLINED, APPROVED, SETTLED, EXPIRED, APPLIED)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Statuses – This is the specific state the transaction is in (DECLINED, APPROVED, SETTLED, EXPIRED, APPLIED)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "**Types** – This is the type of transaction (AUTHORISATION, SETTLEMENT, REVERSAL, REFUND, ORGINIAL CREDIT)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Types – This is the type of transaction (AUTHORISATION, SETTLEMENT, REVERSAL, REFUND, ORGINIAL CREDIT)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "**Card ID** – The cards that you wish to query",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Card ID – The cards that you wish to query",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "**Account ID** – The accounts you wish to query",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Account ID – The accounts you wish to query",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "**Transaction ID** – The specific transaction ID’s that you wish to query",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Transaction ID – The specific transaction ID’s that you wish to query",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "**Order ID** – the specific order number/s that you wish to query",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Order ID – the specific order number/s that you wish to query",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "**Channel manager ID** – The unique ID for you (obtained when onboarded to Modulr)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Channel manager ID – The unique ID for you (obtained when onboarded to Modulr)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+---
+updatedAt: 2026-05-27T12:27:05.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Bulk create customer custom field keys
+
+Bulk create customer custom field keys
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Cards",
+      "description": "Cards API"
+    }
+  ],
+  "paths": {
+    "/customer/{customerId}/bulk-card-custom-fields": {
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Bulk create customer custom field keys",
+        "description": "Bulk create customer custom field keys",
+        "operationId": "bulkCreateCustomerCustomFieldKeys",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "description": "Id of customer to create custom fields for",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/card.BulkCreateCustomFieldKeysRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Custom field keys created successfully"
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/card.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "card.BulkCreateCustomFieldKeysRequest": {
+        "type": "object",
+        "description": "Bulk create custom field keys request",
+        "properties": {
+          "customFields": {
+            "type": "array",
+            "description": "Custom fields",
+            "items": {
+              "$ref": "#/components/schemas/card.CustomFields"
+            },
+            "maxItems": 20,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "customFields"
+        ]
+      },
+      "card.CustomFields": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Custom field key"
+          },
+          "required": {
+            "type": "boolean",
+            "description": "Whether the custom field is required or not"
+          }
+        },
+        "required": [
+          "key",
+          "required"
+        ]
+      },
+      "card.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

@@ -1,0 +1,234 @@
+{
+  "slug": "docs/card-controls",
+  "source": "https://modulr.readme.io/docs/card-controls.md",
+  "url": "https://modulr.readme.io/docs/card-controls",
+  "title": "Card Controls",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:36:35.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 5,
+    "list": 2,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Card Controls",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Card Controls",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Card controls allow you to specify rules for when transactions should be approved or declined.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Card controls allow you to specify rules for when transactions should be approved or declined.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Spend controls",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Spend controls",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Spend controls, where set, are checked as part of a new authorisation approval flow and allow you to specify value and volume limits for card transactions.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Spend controls, where set, are checked as part of a new authorisation approval flow and allow you to specify value and volume limits for card transactions.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "There are four types of spend limits:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are four types of spend limits:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        19
+      ],
+      "raw": "* **Lifetime spend limit** – the total amount that can be spent on a card in its lifetime. This limit is set on card creation and can be changed at any point via the API. This is presented as \"limit\" in the create a new card functions as well as update a card.\n* **Currency** – it possible to specify which currencies the card can transact in. This is set on card creation but cannot be changed subsequently - please consider using this feature carefully as it is intended for single-use Virtual Cards only. This is found under 'constraints > authorisation > spend' in the API.\n* **Transaction limit** – the maximum/minimum that can be spent per transaction on a card. This is set per currency on card creation but cannot be changed subsequently - please consider using this feature carefully as it is intended for single-use Virtual Cards only. This is found under 'constraints > authorisation > spend' in the API.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Lifetime spend limit – the total amount that can be spent on a card in its lifetime. This limit is set on card creation and can be changed at any point via the API. This is presented as \"limit\" in the create a new card functions as well as update a card.Currency – it possible to specify which currencies the card can transact in. This is set on card creation but cannot be changed subsequently - please consider using this feature carefully as it is intended for single-use Virtual Cards only. This is found under 'constraints > authorisation > spend' in the API.Transaction limit – the maximum/minimum that can be spent per transaction on a card. This is set per currency on card creation but cannot be changed subsequently - please consider using this feature carefully as it is intended for single-use Virtual Cards only. This is found under 'constraints > authorisation > spend' in the API.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        23
+      ],
+      "raw": "> 🚧 Currency And Transaction Limits\n>\n> Please note. By setting a min/max limit within a currency constraint, this will cause any transactions with a different transaction currency to fail. So, you only need to specific a Currency constraint if you wish to restrict the card to a specific transaction currency.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Currency And Transaction LimitsPlease note. By setting a min/max limit within a currency constraint, this will cause any transactions with a different transaction currency to fail. So, you only need to specific a Currency constraint if you wish to restrict the card to a specific transaction currency.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "* **Velocity limit** – each card is assigned a ‘Velocity Group’ at creation, which has lifetime and rolling weekly/monthly limits, as well as ATM limits, etc. We set some defaults for each card type, but this could be tailored for individual client requirements. This is presented as \"SpendConstraintDetail\" in the constraints object which is part of the create a new card functions only.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Velocity limit – each card is assigned a ‘Velocity Group’ at creation, which has lifetime and rolling weekly/monthly limits, as well as ATM limits, etc. We set some defaults for each card type, but this could be tailored for individual client requirements. This is presented as \"SpendConstraintDetail\" in the constraints object which is part of the create a new card functions only.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "## Merchant category controls",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Merchant category controls",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "These controls allow you to block or allow certain merchant category codes (MCCs) e.g. gambling transactions. These can be set and modified by your Modulr Customer Success Manager.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "These controls allow you to block or allow certain merchant category codes (MCCs) e.g. gambling transactions. These can be set and modified by your Modulr Customer Success Manager.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "A full list of MCCs is available [here](https://github.com/greggles/mcc-codes).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A full list of MCCs is available here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

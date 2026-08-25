@@ -1,0 +1,406 @@
+{
+  "slug": "changelog/modconnect-february-2024",
+  "source": "https://modulr.readme.io/changelog/modconnect-february-2024.md",
+  "url": "https://modulr.readme.io/changelog/modconnect-february-2024",
+  "title": "ModConnect - February 2024",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "Callout": 1,
+    "list": 1,
+    "Image": 4,
+    "paragraph": 7
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# ModConnect - February 2024",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "ModConnect - February 2024",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        10
+      ],
+      "raw": "<Callout icon=\"🔍\" theme=\"default\">\n  ### Top picks this month\n\n  * Customer Portal | Search & Filter Enhancements\n  * Direct Debit Collections | API to support switching\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🔍",
+        "theme": "default"
+      },
+      "text": "Top picks this monthCustomer Portal | Search & Filter EnhancementsDirect Debit Collections | API to support switching",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            6,
+            6
+          ],
+          "raw": "  ### Top picks this month",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Top picks this month",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 3,
+          "lines": [
+            8,
+            9
+          ],
+          "raw": "  * Customer Portal | Search & Filter Enhancements\n  * Direct Debit Collections | API to support switching",
+          "kind": "list",
+          "syntax": "markdown",
+          "text": "Customer Portal | Search & Filter EnhancementsDirect Debit Collections | API to support switching",
+          "attrs": {
+            "ordered": "false"
+          },
+          "target": {
+            "component": null,
+            "status": "transform",
+            "note": "normalise `*`/`+` markers to `-`"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "<Image align=\"center\" src=\"https://files.readme.io/5df9ecc-ModConnectv2.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "src": "https://files.readme.io/5df9ecc-ModConnectv2.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "# New this month",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "New this month",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "## Customer Portal | Search & Filter Enhancements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Customer Portal | Search & Filter Enhancements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "We are excited to announce the first in a series of Customer Portal “search and filter” enhancements. Beginning with the Payment Approvals tab, we are rolling out improvements to how you use search and filter functionality across the Modulr portal. These improvements are making it faster to find/filter/action your payments, with advanced search, filtering, and usability improvements when accessing the portal from a browser on desktop and small devices.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We are excited to announce the first in a series of Customer Portal “search and filter” enhancements. Beginning with the Payment Approvals tab, we are rolling out improvements to how you use search and filter functionality across the Modulr portal. These improvements are making it faster to find/filter/action your payments, with advanced search, filtering, and usability improvements when accessing the portal from a browser on desktop and small devices.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "From March, you’ll find updated search and filter in the Approvals menu, with more sections of the portal to follow!",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "From March, you’ll find updated search and filter in the Approvals menu, with more sections of the portal to follow!",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        22,
+        24
+      ],
+      "raw": "<Image alt=\"The refreshed look\" align=\"center\" src=\"https://files.readme.io/8fa5bf1-The_refreshed_look.png\">\n  The refreshed look\n</Image>",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "alt": "The refreshed look",
+        "align": "center",
+        "src": "https://files.readme.io/8fa5bf1-The_refreshed_look.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        26,
+        28
+      ],
+      "raw": "<Image alt=\"Search everything, see results as soon as you type.\" align=\"center\" src=\"https://files.readme.io/45e6090-Search_everything.jfif\">\n  Search everything, see results as soon as you type.\n</Image>",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "alt": "Search everything, see results as soon as you type.",
+        "align": "center",
+        "src": "https://files.readme.io/45e6090-Search_everything.jfif"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        30,
+        32
+      ],
+      "raw": "<Image alt=\"Use column filtering and sorting to refine your payments even further.\" align=\"center\" src=\"https://files.readme.io/7ca4980-Use_column_filtering.png\">\n  Use column filtering and sorting to refine your payments even further.\n</Image>",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "alt": "Use column filtering and sorting to refine your payments even further.",
+        "align": "center",
+        "src": "https://files.readme.io/7ca4980-Use_column_filtering.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "## Direct Debit Collections |  API to support switching",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Direct Debit Collections |  API to support switching",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "You can now move your Direct Debit Collections to Modulr using our API, which will support switching using  either a transfer of your SUN or the underlying Direct Debit Instructions (the Bacs' ‘Bulk Change’ process). The enhancements mean that your payers can be switched on specific date(s), with their DDIs (‘Mandates’) loaded via API ahead of time, and in batches.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can now move your Direct Debit Collections to Modulr using our API, which will support switching using  either a transfer of your SUN or the underlying Direct Debit Instructions (the Bacs' ‘Bulk Change’ process). The enhancements mean that your payers can be switched on specific date(s), with their DDIs (‘Mandates’) loaded via API ahead of time, and in batches.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "Please contact your Customer Success Manager for further information on this process and the benefits of moving your Direct Debit sponsorship to Modulr.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please contact your Customer Success Manager for further information on this process and the benefits of moving your Direct Debit sponsorship to Modulr.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "# Minor Enhancements & Bugs Resolved",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Minor Enhancements & Bugs Resolved",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "## Cards | Fix to card tokens endpoint",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Cards | Fix to card tokens endpoint",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "We have addressed an issue within our 'Card Token' endpoint. Previously, Modulr did not return tokens that were directly linked to merchants, resulting in incomplete token data for our customers.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have addressed an issue within our 'Card Token' endpoint. Previously, Modulr did not return tokens that were directly linked to merchants, resulting in incomplete token data for our customers.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "Going forward, all tokens will be included in the response, accompanied by the name of the associated merchant.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Going forward, all tokens will be included in the response, accompanied by the name of the associated merchant.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "Please note that these changes will not affect the current usage of this endpoint or the handling of the responses provided.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please note that these changes will not affect the current usage of this endpoint or the handling of the responses provided.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

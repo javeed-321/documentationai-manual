@@ -1,0 +1,456 @@
+{
+  "slug": "changelog/modconnect-september-2023",
+  "source": "https://modulr.readme.io/changelog/modconnect-september-2023.md",
+  "url": "https://modulr.readme.io/changelog/modconnect-september-2023",
+  "title": "ModConnect - September 2023",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 10,
+    "Callout": 1,
+    "list": 1,
+    "Image": 1,
+    "paragraph": 10,
+    "blockquote": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# ModConnect - September 2023",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "ModConnect - September 2023",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        10
+      ],
+      "raw": "<Callout icon=\"📬\" theme=\"default\">\n  ### Top picks this month\n\n  * Cards | Support of non-alphanumeric characters in name\n  * Quarterly round-up to remind you of some of our key enhancements released this past quarter.\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📬",
+        "theme": "default"
+      },
+      "text": "Top picks this monthCards | Support of non-alphanumeric characters in nameQuarterly round-up to remind you of some of our key enhancements released this past quarter.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            6,
+            6
+          ],
+          "raw": "  ### Top picks this month",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Top picks this month",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 3,
+          "lines": [
+            8,
+            9
+          ],
+          "raw": "  * Cards | Support of non-alphanumeric characters in name\n  * Quarterly round-up to remind you of some of our key enhancements released this past quarter.",
+          "kind": "list",
+          "syntax": "markdown",
+          "text": "Cards | Support of non-alphanumeric characters in nameQuarterly round-up to remind you of some of our key enhancements released this past quarter.",
+          "attrs": {
+            "ordered": "false"
+          },
+          "target": {
+            "component": null,
+            "status": "transform",
+            "note": "normalise `*`/`+` markers to `-`"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "<Image align=\"center\" src=\"https://files.readme.io/e003399-9c9932b-MC_strip_2.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "src": "https://files.readme.io/e003399-9c9932b-MC_strip_2.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "## New this month",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "New this month",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "### Cards | Support of non-alphanumeric characters in name",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Cards | Support of non-alphanumeric characters in name",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "You can now include non-alphanumeric in either the first or last name, such as:  / - < > ' .",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can now include non-alphanumeric in either the first or last name, such as:  / - < > ' .",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "> For example Jane Doe-Smith",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "For example Jane Doe-Smith",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "## Quarterly Round Up",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Quarterly Round Up",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "Below are some of our best bits from the past quarter.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Below are some of our best bits from the past quarter.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "### European Payments | Spain and France Branch Enablement",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "European Payments | Spain and France Branch Enablement",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "European customer can now create EUR accounts with Spanish (ES) and French (FR) IBANs in addition to our existing Irish (IE) and Dutch (NL) selection of European IBANs, enabling your expansion ambitions within Europe.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "European customer can now create EUR accounts with Spanish (ES) and French (FR) IBANs in addition to our existing Irish (IE) and Dutch (NL) selection of European IBANs, enabling your expansion ambitions within Europe.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "For more information on how to access this functionality, please speak to your Customer Success Manager",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For more information on how to access this functionality, please speak to your Customer Success Manager",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "### Open Banking | Payment Initiation Service UK Expansion",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Open Banking | Payment Initiation Service UK Expansion",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "We have expanded our Payment Initiation Service connectivity. You can now initiate payments from;  HSBC - Kinetic, Mettle, Tide, Ulster Bank (UK), Virgin Money and Wise.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have expanded our Payment Initiation Service connectivity. You can now initiate payments from;  HSBC - Kinetic, Mettle, Tide, Ulster Bank (UK), Virgin Money and Wise.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "You can find our full supported bank list and read about how to use the provider list API in our Developer Guide.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can find our full supported bank list and read about how to use the provider list API in our Developer Guide.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "### Modulr Portal | File Upload",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Modulr Portal | File Upload",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "We've improved the way you make file upload payments! You now have the option to process payments using file upload as Batch or Bulk.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We've improved the way you make file upload payments! You now have the option to process payments using file upload as Batch or Bulk.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        42,
+        43
+      ],
+      "raw": "Batch allows a single approval for the entire batch, making it easier and saving you time. Batch uploads are processed with strict processing ON, this means that if any payment within the batch fails, the entire batch will fail.\\\nBulk uploads require multiple approvals, for each payment within the file. Bulk uploads are processed with strict processing OFF, this means that any failed payments will show in pending payments, and successful payments will process as normal.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Batch allows a single approval for the entire batch, making it easier and saving you time. Batch uploads are processed with strict processing ON, this means that if any payment within the batch fails, the entire batch will fail.Bulk uploads require multiple approvals, for each payment within the file. Bulk uploads are processed with strict processing OFF, this means that any failed payments will show in pending payments, and successful payments will process as normal.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "### Modulr Portal | Invite Your Clients to Complete Applications 📬",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Modulr Portal | Invite Your Clients to Complete Applications 📬",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "Partners can now invite their clients to complete applications themselves, removing admin burden and shares the effort with your clients, making your process more efficient and collaborative.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Partners can now invite their clients to complete applications themselves, removing admin burden and shares the effort with your clients, making your process more efficient and collaborative.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "### Modulr Portal | Payment Proof",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Modulr Portal | Payment Proof",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "You can now navigate to the transaction modal to download a proof of payment certificate following payment completion, making it easier to prove that your payment has been sent.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can now navigate to the transaction modal to download a proof of payment certificate following payment completion, making it easier to prove that your payment has been sent.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "slug": "reference/uploadbulkcards",
+  "source": "https://modulr.readme.io/reference/uploadbulkcards.md",
+  "url": "https://modulr.readme.io/reference/uploadbulkcards",
+  "title": "Upload CSV file with bulk card operations",
+  "description": "Allow clients to upload csv file with create, update and change card status requests",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-04-21T05:49:14.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Upload CSV file with bulk card operations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Upload CSV file with bulk card operations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Allow clients to upload csv file with create, update and change card status requests",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Allow clients to upload csv file with create, update and change card status requests",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        232
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/bulk-cards/upload\": {\n      \"post\": {\n        \"tags\": [\n          \"Cards Bulk Operations\"\n        ],\n        \"summary\": \"Upload CSV file with bulk card operations\",\n        \"description\": \"Allow clients to upload csv file with create, update and change card status requests\",\n        \"operationId\": \"uploadBulkCards\",\n        \"parameters\": [\n          {\n            \"name\": \"validateOnly\",\n            \"in\": \"query\",\n            \"description\": \"Flag of whether to validate batch entries and not submit for processing. Default false.\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\",\n              \"default\": false\n            }\n          },\n          {\n            \"name\": \"keepEntries\",\n            \"in\": \"query\",\n            \"description\": \"Flag of whether to persist entries for batch request. Can only be true if validateOnly is true, default is false\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\",\n              \"default\": false\n            }\n          },\n          {\n            \"name\": \"overrideFile\",\n            \"in\": \"query\",\n            \"description\": \"Flag of whether to replace existing file with same name. Default false.\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\",\n              \"default\": false\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"multipart/form-data\": {\n              \"schema\": {\n                \"type\": \"object\",\n                \"properties\": {\n                  \"file\": {\n                    \"type\": \"string\",\n                    \"format\": \"binary\",\n                    \"description\": \"CSV file containing bulk card operations\"\n                  }\n                },\n                \"required\": [\n                  \"file\"\n                ]\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"202\": {\n            \"description\": \"CSV file accepted and validated\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.BulkCardsOpsResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Forbidden. Incorrect permissions\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.BulkCardsOpsResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.BulkCardsOpsResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"bulkRequestId\": {\n            \"type\": \"string\"\n          },\n          \"submissionTimestamp\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"SUBMITTED\",\n              \"VALIDATED\",\n              \"VALIDATED_WITH_ERRORS\",\n              \"PROCESSING\",\n              \"PARTIALLY_PROCESSED_WITH_ERRORS\",\n              \"PARTIALLY_PROCESSED\",\n              \"PROCESSED\",\n              \"ARCHIVED\",\n              \"DELETED\"\n            ]\n          }\n        }\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/bulk-cards/upload\": {\n      \"post\": {\n        \"tags\": [\n          \"Cards Bulk Operations\"\n        ],\n        \"summary\": \"Upload CSV file with bulk card operations\",\n        \"description\": \"Allow clients to upload csv file with create, update and change card status requests\",\n        \"operationId\": \"uploadBulkCards\",\n        \"parameters\": [\n          {\n            \"name\": \"validateOnly\",\n            \"in\": \"query\",\n            \"description\": \"Flag of whether to validate batch entries and not submit for processing. Default false.\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\",\n              \"default\": false\n            }\n          },\n          {\n            \"name\": \"keepEntries\",\n            \"in\": \"query\",\n            \"description\": \"Flag of whether to persist entries for batch request. Can only be true if validateOnly is true, default is false\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\",\n              \"default\": false\n            }\n          },\n          {\n            \"name\": \"overrideFile\",\n            \"in\": \"query\",\n            \"description\": \"Flag of whether to replace existing file with same name. Default false.\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\",\n              \"default\": false\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"multipart/form-data\": {\n              \"schema\": {\n                \"type\": \"object\",\n                \"properties\": {\n                  \"file\": {\n                    \"type\": \"string\",\n                    \"format\": \"binary\",\n                    \"description\": \"CSV file containing bulk card operations\"\n                  }\n                },\n                \"required\": [\n                  \"file\"\n                ]\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"202\": {\n            \"description\": \"CSV file accepted and validated\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.BulkCardsOpsResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Forbidden. Incorrect permissions\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.BulkCardsOpsResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.BulkCardsOpsResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"bulkRequestId\": {\n            \"type\": \"string\"\n          },\n          \"submissionTimestamp\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"SUBMITTED\",\n              \"VALIDATED\",\n              \"VALIDATED_WITH_ERRORS\",\n              \"PROCESSING\",\n              \"PARTIALLY_PROCESSED_WITH_ERRORS\",\n              \"PARTIALLY_PROCESSED\",\n              \"PROCESSED\",\n              \"ARCHIVED\",\n              \"DELETED\"\n            ]\n          }\n        }\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

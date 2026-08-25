@@ -1,0 +1,108 @@
+{
+  "slug": "reference/getaspsproviders",
+  "source": "https://modulr.readme.io/reference/getaspsproviders.md",
+  "url": "https://modulr.readme.io/reference/getaspsproviders",
+  "title": "Get supported ASPSPs",
+  "description": "Gets a list of all supported Account Servicing Payment Service Providers (ASPSPs).",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T10:50:49.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Get supported ASPSPs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Get supported ASPSPs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Gets a list of all supported Account Servicing Payment Service Providers (ASPSPs).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Gets a list of all supported Account Servicing Payment Service Providers (ASPSPs).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        189
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/aspsps\": {\n      \"get\": {\n        \"tags\": [\n          \"Payment Initiations\"\n        ],\n        \"summary\": \"Get supported ASPSPs\",\n        \"description\": \"Gets a list of all supported Account Servicing Payment Service Providers (ASPSPs).\",\n        \"operationId\": \"getAspsProviders\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/pispgateway.AspsProviderResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Bad Request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/pispgateway.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"pispgateway.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"pispgateway.AspsProviderResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Unique identifier (within Modulr) of the ASPSP\",\n            \"example\": \"H100000001\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"Name of the ASPSP\",\n            \"example\": \"Bank of Money\"\n          },\n          \"capabilities\": {\n            \"type\": \"array\",\n            \"description\": \"Capability list of the ASPSP\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/pispgateway.Capability\"\n            }\n          }\n        }\n      },\n      \"pispgateway.Capability\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"Type of the capability.\",\n            \"enum\": [\n              \"SINGLE_IMMEDIATE\",\n              \"STANDING_ORDER\",\n              \"SWEEPING_VRP\",\n              \"COMMERCIAL_VRP\"\n            ],\n            \"example\": \"SINGLE_IMMEDIATE\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Status of the capability.\",\n            \"enum\": [\n              \"ENABLED\",\n              \"DISABLED\"\n            ],\n            \"example\": \"ENABLED\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/aspsps\": {\n      \"get\": {\n        \"tags\": [\n          \"Payment Initiations\"\n        ],\n        \"summary\": \"Get supported ASPSPs\",\n        \"description\": \"Gets a list of all supported Account Servicing Payment Service Providers (ASPSPs).\",\n        \"operationId\": \"getAspsProviders\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/pispgateway.AspsProviderResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Bad Request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/pispgateway.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"pispgateway.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"pispgateway.AspsProviderResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Unique identifier (within Modulr) of the ASPSP\",\n            \"example\": \"H100000001\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"Name of the ASPSP\",\n            \"example\": \"Bank of Money\"\n          },\n          \"capabilities\": {\n            \"type\": \"array\",\n            \"description\": \"Capability list of the ASPSP\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/pispgateway.Capability\"\n            }\n          }\n        }\n      },\n      \"pispgateway.Capability\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"Type of the capability.\",\n            \"enum\": [\n              \"SINGLE_IMMEDIATE\",\n              \"STANDING_ORDER\",\n              \"SWEEPING_VRP\",\n              \"COMMERCIAL_VRP\"\n            ],\n            \"example\": \"SINGLE_IMMEDIATE\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Status of the capability.\",\n            \"enum\": [\n              \"ENABLED\",\n              \"DISABLED\"\n            ],\n            \"example\": \"ENABLED\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

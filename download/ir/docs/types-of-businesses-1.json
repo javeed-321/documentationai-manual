@@ -1,0 +1,274 @@
+{
+  "slug": "docs/types-of-businesses-1",
+  "source": "https://modulr.readme.io/docs/types-of-businesses-1.md",
+  "url": "https://modulr.readme.io/docs/types-of-businesses-1",
+  "title": "Modulr Access Types",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:54:39.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 7,
+    "Image": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Modulr Access Types",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Modulr Access Types",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Modulr enables business to solve complex business payment problems, and supports different use cases and scenarios.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modulr enables business to solve complex business payment problems, and supports different use cases and scenarios.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "To achieve this, we support two main groups of businesses:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To achieve this, we support two main groups of businesses:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Direct Customers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Direct Customers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        16
+      ],
+      "raw": "Direct customers are those who create and manager only their own accounts on our platform.\\\nThis is the default configuration of our Sandbox environment. In the Modulr Portal, Direct Customers see only their own accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Direct customers are those who create and manager only their own accounts on our platform.This is the default configuration of our Sandbox environment. In the Modulr Portal, Direct Customers see only their own accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "<Image align=\"center\" className=\"border\" width=\"400px\" border={true} src=\"https://files.readme.io/c46d247-direct_cust_setup.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "className": "border",
+        "width": "400px",
+        "border": "{true}",
+        "src": "https://files.readme.io/c46d247-direct_cust_setup.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "className=\"border\" is redundant with border={true}",
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 7,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "## Partners",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Partners",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "Partners are those who create and manage accounts on behalf of their own customers. In the Modulr Portal, Partner users see all their customer's accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Partners are those who create and manage accounts on behalf of their own customers. In the Modulr Portal, Partner users see all their customer's accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "Please [contact us](https://www.modulrfinance.com/contact) if you need your sandbox environment set up as a Partner",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please contact us if you need your sandbox environment set up as a Partner",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "<Image align=\"center\" className=\"border\" width=\"400px\" border={true} src=\"https://files.readme.io/c688f59-partner_setup.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "className": "border",
+        "width": "400px",
+        "border": "{true}",
+        "src": "https://files.readme.io/c688f59-partner_setup.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "className=\"border\" is redundant with border={true}",
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "## Delegates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Delegates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "Some customers can allow a 'Delegate' to access their accounts on their behalf (e.g. an accountant) under permissions the customer controls.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Some customers can allow a 'Delegate' to access their accounts on their behalf (e.g. an accountant) under permissions the customer controls.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "In the Modulr Portal, Delegates see all of their connected Customers, and can set up, view and manage payments and approvals on their behalf, depending on the permissions the customer has set.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In the Modulr Portal, Delegates see all of their connected Customers, and can set up, view and manage payments and approvals on their behalf, depending on the permissions the customer has set.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

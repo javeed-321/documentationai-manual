@@ -1,0 +1,350 @@
+{
+  "slug": "docs/payment-types",
+  "source": "https://modulr.readme.io/docs/payment-types.md",
+  "url": "https://modulr.readme.io/docs/payment-types",
+  "title": "Payment Types",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:55:07.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 1,
+    "Table": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Payment Types",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Payment Types",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "The following describes the various types of payments possible:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following describes the various types of payments possible:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Inbound Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Inbound Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        22
+      ],
+      "raw": "| Category      | Type           | Payment Scheme                | Example Usage                               |\n| ------------- | -------------- | ----------------------------- | ------------------------------------------- |\n| UK Payments   | PI\\_FAST       | Faster Payments               | Inbound GBP Payments from External Accounts |\n|               | PI\\_BACS       | Bacs                          | Inbound GBP Payments from External Accounts |\n|               | PI\\_CHAPS      | CHAPS                         | Inbound GBP Payments from External Accounts |\n|               | PI\\_DD         | Direct Debit                  | Inbound GBP Direct Debit Collections        |\n| EU Payments   | PI\\_SECT       | SEPA Credit Transfers         | Inbound EUR Payments from External Accounts |\n|               | PI\\_SEPA\\_INST | SEPA Instant Credit Transfers | Inbound EUR Payments from External Accounts |\n| Card Payments | PI\\_MASTER     | Mastercard                    | Card Refunds                                |\n|               | PI\\_VISA       | VISA                          | Card Refunds                                |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Category",
+          "Type",
+          "Payment Scheme",
+          "Example Usage"
+        ],
+        "rows": [
+          [
+            "UK Payments",
+            "PI_FAST",
+            "Faster Payments",
+            "Inbound GBP Payments from External Accounts"
+          ],
+          [
+            "",
+            "PI_BACS",
+            "Bacs",
+            "Inbound GBP Payments from External Accounts"
+          ],
+          [
+            "",
+            "PI_CHAPS",
+            "CHAPS",
+            "Inbound GBP Payments from External Accounts"
+          ],
+          [
+            "",
+            "PI_DD",
+            "Direct Debit",
+            "Inbound GBP Direct Debit Collections"
+          ],
+          [
+            "EU Payments",
+            "PI_SECT",
+            "SEPA Credit Transfers",
+            "Inbound EUR Payments from External Accounts"
+          ],
+          [
+            "",
+            "PI_SEPA_INST",
+            "SEPA Instant Credit Transfers",
+            "Inbound EUR Payments from External Accounts"
+          ],
+          [
+            "Card Payments",
+            "PI_MASTER",
+            "Mastercard",
+            "Card Refunds"
+          ],
+          [
+            "",
+            "PI_VISA",
+            "VISA",
+            "Card Refunds"
+          ]
+        ],
+        "align": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "## Outbound Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Outbound Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        26,
+        34
+      ],
+      "raw": "| Category      | Type           | Payment Scheme                | Example Usage                              |\n| ------------- | -------------- | ----------------------------- | ------------------------------------------ |\n| UK Payments   | PO\\_FAST       | Faster Payments               | Outbound GBP Payments to External Accounts |\n|               | PO\\_CHAPS      | CHAPS                         | Outbound GBP Payments to External Accounts |\n|               | PO\\_DD         | Direct Debit                  | Outbound GBP Payments via Direct Debit     |\n| EU Payments   | PO\\_SECT       | SEPA Credit Transfers         | Outbound EUR Payments to External Accounts |\n|               | PO\\_SEPA\\_INST | SEPA Instant Credit Transfers | Outbound EUR Payments to External Accounts |\n| Card Payments | PO\\_MASTER     | Mastercard                    | Card Settlements                           |\n|               | PO\\_VISA       | VISA                          | Card Settlements                           |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Category",
+          "Type",
+          "Payment Scheme",
+          "Example Usage"
+        ],
+        "rows": [
+          [
+            "UK Payments",
+            "PO_FAST",
+            "Faster Payments",
+            "Outbound GBP Payments to External Accounts"
+          ],
+          [
+            "",
+            "PO_CHAPS",
+            "CHAPS",
+            "Outbound GBP Payments to External Accounts"
+          ],
+          [
+            "",
+            "PO_DD",
+            "Direct Debit",
+            "Outbound GBP Payments via Direct Debit"
+          ],
+          [
+            "EU Payments",
+            "PO_SECT",
+            "SEPA Credit Transfers",
+            "Outbound EUR Payments to External Accounts"
+          ],
+          [
+            "",
+            "PO_SEPA_INST",
+            "SEPA Instant Credit Transfers",
+            "Outbound EUR Payments to External Accounts"
+          ],
+          [
+            "Card Payments",
+            "PO_MASTER",
+            "Mastercard",
+            "Card Settlements"
+          ],
+          [
+            "",
+            "PO_VISA",
+            "VISA",
+            "Card Settlements"
+          ]
+        ],
+        "align": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "## Other Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Other Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        38,
+        45
+      ],
+      "raw": "| Category    | Type         | Payment Scheme | Example Usage                                                                       |\n| ----------- | ------------ | -------------- | ----------------------------------------------------------------------------------- |\n| Other Types | INT\\_INTERC  | N/A            | Payments between Accounts on the Modulr Platform                                    |\n|             | ADHOC        | N/A            | Miscellaneous Adjustments                                                           |\n|             | PI\\_REV      | Various        | Return of Previously Received Inbound Payments                                      |\n|             | PO\\_REV      | Various        | Return of Previously Sent Outbound Payments                                         |\n|             | PO\\_DD\\_PEND | N/A            | Internal Transfer for Settling DD collections under the facilities management model |\n|             | PI\\_DD\\_PEND | N/A            | Internal Transfer for Settling DD collections under the facilities management model |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Category",
+          "Type",
+          "Payment Scheme",
+          "Example Usage"
+        ],
+        "rows": [
+          [
+            "Other Types",
+            "INT_INTERC",
+            "N/A",
+            "Payments between Accounts on the Modulr Platform"
+          ],
+          [
+            "",
+            "ADHOC",
+            "N/A",
+            "Miscellaneous Adjustments"
+          ],
+          [
+            "",
+            "PI_REV",
+            "Various",
+            "Return of Previously Received Inbound Payments"
+          ],
+          [
+            "",
+            "PO_REV",
+            "Various",
+            "Return of Previously Sent Outbound Payments"
+          ],
+          [
+            "",
+            "PO_DD_PEND",
+            "N/A",
+            "Internal Transfer for Settling DD collections under the facilities management model"
+          ],
+          [
+            "",
+            "PI_DD_PEND",
+            "N/A",
+            "Internal Transfer for Settling DD collections under the facilities management model"
+          ]
+        ],
+        "align": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    }
+  ]
+}

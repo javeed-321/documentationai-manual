@@ -1,0 +1,85 @@
+---
+updatedAt: 2026-06-11T09:54:44.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Customer Verification: Overview
+
+Modulr's Customer Verification product gives Partners a fully managed, embedded KYB (Know Your Business)/KYC (Know Your Customer) experience for onboarding and ongoing due diligence of their customers. Rather than building your own compliance flow, you embed the Customer Verification SDK into your product and Modulr handles the rest.
+
+This guide covers everything you need to integrate: creating applications, embedding the SDK, handling webhooks, and managing ongoing customer data updates.
+
+***
+
+## How it works
+
+At a high level, the integration works like this:
+
+1. Your backend creates an **Application** for each customer via the Modulr API.
+2. You embed the **Customer Verification SDK** into your product, which presents the customer with the appropriate KYC or KYB data-capture journey.
+3. Modulr runs automated compliance checks and notifies your system of outcomes via **webhooks**.
+4. You listen for status changes and re-invoke the SDK whenever further customer action is needed.
+
+Once verification is complete, Modulr creates a Customer record and provides you with a `customerId` to use for account creation.
+
+***
+
+## Roles and responsibilities
+
+| Role          | Responsibilities                                                                                               |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Applicant** | Provides information and completes verification steps via the embedded SDK.                                    |
+| **Partner**   | Creates application instances, embeds the SDK, handles webhooks, and notifies customers when action is needed. |
+| **Modulr**    | Generates the SDK UI, processes KYB/KYC data, runs compliance decisioning, and creates the customer record.    |
+
+***
+
+## What is the Customer Verification SDK?
+
+The SDK is a pre-built, embeddable UI component that manages the full KYC/KYB journey within your product. It handles data capture, document collection, and result relay - all within your branded environment.
+
+As a Partner, you only need to:
+
+* Initialise the SDK with a short-lived token
+* Listen for webhook events
+* Re-surface the SDK when further customer input is required
+
+The SDK is continuously maintained by Modulr, so your integration automatically stays compliant with evolving data requirements without you needing to update your code.
+
+***
+
+## Integration paths
+
+There are two ways to submit customer data before verification begins:
+
+**SDK-only (recommended):** Skip API data submission entirely and let the SDK collect all required information directly from the customer. This is the preferred approach for most Partners, particularly for KYB (business) applications, as it insulates you from changes to the underlying data requirements.
+
+**API pre-population + SDK:** Use the compliance data APIs to pre-fill known information before invoking the SDK. The SDK will then only prompt the customer for anything that is missing. This is useful if you already hold verified data about your customer.
+
+***
+
+## Key concepts
+
+**Application ID:** Created for each customer verification attempt. A single customer may have multiple Application IDs over time, reflecting data updates and CDD refresh cycles. Always store this against your customer record.
+
+**Customer ID:** Issued by Modulr once an application is approved. Use this to create payment accounts.
+
+**Short-lived token:** Required to initialise the SDK for each session. Must be requested server-side and never exposed in client-side code.
+
+***
+
+## Next steps
+
+Work through the integration in order:
+
+1. [Integration Guide](https://modulr.readme.io/docs/customer-verification-integration-guide) - the full step-by-step guide with code examples
+2. [Application Statuses](https://modulr.readme.io/docs/customer-verification-application-statuses) - all status values your webhook handler must support
+3. Updating Customer Data *\[WIP]* - how CDD refresh and manual data updates work
+4. Webhook reference articles for each event type:
+   1. [Application Status Change](https://modulr.readme.io/docs/webhook-application-status-change)
+   2. [Customer Created](https://modulr.readme.io/docs/webhook-customer-created)
+   3. [Customer Status Change](https://modulr.readme.io/docs/customer-status)
+   4. Customer Compliance Data Refresh *\[WIP]*
+
+<br />

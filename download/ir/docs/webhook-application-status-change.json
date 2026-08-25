@@ -1,0 +1,557 @@
+{
+  "slug": "docs/webhook-application-status-change",
+  "source": "https://modulr.readme.io/docs/webhook-application-status-change.md",
+  "url": "https://modulr.readme.io/docs/webhook-application-status-change",
+  "title": "Webhook - Application Status Change",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-11T09:56:30.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 3,
+    "thematicBreak": 6,
+    "list": 4,
+    "code": 2,
+    "Table": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Webhook - Application Status Change",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Webhook - Application Status Change",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Modulr sends this webhook to notify Partners of changes to a customer's application status as it progresses through the verification process.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modulr sends this webhook to notify Partners of changes to a customer's application status as it progresses through the verification process.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "You will receive this event multiple times across the lifecycle of an application. Your handler must be idempotent - the same event may be delivered more than once.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You will receive this event multiple times across the lifecycle of an application. Your handler must be idempotent - the same event may be delivered more than once.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## When it fires",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "When it fires",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        20
+      ],
+      "raw": "* When a customer starts entering data (transitions to `IN_PROGRESS`)\n* When automated CDD checks complete (transitions to `APPROVED`, `PENDING_STEP_UP`, or `MANUAL_REVIEW`)\n* When a manual review decision is made\n* When a step-up is requested post-submission",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "When a customer starts entering data (transitions to IN_PROGRESS)When automated CDD checks complete (transitions to APPROVED, PENDING_STEP_UP, or MANUAL_REVIEW)When a manual review decision is madeWhen a step-up is requested post-submission",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "## Payload",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Payload",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        26,
+        33
+      ],
+      "raw": "```json\n{\n  \"eventDateTime\": \"2026-04-27T13:19:34.457092669Z\",\n  \"eventName\": \"APPLICATION_STATUS_CHANGE\",\n  \"applicationId\": \"APP21000MG\",\n  \"status\": \"IN_PROGRESS\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"eventDateTime\": \"2026-04-27T13:19:34.457092669Z\",\n  \"eventName\": \"APPLICATION_STATUS_CHANGE\",\n  \"applicationId\": \"APP21000MG\",\n  \"status\": \"IN_PROGRESS\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "### Fields",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Fields",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        37,
+        42
+      ],
+      "raw": "| Field           | Type              | Description                                                                                                              |\n| --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |\n| `eventDateTime` | string (ISO 8601) | Timestamp of the status change.                                                                                          |\n| `eventName`     | string            | Always `APPLICATION_STATUS_CHANGE`.                                                                                      |\n| `applicationId` | string            | The application ID associated with the event. Store this against your customer record.                                   |\n| `status`        | string            | The new application status. See [Application Statuses](./cv_article_03_application_statuses.md) for all possible values. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Field",
+          "Type",
+          "Description"
+        ],
+        "rows": [
+          [
+            "eventDateTime",
+            "string (ISO 8601)",
+            "Timestamp of the status change."
+          ],
+          [
+            "eventName",
+            "string",
+            "Always APPLICATION_STATUS_CHANGE."
+          ],
+          [
+            "applicationId",
+            "string",
+            "The application ID associated with the event. Store this against your customer record."
+          ],
+          [
+            "status",
+            "string",
+            "The new application status. See Application Statuses for all possible values."
+          ]
+        ],
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "## Status values",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Status values",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        48,
+        55
+      ],
+      "raw": "| Status            | What to do                                                                                                  |\n| ----------------- | ----------------------------------------------------------------------------------------------------------- |\n| `IN_PROGRESS`     | No action. Store the status against your customer record.                                                   |\n| `PENDING_STEP_UP` | Notify your customer that further information is required. Re-invoke the SDK with the same `applicationId`. |\n| `MANUAL_REVIEW`   | No action. Await the next status change.                                                                    |\n| `APPROVED`        | Await the `CUSTOMER_CREATED` webhook to receive the `customerId`.                                           |\n| `DECLINED`        | Notify the customer. They will not be onboarded.                                                            |\n| `EXPIRED`         | The customer must restart. Create a new application.                                                        |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "What to do"
+        ],
+        "rows": [
+          [
+            "IN_PROGRESS",
+            "No action. Store the status against your customer record."
+          ],
+          [
+            "PENDING_STEP_UP",
+            "Notify your customer that further information is required. Re-invoke the SDK with the same applicationId."
+          ],
+          [
+            "MANUAL_REVIEW",
+            "No action. Await the next status change."
+          ],
+          [
+            "APPROVED",
+            "Await the CUSTOMER_CREATED webhook to receive the customerId."
+          ],
+          [
+            "DECLINED",
+            "Notify the customer. They will not be onboarded."
+          ],
+          [
+            "EXPIRED",
+            "The customer must restart. Create a new application."
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "## Handling PENDING\\_STEP\\_UP",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Handling PENDING_STEP_UP",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "When you receive a `PENDING_STEP_UP` status:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When you receive a PENDING_STEP_UP status:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        63,
+        66
+      ],
+      "raw": "1. Notify your customer that further action is needed.\n2. Request a fresh short-lived token (Step 5 of the integration guide).\n3. Re-initialise the SDK with the same `applicationId`.\n4. Open the SDK - it will automatically surface the step-up form for the outstanding requirements.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Notify your customer that further action is needed.Request a fresh short-lived token (Step 5 of the integration guide).Re-initialise the SDK with the same applicationId.Open the SDK - it will automatically surface the step-up form for the outstanding requirements.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        68,
+        87
+      ],
+      "raw": "```javascript\n// 1. Get fresh token\n// POST /onboarding-service/keys/onboarding/{applicationId}\n\n// 2. Re-initialise SDK\nconst sdkInstance = await ModulrCustomerVerificationSdk.init({\n  token,\n  hmac,\n  applicationId: 'APP21000MG',\n  onInit: (result) => { /* ... */ },\n  onError: (error) => { /* ... */ }\n});\n\n// 3. Open SDK\nawait sdkInstance.open({\n  onResult: (data) => { /* ... */ },\n  onError: (error) => { /* ... */ },\n  onClose: () => { /* ... */ }\n});\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "// 1. Get fresh token\n// POST /onboarding-service/keys/onboarding/{applicationId}\n\n// 2. Re-initialise SDK\nconst sdkInstance = await ModulrCustomerVerificationSdk.init({\n  token,\n  hmac,\n  applicationId: 'APP21000MG',\n  onInit: (result) => { /* ... */ },\n  onError: (error) => { /* ... */ }\n});\n\n// 3. Open SDK\nawait sdkInstance.open({\n  onResult: (data) => { /* ... */ },\n  onError: (error) => { /* ... */ },\n  onClose: () => { /* ... */ }\n});"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "## Implementation notes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Implementation notes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        93,
+        95
+      ],
+      "raw": "* Register your webhook endpoint URL in your Partner configuration.\n* Respond with `HTTP 200` to acknowledge receipt. Modulr will retry on failure.\n* For update flows (CDD refresh), monitor `APPLICATION_STATUS_CHANGE` events on the **new** Application ID, not the original.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Register your webhook endpoint URL in your Partner configuration.Respond with HTTP 200 to acknowledge receipt. Modulr will retry on failure.For update flows (CDD refresh), monitor APPLICATION_STATUS_CHANGE events on the new Application ID, not the original.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "## Related",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Related",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        101,
+        103
+      ],
+      "raw": "* [Application Statuses](https://modulr.readme.io/docs/customer-verification-application-statuses)\n* [Integration Guide](https://modulr.readme.io/docs/customer-verification-integration-guide)\n* [Webhook - Customer Created](https://modulr.readme.io/docs/webhook-customer-created)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Application StatusesIntegration GuideWebhook - Customer Created",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-verification-application-statuses",
+          "line": 101
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-verification-integration-guide",
+          "line": 102
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-customer-created",
+          "line": 103
+        }
+      ]
+    }
+  ]
+}

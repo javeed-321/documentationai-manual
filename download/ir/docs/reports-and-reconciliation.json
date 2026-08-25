@@ -1,0 +1,231 @@
+{
+  "slug": "docs/reports-and-reconciliation",
+  "source": "https://modulr.readme.io/docs/reports-and-reconciliation.md",
+  "url": "https://modulr.readme.io/docs/reports-and-reconciliation",
+  "title": "Platform Reporting and Reconciliation",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-30T09:35:55.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 5,
+    "Callout": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Platform Reporting and Reconciliation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Platform Reporting and Reconciliation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Summary",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Summary",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "The Platform Daily Transaction Report provides a summary view of all transactions performed by a client on the day prior. The report serves as a reference for respective reconciliation processes, systems and checks.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Platform Daily Transaction Report provides a summary view of all transactions performed by a client on the day prior. The report serves as a reference for respective reconciliation processes, systems and checks.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "> 📘 Please note, this is a non-standard offering. Setup and scheduled delivery of this report is subject to applicable fees from Modulr.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Please note, this is a non-standard offering. Setup and scheduled delivery of this report is subject to applicable fees from Modulr.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## Being set up to receive the report",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Being set up to receive the report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "To receive the Platform Daily Transaction Report you need to be enabled to access them. This is completed at the Onboarding and Implementation stage. The reports are accessed via SSH, therefore Modulr requires your SSH key and source IP address(es) to enable set up.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To receive the Platform Daily Transaction Report you need to be enabled to access them. This is completed at the Onboarding and Implementation stage. The reports are accessed via SSH, therefore Modulr requires your SSH key and source IP address(es) to enable set up.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "File Type: .csv",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "File Type: .csv",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## What's included in the report",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "What's included in the report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "The Platform Daily Transaction Report includes data such as:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Platform Daily Transaction Report includes data such as:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        30
+      ],
+      "raw": "* *Account ID*\n* *Transaction Amount*\n* *Transaction Type*\n* *Debit or Credit*\n* *Transaction and Payment References*\n* *Return Reason* (for returned payments)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Account IDTransaction AmountTransaction TypeDebit or CreditTransaction and Payment ReferencesReturn Reason (for returned payments)",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "Note this list is not exhaustive and additional information is included. To learn more, please contact Modulr to discuss set-up and scheduled delivery.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note this list is not exhaustive and additional information is included. To learn more, please contact Modulr to discuss set-up and scheduled delivery.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

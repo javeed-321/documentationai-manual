@@ -1,0 +1,454 @@
+{
+  "slug": "docs/authentication",
+  "source": "https://modulr.readme.io/docs/authentication.md",
+  "url": "https://modulr.readme.io/docs/authentication",
+  "title": "Authentication",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:45:45.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 13,
+    "Callout": 1,
+    "list": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Authentication",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Authentication",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## HMAC Signatures / Authorization header calculation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "HMAC Signatures / Authorization header calculation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "HMAC Signing is an access token method that adds another level of security by also sending a signature that identifies the request temporally to ensure that the request is from the requesting user, using a secret key that is never broadcast over the wire. HMAC signing implemented is based on the latest draft of the HMAC request signing standard.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "HMAC Signing is an access token method that adds another level of security by also sending a signature that identifies the request temporally to ensure that the request is from the requesting user, using a secret key that is never broadcast over the wire. HMAC signing implemented is based on the latest draft of the HMAC request signing standard.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        20
+      ],
+      "raw": "> 📘 API Keys, API HMAC Secrets vs tokens and hmac\n>\n> When you onboard to Modulr/set up your sandbox account you will be given\n>\n> * An **API Key** - this is sometimes referred to as your **token**\n> * A **Secret** - this is sometimes referred to as your **hmac**\n>\n> Please keep this in mind, as both terms can be used.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "API Keys, API HMAC Secrets vs tokens and hmacWhen you onboard to Modulr/set up your sandbox account you will be givenAn API Key - this is sometimes referred to as your tokenA Secret - this is sometimes referred to as your hmacPlease keep this in mind, as both terms can be used.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "Sample code is available on our Github project <a href=\"https://github.com/Modulr-finance/modulr-hmac\" target=\"_blank\">here</a>.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Sample code is available on our Github project here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "We have examples for\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#java\" target=\"_blank\">Java</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#kotlin\" target=\"_blank\">Kotlin</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#nodejs\" target=\"_blank\">Javascript/NodeJS</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#postman-pre-request-script\" target=\"_blank\">Postman</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#python\" target=\"_blank\">Python</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#ruby\" target=\"_blank\">Ruby</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#c\" target=\"_blank\">C</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#cpp\" target=\"_blank\">C++</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#c-2\" target=\"_blank\">C#</a>\\ <a href=\"https://github.com/Modulr-finance/modulr-hmac#golang\" target=\"_blank\">Golang</a>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have examples for\\ Java\\ Kotlin\\ Javascript/NodeJS\\ Postman\\ Python\\ Ruby\\ C\\ C++\\ C#\\ Golang",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "The required steps and a worked example are provided below, please contact us if you require any further assistance.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The required steps and a worked example are provided below, please contact us if you require any further assistance.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        28,
+        54
+      ],
+      "raw": "1. Set the HTTP “Date” header. The date format must be exactly as per the HTTP-date header specifications - RFC 7231\\\n   example header:\\\n   `Date: Mon, 25 Jul 2016 16:36:07 GMT`\n\n2. Set a header with label x-mod-nonce to a unique value per request (see below regarding nonces)\\\n   example header:\\\n   `x-mod-nonce: 28154b2-9c62b93cc22a-24c9e2-5536d7d`\n\n3. Create the signature string by concatenating the two headers above separated by a single newline character (note \\n and not \\r\\n).\\\n   The header labels should be lowercase within the signature string.\\\n   `signatureString := strings.ToLower(\"Date\") + \": \" + HTTP-date + \"\\n\"`\\\n   `signatureString += strings.ToLower(\"x-mod-nonce\") + \": \" + nonce`\\\n   example signature string:\n\n   ```\n   `date: Mon, 25 Jul 2016 16:36:07 GMT\\nx-mod-nonce: 28154b2-9c62b93cc22a-24c9e2-5536d7d`\n   ```\n\n4. For a given key of `57502612d1bb2c0001000025fd53850cd9a94861507a5f7cca236882` and hmac secret of `NzAwZmIwMGQ0YTJiNDhkMzZjYzc3YjQ5OGQyYWMzOTI=` calculate the hmac-SHA1 signature of the signature string.\n\n5. Convert the result to a url encoded base64 string. You should get a value of:\\\n   `hex = 58132bfd8761cac6e6888124753adfda13fb49f0`\\\n   url encoded base 64 = `WBMr%2FYdhysbmiIEkdTrf2hP7SfA%3D`\n\n6. Set the Authorization header result with the below format\\\n   example header:\\\n   `Authorization: Signature keyId=\"57502612d1bb2c0001000025fd53850cd9a94861507a5f7cca236882\",algorithm=\"hmac-sha1\",headers=\"date x-mod-nonce\",signature=\"WBMr%2FYdhysbmiIEkdTrf2hP7SfA%3D\"`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Set the HTTP “Date” header. The date format must be exactly as per the HTTP-date header specifications - RFC 7231example header:Date: Mon, 25 Jul 2016 16:36:07 GMTSet a header with label x-mod-nonce to a unique value per request (see below regarding nonces)example header:x-mod-nonce: 28154b2-9c62b93cc22a-24c9e2-5536d7dCreate the signature string by concatenating the two headers above separated by a single newline character (note \\n and not \\r\\n).The header labels should be lowercase within the signature string.signatureString := strings.ToLower(\"Date\") + \": \" + HTTP-date + \"\\n\"signatureString += strings.ToLower(\"x-mod-nonce\") + \": \" + nonceexample signature string:`date: Mon, 25 Jul 2016 16:36:07 GMT\\nx-mod-nonce: 28154b2-9c62b93cc22a-24c9e2-5536d7d`For a given key of 57502612d1bb2c0001000025fd53850cd9a94861507a5f7cca236882 and hmac secret of NzAwZmIwMGQ0YTJiNDhkMzZjYzc3YjQ5OGQyYWMzOTI= calculate the hmac-SHA1 signature of the signature string.Convert the result to a url encoded base64 string. You should get a value of:hex = 58132bfd8761cac6e6888124753adfda13fb49f0url encoded base 64 = WBMr%2FYdhysbmiIEkdTrf2hP7SfA%3DSet the Authorization header result with the below formatexample header:Authorization: Signature keyId=\"57502612d1bb2c0001000025fd53850cd9a94861507a5f7cca236882\",algorithm=\"hmac-sha1\",headers=\"date x-mod-nonce\",signature=\"WBMr%2FYdhysbmiIEkdTrf2hP7SfA%3D\"",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "## System time",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "System time",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "The HMAC calculation above uses a date/time value and also implements the recommended clock-skew from the HMAC specification to prevent against replay attacks. It is therefore essential that the sending system has an accurate time (e.g. synchronised with NTP), any significant time error may cause the request to be rejected.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The HMAC calculation above uses a date/time value and also implements the recommended clock-skew from the HMAC specification to prevent against replay attacks. It is therefore essential that the sending system has an accurate time (e.g. synchronised with NTP), any significant time error may cause the request to be rejected.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "All time values are sent in GMT, so you should ensure this still continues to send the correct GMT time if your sending system is subject to changes for daylight savings.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All time values are sent in GMT, so you should ensure this still continues to send the correct GMT time if your sending system is subject to changes for daylight savings.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "## Nonce Value",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Nonce Value",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "The previous HMAC calculation uses a nonce value. This value should be set and be unique per distinct api request/operation that you send to our system (see below for limited exceptions). This is used in conjunction with the datetime to prevent replay attacks and detect duplicate messages.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The previous HMAC calculation uses a nonce value. This value should be set and be unique per distinct api request/operation that you send to our system (see below for limited exceptions). This is used in conjunction with the datetime to prevent replay attacks and detect duplicate messages.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "A nonce should be re-used only if you wish to retry the same request in certain conditions, refer to the section on [Idempotence](https://modulr.readme.io/docs/limits-and-errors#section-idempotent-requests)  on how this works.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A nonce should be re-used only if you wish to retry the same request in certain conditions, refer to the section on Idempotence  on how this works.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/limits-and-errors#section-idempotent-requests",
+          "line": 66
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "If the same request content is received with a new nonce, it will be treated as a separate request and may be executed again. Therefore if you wish to re-send a POST request (perhaps because the previous one errored) you need to understand the status of the previous request and that it has not been processed before doing this. Please refer to the section on error handling [Error handling](https://modulr.readme.io/docs/error-handling)  for more information.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If the same request content is received with a new nonce, it will be treated as a separate request and may be executed again. Therefore if you wish to re-send a POST request (perhaps because the previous one errored) you need to understand the status of the previous request and that it has not been processed before doing this. Please refer to the section on error handling Error handling  for more information.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/error-handling",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "## Common Issues",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Common Issues",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "If you are having authorisation issues, please be sure to check for common issues mentioned below.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you are having authorisation issues, please be sure to check for common issues mentioned below.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "* Mismatch between date used to calculate the signature and actual date sent on the request",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Mismatch between date used to calculate the signature and actual date sent on the request",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        76,
+        77
+      ],
+      "raw": "**Date format:**\\\nCommonly we see that this date isn’t in the correct format or it’s in UTC instead of GMT",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Date format:Commonly we see that this date isn’t in the correct format or it’s in UTC instead of GMT",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "* Example incorrect date format \"Mon, 5 February 2019 08:54:13 GMT\" instead of \"Mon, 05 Feb 2019 08:54:13 GMT\"",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Example incorrect date format \"Mon, 5 February 2019 08:54:13 GMT\" instead of \"Mon, 05 Feb 2019 08:54:13 GMT\"",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "Using locale-specific month names, e.g. Sept rather than Sep for September. This is common if using Java 17 or above and passing the Locale as British - switching to the English locale will overcome this.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Using locale-specific month names, e.g. Sept rather than Sep for September. This is common if using Java 17 or above and passing the Locale as British - switching to the English locale will overcome this.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        83,
+        88
+      ],
+      "raw": "**Common misspellings:**\\\n-Items in the header\\\n-\"algortihm\"\\\n-\"Authorization\" header is spelt as \"Authorisation\"\\\n-Check headers are correctly named e.g. 'nonce' instead of 'x-mod-nonce'\\\n-Check for empty spaces",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Common misspellings:-Items in the header-\"algortihm\"-\"Authorization\" header is spelt as \"Authorisation\"-Check headers are correctly named e.g. 'nonce' instead of 'x-mod-nonce'-Check for empty spaces",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        90,
+        93
+      ],
+      "raw": "* The signature string should be made of two lines. i.e it needs to have \\n after \"date: ....\" and not as one line\n* Trying to base64 encode the hex representation of the signature instead of the raw bytes. Symptom: the generated signature is longer than expected\n* Base URL that the call is being pointed to is not correct. Refer to [Gaining use of the API](https://modulr.readme.io/docs/gaining-use-of-the-api)\n* URL encode character uses lower cases instead of upper case. Symptom: the signature may end in %3d instead of %3D",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The signature string should be made of two lines. i.e it needs to have \\n after \"date: ....\" and not as one lineTrying to base64 encode the hex representation of the signature instead of the raw bytes. Symptom: the generated signature is longer than expectedBase URL that the call is being pointed to is not correct. Refer to Gaining use of the APIURL encode character uses lower cases instead of upper case. Symptom: the signature may end in %3d instead of %3D",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/gaining-use-of-the-api",
+          "line": 92
+        }
+      ]
+    }
+  ]
+}

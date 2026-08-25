@@ -1,0 +1,701 @@
+{
+  "slug": "docs/channel-manager-setting-up-a-webhook",
+  "source": "https://modulr.readme.io/docs/channel-manager-setting-up-a-webhook.md",
+  "url": "https://modulr.readme.io/docs/channel-manager-setting-up-a-webhook",
+  "title": "Channel Manager - Setting Up A Webhook ",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-11-05T10:44:30.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 17,
+    "br": 8,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Channel Manager - Setting Up A Webhook ",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Channel Manager - Setting Up A Webhook",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Listen and Receive",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Listen and Receive",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Firstly, you need to set up the ability for your system to do something and make sure you have a URL ready to listen for any alerts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Firstly, you need to set up the ability for your system to do something and make sure you have a URL ready to listen for any alerts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Once this has been set up you will need to subscribe to the desired webhook using [Subscribe to a webhook](https://modulr.readme.io/reference/channelmanagercreatewebhooknotification#/) endpoint.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once this has been set up you will need to subscribe to the desired webhook using Subscribe to a webhook endpoint.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagercreatewebhooknotification#/",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        20
+      ],
+      "raw": "You will need to supply the following:\r\n•\ttype : webhook type\r\n•\tdestination : URL destination\r\n•\tretry : Flag indicating whether failed webhooks should be retried\r\n•\tsecret : Mandatory for webhook. Secret that is used in HMAC calculation, for webhooks\r\n•\thmacAlgorithm : Signing algorithm that is used in Webhook HMAC calculation",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You will need to supply the following:\r\n•\ttype : webhook type\r\n•\tdestination : URL destination\r\n•\tretry : Flag indicating whether failed webhooks should be retried\r\n•\tsecret : Mandatory for webhook. Secret that is used in HMAC calculation, for webhooks\r\n•\thmacAlgorithm : Signing algorithm that is used in Webhook HMAC calculation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "You should now be all set with the Incoming Webhook configured and waiting for Modulr to message it when receiving the desired webhook.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You should now be all set with the Incoming Webhook configured and waiting for Modulr to message it when receiving the desired webhook.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "## Responding to Modulr Webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Responding to Modulr Webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "When built into your system to acknowledge receipt of a webhook, your endpoint should return a 2XX HTTP status code. Any other information you return in the request headers or request body will be ignored.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When built into your system to acknowledge receipt of a webhook, your endpoint should return a 2XX HTTP status code. Any other information you return in the request headers or request body will be ignored.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "If we do not receive a 2XX response to our POST request, we will retry the request with exponential back off, to a maximum of 5 retries.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If we do not receive a 2XX response to our POST request, we will retry the request with exponential back off, to a maximum of 5 retries.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 32
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        34,
+        40
+      ],
+      "raw": "| Retry | Time after first failure |\n| :---- | :----------------------- |\n| 1st   | 1 Minute                 |\n| 2nd   | 5 Minutes                |\n| 3rd   | 25 minutes               |\n| 4th   | 2 hours 5 minutes        |\n| 5th   | 10 hours 25 minutes      |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Retry",
+          "Time after first failure"
+        ],
+        "rows": [
+          [
+            "1st",
+            "1 Minute"
+          ],
+          [
+            "2nd",
+            "5 Minutes"
+          ],
+          [
+            "3rd",
+            "25 minutes"
+          ],
+          [
+            "4th",
+            "2 hours 5 minutes"
+          ],
+          [
+            "5th",
+            "10 hours 25 minutes"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "After 5 tries we will not process the event further.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After 5 tries we will not process the event further.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "If you wanted to get a list of failures you can call [Webhook Failures](https://modulr.readme.io/reference/channelmanagergetwebhooknotifications_1#/) endpoint which will return all the failures for a specific notification.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you wanted to get a list of failures you can call Webhook Failures endpoint which will return all the failures for a specific notification.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagergetwebhooknotifications_1#/",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 46
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "## Webhook Duplicate Checks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Webhook Duplicate Checks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "As mentioned above we have the ability to retry webhooks up to a maximum of 5 times automatically. This highlights the importance of ensuring you are handling webhooks correctly and checking that each webhook is unique to your system to prevent any undesired behaviours like processing a webhook twice for the same event.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "As mentioned above we have the ability to retry webhooks up to a maximum of 5 times automatically. This highlights the importance of ensuring you are handling webhooks correctly and checking that each webhook is unique to your system to prevent any undesired behaviours like processing a webhook twice for the same event.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "For example we recommend in regards to the PAYIN or PAYOUT webhook to utilise PaymentId as your main duplicate check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For example we recommend in regards to the PAYIN or PAYOUT webhook to utilise PaymentId as your main duplicate check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "Depending on the Payment scheme the PaymentId could following different patterns but will always represent a unique identifier.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Depending on the Payment scheme the PaymentId could following different patterns but will always represent a unique identifier.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "## Webhook Parsing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Webhook Parsing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "We recommend all of our clients when implementing handling of webhooks to utilise a lenient json parser.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We recommend all of our clients when implementing handling of webhooks to utilise a lenient json parser.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "This is to ensure as we add new functionality and richer information to our webhooks that your system does not start to fail the processing of the webhooks.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is to ensure as we add new functionality and richer information to our webhooks that your system does not start to fail the processing of the webhooks.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "i": 25,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "## No longer need your notification?",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "No longer need your notification?",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "So, you no longer want to get notified? The easiest way to do this is to inactivate the webhook channel alert.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "So, you no longer want to get notified? The easiest way to do this is to inactivate the webhook channel alert.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "You will need to know the ID of the webhook that was given to you in the response when creating the notification and use [Update a Webhook](https://modulr.readme.io/reference/channelmanagerupdatewebhooknotification#/) endpoint to change the status from ACTIVE to INACTIVE.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You will need to know the ID of the webhook that was given to you in the response when creating the notification and use Update a Webhook endpoint to change the status from ACTIVE to INACTIVE.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagerupdatewebhooknotification#/",
+          "line": 70
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "If you change your mind you can always re-activate the webhook using the same endpoint. You'll need to change the status back to ACTIVE and make sure the 'destinations' parameter is set to the URL you have set up to listen out for an alert.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you change your mind you can always re-activate the webhook using the same endpoint. You'll need to change the status back to ACTIVE and make sure the 'destinations' parameter is set to the URL you have set up to listen out for an alert.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 74
+        }
+      ]
+    },
+    {
+      "i": 30,
+      "lines": [
+        76,
+        76
+      ],
+      "raw": "## Retrieving Configurations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Retrieving Configurations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        78,
+        78
+      ],
+      "raw": "If you wanted to see all the webhook configurations you can use the [Retrieve All Notifications](https://modulr.readme.io/reference/channelmanagergetwebhooknotifications#/) endpoint to get this information, equally if theres a specific configuration you want to check then use [Retrieve Specific Notification](https://modulr.readme.io/reference/channelmanagergetwebhooknotification#/) endpoint.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you wanted to see all the webhook configurations you can use the Retrieve All Notifications endpoint to get this information, equally if theres a specific configuration you want to check then use Retrieve Specific Notification endpoint.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagergetwebhooknotifications#/",
+          "line": 78
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagergetwebhooknotification#/",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "i": 32,
+      "lines": [
+        80,
+        80
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 80
+        }
+      ]
+    },
+    {
+      "i": 33,
+      "lines": [
+        82,
+        82
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 82
+        }
+      ]
+    }
+  ]
+}

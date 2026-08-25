@@ -1,0 +1,386 @@
+{
+  "slug": "docs/bacs-day-2-early-funding",
+  "source": "https://modulr.readme.io/docs/bacs-day-2-early-funding.md",
+  "url": "https://modulr.readme.io/docs/bacs-day-2-early-funding",
+  "title": "Bacs Day 2 - Early funding",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:35:58.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 11,
+    "code": 2,
+    "Callout": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Bacs Day 2 - Early funding",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Bacs Day 2 - Early funding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "According to the BACS Scheme rules, incoming direct credits can be applied to the Customer’s accounts on Day 3 of BACS processing cycle. It is Modulr’s intention to provide service which is more efficient by notifying customers about upcoming credits before payment messages are sent. This will allow them to offer their clients the ability to receive credits one day earlier.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "According to the BACS Scheme rules, incoming direct credits can be applied to the Customer’s accounts on Day 3 of BACS processing cycle. It is Modulr’s intention to provide service which is more efficient by notifying customers about upcoming credits before payment messages are sent. This will allow them to offer their clients the ability to receive credits one day earlier.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        12
+      ],
+      "raw": "**What is it?**\\\nBacs is a 3 working day service. A Bacs payment is initiated on Day 1 and the recipient is credited on Day 3. Modulr’s Bacs Inbound Early service allows select customers to be credited at 6.30 pm on Day 2.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "What is it?Bacs is a 3 working day service. A Bacs payment is initiated on Day 1 and the recipient is credited on Day 3. Modulr’s Bacs Inbound Early service allows select customers to be credited at 6.30 pm on Day 2.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        14,
+        15
+      ],
+      "raw": "**Why should our customers care about BACS Day 2?**\\\nThis service has the benefit of allowing our customers access to incoming payments earlier than they would otherwise, improving cash flow and opening new product opportunities e.g. Monzo offers its customer the choice to get their salary a day early.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Why should our customers care about BACS Day 2?This service has the benefit of allowing our customers access to incoming payments earlier than they would otherwise, improving cash flow and opening new product opportunities e.g. Monzo offers its customer the choice to get their salary a day early.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        18
+      ],
+      "raw": "**How do Customers sign up to Bacs Early?**\\\nAfter making a request to the sales manager, customers will need an account that is enabled for Bacs Early. There is a ‘Bacs Day 2’ checkbox that can be enabled at a Partner, customer, or account level. Enabling a Partner automatically enables all existing associated customers and accounts, and new ones that are created. Similarly, enabling a Customer for Bacs early automatically enables all existing and future accounts. It is possible for a Partner to be enabled but for specific customers/accounts under that partner to be disabled.  All Bacs Inbound payments received to a Bacs Early enabled account will be credited on Day 2. If a Partner wants some Bacs payment on Day 2 and others on Day 3, they will need two accounts: one account enabled for Bacs Early and the other not enabled.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "How do Customers sign up to Bacs Early?After making a request to the sales manager, customers will need an account that is enabled for Bacs Early. There is a ‘Bacs Day 2’ checkbox that can be enabled at a Partner, customer, or account level. Enabling a Partner automatically enables all existing associated customers and accounts, and new ones that are created. Similarly, enabling a Customer for Bacs early automatically enables all existing and future accounts. It is possible for a Partner to be enabled but for specific customers/accounts under that partner to be disabled.  All Bacs Inbound payments received to a Bacs Early enabled account will be credited on Day 2. If a Partner wants some Bacs payment on Day 2 and others on Day 3, they will need two accounts: one account enabled for Bacs Early and the other not enabled.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        20,
+        21
+      ],
+      "raw": "**Proposed Approach**\\\nTo allow our clients to make money available to their customers one day earlier, Modulr will be informing them about the incoming direct credits that are due to be applied on the next processing day. Customers will be receiving webhooks with the relevant information extracted from the incoming direct credit transactions file. Only credit in transactions that are not reversed nor recalled on the same day and have been sent to the accounts that are open and not blocked will be included in the notifications.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Proposed ApproachTo allow our clients to make money available to their customers one day earlier, Modulr will be informing them about the incoming direct credits that are due to be applied on the next processing day. Customers will be receiving webhooks with the relevant information extracted from the incoming direct credit transactions file. Only credit in transactions that are not reversed nor recalled on the same day and have been sent to the accounts that are open and not blocked will be included in the notifications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "The notification that will be sent on Day 2 of BACS processing cycle will be followed by applying for the credit as per the normal process on Day 3 of BACS processing cycle.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The notification that will be sent on Day 2 of BACS processing cycle will be followed by applying for the credit as per the normal process on Day 3 of BACS processing cycle.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "It will be the customer's responsibility to match the received credit notification with the actual payment record that will be applied on day 3 of BACS processing cycle. Modulr will provide unique references for both the payment and the notification, however, all payments will be applied to the relevant accounts on day 3.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "It will be the customer's responsibility to match the received credit notification with the actual payment record that will be applied on day 3 of BACS processing cycle. Modulr will provide unique references for both the payment and the notification, however, all payments will be applied to the relevant accounts on day 3.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        28
+      ],
+      "raw": "**Timing for sending webhooks**\\\nAlthough BACS credit transactions are received early in the morning of Day 2 of BACS processing cycle, Participants have until 3:00 pm of that day to request a manual recall of any of the sent credits. To accommodate for this process regulated by the Scheme, incoming credit notifications will be sent to customers after 3:30 pm on Day 2 of the BACS processing cycle.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Timing for sending webhooksAlthough BACS credit transactions are received early in the morning of Day 2 of BACS processing cycle, Participants have until 3:00 pm of that day to request a manual recall of any of the sent credits. To accommodate for this process regulated by the Scheme, incoming credit notifications will be sent to customers after 3:30 pm on Day 2 of the BACS processing cycle.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "**Webbook notifications**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Webbook notifications",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "Upcoming credit sent for Day 2",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Upcoming credit sent for Day 2",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        34,
+        69
+      ],
+      "raw": "```json Credit Notification Webhook\n{\n  \"Type\": \"PI_BACS\",\n  \"Payee\": {\n    \"Name\": \"MODULR HOLDINGS LIMITED\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"040073\",\n      \"AccountNumber\": \"00108812\"\n    }\n  },\n  \"Payer\": {\n    \"Name\": \"MODULR HOLDINGS GB\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"608242\",\n      \"AccountNumber\": \"40079912\"\n    }\n  },\n  \"Amount\": \"0.03\",\n  \"EventId\": \"deb16f45-adaa-4c2c-8129-b3164947cb6b\",\n  \"Currency\": \"GBP\",\n  \"DateTime\": \"2022-08-15T00:00:00+0000\",\n  \"AccountId\": \"A214C9GB\",\n  \"EventName\": \"UPCOMINGCREDIT\",\n  \"EventTime\": \"2022-08-12T15:46:06+0000\",\n  \"PayerName\": \"MODULR HOLDINGS GB\",\n  \"SchemeInfo\": {\n    \"Id\": \"9db688be9c02715ddeab5ef61304a1863d7d551932dd7019ad42ebdb4c1ab451-052B4038\",\n    \"Name\": \"BACS\"\n  },\n  \"PaymentReference\": \"Payment from MODULR HOLDINGS GB: BACS TEST\",\n  \"AccountExternalRef\": \"STS LP HP\",\n  \"OriginatedOverseas\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Credit Notification Webhook",
+        "code": "{\n  \"Type\": \"PI_BACS\",\n  \"Payee\": {\n    \"Name\": \"MODULR HOLDINGS LIMITED\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"040073\",\n      \"AccountNumber\": \"00108812\"\n    }\n  },\n  \"Payer\": {\n    \"Name\": \"MODULR HOLDINGS GB\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"608242\",\n      \"AccountNumber\": \"40079912\"\n    }\n  },\n  \"Amount\": \"0.03\",\n  \"EventId\": \"deb16f45-adaa-4c2c-8129-b3164947cb6b\",\n  \"Currency\": \"GBP\",\n  \"DateTime\": \"2022-08-15T00:00:00+0000\",\n  \"AccountId\": \"A214C9GB\",\n  \"EventName\": \"UPCOMINGCREDIT\",\n  \"EventTime\": \"2022-08-12T15:46:06+0000\",\n  \"PayerName\": \"MODULR HOLDINGS GB\",\n  \"SchemeInfo\": {\n    \"Id\": \"9db688be9c02715ddeab5ef61304a1863d7d551932dd7019ad42ebdb4c1ab451-052B4038\",\n    \"Name\": \"BACS\"\n  },\n  \"PaymentReference\": \"Payment from MODULR HOLDINGS GB: BACS TEST\",\n  \"AccountExternalRef\": \"STS LP HP\",\n  \"OriginatedOverseas\": false\n}"
+      },
+      "text": "Credit Notification Webhook",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "PayIn Webhook sent for Day 2 credits",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PayIn Webhook sent for Day 2 credits",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        73,
+        111
+      ],
+      "raw": "```json\n{\n  \"Type\": \"PI_BACS\",\n  \"Payee\": {\n    \"Name\": \"MODULR HOLDINGS\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"048873\",\n      \"AccountNumber\": \"00188323\"\n    }\n  },\n  \"Payer\": {\n    \"Name\": \"MODULR HOLDINGS GB\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"609242\",\n      \"AccountNumber\": \"40079812\"\n    }\n  },\n  \"Amount\": \"0.03\",\n  \"EventId\": \"b4dda89a-dac9-4d7b-a405-2ce619566a68\",\n  \"Currency\": \"GBP\",\n  \"DateTime\": \"2022-08-12T17:43:06+0000\",\n  \"AccountId\": \"A214C42X\",\n  \"EventName\": \"PAYIN\",\n  \"EventTime\": \"2022-08-12T17:43:06+0000\",\n  \"PayerName\": \"MODULR HOLDINGS GB\",\n  \"PaymentId\": \"P210BGZK5T\",\n  \"SchemeInfo\": {\n    \"Id\": \"225936fc40b7ebd6d5aa6603244ad677e180b26e2d7a59780b3ee766dc8be642-052B4077\",\n    \"Name\": \"BACS\"\n  },\n  \"TransactionId\": \"T210GBX95H\",\n  \"PaymentReference\": \"Payment from MODULR HOLDINGS GB: BACS TEST\",\n  \"AccountExternalRef\": \"STS test Bacs\",\n  \"OriginatedOverseas\": false,\n  \"PaymentAppliedTime\": \"2022-08-12T17:43:06.168+0000\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"Type\": \"PI_BACS\",\n  \"Payee\": {\n    \"Name\": \"MODULR HOLDINGS\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"048873\",\n      \"AccountNumber\": \"00188323\"\n    }\n  },\n  \"Payer\": {\n    \"Name\": \"MODULR HOLDINGS GB\",\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"609242\",\n      \"AccountNumber\": \"40079812\"\n    }\n  },\n  \"Amount\": \"0.03\",\n  \"EventId\": \"b4dda89a-dac9-4d7b-a405-2ce619566a68\",\n  \"Currency\": \"GBP\",\n  \"DateTime\": \"2022-08-12T17:43:06+0000\",\n  \"AccountId\": \"A214C42X\",\n  \"EventName\": \"PAYIN\",\n  \"EventTime\": \"2022-08-12T17:43:06+0000\",\n  \"PayerName\": \"MODULR HOLDINGS GB\",\n  \"PaymentId\": \"P210BGZK5T\",\n  \"SchemeInfo\": {\n    \"Id\": \"225936fc40b7ebd6d5aa6603244ad677e180b26e2d7a59780b3ee766dc8be642-052B4077\",\n    \"Name\": \"BACS\"\n  },\n  \"TransactionId\": \"T210GBX95H\",\n  \"PaymentReference\": \"Payment from MODULR HOLDINGS GB: BACS TEST\",\n  \"AccountExternalRef\": \"STS test Bacs\",\n  \"OriginatedOverseas\": false,\n  \"PaymentAppliedTime\": \"2022-08-12T17:43:06.168+0000\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        113,
+        113
+      ],
+      "raw": "## FAQs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "FAQs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        115,
+        117
+      ],
+      "raw": "> 📘 What time will funds be credits?\n>\n> Between 18.30-20.00 on Day 2.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "What time will funds be credits?Between 18.30-20.00 on Day 2.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        119,
+        121
+      ],
+      "raw": "> 📘 Can I still get Bacs payments on Day 3?\n>\n> Yes, customers can receive funds on Day 3. Customers can easily create multiple accounts, which can be set up to credit Bacs payments on Day 2 or Day 3 as desired.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Can I still get Bacs payments on Day 3?Yes, customers can receive funds on Day 3. Customers can easily create multiple accounts, which can be set up to credit Bacs payments on Day 2 or Day 3 as desired.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        123,
+        125
+      ],
+      "raw": "> 📘 Could Bacs Early Credits be reversed?\n>\n> The scheme rule says the Sending PSP has up to 15.30 on Day 2 to reverse BACS payments. Modulr will exclude these payments when crediting your account on Day 2.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Could Bacs Early Credits be reversed?The scheme rule says the Sending PSP has up to 15.30 on Day 2 to reverse BACS payments. Modulr will exclude these payments when crediting your account on Day 2.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        127,
+        129
+      ],
+      "raw": "> 📘 How much do you charge for Bacs Early Credits?\n>\n> Modulr is a Direct Participant of Bacs and requires no sponsor bank. This allows us to offer highly competitive fees. Please contact us for more information.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "How much do you charge for Bacs Early Credits?Modulr is a Direct Participant of Bacs and requires no sponsor bank. This allows us to offer highly competitive fees. Please contact us for more information.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

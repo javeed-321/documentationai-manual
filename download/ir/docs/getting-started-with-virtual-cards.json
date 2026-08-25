@@ -1,0 +1,451 @@
+{
+  "slug": "docs/getting-started-with-virtual-cards",
+  "source": "https://modulr.readme.io/docs/getting-started-with-virtual-cards.md",
+  "url": "https://modulr.readme.io/docs/getting-started-with-virtual-cards",
+  "title": "Getting started with Virtual Cards",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-11-05T09:26:26.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 10,
+    "Callout": 5,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Getting started with Virtual Cards",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Getting started with Virtual Cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Here is a step by step guide on what is required to create and manage your very own virtual cards",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Here is a step by step guide on what is required to create and manage your very own virtual cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Step 1 - Get an API key (with the correct permissions)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 1 - Get an API key (with the correct permissions)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "If you have already requested your Sandbox access and have been sent an API key - you are almost there! Please ask your account manager to make sure your key has been updated to include Cards API access.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you have already requested your Sandbox access and have been sent an API key - you are almost there! Please ask your account manager to make sure your key has been updated to include Cards API access.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## Step 2 - Create an Account",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 2 - Create an Account",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Wow, you are probably already sorted here as your Sandbox access comes with an account already running. Just in case you need a new one, you can have a read here: [Gaining Sandbox Access](https://modulr.readme.io/docs/gaining-use-of-the-api)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Wow, you are probably already sorted here as your Sandbox access comes with an account already running. Just in case you need a new one, you can have a read here: Gaining Sandbox Access",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/gaining-use-of-the-api",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## Step 3 - Create your first Card",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 3 - Create your first Card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "With the access and account all sorted, you can now create your first card using [Create a new card](https://modulr.readme.io/reference/createcard) endpoint",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "With the access and account all sorted, you can now create your first card using Create a new card endpoint",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createcard",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "Check your \"Welcome to Modulr Sandbox\" e-mail which will contain your Account ID",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Check your \"Welcome to Modulr Sandbox\" e-mail which will contain your Account ID",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        26
+      ],
+      "raw": "For GBP accounts, use O120001M as card product code (Visa Business) or O120001P (Visa Consumer)\nFor EUR accounts, use O120001N as card product code (Visa Business) or O120001Q (Visa Consumer)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For GBP accounts, use O120001M as card product code (Visa Business) or O120001P (Visa Consumer)\nFor EUR accounts, use O120001N as card product code (Visa Business) or O120001Q (Visa Consumer)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        30
+      ],
+      "raw": "> 📘 Product Codes\n>\n> Please note that Card products in our production environment will have a different product code on per card type and currency basis.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Product CodesPlease note that Card products in our production environment will have a different product code on per card type and currency basis.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "Example create Virtual Business card request for a GBP Account with ID: A1200000",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Example create Virtual Business card request for a GBP Account with ID: A1200000",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        34,
+        40
+      ],
+      "raw": "```curl\ncurl --request POST \\\n  --url https://api-sandbox.modulrfinance.com/api-sandbox/accounts/A1200000/cards \\\n  --header 'accept: application/json;charset=UTF-8' \\\n  --header 'content-type: application/json;charset=UTF-8' \\\n  --data '{\"expiry\":\"2019-12\",\"externalRef\":\"EXT_REF\",\"holder\":{\"firstName\":\"Joe\",\"lastName\":\"Bloggs\",\"title\":\"Mr\"},\"limit\":1000,\"productCode\":\"O120001M\"}'\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "curl",
+        "title": null,
+        "code": "curl --request POST \\\n  --url https://api-sandbox.modulrfinance.com/api-sandbox/accounts/A1200000/cards \\\n  --header 'accept: application/json;charset=UTF-8' \\\n  --header 'content-type: application/json;charset=UTF-8' \\\n  --data '{\"expiry\":\"2019-12\",\"externalRef\":\"EXT_REF\",\"holder\":{\"firstName\":\"Joe\",\"lastName\":\"Bloggs\",\"title\":\"Mr\"},\"limit\":1000,\"productCode\":\"O120001M\"}'"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [],
+      "notes": [
+        "`curl` is not a highlighter language — use bash"
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        42,
+        44
+      ],
+      "raw": "> 📘 Consumer Cards\n>\n> Consumer Virtual cards have additional mandatory fields (Address details and phone number in the international format, e.g. +447123456789)",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Consumer CardsConsumer Virtual cards have additional mandatory fields (Address details and phone number in the international format, e.g. +447123456789)",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        46,
+        50
+      ],
+      "raw": "> 🚧 Card Currency\n>\n> When a card is created under a GBP account, you can only create GBP cards. If you wish to create EUR card, the process is the same as above, the only difference is that a card should be created under the EUR Account ID and that the Product Code value should be that of a EUR card.\n>\n> More information on Euro accounts here: [SEPA credit transfer (EUR - SEPA countries)](https://dash.readme.com/project/modulr/v2.2/docs/european-payments)",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Card CurrencyWhen a card is created under a GBP account, you can only create GBP cards. If you wish to create EUR card, the process is the same as above, the only difference is that a card should be created under the EUR Account ID and that the Product Code value should be that of a EUR card.More information on Euro accounts here: SEPA credit transfer (EUR - SEPA countries)",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        52,
+        56
+      ],
+      "raw": "> ❗️ PAN (16 digits) and CVV2/CVC2\n>\n> Once the card has been successfully created, if you are PCI compliant (and your record at Modulr has been marked as such) the response will contain full PAN and CVV2/CVC2 of the created card.\n>\n> If you are not PCI compliant then you will receive only the masked PAN and no other secure information, you would need to follow the [Retrieve secure card details](https://modulr.readme.io/docs/retrieve-secure-card-details) to obtain the secure card details separately.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "❗️"
+      },
+      "text": "PAN (16 digits) and CVV2/CVC2Once the card has been successfully created, if you are PCI compliant (and your record at Modulr has been marked as such) the response will contain full PAN and CVV2/CVC2 of the created card.If you are not PCI compliant then you will receive only the masked PAN and no other secure information, you would need to follow the Retrieve secure card details to obtain the secure card details separately.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "danger"
+        }
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/retrieve-secure-card-details",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "i": 17,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "## Card Frequency",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Card Frequency",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "There is an option on [Create Virtual Card](https://modulr.readme.io/reference/createcard)to select the frequency of use for the card, this can be either SINGLE\\_USE or MULTI\\_USE, this is an optional field of entry for creating a virtual card.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There is an option on Create Virtual Cardto select the frequency of use for the card, this can be either SINGLE_USE or MULTI_USE, this is an optional field of entry for creating a virtual card.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createcard",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "When SINGLE\\_USE is selected then upon the first authorisation (not including Account Status Inquiries) the card will be cancelled and will not be able to be used again for another transaction, a new card would be required.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When SINGLE_USE is selected then upon the first authorisation (not including Account Status Inquiries) the card will be cancelled and will not be able to be used again for another transaction, a new card would be required.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "When MULTI\\_USE is selected the card will be open for use as much as needed until either the EXPIRY DATE or the CANCELLATION DATE have been reached.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When MULTI_USE is selected the card will be open for use as much as needed until either the EXPIRY DATE or the CANCELLATION DATE have been reached.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        66,
+        68
+      ],
+      "raw": "> 📘 Default Setting\n>\n> The default for all cards is MULTI\\_USE and this will be used where no selection has been made.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Default SettingThe default for all cards is MULTI_USE and this will be used where no selection has been made.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "slug": "docs/versioning",
+  "source": "https://modulr.readme.io/docs/versioning.md",
+  "url": "https://modulr.readme.io/docs/versioning",
+  "title": "Versioning",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:35:08.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Versioning",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Versioning",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "You should insert a header in your api calls with the version of the Modulr api. This allows us to manage our clients' compatibility if we introduce any breaking changes in the api (which is rare).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You should insert a header in your api calls with the version of the Modulr api. This allows us to manage our clients' compatibility if we introduce any breaking changes in the api (which is rare).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "To do this insert a header `x-mod-version` with a single integer version number as the value",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To do this insert a header x-mod-version with a single integer version number as the value",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Example: `x-mod-version: 1`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Example: x-mod-version: 1",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Only the major version number should be sent (so send 1 rather than 1.0.1)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Only the major version number should be sent (so send 1 rather than 1.0.1)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

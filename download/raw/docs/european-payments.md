@@ -1,0 +1,84 @@
+---
+updatedAt: 2026-06-03T15:32:02.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# European Payments
+
+Modulr participates in both the SEPA Credit Transfer and SEPA Instant Credit Transfer payment schemes, enabling clients to send and receive euro payments across the SEPA region.
+
+The maximum outbound payment value is **€10,000,000** per transaction. There is no limit applied to inbound payments.
+
+***
+
+## Inbound Payments
+
+Inbound SEPA payments are received via whichever scheme was used by the originating PSP.
+
+***
+
+## Outbound Payments
+
+Outbound SEPA payments will be submitted via **SEPA Instant Credit Transfer** if the beneficiary PSP participates in the scheme. If they do not, or if you have specified `SEPA_CREDIT` in the `permittedScheme` parameter of the payment request, then it will be submitted via **SEPA Credit Transfer**
+
+### SEPA Credit Transfer
+
+The SEPA Credit Transfer scheme operates every Monday to Friday except New Years Day, Good Friday, Easter Monday, Labour Day (May 1st), Christmas Day and Boxing Day.
+
+When the scheme is in operation, Modulr submits payments every 2 hours between **06:00 and 14:00 UK time** with payments typically settling within 2 to 3 hours. Payments created when the scheme is not in operation will be held until the scheme is next in operation before being submitted. Upon receipt of settlement confirmation, the status of the payment will update to `PROCESSED`.
+
+> **Note:** SEPA Credit Transfer rejections are **asynchronous**. Payments submitted via SEPA Credit Transfer will always settle before the beneficiary PSP can reject or return them. Where a beneficiary PSP wishes to reject a payment, a return is initiated **after** settlement — a `PAYIN` webhook will be triggered with a [return reason](https://modulr.readme.io/docs/payment-return-reasons#/).
+>
+> The status of the original payment is **not** updated, as the return is processed as a separate transaction.
+
+### SEPA Instant Credit Transfer
+
+The SEPA Instant Credit Transfer scheme operates 24/7/365.
+
+Modulr submits payments to the scheme 24/7/365 with payments settling within 5 seconds. Upon receipt of settlement confirmation, the status of the payment will update to `PROCESSED`.
+
+Due to the nature of the scheme, participants may experience transient planned or unplanned unavailability, during which payments can be rejected.
+
+> **Note:** SEPA Instant Credit Transfer rejections are **synchronous** — a payment can be rejected by any entity in the chain between Modulr and the beneficiary PSP before settlement occurs. Where a payment is rejected, Modulr will attempt automatic recovery where applicable. See [Rejected Outbound Payments](#rejected-outbound-payments) for full details.
+
+### Rejected SEPA Instant Credit Transfers
+
+When an outbound SEPA Instant Credit Transfer payment is rejected, Modulr will attempt to automatically recover the payment depending on the reason for the rejection as outlined below:
+
+* **Temporary failures**
+  * Modulr will automatically resubmit the payment as a SEPA Instant Credit Transfer up to three additional times 15m, 30m, and 1hr after the original send.
+* **Routing failures**
+  * Modulr will automatically resubmit the payment as a SEPA Credit Transfer.
+* **Rejected by the beneficiary PSP**
+  * Modulr will automatically resubmit the payment as a SEPA Credit Transfer if we know it will be accepted.
+  * We will also do this for temporary failures if after resubmitting three times the payment is still rejected but only if we know a SEPA Credit Transfer will be accepted.
+  * We will only do this if you have opted in to this behaviour by written request to your Customer Success Manager.
+
+Whilst automatic recovery is in flight, the status of a payment will remain as `PROCESSING`
+
+If the payment is accepted after automatic recover, the status of the payment will update to `PROCESSED`
+
+If a payment is still rejected following all applicable retries, or where none of the above conditions apply, the payment will reach a final status of `ER_EXTSYS`.
+
+Further detail on the rejection reason is available in the `Message` element by calling [GET /payment](https://modulr.readme.io/reference/getpayments#/):
+
+| `Rejection Message`                                                                                                                                                                                                          | Possible further action                                                                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Issue whilst sending to the beneficiary PSP. Resubmit new request later or specifically send as SEPA Credit Transfer in new request via API or Portal                                                                        | A clearing error prevented the payment from completing; this may be transient. Either resubmit a new SEPA Instant Credit Transfer or force a SEPA Credit Transfer using the `permittedScheme` parameter.                                                        |
+| Rejected by beneficiary PSP - Account blocked                                                                                                                                                                                | Payment cannot be made to this account.                                                                                                                                                                                                                         |
+| Rejected by beneficiary PSP - Account closed                                                                                                                                                                                 | Payment cannot be made to this account.                                                                                                                                                                                                                         |
+| Rejected by beneficiary PSP - Amount exceeds imposed limits                                                                                                                                                                  | Payment cannot be made due to a limit applied in clearing or by the beneficiary PSP.                                                                                                                                                                            |
+| Rejected by beneficiary PSP - At request of beneficiary                                                                                                                                                                      | Payment cannot be made at the request of the payer; seek clarification from your payer.                                                                                                                                                                         |
+| Rejected by beneficiary PSP - Beneficiary deceased                                                                                                                                                                           | Payment cannot be made to this account.                                                                                                                                                                                                                         |
+| Rejected by beneficiary PSP - Duplicate payment indicated                                                                                                                                                                    | Payment was flagged as a duplicate. If the payment is required, resubmit with a unique reference.                                                                                                                                                               |
+| Rejected by beneficiary PSP - Incorrect or invalid address information                                                                                                                                                       | Payment cannot be made due to a deficiency in the address information provided; correct and resubmit.                                                                                                                                                           |
+| Rejected by beneficiary PSP - Incorrect or invalid IBAN                                                                                                                                                                      | Payment cannot be made due to an invalid IBAN; correct and resubmit.                                                                                                                                                                                            |
+| Rejected by beneficiary PSP - Missing beneficiary name or address                                                                                                                                                            | Payment cannot be made due to missing address information; correct and resubmit.                                                                                                                                                                                |
+| Rejected by beneficiary PSP - Missing originator IBAN                                                                                                                                                                        | Payment cannot be made due to missing originator information; correct and resubmit.                                                                                                                                                                             |
+| Rejected by beneficiary PSP - Missing originator name or address                                                                                                                                                             | Payment cannot be made due to missing originator information; correct and resubmit.                                                                                                                                                                             |
+| Rejected by beneficiary PSP - Reason not specified; If desired, specifically send as SEPA Credit Transfer in new request via API or Portal or seek alternative beneficiary account to make payment                           | The beneficiary PSP did not provide a reason for rejection; this may be transient. Consider forcing a SEPA Credit Transfer using the `permittedScheme` parameter — though this may also result in a return — or request an alternative account from your payer. |
+| Rejected by beneficiary PSP - SEPA Instant not accepted against this account; If desired, specifically send as SEPA Credit Transfer in new request via API or Portal or seek alternative beneficiary account to make payment | The beneficiary account does not support SEPA Instant Credit Transfer. Force a SEPA Credit Transfer using the `permittedScheme` parameter, or request an alternative account from your payer.                                                                   |
+| Error during processing                                                                                                                                                                                                      | A general technical error occurred. Resubmit a new SEPA Instant Credit Transfer or force a SEPA Credit Transfer using the `permittedScheme` parameter. If the issue persists, raise with Modulr Support.                                                        |
+
+<br />

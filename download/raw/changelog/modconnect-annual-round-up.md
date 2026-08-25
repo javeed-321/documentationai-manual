@@ -1,0 +1,87 @@
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# ModConnect - Quarterly Round Up
+
+<Callout icon="🎄" theme="default">
+  ### Top picks this month
+
+  * Preparing for the festive period
+  * New this month: Mobile Approval Application
+</Callout>
+
+<Image align="center" src="https://files.readme.io/f732ca2-MC_monthlyProdUpdate_README_noDate_4.png" />
+
+# Preparing for Festive Times
+
+## End of Year Code Freeze
+
+Please note that between Noon on the 21st of December to 3rd of January there will be a Modulr wide code freeze, applying to all changes, with the exception to any emergency hot fixes needed in production as part of our incident management processes.
+
+If you have any concerns or would more information please reach out to your Customer Service representative or raise via Customer Support.
+
+## Physical Cards Production over the Holidays.
+
+Please see below for a few relevant dates regarding end of year physical cards production:
+
+* Tuesday 19th December is the final day cards can be created, processed and shipped before January 2024
+* Any new card creations received between Wednesday 20th December & Tuesday 2nd January will be despatched in the first week of January
+
+# New this month
+
+## Modulr Mobile Approvals App
+
+We’re excited to launch our mobile experience for managing approvals. The Modulr Mobile Approvals App is a companion to the Modulr Portal that streamlines the approvals process. You'll receive real-time push notifications when you have payments or payment batches ready to approve, and can approve them directly on your device. (iOS and Android phones and tablets).
+
+Key features:
+
+* Push notifications for instant approval attention
+* Biometric security
+* Approve single or batch payments
+* View your clients' accounts and balances
+
+Continue to use the Modulr Portal for making payments, managing users, viewing transactions and all other features.
+
+Find more information on the [readme page.](https://modulr.readme.io/docs/mobile-app)
+
+<Image align="center" src="https://files.readme.io/3b00803-image_42.png" />
+
+## Cards | Specifying a Cancellation Date on Cards
+
+You can now use the existing Create and Update card endpoints to specify a card cancellation date in advance, improving previous functionality which only allowed you to cancel a card on the day.
+
+Please see [API Integration overview](https://modulr.readme.io/docs/api-integration-overview) for more detail.
+
+## Modulr Sandbox | Changes to Notification Webhook IP Addresses
+
+To continue improving our services, we’re making changes to the public IP addresses used by our\
+Sandbox environment.
+
+If you grant access to Modulr’s Sandbox services into your network via a firewall (for example, to\
+receive notification webhooks), you must make updates to ensure that service remains\
+uninterrupted.
+
+Please add the following IP address to any firewall rulesets that permit Modulr’s Sandbox\
+environment to access to your systems:
+
+* Address: 99.81.153.184
+* Description: Modulr Sandbox
+
+No existing rules or addresses will be revoked at this time.
+
+Changes to our sandbox services to start using this IP address will take effect from March 12th. If you have any questions, please reach out to our Customer Support team.
+
+# Minor Enhancements & Bugs Resolved
+
+### Faster Payments | Blocking Payment Reference Profanities
+
+In line with new Pay.UK guidance, we will be blocking all Faster Payments that contain a profanity in the end to end reference (field 120). The payment will enter a failed state with the string saying “profanity included in reference”.
+
+As of the 1st January 2024, the following outbound payment types will be blocked if a profanity is included; BACS, Swift Outbound and Faster Payments.
+
+You can find more information about Outbound payments [here](https://modulr.readme.io/docs/outbound-payments).
+
+### CHAPS | Sending a CHAPS Payment To Accounts That Are Not FPS-enabled
+
+Outbound Faster Payments that are greater than £10,000, submitted to a payee sort code which is not Faster Payments enabled, will now be sent via CHAPS.
+
+The change will be effective as of the 1st January 2024.

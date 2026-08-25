@@ -1,0 +1,175 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Cancel an existing card
+
+Cancelling a card _**permanently**_ disables authorisation processing & _**destroys**_ the card from the card scheme perspective. This means that all _new_ authorisations will be immediately declined and this cannot be reversed. Outstanding authorisations are unaffected and settlement, chargebacks, refunds, etc will continue to function as normal.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Cards",
+      "description": "Cards API"
+    }
+  ],
+  "paths": {
+    "/cards/{cardId}/cancel": {
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cancel an existing card",
+        "description": "Cancelling a card _**permanently**_ disables authorisation processing & _**destroys**_ the card from the card scheme perspective. This means that all _new_ authorisations will be immediately declined and this cannot be reversed. Outstanding authorisations are unaffected and settlement, chargebacks, refunds, etc will continue to function as normal.",
+        "operationId": "cancelCard",
+        "parameters": [
+          {
+            "name": "cardId",
+            "in": "path",
+            "description": "The ID of the card which should be cancelled",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/card.CancelCardRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Card cancelled successfully"
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/card.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "card.CancelCardRequest": {
+        "type": "object",
+        "description": "Reason for cancellation",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "description": "The reason for cancelling the card. Can be one of DESTROYED, LOST, STOLEN",
+            "enum": [
+              "STOLEN",
+              "DESTROYED",
+              "LOST"
+            ]
+          }
+        }
+      },
+      "card.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

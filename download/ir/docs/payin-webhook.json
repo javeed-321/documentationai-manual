@@ -1,0 +1,837 @@
+{
+  "slug": "docs/payin-webhook",
+  "source": "https://modulr.readme.io/docs/payin-webhook.md",
+  "url": "https://modulr.readme.io/docs/payin-webhook",
+  "title": "Webhook - Inbound Payments",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-14T08:44:55.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 14,
+    "paragraph": 7,
+    "Table": 2,
+    "CodeTabs": 2,
+    "code": 7,
+    "br": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Webhook - Inbound Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Webhook - Inbound Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "### Inbound Payment",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Inbound Payment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "The `PAYIN` event is triggered when a Payment reaches your Modulr EMI account or a Refund is processed in a card that's associated with one of your accounts",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The PAYIN event is triggered when a Payment reaches your Modulr EMI account or a Refund is processed in a card that's associated with one of your accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        37
+      ],
+      "raw": "| Parameter                                           | Description                                                                                                                                                                                                                                          |\n| :-------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Type                                                | Type of Payment received                                                                                                                                                                                                                             |\n| Payee                                               | Details of the Payee including Name, Address if available and Sortcode and Account Number.                                                                                                                                                           |\n| Payer                                               | Details of the Payer including Name, Address if available and Sortcode and Account Number. There May also be Email, Phone Number and DOB in this block if the information is available.                                                              |\n| Amount                                              | Amount of the Payment                                                                                                                                                                                                                                |\n| EventId                                             | Unique id for the webhook event. This can change if webhook needs to be resent.                                                                                                                                                                      |\n| Currency                                            | Currency of the Payment Received.                                                                                                                                                                                                                    |\n| DateTime                                            | The Date and timestamp when the Payment was posted to Modulr - All Dates and times are UTC based.                                                                                                                                                    |\n| AccountId                                           | Modulr Unique Account reference for the account that received the payment                                                                                                                                                                            |\n| EventName                                           | Type of event: PAYIN - Funds received to an Account                                                                                                                                                                                                  |\n| EventTime                                           | Date and Timestamp for the Event - All Dates and times are UTC based.                                                                                                                                                                                |\n| PaymentAppliedTime                                  | The exact date and timestamp when the payment has been credited to the receiver's account                                                                                                                                                            |\n| PayerName                                           | Name of the Payer who sent the Payment                                                                                                                                                                                                               |\n| PaymentId                                           | Modulr Unique Payment Reference for the payment received.                                                                                                                                                                                            |\n| SchemeInfo                                          | Scheme information for the received payment in this example this is a FPID                                                                                                                                                                           |\n| ReturnReason                                        | Display the return reason for the returned transaction. See [Payment Return Reasons](https://modulr.readme.io/docs/payment-return-reasons)                                                                                                                                     |\n| TransactionId                                       | Modulr Unique Transaction Reference for the payment received. Transactions are only created when a payment is processed successfully in case of failed payment it is possible to receive a webhook without a TransactionId.                          |\n| OriginalSchemeId                                    | References the original FPID (Faster Payment ID)                                                                                                                                                                                                     |\n| PaymentReference                                    | Reference associated with the Payment                                                                                                                                                                                                                |\n| AccountExternalRef                                  | This is the Alias Name given on the Modulr Platform to the sending account                                                                                                                                                                           |\n| SourceExternalReference                             | This is the External Reference that is set on the payment request in the field: externalReference. This can be used to link payments back to your system using a unique identifier.                                                                  |\n| OriginatedOverseas                                  | This flag identifies if the received payment originated overseas.                                                                                                                                                                                    |\n| OriginatingPayment                                  | Details of the Institution the payment was received from.                                                                                                                                                                                            |\n| RemitterInfo **(\\*NEW - Go Live Date - 24th July)** | This is the new Parameter for PAYIN webhook for type PI\\_FAST. This tag is present when unstructured remittance (RmtInf/Ustrd) is provided in the incoming FPS message. This parameter is not part of other PAYIN webhook where type is not PI\\_FAST |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Parameter",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Type",
+            "Type of Payment received"
+          ],
+          [
+            "Payee",
+            "Details of the Payee including Name, Address if available and Sortcode and Account Number."
+          ],
+          [
+            "Payer",
+            "Details of the Payer including Name, Address if available and Sortcode and Account Number. There May also be Email, Phone Number and DOB in this block if the information is available."
+          ],
+          [
+            "Amount",
+            "Amount of the Payment"
+          ],
+          [
+            "EventId",
+            "Unique id for the webhook event. This can change if webhook needs to be resent."
+          ],
+          [
+            "Currency",
+            "Currency of the Payment Received."
+          ],
+          [
+            "DateTime",
+            "The Date and timestamp when the Payment was posted to Modulr - All Dates and times are UTC based."
+          ],
+          [
+            "AccountId",
+            "Modulr Unique Account reference for the account that received the payment"
+          ],
+          [
+            "EventName",
+            "Type of event: PAYIN - Funds received to an Account"
+          ],
+          [
+            "EventTime",
+            "Date and Timestamp for the Event - All Dates and times are UTC based."
+          ],
+          [
+            "PaymentAppliedTime",
+            "The exact date and timestamp when the payment has been credited to the receiver's account"
+          ],
+          [
+            "PayerName",
+            "Name of the Payer who sent the Payment"
+          ],
+          [
+            "PaymentId",
+            "Modulr Unique Payment Reference for the payment received."
+          ],
+          [
+            "SchemeInfo",
+            "Scheme information for the received payment in this example this is a FPID"
+          ],
+          [
+            "ReturnReason",
+            "Display the return reason for the returned transaction. See Payment Return Reasons"
+          ],
+          [
+            "TransactionId",
+            "Modulr Unique Transaction Reference for the payment received. Transactions are only created when a payment is processed successfully in case of failed payment it is possible to receive a webhook without a TransactionId."
+          ],
+          [
+            "OriginalSchemeId",
+            "References the original FPID (Faster Payment ID)"
+          ],
+          [
+            "PaymentReference",
+            "Reference associated with the Payment"
+          ],
+          [
+            "AccountExternalRef",
+            "This is the Alias Name given on the Modulr Platform to the sending account"
+          ],
+          [
+            "SourceExternalReference",
+            "This is the External Reference that is set on the payment request in the field: externalReference. This can be used to link payments back to your system using a unique identifier."
+          ],
+          [
+            "OriginatedOverseas",
+            "This flag identifies if the received payment originated overseas."
+          ],
+          [
+            "OriginatingPayment",
+            "Details of the Institution the payment was received from."
+          ],
+          [
+            "RemitterInfo (*NEW - Go Live Date - 24th July)",
+            "This is the new Parameter for PAYIN webhook for type PI_FAST. This tag is present when unstructured remittance (RmtInf/Ustrd) is provided in the incoming FPS message. This parameter is not part of other PAYIN webhook where type is not PI_FAST"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-return-reasons",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## RemitterInfo Field Detail",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "RemitterInfo Field Detail",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        41,
+        44
+      ],
+      "raw": "| PAYIN webhook field                     | Description                                                                                                                                                              | Pacs field   |\n| :-------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------- |\n| PaymentReference                        | Structured Payment Reference.                                                                                                                                            | otherId      |\n| RemitterInfo (Available from 24th July) | Free Text Remittance narrative - new parameter added. This field will only present if the value has been provided else there is no change in the existing functionality. | RmtInf/Ustrd |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "PAYIN webhook field",
+          "Description",
+          "Pacs field"
+        ],
+        "rows": [
+          [
+            "PaymentReference",
+            "Structured Payment Reference.",
+            "otherId"
+          ],
+          [
+            "RemitterInfo (Available from 24th July)",
+            "Free Text Remittance narrative - new parameter added. This field will only present if the value has been provided else there is no change in the existing functionality.",
+            "RmtInf/Ustrd"
+          ]
+        ],
+        "align": [
+          "left",
+          null,
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "## Duplication Check",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Duplication Check",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "PaymentId should be used as your main duplication check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty. This is important particularly if a webhook has failed and needs to be resent.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PaymentId should be used as your main duplication check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty. This is important particularly if a webhook has failed and needs to be resent.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "## Example PAYIN Webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Example PAYIN Webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "### Faster Payment Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Faster Payment Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        54,
+        144
+      ],
+      "raw": "```json PI_FAST Webhook Example (without RemitterInfo)\n{\n    \"Type\": \"PI_FAST\",\n    \"Payee\": {\n        \"Name\": \"Harry Potter\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00001457\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Hermione Granger\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"203002\",\n            \"AccountNumber\": \"00004588\"\n        }\n    },\n    \"Amount\": \"6.00\",\n    \"EventId\": \"7a1b81bc-5d5c-4045-9099-66b6ea841969\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T16:38:06+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T16:38:06+0000\",\n    \"PaymentAppliedTime\": \"2020-01-01T16:38:06+0000\",\n    \"PayerName\": \"Hermione Granger\",\n    \"PaymentId\": \"P12000MWF8\",\n    \"SchemeInfo\": {\n        \"Id\": \"FP00009O144093771020200101826070123\"\n    },\n    \"TransactionId\": \"T12000N5TJ\",\n    \"PaymentReference\": \"Payment from Hermione Granger: For herbs\",\n    \"AccountExternalRef\": \"HOGWARTS ACADEMY\",\n    \"OriginatedOverseas\": false,\n    \"OriginatingPayment\": {\n        \"Institution\": {\n            \"Id\": \"070436\"\n        }\n    }\n}\n```\n```json PI_FAST webhook example (with RemitterInfo)\n{\n    \"Type\": \"PI_FAST\",\n    \"Payee\": {\n        \"Name\": \"Harry Potter\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00001457\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Hermione Granger\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"203002\",\n            \"AccountNumber\": \"00004588\"\n        }\n    },\n    \"Amount\": \"6.00\",\n    \"EventId\": \"7a1b81bc-5d5c-4045-9099-66b6ea841969\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T16:38:06+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T16:38:06+0000\",\n    \"PaymentAppliedTime\": \"2020-01-01T16:38:06+0000\",\n    \"PayerName\": \"Hermione Granger\",\n    \"PaymentId\": \"P12000MWF8\",\n    \"SchemeInfo\": {\n        \"Id\": \"FP00009O144093771020200101826070123\"\n    },\n    \"TransactionId\": \"T12000N5TJ\",\n    \"PaymentReference\": \"Payment from Hermione Granger: For herbs\",\n    \"AccountExternalRef\": \"HOGWARTS ACADEMY\",\n    \"OriginatedOverseas\": false,\n    \"OriginatingPayment\": {\n        \"Institution\": {\n            \"Id\": \"070436\"\n        }\n    },\n\"RemitterInfo\": \"Live Remitter info Details\"\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "PI_FAST Webhook Example (without RemitterInfo)",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "PI_FAST Webhook Example (without RemitterInfo)",
+          "code": "{\n    \"Type\": \"PI_FAST\",\n    \"Payee\": {\n        \"Name\": \"Harry Potter\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00001457\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Hermione Granger\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"203002\",\n            \"AccountNumber\": \"00004588\"\n        }\n    },\n    \"Amount\": \"6.00\",\n    \"EventId\": \"7a1b81bc-5d5c-4045-9099-66b6ea841969\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T16:38:06+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T16:38:06+0000\",\n    \"PaymentAppliedTime\": \"2020-01-01T16:38:06+0000\",\n    \"PayerName\": \"Hermione Granger\",\n    \"PaymentId\": \"P12000MWF8\",\n    \"SchemeInfo\": {\n        \"Id\": \"FP00009O144093771020200101826070123\"\n    },\n    \"TransactionId\": \"T12000N5TJ\",\n    \"PaymentReference\": \"Payment from Hermione Granger: For herbs\",\n    \"AccountExternalRef\": \"HOGWARTS ACADEMY\",\n    \"OriginatedOverseas\": false,\n    \"OriginatingPayment\": {\n        \"Institution\": {\n            \"Id\": \"070436\"\n        }\n    }\n}"
+        },
+        {
+          "lang": "json",
+          "title": "PI_FAST webhook example (with RemitterInfo)",
+          "code": "{\n    \"Type\": \"PI_FAST\",\n    \"Payee\": {\n        \"Name\": \"Harry Potter\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00001457\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Hermione Granger\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"203002\",\n            \"AccountNumber\": \"00004588\"\n        }\n    },\n    \"Amount\": \"6.00\",\n    \"EventId\": \"7a1b81bc-5d5c-4045-9099-66b6ea841969\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T16:38:06+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T16:38:06+0000\",\n    \"PaymentAppliedTime\": \"2020-01-01T16:38:06+0000\",\n    \"PayerName\": \"Hermione Granger\",\n    \"PaymentId\": \"P12000MWF8\",\n    \"SchemeInfo\": {\n        \"Id\": \"FP00009O144093771020200101826070123\"\n    },\n    \"TransactionId\": \"T12000N5TJ\",\n    \"PaymentReference\": \"Payment from Hermione Granger: For herbs\",\n    \"AccountExternalRef\": \"HOGWARTS ACADEMY\",\n    \"OriginatedOverseas\": false,\n    \"OriginatingPayment\": {\n        \"Institution\": {\n            \"Id\": \"070436\"\n        }\n    },\n\"RemitterInfo\": \"Live Remitter info Details\"\n}"
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        146,
+        146
+      ],
+      "raw": "### Internal Transfer Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Internal Transfer Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        148,
+        148
+      ],
+      "raw": "The following scenarios are where you would receive an internal transfer webhook:<br />Payment between two different accounts on the same customer<br />Payment between two different accounts on different customers under the same partner<br />Payment between two different accounts that are both Modulr Clients",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following scenarios are where you would receive an internal transfer webhook:Payment between two different accounts on the same customerPayment between two different accounts on different customers under the same partnerPayment between two different accounts that are both Modulr Clients",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 148
+        },
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 148
+        },
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 148
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        150,
+        185
+      ],
+      "raw": "```json Internal Transfer Webhook Example\n{\n    \"Type\": \"INT_INTERC\",\n    \"Payer\": {\n        \"Name\": \"Harry Potter\",\n        \"Email\": \"HPotter1@hogwarts.co.uk\",\n        \"Address\": {\n            \"Country\": \"GB\",\n            \"PostCode\": \"CR3 8UN\",\n            \"PostTown\": \"Little Whinging\",\n            \"AddressLine1\": \"4 Privet Drive\"\n        },\n        \"BirthDate\": \"1980-07-31\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00001245\"\n        },\n        \"PhoneNumber\": \"+(44)7712345678\"\n    },\n    \"Amount\": \"25\",\n    \"EventId\": \"c02d2949-d5d6-4dfd-af17-bc0c8686d041\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T16:58:01+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T16:58:01+0000\",\n    \"PayerName\": \"Harry Potter\",\n    \"PaymentId\": \"P12000MWF9\",\n    \"TransactionId\": \"T12000N5TT\",\n    \"PaymentReference\": \"IC/T12000N5T2\",\n    \"AccountExternalRef\": \"HOGWARTS ACADEMY\",\n    \"OriginatedOverseas\": false,\n    \"SourceExternalReference\": \"Haz Pots\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Internal Transfer Webhook Example",
+        "code": "{\n    \"Type\": \"INT_INTERC\",\n    \"Payer\": {\n        \"Name\": \"Harry Potter\",\n        \"Email\": \"HPotter1@hogwarts.co.uk\",\n        \"Address\": {\n            \"Country\": \"GB\",\n            \"PostCode\": \"CR3 8UN\",\n            \"PostTown\": \"Little Whinging\",\n            \"AddressLine1\": \"4 Privet Drive\"\n        },\n        \"BirthDate\": \"1980-07-31\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00001245\"\n        },\n        \"PhoneNumber\": \"+(44)7712345678\"\n    },\n    \"Amount\": \"25\",\n    \"EventId\": \"c02d2949-d5d6-4dfd-af17-bc0c8686d041\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T16:58:01+0000\",\n    \"AccountId\": \"A120C8D3\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T16:58:01+0000\",\n    \"PayerName\": \"Harry Potter\",\n    \"PaymentId\": \"P12000MWF9\",\n    \"TransactionId\": \"T12000N5TT\",\n    \"PaymentReference\": \"IC/T12000N5T2\",\n    \"AccountExternalRef\": \"HOGWARTS ACADEMY\",\n    \"OriginatedOverseas\": false,\n    \"SourceExternalReference\": \"Haz Pots\"\n}"
+      },
+      "text": "Internal Transfer Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        187,
+        187
+      ],
+      "raw": "### BACS Payment Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "BACS Payment Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        189,
+        226
+      ],
+      "raw": "```json BACS Payment Webhook Example\n{\n    \"Type\": \"PI_BACS\",\n    \"Payee\": {\n        \"Name\": \"Ronald Weasley\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00004785\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Fred Weasley\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"011000\",\n            \"AccountNumber\": \"00004124\"\n        }\n    },\n    \"Amount\": \"20.11\",\n    \"EventId\": \"67fcb4d1-b6f2-4377-af31-9e9061f3189d\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T03:06:30+0000\",\n    \"AccountId\": \"A120C8D9\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T09:03:15+0000\",\n    \"PayerName\": \"Fred Weasley\",\n    \"PaymentId\": \"P12000MWF1\",\n    \"SchemeInfo\": {\n        \"Id\": \"58e0494627027e37c2d367191c9d4fee4f571ba396268d143eb536ff5aedd6f5-0F78B466\",\n        \"Name\": \"BACS\"\n    },\n    \"TransactionId\": \"T12000N5T1\",\n    \"PaymentReference\": \"Payment from Fred Weasley: 60046452\",\n    \"AccountExternalRef\": \"Ron's Cash\",\n    \"OriginatedOverseas\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "BACS Payment Webhook Example",
+        "code": "{\n    \"Type\": \"PI_BACS\",\n    \"Payee\": {\n        \"Name\": \"Ronald Weasley\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"00004785\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Fred Weasley\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"011000\",\n            \"AccountNumber\": \"00004124\"\n        }\n    },\n    \"Amount\": \"20.11\",\n    \"EventId\": \"67fcb4d1-b6f2-4377-af31-9e9061f3189d\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T03:06:30+0000\",\n    \"AccountId\": \"A120C8D9\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T09:03:15+0000\",\n    \"PayerName\": \"Fred Weasley\",\n    \"PaymentId\": \"P12000MWF1\",\n    \"SchemeInfo\": {\n        \"Id\": \"58e0494627027e37c2d367191c9d4fee4f571ba396268d143eb536ff5aedd6f5-0F78B466\",\n        \"Name\": \"BACS\"\n    },\n    \"TransactionId\": \"T12000N5T1\",\n    \"PaymentReference\": \"Payment from Fred Weasley: 60046452\",\n    \"AccountExternalRef\": \"Ron's Cash\",\n    \"OriginatedOverseas\": false\n}"
+      },
+      "text": "BACS Payment Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        228,
+        228
+      ],
+      "raw": "### Direct Debit Payment In Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Direct Debit Payment In Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        230,
+        247
+      ],
+      "raw": "```json DD Payment In Webhook Example\n{\n    \"Type\": \"PI_DD\",\n    \"Amount\": \"40.99\",\n    \"EventId\": \"ba187786-11b9-48ef-b1ea-894abcbc2eb7\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T12:19:21+0000\",\n    \"AccountId\": \"A120C8D5\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T12:19:21+0000\",\n    \"PayerName\": \"\",\n    \"PaymentId\": \"A120C8D5_363921\",\n    \"TransactionId\": \"T12000N5T1\",\n    \"PaymentReference\": \"Dumbledore - 208856PU\",\n    \"AccountExternalRef\": \"8162f318-e215-4802-a406-b17dbee8e434\",\n    \"OriginatedOverseas\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "DD Payment In Webhook Example",
+        "code": "{\n    \"Type\": \"PI_DD\",\n    \"Amount\": \"40.99\",\n    \"EventId\": \"ba187786-11b9-48ef-b1ea-894abcbc2eb7\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T12:19:21+0000\",\n    \"AccountId\": \"A120C8D5\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T12:19:21+0000\",\n    \"PayerName\": \"\",\n    \"PaymentId\": \"A120C8D5_363921\",\n    \"TransactionId\": \"T12000N5T1\",\n    \"PaymentReference\": \"Dumbledore - 208856PU\",\n    \"AccountExternalRef\": \"8162f318-e215-4802-a406-b17dbee8e434\",\n    \"OriginatedOverseas\": false\n}"
+      },
+      "text": "DD Payment In Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        249,
+        249
+      ],
+      "raw": "### Direct Debit Internal Transfer Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Direct Debit Internal Transfer Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        251,
+        283
+      ],
+      "raw": "```json DD Internal Transfer Webhook Example\n{\n  \"Type\": \"PI_DD_PEND\",\n  \"Payee\": {\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"040010\",\n      \"AccountNumber\": \"47900002\"\n    }\n  },\n  \"Payer\": {\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"040010\",\n      \"AccountNumber\": \"47900002\"\n    }\n  },\n  \"Amount\": \"437.44\",\n  \"EventId\": \"53c2f793-4b66-46e0-9ca9-d63f68d2bcf4\",\n  \"Currency\": \"GBP\",\n  \"DateTime\": \"2025-01-01T10:04:11+0000\",\n  \"AccountId\": \"A2105JXXXX\",\n  \"EventName\": \"PAYIN\",\n  \"EventTime\": \"2025-01-01T10:04:11+0000\",\n  \"PayerName\": \"\",\n  \"PaymentId\": \"K21004XXXX\",\n  \"TransactionId\": \"T2117XX0XX\",\n  \"PaymentReference\": \"Account credit under collection [K21004XXXX]\",\n  \"AccountExternalRef\": \"Snape Funds\",\n  \"OriginatedOverseas\": false,\n  \"PaymentAppliedTime\": \"2025-01-01T10:04:11.616+0000\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "DD Internal Transfer Webhook Example",
+        "code": "{\n  \"Type\": \"PI_DD_PEND\",\n  \"Payee\": {\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"040010\",\n      \"AccountNumber\": \"47900002\"\n    }\n  },\n  \"Payer\": {\n    \"Identifier\": {\n      \"Type\": \"SCAN\",\n      \"SortCode\": \"040010\",\n      \"AccountNumber\": \"47900002\"\n    }\n  },\n  \"Amount\": \"437.44\",\n  \"EventId\": \"53c2f793-4b66-46e0-9ca9-d63f68d2bcf4\",\n  \"Currency\": \"GBP\",\n  \"DateTime\": \"2025-01-01T10:04:11+0000\",\n  \"AccountId\": \"A2105JXXXX\",\n  \"EventName\": \"PAYIN\",\n  \"EventTime\": \"2025-01-01T10:04:11+0000\",\n  \"PayerName\": \"\",\n  \"PaymentId\": \"K21004XXXX\",\n  \"TransactionId\": \"T2117XX0XX\",\n  \"PaymentReference\": \"Account credit under collection [K21004XXXX]\",\n  \"AccountExternalRef\": \"Snape Funds\",\n  \"OriginatedOverseas\": false,\n  \"PaymentAppliedTime\": \"2025-01-01T10:04:11.616+0000\"\n}"
+      },
+      "text": "DD Internal Transfer Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        285,
+        285
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 285
+        }
+      ]
+    },
+    {
+      "i": 22,
+      "lines": [
+        287,
+        287
+      ],
+      "raw": "### Chaps Payment Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Chaps Payment Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        289,
+        326
+      ],
+      "raw": "```json CHAPS Payment Webhook Example\n{\n    \"Type\": \"PI_CHAPS\",\n    \"Payee\": {\n        \"Name\": \"Severus Snape\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"47900002\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Albus Dumbledore\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"608310\",\n            \"AccountNumber\": \"40004668\"\n        }\n    },\n    \"Amount\": \"50.00\",\n    \"EventId\": \"f8484677-30df-457a-845f-1d632d7b3ec1\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T17:03:51+0000\",\n    \"AccountId\": \"A120C8E2\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T17:03:52+0000\",\n    \"PayerName\": \"Albus Dumbledore\",\n    \"PaymentId\": \"P12000MTT1\",\n    \"SchemeInfo\": {\n        \"Id\": \"e91d650f38bf4130b91020200101826601270\",\n        \"Name\": \"TRANSFER\"\n    },\n    \"TransactionId\": \"T12000N5Y1\",\n    \"PaymentReference\": \"Payment from Albus Dumbledore: Transfer\",\n    \"AccountExternalRef\": \"Snape Funds\",\n    \"OriginatedOverseas\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "CHAPS Payment Webhook Example",
+        "code": "{\n    \"Type\": \"PI_CHAPS\",\n    \"Payee\": {\n        \"Name\": \"Severus Snape\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"040010\",\n            \"AccountNumber\": \"47900002\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Albus Dumbledore\",\n        \"Identifier\": {\n            \"Type\": \"SCAN\",\n            \"SortCode\": \"608310\",\n            \"AccountNumber\": \"40004668\"\n        }\n    },\n    \"Amount\": \"50.00\",\n    \"EventId\": \"f8484677-30df-457a-845f-1d632d7b3ec1\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T17:03:51+0000\",\n    \"AccountId\": \"A120C8E2\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T17:03:52+0000\",\n    \"PayerName\": \"Albus Dumbledore\",\n    \"PaymentId\": \"P12000MTT1\",\n    \"SchemeInfo\": {\n        \"Id\": \"e91d650f38bf4130b91020200101826601270\",\n        \"Name\": \"TRANSFER\"\n    },\n    \"TransactionId\": \"T12000N5Y1\",\n    \"PaymentReference\": \"Payment from Albus Dumbledore: Transfer\",\n    \"AccountExternalRef\": \"Snape Funds\",\n    \"OriginatedOverseas\": false\n}"
+      },
+      "text": "CHAPS Payment Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        328,
+        328
+      ],
+      "raw": "### SEPA Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "SEPA Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        330,
+        417
+      ],
+      "raw": "```json SEPA Credit Transfer\n{\n    \"Type\": \"PI_SECT\",\n    \"Payee\": {\n        \"Name\": \"Draco Malfoy\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Bic\": \"MOCKGB22XXX\",\n            \"Iban\": \"GB17MOCK04001000002271\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Dobby\",\n        \"Address\": {\n            \"Country\": \"ES\",\n            \"AddressLine1\": \"BERTAMIRANS\",\n            \"AddressLine2\": \"DO POETA DA MAIA 17 PISO 3 PUERTA\"\n        },\n        \"Identifier\": {\n            \"Bic\": \"BBVEESMMXXX\",\n            \"Iban\": \"ES4501821265660206212452\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Amount\": \"20\",\n    \"EventId\": \"a72063a0-8774-4ceb-ab14-401fcd5e7068\",\n    \"Currency\": \"EUR\",\n    \"DateTime\": \"2020-01-01T07:20:00+0000\",\n    \"AccountId\": \"A120C8E2\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T07:20:03+0000\",\n    \"PayerName\": \"Draco Malfoy\",\n    \"PaymentId\": \"P12000MTB1\",\n    \"SchemeInfo\": {\n        \"Id\": \"NOTPROVIDED\",\n        \"Name\": \"SEPA\"\n    },\n    \"TransactionId\": \"T12000N5V4\",\n    \"PaymentReference\": \"Payment from Dobby: NOTPROVIDED\",\n    \"AccountExternalRef\": \"Draco's Account\",\n    \"OriginatedOverseas\": true\n}\n```\n```json SEPA Instant\n{\n    \"Type\": \"PI_SEPA_INST\",\n    \"Payee\": {\n        \"Name\": \"Draco Malfoy\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Bic\": \"MOCKGB22XXX\",\n            \"Iban\": \"GB17MOCK04001000002271\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Dobby\",\n        \"Address\": {\n            \"Country\": \"ES\",\n            \"AddressLine1\": \"BERTAMIRANS\",\n            \"AddressLine2\": \"DO POETA DA MAIA 17 PISO 3 PUERTA\"\n        },\n        \"Identifier\": {\n            \"Bic\": \"BBVEESMMXXX\",\n            \"Iban\": \"ES4501821265660206212452\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Amount\": \"20\",\n    \"EventId\": \"a72063a0-8774-4ceb-ab14-401fcd5e7068\",\n    \"Currency\": \"EUR\",\n    \"DateTime\": \"2020-01-01T07:20:00+0000\",\n    \"AccountId\": \"A120C8E2\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T07:20:03+0000\",\n    \"PayerName\": \"Draco Malfoy\",\n    \"PaymentId\": \"P12000MTB1\",\n    \"SchemeInfo\": {\n        \"Id\": \"NOTPROVIDED\",\n        \"Name\": \"SEPA_INSTANT\"\n    },\n    \"TransactionId\": \"T12000N5V4\",\n    \"PaymentReference\": \"Payment from Dobby: NOTPROVIDED\",\n    \"AccountExternalRef\": \"Draco's Account\",\n    \"OriginatedOverseas\": true\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "SEPA Credit Transfer",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "SEPA Credit Transfer",
+          "code": "{\n    \"Type\": \"PI_SECT\",\n    \"Payee\": {\n        \"Name\": \"Draco Malfoy\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Bic\": \"MOCKGB22XXX\",\n            \"Iban\": \"GB17MOCK04001000002271\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Dobby\",\n        \"Address\": {\n            \"Country\": \"ES\",\n            \"AddressLine1\": \"BERTAMIRANS\",\n            \"AddressLine2\": \"DO POETA DA MAIA 17 PISO 3 PUERTA\"\n        },\n        \"Identifier\": {\n            \"Bic\": \"BBVEESMMXXX\",\n            \"Iban\": \"ES4501821265660206212452\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Amount\": \"20\",\n    \"EventId\": \"a72063a0-8774-4ceb-ab14-401fcd5e7068\",\n    \"Currency\": \"EUR\",\n    \"DateTime\": \"2020-01-01T07:20:00+0000\",\n    \"AccountId\": \"A120C8E2\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T07:20:03+0000\",\n    \"PayerName\": \"Draco Malfoy\",\n    \"PaymentId\": \"P12000MTB1\",\n    \"SchemeInfo\": {\n        \"Id\": \"NOTPROVIDED\",\n        \"Name\": \"SEPA\"\n    },\n    \"TransactionId\": \"T12000N5V4\",\n    \"PaymentReference\": \"Payment from Dobby: NOTPROVIDED\",\n    \"AccountExternalRef\": \"Draco's Account\",\n    \"OriginatedOverseas\": true\n}"
+        },
+        {
+          "lang": "json",
+          "title": "SEPA Instant",
+          "code": "{\n    \"Type\": \"PI_SEPA_INST\",\n    \"Payee\": {\n        \"Name\": \"Draco Malfoy\",\n        \"Address\": {},\n        \"Identifier\": {\n            \"Bic\": \"MOCKGB22XXX\",\n            \"Iban\": \"GB17MOCK04001000002271\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Payer\": {\n        \"Name\": \"Dobby\",\n        \"Address\": {\n            \"Country\": \"ES\",\n            \"AddressLine1\": \"BERTAMIRANS\",\n            \"AddressLine2\": \"DO POETA DA MAIA 17 PISO 3 PUERTA\"\n        },\n        \"Identifier\": {\n            \"Bic\": \"BBVEESMMXXX\",\n            \"Iban\": \"ES4501821265660206212452\",\n            \"Type\": \"IBAN\"\n        }\n    },\n    \"Amount\": \"20\",\n    \"EventId\": \"a72063a0-8774-4ceb-ab14-401fcd5e7068\",\n    \"Currency\": \"EUR\",\n    \"DateTime\": \"2020-01-01T07:20:00+0000\",\n    \"AccountId\": \"A120C8E2\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T07:20:03+0000\",\n    \"PayerName\": \"Draco Malfoy\",\n    \"PaymentId\": \"P12000MTB1\",\n    \"SchemeInfo\": {\n        \"Id\": \"NOTPROVIDED\",\n        \"Name\": \"SEPA_INSTANT\"\n    },\n    \"TransactionId\": \"T12000N5V4\",\n    \"PaymentReference\": \"Payment from Dobby: NOTPROVIDED\",\n    \"AccountExternalRef\": \"Draco's Account\",\n    \"OriginatedOverseas\": true\n}"
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "lines": [
+        419,
+        419
+      ],
+      "raw": "### Card Refund Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Card Refund Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        421,
+        421
+      ],
+      "raw": "The PaymentId field contains the card activity BID which you can use to query additional details from the card [activities](https://modulr.readme.io/reference/getcardactivities) API",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The PaymentId field contains the card activity BID which you can use to query additional details from the card activities API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcardactivities",
+          "line": 421
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        423,
+        441
+      ],
+      "raw": "```json\n{\n    \"Type\": \"PI_VISA\",\n    \"Amount\": \"40.99\",\n    \"EventId\": \"ba187786-11b9-48ef-b1ea-894abcbc2eb7\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T12:19:21+0000\",\n    \"AccountId\": \"A120C8D5\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T12:19:21+0000\",\n    \"PayerName\": \"\",\n    \"PaymentId\": \"X11000DYTA\", // Card Activity ID\n    \"TransactionId\": \"T12000N5T1\",\n    \"PaymentReference\": \"Dumbledore - 208856PU\",\n    \"AccountExternalRef\": \"8162f318-e215-4802-a406-b17dbee8e434\",\n    \"SourceExternalReference\": \"10\",  // Order ID\n    \"OriginatedOverseas\": false\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n    \"Type\": \"PI_VISA\",\n    \"Amount\": \"40.99\",\n    \"EventId\": \"ba187786-11b9-48ef-b1ea-894abcbc2eb7\",\n    \"Currency\": \"GBP\",\n    \"DateTime\": \"2020-01-01T12:19:21+0000\",\n    \"AccountId\": \"A120C8D5\",\n    \"EventName\": \"PAYIN\",\n    \"EventTime\": \"2020-01-01T12:19:21+0000\",\n    \"PayerName\": \"\",\n    \"PaymentId\": \"X11000DYTA\", // Card Activity ID\n    \"TransactionId\": \"T12000N5T1\",\n    \"PaymentReference\": \"Dumbledore - 208856PU\",\n    \"AccountExternalRef\": \"8162f318-e215-4802-a406-b17dbee8e434\",\n    \"SourceExternalReference\": \"10\",  // Order ID\n    \"OriginatedOverseas\": false\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        443,
+        443
+      ],
+      "raw": "### Outbound Reversed Payments Webhook Example",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Outbound Reversed Payments Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        445,
+        445
+      ],
+      "raw": "The following example illustrates the use of the `PAYIN` Webhook for the scenario of a returned payment which is sent back as separate operation after been correctly flagged as a return.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following example illustrates the use of the PAYIN Webhook for the scenario of a returned payment which is sent back as separate operation after been correctly flagged as a return.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        447,
+        447
+      ],
+      "raw": "This scenario only applies to transactions of type `PO_REV`. The PAYIN Webhook is used because the reversal of a payment OUT is a payment IN.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This scenario only applies to transactions of type PO_REV. The PAYIN Webhook is used because the reversal of a payment OUT is a payment IN.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        449,
+        449
+      ],
+      "raw": "Note that notifications are not sent for transactions of type `PI_REV`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note that notifications are not sent for transactions of type PI_REV.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        451,
+        499
+      ],
+      "raw": "```json Outbound Reversed Payments Webhook Example\n{\n\t\"Type\": \"PO_REV\",\n\t\"Payee\": {\n\t\t\"Name\": \"Ibrahim Tijani\",\n\t\t\"Address\": {\n\t\t\t\"Country\": \"GB\",\n\t\t\t\"AddressLine1\": \"191 Ballards RoadDagenhamRM10 9AR\"\n\t\t},\n\t\t\"Identifier\": {\n\t\t\t\"Type\": \"SCAN\",\n\t\t\t\"Country\": \"GB\",\n\t\t\t\"SortCode\": \"040085\",\n\t\t\t\"AccountNumber\": \"07182376\"\n\t\t}\n\t},\n\t\"Payer\": {\n\t\t\"Name\": \"Ibrahim Tijani\",\n\t\t\"Address\": {},\n\t\t\"Identifier\": {\n\t\t\t\"Type\": \"SCAN\",\n\t\t\t\"SortCode\": \"230363\",\n\t\t\t\"AccountNumber\": \"00415988\"\n\t\t}\n\t},\n\t\"Amount\": \"0.01\",\n\t\"EventId\": \"b18a3885-082b-410e-96e1-e6be7c4d1d1b\",\n\t\"Currency\": \"GBP\",\n\t\"DateTime\": \"2021-12-03T00:01:20+0000\",\n\t\"AccountId\": \"A216XFNF\",\n\t\"EventName\": \"PAYIN\",\n\t\"EventTime\": \"2021-12-03T00:01:21+0000\",\n\t\"PayerName\": \"Ibrahim Tijani\",\n\t\"PaymentId\": \"P21071YXQW\",\n\t\"SchemeInfo\": {\n\t\t\"Id\": \"17470906129345513 2020211203826232507\"\n\t},\n\t\"ReturnReason\": \"Account blocked\",\n\t\"TransactionId\": \"T2109NH5Q1\",\n\t\"OriginalSchemeId\": \"MODULO00P21071YXQF1020211203826040085\",\n\t\"PaymentReference\": \"Return: Ibrahim Tijani - 9byGaQj1\",\n\t\"AccountExternalRef\": \"78a3532d-3315-41db-b8dc-c4f5d525a143\",\n\t\"OriginatedOverseas\": false,\n\t\"OriginatingPayment\": {\n\t\t\"Institution\": {}\n\t},\n\t\"PaymentAppliedTime\": \"2021-12-03T00:01:20.841+0000\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "Outbound Reversed Payments Webhook Example",
+        "code": "{\n\t\"Type\": \"PO_REV\",\n\t\"Payee\": {\n\t\t\"Name\": \"Ibrahim Tijani\",\n\t\t\"Address\": {\n\t\t\t\"Country\": \"GB\",\n\t\t\t\"AddressLine1\": \"191 Ballards RoadDagenhamRM10 9AR\"\n\t\t},\n\t\t\"Identifier\": {\n\t\t\t\"Type\": \"SCAN\",\n\t\t\t\"Country\": \"GB\",\n\t\t\t\"SortCode\": \"040085\",\n\t\t\t\"AccountNumber\": \"07182376\"\n\t\t}\n\t},\n\t\"Payer\": {\n\t\t\"Name\": \"Ibrahim Tijani\",\n\t\t\"Address\": {},\n\t\t\"Identifier\": {\n\t\t\t\"Type\": \"SCAN\",\n\t\t\t\"SortCode\": \"230363\",\n\t\t\t\"AccountNumber\": \"00415988\"\n\t\t}\n\t},\n\t\"Amount\": \"0.01\",\n\t\"EventId\": \"b18a3885-082b-410e-96e1-e6be7c4d1d1b\",\n\t\"Currency\": \"GBP\",\n\t\"DateTime\": \"2021-12-03T00:01:20+0000\",\n\t\"AccountId\": \"A216XFNF\",\n\t\"EventName\": \"PAYIN\",\n\t\"EventTime\": \"2021-12-03T00:01:21+0000\",\n\t\"PayerName\": \"Ibrahim Tijani\",\n\t\"PaymentId\": \"P21071YXQW\",\n\t\"SchemeInfo\": {\n\t\t\"Id\": \"17470906129345513 2020211203826232507\"\n\t},\n\t\"ReturnReason\": \"Account blocked\",\n\t\"TransactionId\": \"T2109NH5Q1\",\n\t\"OriginalSchemeId\": \"MODULO00P21071YXQF1020211203826040085\",\n\t\"PaymentReference\": \"Return: Ibrahim Tijani - 9byGaQj1\",\n\t\"AccountExternalRef\": \"78a3532d-3315-41db-b8dc-c4f5d525a143\",\n\t\"OriginatedOverseas\": false,\n\t\"OriginatingPayment\": {\n\t\t\"Institution\": {}\n\t},\n\t\"PaymentAppliedTime\": \"2021-12-03T00:01:20.841+0000\"\n}"
+      },
+      "text": "Outbound Reversed Payments Webhook Example",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        501,
+        501
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 501
+        }
+      ]
+    }
+  ]
+}

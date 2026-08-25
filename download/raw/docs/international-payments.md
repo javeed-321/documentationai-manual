@@ -1,0 +1,47 @@
+---
+updatedAt: 2026-04-07T13:57:16.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# International Payments
+
+Modulr's International Payments product enables customers to send and receive funds in foreign currencies, i.e., currencies outside of their domestic market. This supports businesses that operate in, or transact with, counterparties across multiple currency jurisdictions, regardless of their own country of incorporation or operation.
+
+International Payments are processed via SWIFT (Society for Worldwide Interbank Financial Telecommunication), the globally adopted financial messaging network used by banks and financial institutions to securely exchange payment instructions and facilitate cross-border transactions.
+
+SWIFT provides standardised communication protocols across financial entities worldwide, making it the primary infrastructure for international money movement.
+
+### Currency & Country Support
+
+Modulr supports payments in the following currencies from non-compliance restricted destinations, and to the UK, Europe, the USA, Japan & Hong Kong (unless otherwise noted).
+
+| Currency           | ISO Code | Notes                         |
+| :----------------- | :------- | :---------------------------- |
+| Australian Dollar  | AUD      |                               |
+| Canadian Dollar    | CAD      |                               |
+| Czech Koruna       | CZK      |                               |
+| Danish Krone       | DKK      |                               |
+| Euro               | EUR      |                               |
+| Japanese Yen       | JPY      |                               |
+| Hong Kong Dollar   | HKD      |                               |
+| Hungarian Forint   | HUF      |                               |
+| Norwegian Krone    | NOK      |                               |
+| New Zealand Dollar | NZD      |                               |
+| Polish Zloty       | PLN      |                               |
+| Pound Sterling     | GBP      |                               |
+| Romanian Leu       | RON      |                               |
+| Singapore Dollar   | SGD      |                               |
+| Swiss Franc        | CHF      |                               |
+| Swedish Krona      | SEK      |                               |
+| Thai Baht          | THB      | Outbound to own accounts only |
+| Turkish Lira       | TRY      | Outbound to own accounts only |
+| UAE Dirham         | AED      |                               |
+| US Dollar          | USD      |                               |
+
+### Notes:
+
+* Payments received via SWIFT for those not enabled will be returned. This will cause inconvenience as there are no standard timescales for returns via SWIFT. To be enabled for payments via SWIFT, contact your customer success manager.
+* Payments via SWIFT are not instant; they can take between one and three business days due to the multi-step process involving correspondent banks in different countries.
+
+<br />

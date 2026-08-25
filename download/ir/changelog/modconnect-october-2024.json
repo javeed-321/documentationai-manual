@@ -1,0 +1,295 @@
+{
+  "slug": "changelog/modconnect-october-2024",
+  "source": "https://modulr.readme.io/changelog/modconnect-october-2024.md",
+  "url": "https://modulr.readme.io/changelog/modconnect-october-2024",
+  "title": "ModConnect- October 2024",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "Callout": 1,
+    "list": 2,
+    "Image": 2,
+    "paragraph": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# ModConnect- October 2024",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "ModConnect- October 2024",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        9
+      ],
+      "raw": "<Callout icon=\"🎃\" theme=\"default\">\n  ### Top pick this month\n\n  * Approvals - Batch Payments | Scheduled Payment Date Column\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🎃",
+        "theme": "default"
+      },
+      "text": "Top pick this monthApprovals - Batch Payments | Scheduled Payment Date Column",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            6,
+            6
+          ],
+          "raw": "  ### Top pick this month",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Top pick this month",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 3,
+          "lines": [
+            8,
+            8
+          ],
+          "raw": "  * Approvals - Batch Payments | Scheduled Payment Date Column",
+          "kind": "list",
+          "syntax": "markdown",
+          "text": "Approvals - Batch Payments | Scheduled Payment Date Column",
+          "attrs": {
+            "ordered": "false"
+          },
+          "target": {
+            "component": null,
+            "status": "transform",
+            "note": "normalise `*`/`+` markers to `-`"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "![](https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png",
+          "line": 11
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "# New this month",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "New this month",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## Approvals - Batch Payments | Scheduled Payment Date Column",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Approvals - Batch Payments | Scheduled Payment Date Column",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "A new ***Scheduled** column is now live in the****Approvals - Batch Payments*** screen in the Modulr portal. This column indicates the range of Payment Dates for the Batch, so you can better plan your account funding, and catch potentially unexpected immediate payments.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A new Scheduled column is now live in theApprovals - Batch Payments screen in the Modulr portal. This column indicates the range of Payment Dates for the Batch, so you can better plan your account funding, and catch potentially unexpected immediate payments.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "The column displays dates as:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The column displays dates as:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        27
+      ],
+      "raw": "* A range of dates (The earliest and latest date that Payments are scheduled for)\n  * e.g. 27 Apr - 5 May 2023\n  * A single date (When Payments are all scheduled for the same date)\n    * e.g. 14 May 2023\n* Just Immediately (When all the Payments within the Batch don’t have a scheduled payment date)\n* Immediately followed by a date range (When there is a mix of Payments in the Batch with a scheduled payment date and without a scheduled payment date)\n* e.g. Immediately, 27 Apr - 5 May 2023",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "A range of dates (The earliest and latest date that Payments are scheduled for)e.g. 27 Apr - 5 May 2023A single date (When Payments are all scheduled for the same date)e.g. 14 May 2023Just Immediately (When all the Payments within the Batch don’t have a scheduled payment date)Immediately followed by a date range (When there is a mix of Payments in the Batch with a scheduled payment date and without a scheduled payment date)e.g. Immediately, 27 Apr - 5 May 2023",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "*Note: Where a Batch contains Immediately - it means there are payments present that could be sent Immediately - pending availability of funds.*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note: Where a Batch contains Immediately - it means there are payments present that could be sent Immediately - pending availability of funds.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "*\\*The Approvals Screen is pictured below, with the Scheduled column in Batches highlighted.*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "*The Approvals Screen is pictured below, with the Scheduled column in Batches highlighted.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "![](https://files.readme.io/7b0c95c7a802aabed36582ca093d1fc8095c3c51fcfbe7f56d53824f0edc38b4-image.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/7b0c95c7a802aabed36582ca093d1fc8095c3c51fcfbe7f56d53824f0edc38b4-image.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/7b0c95c7a802aabed36582ca093d1fc8095c3c51fcfbe7f56d53824f0edc38b4-image.png",
+          "line": 33
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    }
+  ]
+}

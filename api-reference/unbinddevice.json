@@ -1,0 +1,165 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Card Simulator",
+      "description": "Cards Simulator API"
+    }
+  ],
+  "paths": {
+    "/card-tokens/{tokenId}/devices/{deviceId}/unbind": {
+      "post": {
+        "tags": [
+          "Card Simulator"
+        ],
+        "summary": "Unbind a device from a card token",
+        "description": "Simulate the removal of a device binding from a card token, marking the device as DELETED within the token record in card-service",
+        "operationId": "unbindDevice",
+        "parameters": [
+          {
+            "name": "tokenId",
+            "in": "path",
+            "description": "Card token ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "T110000001"
+          },
+          {
+            "name": "deviceId",
+            "in": "path",
+            "description": "Device ID to unbind",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "D110000001"
+          },
+          {
+            "name": "cardId",
+            "in": "query",
+            "description": "Card ID that owns the token",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "V110000001"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Device unbound successfully"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/cardsimulator.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Token or device not found"
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "cardsimulator.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}

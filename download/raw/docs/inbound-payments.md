@@ -1,0 +1,51 @@
+---
+updatedAt: 2025-09-05T18:35:21.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Inbound Payments
+
+Before being able to make outbound payments, you must have funds within your accounts.
+
+## Live Environment
+
+In the live environment, your account(s) will receive money in from external sources. You can subscribe to web hooks or email notifications to know about this when it happens, or check this manually in the web portal.
+
+> 📘 Incoming Payments Types
+>
+> Modulr currently accepts payments via:
+>
+> * Faster Payments
+> * BACS Credits
+> * CHAPS Payments
+> * SEPA Credit Transfers
+> * SEPA Instant Credit Transfers
+>
+> Faster Payments & BACS are accepted by default, to enable CHAPS, SEPA Credit Transfers or SEPA Instant Credit Transfers, please speak to a member of the team.
+
+## Sandbox Environment
+
+In the sandbox environment, you will have been provided with one account with a balance of £50,000.00.
+
+Should you wish to add more funds for testing purposes, you can do via: [POST /credit](https://modulr.readme.io/reference/createpayments) as shown in the example below where accountId is the ID of the account being credited.
+
+```json Inbound Credit Request Body Example
+{
+  "accountId":"A110X6D1",
+  "amount": 10000.00,
+  "numberOfTransactions": 1,
+  "payerDetail": {
+    "identifier": {
+      "accountNumber": "33188038",
+      "sortCode": "000000",
+      "type": "SCAN"
+    },
+    "name": "Captain Nemo"
+  },
+  "type": "PI_BACS",
+  "description": "Inbound"
+}
+```
+
+This is very similar to making an outbound payment as you must specify the details of the account you wish to credit and the amount, however you will not need provide any details about where the funds are coming from as these are fictitious funds within the sandbox environment.

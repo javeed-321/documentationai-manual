@@ -1,0 +1,942 @@
+{
+  "slug": "docs/fixed-recurring-payments-standing-order-overview",
+  "source": "https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview.md",
+  "url": "https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview",
+  "title": "Fixed Recurring Payments (Standing Orders)",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:35:44.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 10,
+    "paragraph": 23,
+    "list": 3,
+    "Callout": 1,
+    "Image": 3,
+    "Table": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Fixed Recurring Payments (Standing Orders)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Fixed Recurring Payments (Standing Orders)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This page will provide an overview for standing order payment initiations. It includes:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This page will provide an overview for standing order payment initiations. It includes:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        19
+      ],
+      "raw": "* Listing the banks that support standing order initiation.\n* Requesting a new standing order.\n* Redirecting the end-user to their bank to authenticate and approve the set-up of the standing order.\n* Returning the end-user back to your site or application.\n* Retrieving the status of the standing order initiation.\n* High level end-to-end flow for standing order initiations.\n* Standing order payment initiation lifecycle.\n* Complete API specifications.\n* Known limitations.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Listing the banks that support standing order initiation.Requesting a new standing order.Redirecting the end-user to their bank to authenticate and approve the set-up of the standing order.Returning the end-user back to your site or application.Retrieving the status of the standing order initiation.High level end-to-end flow for standing order initiations.Standing order payment initiation lifecycle.Complete API specifications.Known limitations.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## Step 1: Listing the banks that support standing order initiation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 1: Listing the banks that support standing order initiation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "You should use the [GET ASPSPs API](https://modulr.readme.io/reference/getaspsproviders) to fetch the latest list of banks and their supported capabilities (such as Single Immediate Payments and Standing Order).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You should use the GET ASPSPs API to fetch the latest list of banks and their supported capabilities (such as Single Immediate Payments and Standing Order).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getaspsproviders",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "You should only show banks which support Standing Order and which are Enabled.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You should only show banks which support Standing Order and which are Enabled.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "Your end-users will need to select their bank so that they can be directed to the relevant authentication URL.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Your end-users will need to select their bank so that they can be directed to the relevant authentication URL.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "Note - This endpoint should be queried every time you request a standing order initiation, as banks may be temporarily marked as DISABLED if they are currently unavailable.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note - This endpoint should be queried every time you request a standing order initiation, as banks may be temporarily marked as DISABLED if they are currently unavailable.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## Step 2: Requesting a new standing order",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 2: Requesting a new standing order",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        33,
+        39
+      ],
+      "raw": "> 📘 Note:\n>\n> Standing orders can be set-up to recur on a monthly or a weekly basis and must have a start date at least three business days in the future.\n>\n> A standing order can only be cancelled or amended by the payer.\n>\n> Whilst most banks will process standing orders on a working day, some will mandate that a standing order request be submitted with a start date falling on a working day, otherwise the request will be rejected. Please reference [this table](https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview#working-day-limitations-for-standing-orders) for specific restrictions that must be considered when building your integration.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Note:Standing orders can be set-up to recur on a monthly or a weekly basis and must have a start date at least three business days in the future.A standing order can only be cancelled or amended by the payer.Whilst most banks will process standing orders on a working day, some will mandate that a standing order request be submitted with a start date falling on a working day, otherwise the request will be rejected. Please reference this table for specific restrictions that must be considered when building your integration.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview#working-day-limitations-for-standing-orders",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "To initiate a standing order request we require:-",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To initiate a standing order request we require:-",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        43,
+        49
+      ],
+      "raw": "* Payer Bank Identifier\n* Details of the receiving account\n* Start Date\n* Frequency\n* End Date (optional)\n* Payment Amount (GBP)\n* Payment Reference - To enable easier reconciliation for you when funds are received in your Modulr account this should be a unique for reference meaningful to your system. The payment reference has a limit of 18 alphanumeric characters",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Payer Bank IdentifierDetails of the receiving accountStart DateFrequencyEnd Date (optional)Payment Amount (GBP)Payment Reference - To enable easier reconciliation for you when funds are received in your Modulr account this should be a unique for reference meaningful to your system. The payment reference has a limit of 18 alphanumeric characters",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "More details for these fields can be found [here](https://modulr.readme.io/reference/initiatestandingorder).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "More details for these fields can be found here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/initiatestandingorder",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "Please consult the Modulr Implementation guide that shows the required information that MUST be displayed to the end-user before initiating any PISP journey.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please consult the Modulr Implementation guide that shows the required information that MUST be displayed to the end-user before initiating any PISP journey.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "For a summary of the banks that limit start and end dates of standing orders to working days, please see [this table below](https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview#working-day-limitations-for-standing-orders).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For a summary of the banks that limit start and end dates of standing orders to working days, please see this table below.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview#working-day-limitations-for-standing-orders",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "Once you have gathered this information, you should use the POST /standing-order-initiations API to request a new standing order.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once you have gathered this information, you should use the POST /standing-order-initiations API to request a new standing order.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "## Step 3: Redirect the end-user to their bank to authenticate and confirm the set-up of the standing order.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 3: Redirect the end-user to their bank to authenticate and confirm the set-up of the standing order.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "Modulr’s response to the API call in Step 2 will return a unique standing order initiation ID and a unique redirect URL to the end-user’s bank’s authentication portal.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modulr’s response to the API call in Step 2 will return a unique standing order initiation ID and a unique redirect URL to the end-user’s bank’s authentication portal.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "You should immediately redirect the end-user to this URL so that they can authorise the set-up of the standing order.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You should immediately redirect the end-user to this URL so that they can authorise the set-up of the standing order.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "Notes on this redirect URL:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Notes on this redirect URL:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        67,
+        69
+      ],
+      "raw": "* The redirect URL will be valid for 5 minutes. After this, if the end-user hasn’t continued with the standing order initiation, we will expire the standing order initiation request. If, after this, you were to retrieve the status of the standing order initiation, it would now have a status of ER\\_EXPIRED.\n* Whilst the redirect URL does not contain any sensitive information that could be used maliciously in isolation, it does contain data that might facilitate malicious use when paired with information gained elsewhere. It is not intended to be used in other ways, such as being pasted into emails where it can be easily inspected.\n* If the end-user is using a mobile device which has the bank’s mobile app installed, the redirect URL may open in the app. This would generally be the desired experience. If the bank’s mobile app is not installed or not correctly setup to open the URL, it will open in a web browser page.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The redirect URL will be valid for 5 minutes. After this, if the end-user hasn’t continued with the standing order initiation, we will expire the standing order initiation request. If, after this, you were to retrieve the status of the standing order initiation, it would now have a status of ER_EXPIRED.Whilst the redirect URL does not contain any sensitive information that could be used maliciously in isolation, it does contain data that might facilitate malicious use when paired with information gained elsewhere. It is not intended to be used in other ways, such as being pasted into emails where it can be easily inspected.If the end-user is using a mobile device which has the bank’s mobile app installed, the redirect URL may open in the app. This would generally be the desired experience. If the bank’s mobile app is not installed or not correctly setup to open the URL, it will open in a web browser page.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "The end-user will have to follow the bank’s process to authenticate and approve the standing order. The process tends to be quite similar for each bank but does vary slightly.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The end-user will have to follow the bank’s process to authenticate and approve the standing order. The process tends to be quite similar for each bank but does vary slightly.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        73,
+        73
+      ],
+      "raw": "Once the end-user has completed this process, Modulr will finalise the standing order initiation and will then redirect the end-user to the redirect URL that you provided during your onboarding process. The next section explains this part of the process in more detail.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once the end-user has completed this process, Modulr will finalise the standing order initiation and will then redirect the end-user to the redirect URL that you provided during your onboarding process. The next section explains this part of the process in more detail.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "## Step 4: Returning the end-user back to your site or application",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 4: Returning the end-user back to your site or application",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "As noted in Step 3, once the end-user has approved the standing order, Modulr will redirect them to the redirect URL that you provided during your onboarding process. This URL will contain the standing order initiation identifier and will also contain a parameter to indicate success or failure of the standing order initiation. The purpose of this indication is so that you can display an appropriate message to the end user but you **must not** rely on this as a definitive status, as it could have been tampered with by a malicious user or third party.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "As noted in Step 3, once the end-user has approved the standing order, Modulr will redirect them to the redirect URL that you provided during your onboarding process. This URL will contain the standing order initiation identifier and will also contain a parameter to indicate success or failure of the standing order initiation. The purpose of this indication is so that you can display an appropriate message to the end user but you must not rely on this as a definitive status, as it could have been tampered with by a malicious user or third party.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "## Step 5: Retrieving the status of the standing order initation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 5: Retrieving the status of the standing order initation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "To retrieve details of the standing order initiation including a definitive status, you should use the [GET /standing-order-initiations/\\{standingOrderInitiationId} API](https://modulr.readme.io/reference/getstandingorderinitiation).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To retrieve details of the standing order initiation including a definitive status, you should use the GET /standing-order-initiations/{standingOrderInitiationId} API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getstandingorderinitiation",
+          "line": 81
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        83,
+        83
+      ],
+      "raw": "These details include the standing order status as received from the bank (aspspPaymentStatus). The response object will contain the Standing Order status as received from the bank. You should check this as very occasionally, the end-user’s bank may fail to set-up the standing order even after the initiation has been approved.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "These details include the standing order status as received from the bank (aspspPaymentStatus). The response object will contain the Standing Order status as received from the bank. You should check this as very occasionally, the end-user’s bank may fail to set-up the standing order even after the initiation has been approved.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "See the *Standing Order Payment Initiation Lifecycle* section for details of the standing order initiation statuses.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "See the Standing Order Payment Initiation Lifecycle section for details of the standing order initiation statuses.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        87,
+        87
+      ],
+      "raw": "## High level end-to-end flow for Standing Order Initiations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "High level end-to-end flow for Standing Order Initiations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "The diagram detailed below shows an overview of the standing order initiation flow.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The diagram detailed below shows an overview of the standing order initiation flow.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "![](https://files.readme.io/51a7ac3-0a0c2620-740c-4f5f-b06f-498922734d95.png \"0a0c2620-740c-4f5f-b06f-498922734d95.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/51a7ac3-0a0c2620-740c-4f5f-b06f-498922734d95.png",
+        "title": "0a0c2620-740c-4f5f-b06f-498922734d95.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/51a7ac3-0a0c2620-740c-4f5f-b06f-498922734d95.png",
+          "line": 91
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 33,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "## Payment Initiation Status Life Cycle",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Payment Initiation Status Life Cycle",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "Each payment initiation request moves through the statuses as detailed below:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Each payment initiation request moves through the statuses as detailed below:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "![](https://files.readme.io/c2c6224-StateDiagram2.png \"StateDiagram2.png\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/c2c6224-StateDiagram2.png",
+        "title": "StateDiagram2.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/c2c6224-StateDiagram2.png",
+          "line": 97
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 36,
+      "lines": [
+        99,
+        177
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Status\n      </th>\n\n      <th>\n        Comment\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        AWAITING\\_CONSENT\n      </td>\n\n      <td>\n        Waiting for the end-user to approve the payment initiation at their bank. If not approved/rejected within a certain timeframe, the payment initiation will move to ER\\_EXPIRED. Otherwise it will move to EXECUTED or any of the other error statuses.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        CONSENT\\_REJECTED\n      </td>\n\n      <td>\n        The end-user or bank has rejected the payment initiation.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        EXECUTED\n      </td>\n\n      <td>\n        The payment initiation has been accepted by the bank and it is with them to execute.  \n\n        Note that the bank may still on rare occasions have problems fulfilling the payment and fail at the time of execution. You should not assume that the payment has been successful until you check the status of field aspspPaymentStatus.  \n\n        Alternatively you can check if funds have been received into the destination account.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        ER\\_EXTSYS\n      </td>\n\n      <td>\n        The payment initiation failed because there was a problem communicating with the bank’s systems.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        ER\\_EXPIRED\n      </td>\n\n      <td>\n        The end-user did not approve or reject the payment initiation within a certain timeframe, for example, by not even logging into their banking app.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        ER\\_GENERAL\n      </td>\n\n      <td>\n        Generic error occurred when processing the payment initiation.\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "Status",
+          "Comment"
+        ],
+        "rows": [
+          [
+            "AWAITING_CONSENT",
+            "Waiting for the end-user to approve the payment initiation at their bank. If not approved/rejected within a certain timeframe, the payment initiation will move to ER_EXPIRED. Otherwise it will move to EXECUTED or any of the other error statuses."
+          ],
+          [
+            "CONSENT_REJECTED",
+            "The end-user or bank has rejected the payment initiation."
+          ],
+          [
+            "EXECUTED",
+            "The payment initiation has been accepted by the bank and it is with them to execute.Note that the bank may still on rare occasions have problems fulfilling the payment and fail at the time of execution. You should not assume that the payment has been successful until you check the status of field aspspPaymentStatus.Alternatively you can check if funds have been received into the destination account."
+          ],
+          [
+            "ER_EXTSYS",
+            "The payment initiation failed because there was a problem communicating with the bank’s systems."
+          ],
+          [
+            "ER_EXPIRED",
+            "The end-user did not approve or reject the payment initiation within a certain timeframe, for example, by not even logging into their banking app."
+          ],
+          [
+            "ER_GENERAL",
+            "Generic error occurred when processing the payment initiation."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        179,
+        179
+      ],
+      "raw": "## Additional Standing Order Status (standingOrderStatus)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Additional Standing Order Status (standingOrderStatus)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        181,
+        181
+      ],
+      "raw": "In addition to the status field on a standing order payment initiation, the standingOrderStatus field gives additional detail as received from the payer’s bank",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In addition to the status field on a standing order payment initiation, the standingOrderStatus field gives additional detail as received from the payer’s bank",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        183,
+        183
+      ],
+      "raw": "![](https://files.readme.io/b5b4740-Stading_order_Status.jfif \"Stading order Status.jfif\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/b5b4740-Stading_order_Status.jfif",
+        "title": "Stading order Status.jfif"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/b5b4740-Stading_order_Status.jfif",
+          "line": 183
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 40,
+      "lines": [
+        185,
+        189
+      ],
+      "raw": "| Status              | Payment Status Description                                                                                 |\n| :------------------ | :--------------------------------------------------------------------------------------------------------- |\n| InitiationCompleted | A standing order request has been created at the bank and the initiation of the payment order is complete. |\n| InitiationFailed    | A standing order request has been created at the bank and the initiation of the payment order has failed.  |\n| InitiationPending   | A standing order request has been created at the bank and the initiation of the payment order is pending.  |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Payment Status Description"
+        ],
+        "rows": [
+          [
+            "InitiationCompleted",
+            "A standing order request has been created at the bank and the initiation of the payment order is complete."
+          ],
+          [
+            "InitiationFailed",
+            "A standing order request has been created at the bank and the initiation of the payment order has failed."
+          ],
+          [
+            "InitiationPending",
+            "A standing order request has been created at the bank and the initiation of the payment order is pending."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        191,
+        191
+      ],
+      "raw": "## Working Day Limitations for Standing Orders",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Working Day Limitations for Standing Orders",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        193,
+        193
+      ],
+      "raw": "Whilst most banks will process standing orders on a working day, some will mandate that a standing order request be submitted with a start date falling on a working day, otherwise the request will be rejected. The following banks have specific restrictions that must be considered when building your integration.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Whilst most banks will process standing orders on a working day, some will mandate that a standing order request be submitted with a start date falling on a working day, otherwise the request will be rejected. The following banks have specific restrictions that must be considered when building your integration.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        195,
+        293
+      ],
+      "raw": "<Table align={[\"left\",\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Bank\n      </th>\n\n      <th>\n        Weekly Frequency\n      </th>\n\n      <th>\n        Monthly Frequency\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        Bank of Ireland\n        Revolut\n      </td>\n\n      <td>\n        Does not support end date\n      </td>\n\n      <td>\n        Does not support end date\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Bank of Scotland\\\n        Halifax\\\n        Lloyds\n      </td>\n\n      <td>\n        Must commence on a working day\n      </td>\n\n      <td>\n        If specifying an end date, must match the starting date.  \n\n        E.g. if starting on the 2nd of the month, the end date must also be the 2nd of the month.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Barclays\\\n        Danske Bank\n      </td>\n\n      <td>\n        Must commence on a working day\n      </td>\n\n      <td>\n\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        first direct\\\n        HSBC\\\n        NatWest\\\n        Royal Bank of Scotland\n      </td>\n\n      <td>\n        Must commence on a working day\n      </td>\n\n      <td>\n        Must commence on a working day\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Santander\n      </td>\n\n      <td>\n        Must commence on a working day\\\n        Does not support end date\n      </td>\n\n      <td>\n        Does not support end date\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "Bank",
+          "Weekly Frequency",
+          "Monthly Frequency"
+        ],
+        "rows": [
+          [
+            "Bank of Ireland\nRevolut",
+            "Does not support end date",
+            "Does not support end date"
+          ],
+          [
+            "Bank of ScotlandHalifaxLloyds",
+            "Must commence on a working day",
+            "If specifying an end date, must match the starting date.E.g. if starting on the 2nd of the month, the end date must also be the 2nd of the month."
+          ],
+          [
+            "BarclaysDanske Bank",
+            "Must commence on a working day",
+            ""
+          ],
+          [
+            "first directHSBCNatWestRoyal Bank of Scotland",
+            "Must commence on a working day",
+            "Must commence on a working day"
+          ],
+          [
+            "Santander",
+            "Must commence on a working dayDoes not support end date",
+            "Does not support end date"
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    }
+  ]
+}

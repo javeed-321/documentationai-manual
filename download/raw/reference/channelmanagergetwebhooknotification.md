@@ -1,0 +1,200 @@
+---
+updatedAt: 2026-04-21T08:30:35.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Retrieve Webhook notification configuration
+
+Retrieve a Webhook notification configuration for the authenticated Channel Manager
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "paths": {
+    "/channel-managers/webhook-notifications/{notificationId}": {
+      "get": {
+        "tags": [
+          "Channel Manager Webhook Notifications"
+        ],
+        "summary": "Retrieve Webhook notification configuration",
+        "description": "Retrieve a Webhook notification configuration for the authenticated Channel Manager",
+        "operationId": "channelManagerGetWebhookNotification",
+        "parameters": [
+          {
+            "name": "notificationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Webhook notification retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/channelmanager.WebhookNotificationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/channelmanager.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "channelmanager.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "channelmanager.WebhookNotificationResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the notification"
+          },
+          "type": {
+            "type": "string",
+            "description": "Webhook type",
+            "enum": [
+              "PAYIN",
+              "PAYOUT",
+              "CARD_AUTH",
+              "CARD_AUTH_OFFLINE"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of notification",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "destination": {
+            "type": "string",
+            "description": "URL destination"
+          },
+          "retry": {
+            "type": "boolean",
+            "description": "Flag indicating whether failed webhooks should be retried"
+          },
+          "secret": {
+            "type": "string",
+            "description": "Webhook secret, must be 32 chars"
+          },
+          "hmacAlgorithm": {
+            "type": "string",
+            "description": "Signing algorithm that is used in Webhook HMAC calculation",
+            "enum": [
+              "hmac-sha1",
+              "hmac-sha256",
+              "hmac-sha384",
+              "hmac-sha512"
+            ]
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

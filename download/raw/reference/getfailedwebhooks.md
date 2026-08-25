@@ -1,0 +1,241 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Check if a particular webhook has failed
+
+Only supports webhook notifications and as such uses the webhook endpoint. Request a specific notification ID and specify you want to see failures. (Max 50)
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Notification",
+      "description": "Operations on Notifications"
+    }
+  ],
+  "paths": {
+    "/webhooks/{webhookId}/failures": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Check if a particular webhook has failed",
+        "description": "Only supports webhook notifications and as such uses the webhook endpoint. Request a specific notification ID and specify you want to see failures. (Max 50)",
+        "operationId": "getFailedWebHooks",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "path",
+            "description": "Id of Webhook ",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Failed since Date. Needs to be urlEncoded value",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/notification.WebHookFailureResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/notification.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "notification.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "notification.WebHookFailureResponse": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Endpoint URL for receiving webhook data"
+          },
+          "eventName": {
+            "type": "string",
+            "description": "Event which would trigger the webhook",
+            "enum": [
+              "PAYIN",
+              "PAYOUT",
+              "BALANCE_LOW",
+              "BALANCE_HIGH",
+              "BALANCE",
+              "DDMANDATE",
+              "CUSTVSTAT",
+              "ACCOUNT_STATEMENT",
+              "PENDING_PAYMENTS",
+              "DD_INCOMING_DEBIT",
+              "DD_FAILED_CLAIM",
+              "DD_FUNDS_RETURNED",
+              "CARD_AUTH",
+              "CARD_AUTH_OFFLINE",
+              "CARD_CREATION",
+              "UPCOMING_CREDIT",
+              "UPCOMING_COLLECTION_CREDIT",
+              "UPCOMING_COLLECTION_DEBIT",
+              "CARD_STATUS_UPDATE",
+              "CARD_TOKEN_PROVISIONING",
+              "PAYMENT_COMPLIANCE_STATUS",
+              "DD_COLLECTION_STATUS",
+              "ACCOUNT_SWITCH_UPDATE",
+              "PAYMENT_FILE_UPLOAD",
+              "ACCOUNT_STATUS_CHANGE",
+              "PAYMENT_APPROVAL_STATUS_CHANGE",
+              "CUSTOMER_BATCH_PAYMENT_APPROVAL_STATUS_CHANGE",
+              "CARD_BULK_OPS_COMPLETED",
+              "CUSTOMER_STATUS",
+              "CREDIT_AUTH",
+              "DD_INDEMNITY_CLAIM_STATUS",
+              "APPLICATION_STATUS_CHANGE",
+              "CUSTOMER_CREATED"
+            ]
+          },
+          "customerBid": {
+            "type": "string",
+            "description": "Unique Identifier for the customer of this webhook."
+          },
+          "retry": {
+            "type": "boolean",
+            "description": "Turn webhook retry mechanism on/off"
+          },
+          "lastFailedTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last failure time. Format is 'yyyy-MM-dd'T'HH:mm:ssZ' where Z is UTC offset. e.g '2017-01-28T01:01:01+0000'"
+          },
+          "data": {}
+        },
+        "required": [
+          "customerBid",
+          "eventName",
+          "lastFailedTime",
+          "retry",
+          "url"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

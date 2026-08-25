@@ -1,0 +1,31 @@
+---
+updatedAt: 2025-09-05T18:48:33.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Webhook - Direct Debit, Upcoming Collection Credit
+
+Applicable to Direct Debit Collections service
+
+### Upcoming Direct Debit Collection Credit
+
+The `UpcomingDDCollectionCredit` event is triggered a day prior (Bacs processing day 2 of a cycle) to you receiving a Direct Debit Collection settlement credit to your collection account. It is an early notification of gross amount of funds covering all incoming collections for the processing day, that will be credited the following working day (Bacs processing day 3).
+
+```json
+{
+  "EventId": "ab1c234d-5efg-6789-01hi-2341j5kl67mn",
+  "Currency": "GBP",
+  "AccountId": "E123XAM4",
+  "EventName": "UPCOMINGCOLLECTIONCREDIT",
+  "EventTime": "2022-01-01T03:46:18+0000",
+  "SchemeInfo": {
+    "Id": "9a0e0d433c7fe318f85132cf6a1a79a0c925cf74fc5d2c7c905d1a7bd4e5d427-J02416U2",
+    "Name": "BACS"
+  },
+  "CollectionDate": "2022-01-01",
+  "ServiceUserNumber": "123456",
+  "AccountExternalRef": "E123XAMP",
+  "TotalCollectionAmount": "1.00"
+}
+```

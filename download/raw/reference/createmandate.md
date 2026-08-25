@@ -1,0 +1,380 @@
+---
+updatedAt: 2026-06-11T13:31:39.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Create a Direct Debit mandate for the given account-id.
+
+Setting up a Mandate is the first step in creating a Direct Debit. You can only set up scheduled payments ('collections') after there is a Mandate created with the details of the payee.
+
+Learn more about implementing these endpoints with our below guides
+
+* [Payment Collection Use Cases](https://modulr.readme.io/docs/collecting-payments-with-modulr-use-case-guides)
+* [Set Up Recurring Collections](https://modulr.readme.io/docs/set-up-recurring-collections)
+* [Failed Payments Recovery](https://modulr.readme.io/docs/failed-payment-recovery-direct-debit-pay-by-bank)
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Direct Debits",
+      "description": "Direct Debit operations"
+    }
+  ],
+  "paths": {
+    "/accounts/{accountId}/mandates": {
+      "post": {
+        "tags": [
+          "Direct Debits"
+        ],
+        "summary": "Create a Direct Debit mandate for the given account-id.",
+        "description": "Setting up a Mandate is the first step in creating a Direct Debit. You can only set up scheduled payments ('collections') after there is a Mandate created with the details of the payee.",
+        "operationId": "createMandate",
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "description": "Id of account to create Direct Debit for.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/directdebit.CreateMandateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/directdebit.Mandate"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation errors",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/directdebit.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/directdebit.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "directdebit.Address": {
+        "type": "object",
+        "properties": {
+          "addressLine1": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 0
+          },
+          "addressLine2": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 0
+          },
+          "postTown": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 0
+          },
+          "postCode": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 0
+          },
+          "country": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "addressLine1",
+          "country",
+          "postCode",
+          "postTown"
+        ]
+      },
+      "directdebit.Mandate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique id for direct-debit-mandate.",
+            "example": "G0000001"
+          },
+          "accountId": {
+            "type": "string",
+            "description": "Unique id for account for this mandate.",
+            "example": "A0000001"
+          },
+          "reference": {
+            "type": "string",
+            "description": "DDI reference that was used during creation."
+          },
+          "externalReference": {
+            "type": "string",
+            "description": "External reference that was used during creation (appears on the bank statement)."
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Datetime when direct-debit-mandate was created.Format is 'yyyy-MM-dd'T'HH:mm:ssZ' where Z is UTC offset. e.g 2017-01-28T01:01:01+0000",
+            "example": "2017-01-28T01:01:01+0000"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the direct-debit-mandate. mandates must be 'ACTIVE' to make collections. Can be one of ",
+            "example": "ACTIVE"
+          },
+          "nextValidCollectionDate": {
+            "type": "string",
+            "description": "The earliest date a collection can be created. Format is yyyy-MM-dd.",
+            "example": "2018-01-10"
+          },
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "$ref": "#/components/schemas/directdebit.Address"
+          },
+          "sortCode": {
+            "type": "string",
+            "description": "Sort Code of the account for which direct-debit-mandate has been created.",
+            "example": "123456"
+          },
+          "accountNumber": {
+            "type": "string",
+            "description": "Account Number for which direct-debit-mandate has been created.",
+            "example": "87654321"
+          },
+          "payeeAccountBid": {
+            "type": "string",
+            "description": "Unique id for individual recipient account used for internal transfers",
+            "example": "A0000001"
+          },
+          "bulkCreateRequestId": {
+            "type": "string",
+            "description": "Id associate to the bulk create request of this mandate.",
+            "example": "R210000005"
+          },
+          "bulkCancelRequestId": {
+            "type": "string",
+            "description": "Id associate to the bulk cancel request of this mandate.",
+            "example": "R210000006"
+          }
+        },
+        "required": [
+          "accountId",
+          "accountNumber",
+          "createdDate",
+          "externalReference",
+          "id",
+          "nextValidCollectionDate",
+          "reference",
+          "sortCode",
+          "status"
+        ]
+      },
+      "directdebit.CreateMandateRequest": {
+        "type": "object",
+        "description": "Details of the Direct Debit mandate.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name for mandate",
+            "maxLength": 40,
+            "minLength": 0
+          },
+          "reference": {
+            "type": "string",
+            "description": "Mandate reference, should contain only letters, numbers, space, dot, ampersand, forward-slash , hyphen",
+            "example": "REFER-1.2",
+            "maxLength": 18,
+            "minLength": 6,
+            "pattern": "^[a-zA-Z 0-9\\.\\&\\/-]+$"
+          },
+          "externalReference": {
+            "type": "string",
+            "description": "External reference for mandate",
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "[\\w-\\s]*"
+          },
+          "accountName": {
+            "type": "string",
+            "description": "Payer's account name",
+            "maxLength": 100,
+            "minLength": 1
+          },
+          "sortCode": {
+            "type": "string",
+            "description": "Payer's sort code of account for which direct-debit-mandate has to be created.",
+            "example": "000000",
+            "pattern": "\\p{Digit}{6}"
+          },
+          "accountNumber": {
+            "type": "string",
+            "description": "Payer's account number for which direct-debit-mandate has to be created.",
+            "example": "12345678",
+            "pattern": "\\p{Digit}{8}"
+          },
+          "address": {
+            "$ref": "#/components/schemas/directdebit.Address",
+            "description": "Payee's address"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Payer's phone number",
+            "maxLength": 14,
+            "minLength": 0,
+            "pattern": "\\p{Digit}+"
+          },
+          "email": {
+            "type": "string",
+            "description": "Payer's email address",
+            "maxLength": 100,
+            "minLength": 6,
+            "pattern": "[^\\s@]+@[^\\s@]+\\.[^\\s@]+"
+          },
+          "payeeAccountBid": {
+            "type": "string",
+            "description": "Distribution accountBid, only used in FM-DD model"
+          }
+        },
+        "required": [
+          "accountName",
+          "accountNumber",
+          "address",
+          "externalReference",
+          "name",
+          "phone",
+          "reference",
+          "sortCode"
+        ]
+      },
+      "directdebit.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

@@ -1,0 +1,543 @@
+{
+  "slug": "docs/custom-reference-fields",
+  "source": "https://modulr.readme.io/docs/custom-reference-fields.md",
+  "url": "https://modulr.readme.io/docs/custom-reference-fields",
+  "title": "Custom Reference Fields",
+  "description": "How to set up and manage Custom Reference Fields",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:36:30.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 16,
+    "code": 1,
+    "list": 2,
+    "Callout": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Custom Reference Fields",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Custom Reference Fields",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "How to set up and manage Custom Reference Fields",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "How to set up and manage Custom Reference Fields",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Custom Reference Fields are the ability to add extra information to cards, at either the creation stage or whether you are updating a card, this can be for whatever extra detail you require for managing cards.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Custom Reference Fields are the ability to add extra information to cards, at either the creation stage or whether you are updating a card, this can be for whatever extra detail you require for managing cards.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "**Note** - this is available on both Physical and Virtual cards",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note - this is available on both Physical and Virtual cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "This is split into two different parts - the key and the key-value, below goes into detail about each aspects.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is split into two different parts - the key and the key-value, below goes into detail about each aspects.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "A total of 20 Custom Reference keys can be created and managed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A total of 20 Custom Reference keys can be created and managed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## Custom Reference Field Keys",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Custom Reference Field Keys",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "Custom Reference Field keys are required be set up in the first instance as these are what decides what extra information is required on the card, these are able to be created in bulk so if there's more than one that's required on the cards these can all be created in one go.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Custom Reference Field keys are required be set up in the first instance as these are what decides what extra information is required on the card, these are able to be created in bulk so if there's more than one that's required on the cards these can all be created in one go.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "An example would be adding Booking References to cards.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An example would be adding Booking References to cards.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        36
+      ],
+      "raw": "```Text JSON\ncustomFields: [\n  {\n    \"key\": \"bookingRef\",\n    \"required\": \"true\"\n  },\n  {\n    \"key\": \"carRentalNo\",\n    \"required\": \"false\"\n  }\n]\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "Text",
+        "title": "JSON",
+        "code": "customFields: [\n  {\n    \"key\": \"bookingRef\",\n    \"required\": \"true\"\n  },\n  {\n    \"key\": \"carRentalNo\",\n    \"required\": \"false\"\n  }\n]"
+      },
+      "text": "JSON",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "The endpoints needed to create the keys are:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The endpoints needed to create the keys are:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        40,
+        41
+      ],
+      "raw": "* [Bulk Create Partner Custom Field Keys](https://modulr.readme.io/reference/bulkcreatepartnercustomfieldkeys)\n* [Bulk Create Customer Custom Field Keys](https://modulr.readme.io/reference/bulkcreatecustomercustomfieldkeys)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Bulk Create Partner Custom Field KeysBulk Create Customer Custom Field Keys",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/bulkcreatepartnercustomfieldkeys",
+          "line": 40
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/bulkcreatecustomercustomfieldkeys",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "lines": [
+        43,
+        50
+      ],
+      "raw": "> 🚧 Limitations\n>\n> Below is a list of the limitations that are set on the endpoints:\n>\n> * Maximum of 20 ACTIVE keys (active is defined as \"true\" on the request)\n> * 30 character length of only Alphanumeric\n> * Required can only be \"true\" or \"false\"\n> * No duplicate key names allowed, bad request will be the response if a duplicate is provided",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "LimitationsBelow is a list of the limitations that are set on the endpoints:Maximum of 20 ACTIVE keys (active is defined as \"true\" on the request)30 character length of only AlphanumericRequired can only be \"true\" or \"false\"No duplicate key names allowed, bad request will be the response if a duplicate is provided",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "If a key is no longer needed or created in error then they can be deleted by using one of the following links:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If a key is no longer needed or created in error then they can be deleted by using one of the following links:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        54,
+        55
+      ],
+      "raw": "* [Delete Partner Custom Field Key](https://modulr.readme.io/reference/deletepartnercustomfieldkey)\n* [Delete Customer Custom Field Key](https://modulr.readme.io/reference/deletecustomercustomfieldkey)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Delete Partner Custom Field KeyDelete Customer Custom Field Key",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/deletepartnercustomfieldkey",
+          "line": 54
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/deletecustomercustomfieldkey",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "lines": [
+        57,
+        59
+      ],
+      "raw": "> 📘 Can I amend a Key?\n>\n> No, keys can not be amended once created.  A new key would be required to be set up and the one that needs changing is to be deleted.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Can I amend a Key?No, keys can not be amended once created.  A new key would be required to be set up and the one that needs changing is to be deleted.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "## Custom Reference Field Key-Values",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Custom Reference Field Key-Values",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "When creating a card or updating a card, and you have created Custom Reference Field keys you will need to add the key and the key-value in the requests.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When creating a card or updating a card, and you have created Custom Reference Field keys you will need to add the key and the key-value in the requests.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "The following endpoints are needed to complete these requests:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following endpoints are needed to complete these requests:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        67,
+        67
+      ],
+      "raw": "[Create Virtual Card](https://modulr.readme.io/reference/createcard)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Create Virtual Card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createcard",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "[Create a Physical Card](https://modulr.readme.io/reference/createphysicalcard)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Create a Physical Card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createphysicalcard",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "i": 22,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "[Update a Card](https://modulr.readme.io/reference/update)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Update a Card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/update",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        73,
+        75
+      ],
+      "raw": "> ❗️ Required Keys\n>\n> If a Custom Reference Field key has been created and required is set to \"true\" then you must include this on the above requests, if not the request will fail.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "❗️"
+      },
+      "text": "Required KeysIf a Custom Reference Field key has been created and required is set to \"true\" then you must include this on the above requests, if not the request will fail.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "danger"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "## Managing Custom Reference Fields",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Managing Custom Reference Fields",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "If a key-value is needed to be deleted then use [Delete Custom Field](https://modulr.readme.io/reference/deletecardcustomfield)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If a key-value is needed to be deleted then use Delete Custom Field",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/deletecardcustomfield",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "All existing endpoints used for retrieving cards now include the Custom Reference Fields as well, please use these if more detail is needed on what Custom Reference Fields have been set up.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All existing endpoints used for retrieving cards now include the Custom Reference Fields as well, please use these if more detail is needed on what Custom Reference Fields have been set up.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

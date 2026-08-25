@@ -1,0 +1,108 @@
+{
+  "slug": "reference/getsharesecurecarddetails",
+  "source": "https://modulr.readme.io/reference/getsharesecurecarddetails.md",
+  "url": "https://modulr.readme.io/reference/getsharesecurecarddetails",
+  "title": "Retrieve share secure card details",
+  "description": "This endpoint allows the user to retrieve the share secure card details for a specific card",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-04-21T08:30:35.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Retrieve share secure card details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Retrieve share secure card details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This endpoint allows the user to retrieve the share secure card details for a specific card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This endpoint allows the user to retrieve the share secure card details for a specific card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        281
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Share secure card details\",\n      \"description\": \"Share secure card details operations\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/share-secure-details\": {\n      \"get\": {\n        \"tags\": [\n          \"Share secure card details\"\n        ],\n        \"summary\": \"Retrieve share secure card details\",\n        \"description\": \"This endpoint allows the user to retrieve the share secure card details for a specific card\",\n        \"operationId\": \"getShareSecureCardDetails\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"The ID of the card to retrieve share secure card details for\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"excludeTerminated\",\n            \"in\": \"query\",\n            \"description\": \"Exclude terminated share secure card details\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\"\n            }\n          },\n          {\n            \"name\": \"page\",\n            \"in\": \"query\",\n            \"description\": \"Page to fetch (0 indexed)\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"minimum\": 0\n            }\n          },\n          {\n            \"name\": \"size\",\n            \"in\": \"query\",\n            \"description\": \"Size of page to fetch\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"maximum\": 500\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsPageResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Invalid permissions\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsPageResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.ShareSecureCardDetailsPageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of responses on the current page\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsResponse\"\n            }\n          },\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Page size\"\n          },\n          \"totalSize\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total count\"\n          },\n          \"page\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Current page number, 0 based; i.e first-page = 0, second-page = 1\"\n          },\n          \"totalPages\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Total pages\"\n          }\n        },\n        \"required\": [\n          \"content\",\n          \"page\",\n          \"size\",\n          \"totalPages\",\n          \"totalSize\"\n        ]\n      },\n      \"card.ShareSecureCardDetailsResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\"\n          },\n          \"createdBy\": {\n            \"type\": \"string\"\n          },\n          \"email\": {\n            \"type\": \"string\"\n          },\n          \"status\": {\n            \"type\": \"string\"\n          },\n          \"expiryDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"createdDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"lastRevealedDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"noOfAccessesLeft\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\"\n          },\n          \"maxAccessesAllowed\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\"\n          }\n        }\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Share secure card details\",\n      \"description\": \"Share secure card details operations\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/share-secure-details\": {\n      \"get\": {\n        \"tags\": [\n          \"Share secure card details\"\n        ],\n        \"summary\": \"Retrieve share secure card details\",\n        \"description\": \"This endpoint allows the user to retrieve the share secure card details for a specific card\",\n        \"operationId\": \"getShareSecureCardDetails\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"The ID of the card to retrieve share secure card details for\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"excludeTerminated\",\n            \"in\": \"query\",\n            \"description\": \"Exclude terminated share secure card details\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"boolean\"\n            }\n          },\n          {\n            \"name\": \"page\",\n            \"in\": \"query\",\n            \"description\": \"Page to fetch (0 indexed)\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"minimum\": 0\n            }\n          },\n          {\n            \"name\": \"size\",\n            \"in\": \"query\",\n            \"description\": \"Size of page to fetch\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"maximum\": 500\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsPageResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Invalid permissions\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsPageResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.ShareSecureCardDetailsPageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of responses on the current page\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsResponse\"\n            }\n          },\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Page size\"\n          },\n          \"totalSize\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total count\"\n          },\n          \"page\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Current page number, 0 based; i.e first-page = 0, second-page = 1\"\n          },\n          \"totalPages\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Total pages\"\n          }\n        },\n        \"required\": [\n          \"content\",\n          \"page\",\n          \"size\",\n          \"totalPages\",\n          \"totalSize\"\n        ]\n      },\n      \"card.ShareSecureCardDetailsResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\"\n          },\n          \"createdBy\": {\n            \"type\": \"string\"\n          },\n          \"email\": {\n            \"type\": \"string\"\n          },\n          \"status\": {\n            \"type\": \"string\"\n          },\n          \"expiryDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"createdDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"lastRevealedDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"noOfAccessesLeft\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\"\n          },\n          \"maxAccessesAllowed\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\"\n          }\n        }\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

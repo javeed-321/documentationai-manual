@@ -1,0 +1,542 @@
+{
+  "slug": "changelog/modconnect-june-2023",
+  "source": "https://modulr.readme.io/changelog/modconnect-june-2023.md",
+  "url": "https://modulr.readme.io/changelog/modconnect-june-2023",
+  "title": "ModConnect - June 2023",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 9,
+    "Callout": 2,
+    "Image": 4,
+    "paragraph": 11
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# ModConnect - June 2023",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "ModConnect - June 2023",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        11
+      ],
+      "raw": "<Callout icon=\"💶\" theme=\"default\">\n  ### Top picks this month\n\n  * European Payments | Spain and France Branch Enablement\n  * Open Banking Payment Initiation Service | UK Expansion\n  * Modulr Portal | Invite Your Clients to Complete Applications\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "💶",
+        "theme": "default"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "<Image align=\"center\" src=\"https://files.readme.io/45617a9-MC_strip_2.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "src": "https://files.readme.io/45617a9-MC_strip_2.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## New Product Updates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "New Product Updates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "### European Payments | Spain and France Branch Enablement",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "European Payments | Spain and France Branch Enablement",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "We have officially completed our branch set-up in both Spain and France, and you will be able to create EUR accounts with Spanish and French IBANs from July. By launching a selection of European IBANs (ES and FR IBANs, in addition to our existing IE and NL IBANs), we will be able to support your expansion ambitions to Europe, allowing you to issue accounts across the region. As a SEPA scheme participant, you can use our EUR accounts to send and receive payments via SEPA Credit Transfer and SEPA CT Instant.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have officially completed our branch set-up in both Spain and France, and you will be able to create EUR accounts with Spanish and French IBANs from July. By launching a selection of European IBANs (ES and FR IBANs, in addition to our existing IE and NL IBANs), we will be able to support your expansion ambitions to Europe, allowing you to issue accounts across the region. As a SEPA scheme participant, you can use our EUR accounts to send and receive payments via SEPA Credit Transfer and SEPA CT Instant.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "If you would like more information on the above, please contact your Customer Success Manager.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you would like more information on the above, please contact your Customer Success Manager.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "### Open Banking Payment Initiation Service | UK Expansion",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Open Banking Payment Initiation Service | UK Expansion",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        25,
+        26
+      ],
+      "raw": "From July, you will be able to initiate payments from a wider selection of banks!\\\nOur Payment Initiation Service is already connected to the UK’s largest banks and building societies but that doesn’t mean our work is done! We regularly review our connectivity to reflect current market demand and your feedback and we are excited to share that we will soon be making new bank integrations available, including Virgin Money, Starling Bank and others.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "From July, you will be able to initiate payments from a wider selection of banks!Our Payment Initiation Service is already connected to the UK’s largest banks and building societies but that doesn’t mean our work is done! We regularly review our connectivity to reflect current market demand and your feedback and we are excited to share that we will soon be making new bank integrations available, including Virgin Money, Starling Bank and others.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "You can find our full supported bank list and read about how to use the provider list API in our [Developer Guide](https://modulr.readme.io/docs/supported-banks-and-aspsps)Developer Guide.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can find our full supported bank list and read about how to use the provider list API in our Developer GuideDeveloper Guide.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/supported-banks-and-aspsps",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "If you would like more information on the above, please contact your Customer Success Manager.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you would like more information on the above, please contact your Customer Success Manager.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## Modulr Portal – new features",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Modulr Portal – new features",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "### Invite Your Clients to Complete Applications",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Invite Your Clients to Complete Applications",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "Partners can now invite their clients to complete applications themselves. This removes admin burden and shares the effort with your clients, making the process more efficient and collaborative.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Partners can now invite their clients to complete applications themselves. This removes admin burden and shares the effort with your clients, making the process more efficient and collaborative.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        38,
+        40
+      ],
+      "raw": "> 📘 Please note\n>\n> Client Invite is only available to our In-house KYC Partners. Outsourced KYC will still see ‘Save & Exit’ only.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Please noteClient Invite is only available to our In-house KYC Partners. Outsourced KYC will still see ‘Save & Exit’ only.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "Building further on last month’s update, giving save in-progress capabilities to your applications, as a Partner you can now choose between completing the application yourself, or sending it out to your clients at any point during the application. This can be done by simply selecting the ‘Save or Send’ button in the top right of the screen, then selecting ‘Send to client’ and submitting the form.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Building further on last month’s update, giving save in-progress capabilities to your applications, as a Partner you can now choose between completing the application yourself, or sending it out to your clients at any point during the application. This can be done by simply selecting the ‘Save or Send’ button in the top right of the screen, then selecting ‘Send to client’ and submitting the form.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "<Image align=\"center\" className=\"border\" border={true} src=\"https://files.readme.io/efd37f3-MODCONNECT_32_-_2.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "className": "border",
+        "border": "{true}",
+        "src": "https://files.readme.io/efd37f3-MODCONNECT_32_-_2.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "className=\"border\" is redundant with border={true}",
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "![](https://files.readme.io/bc1d461-MODCONNECT_32_-_3.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/bc1d461-MODCONNECT_32_-_3.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/bc1d461-MODCONNECT_32_-_3.png",
+          "line": 46
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "You will see a new section in your ‘Applications’ list screen called ‘Sent to client’ which will allow you to keep track of any applications that are currently with your client. Within this section you will also see a 'Resend' button for whenever you need to redirect the application to a different email address.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You will see a new section in your ‘Applications’ list screen called ‘Sent to client’ which will allow you to keep track of any applications that are currently with your client. Within this section you will also see a 'Resend' button for whenever you need to redirect the application to a different email address.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "<Image align=\"center\" className=\"border\" border={true} src=\"https://files.readme.io/a641fa2-MODCONNECT_32_-_4.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "className": "border",
+        "border": "{true}",
+        "src": "https://files.readme.io/a641fa2-MODCONNECT_32_-_4.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "className=\"border\" is redundant with border={true}",
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "Once the application is completed by you or your client, you will see your customers in your Customers list with a status of IN PROGRESS until CDD checks have been completed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once the application is completed by you or your client, you will see your customers in your Customers list with a status of IN PROGRESS until CDD checks have been completed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "## Enhancements / Bugs Resolved",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Enhancements / Bugs Resolved",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "### Cards | Update to Card Activities endpoint",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Cards | Update to Card Activities endpoint",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "You can now easily reconcile your accounts with the new card ORIGINAL CREDIT transaction types, for both APPLIED and SETTLED states, as a result of a change we have made to the[ GET Card Activities endpoint](https://modulr.readme.io/reference/getcardactivities)<https://modulr.readme.io/reference/getcardactivities>).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can now easily reconcile your accounts with the new card ORIGINAL CREDIT transaction types, for both APPLIED and SETTLED states, as a result of a change we have made to the GET Card Activities endpointhttps://modulr.readme.io/reference/getcardactivities).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcardactivities",
+          "line": 58
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcardactivities>",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "i": 25,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "### Cards | Replace a Card endpoint",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Cards | Replace a Card endpoint",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "You can now initiate a replacement  card for both CANCELLED and EXPIRED state for active accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can now initiate a replacement  card for both CANCELLED and EXPIRED state for active accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

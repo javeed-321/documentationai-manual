@@ -1,0 +1,445 @@
+{
+  "slug": "docs/rules-1",
+  "source": "https://modulr.readme.io/docs/rules-1.md",
+  "url": "https://modulr.readme.io/docs/rules-1",
+  "title": "Payment rules",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:35:31.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 13,
+    "code": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Payment rules",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Payment rules",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "After you have set up your accounts and are able to send and receive payments, you can start automating your payment flows. For example, when a payment is received into an account, you might want to automatically forward 10% of the money to to an external company account and the remaining 90% to an external client account. This can be done using our Payment Rule functionality.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After you have set up your accounts and are able to send and receive payments, you can start automating your payment flows. For example, when a payment is received into an account, you might want to automatically forward 10% of the money to to an external company account and the remaining 90% to an external client account. This can be done using our Payment Rule functionality.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Before creating any rules, you will need to have Accounts and Beneficiaries setup, as rules need a Modulr account to be applied to, and at least one beneficiary's unique reference as a destination.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before creating any rules, you will need to have Accounts and Beneficiaries setup, as rules need a Modulr account to be applied to, and at least one beneficiary's unique reference as a destination.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Types of rules",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Types of rules",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "### Split",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Split",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Incoming payments are automatically split into specified percentages to beneficiaries. Split percentages can be specified up to 2 decimal places.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Incoming payments are automatically split into specified percentages to beneficiaries. Split percentages can be specified up to 2 decimal places.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "### Conditional Split",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Conditional Split",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "Incoming payments are automatically split into specified percentages to beneficiaries until a fixed amount is met. Thereafter, incoming payments can be automatically split to a different set of beneficiaries, or can remain in the account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Incoming payments are automatically split into specified percentages to beneficiaries until a fixed amount is met. Thereafter, incoming payments can be automatically split to a different set of beneficiaries, or can remain in the account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "### Sweep",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Sweep",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "At a specified frequency, all money in an account will be automatically transferred into a beneficiary account. This process runs at 3pm UK time. Optional settings allow the rule to only run if the balance is above a certain amount, and to leave a certain amount in the account after the sweep has run.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "At a specified frequency, all money in an account will be automatically transferred into a beneficiary account. This process runs at 3pm UK time. Optional settings allow the rule to only run if the balance is above a certain amount, and to leave a certain amount in the account after the sweep has run.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "### Funding",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Funding",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "When there is an outgoing payment from an account that does not have sufficient funds, the account can be automatically funded from a secondary account. This rule is only available if the ‘Hold For Funds’ feature has been enabled.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When there is an outgoing payment from an account that does not have sufficient funds, the account can be automatically funded from a secondary account. This rule is only available if the ‘Hold For Funds’ feature has been enabled.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## Examples of payment rules",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Examples of payment rules",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        33,
+        34
+      ],
+      "raw": "**Split**\\\nMove 7.25% of each incoming payment to a beneficiary.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "SplitMove 7.25% of each incoming payment to a beneficiary.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        36,
+        50
+      ],
+      "raw": "```text\n{\n    \"name\": \"Split Example\",\n    \"type\": \"SPLIT\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"splits\": [\n            {\n                \"percent\": \"7.25\",\n                \"destinationId\": \"B1000001\"\n            }\n        ]\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "text",
+        "title": null,
+        "code": "{\n    \"name\": \"Split Example\",\n    \"type\": \"SPLIT\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"splits\": [\n            {\n                \"percent\": \"7.25\",\n                \"destinationId\": \"B1000001\"\n            }\n        ]\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        52,
+        53
+      ],
+      "raw": "**Conditional Split**\\\nWhen an incoming payment is received, transfer 10% to B1000001 and 5% to B1000002 until 100 GBP has been sent to B1000001. The remaining 85% remains in account. Once the amount of 100 GBP has been met, 100% of incoming payments will be transferred to B1000003.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Conditional SplitWhen an incoming payment is received, transfer 10% to B1000001 and 5% to B1000002 until 100 GBP has been sent to B1000001. The remaining 85% remains in account. Once the amount of 100 GBP has been met, 100% of incoming payments will be transferred to B1000003.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        55,
+        80
+      ],
+      "raw": "```text\n{\n    \"name\": \"Conditional Split Example\",\n    \"type\": \"SPLIT\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"splits\": [\n            {\n                \"percent\": \"100\",\n                \"destinationId\": \"B1000003\"\n            }\n        ],\n        \"conditionalSplits\": [\n            {\n                \"percent\": \"5\",\n                \"destinationId\": \"B1000002\"\n            }\n        ],\n        \"conditionalSplitConfig\": {\n            \"percent\": \"10\",\n            \"destinationId\": \"B1000001\",\n            \"conditionAmount\": 100\n        }\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "text",
+        "title": null,
+        "code": "{\n    \"name\": \"Conditional Split Example\",\n    \"type\": \"SPLIT\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"splits\": [\n            {\n                \"percent\": \"100\",\n                \"destinationId\": \"B1000003\"\n            }\n        ],\n        \"conditionalSplits\": [\n            {\n                \"percent\": \"5\",\n                \"destinationId\": \"B1000002\"\n            }\n        ],\n        \"conditionalSplitConfig\": {\n            \"percent\": \"10\",\n            \"destinationId\": \"B1000001\",\n            \"conditionAmount\": 100\n        }\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        82,
+        83
+      ],
+      "raw": "**Sweep**\\\nEach day all funds will be automatically transferred to B1000001.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "SweepEach day all funds will be automatically transferred to B1000001.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        85,
+        104
+      ],
+      "raw": "```text\n{\n    \"name\": \"Sweep Example\",\n    \"type\": \"SWEEP\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"daysToRun\": [\n            \"MONDAY\",\n            \"TUESDAY\",\n            \"WEDNESDAY\",\n            \"THURSDAY\",\n            \"FRIDAY\",\n            \"SATURDAY\",\n            \"SUNDAY\"\n        ],\n        \"frequency\": \"Daily\",\n        \"destinationId\": \"B1000001\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "text",
+        "title": null,
+        "code": "{\n    \"name\": \"Sweep Example\",\n    \"type\": \"SWEEP\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"daysToRun\": [\n            \"MONDAY\",\n            \"TUESDAY\",\n            \"WEDNESDAY\",\n            \"THURSDAY\",\n            \"FRIDAY\",\n            \"SATURDAY\",\n            \"SUNDAY\"\n        ],\n        \"frequency\": \"Daily\",\n        \"destinationId\": \"B1000001\"\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        106,
+        107
+      ],
+      "raw": "**Funding**\\\nThe account A1000001 will be funded from secondary account A1000002 if required.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "FundingThe account A1000001 will be funded from secondary account A1000002 if required.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        109,
+        118
+      ],
+      "raw": "```text\n{\n    \"name\": \"Funding Example\",\n    \"type\": \"FUNDING\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"sourceId\": \"A1000002\"\n    }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "text",
+        "title": null,
+        "code": "{\n    \"name\": \"Funding Example\",\n    \"type\": \"FUNDING\",\n    \"accountId\": \"A1000001\",\n    \"data\": {\n        \"sourceId\": \"A1000002\"\n    }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        120,
+        120
+      ],
+      "raw": "**Example Scenario**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Example Scenario",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        122,
+        122
+      ],
+      "raw": "*Collecting 10% commission automatically from each Modulr Customer account into one Modulr account, which then gets transferred daily to an external account.*",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Collecting 10% commission automatically from each Modulr Customer account into one Modulr account, which then gets transferred daily to an external account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        124,
+        124
+      ],
+      "raw": "To do this you will need to set up a Split rule on all your Customer accounts that transfers 10% of any payment into their accounts into your main Modulr account, then setup a daily Sweep rule on your main Modulr account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To do this you will need to set up a Split rule on all your Customer accounts that transfers 10% of any payment into their accounts into your main Modulr account, then setup a daily Sweep rule on your main Modulr account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

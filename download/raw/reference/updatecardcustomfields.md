@@ -1,0 +1,196 @@
+---
+updatedAt: 2026-05-27T12:27:05.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Update a card's custom fields
+
+Replace the values of a card's custom fields if they exist or create new custom fields with the given values if they do not exist
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Cards",
+      "description": "Cards API"
+    }
+  ],
+  "paths": {
+    "/cards/{cardId}/custom-fields": {
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Update a card's custom fields",
+        "description": "Replace the values of a card's custom fields if they exist or create new custom fields with the given values if they do not exist",
+        "operationId": "updateCardCustomFields",
+        "parameters": [
+          {
+            "name": "cardId",
+            "in": "path",
+            "description": "Id of the card for which the custom fields should be updated",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/card.UpdateCardCustomFieldsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Custom fields updated successfully"
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/card.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "card.CardCustomFieldRequest": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Custom field key"
+          },
+          "value": {
+            "type": "string",
+            "description": "Custom field value"
+          }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
+      },
+      "card.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "card.UpdateCardCustomFieldsRequest": {
+        "type": "object",
+        "description": "Custom fields to be updated",
+        "properties": {
+          "customFields": {
+            "type": "array",
+            "description": "Custom fields",
+            "items": {
+              "$ref": "#/components/schemas/card.CardCustomFieldRequest"
+            },
+            "maxItems": 20,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "customFields"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

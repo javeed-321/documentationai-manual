@@ -1,0 +1,626 @@
+{
+  "slug": "docs/customer-verification-overview",
+  "source": "https://modulr.readme.io/docs/customer-verification-overview.md",
+  "url": "https://modulr.readme.io/docs/customer-verification-overview",
+  "title": "Customer Verification: Overview",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-11T09:54:44.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 14,
+    "thematicBreak": 6,
+    "list": 3,
+    "Table": 1,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Customer Verification: Overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Customer Verification: Overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Modulr's Customer Verification product gives Partners a fully managed, embedded KYB (Know Your Business)/KYC (Know Your Customer) experience for onboarding and ongoing due diligence of their customers. Rather than building your own compliance flow, you embed the Customer Verification SDK into your product and Modulr handles the rest.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modulr's Customer Verification product gives Partners a fully managed, embedded KYB (Know Your Business)/KYC (Know Your Customer) experience for onboarding and ongoing due diligence of their customers. Rather than building your own compliance flow, you embed the Customer Verification SDK into your product and Modulr handles the rest.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "This guide covers everything you need to integrate: creating applications, embedding the SDK, handling webhooks, and managing ongoing customer data updates.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This guide covers everything you need to integrate: creating applications, embedding the SDK, handling webhooks, and managing ongoing customer data updates.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## How it works",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "How it works",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "At a high level, the integration works like this:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "At a high level, the integration works like this:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        22
+      ],
+      "raw": "1. Your backend creates an **Application** for each customer via the Modulr API.\n2. You embed the **Customer Verification SDK** into your product, which presents the customer with the appropriate KYC or KYB data-capture journey.\n3. Modulr runs automated compliance checks and notifies your system of outcomes via **webhooks**.\n4. You listen for status changes and re-invoke the SDK whenever further customer action is needed.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Your backend creates an Application for each customer via the Modulr API.You embed the Customer Verification SDK into your product, which presents the customer with the appropriate KYC or KYB data-capture journey.Modulr runs automated compliance checks and notifies your system of outcomes via webhooks.You listen for status changes and re-invoke the SDK whenever further customer action is needed.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "Once verification is complete, Modulr creates a Customer record and provides you with a `customerId` to use for account creation.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once verification is complete, Modulr creates a Customer record and provides you with a customerId to use for account creation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "## Roles and responsibilities",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Roles and responsibilities",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        30,
+        34
+      ],
+      "raw": "| Role          | Responsibilities                                                                                               |\n| ------------- | -------------------------------------------------------------------------------------------------------------- |\n| **Applicant** | Provides information and completes verification steps via the embedded SDK.                                    |\n| **Partner**   | Creates application instances, embeds the SDK, handles webhooks, and notifies customers when action is needed. |\n| **Modulr**    | Generates the SDK UI, processes KYB/KYC data, runs compliance decisioning, and creates the customer record.    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Role",
+          "Responsibilities"
+        ],
+        "rows": [
+          [
+            "Applicant",
+            "Provides information and completes verification steps via the embedded SDK."
+          ],
+          [
+            "Partner",
+            "Creates application instances, embeds the SDK, handles webhooks, and notifies customers when action is needed."
+          ],
+          [
+            "Modulr",
+            "Generates the SDK UI, processes KYB/KYC data, runs compliance decisioning, and creates the customer record."
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "## What is the Customer Verification SDK?",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "What is the Customer Verification SDK?",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "The SDK is a pre-built, embeddable UI component that manages the full KYC/KYB journey within your product. It handles data capture, document collection, and result relay - all within your branded environment.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The SDK is a pre-built, embeddable UI component that manages the full KYC/KYB journey within your product. It handles data capture, document collection, and result relay - all within your branded environment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "As a Partner, you only need to:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "As a Partner, you only need to:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        44,
+        46
+      ],
+      "raw": "* Initialise the SDK with a short-lived token\n* Listen for webhook events\n* Re-surface the SDK when further customer input is required",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Initialise the SDK with a short-lived tokenListen for webhook eventsRe-surface the SDK when further customer input is required",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "The SDK is continuously maintained by Modulr, so your integration automatically stays compliant with evolving data requirements without you needing to update your code.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The SDK is continuously maintained by Modulr, so your integration automatically stays compliant with evolving data requirements without you needing to update your code.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "## Integration paths",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Integration paths",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "There are two ways to submit customer data before verification begins:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are two ways to submit customer data before verification begins:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "**SDK-only (recommended):** Skip API data submission entirely and let the SDK collect all required information directly from the customer. This is the preferred approach for most Partners, particularly for KYB (business) applications, as it insulates you from changes to the underlying data requirements.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "SDK-only (recommended): Skip API data submission entirely and let the SDK collect all required information directly from the customer. This is the preferred approach for most Partners, particularly for KYB (business) applications, as it insulates you from changes to the underlying data requirements.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "**API pre-population + SDK:** Use the compliance data APIs to pre-fill known information before invoking the SDK. The SDK will then only prompt the customer for anything that is missing. This is useful if you already hold verified data about your customer.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "API pre-population + SDK: Use the compliance data APIs to pre-fill known information before invoking the SDK. The SDK will then only prompt the customer for anything that is missing. This is useful if you already hold verified data about your customer.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "## Key concepts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Key concepts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "**Application ID:** Created for each customer verification attempt. A single customer may have multiple Application IDs over time, reflecting data updates and CDD refresh cycles. Always store this against your customer record.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Application ID: Created for each customer verification attempt. A single customer may have multiple Application IDs over time, reflecting data updates and CDD refresh cycles. Always store this against your customer record.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "**Customer ID:** Issued by Modulr once an application is approved. Use this to create payment accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Customer ID: Issued by Modulr once an application is approved. Use this to create payment accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "**Short-lived token:** Required to initialise the SDK for each session. Must be requested server-side and never exposed in client-side code.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Short-lived token: Required to initialise the SDK for each session. Must be requested server-side and never exposed in client-side code.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "## Next steps",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Next steps",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "Work through the integration in order:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Work through the integration in order:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        76,
+        83
+      ],
+      "raw": "1. [Integration Guide](https://modulr.readme.io/docs/customer-verification-integration-guide) - the full step-by-step guide with code examples\n2. [Application Statuses](https://modulr.readme.io/docs/customer-verification-application-statuses) - all status values your webhook handler must support\n3. Updating Customer Data *\\[WIP]* - how CDD refresh and manual data updates work\n4. Webhook reference articles for each event type:\n   1. [Application Status Change](https://modulr.readme.io/docs/webhook-application-status-change)\n   2. [Customer Created](https://modulr.readme.io/docs/webhook-customer-created)\n   3. [Customer Status Change](https://modulr.readme.io/docs/customer-status)\n   4. Customer Compliance Data Refresh *\\[WIP]*",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Integration Guide - the full step-by-step guide with code examplesApplication Statuses - all status values your webhook handler must supportUpdating Customer Data [WIP] - how CDD refresh and manual data updates workWebhook reference articles for each event type:Application Status ChangeCustomer CreatedCustomer Status ChangeCustomer Compliance Data Refresh [WIP]",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-verification-integration-guide",
+          "line": 76
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-verification-application-statuses",
+          "line": 77
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-application-status-change",
+          "line": 80
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-customer-created",
+          "line": 81
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-status",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "i": 32,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 85
+        }
+      ]
+    }
+  ]
+}

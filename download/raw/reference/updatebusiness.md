@@ -1,0 +1,210 @@
+---
+updatedAt: 2026-08-10T12:02:29.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Update a business entity for an Onboarding Application
+
+Updates an existing business entity for the specified application, modifying key details such as business name, type and company registration number.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Customers",
+      "description": "Operations on Customers"
+    }
+  ],
+  "paths": {
+    "/applications/{applicationId}/compliance/businesses/{businessId}": {
+      "put": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Update a business entity for an Onboarding Application",
+        "description": "Updates an existing business entity for the specified application, modifying key details such as business name, type and company registration number.",
+        "operationId": "updateBusiness",
+        "parameters": [
+          {
+            "name": "applicationId",
+            "in": "path",
+            "description": "ID of application",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "businessId",
+            "in": "path",
+            "description": "ID of business",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/customercompliance.BusinessRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid Parameters",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/customercompliance.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Incorrect permissions"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "customercompliance.BusinessRequest": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Business type",
+            "enum": [
+              "LLC",
+              "PLC",
+              "LLP",
+              "PARTNERSHIP",
+              "SOLETRADER"
+            ]
+          },
+          "registeredName": {
+            "type": "string",
+            "description": "Registered business name",
+            "maxLength": 100,
+            "minLength": 0
+          },
+          "registrationNumber": {
+            "type": "string",
+            "description": "Company registration number",
+            "maxLength": 40,
+            "minLength": 0
+          }
+        },
+        "required": [
+          "registeredName",
+          "type"
+        ]
+      },
+      "customercompliance.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

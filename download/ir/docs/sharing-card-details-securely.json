@@ -1,0 +1,574 @@
+{
+  "slug": "docs/sharing-card-details-securely",
+  "source": "https://modulr.readme.io/docs/sharing-card-details-securely.md",
+  "url": "https://modulr.readme.io/docs/sharing-card-details-securely",
+  "title": "Sharing Card Details Securely",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-11-13T10:55:59.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 14,
+    "br": 3,
+    "Callout": 2,
+    "list": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Sharing Card Details Securely",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sharing Card Details Securely",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Being able to share card details in a secure way is always challenging as usually it entails sending the details via email to a merchant’s email address and not knowing if this has been picked up by the correct person.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Being able to share card details in a secure way is always challenging as usually it entails sending the details via email to a merchant’s email address and not knowing if this has been picked up by the correct person.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "As a result, Modulr have created the ability to be able to send to recipients the card details in a secure and controlled way giving you the ability to manage who see’s the details and how many times.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "As a result, Modulr have created the ability to be able to send to recipients the card details in a secure and controlled way giving you the ability to manage who see’s the details and how many times.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "This works by sending a secure link direct to the email address required for the merchant to then use to view the details when required, you can tailor what gets sent and how its accessed by following the below.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This works by sending a secure link direct to the email address required for the merchant to then use to view the details when required, you can tailor what gets sent and how its accessed by following the below.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "## Sending Secure Card Details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Sending Secure Card Details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "Secure card details can be sent either at the time of creating the card or you can choose a specific card when required.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Secure card details can be sent either at the time of creating the card or you can choose a specific card when required.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "Equally you have the option available to send the details direct to the merchant automatically or return them to yourself for you to send when required.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Equally you have the option available to send the details direct to the merchant automatically or return them to yourself for you to send when required.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        27
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  You will need the Card ID to be able to send the secure card details\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "You will need the Card ID to be able to send the secure card details",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 10,
+          "lines": [
+            26,
+            26
+          ],
+          "raw": "  You will need the Card ID to be able to send the secure card details",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "You will need the Card ID to be able to send the secure card details",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "To send the secure card details you need to use the [Share Card Details](https://modulr.readme.io/reference/createsharesecuredetails#/) endpoint and inputting the details within the SHARECARDDETAILS object.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To send the secure card details you need to use the Share Card Details endpoint and inputting the details within the SHARECARDDETAILS object.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createsharesecuredetails#/",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        31,
+        33
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  The default will always be EMAIL unless specified and the email address will always be required\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "The default will always be EMAIL unless specified and the email address will always be required",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 13,
+          "lines": [
+            32,
+            32
+          ],
+          "raw": "  The default will always be EMAIL unless specified and the email address will always be required",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "The default will always be EMAIL unless specified and the email address will always be required",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "All other information is set to default options however, you can also configure the number of times the link can be accessed, have a specific date for the link to expire and if there's anything else you wish to send across.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All other information is set to default options however, you can also configure the number of times the link can be accessed, have a specific date for the link to expire and if there's anything else you wish to send across.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "The basic information sent will be the following:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The basic information sent will be the following:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        39,
+        43
+      ],
+      "raw": "* Card PAN\n* Expiry Date\n* CVC\n* Card Scheme\n* Card Currency",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Card PANExpiry DateCVCCard SchemeCard Currency",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "When completed you will receive a Share Secure Details ID which you should store for future use relating to that request.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When completed you will receive a Share Secure Details ID which you should store for future use relating to that request.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "## Managing the Shared Details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Managing the Shared Details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "If there is a need to amend details of what's been sent then this is able to be completed by using the [Amend Shared Card Details](https://modulr.readme.io/reference/updatesharesecuredetails#/) endpoint.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If there is a need to amend details of what's been sent then this is able to be completed by using the Amend Shared Card Details endpoint.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/updatesharesecuredetails#/",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "i": 20,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "You can also retrieve details on what you have shared via the following methods:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can also retrieve details on what you have shared via the following methods:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        55,
+        57
+      ],
+      "raw": "* [Return Card Share Details](https://modulr.readme.io/reference/getsharesecurecarddetails#/) – Returns all information about a card in which you have shared the secure details\n* [Return Share Details ](https://modulr.readme.io/reference/getsharesecurecarddetailsbyid#/) – Returns all the information on a specific Share Secure Card Details request\n* [Return Share Details Activity ](https://modulr.readme.io/reference/getsharesecurecarddetailstokenactivity#/) – Returns all the activity that’s been completed on a specific Share Secure Card Details request",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Return Card Share Details – Returns all information about a card in which you have shared the secure detailsReturn Share Details  – Returns all the information on a specific Share Secure Card Details requestReturn Share Details Activity  – Returns all the activity that’s been completed on a specific Share Secure Card Details request",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getsharesecurecarddetails#/",
+          "line": 55
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getsharesecurecarddetailsbyid#/",
+          "line": 56
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getsharesecurecarddetailstokenactivity#/",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "i": 22,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "## Removing Shared Details",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Removing Shared Details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "If there is no longer a need for the card details to be shared then you can remove them by either of the two options:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If there is no longer a need for the card details to be shared then you can remove them by either of the two options:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        65,
+        66
+      ],
+      "raw": "* [Delete Share Details for Card](https://modulr.readme.io/reference/deletesharesecuredetailscardlink#/) – This will delete all the details shared for a specific card\n* [Delete Share Details Request ](https://modulr.readme.io/reference/deletesharesecuredetails#/) – This will remove an individual request that’s been previously sent",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Delete Share Details for Card – This will delete all the details shared for a specific cardDelete Share Details Request  – This will remove an individual request that’s been previously sent",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/deletesharesecuredetailscardlink#/",
+          "line": 65
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/deletesharesecuredetails#/",
+          "line": 66
+        }
+      ]
+    }
+  ]
+}

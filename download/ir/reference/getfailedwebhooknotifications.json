@@ -1,0 +1,91 @@
+{
+  "slug": "reference/getfailedwebhooknotifications",
+  "source": "https://modulr.readme.io/reference/getfailedwebhooknotifications.md",
+  "url": "https://modulr.readme.io/reference/getfailedwebhooknotifications",
+  "title": "Retrieve failed Webhook Notifications for a Webhook using the Notification ID.",
+  "description": "",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-04-21T05:49:14.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Retrieve failed Webhook Notifications for a Webhook using the Notification ID.",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Retrieve failed Webhook Notifications for a Webhook using the Notification ID.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        251
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/integration-notification-webhooks/{notificationId}/failures\": {\n      \"get\": {\n        \"tags\": [\n          \"Integration Notification\"\n        ],\n        \"summary\": \"Retrieve failed Webhook Notifications for a Webhook using the Notification ID.\",\n        \"operationId\": \"getFailedWebhookNotifications\",\n        \"parameters\": [\n          {\n            \"name\": \"notificationId\",\n            \"in\": \"path\",\n            \"description\": \"Id of notification\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"fromDateTime\",\n            \"in\": \"query\",\n            \"description\": \"Failed since Date. Needs to be urlEncoded value\",\n            \"required\": true,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"page\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"default\": 0,\n              \"minimum\": 0\n            }\n          },\n          {\n            \"name\": \"size\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"default\": 20,\n              \"maximum\": 500,\n              \"minimum\": 1\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/integrationnotification.PaginatedWebhookFailureResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Bad request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/integrationnotification.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"Not found\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/integrationnotification.PaginatedWebhookFailureResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"integrationnotification.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"integrationnotification.PaginatedWebhookFailureResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of failed webhook delivery records\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/integrationnotification.WebhookFailureResponse\"\n            }\n          },\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Number of records returned in the current page\"\n          },\n          \"totalSize\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total number of matching failure records\"\n          },\n          \"page\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Current page number (0-based)\"\n          },\n          \"totalPages\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Total number of pages available\"\n          }\n        }\n      },\n      \"integrationnotification.WebhookFailureResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Notification bid for which the webhook delivery failed\"\n          },\n          \"failureDateTime\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\",\n            \"description\": \"Failure time. Format is 'yyyy-MM-dd'T'HH:mm:ssZ' where Z is UTC offset. e.g '2017-01-28T01:01:01+0000'\"\n          },\n          \"data\": {\n            \"description\": \"Payload data that was attempted to be sent to the webhook URL\"\n          }\n        },\n        \"required\": [\n          \"data\",\n          \"failureDateTime\",\n          \"id\"\n        ]\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/integration-notification-webhooks/{notificationId}/failures\": {\n      \"get\": {\n        \"tags\": [\n          \"Integration Notification\"\n        ],\n        \"summary\": \"Retrieve failed Webhook Notifications for a Webhook using the Notification ID.\",\n        \"operationId\": \"getFailedWebhookNotifications\",\n        \"parameters\": [\n          {\n            \"name\": \"notificationId\",\n            \"in\": \"path\",\n            \"description\": \"Id of notification\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"fromDateTime\",\n            \"in\": \"query\",\n            \"description\": \"Failed since Date. Needs to be urlEncoded value\",\n            \"required\": true,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"page\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"default\": 0,\n              \"minimum\": 0\n            }\n          },\n          {\n            \"name\": \"size\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"default\": 20,\n              \"maximum\": 500,\n              \"minimum\": 1\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/integrationnotification.PaginatedWebhookFailureResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Bad request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/integrationnotification.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"Not found\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/integrationnotification.PaginatedWebhookFailureResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"integrationnotification.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"integrationnotification.PaginatedWebhookFailureResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of failed webhook delivery records\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/integrationnotification.WebhookFailureResponse\"\n            }\n          },\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Number of records returned in the current page\"\n          },\n          \"totalSize\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total number of matching failure records\"\n          },\n          \"page\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Current page number (0-based)\"\n          },\n          \"totalPages\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Total number of pages available\"\n          }\n        }\n      },\n      \"integrationnotification.WebhookFailureResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Notification bid for which the webhook delivery failed\"\n          },\n          \"failureDateTime\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\",\n            \"description\": \"Failure time. Format is 'yyyy-MM-dd'T'HH:mm:ssZ' where Z is UTC offset. e.g '2017-01-28T01:01:01+0000'\"\n          },\n          \"data\": {\n            \"description\": \"Payload data that was attempted to be sent to the webhook URL\"\n          }\n        },\n        \"required\": [\n          \"data\",\n          \"failureDateTime\",\n          \"id\"\n        ]\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

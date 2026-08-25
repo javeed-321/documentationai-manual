@@ -669,7 +669,10 @@
                 "pages": [
                   {
                     "title": "Create account by customer",
-                    "path": "reference/createaccount"
+                    "path": "reference/createaccount",
+                    "method": "POST",
+                    "openapi": "api-reference/createaccount.json POST /customers/{customerId}/accounts",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -685,7 +688,10 @@
                     "pages": [
                       {
                         "title": "Create a card authorisation",
-                        "path": "reference/createauthorisation"
+                        "path": "reference/createauthorisation",
+                        "method": "POST",
+                        "openapi": "api-reference/createauthorisation.json POST /cards/{cardId}/authorisations",
+                        "openapi-mode": "auto"
                       }
                     ]
                   },
@@ -694,7 +700,10 @@
                     "pages": [
                       {
                         "title": "Get tasks",
-                        "path": "reference/getasynctasks"
+                        "path": "reference/getasynctasks",
+                        "method": "GET",
+                        "openapi": "api-reference/getasynctasks.json GET /card-tasks",
+                        "openapi-mode": "auto"
                       }
                     ]
                   },
@@ -703,7 +712,10 @@
                     "pages": [
                       {
                         "title": "Retrieve card report type notification configuration for partner",
-                        "path": "reference/getnotificationconfigurationsforagivenpartnerandreporttype"
+                        "path": "reference/getnotificationconfigurationsforagivenpartnerandreporttype",
+                        "method": "GET",
+                        "openapi": "api-reference/getnotificationconfigurationsforagivenpartnerandreporttype.json GET /partners/{partnerId}/card-report-types/{reportType}/notifications",
+                        "openapi-mode": "auto"
                       }
                     ]
                   },
@@ -712,7 +724,10 @@
                     "pages": [
                       {
                         "title": "Bulk create partner custom field keys",
-                        "path": "reference/bulkcreatepartnercustomfieldkeys"
+                        "path": "reference/bulkcreatepartnercustomfieldkeys",
+                        "method": "POST",
+                        "openapi": "api-reference/bulkcreatepartnercustomfieldkeys.json POST /partner/{partnerId}/bulk-card-custom-fields",
+                        "openapi-mode": "auto"
                       }
                     ]
                   },
@@ -721,7 +736,10 @@
                     "pages": [
                       {
                         "title": "Retrieve a single share secure card details record",
-                        "path": "reference/getsharesecurecarddetailsbyid"
+                        "path": "reference/getsharesecurecarddetailsbyid",
+                        "method": "GET",
+                        "openapi": "api-reference/getsharesecurecarddetailsbyid.json GET /cards/{cardId}/share-secure-details/{shareSecureDetailsId}",
+                        "openapi-mode": "auto"
                       }
                     ]
                   },
@@ -730,7 +748,10 @@
                     "pages": [
                       {
                         "title": "Channel Manager Update card",
-                        "path": "reference/channelmanagerupdatecard"
+                        "path": "reference/channelmanagerupdatecard",
+                        "method": "POST",
+                        "openapi": "api-reference/channelmanagerupdatecard.json POST /channel-managers/cards/{cardId}",
+                        "openapi-mode": "auto"
                       }
                     ]
                   },
@@ -748,7 +769,10 @@
                     "pages": [
                       {
                         "title": "[Restricted] Unsuspend a card",
-                        "path": "reference/unsuspendcard"
+                        "path": "reference/unsuspendcard",
+                        "method": "POST",
+                        "openapi": "api-reference/unsuspendcard.json POST /cards/{cardId}/unsuspend",
+                        "openapi-mode": "auto"
                       }
                     ]
                   }
@@ -759,7 +783,10 @@
                 "pages": [
                   {
                     "title": "Create a new beneficiary for a specified customer",
-                    "path": "reference/createbeneficiary"
+                    "path": "reference/createbeneficiary",
+                    "method": "POST",
+                    "openapi": "api-reference/createbeneficiary.json POST /customers/{customerId}/beneficiaries",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -768,7 +795,10 @@
                 "pages": [
                   {
                     "title": "Create an account name check",
-                    "path": "reference/createoutboundcop"
+                    "path": "reference/createoutboundcop",
+                    "method": "POST",
+                    "openapi": "api-reference/createoutboundcop.json POST /account-name-check",
+                    "openapi-mode": "custom"
                   }
                 ]
               },
@@ -804,7 +834,10 @@
                 "pages": [
                   {
                     "title": "Create a payment",
-                    "path": "reference/sendpayment"
+                    "path": "reference/sendpayment",
+                    "method": "POST",
+                    "openapi": "api-reference/sendpayment.json POST /payments",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -813,7 +846,10 @@
                 "pages": [
                   {
                     "title": "Create a Rule",
-                    "path": "reference/createrule"
+                    "path": "reference/createrule",
+                    "method": "POST",
+                    "openapi": "api-reference/createrule.json POST /rules",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -822,7 +858,10 @@
                 "pages": [
                   {
                     "title": "Get transactions for a specific Account",
-                    "path": "reference/gettransactionsbyaccount"
+                    "path": "reference/gettransactionsbyaccount",
+                    "method": "GET",
+                    "openapi": "api-reference/gettransactionsbyaccount.json GET /accounts/{accountId}/transactions",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -831,7 +870,10 @@
                 "pages": [
                   {
                     "title": "Uploads and stores document",
-                    "path": "reference/upload"
+                    "path": "reference/upload",
+                    "method": "POST",
+                    "openapi": "api-reference/upload.json POST /documents",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -840,7 +882,10 @@
                 "pages": [
                   {
                     "title": "Create access group",
-                    "path": "reference/createaccessgroup"
+                    "path": "reference/createaccessgroup",
+                    "method": "POST",
+                    "openapi": "api-reference/createaccessgroup.json POST /access-groups",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -849,7 +894,10 @@
                 "pages": [
                   {
                     "title": "Upload payment file and store valid payments",
-                    "path": "reference/upload-payment-file"
+                    "path": "reference/upload-payment-file",
+                    "method": "POST",
+                    "openapi": "api-reference/upload-payment-file.json POST /payment-files",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -858,7 +906,10 @@
                 "pages": [
                   {
                     "title": "Set up a Notification for a Partner",
-                    "path": "reference/addpartnernotification"
+                    "path": "reference/addpartnernotification",
+                    "method": "POST",
+                    "openapi": "api-reference/addpartnernotification.json POST /partners/{partnerId}/notifications",
+                    "openapi-mode": "custom"
                   }
                 ]
               },
@@ -867,7 +918,10 @@
                 "pages": [
                   {
                     "title": "List active bulk card requests",
-                    "path": "reference/getactivebulkcardrequests"
+                    "path": "reference/getactivebulkcardrequests",
+                    "method": "GET",
+                    "openapi": "api-reference/getactivebulkcardrequests.json GET /bulk-cards",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -876,7 +930,10 @@
                 "pages": [
                   {
                     "title": "Retrieve all Webhook Notification Subscriptions for a Customer.",
-                    "path": "reference/getallcustomerwebhooknotificationsubscriptions"
+                    "path": "reference/getallcustomerwebhooknotificationsubscriptions",
+                    "method": "GET",
+                    "openapi": "api-reference/getallcustomerwebhooknotificationsubscriptions.json GET /customers/{customerId}/integration-notifications",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -885,7 +942,10 @@
                 "pages": [
                   {
                     "title": "Initiate a Variable Recurring Payment.",
-                    "path": "reference/initiatevrppayment"
+                    "path": "reference/initiatevrppayment",
+                    "method": "POST",
+                    "openapi": "api-reference/initiatevrppayment.json POST /vrp",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -894,7 +954,10 @@
                 "pages": [
                   {
                     "title": "Initiate standing order from ASPSP",
-                    "path": "reference/createstandingorderinitiation"
+                    "path": "reference/createstandingorderinitiation",
+                    "method": "POST",
+                    "openapi": "api-reference/createstandingorderinitiation.json POST /standing-order-initiations",
+                    "openapi-mode": "auto"
                   }
                 ]
               },
@@ -903,7 +966,10 @@
                 "pages": [
                   {
                     "title": "Create Verification of Payee (VOP) request",
-                    "path": "reference/createoutboundvop"
+                    "path": "reference/createoutboundvop",
+                    "method": "POST",
+                    "openapi": "api-reference/createoutboundvop.json POST /verify-payee",
+                    "openapi-mode": "auto"
                   }
                 ]
               }
@@ -914,759 +980,1326 @@
             "pages": [
               {
                 "title": "Activate a physical card",
-                "path": "reference/activatecard"
+                "path": "reference/activatecard",
+                "method": "POST",
+                "openapi": "api-reference/activatecard.json POST /cards/{cardId}/activate",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Set up a Notification for a Customer",
-                "path": "reference/addcustomernotification"
+                "path": "reference/addcustomernotification",
+                "method": "POST",
+                "openapi": "api-reference/addcustomernotification.json POST /customers/{customerId}/notifications",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Set up a new Webhook Notification Subscription for a Customer.",
-                "path": "reference/addcustomerwebhooknotificationsubscription"
+                "path": "reference/addcustomerwebhooknotificationsubscription",
+                "method": "POST",
+                "openapi": "api-reference/addcustomerwebhooknotificationsubscription.json POST /customers/{customerId}/integration-notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Block a specific account",
-                "path": "reference/blockaccount"
+                "path": "reference/blockaccount",
+                "method": "POST",
+                "openapi": "api-reference/blockaccount.json POST /accounts/{accountId}/block",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Block an existing card",
-                "path": "reference/blockcard"
+                "path": "reference/blockcard",
+                "method": "POST",
+                "openapi": "api-reference/blockcard.json POST /cards/{cardId}/block",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Bulk create customer custom field keys",
-                "path": "reference/bulkcreatecustomercustomfieldkeys"
+                "path": "reference/bulkcreatecustomercustomfieldkeys",
+                "method": "POST",
+                "openapi": "api-reference/bulkcreatecustomercustomfieldkeys.json POST /customer/{customerId}/bulk-card-custom-fields",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Cancel the batch payment",
-                "path": "reference/cancelbatchpayments"
+                "path": "reference/cancelbatchpayments",
+                "method": "POST",
+                "openapi": "api-reference/cancelbatchpayments.json POST /batchpayments/{batchPaymentId}/cancel",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Bulk mandate cancellation request for the given account-id.",
-                "path": "reference/cancelbulkmandate"
+                "path": "reference/cancelbulkmandate",
+                "method": "POST",
+                "openapi": "api-reference/cancelbulkmandate.json POST /mandates/bulk-cancel",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Cancel an existing card",
-                "path": "reference/cancelcard"
+                "path": "reference/cancelcard",
+                "method": "POST",
+                "openapi": "api-reference/cancelcard.json POST /cards/{cardId}/cancel",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Cancel a Direct Debit collection for the given collection-id.",
-                "path": "reference/cancelcollection"
+                "path": "reference/cancelcollection",
+                "method": "POST",
+                "openapi": "api-reference/cancelcollection.json POST /collections/{collectionId}/cancel",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Cancel a Direct Debit collection schedule for the given collection-id.",
-                "path": "reference/cancelcollectionschedule"
+                "path": "reference/cancelcollectionschedule",
+                "method": "POST",
+                "openapi": "api-reference/cancelcollectionschedule.json POST /collectionschedules/{collectionScheduleId}/cancel",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Cancel a specific Mandate",
-                "path": "reference/cancelddosmandate"
+                "path": "reference/cancelddosmandate",
+                "method": "POST",
+                "openapi": "api-reference/cancelddosmandate.json POST /directdebits/cancel",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Cancel Mandate for given mandate-id.",
-                "path": "reference/cancelmandate"
+                "path": "reference/cancelmandate",
+                "method": "POST",
+                "openapi": "api-reference/cancelmandate.json POST /mandates/{mandateId}/cancel",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Card enquiry",
-                "path": "reference/cardenquiry"
+                "path": "reference/cardenquiry",
+                "method": "POST",
+                "openapi": "api-reference/cardenquiry.json POST /cards/enquiry",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Channel Manager Card enquiry",
-                "path": "reference/channelmanagercardenquiry"
+                "path": "reference/channelmanagercardenquiry",
+                "method": "POST",
+                "openapi": "api-reference/channelmanagercardenquiry.json POST /channel-managers/cards/enquiry",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Channel Manager Create card ",
-                "path": "reference/channelmanagercreatecard"
+                "path": "reference/channelmanagercreatecard",
+                "method": "POST",
+                "openapi": "api-reference/channelmanagercreatecard.json POST /channel-managers/accounts/{accountId}/cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a Webhook notification configuration",
-                "path": "reference/channelmanagercreatewebhooknotification"
+                "path": "reference/channelmanagercreatewebhooknotification",
+                "method": "POST",
+                "openapi": "api-reference/channelmanagercreatewebhooknotification.json POST /channel-managers/webhook-notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve channel manager's card activities",
-                "path": "reference/channelmanagergetcardactivities"
+                "path": "reference/channelmanagergetcardactivities",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagergetcardactivities.json GET /channel-managers/cards/activities",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve channel manager's cards",
-                "path": "reference/channelmanagergetcards"
+                "path": "reference/channelmanagergetcards",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagergetcards.json GET /channel-managers/cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve Webhook notification configuration",
-                "path": "reference/channelmanagergetwebhooknotification"
+                "path": "reference/channelmanagergetwebhooknotification",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagergetwebhooknotification.json GET /channel-managers/webhook-notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve Webhook notification configurations",
-                "path": "reference/channelmanagergetwebhooknotifications"
+                "path": "reference/channelmanagergetwebhooknotifications",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagergetwebhooknotifications.json GET /channel-managers/webhook-notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve Webhook notification configurations",
-                "path": "reference/channelmanagergetwebhooknotifications_1"
+                "path": "reference/channelmanagergetwebhooknotifications_1",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagergetwebhooknotifications_1.json GET /channel-managers/webhook-notifications/{notificationId}/failures",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Channel Manager Replace card ",
-                "path": "reference/channelmanagerreplacecard"
+                "path": "reference/channelmanagerreplacecard",
+                "method": "POST",
+                "openapi": "api-reference/channelmanagerreplacecard.json POST /channel-managers/cards/{cardId}/replace",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Channel Manager download a specific card report",
-                "path": "reference/channelmanagerretrievereport"
+                "path": "reference/channelmanagerretrievereport",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagerretrievereport.json GET /channel-managers/card-reports/{reportId}/report",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve channel manager's card reports",
-                "path": "reference/channelmanagersearchcardreports"
+                "path": "reference/channelmanagersearchcardreports",
+                "method": "GET",
+                "openapi": "api-reference/channelmanagersearchcardreports.json GET /channel-managers/card-reports",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Channel Manager Update card",
-                "path": "reference/channelmanagerupdatecard_1"
+                "path": "reference/channelmanagerupdatecard_1",
+                "method": "PATCH",
+                "openapi": "api-reference/channelmanagerupdatecard_1.json PATCH /channel-managers/cards/{cardId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Channel Manager Update Card Custom Fields",
-                "path": "reference/channelmanagerupdatecardcustomfields"
+                "path": "reference/channelmanagerupdatecardcustomfields",
+                "method": "POST",
+                "openapi": "api-reference/channelmanagerupdatecardcustomfields.json POST /channel-managers/cards/{cardId}/custom-fields",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update a specific Webhook notification configuration for a Channel Manager",
-                "path": "reference/channelmanagerupdatewebhooknotification"
+                "path": "reference/channelmanagerupdatewebhooknotification",
+                "method": "PATCH",
+                "openapi": "api-reference/channelmanagerupdatewebhooknotification.json PATCH /channel-managers/webhook-notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Close an account",
-                "path": "reference/closeaccount"
+                "path": "reference/closeaccount",
+                "method": "POST",
+                "openapi": "api-reference/closeaccount.json POST /accounts/{accountId}/close",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Confirm the availability of funds in an account.",
-                "path": "reference/confirmfunds"
+                "path": "reference/confirmfunds",
+                "method": "POST",
+                "openapi": "api-reference/confirmfunds.json POST /vrp-consents/{consentId}/funds-confirmation",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a New Onboarding Application",
-                "path": "reference/createapplication"
+                "path": "reference/createapplication",
+                "method": "POST",
+                "openapi": "api-reference/createapplication.json POST /applications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Add an individual/associated entity to an Onboarding Application",
-                "path": "reference/createapplicationassociate"
+                "path": "reference/createapplicationassociate",
+                "method": "POST",
+                "openapi": "api-reference/createapplicationassociate.json POST /applications/{applicationId}/compliance/associates",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Bulk request of Direct Debit mandates for the given account-id.",
-                "path": "reference/createbulkmandate"
+                "path": "reference/createbulkmandate",
+                "method": "POST",
+                "openapi": "api-reference/createbulkmandate.json POST /mandates/bulk-create",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Add a business entity to an Onboarding Application",
-                "path": "reference/createbusiness"
+                "path": "reference/createbusiness",
+                "method": "POST",
+                "openapi": "api-reference/createbusiness.json POST /applications/{applicationId}/compliance/businesses",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a new virtual card",
-                "path": "reference/createcard"
+                "path": "reference/createcard",
+                "method": "POST",
+                "openapi": "api-reference/createcard.json POST /accounts/{accountId}/cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a standalone chargeback",
-                "path": "reference/createchargeback"
+                "path": "reference/createchargeback",
+                "method": "POST",
+                "openapi": "api-reference/createchargeback.json POST /cards/{cardId}/chargebacks",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Chargeback an existing settlement",
-                "path": "reference/createchargebackforsettlement"
+                "path": "reference/createchargebackforsettlement",
+                "method": "POST",
+                "openapi": "api-reference/createchargebackforsettlement.json POST /cards/{cardId}/activities/{settlementActivityId}/chargebacks",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Reverse a chargeback",
-                "path": "reference/createchargebackreversal"
+                "path": "reference/createchargebackreversal",
+                "method": "POST",
+                "openapi": "api-reference/createchargebackreversal.json POST /activities/{chargebackActivityId}/chargeback-reversal",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Create the collection schedule for the given mandate-id.",
-                "path": "reference/createcollectionschedule"
+                "path": "reference/createcollectionschedule",
+                "method": "POST",
+                "openapi": "api-reference/createcollectionschedule.json POST /mandates/{mandateId}/collectionschedules",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Simulate a credit authorisation",
-                "path": "reference/createcreditauthorisation"
+                "path": "reference/createcreditauthorisation",
+                "method": "POST",
+                "openapi": "api-reference/createcreditauthorisation.json POST /cards/{cardId}/credit-authorisations",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a Direct Debit mandate for the given account-id.",
-                "path": "reference/createmandate"
+                "path": "reference/createmandate",
+                "method": "POST",
+                "openapi": "api-reference/createmandate.json POST /accounts/{accountId}/mandates",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Create an offline transaction",
-                "path": "reference/createofflinetransaction"
+                "path": "reference/createofflinetransaction",
+                "method": "POST",
+                "openapi": "api-reference/createofflinetransaction.json POST /cards/{cardId}/offline-transactions",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Simulate an original credit",
-                "path": "reference/createoriginalcredit"
+                "path": "reference/createoriginalcredit",
+                "method": "POST",
+                "openapi": "api-reference/createoriginalcredit.json POST /cards/{cardId}/original-credits",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create an account name check for Direct Debit Payer",
-                "path": "reference/createoutboundcheckforpnv"
+                "path": "reference/createoutboundcheckforpnv",
+                "method": "POST",
+                "openapi": "api-reference/createoutboundcheckforpnv.json POST /account-name-check/payer",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Initiate payment from ASPSP",
-                "path": "reference/createpaymentinitiation"
+                "path": "reference/createpaymentinitiation",
+                "method": "POST",
+                "openapi": "api-reference/createpaymentinitiation.json POST /payment-initiations",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Endpoint to mock the credit of an account",
-                "path": "reference/createpayments"
+                "path": "reference/createpayments",
+                "method": "POST",
+                "openapi": "api-reference/createpayments.json POST /credit",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a new physical card",
-                "path": "reference/createphysicalcard"
+                "path": "reference/createphysicalcard",
+                "method": "POST",
+                "openapi": "api-reference/createphysicalcard.json POST /accounts/{accountId}/physical-cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Resettlement of a chargeback",
-                "path": "reference/createresettlement"
+                "path": "reference/createresettlement",
+                "method": "POST",
+                "openapi": "api-reference/createresettlement.json POST /activities/{chargebackActivityId}/resettlement",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a secure Customer Verification SDK Session",
-                "path": "reference/createsdkkey"
+                "path": "reference/createsdkkey",
+                "method": "POST",
+                "openapi": "api-reference/createsdkkey.json POST /keys/applications/{applicationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a settlement without prior authorisation",
-                "path": "reference/createsettlement"
+                "path": "reference/createsettlement",
+                "method": "POST",
+                "openapi": "api-reference/createsettlement.json POST /cards/{cardId}/settlements",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Share secure card details via EMAIL or RETURN methods",
-                "path": "reference/createsharesecuredetails"
+                "path": "reference/createsharesecuredetails",
+                "method": "POST",
+                "openapi": "api-reference/createsharesecuredetails.json POST /cards/{cardId}/share-secure-details",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Deactivate card token",
-                "path": "reference/deactivatecardtoken"
+                "path": "reference/deactivatecardtoken",
+                "method": "POST",
+                "openapi": "api-reference/deactivatecardtoken.json POST /card-tokens/{tokenId}/deactivate",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete card report notification configuration for customer and report type",
-                "path": "reference/deleteallnotificationconfigurationsforagivencustomerandreporttype"
+                "path": "reference/deleteallnotificationconfigurationsforagivencustomerandreporttype",
+                "method": "DELETE",
+                "openapi": "api-reference/deleteallnotificationconfigurationsforagivencustomerandreporttype.json DELETE /customers/{customerId}/card-report-types/{reportType}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete card report notification configuration for partner and report type",
-                "path": "reference/deleteallnotificationconfigurationsforagivenpartnerandreporttype"
+                "path": "reference/deleteallnotificationconfigurationsforagivenpartnerandreporttype",
+                "method": "DELETE",
+                "openapi": "api-reference/deleteallnotificationconfigurationsforagivenpartnerandreporttype.json DELETE /partners/{partnerId}/card-report-types/{reportType}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete beneficiaries for a specified customer",
-                "path": "reference/deletebeneficiaries"
+                "path": "reference/deletebeneficiaries",
+                "method": "DELETE",
+                "openapi": "api-reference/deletebeneficiaries.json DELETE /customers/{customerId}/beneficiaries",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Mark bulk request as deleted",
-                "path": "reference/deletebulkrequest"
+                "path": "reference/deletebulkrequest",
+                "method": "DELETE",
+                "openapi": "api-reference/deletebulkrequest.json DELETE /bulk-cards/{bulkRequestId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete card custom field",
-                "path": "reference/deletecardcustomfield"
+                "path": "reference/deletecardcustomfield",
+                "method": "DELETE",
+                "openapi": "api-reference/deletecardcustomfield.json DELETE /cards/{cardId}/custom-fields/{key}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete customer custom field key",
-                "path": "reference/deletecustomercustomfieldkey"
+                "path": "reference/deletecustomercustomfieldkey",
+                "method": "DELETE",
+                "openapi": "api-reference/deletecustomercustomfieldkey.json DELETE /customer/{customerId}/card-custom-fields/{key}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete a Webhook Notification Subscription for a Customer using the Notification ID.",
-                "path": "reference/deletecustomerwebhooknotificationsubscription"
+                "path": "reference/deletecustomerwebhooknotificationsubscription",
+                "method": "DELETE",
+                "openapi": "api-reference/deletecustomerwebhooknotificationsubscription.json DELETE /customers/{customerId}/integration-notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete partner custom field key",
-                "path": "reference/deletepartnercustomfieldkey"
+                "path": "reference/deletepartnercustomfieldkey",
+                "method": "DELETE",
+                "openapi": "api-reference/deletepartnercustomfieldkey.json DELETE /partner/{partnerId}/card-custom-fields/{key}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete share secure card details",
-                "path": "reference/deletesharesecuredetails"
+                "path": "reference/deletesharesecuredetails",
+                "method": "DELETE",
+                "openapi": "api-reference/deletesharesecuredetails.json DELETE /share-secure-details/{shareId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Delete all share secure card details for a card",
-                "path": "reference/deletesharesecuredetailscardlink"
+                "path": "reference/deletesharesecuredetailscardlink",
+                "method": "DELETE",
+                "openapi": "api-reference/deletesharesecuredetailscardlink.json DELETE /cards/{cardId}/share-secure-details",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Edit an account",
-                "path": "reference/editaccount"
+                "path": "reference/editaccount",
+                "method": "PUT",
+                "openapi": "api-reference/editaccount.json PUT /accounts/{accountId}",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Edit a specific customer using a unique customer reference",
-                "path": "reference/editcustomer"
+                "path": "reference/editcustomer",
+                "method": "PUT",
+                "openapi": "api-reference/editcustomer.json PUT /customers/{customerId}",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Update a specific notification by unique reference for a specific customer",
-                "path": "reference/editcustomernotification"
+                "path": "reference/editcustomernotification",
+                "method": "PUT",
+                "openapi": "api-reference/editcustomernotification.json PUT /customers/{customerId}/notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update a specific Webhook Notification Subscription for a Customer.",
-                "path": "reference/editcustomerwebhooknotificationsubscription"
+                "path": "reference/editcustomerwebhooknotificationsubscription",
+                "method": "PUT",
+                "openapi": "api-reference/editcustomerwebhooknotificationsubscription.json PUT /customers/{customerId}/integration-notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update a specific notification by unique reference for a specific partner",
-                "path": "reference/editpartnernotification"
+                "path": "reference/editpartnernotification",
+                "method": "PUT",
+                "openapi": "api-reference/editpartnernotification.json PUT /partners/{partnerId}/notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "[Restricted] Expire an existing authorisation",
-                "path": "reference/expireauthorisation"
+                "path": "reference/expireauthorisation",
+                "method": "POST",
+                "openapi": "api-reference/expireauthorisation.json POST /authorisations/{authId}/expire",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Simulate a card expiry",
-                "path": "reference/expirecard"
+                "path": "reference/expirecard",
+                "method": "POST",
+                "openapi": "api-reference/expirecard.json POST /cards/{cardId}/expire",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Mark application as closed for modification",
-                "path": "reference/finaliseapplication"
+                "path": "reference/finaliseapplication",
+                "method": "POST",
+                "openapi": "api-reference/finaliseapplication.json POST /applications/{applicationId}/finalisations",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create secure card details token",
-                "path": "reference/generatecardholdertoken"
+                "path": "reference/generatecardholdertoken",
+                "method": "POST",
+                "openapi": "api-reference/generatecardholdertoken.json POST /cards/{cardId}/secure-details-token",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get the latest status of multiple uploaded payment files",
-                "path": "reference/get-payment-files-statuses"
+                "path": "reference/get-payment-files-statuses",
+                "method": "GET",
+                "openapi": "api-reference/get-payment-files-statuses.json GET /payment-files",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get the customer-level summaries of multiple uploaded payment files",
-                "path": "reference/get-payment-files-summaries"
+                "path": "reference/get-payment-files-summaries",
+                "method": "GET",
+                "openapi": "api-reference/get-payment-files-summaries.json GET /payment-files/summaries",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get access group",
-                "path": "reference/getaccessgroup"
+                "path": "reference/getaccessgroup",
+                "method": "GET",
+                "openapi": "api-reference/getaccessgroup.json GET /access-groups/{accessGroupId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get a list of access groups",
-                "path": "reference/getaccessgroups"
+                "path": "reference/getaccessgroups",
+                "method": "GET",
+                "openapi": "api-reference/getaccessgroups.json GET /access-groups",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get an account",
-                "path": "reference/getaccount"
+                "path": "reference/getaccount",
+                "method": "GET",
+                "openapi": "api-reference/getaccount.json GET /accounts/{accountId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get accounts using filter",
-                "path": "reference/getaccounts"
+                "path": "reference/getaccounts",
+                "method": "GET",
+                "openapi": "api-reference/getaccounts.json GET /accounts",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get accounts by customer",
-                "path": "reference/getaccountsbycustomer"
+                "path": "reference/getaccountsbycustomer",
+                "method": "GET",
+                "openapi": "api-reference/getaccountsbycustomer.json GET /customers/{customerId}/accounts",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get all Notifications for a Customer",
-                "path": "reference/getallcustomernotifications"
+                "path": "reference/getallcustomernotifications",
+                "method": "GET",
+                "openapi": "api-reference/getallcustomernotifications.json GET /customers/{customerId}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get all Notifications linked directly to a Partner",
-                "path": "reference/getallpartnernotifications"
+                "path": "reference/getallpartnernotifications",
+                "method": "GET",
+                "openapi": "api-reference/getallpartnernotifications.json GET /partners/{partnerId}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get supported ASPSPs",
-                "path": "reference/getaspsproviders"
+                "path": "reference/getaspsproviders",
+                "method": "GET",
+                "openapi": "api-reference/getaspsproviders.json GET /aspsps",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get all associates for a customer",
-                "path": "reference/getassociatesbycustomer"
+                "path": "reference/getassociatesbycustomer",
+                "method": "GET",
+                "openapi": "api-reference/getassociatesbycustomer.json GET /customers/{customerId}/associates",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get a card task",
-                "path": "reference/getasynctask"
+                "path": "reference/getasynctask",
+                "method": "GET",
+                "openapi": "api-reference/getasynctask.json GET /card-tasks/{taskId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get batch payment by ID",
-                "path": "reference/getbatchpayment"
+                "path": "reference/getbatchpayment",
+                "method": "GET",
+                "openapi": "api-reference/getbatchpayment.json GET /batchpayments/{id}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get batch payments by a given set of parameters",
-                "path": "reference/getbatchpayments"
+                "path": "reference/getbatchpayments",
+                "method": "GET",
+                "openapi": "api-reference/getbatchpayments.json GET /batchpayments",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve beneficiaries",
-                "path": "reference/getbeneficiaries"
+                "path": "reference/getbeneficiaries",
+                "method": "GET",
+                "openapi": "api-reference/getbeneficiaries.json GET /beneficiaries",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get bulk cards by id",
-                "path": "reference/getbulkcardsinfo"
+                "path": "reference/getbulkcardsinfo",
+                "method": "GET",
+                "openapi": "api-reference/getbulkcardsinfo.json GET /bulk-cards/{bulkRequestId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get business entity for an Onboarding Application",
-                "path": "reference/getbusiness"
+                "path": "reference/getbusiness",
+                "method": "GET",
+                "openapi": "api-reference/getbusiness.json GET /applications/{applicationId}/compliance/businesses",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get business addresses for an Onboarding Application",
-                "path": "reference/getbusinessaddresses"
+                "path": "reference/getbusinessaddresses",
+                "method": "GET",
+                "openapi": "api-reference/getbusinessaddresses.json GET /applications/{applicationId}/compliance/businesses/addresses",
+                "openapi-mode": "auto"
               },
               {
                 "title": "View the details of an existing card",
-                "path": "reference/getcard"
+                "path": "reference/getcard",
+                "method": "GET",
+                "openapi": "api-reference/getcard.json GET /cards/{cardId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "View activities for specific cards or over a date range",
-                "path": "reference/getcardactivities"
+                "path": "reference/getcardactivities",
+                "method": "GET",
+                "openapi": "api-reference/getcardactivities.json GET /activities",
+                "openapi-mode": "auto"
               },
               {
                 "title": "View the details of existing cards",
-                "path": "reference/getcards"
+                "path": "reference/getcards",
+                "method": "GET",
+                "openapi": "api-reference/getcards.json GET /cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "View the details of existing cards by account",
-                "path": "reference/getcardsbyaccount"
+                "path": "reference/getcardsbyaccount",
+                "method": "GET",
+                "openapi": "api-reference/getcardsbyaccount.json GET /accounts/{accountId}/cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get card tokens",
-                "path": "reference/getcardtokens"
+                "path": "reference/getcardtokens",
+                "method": "GET",
+                "openapi": "api-reference/getcardtokens.json GET /cards/{cardId}/tokens",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get all collection activities of an account",
-                "path": "reference/getcollections"
+                "path": "reference/getcollections",
+                "method": "GET",
+                "openapi": "api-reference/getcollections.json GET /collections",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Get all collectionschedules for a mandate",
-                "path": "reference/getcollectionschedules"
+                "path": "reference/getcollectionschedules",
+                "method": "GET",
+                "openapi": "api-reference/getcollectionschedules.json GET /collectionschedules",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Get physical card create tasks by account",
-                "path": "reference/getcreatephysicalcardasynctasksbyaccount"
+                "path": "reference/getcreatephysicalcardasynctasksbyaccount",
+                "method": "GET",
+                "openapi": "api-reference/getcreatephysicalcardasynctasksbyaccount.json GET /accounts/{accountId}/physical-card-request-tasks",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve a specific customer using a unique customer reference",
-                "path": "reference/getcustomer"
+                "path": "reference/getcustomer",
+                "method": "GET",
+                "openapi": "api-reference/getcustomer.json GET /customers/{customerId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "View existing customer card custom field keys",
-                "path": "reference/getcustomercustomfieldkeys"
+                "path": "reference/getcustomercustomfieldkeys",
+                "method": "GET",
+                "openapi": "api-reference/getcustomercustomfieldkeys.json GET /customer/{customerId}/card-custom-fields",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve a specific notification by unique reference for a specific customer",
-                "path": "reference/getcustomernotification"
+                "path": "reference/getcustomernotification",
+                "method": "GET",
+                "openapi": "api-reference/getcustomernotification.json GET /customers/{customerId}/notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve customers using filters",
-                "path": "reference/getcustomers"
+                "path": "reference/getcustomers",
+                "method": "GET",
+                "openapi": "api-reference/getcustomers.json GET /customers",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve a specific Webhook Notification Subscription for a Customer using the Notification ID.",
-                "path": "reference/getcustomerwebhooknotificationsubscription"
+                "path": "reference/getcustomerwebhooknotificationsubscription",
+                "method": "GET",
+                "openapi": "api-reference/getcustomerwebhooknotificationsubscription.json GET /customers/{customerId}/integration-notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get compliance documents uploaded for an application associate",
-                "path": "reference/getdocuments"
+                "path": "reference/getdocuments",
+                "method": "GET",
+                "openapi": "api-reference/getdocuments.json GET /applications/{applicationId}/compliance/associates/{associateId}/documents",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve failed Webhook Notifications for a Webhook using the Notification ID.",
-                "path": "reference/getfailedwebhooknotifications"
+                "path": "reference/getfailedwebhooknotifications",
+                "method": "GET",
+                "openapi": "api-reference/getfailedwebhooknotifications.json GET /integration-notification-webhooks/{notificationId}/failures",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Check if a particular webhook has failed",
-                "path": "reference/getfailedwebhooks"
+                "path": "reference/getfailedwebhooks",
+                "method": "GET",
+                "openapi": "api-reference/getfailedwebhooks.json GET /webhooks/{webhookId}/failures",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get in-app provisioning data for Apple Pay",
-                "path": "reference/getinappprovisioningforapple"
+                "path": "reference/getinappprovisioningforapple",
+                "method": "POST",
+                "openapi": "api-reference/getinappprovisioningforapple.json POST /cards/{cardId}/in-app-provisioning/apple",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get an Indemnity Claim for a given id",
-                "path": "reference/getindemnityclaim"
+                "path": "reference/getindemnityclaim",
+                "method": "GET",
+                "openapi": "api-reference/getindemnityclaim.json GET /indemnity-claims/{indemnityClaimId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get Indemnity Claims based on search criteria",
-                "path": "reference/getindemnityclaims"
+                "path": "reference/getindemnityclaims",
+                "method": "GET",
+                "openapi": "api-reference/getindemnityclaims.json GET /indemnity-claims",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve locked beneficiary entities",
-                "path": "reference/getlocks"
+                "path": "reference/getlocks",
+                "method": "GET",
+                "openapi": "api-reference/getlocks.json GET /beneficiaries/{beneficiaryId}/locks",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get Mandates based on search criteria.",
-                "path": "reference/getmandates"
+                "path": "reference/getmandates",
+                "method": "GET",
+                "openapi": "api-reference/getmandates.json GET /mandates",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Retrieve card report type notification configuration for customer",
-                "path": "reference/getnotificationconfigurationsforagivencustomerandreporttype"
+                "path": "reference/getnotificationconfigurationsforagivencustomerandreporttype",
+                "method": "GET",
+                "openapi": "api-reference/getnotificationconfigurationsforagivencustomerandreporttype.json GET /customers/{customerId}/card-report-types/{reportType}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get card token OTP details",
-                "path": "reference/getotpdetails"
+                "path": "reference/getotpdetails",
+                "method": "GET",
+                "openapi": "api-reference/getotpdetails.json GET /card-tokens/{tokenId}/otp",
+                "openapi-mode": "auto"
               },
               {
                 "title": "View existing partner card custom field keys",
-                "path": "reference/getpartnercustomfieldkeys"
+                "path": "reference/getpartnercustomfieldkeys",
+                "method": "GET",
+                "openapi": "api-reference/getpartnercustomfieldkeys.json GET /partner/{partnerId}/card-custom-fields",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve a specific notification by unique reference for a specific partner",
-                "path": "reference/getpartnernotification"
+                "path": "reference/getpartnernotification",
+                "method": "GET",
+                "openapi": "api-reference/getpartnernotification.json GET /partners/{partnerId}/notifications/{notificationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get payment initiation request details",
-                "path": "reference/getpaymentinitiation"
+                "path": "reference/getpaymentinitiation",
+                "method": "GET",
+                "openapi": "api-reference/getpaymentinitiation.json GET /payment-initiations/{paymentInitiationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve payments",
-                "path": "reference/getpayments"
+                "path": "reference/getpayments",
+                "method": "GET",
+                "openapi": "api-reference/getpayments.json GET /payments",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get Reconciliations based on search criteria.",
-                "path": "reference/getreconciliations"
+                "path": "reference/getreconciliations",
+                "method": "GET",
+                "openapi": "api-reference/getreconciliations.json GET /reconciliations",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Retrieve a Rule by rule type on a specific account",
-                "path": "reference/getrule"
+                "path": "reference/getrule",
+                "method": "GET",
+                "openapi": "api-reference/getrule.json GET /accounts/{id}/rules/{rtype}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get all Rules for a specific Account",
-                "path": "reference/getrules"
+                "path": "reference/getrules",
+                "method": "GET",
+                "openapi": "api-reference/getrules.json GET /accounts/{id}/rules",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve secure card details (PAN + CVV + PIN)",
-                "path": "reference/getsecurecarddetails"
+                "path": "reference/getsecurecarddetails",
+                "method": "GET",
+                "openapi": "api-reference/getsecurecarddetails.json GET /cards/secure-details",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve share secure card details",
-                "path": "reference/getsharesecurecarddetails"
+                "path": "reference/getsharesecurecarddetails",
+                "method": "GET",
+                "openapi": "api-reference/getsharesecurecarddetails.json GET /cards/{cardId}/share-secure-details",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve share details activity of token",
-                "path": "reference/getsharesecurecarddetailstokenactivity"
+                "path": "reference/getsharesecurecarddetailstokenactivity",
+                "method": "GET",
+                "openapi": "api-reference/getsharesecurecarddetailstokenactivity.json GET /cards/{cardId}/share-secure-details/{shareSecureDetailsId}/activity",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get SRD Accounts",
-                "path": "reference/getsrdaccounts"
+                "path": "reference/getsrdaccounts",
+                "method": "GET",
+                "openapi": "api-reference/getsrdaccounts.json GET /account-name-check/srd-accounts",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get standing order initiation request details",
-                "path": "reference/getstandingorderinitiation"
+                "path": "reference/getstandingorderinitiation",
+                "method": "GET",
+                "openapi": "api-reference/getstandingorderinitiation.json GET /standing-order-initiations/{standingOrderInitiationId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get VRP consent.",
-                "path": "reference/getvrpconsent"
+                "path": "reference/getvrpconsent",
+                "method": "GET",
+                "openapi": "api-reference/getvrpconsent.json GET /vrp-consents/{consentId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get Variable Recurring Payment",
-                "path": "reference/getvrppayment"
+                "path": "reference/getvrppayment",
+                "method": "GET",
+                "openapi": "api-reference/getvrppayment.json GET /vrp/{vrpPaymentId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a VRP consent",
-                "path": "reference/initiateconsentcreation"
+                "path": "reference/initiateconsentcreation",
+                "method": "POST",
+                "openapi": "api-reference/initiateconsentcreation.json POST /vrp-consents",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Edit a specific Rule",
-                "path": "reference/modifyrule"
+                "path": "reference/modifyrule",
+                "method": "PUT",
+                "openapi": "api-reference/modifyrule.json PUT /rules/{ruleId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Edit a customer",
-                "path": "reference/patchcustomer"
+                "path": "reference/patchcustomer",
+                "method": "PATCH",
+                "openapi": "api-reference/patchcustomer.json PATCH /customers/{customerId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Perform an account status inquiry",
-                "path": "reference/performaccountstatusinquiry"
+                "path": "reference/performaccountstatusinquiry",
+                "method": "POST",
+                "openapi": "api-reference/performaccountstatusinquiry.json POST /cards/{cardId}/account-status-inquiry",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create payments from an uploaded file",
-                "path": "reference/proceed"
+                "path": "reference/proceed",
+                "method": "POST",
+                "openapi": "api-reference/proceed.json POST /payment-files/{fileId}/proceed",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create payments from one or more uploaded files",
-                "path": "reference/proceed_1"
+                "path": "reference/proceed_1",
+                "method": "POST",
+                "openapi": "api-reference/proceed_1.json POST /payment-files/proceed",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create a card refund",
-                "path": "reference/refund"
+                "path": "reference/refund",
+                "method": "POST",
+                "openapi": "api-reference/refund.json POST /cards/{cardId}/refunds",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Reject Collection",
-                "path": "reference/rejectcollection"
+                "path": "reference/rejectcollection",
+                "method": "POST",
+                "openapi": "api-reference/rejectcollection.json POST /directdebits/reject",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Delete a Rule",
-                "path": "reference/removerules"
+                "path": "reference/removerules",
+                "method": "DELETE",
+                "openapi": "api-reference/removerules.json DELETE /rules",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Replace a card",
-                "path": "reference/replacecard"
+                "path": "reference/replacecard",
+                "method": "POST",
+                "openapi": "api-reference/replacecard.json POST /cards/{cardId}/replace",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Represent collection for given collection id",
-                "path": "reference/representcollection"
+                "path": "reference/representcollection",
+                "method": "POST",
+                "openapi": "api-reference/representcollection.json POST /collection/{collectionId}/represent",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Reset card PIN",
-                "path": "reference/resetpin"
+                "path": "reference/resetpin",
+                "method": "POST",
+                "openapi": "api-reference/resetpin.json POST /cards/{cardId}/pin",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve all Mandates for an account",
-                "path": "reference/retrievemandates"
+                "path": "reference/retrievemandates",
+                "method": "GET",
+                "openapi": "api-reference/retrievemandates.json GET /directdebits/enquire/{accountId}",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Retrieve PIN",
-                "path": "reference/retrievepin"
+                "path": "reference/retrievepin",
+                "method": "GET",
+                "openapi": "api-reference/retrievepin.json GET /cards/{cardId}/pin",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Download a specific card report",
-                "path": "reference/retrievepresignedreporturl"
+                "path": "reference/retrievepresignedreporturl",
+                "method": "GET",
+                "openapi": "api-reference/retrievepresignedreporturl.json GET /card-reports/{reportId}/download",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Download a specific card report",
-                "path": "reference/retrievereport"
+                "path": "reference/retrievereport",
+                "method": "GET",
+                "openapi": "api-reference/retrievereport.json GET /card-reports/{reportId}/report",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Reverse the card authorisation",
-                "path": "reference/reverseauthorisation"
+                "path": "reference/reverseauthorisation",
+                "method": "POST",
+                "openapi": "api-reference/reverseauthorisation.json POST /authorisations/{authId}/reverse",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Reverse a credit authorisation",
-                "path": "reference/reversecreditauthorisation"
+                "path": "reference/reversecreditauthorisation",
+                "method": "POST",
+                "openapi": "api-reference/reversecreditauthorisation.json POST /credit-authorisations/{creditAuthId}/reverse",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Reverse an original credit",
-                "path": "reference/reverseoriginalcredit"
+                "path": "reference/reverseoriginalcredit",
+                "method": "POST",
+                "openapi": "api-reference/reverseoriginalcredit.json POST /cards/{cardId}/original-credits/{originalCreditActivityId}/reverse",
+                "openapi-mode": "custom"
               },
               {
                 "title": "Revoke a VRP consent.",
-                "path": "reference/revokevrpconsent"
+                "path": "reference/revokevrpconsent",
+                "method": "DELETE",
+                "openapi": "api-reference/revokevrpconsent.json DELETE /vrp-consents/{consentId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Retrieve card reports",
-                "path": "reference/searchreports"
+                "path": "reference/searchreports",
+                "method": "GET",
+                "openapi": "api-reference/searchreports.json GET /card-reports",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Reset card PIN",
-                "path": "reference/secureresetpin"
+                "path": "reference/secureresetpin",
+                "method": "POST",
+                "openapi": "api-reference/secureresetpin.json POST /cards/secure-pin-reset",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Settle the full or partial card authorisation",
-                "path": "reference/settleauthorisation"
+                "path": "reference/settleauthorisation",
+                "method": "POST",
+                "openapi": "api-reference/settleauthorisation.json POST /authorisations/{authId}/settle",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get an upload file latest status",
-                "path": "reference/status"
+                "path": "reference/status",
+                "method": "GET",
+                "openapi": "api-reference/status.json GET /payment-files/{fileId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Submit a business application for verification",
-                "path": "reference/submitapplication"
+                "path": "reference/submitapplication",
+                "method": "POST",
+                "openapi": "api-reference/submitapplication.json POST /applications/{applicationId}/submissions",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Submit an associate for verification",
-                "path": "reference/submitassociateforverification"
+                "path": "reference/submitassociateforverification",
+                "method": "POST",
+                "openapi": "api-reference/submitassociateforverification.json POST /applications/{applicationId}/associates/{associateId}/submissions",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Make a batch payment",
-                "path": "reference/submitbatchpayments"
+                "path": "reference/submitbatchpayments",
+                "method": "POST",
+                "openapi": "api-reference/submitbatchpayments.json POST /batchpayments",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Submit bulk cards operations",
-                "path": "reference/submitbulkcardoperations"
+                "path": "reference/submitbulkcardoperations",
+                "method": "POST",
+                "openapi": "api-reference/submitbulkcardoperations.json POST /bulk-cards",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Get paginated summaries of child file uploads",
-                "path": "reference/summaries"
+                "path": "reference/summaries",
+                "method": "GET",
+                "openapi": "api-reference/summaries.json GET /payment-files/{fileId}/summaries",
+                "openapi-mode": "auto"
               },
               {
                 "title": "[Restricted] Suspend an existing card",
-                "path": "reference/suspendcard"
+                "path": "reference/suspendcard",
+                "method": "POST",
+                "openapi": "api-reference/suspendcard.json POST /cards/{cardId}/suspend",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Suspend card token",
-                "path": "reference/suspendcardtoken"
+                "path": "reference/suspendcardtoken",
+                "method": "POST",
+                "openapi": "api-reference/suspendcardtoken.json POST /card-tokens/{tokenId}/suspend",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Toggled notifications for customer and card report type",
-                "path": "reference/togglenotificationsforagivencustomerandreporttype"
+                "path": "reference/togglenotificationsforagivencustomerandreporttype",
+                "method": "POST",
+                "openapi": "api-reference/togglenotificationsforagivencustomerandreporttype.json POST /customers/{customerId}/card-report-types/{reportType}/notifications/status",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Toggle card report notification for partner and report type",
-                "path": "reference/togglenotificationsforagivenpartnerandreporttype"
+                "path": "reference/togglenotificationsforagivenpartnerandreporttype",
+                "method": "POST",
+                "openapi": "api-reference/togglenotificationsforagivenpartnerandreporttype.json POST /partners/{partnerId}/card-report-types/{reportType}/notifications/status",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Unbind a device from a card token",
-                "path": "reference/unbinddevice"
+                "path": "reference/unbinddevice",
+                "method": "POST",
+                "openapi": "api-reference/unbinddevice.json POST /card-tokens/{tokenId}/devices/{deviceId}/unbind",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Unblock a specific account",
-                "path": "reference/unblockaccount"
+                "path": "reference/unblockaccount",
+                "method": "POST",
+                "openapi": "api-reference/unblockaccount.json POST /accounts/{accountId}/unblock",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Unblock an existing card",
-                "path": "reference/unblockcard"
+                "path": "reference/unblockcard",
+                "method": "POST",
+                "openapi": "api-reference/unblockcard.json POST /cards/{cardId}/unblock",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Unblock PIN",
-                "path": "reference/unblockpin"
+                "path": "reference/unblockpin",
+                "method": "POST",
+                "openapi": "api-reference/unblockpin.json POST /cards/{cardId}/pin/unblock",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Unsuspend card token",
-                "path": "reference/unsuspendcardtoken"
+                "path": "reference/unsuspendcardtoken",
+                "method": "POST",
+                "openapi": "api-reference/unsuspendcardtoken.json POST /card-tokens/{tokenId}/unsuspend",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update a card",
-                "path": "reference/update"
+                "path": "reference/update",
+                "method": "POST",
+                "openapi": "api-reference/update.json POST /cards/{cardId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update access group",
-                "path": "reference/updateaccessgroup"
+                "path": "reference/updateaccessgroup",
+                "method": "PUT",
+                "openapi": "api-reference/updateaccessgroup.json PUT /access-groups/{accessGroupId}/content",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update a business entity for an Onboarding Application",
-                "path": "reference/updatebusiness"
+                "path": "reference/updatebusiness",
+                "method": "PUT",
+                "openapi": "api-reference/updatebusiness.json PUT /applications/{applicationId}/compliance/businesses/{businessId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or Update a business address for an Onboarding Application",
-                "path": "reference/updatebusinessaddress"
+                "path": "reference/updatebusinessaddress",
+                "method": "PUT",
+                "openapi": "api-reference/updatebusinessaddress.json PUT /applications/{applicationId}/compliance/businesses/{businessId}/addresses",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update card",
-                "path": "reference/updatecard"
+                "path": "reference/updatecard",
+                "method": "PATCH",
+                "openapi": "api-reference/updatecard.json PATCH /cards/{cardId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update card authentication",
-                "path": "reference/updatecardauthentication"
+                "path": "reference/updatecardauthentication",
+                "method": "PUT",
+                "openapi": "api-reference/updatecardauthentication.json PUT /cards/{cardId}/authentication",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update a card's custom fields",
-                "path": "reference/updatecardcustomfields"
+                "path": "reference/updatecardcustomfields",
+                "method": "POST",
+                "openapi": "api-reference/updatecardcustomfields.json POST /cards/{cardId}/custom-fields",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update customer identification information",
-                "path": "reference/updatecustomeridentificationinfosbycustomerid"
+                "path": "reference/updatecustomeridentificationinfosbycustomerid",
+                "method": "PUT",
+                "openapi": "api-reference/updatecustomeridentificationinfosbycustomerid.json PUT /customers/{customerId}/compliance/identification-info",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update the department code for an associate",
-                "path": "reference/updatedepartmentforassociate"
+                "path": "reference/updatedepartmentforassociate",
+                "method": "PUT",
+                "openapi": "api-reference/updatedepartmentforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/fr/department",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update identification document details for an associate",
-                "path": "reference/updateidentificationdocumentsdetailsforassociate"
+                "path": "reference/updateidentificationdocumentsdetailsforassociate",
+                "method": "PUT",
+                "openapi": "api-reference/updateidentificationdocumentsdetailsforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/document-details",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or Update Know Your Customer Data for a Customer Application",
-                "path": "reference/updateknowyourcustomerbyapplicationid"
+                "path": "reference/updateknowyourcustomerbyapplicationid",
+                "method": "PUT",
+                "openapi": "api-reference/updateknowyourcustomerbyapplicationid.json PUT /applications/{applicationId}/compliance/know-your-customer",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update report type notification configuration for customer",
-                "path": "reference/updatenotificationconfigurationsforagivencustomerandreporttype"
+                "path": "reference/updatenotificationconfigurationsforagivencustomerandreporttype",
+                "method": "POST",
+                "openapi": "api-reference/updatenotificationconfigurationsforagivencustomerandreporttype.json POST /customers/{customerId}/card-report-types/{reportType}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update report type notification configuration for partner",
-                "path": "reference/updatenotificationconfigurationsforagivenpartnerandreporttype"
+                "path": "reference/updatenotificationconfigurationsforagivenpartnerandreporttype",
+                "method": "POST",
+                "openapi": "api-reference/updatenotificationconfigurationsforagivenpartnerandreporttype.json POST /partners/{partnerId}/card-report-types/{reportType}/notifications",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update an associate’s personal details",
-                "path": "reference/updatepersonalinformationforassociate"
+                "path": "reference/updatepersonalinformationforassociate",
+                "method": "PUT",
+                "openapi": "api-reference/updatepersonalinformationforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/personal-info",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or Update Personal Details for an Application Associate",
-                "path": "reference/updatepersonalinformationforassociate_1"
+                "path": "reference/updatepersonalinformationforassociate_1",
+                "method": "PUT",
+                "openapi": "api-reference/updatepersonalinformationforassociate_1.json PUT /applications/{applicationId}/compliance/associates/{associateId}/personal-info",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Set the secured funding limit for an account",
-                "path": "reference/updatesecuredfundinglimit"
+                "path": "reference/updatesecuredfundinglimit",
+                "method": "PUT",
+                "openapi": "api-reference/updatesecuredfundinglimit.json PUT /accounts/{accountId}/secured-funding",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Update share secure details",
-                "path": "reference/updatesharesecuredetails"
+                "path": "reference/updatesharesecuredetails",
+                "method": "PUT",
+                "openapi": "api-reference/updatesharesecuredetails.json PUT /cards/{cardId}/share-secure-details/{shareSecureDetailsId}",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update a customer’s tax identifiers",
-                "path": "reference/updatetaxidentifiersbycustomerid"
+                "path": "reference/updatetaxidentifiersbycustomerid",
+                "method": "PUT",
+                "openapi": "api-reference/updatetaxidentifiersbycustomerid.json PUT /customers/{customerId}/compliance/tax-identifiers",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update tax identifiers for an associate",
-                "path": "reference/updatetaxidentifiersforassociate"
+                "path": "reference/updatetaxidentifiersforassociate",
+                "method": "PUT",
+                "openapi": "api-reference/updatetaxidentifiersforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/tax-identifiers",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or update the list of countries where an associate is considered tax-resident",
-                "path": "reference/updatetaxresidenciesforassociate"
+                "path": "reference/updatetaxresidenciesforassociate",
+                "method": "PUT",
+                "openapi": "api-reference/updatetaxresidenciesforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/tax-residencies",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Create or Update Tax Residency Information for an Application Associate",
-                "path": "reference/updatetaxresidenciesforassociate_1"
+                "path": "reference/updatetaxresidenciesforassociate_1",
+                "method": "PUT",
+                "openapi": "api-reference/updatetaxresidenciesforassociate_1.json PUT /applications/{applicationId}/compliance/associates/{associateId}/tax-residencies",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Uploads and stores documents associated with an existing customer record",
-                "path": "reference/upload_1"
+                "path": "reference/upload_1",
+                "method": "POST",
+                "openapi": "api-reference/upload_1.json POST /customers/{customerId}/documents",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Upload CSV file with bulk card operations",
-                "path": "reference/uploadbulkcards"
+                "path": "reference/uploadbulkcards",
+                "method": "POST",
+                "openapi": "api-reference/uploadbulkcards.json POST /bulk-cards/upload",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Upload an identity document or biometric selfie for an application associate",
-                "path": "reference/uploaddocument"
+                "path": "reference/uploaddocument",
+                "method": "PUT",
+                "openapi": "api-reference/uploaddocument.json PUT /applications/{applicationId}/compliance/associates/{associateId}/documents",
+                "openapi-mode": "auto"
               },
               {
                 "title": "Submit an application for verification",
-                "path": "reference/verifyapplication"
+                "path": "reference/verifyapplication",
+                "method": "POST",
+                "openapi": "api-reference/verifyapplication.json POST /applications/{applicationId}/verify",
+                "openapi-mode": "auto"
               }
             ]
           }

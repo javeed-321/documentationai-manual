@@ -1,0 +1,13 @@
+---
+updatedAt: 2025-09-05T18:55:07.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Payment Approvals
+
+To allow businesses to have a maker/checker process in place with our beneficiaries and payments we have in place the ability for an approval step to be turned on. A business needing to approve beneficiaries and/or payments use the client portal, but the rest of the process can be done via API.
+
+Once this is enabled you will need users with approval permissions; view+approver, user+approver or admin+approver. You can then have some users without approval permissions that can only create beneficiaries and payments if you want.
+
+[Learn More about Payment Approvals in the Customer Portal](https://knowledge.modulrfinance.com/knowledge-hub/using-the-modulr-portal#payment-approvals)

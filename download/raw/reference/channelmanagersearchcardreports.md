@@ -1,0 +1,348 @@
+---
+updatedAt: 2026-05-27T12:27:05.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Retrieve channel manager's card reports
+
+Retrieve card reports owned by the channel manager
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "paths": {
+    "/channel-managers/card-reports": {
+      "get": {
+        "tags": [
+          "Channel Manager Card"
+        ],
+        "summary": "Retrieve channel manager's card reports",
+        "description": "Retrieve card reports owned by the channel manager",
+        "operationId": "channelManagerSearchCardReports",
+        "parameters": [
+          {
+            "name": "fromReportDate",
+            "in": "query",
+            "description": "Retrieve reports equal to or after this date",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "description": "Retrieve reports equal to or after this date",
+              "example": "2023-01-01"
+            },
+            "example": "2023-01-01"
+          },
+          {
+            "name": "toReportDate",
+            "in": "query",
+            "description": "Retrieve reports equal to or before this date",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "description": "Retrieve reports equal to or before this date",
+              "example": "2023-01-30"
+            },
+            "example": "2023-01-30"
+          },
+          {
+            "name": "reportTypes",
+            "in": "query",
+            "description": "Report types",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/channelmanager.reportTypes"
+            },
+            "example": "DAILY_CARD_ACTIVITY"
+          },
+          {
+            "name": "reportSubjectIds",
+            "in": "query",
+            "description": "Report subject Ids (Customer BID, Partner BID or Channel Manager BID)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/channelmanager.reportSubjectIds"
+            },
+            "example": "C1000001"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page to fetch (0 indexed)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0,
+              "description": "Page to fetch (0 indexed)",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The size of the page(s)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "description": "The size of the page(s)",
+              "maximum": 500,
+              "minimum": 1
+            }
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "pattern": "(reportDate|reportType)"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "pattern": "(asc|desc)"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Card reports retrieved successfully ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/channelmanager.ReportPageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/channelmanager.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorised request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/channelmanager.ReportPageResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "channelmanager.reportTypes": {
+        "type": "array",
+        "description": "Report types",
+        "example": "DAILY_CARD_ACTIVITY",
+        "items": {
+          "type": "string",
+          "description": "Report types",
+          "enum": [
+            "DAILY_CARD_ACTIVITY",
+            "MONTHLY_CARD_ACTIVITY",
+            "DAILY_ACCOUNT_FUNDING",
+            "MONTHLY_ACCOUNT_FUNDING",
+            "DAILY_AUTH_WINDOW",
+            "DAILY_CARD_MANAGEMENT"
+          ],
+          "example": "DAILY_CARD_ACTIVITY"
+        }
+      },
+      "channelmanager.ReportPageResponse": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "array",
+            "description": "List of responses on the current page",
+            "items": {
+              "$ref": "#/components/schemas/channelmanager.ReportResponse"
+            }
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Page size"
+          },
+          "totalSize": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Total count"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Current page number, 0 based; i.e first-page = 0, second-page = 1"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Total pages"
+          }
+        },
+        "required": [
+          "content",
+          "page",
+          "size",
+          "totalPages",
+          "totalSize"
+        ]
+      },
+      "channelmanager.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "channelmanager.reportSubjectIds": {
+        "type": "array",
+        "description": "Report subject Ids (Customer BID, Partner BID or Channel Manager BID)",
+        "example": "C1000001",
+        "items": {
+          "type": "string",
+          "description": "Report subject Ids (Customer BID, Partner BID or Channel Manager BID)",
+          "example": "C1000001"
+        }
+      },
+      "channelmanager.ReportResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "reportSubjectId": {
+            "type": "string"
+          },
+          "reportDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "reportType": {
+            "type": "string",
+            "enum": [
+              "DAILY_CARD_ACTIVITY",
+              "MONTHLY_CARD_ACTIVITY",
+              "DAILY_ACCOUNT_FUNDING",
+              "MONTHLY_ACCOUNT_FUNDING",
+              "DAILY_AUTH_WINDOW",
+              "DAILY_CARD_MANAGEMENT"
+            ]
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

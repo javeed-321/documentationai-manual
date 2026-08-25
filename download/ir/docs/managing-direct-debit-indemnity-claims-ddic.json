@@ -1,0 +1,1018 @@
+{
+  "slug": "docs/managing-direct-debit-indemnity-claims-ddic",
+  "source": "https://modulr.readme.io/docs/managing-direct-debit-indemnity-claims-ddic.md",
+  "url": "https://modulr.readme.io/docs/managing-direct-debit-indemnity-claims-ddic",
+  "title": "Managing Direct Debit Indemnity Claims (DDIC)",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-12T14:20:06.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 29,
+    "br": 9,
+    "Callout": 1,
+    "Table": 4,
+    "code": 2,
+    "thead": 1,
+    "tbody": 2,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Managing Direct Debit Indemnity Claims (DDIC)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Managing Direct Debit Indemnity Claims (DDIC)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "**Description**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Description",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "A webhook notification raised whenever a Direct Debit Indemnity Claim (DDIC) has been received or changes status. This webhook enables Partners and Customers to receive real-time notifications when a new DDIC advice is received from Bacs, when a claim is cancelled following a successful challenge, or when a claim settles against a Collateral account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A webhook notification raised whenever a Direct Debit Indemnity Claim (DDIC) has been received or changes status. This webhook enables Partners and Customers to receive real-time notifications when a new DDIC advice is received from Bacs, when a claim is cancelled following a successful challenge, or when a claim settles against a Collateral account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "This webhook can be subscribed to at Partner or Customer level and fires for each status transition on an Indemnity Claim and is available to subscribe from June 30' 2026.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This webhook can be subscribed to at Partner or Customer level and fires for each status transition on an Indemnity Claim and is available to subscribe from June 30' 2026.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        19
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  This webhook is part of the DDIC Report Automation project and is available to subscribe from June 30' 2026. It replaces manual email notifications that were previously sent by Payment Operations. Partners or Customers who wish to receive real-time claim notifications must **explicitly subscribe to this webhook.**\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "**When Does this webhook raised?**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When Does this webhook raised?",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "The webhook notification will be raised if subscribed by the Partner/Customer on each of the following status transitions:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The webhook notification will be raised if subscribed by the Partner/Customer on each of the following status transitions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        25,
+        29
+      ],
+      "raw": "| Working day | Event                                                                                                                                                     |\n| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| NEW         | A new DDIC advice has been received from Bacs and processed by Direct Debit Service. A new Indemnity Claim record has been created.                       |\n| CANCELLED   | A cancellation advice has been received from Bacs. The DDIC was successfully challenged and the existing Indemnity Claim record has been cancelled.       |\n| SETTLED     | The DDIC settlement transaction has been processed via STS transactional output. The claim amount has been debited from the Partner's Collateral account. |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Working day",
+          "Event"
+        ],
+        "rows": [
+          [
+            "NEW",
+            "A new DDIC advice has been received from Bacs and processed by Direct Debit Service. A new Indemnity Claim record has been created."
+          ],
+          [
+            "CANCELLED",
+            "A cancellation advice has been received from Bacs. The DDIC was successfully challenged and the existing Indemnity Claim record has been cancelled."
+          ],
+          [
+            "SETTLED",
+            "The DDIC settlement transaction has been processed via STS transactional output. The claim amount has been debited from the Partner's Collateral account."
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "**Webhook Details**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Webhook Details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "The webhook details including examples is available at <https://modulr.readme.io/docs/webhook-direct-debit-collections-ddic#/>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The webhook details including examples is available at https://modulr.readme.io/docs/webhook-direct-debit-collections-ddic#/",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-collections-ddic#/>",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "**Retrieving DDIC Details**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrieving DDIC Details",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "DDIC details can be retrieved on receiving a DD\\_INDEMNITY\\_CLAIM\\_STATUS webhook, Customers can use the indemnityClaimId to retrieve the full details of the DDIC via the API:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DDIC details can be retrieved on receiving a DD_INDEMNITY_CLAIM_STATUS webhook, Customers can use the indemnityClaimId to retrieve the full details of the DDIC via the API:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        41,
+        44
+      ],
+      "raw": "| Method | Endpoint                                                                              |\n| ------ | ------------------------------------------------------------------------------------- |\n| GET    | /direct-debit-service/indemnity-claims/{'{indemnityClaimId}'}                         |\n| GET    | /direct-debit-service/indemnity-claims?accountId={'{accountId}'}\\&status={'{status}'} |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Method",
+          "Endpoint"
+        ],
+        "rows": [
+          [
+            "GET",
+            "/direct-debit-service/indemnity-claims/{'{indemnityClaimId}'}"
+          ],
+          [
+            "GET",
+            "/direct-debit-service/indemnity-claims?accountId={'{accountId}'}&status={'{status}'}"
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "Both endpoints require the DIRECTDEBIT READ permission. Partners can only access claims associated with their own accounts.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Both endpoints require the DIRECTDEBIT READ permission. Partners can only access claims associated with their own accounts.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 48
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "**Challenging a DDIC**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Challenging a DDIC",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "If you believe a DDIC has been raised incorrectly, or you have valid grounds to dispute it, you have until the end of working day 9 (from the day the DDIC advice is made available) to raise a challenge. Challenges are submitted via the Bacs Payment Services Website (PSW).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you believe a DDIC has been raised incorrectly, or you have valid grounds to dispute it, you have until the end of working day 9 (from the day the DDIC advice is made available) to raise a challenge. Challenges are submitted via the Bacs Payment Services Website (PSW).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "**Getting Access to PSW**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Getting Access to PSW",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "All Modulr Service Users can register on the Bacs Payment Services Website using their Service User Number (SUN). To register and access the DDIC challenge functionality, visit:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "All Modulr Service Users can register on the Bacs Payment Services Website using their Service User Number (SUN). To register and access the DDIC challenge functionality, visit:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "<https://www.bacs.co.uk>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "https://www.bacs.co.uk",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "Once registered, you will need the following PSW privilege to raise challenges: Messaging Engine: DDIC Raise Challenge Manual Entry (input/approve). Your Primary Security Contact (PSC) can assign this privilege to contacts within your organisation.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once registered, you will need the following PSW privilege to raise challenges: Messaging Engine: DDIC Raise Challenge Manual Entry (input/approve). Your Primary Security Contact (PSC) can assign this privilege to contacts within your organisation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "**How to Raise a Challenge**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "How to Raise a Challenge",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "Once logged in to PSW with PKI or ASM credentials, follow these steps:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once logged in to PSW with PKI or ASM credentials, follow these steps:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        70,
+        75
+      ],
+      "raw": "<Table>\n  <thead>\n    <tr>\n      <th>\n        Number\n      </th>",
+      "kind": "component",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        77,
+        80
+      ],
+      "raw": "      <th>\n        Step\n      </th>\n    </tr>",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "  <th>\n    Step\n  </th>\n</tr>"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "  </thead>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "thead",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        83,
+        87
+      ],
+      "raw": "  <tbody>\n    <tr>\n      <td>\n        1\n      </td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tbody",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        89,
+        152
+      ],
+      "raw": "      <td>\n        From the Services menu, go to Submissions & Payment Processing > DDIC Challenge.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        2\n      </td>\n\n      <td>\n        Select the DDIC Advices tab. Search for the relevant DDIC advice and click the Edit icon.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        3\n      </td>\n\n      <td>\n        On the New DDIC Challenge screen, select a Challenge Reason from the drop-down. Valid grounds for challenge include (among others):\n\n        a). The contract signed by the payer details the amounts and collection dates (evidence attached)\n\n        b). The payer has provided authority for Direct Debit with the service user (evidence attached)\n\n        c). The advance notice details the amounts and collection dates (evidence attached)\n\n        d). Indemnity claim has been submitted more than once or directed to the wrong service user\n\n        e). Amount of the indemnity claim does not match the value of the payments collected on the dates stated\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        4\n      </td>\n\n      <td>\n        Attach supporting evidence by clicking Upload Evidence. Up to 5 files are permitted (jpg, gif or pdf; max 5 MB each). Evidence must be uploaded individually.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        5\n      </td>\n\n      <td>\n        Click Submit Challenge and confirm. The challenge moves to Pending PSP review status.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        6\n      </td>\n\n      <td>\n        The PSP reviews the challenge. If accepted, the DDIC is cancelled automatically and you will receive a CANCELLED webhook. If rejected, you may relodge the challenge up to end of working day 9.\n      </td>\n    </tr>",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "  <td>\n    From the Services menu, go to Submissions & Payment Processing > DDIC Challenge.\n  </td>\n</tr>\n\n<tr>\n  <td>\n    2\n  </td>\n\n  <td>\n    Select the DDIC Advices tab. Search for the relevant DDIC advice and click the Edit icon.\n  </td>\n</tr>\n\n<tr>\n  <td>\n    3\n  </td>\n\n  <td>\n    On the New DDIC Challenge screen, select a Challenge Reason from the drop-down. Valid grounds for challenge include (among others):\n\n    a). The contract signed by the payer details the amounts and collection dates (evidence attached)\n\n    b). The payer has provided authority for Direct Debit with the service user (evidence attached)\n\n    c). The advance notice details the amounts and collection dates (evidence attached)\n\n    d). Indemnity claim has been submitted more than once or directed to the wrong service user\n\n    e). Amount of the indemnity claim does not match the value of the payments collected on the dates stated\n  </td>\n</tr>\n\n<tr>\n  <td>\n    4\n  </td>\n\n  <td>\n    Attach supporting evidence by clicking Upload Evidence. Up to 5 files are permitted (jpg, gif or pdf; max 5 MB each). Evidence must be uploaded individually.\n  </td>\n</tr>\n\n<tr>\n  <td>\n    5\n  </td>\n\n  <td>\n    Click Submit Challenge and confirm. The challenge moves to Pending PSP review status.\n  </td>\n</tr>\n\n<tr>\n  <td>\n    6\n  </td>\n\n  <td>\n    The PSP reviews the challenge. If accepted, the DDIC is cancelled automatically and you will receive a CANCELLED webhook. If rejected, you may relodge the challenge up to end of working day 9.\n  </td>\n</tr>"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        153,
+        154
+      ],
+      "raw": "  </tbody>\n</Table>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tbody",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        156,
+        156
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 156
+        }
+      ]
+    },
+    {
+      "i": 35,
+      "lines": [
+        158,
+        158
+      ],
+      "raw": "**Key Timelines**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Key Timelines",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        160,
+        165
+      ],
+      "raw": "| Working day      | Event                                                                                                                                                                                     |\n| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Day 1            | DDIC advice is made available on PSW. You will receive a `NEW` webhook from Modulr.                                                                                                       |\n| By end of Day 9  | Deadline to submit a challenge via PSW. Any DDIC not challenged by this point is automatically accepted by the Bacs system.                                                               |\n| By end of Day 11 | PSP must respond to the challenge. If no response is received, the challenge is auto-accepted by Bacs and the DDIC is automatically cancelled. And `CANCELLED` webhook will be triggered. |\n| Day 13 (approx.) | If the claim is unchallenged or the challenge is unsuccessful, the DDIC settles against your Collateral account. You will receive a `SETTLED` webhook.                                    |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Working day",
+          "Event"
+        ],
+        "rows": [
+          [
+            "Day 1",
+            "DDIC advice is made available on PSW. You will receive a NEW webhook from Modulr."
+          ],
+          [
+            "By end of Day 9",
+            "Deadline to submit a challenge via PSW. Any DDIC not challenged by this point is automatically accepted by the Bacs system."
+          ],
+          [
+            "By end of Day 11",
+            "PSP must respond to the challenge. If no response is received, the challenge is auto-accepted by Bacs and the DDIC is automatically cancelled. And CANCELLED webhook will be triggered."
+          ],
+          [
+            "Day 13 (approx.)",
+            "If the claim is unchallenged or the challenge is unsuccessful, the DDIC settles against your Collateral account. You will receive a SETTLED webhook."
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        167,
+        167
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 167
+        }
+      ]
+    },
+    {
+      "i": 38,
+      "lines": [
+        169,
+        169
+      ],
+      "raw": "**Step-by-Step Guide for DDIC challenge process**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Step-by-Step Guide for DDIC challenge process",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        171,
+        171
+      ],
+      "raw": "The complete step-by-step guide \"**DDIC Challenge Process via PSW — Service User Guide v1.5**\" to the DDIC challenge process (v1.5) is available on the Bacs website. Registration is required to access it — all Modulr Service Users can register using their Service User Number (SUN).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The complete step-by-step guide \"DDIC Challenge Process via PSW — Service User Guide v1.5\" to the DDIC challenge process (v1.5) is available on the Bacs website. Registration is required to access it — all Modulr Service Users can register using their Service User Number (SUN).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        173,
+        173
+      ],
+      "raw": "The guide covers raising and editing challenges, attaching evidence, authorising requests, requesting Reason Code 7 refunds, and accessing challenge and response reports.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The guide covers raising and editing challenges, attaching evidence, authorising requests, requesting Reason Code 7 refunds, and accessing challenge and response reports.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        175,
+        175
+      ],
+      "raw": "**Unchallenged or Unsuccessful Claims — Collateral Debit**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Unchallenged or Unsuccessful Claims — Collateral Debit",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        177,
+        177
+      ],
+      "raw": "Any DDIC that is not successfully challenged will result in a debit to your Collateral account. If insufficient funds are held, you are required to provide funds to Modulr immediately in line with the Terms and Conditions of your contract.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Any DDIC that is not successfully challenged will result in a debit to your Collateral account. If insufficient funds are held, you are required to provide funds to Modulr immediately in line with the Terms and Conditions of your contract.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        179,
+        179
+      ],
+      "raw": "A DDIC will settle against your Collateral account in the following circumstances:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A DDIC will settle against your Collateral account in the following circumstances:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        181,
+        182
+      ],
+      "raw": "1. The claim was not challenged before the end of working day 9 — it is automatically accepted by the Bacs system.\n2. A challenge was raised but ultimately rejected by the PSP and not relodged before the day 9 deadline.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The claim was not challenged before the end of working day 9 — it is automatically accepted by the Bacs system.A challenge was raised but ultimately rejected by the PSP and not relodged before the day 9 deadline.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        184,
+        184
+      ],
+      "raw": "When a claim settles, the amount will be debited from your Modulr Collateral account and you will receive a DD\\_INDEMNITY\\_CLAIM\\_STATUS webhook with status SETTLED. The transaction on your account statement will show the DDIC reference and service user reference for your reconciliation (e.g. \"Debit DDIC \\[DDIC-10223264] ref: AA3473475\").",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When a claim settles, the amount will be debited from your Modulr Collateral account and you will receive a DD_INDEMNITY_CLAIM_STATUS webhook with status SETTLED. The transaction on your account statement will show the DDIC reference and service user reference for your reconciliation (e.g. \"Debit DDIC [DDIC-10223264] ref: AA3473475\").",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        186,
+        186
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 186
+        }
+      ]
+    },
+    {
+      "i": 47,
+      "lines": [
+        188,
+        188
+      ],
+      "raw": "**Insufficient Funds**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Insufficient Funds",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        190,
+        190
+      ],
+      "raw": "If your Collateral account does not hold sufficient funds to cover the DDIC settlement at the point of debit, you are required to transfer the required amount to Modulr immediately. This obligation is set out in the Terms and Conditions of your contract with Modulr. Failure to do so in a timely manner may result in further action in accordance with those Terms and Conditions.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If your Collateral account does not hold sufficient funds to cover the DDIC settlement at the point of debit, you are required to transfer the required amount to Modulr immediately. This obligation is set out in the Terms and Conditions of your contract with Modulr. Failure to do so in a timely manner may result in further action in accordance with those Terms and Conditions.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        192,
+        192
+      ],
+      "raw": "We strongly recommend monitoring your Collateral account balance — particularly around anticipated DDIC settlement dates (approximately 13 working days after the initial DDIC advice) — to ensure sufficient funds are available.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We strongly recommend monitoring your Collateral account balance — particularly around anticipated DDIC settlement dates (approximately 13 working days after the initial DDIC advice) — to ensure sufficient funds are available.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        194,
+        194
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 194
+        }
+      ]
+    }
+  ]
+}

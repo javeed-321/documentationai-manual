@@ -1,0 +1,175 @@
+---
+updatedAt: 2026-02-16T11:56:20.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# PCI - Retrieve secure card details
+
+Here is a step by step guide on how to allow the end customers to retrieve PAN+CVV+PIN details of an existing card. The advantages of this method is that there is no need to store sensitive card information on your server, therefore removing the need for strict PCI compliance. This guide is about securely retrieving card details (like the card number, CVV, and PIN) using Modulr's API. Instead of storing sensitive card information on your server, which requires strict security standards, you can use Modulr's API to get these details directly from the user's card. This process involves generating a temporary token, encrypting it for security, and then using this token to retrieve the card details. The user's device (mobile app/web browser) will handle the creation and encryption of the token, ensuring that their card details remain secure.
+
+> 📘 Take Note
+>
+> If any of the below statements are true, then please speak to us as it is likely you will need to be PCI certified yourself even if you make these new changes.
+>
+> * Store or log Primary Account Number (PAN), even if only temporary
+> * Issue and use cards on behalf of your customers
+> * Have any ability to decrypt or view your customers’ PCI protected details.
+>   * This includes Unencrypted traffic at any point in your communication chain
+>   * Storing or holding decryption keys that could be used to decrypt the traffic
+
+> 📘 Jargon Aid
+>
+> * PCI-DSS =  PCI-DSS stands for Payment Card Industry Data Security Standard. A set of guidelines that companies must follow to keep card information safe
+> * PAN = The 16 Digit Number of the Card
+> * PIN = A 4 digit code unique to a Physical card that is used to Authenticate a Cardholder during an in-person card transaction
+> * CVV = A 3 digit code unique to a Virtual or Physical card that is used to Authenticate a Cardholder during an e-Commerce transaction
+> * Public Key Encryption = a lock with two keys: one for locking (public key) and another for unlocking (private key), The public key is used to send secure messages, but only the holder of the private key, can read and unlock them.
+> * RSA = The Type of Algorithm used in the encryption
+> * PKCS1 (Public Key Cryptography Standards) = A standard that governs the format of encryption
+> * OAEP (Optimal Asymmetric Encryption Padding) = is a technique used in public key cryptography, like RSA, to add an extra layer of security when encrypting data. It's like adding an extra layer of protection to a secret message before sending it to ensure it stays safe during transmission.
+
+## Get the secure card details token
+
+You can retrieve the token for the card posting to [Create secure card details token](https://modulr.readme.io/reference/generatecardholdertoken). The card needs to be active, and this token will last for 60 seconds. Token will look something like this:
+
+```json
+eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkExMjhHQ00ifQ.K52jFwAQJH-
+DxMhtaq7sg5tMuot_mT5dm1DR_01wj6ZUQQhJFO02vPI44W5nDjC5C_v4p
+W1UiJa3cwb5y2Rd9kSvb0ZxAqGX9c4Z4zouRU57729ML3V05UArUhck9Zv
+ssfkDW1VclingL8LfagRUs2z95UkwhiZyaKpmrgqpKX8azQFGNLBvEjXnx
+-xoDFZIYwHOno290HOpig3aUsDxhsioweiXbeLXxLeRsivaLwUWRUZfHRC
+_HGAo8KSF4gQZmeJtRgai5mz6qgbVkg7jPQyZFtM5_ul0UKHE2y0AtWm8I
+zDE_rbAV14OCRZJ6n38X5urVFFE5sdphdGsNlA.gjI_RIFWZXJwaO9R.oa
+E5a-z0N1MW9FBkhKeKeFa5e7hxVXOuANZsNmBYYT8G_xlXkMD0nz4fIaGt
+uWd3t9Xp-kufvvfD-xOnAs2SBX_Y1kYGPto4mibBjIrXQEjDsKyKwndxzr
+utN9csmFwqWhx1sLHMpJkgsnfLTi9yWBPKH5Krx23IhoDGoSfqOquuhxn0
+y0WkuqH1R3z-fluUs6sxx9qx6NFVS1NRQ-LVn9sWT5yx8m9AQ_ng8MBWz2
+BfBTV0tjliV74ogNDikNXTAkD9rsWFV0IX4IpA.sOLijuVySaKI-FYUaBy
+wpg
+```
+
+Modulr require public-key encryption to secure the details of card access tokens as they pass through our intermediary networks to client devices. Client devices will need to generate an RSA key pair and pass the public key to our Partner’s platforms for them to pass to our API, without the associated private key leaving the client device.
+
+The [secure details token endpoint](https://modulr.readme.io/reference/generatecardholdertoken) now accepts a publicKey parameter that can be used to have the access token encrypted in the endpoint response. The value passed into this parameter must be at least a 4096 bit RSA public key, in PKCS1 format, encoded using Base64 UTF-8 plain encoding (non-mime format). The associated private key should not leave the client device.
+
+The encoded public key should look something like the following:
+
+```text
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAy0idFaDpabc2gmKHNaZ3lVj7UHCEPWUkQ/5QKnd++UlhmISnHB7nzo5ynsXei+cjmfxPSMTJeLZkeSAmlex4IXSgdBm/GlAykhKa5USjlvFswd9rAEkN/oOPILDYR5kkA0N4L2nZkNxbOw1T1BYI1KymxUf/YZPwOy1TkgZBsOtvoU2ShZGXUvQI3rP5jki+7KpFJCAVux0mSt5Pu/6i3wVFqlx1f+l87Uw5hit5JtyrDExPkdPcw2Y8So8f25omWpcI5x5sRxbhHn6ejdPRQLyhgjYJ5Mm4jCJgtjKSPEqoHym7ttrUK4UiFCjJ3okkoagXjiurAeHI+O/MbtlOA499+9ad7mvlFlZOkPBg+YzDYoSTAK/athniRajmjtTMwb9cFADKlNq8RHMp8xDGNimbM2p566vBYDYK1XCYfeWp7v4DDNrOORNdAEFizTCYFnFKNUXzXgA3/hOl4bbcS2ttN97FEpKYGOdQVDTz5J1dfkUbZPe9g76RkbOuQbJ0wuATYhNopTUdc6xF3e5B9D1A7br7MHc7HWm8d0aE+Wn+3W9P6GZvnH7MGcdzqN5eBx2AxWCCL+lPqvJeWUCYq7XkP0YoPi81vm3eCp1y8gIMVI4mbIIWCcuSGkZ/fmTlIwaNyBNo18x7Qcx9ilaoB7m2xc+f0kYrxelZq9T4OKcCAwEAAQ==
+```
+
+Using your API Key below you'll be able to test this, which will make this easier for you to implement in web-portals.
+
+The API response for [POST /cards/\{id}/secure-details-token](https://modulr.readme.io/reference/generatecardholdertoken)  will contain 2 additional parameters that are required to decrypt the token before use: `encryptedSymmetricKey` and `initialisationVector`. The private key associated with the public key passed in the request should be used to decrypt the UTF-8 Base64 decoded `encryptedSymmetricKey` using an RSA ECB cipher with OAEP padding, configured to use a SHA-256 hash for the mask generation function. The resulting value should be used as an AES key, and used to decrypt the token using an AES GCM cipher with no padding, and using the UTF-8 Base64 decoded `initialisationVector` value as an initialisation vector to the Cipher. This decrypted token can then be passed as a Bearer Authorization header to the secure details endpoint [GET /cards/secure-detail ](https://modulr.readme.io/reference/getsecurecarddetails) from the end user device or browser to retrieve the card details.
+
+## Push the secure card details token to the cardholder's client
+
+Transmit the secure card details token securely to the cardholder's client (app, webpage) to prepare to make the request directly to Modulr without your intervention
+
+## Cardholder requests and receives secure card details
+
+With the secure card details token, the Cardholder will GET [Retrieve secure card details (PAN + CVV)](https://modulr.readme.io/reference/getsecurecarddetails), passing the token value as a `Bearer` token in the Authorization header. If the token is valid, PAN and CVV will be returned. With this response, the numbers can be drawn directly in the client (app or web).
+
+```json
+{
+  "pan": "4024007153577779",
+  "cvv2": "321",
+  "pin": "1234"
+}
+```
+
+## Encryption code examples
+
+The following shows example code for generating an RSA key pair suitable for the request when generating a token, and the code required to decrypt the details returned in the services
+
+```javascript
+/* Creates 2 items:
+ * 1. A promise 'usePublicKey' that can be used to access the encoded public key in a way Modulr services can then read it, e.g:
+          usePublicKey.then((key) => {
+              // execute Modulr's secure-details-token endpoint with `{"publicKey": key}`
+          })
+ * 2. A callback 'useAccessToken(serviceResponse, targetCallback)' that parses the encryption details out of the secure-details-token response, and invokes the callback with the access to be used as a Bearer token in the Authentication header of the service invocation
+ */
+usePublicKey = new Promise((resolve, reject) => {
+  crypto.subtle.generateKey({
+    name: "RSA-OAEP",
+    modulusLength: 4096,
+    publicExponent: new Uint8Array([1, 0, 1]),
+    hash: "SHA-256"
+  }, true, ["encrypt", "decrypt"])
+   .then((keyPair) => {
+    crypto.subtle.exportKey("spki", keyPair.publicKey).then((exported) => {
+      let encodedPublicKey = btoa(String.fromCharCode.apply(null, new Uint8Array(exported)));
+      resolve(encodedPublicKey);
+    });
+    useAccessToken = (serviceResponse, targetCallback) => {
+      let encryptedSymmetricKey = serviceResponse.encryptedSymmetricKey;
+      let encodedIv = serviceResponse.initialisationVector;
+      let encryptedToken = serviceResponse.token;
+      decryptAccessToken(encryptedToken, encryptedSymmetricKey, encodedIv, keyPair.privateKey).then((decryptedToken) => {
+        taretCallback(decryptedToken);
+      })
+    }
+  });
+
+});
+
+
+
+async function decryptAccessToken(encryptedToken, encryptedSymmetricKey, encodedIv, privateKey) {
+  let decodedEncryptedSymmetricKey = Uint8Array.from(atob(encryptedSymmetricKey), c => c.charCodeAt(0))
+  let decryptedSymmetricKey = await crypto.subtle.decrypt({
+    name: "RSA-OAEP",
+    hash: {
+      name: "SHA-256"
+    }
+  }, privateKey, decodedEncryptedSymmetricKey);
+  let aesKey = await crypto.subtle.importKey("raw", decryptedSymmetricKey, "AES-GCM", true, ["encrypt", "decrypt"]);
+  let decodedIv = Uint8Array.from(atob(encodedIv), c => c.charCodeAt(0));
+  let decodedEncryptedToken = Uint8Array.from(atob(encryptedToken), c => c.charCodeAt(0))
+  let rawDecryptedToken = await crypto.subtle.decrypt({
+    name: "AES-GCM",
+    iv: decodedIv
+  }, aesKey, decodedEncryptedToken);
+  return new TextDecoder('utf-8').decode(new DataView(rawDecryptedToken));
+}
+```
+
+```java
+/**
+ * Generates the keypair to use during the encryption cycle. The private key from this should
+ * never leave the client device
+ */
+public KeyPair generateKeyPair() throws GeneralSecurityException {
+  KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+  keyPairGenerator.initialize(4096);
+  return keyPairGenerator.generateKeyPair();
+}
+
+/**
+ * Encode the public key from the key pair in a format that Modulr's API will accept
+ */
+public String encodePublicKey(KeyPair keyPair) throws GeneralSecurityException {
+  return new String(Base64.getEncoder().encode(keyPair.getPublic().getEncoded()), StandardCharsets.UTF_8))
+}
+
+/**
+ * Use the values returned from the Modulr response to build to the value to be used as a Bearer token in the Authentication to Modulr's API call.
+ */
+public String decryptAccessToken(KeyPair keyPair, String initialisationVector, String encryptedToken, String encryptedSymmetricKey) throws GeneralSecurityException {
+  PrivateKey privateKey = keyPair.getPrivate();
+  Cipher rsaCipher = Cipher.getInstance("RSA/ECB/OAEPPadding");
+  OAEPParameterSpec oaepParams = new OAEPParameterSpec("SHA-256", "MGF1", new MGF1ParameterSpec("SHA-256"), PSource.PSpecified.DEFAULT);
+  rsaCipher.init(Cipher.DECRYPT_MODE, privateKey, oaepParams);
+  byte[] decryptedSymmetricKey = rsaCipher.doFinal(Base64.getDecoder().decode(encryptedSymmetricKey));
+
+  byte[] iv = Base64.getDecoder().decode(initialisationVector.getBytes(StandardCharsets.UTF_8));
+  SecretKey aesKey = new SecretKeySpec(decryptedSymmetricKey, "AES");
+  Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
+  aesCipher.init(Cipher.DECRYPT_MODE, aesKey, new GCMParameterSpec(128, iv));
+  byte[] decryptedToken = aesCipher.doFinal(Base64.getDecoder().decode(encryptedToken.getBytes(StandardCharsets.UTF_8)));
+
+  return new String(decryptedToken, StandardCharsets.UTF_8); 
+}
+```

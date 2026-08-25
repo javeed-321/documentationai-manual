@@ -1,0 +1,317 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Direct Debits",
+      "description": "Direct Debit operations"
+    }
+  ],
+  "paths": {
+    "/mandates/{mandateId}/collectionschedules": {
+      "post": {
+        "tags": [
+          "Direct Debits"
+        ],
+        "summary": "Create the collection schedule for the given mandate-id.",
+        "description": "Creates a Direct Debit collection schedule; the agreed to framework for the collections for the given mandate-id. This could be a single collection or multiple and includes the frequency and amounts of the planned payments.",
+        "operationId": "createCollectionSchedule",
+        "parameters": [
+          {
+            "name": "mandateId",
+            "in": "path",
+            "description": "Id of mandate to create collection for.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/directdebit.CreateCollectionScheduleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/directdebit.CollectionScheduleResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation errors",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/directdebit.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/directdebit.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "directdebit.CollectionScheduleResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique id for direct-debit collection.",
+            "example": "Q0000001"
+          },
+          "frequency": {
+            "type": "string",
+            "description": "Frequency for direct-debit collection",
+            "example": "MONTHLY"
+          },
+          "numberOfPayments": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Number of payments for direct-debit collection",
+            "example": 12
+          },
+          "firstPaymentAmount": {
+            "type": "number",
+            "description": "Amount of the first collection payment",
+            "example": "100.00"
+          },
+          "firstPaymentDate": {
+            "type": "string",
+            "description": "Date of the first collection payment. Format is yyyy-MM-dd.",
+            "example": "2018-01-10"
+          },
+          "regularPaymentAmount": {
+            "type": "number",
+            "description": "Amount of the regular collection payments",
+            "example": "100.00"
+          },
+          "regularPaymentStartDate": {
+            "type": "string",
+            "description": "Start date of the regular collection payment. Format is yyyy-MM-dd.",
+            "example": "2018-01-10"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Datetime when direct-debit collection was created.Format is 'yyyy-MM-dd'T'HH:mm:ssZ' where Z is UTC offset. e.g 2017-01-28T01:01:01+0000",
+            "example": "2017-01-28T01:01:01+0000"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the direct-debit collection. Can be one of ",
+            "example": "PROCESSING"
+          },
+          "externalReference": {
+            "type": "string"
+          },
+          "collectionReference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "createdDate",
+          "frequency",
+          "id",
+          "numberOfPayments",
+          "status"
+        ]
+      },
+      "directdebit.CreateCollectionScheduleRequest": {
+        "type": "object",
+        "description": "Details of collection to create.",
+        "properties": {
+          "frequency": {
+            "type": "string",
+            "description": "Frequency for direct-debit collection. Can be one of: ONCE, WEEKLY, EVERY_TWO_WEEKS, EVERY_FOUR_WEEKS, MONTHLY, QUARTERLY, SEMI_ANNUALLY, ANNUALLY.",
+            "enum": [
+              "ONCE",
+              "MONTHLY",
+              "QUARTERLY",
+              "SEMI_ANNUALLY",
+              "ANNUALLY",
+              "WEEKLY",
+              "EVERY_TWO_WEEKS",
+              "EVERY_FOUR_WEEKS"
+            ],
+            "minLength": 1
+          },
+          "numberOfPayments": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Number of payments for direct-debit collection, must be '1' where frequency is 'ONCE'.",
+            "minimum": 1
+          },
+          "firstPaymentAmount": {
+            "type": "number",
+            "description": "Amount of the first collection payment.<br>\nNote: your item limit is set during onboarding will be lower than field maximum and Bacs scheme item limit of £20m.",
+            "example": "100.00",
+            "maximum": 20000000,
+            "minimum": 0.01
+          },
+          "firstPaymentDate": {
+            "type": "string",
+            "description": "Date of the first collection payment, format must be: yyyy-MM-dd",
+            "example": "2018-01-10"
+          },
+          "regularPaymentAmount": {
+            "type": "number",
+            "description": "Amount of the regular collection payments following first collection amount. Does not apply where the frequency is 'ONCE'.<br>\nNote: your item limit is set during onboarding will be lower than field maximum and Bacs scheme item limit of £20m",
+            "example": "100.00",
+            "maximum": 20000000,
+            "minimum": 0.01
+          },
+          "regularPaymentStartDate": {
+            "type": "string",
+            "description": "Start date of the regular collection payment, format: yyyy-MM-dd<br> Note: Does not apply where the frequency is 'ONCE'.",
+            "example": "2018-01-10"
+          },
+          "currency": {
+            "type": "string",
+            "description": "Currency in which payment should be made. Must be 'GBP' currently.",
+            "minLength": 1
+          },
+          "externalReference": {
+            "type": "string",
+            "description": "External Reference for collection schedule, should contain only alphanumeric characters, underscore, hyphen and space.<br> For your internal reconciliation only, not sent to Bacs scheme.",
+            "example": "REFERENCE - 12",
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "[\\w-\\s]*"
+          },
+          "collectionReference": {
+            "type": "string",
+            "description": "An optional additional collection specific reference to be appended to the reference of the mandate.<br>\nThis is concatenated after the  core reference of the mandate, and will be truncated if combined reference is >18 characters.<br>\nShould only contain alphanumeric characters, dot, ampersand, forward-slash and hyphen only.",
+            "example": "ABCD - EFGH",
+            "maxLength": 12,
+            "minLength": 0,
+            "pattern": "[\\w-\\s]*"
+          },
+          "collectionCorrelationName": {
+            "type": "string",
+            "description": "(If enabled by Modulr) an optional collection specific reference appended to abbreviated SU name for the given collection schedule. If feature not enabled, any parameter supplied will be ignored.<br>\nWhen is enabled, this value is concatenated to a Service User Name abbreviation (set by Modulr) to form a Service User name containing extra information that can be used by payer to correlate (identify) transaction easily.<br>\nCharacters restricted to: alphanumeric characters, numbers, space, dot, ampersand, forward-slash and hyphen only.",
+            "example": "TEST/NAME-1.2",
+            "maxLength": 18,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z 0-9\\.\\&\\/-]+$"
+          }
+        },
+        "required": [
+          "currency",
+          "frequency",
+          "numberOfPayments"
+        ]
+      },
+      "directdebit.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}

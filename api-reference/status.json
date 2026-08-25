@@ -1,0 +1,226 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "File Upload",
+      "description": "Upload payment files"
+    }
+  ],
+  "paths": {
+    "/payment-files/{fileId}": {
+      "get": {
+        "tags": [
+          "File Upload"
+        ],
+        "summary": "Get an upload file latest status",
+        "description": "Get latest status of an uploaded payment file",
+        "operationId": "status",
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "path",
+            "description": "Payment File ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File upload status response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/paymentfileupload.FileUploadStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Payment file",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/paymentfileupload.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "paymentfileupload.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "paymentfileupload.FileUploadStatusResponse": {
+        "type": "object",
+        "description": "File upload Status Response",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "description": "Unique ID of the file. Only populated when returned as part of multi file",
+            "example": "F1100001"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the uploaded file",
+            "enum": [
+              "NEW",
+              "SUBMITTED",
+              "PROCESSING",
+              "INVALID",
+              "VALID",
+              "DUPLICATE",
+              "REJECTED",
+              "ERROR_RETRYABLE",
+              "ACCEPTED",
+              "PROCESSED",
+              "SENDING",
+              "PAYMENT_PROCESSING",
+              "SPLIT_FILE",
+              "PARTIALLY_ACCEPTED"
+            ],
+            "example": "INVALID"
+          },
+          "fileName": {
+            "type": "string",
+            "description": "File name of the uploaded file",
+            "example": "file1"
+          },
+          "numTransactions": {
+            "type": "integer",
+            "format": "int32",
+            "deprecated": true,
+            "description": "Total number of transactions within file",
+            "example": 1000
+          },
+          "numberOfTransactions": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Total number of transactions within file",
+            "example": 1000
+          },
+          "totalAmount": {
+            "type": "number",
+            "description": "Sum of all transaction's amount within file",
+            "example": "1539.81"
+          },
+          "errors": {
+            "type": "string",
+            "description": "If invalid holds the validation errors",
+            "example": [
+              "Failed parsing"
+            ]
+          },
+          "validationResults": {
+            "type": "string",
+            "description": "If invalid, holds the validation results",
+            "example": [
+              {
+                "type": "HEADER",
+                "lineNumber": 4,
+                "errors": [
+                  {
+                    "type": "INVALID_CURRENCY_CODE",
+                    "field": "currencyCode",
+                    "invalidValue": "01"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}

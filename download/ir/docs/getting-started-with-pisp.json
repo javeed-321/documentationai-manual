@@ -1,0 +1,212 @@
+{
+  "slug": "docs/getting-started-with-pisp",
+  "source": "https://modulr.readme.io/docs/getting-started-with-pisp.md",
+  "url": "https://modulr.readme.io/docs/getting-started-with-pisp",
+  "title": "Getting Started with the Payment Initiation Service",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:35:40.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 4,
+    "list": 2,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Getting Started with the Payment Initiation Service",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Getting Started with the Payment Initiation Service",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "The Payment Initiation Service can be used to initiate [Single Immediate Payments](https://modulr.readme.io/docs/single-immediate-payments-overview) or to initiate [Fixed Recurring Payments (Standing Orders).](https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Payment Initiation Service can be used to initiate Single Immediate Payments or to initiate Fixed Recurring Payments (Standing Orders).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/single-immediate-payments-overview",
+          "line": 9
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/fixed-recurring-payments-standing-order-overview",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "This functionality can be integrated into your own app, website or using a URL link sent directly to end users.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This functionality can be integrated into your own app, website or using a URL link sent directly to end users.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Pre-requisites",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Pre-requisites",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "**For Sandbox Access**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For Sandbox Access",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        19
+      ],
+      "raw": "* You have registered with the Modulr Sandbox.\n* You have provided our implementation team with your own secure redirect URL, where your end users will be redirected after authenticating with their bank.\n* You have received the bank's sandbox login credentials from our implementation team.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "You have registered with the Modulr Sandbox.You have provided our implementation team with your own secure redirect URL, where your end users will be redirected after authenticating with their bank.You have received the bank's sandbox login credentials from our implementation team.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        23
+      ],
+      "raw": "> 📘\n>\n> Our sandbox is currently connected to Lloyds Bank and the Royal Bank of Scotland for testing purposes. This enables you to simulate the entire end-to-end flow but note that real payments will not be made.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Our sandbox is currently connected to Lloyds Bank and the Royal Bank of Scotland for testing purposes. This enables you to simulate the entire end-to-end flow but note that real payments will not be made.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "**For Production**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For Production",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        28
+      ],
+      "raw": "* You have been fully onboarded as Partner or Direct Customer and you have provided us with your secure redirect URL for the production environment.\n* We have reviewed and approved your implementation and user interface to ensure it complies with our guidelines and regulatory requirements.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "You have been fully onboarded as Partner or Direct Customer and you have provided us with your secure redirect URL for the production environment.We have reviewed and approved your implementation and user interface to ensure it complies with our guidelines and regulatory requirements.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

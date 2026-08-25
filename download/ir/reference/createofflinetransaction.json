@@ -1,0 +1,108 @@
+{
+  "slug": "reference/createofflinetransaction",
+  "source": "https://modulr.readme.io/reference/createofflinetransaction.md",
+  "url": "https://modulr.readme.io/reference/createofflinetransaction",
+  "title": "Create an offline transaction",
+  "description": "Simulate an offline transaction for a card",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-06-16T15:15:40.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Create an offline transaction",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Create an offline transaction",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Simulate an offline transaction for a card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Simulate an offline transaction for a card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        379
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Card Simulator\",\n      \"description\": \"Cards Simulator API\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/offline-transactions\": {\n      \"post\": {\n        \"tags\": [\n          \"Card Simulator\"\n        ],\n        \"summary\": \"Create an offline transaction\",\n        \"description\": \"Simulate an offline transaction for a card\",\n        \"operationId\": \"createOfflineTransaction\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"Card ID to create an offline transaction for\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"example\": \"V000000001\"\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/cardsimulator.CardSettlementRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"Created\"\n          },\n          \"400\": {\n            \"description\": \"Validation errors\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/cardsimulator.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"Card not found\"\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"cardsimulator.CardSettlementRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Optional settlement details. Omit body for full settlement.\",\n        \"properties\": {\n          \"transactionAmount\": {\n            \"type\": \"number\",\n            \"description\": \"The transaction amount\",\n            \"example\": \"5.45\"\n          },\n          \"transactionCurrency\": {\n            \"type\": \"string\",\n            \"description\": \"The transaction currency\",\n            \"enum\": [\n              \"GBP\",\n              \"EUR\",\n              \"AED\",\n              \"AFN\",\n              \"ALL\",\n              \"AMD\",\n              \"ANG\",\n              \"AOA\",\n              \"ARS\",\n              \"AUD\",\n              \"AWG\",\n              \"AZN\",\n              \"BAM\",\n              \"BBD\",\n              \"BDT\",\n              \"BGN\",\n              \"BHD\",\n              \"BIF\",\n              \"BMD\",\n              \"BND\",\n              \"BOB\",\n              \"BOV\",\n              \"BRL\",\n              \"BSD\",\n              \"BTN\",\n              \"BWP\",\n              \"BYN\",\n              \"BZD\",\n              \"CAD\",\n              \"CDF\",\n              \"CHE\",\n              \"CHF\",\n              \"CHW\",\n              \"CLF\",\n              \"CLP\",\n              \"CNY\",\n              \"COP\",\n              \"COU\",\n              \"CRC\",\n              \"CUC\",\n              \"CUP\",\n              \"CVE\",\n              \"CZK\",\n              \"DJF\",\n              \"DKK\",\n              \"DOP\",\n              \"DZD\",\n              \"EGP\",\n              \"ERN\",\n              \"ETB\",\n              \"FJD\",\n              \"FKP\",\n              \"GEL\",\n              \"GHS\",\n              \"GIP\",\n              \"GMD\",\n              \"GNF\",\n              \"GTQ\",\n              \"GYD\",\n              \"HKD\",\n              \"HNL\",\n              \"HRK\",\n              \"HTG\",\n              \"HUF\",\n              \"IDR\",\n              \"ILS\",\n              \"INR\",\n              \"IQD\",\n              \"IRR\",\n              \"ISK\",\n              \"JMD\",\n              \"JOD\",\n              \"JPY\",\n              \"KES\",\n              \"KGS\",\n              \"KHR\",\n              \"KMF\",\n              \"KPW\",\n              \"KRW\",\n              \"KWD\",\n              \"KYD\",\n              \"KZT\",\n              \"LAK\",\n              \"LBP\",\n              \"LKR\",\n              \"LRD\",\n              \"LSL\",\n              \"LYD\",\n              \"MAD\",\n              \"MDL\",\n              \"MGA\",\n              \"MKD\",\n              \"MMK\",\n              \"MNT\",\n              \"MOP\",\n              \"MRU\",\n              \"MUR\",\n              \"MVR\",\n              \"MWK\",\n              \"MXN\",\n              \"MXV\",\n              \"MYR\",\n              \"MZN\",\n              \"NAD\",\n              \"NGN\",\n              \"NIO\",\n              \"NOK\",\n              \"NPR\",\n              \"NZD\",\n              \"OMR\",\n              \"PAB\",\n              \"PEN\",\n              \"PGK\",\n              \"PHP\",\n              \"PKR\",\n              \"PLN\",\n              \"PYG\",\n              \"QAR\",\n              \"RON\",\n              \"RSD\",\n              \"RUB\",\n              \"RWF\",\n              \"SAR\",\n              \"SBD\",\n              \"SCR\",\n              \"SDG\",\n              \"SEK\",\n              \"SGD\",\n              \"SLE\",\n              \"SLL\",\n              \"SOS\",\n              \"SRD\",\n              \"SSP\",\n              \"STN\",\n              \"SVC\",\n              \"SYP\",\n              \"SZL\",\n              \"SHP\",\n              \"THB\",\n              \"TJS\",\n              \"TMT\",\n              \"TND\",\n              \"TOP\",\n              \"TRY\",\n              \"TTD\",\n              \"TWD\",\n              \"TZS\",\n              \"UAH\",\n              \"UGX\",\n              \"USD\",\n              \"USN\",\n              \"UYI\",\n              \"UYU\",\n              \"UYW\",\n              \"UZS\",\n              \"VES\",\n              \"VND\",\n              \"VUV\",\n              \"WST\",\n              \"XAF\",\n              \"XAG\",\n              \"XAU\",\n              \"XBA\",\n              \"XBB\",\n              \"XBC\",\n              \"XBD\",\n              \"XCD\",\n              \"XDR\",\n              \"XOF\",\n              \"XPD\",\n              \"XPF\",\n              \"XPT\",\n              \"XSU\",\n              \"XTS\",\n              \"XUA\",\n              \"XXX\",\n              \"YER\",\n              \"ZAR\",\n              \"ZMW\",\n              \"ZWL\"\n            ],\n            \"example\": \"GBP\"\n          },\n          \"fxRate\": {\n            \"type\": \"number\",\n            \"description\": \"The foreign exchange rate\",\n            \"example\": \"0.8\"\n          },\n          \"mcc\": {\n            \"type\": \"string\",\n            \"description\": \"Merchant Category Code\",\n            \"example\": \"5812\"\n          }\n        },\n        \"required\": [\n          \"fxRate\",\n          \"mcc\",\n          \"transactionAmount\",\n          \"transactionCurrency\"\n        ]\n      },\n      \"cardsimulator.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Card Simulator\",\n      \"description\": \"Cards Simulator API\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/offline-transactions\": {\n      \"post\": {\n        \"tags\": [\n          \"Card Simulator\"\n        ],\n        \"summary\": \"Create an offline transaction\",\n        \"description\": \"Simulate an offline transaction for a card\",\n        \"operationId\": \"createOfflineTransaction\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"Card ID to create an offline transaction for\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"example\": \"V000000001\"\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/cardsimulator.CardSettlementRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"Created\"\n          },\n          \"400\": {\n            \"description\": \"Validation errors\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/cardsimulator.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"404\": {\n            \"description\": \"Card not found\"\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"cardsimulator.CardSettlementRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Optional settlement details. Omit body for full settlement.\",\n        \"properties\": {\n          \"transactionAmount\": {\n            \"type\": \"number\",\n            \"description\": \"The transaction amount\",\n            \"example\": \"5.45\"\n          },\n          \"transactionCurrency\": {\n            \"type\": \"string\",\n            \"description\": \"The transaction currency\",\n            \"enum\": [\n              \"GBP\",\n              \"EUR\",\n              \"AED\",\n              \"AFN\",\n              \"ALL\",\n              \"AMD\",\n              \"ANG\",\n              \"AOA\",\n              \"ARS\",\n              \"AUD\",\n              \"AWG\",\n              \"AZN\",\n              \"BAM\",\n              \"BBD\",\n              \"BDT\",\n              \"BGN\",\n              \"BHD\",\n              \"BIF\",\n              \"BMD\",\n              \"BND\",\n              \"BOB\",\n              \"BOV\",\n              \"BRL\",\n              \"BSD\",\n              \"BTN\",\n              \"BWP\",\n              \"BYN\",\n              \"BZD\",\n              \"CAD\",\n              \"CDF\",\n              \"CHE\",\n              \"CHF\",\n              \"CHW\",\n              \"CLF\",\n              \"CLP\",\n              \"CNY\",\n              \"COP\",\n              \"COU\",\n              \"CRC\",\n              \"CUC\",\n              \"CUP\",\n              \"CVE\",\n              \"CZK\",\n              \"DJF\",\n              \"DKK\",\n              \"DOP\",\n              \"DZD\",\n              \"EGP\",\n              \"ERN\",\n              \"ETB\",\n              \"FJD\",\n              \"FKP\",\n              \"GEL\",\n              \"GHS\",\n              \"GIP\",\n              \"GMD\",\n              \"GNF\",\n              \"GTQ\",\n              \"GYD\",\n              \"HKD\",\n              \"HNL\",\n              \"HRK\",\n              \"HTG\",\n              \"HUF\",\n              \"IDR\",\n              \"ILS\",\n              \"INR\",\n              \"IQD\",\n              \"IRR\",\n              \"ISK\",\n              \"JMD\",\n              \"JOD\",\n              \"JPY\",\n              \"KES\",\n              \"KGS\",\n              \"KHR\",\n              \"KMF\",\n              \"KPW\",\n              \"KRW\",\n              \"KWD\",\n              \"KYD\",\n              \"KZT\",\n              \"LAK\",\n              \"LBP\",\n              \"LKR\",\n              \"LRD\",\n              \"LSL\",\n              \"LYD\",\n              \"MAD\",\n              \"MDL\",\n              \"MGA\",\n              \"MKD\",\n              \"MMK\",\n              \"MNT\",\n              \"MOP\",\n              \"MRU\",\n              \"MUR\",\n              \"MVR\",\n              \"MWK\",\n              \"MXN\",\n              \"MXV\",\n              \"MYR\",\n              \"MZN\",\n              \"NAD\",\n              \"NGN\",\n              \"NIO\",\n              \"NOK\",\n              \"NPR\",\n              \"NZD\",\n              \"OMR\",\n              \"PAB\",\n              \"PEN\",\n              \"PGK\",\n              \"PHP\",\n              \"PKR\",\n              \"PLN\",\n              \"PYG\",\n              \"QAR\",\n              \"RON\",\n              \"RSD\",\n              \"RUB\",\n              \"RWF\",\n              \"SAR\",\n              \"SBD\",\n              \"SCR\",\n              \"SDG\",\n              \"SEK\",\n              \"SGD\",\n              \"SLE\",\n              \"SLL\",\n              \"SOS\",\n              \"SRD\",\n              \"SSP\",\n              \"STN\",\n              \"SVC\",\n              \"SYP\",\n              \"SZL\",\n              \"SHP\",\n              \"THB\",\n              \"TJS\",\n              \"TMT\",\n              \"TND\",\n              \"TOP\",\n              \"TRY\",\n              \"TTD\",\n              \"TWD\",\n              \"TZS\",\n              \"UAH\",\n              \"UGX\",\n              \"USD\",\n              \"USN\",\n              \"UYI\",\n              \"UYU\",\n              \"UYW\",\n              \"UZS\",\n              \"VES\",\n              \"VND\",\n              \"VUV\",\n              \"WST\",\n              \"XAF\",\n              \"XAG\",\n              \"XAU\",\n              \"XBA\",\n              \"XBB\",\n              \"XBC\",\n              \"XBD\",\n              \"XCD\",\n              \"XDR\",\n              \"XOF\",\n              \"XPD\",\n              \"XPF\",\n              \"XPT\",\n              \"XSU\",\n              \"XTS\",\n              \"XUA\",\n              \"XXX\",\n              \"YER\",\n              \"ZAR\",\n              \"ZMW\",\n              \"ZWL\"\n            ],\n            \"example\": \"GBP\"\n          },\n          \"fxRate\": {\n            \"type\": \"number\",\n            \"description\": \"The foreign exchange rate\",\n            \"example\": \"0.8\"\n          },\n          \"mcc\": {\n            \"type\": \"string\",\n            \"description\": \"Merchant Category Code\",\n            \"example\": \"5812\"\n          }\n        },\n        \"required\": [\n          \"fxRate\",\n          \"mcc\",\n          \"transactionAmount\",\n          \"transactionCurrency\"\n        ]\n      },\n      \"cardsimulator.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

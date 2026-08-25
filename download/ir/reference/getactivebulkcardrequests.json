@@ -1,0 +1,108 @@
+{
+  "slug": "reference/getactivebulkcardrequests",
+  "source": "https://modulr.readme.io/reference/getactivebulkcardrequests.md",
+  "url": "https://modulr.readme.io/reference/getactivebulkcardrequests",
+  "title": "List active bulk card requests",
+  "description": "Retrieve non-terminated (not processed/archived/deleted) bulk card requests for current user",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-04-21T05:49:14.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# List active bulk card requests",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "List active bulk card requests",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Retrieve non-terminated (not processed/archived/deleted) bulk card requests for current user",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Retrieve non-terminated (not processed/archived/deleted) bulk card requests for current user",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        282
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/bulk-cards\": {\n      \"get\": {\n        \"tags\": [\n          \"Cards Bulk Operations\"\n        ],\n        \"summary\": \"List active bulk card requests\",\n        \"description\": \"Retrieve non-terminated (not processed/archived/deleted) bulk card requests for current user\",\n        \"operationId\": \"getActiveBulkCardRequests\",\n        \"parameters\": [\n          {\n            \"name\": \"page\",\n            \"in\": \"query\",\n            \"description\": \"Page to retrieve (0 indexed)\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"description\": \"Page to retrieve (0 indexed)\",\n              \"example\": 0,\n              \"minimum\": 0\n            },\n            \"example\": 0\n          },\n          {\n            \"name\": \"size\",\n            \"in\": \"query\",\n            \"description\": \"Page size\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"description\": \"Page size\",\n              \"example\": 500,\n              \"maximum\": 500,\n              \"minimum\": 1\n            },\n            \"example\": 500\n          }\n        ],\n        \"responses\": {\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Forbidden. Incorrect permissions\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.BulkRequestPageResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.BulkRequestPageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of responses on the current page\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.BulkRequestResponse\"\n            }\n          },\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Page size\"\n          },\n          \"totalSize\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total count\"\n          },\n          \"page\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Current page number, 0 based; i.e first-page = 0, second-page = 1\"\n          },\n          \"totalPages\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Total pages\"\n          }\n        },\n        \"required\": [\n          \"content\",\n          \"page\",\n          \"size\",\n          \"totalPages\",\n          \"totalSize\"\n        ]\n      },\n      \"card.BulkRequestResponse\": {\n        \"type\": \"object\",\n        \"description\": \"Bulk card request details\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Bulk request ID\",\n            \"example\": \"B000000001\"\n          },\n          \"filename\": {\n            \"type\": \"string\",\n            \"description\": \"Filename of the uploaded file\",\n            \"example\": \"example.csv\"\n          },\n          \"createdDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\",\n            \"description\": \"Date and time when the bulk request was created\"\n          },\n          \"createdBy\": {\n            \"type\": \"string\",\n            \"description\": \"User ID who created the bulk request\",\n            \"example\": \"U000001\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Status of the bulk request\",\n            \"example\": \"VALIDATED_WITH_ERRORS\"\n          },\n          \"totalOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total number of operations in the bulk request\",\n            \"example\": 200\n          },\n          \"successfulOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of successful operations\",\n            \"example\": 194\n          },\n          \"failedOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of failed operations\",\n            \"example\": 6\n          },\n          \"processedOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of processed operations\",\n            \"example\": 142\n          },\n          \"externalRef\": {\n            \"type\": \"string\",\n            \"description\": \"External reference\",\n            \"example\": \"example ref\"\n          }\n        },\n        \"required\": [\n          \"createdBy\",\n          \"createdDate\",\n          \"failedOperations\",\n          \"id\",\n          \"status\",\n          \"successfulOperations\",\n          \"totalOperations\"\n        ]\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/bulk-cards\": {\n      \"get\": {\n        \"tags\": [\n          \"Cards Bulk Operations\"\n        ],\n        \"summary\": \"List active bulk card requests\",\n        \"description\": \"Retrieve non-terminated (not processed/archived/deleted) bulk card requests for current user\",\n        \"operationId\": \"getActiveBulkCardRequests\",\n        \"parameters\": [\n          {\n            \"name\": \"page\",\n            \"in\": \"query\",\n            \"description\": \"Page to retrieve (0 indexed)\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"description\": \"Page to retrieve (0 indexed)\",\n              \"example\": 0,\n              \"minimum\": 0\n            },\n            \"example\": 0\n          },\n          {\n            \"name\": \"size\",\n            \"in\": \"query\",\n            \"description\": \"Page size\",\n            \"required\": false,\n            \"style\": \"form\",\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int32\",\n              \"description\": \"Page size\",\n              \"example\": 500,\n              \"maximum\": 500,\n              \"minimum\": 1\n            },\n            \"example\": 500\n          }\n        ],\n        \"responses\": {\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Forbidden. Incorrect permissions\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.BulkRequestPageResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.BulkRequestPageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"content\": {\n            \"type\": \"array\",\n            \"description\": \"List of responses on the current page\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.BulkRequestResponse\"\n            }\n          },\n          \"size\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Page size\"\n          },\n          \"totalSize\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total count\"\n          },\n          \"page\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Current page number, 0 based; i.e first-page = 0, second-page = 1\"\n          },\n          \"totalPages\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"description\": \"Total pages\"\n          }\n        },\n        \"required\": [\n          \"content\",\n          \"page\",\n          \"size\",\n          \"totalPages\",\n          \"totalSize\"\n        ]\n      },\n      \"card.BulkRequestResponse\": {\n        \"type\": \"object\",\n        \"description\": \"Bulk card request details\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"Bulk request ID\",\n            \"example\": \"B000000001\"\n          },\n          \"filename\": {\n            \"type\": \"string\",\n            \"description\": \"Filename of the uploaded file\",\n            \"example\": \"example.csv\"\n          },\n          \"createdDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\",\n            \"description\": \"Date and time when the bulk request was created\"\n          },\n          \"createdBy\": {\n            \"type\": \"string\",\n            \"description\": \"User ID who created the bulk request\",\n            \"example\": \"U000001\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Status of the bulk request\",\n            \"example\": \"VALIDATED_WITH_ERRORS\"\n          },\n          \"totalOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Total number of operations in the bulk request\",\n            \"example\": 200\n          },\n          \"successfulOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of successful operations\",\n            \"example\": 194\n          },\n          \"failedOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of failed operations\",\n            \"example\": 6\n          },\n          \"processedOperations\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of processed operations\",\n            \"example\": 142\n          },\n          \"externalRef\": {\n            \"type\": \"string\",\n            \"description\": \"External reference\",\n            \"example\": \"example ref\"\n          }\n        },\n        \"required\": [\n          \"createdBy\",\n          \"createdDate\",\n          \"failedOperations\",\n          \"id\",\n          \"status\",\n          \"successfulOperations\",\n          \"totalOperations\"\n        ]\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

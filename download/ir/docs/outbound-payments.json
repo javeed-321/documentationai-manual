@@ -1,0 +1,809 @@
+{
+  "slug": "docs/outbound-payments",
+  "source": "https://modulr.readme.io/docs/outbound-payments.md",
+  "url": "https://modulr.readme.io/docs/outbound-payments",
+  "title": "Outbound Payments",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-02T10:06:11.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 24,
+    "list": 4,
+    "Table": 3,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Outbound Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Outbound Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Outbound Payments Flow",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Outbound Payments Flow",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "When you request a payment, we perform some initial validation and either accept or reject the request.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When you request a payment, we perform some initial validation and either accept or reject the request.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "If your request is successful you will get a http 2xx response, a unique ID for Modulr for your payment request, and a status of VALIDATED.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If your request is successful you will get a http 2xx response, a unique ID for Modulr for your payment request, and a status of VALIDATED.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "At this stage the payment has not been completed, it will shortly be executed by our system, and you should check its status to confirm the payment was successful.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "At this stage the payment has not been completed, it will shortly be executed by our system, and you should check its status to confirm the payment was successful.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "There are a few ways you can do this:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are a few ways you can do this:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        21
+      ],
+      "raw": "* The most efficient way, if you can support it on your system reliably, is to subscribe to a [notification](https://modulr.readme.io/docs/notifications-1) webhook when the payment has reached a final state, which is a separate topic in this documentation.\n* Alternatively you can poll status, which can be done using `GET /payments`, using id you received on the POST request. See the [reference documentation](https://modulr.readme.io/reference/getpayments) for more detail. We do ask that you please use this considerately and not poll continuously. Even though most payments are processed and their status updated within tens of seconds please allow a few minutes before you first check status. If on the rare occasion for some reason it is still pending please wait an increasing number of minutes till you try again, and try a maximum of 5 times. As a suggested example you could try at 3 minutes, 10 minutes, 30 minutes, 2 hours, 4 hours. In the vast majority of cases the first GET should give you the final status, the others are only a precaution in the rare cases there is some delay.\n* If the volume of payments is low and you would rather not build this logic in your system, you can sign in to our web portal and check there for any payment failures. It is important that you ensure this is a regular task.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The most efficient way, if you can support it on your system reliably, is to subscribe to a notification webhook when the payment has reached a final state, which is a separate topic in this documentation.Alternatively you can poll status, which can be done using GET /payments, using id you received on the POST request. See the reference documentation for more detail. We do ask that you please use this considerately and not poll continuously. Even though most payments are processed and their status updated within tens of seconds please allow a few minutes before you first check status. If on the rare occasion for some reason it is still pending please wait an increasing number of minutes till you try again, and try a maximum of 5 times. As a suggested example you could try at 3 minutes, 10 minutes, 30 minutes, 2 hours, 4 hours. In the vast majority of cases the first GET should give you the final status, the others are only a precaution in the rare cases there is some delay.If the volume of payments is low and you would rather not build this logic in your system, you can sign in to our web portal and check there for any payment failures. It is important that you ensure this is a regular task.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/notifications-1",
+          "line": 19
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getpayments",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "For a list of valid statuses see: [Payment Statuses](https://modulr.readme.io/docs/payment-statuses).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For a list of valid statuses see: Payment Statuses.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-statuses",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "For a list of statuses when payments fail or are returned see: <https://modulr.readme.io/docs/payment-return-reasons>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For a list of statuses when payments fail or are returned see: https://modulr.readme.io/docs/payment-return-reasons",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-return-reasons>",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "i": 10,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "Whilst the payment is being processed we will reserve the amount for a short period against your available balance to ensure availability of funds, this will be released once the payment is completed. Once the payment has been successfully processed it will generate the appropriate transactions and debit your source account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Whilst the payment is being processed we will reserve the amount for a short period against your available balance to ensure availability of funds, this will be released once the payment is completed. Once the payment has been successfully processed it will generate the appropriate transactions and debit your source account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "You can view transactions posted against your account (debits and credits) using the GET transactions method [Get Transactions for a specific Account](https://modulr.readme.io/reference/gettransactionsbyaccount) .",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can view transactions posted against your account (debits and credits) using the GET transactions method Get Transactions for a specific Account .",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/gettransactionsbyaccount",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## Making Outbound Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Making Outbound Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "The following outlines how to make payments out of the platform, and within the platform, using the Modulr API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following outlines how to make payments out of the platform, and within the platform, using the Modulr API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "The API [Create a Payment](https://modulr.readme.io/reference/sendpayment) supports various ways to send funds within and out of the Modulr service:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The API Create a Payment supports various ways to send funds within and out of the Modulr service:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/sendpayment",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        37,
+        41
+      ],
+      "raw": "* To another Modulr account: type `ACCOUNT`\n* To an external bank account using the accounts identifier, e.g.\n  * A Sort Code and Account number for UK payments: type `SCAN`\n  * An IBAN for European (SEPA) payments: type `IBAN`\n* To an external bank account already added as a Beneficiary: type `BENEFICIARY`",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "To another Modulr account: type ACCOUNTTo an external bank account using the accounts identifier, e.g.A Sort Code and Account number for UK payments: type SCANAn IBAN for European (SEPA) payments: type IBANTo an external bank account already added as a Beneficiary: type BENEFICIARY",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "In each case, you must specify the Modulr Account Id from which you wish the funds to be taken from.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "In each case, you must specify the Modulr Account Id from which you wish the funds to be taken from.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "The destination details needed will vary depending on the destination type.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The destination details needed will vary depending on the destination type.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "### GBP Payments to UK Sort Code & Account Numbers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "GBP Payments to UK Sort Code & Account Numbers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "These payments will have their sort code & account number validated against the standard UK Modulus check as well as Pay.UK's Extended Industry Sort Code Directory to ensure payments can be successfully made.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "These payments will have their sort code & account number validated against the standard UK Modulus check as well as Pay.UK's Extended Industry Sort Code Directory to ensure payments can be successfully made.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "For testing purposes, below are some examples:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For testing purposes, below are some examples:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        53,
+        79
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Examples that will pass this check\n      </th>\n\n      <th>\n        Examples that will fail this check\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        134020 / 63849203 118765 / 64371389 200915 / 41011166\n      </td>\n\n      <td>\n        938063 / 15763217  \n        118765 / 64371388  \n        203099 / 66831036\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "component",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 22,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "As an alternative, you can use our mock test sort code '000000' to make successful payments to any account number. Using this sort code also allows you to force payments into different status to test your integration further. To do so, please use one of the following as your payment refence when submitting a payment:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "As an alternative, you can use our mock test sort code '000000' to make successful payments to any account number. Using this sort code also allows you to force payments into different status to test your integration further. To do so, please use one of the following as your payment refence when submitting a payment:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        83,
+        90
+      ],
+      "raw": "| Reference (Case Sensitive) | Payment Status                  |\n| :------------------------- | :------------------------------ |\n| EXTSYS                     | ER\\_EXTSYS                      |\n| TIMEOUTER                  | 15 Second Delay then ER\\_EXTSYS |\n| TIMEOUTOK                  | 15 Second Delay then PROCESSED  |\n| TIMEOUTLONGER              | 60 Second Delay then ER\\_EXTSYS |\n| TIMEOUTLONGOK              | 60 Second Delay then PROCESSED  |\n| INVALID                    | ER\\_INVALID                     |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Reference (Case Sensitive)",
+          "Payment Status"
+        ],
+        "rows": [
+          [
+            "EXTSYS",
+            "ER_EXTSYS"
+          ],
+          [
+            "TIMEOUTER",
+            "15 Second Delay then ER_EXTSYS"
+          ],
+          [
+            "TIMEOUTOK",
+            "15 Second Delay then PROCESSED"
+          ],
+          [
+            "TIMEOUTLONGER",
+            "60 Second Delay then ER_EXTSYS"
+          ],
+          [
+            "TIMEOUTLONGOK",
+            "60 Second Delay then PROCESSED"
+          ],
+          [
+            "INVALID",
+            "ER_INVALID"
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        92,
+        92
+      ],
+      "raw": "For a list of valid statuses see: [Payment Statuses](https://modulr.readme.io/docs/payment-statuses).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For a list of valid statuses see: Payment Statuses.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payment-statuses",
+          "line": 92
+        }
+      ]
+    },
+    {
+      "i": 25,
+      "lines": [
+        94,
+        94
+      ],
+      "raw": "### Euro (SEPA) Payments to IBANs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Euro (SEPA) Payments to IBANs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        96,
+        96
+      ],
+      "raw": "Payments made to an IBAN are validated against the SWIFT IBAN Plus table. Checks are completed on the following aspects:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Payments made to an IBAN are validated against the SWIFT IBAN Plus table. Checks are completed on the following aspects:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        98,
+        100
+      ],
+      "raw": "* Country Code\n* Structure of the IBAN for that particular country (including length)\n* Bank Code",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Country CodeStructure of the IBAN for that particular country (including length)Bank Code",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        102,
+        102
+      ],
+      "raw": "For testing purposes, below are some examples:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For testing purposes, below are some examples:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        104,
+        132
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Examples that will pass this check\n      </th>\n\n      <th>\n        Examples that will fail this check\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        NL57RABO9712139840 BE71096123456769 GB29NWBK60161331926819 GB33BUKB20201555555555 FR0630003000409279659119K54\n      </td>\n\n      <td>\n        NL57RABO9712139800  \n        BE71096123456700  \n        GB29NWBK60161331920000  \n        GB33BUKB20201555555000  \n        FR0630003000409279659119K00\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "component",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": [],
+      "notes": [
+        "reassembled from several raw-HTML chunks — this page needed the lenient parser"
+      ]
+    },
+    {
+      "i": 30,
+      "lines": [
+        134,
+        134
+      ],
+      "raw": "## Example Payment Request",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Example Payment Request",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        136,
+        149
+      ],
+      "raw": "```xml Example SEPA Payment\n{\n\t\"amount\": 999.99,\n\t\"currency\": \"EUR\",\n\t\"destination\": {\n\t  \"type\": \"IBAN\",\n\t\t\"iban\": \"IE52MODR99035500333832\",\n\t  \"name\": \"Beneficiary Name\",\n\t},\n\t\n\t\"sourceAccountId\": \"A1100ABCD1\",\n\t\"reference\": \"Example Reference\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "xml",
+        "title": "Example SEPA Payment",
+        "code": "{\n\t\"amount\": 999.99,\n\t\"currency\": \"EUR\",\n\t\"destination\": {\n\t  \"type\": \"IBAN\",\n\t\t\"iban\": \"IE52MODR99035500333832\",\n\t  \"name\": \"Beneficiary Name\",\n\t},\n\t\n\t\"sourceAccountId\": \"A1100ABCD1\",\n\t\"reference\": \"Example Reference\"\n}"
+      },
+      "text": "Example SEPA Payment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        151,
+        151
+      ],
+      "raw": "## Additional Information",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Additional Information",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        153,
+        153
+      ],
+      "raw": "Please refrain from using profanities, in reference fields, when completing payments. Use of profanities will result in your payments being blocked",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Please refrain from using profanities, in reference fields, when completing payments. Use of profanities will result in your payments being blocked",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        155,
+        155
+      ],
+      "raw": "## CHAPS specific rules",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "CHAPS specific rules",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        157,
+        157
+      ],
+      "raw": "A CHAPS payment will only be made on the Modulr platform when the payment value is above £1m AND the CHAPS service is enabled for an account OR if the payment value is more than £10K AND the destination account is not reachable via FPS. CHAPS payments must be made by 4pm GMT/BST, otherwise the payment is made the next bank business day in the CHAPS scheme.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A CHAPS payment will only be made on the Modulr platform when the payment value is above £1m AND the CHAPS service is enabled for an account OR if the payment value is more than £10K AND the destination account is not reachable via FPS. CHAPS payments must be made by 4pm GMT/BST, otherwise the payment is made the next bank business day in the CHAPS scheme.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        159,
+        159
+      ],
+      "raw": "From **1st May 2025** additional rules apply to usage of following parameters:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "From 1st May 2025 additional rules apply to usage of following parameters:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        161,
+        163
+      ],
+      "raw": "* **Legal Entity Identifier** – If making a CHAPS payment to a financial institution\\*\\* the LEI of the institution must be included\n* **Payment Purpose Code** – A purpose code for the payment; this must be included in CHAPS property transactions. For all other payments unless a value is specified, default will be “EPAY” (e-payment)\n* **Payment Category Code** – Optional category code for the payment. Unless a value is specified, default will be “OTHR” (other)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Legal Entity Identifier – If making a CHAPS payment to a financial institution** the LEI of the institution must be includedPayment Purpose Code – A purpose code for the payment; this must be included in CHAPS property transactions. For all other payments unless a value is specified, default will be “EPAY” (e-payment)Payment Category Code – Optional category code for the payment. Unless a value is specified, default will be “OTHR” (other)",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        165,
+        165
+      ],
+      "raw": "Refer to[ Purpose and Category Codes](https://modulr.readme.io/docs/uk-payment-purpose-category-codes) for a full list of supported codes",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Refer to Purpose and Category Codes for a full list of supported codes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/uk-payment-purpose-category-codes",
+          "line": 165
+        }
+      ]
+    },
+    {
+      "i": 39,
+      "lines": [
+        167,
+        167
+      ],
+      "raw": "\\*\\* Defined as a payment to PRA authorised deposit-takers or broker-dealers, or Financial Market Infrastructures supervised by the Bank of England only; for clarity it does not mean an account of a client held at an institution, only a payment to the institution itself.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "** Defined as a payment to PRA authorised deposit-takers or broker-dealers, or Financial Market Infrastructures supervised by the Bank of England only; for clarity it does not mean an account of a client held at an institution, only a payment to the institution itself.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        169,
+        175
+      ],
+      "raw": "**Payment purpose codes for property transactions** When making a CHAPS payment (a payment over £1m) related to a property transaction one of the following purpose codes must be used.\\\n•\t **HLRP**- Property Loan Repayment\\\n•\t **HLST**- Property Loan Settlement\\\n•\t **PLDS**- Property Loan Disbursement\\\n•\t **PDEP**- Property Deposit\\\n•\t **PCOM**- Property Completion Payment\\\n•\t **PLRF**- Property Loan Refinancing",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Payment purpose codes for property transactions When making a CHAPS payment (a payment over £1m) related to a property transaction one of the following purpose codes must be used.•\t HLRP- Property Loan Repayment•\t HLST- Property Loan Settlement•\t PLDS- Property Loan Disbursement•\t PDEP- Property Deposit•\t PCOM- Property Completion Payment•\t PLRF- Property Loan Refinancing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

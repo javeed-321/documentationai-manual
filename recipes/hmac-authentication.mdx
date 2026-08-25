@@ -127,7 +127,7 @@ x-mod-retry = true
 
 # Secure Hash Algorithms
 
-<!-- java@16 -->
+{/* java@16 */}
 
 At Modulr we support:
 HmacSHA1
@@ -137,26 +137,26 @@ HmacSHA512
 
 # Date Format
 
-<!-- java@17 -->
+{/* java@17 */}
 
 All Dates for HMAC Authentication should be in RFC 7231 format e.g.
 Mon, 25 Jul 2020 16:36:07 GMT
 
 # Building your headers
 
-<!-- java@44-56 -->
+{/* java@44-56 */}
 
 This method has everything you need for creating the necessary headers for submitting a request to the Modulr platform.
 
 # x-mod-retry
 
-<!-- java@51 -->
+{/* java@51 */}
 
 For more information on this header please refer to document - [https://modulr.readme.io/docs/limits-and-errors#idempotent-requests](/docs/limits-and-errors#idempotent-requests)
 
 # Generating Hmac data
 
-<!-- java@58-63 -->
+{/* java@58-63 */}
 
 This method is in place to generate the data needed to calculate the HMAC secret this is mainly the Date and nonce of the request.
 
@@ -167,7 +167,7 @@ nonce: 28154b2-9c62b93cc22a-24c9e2-5536d7d
 
 # Calculating Hmac Secret
 
-<!-- java@81-96 -->
+{/* java@81-96 */}
 
 This method calculates the secret value.
 

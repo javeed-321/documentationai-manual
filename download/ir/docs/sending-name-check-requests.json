@@ -1,0 +1,756 @@
+{
+  "slug": "docs/sending-name-check-requests",
+  "source": "https://modulr.readme.io/docs/sending-name-check-requests.md",
+  "url": "https://modulr.readme.io/docs/sending-name-check-requests",
+  "title": "Sending Name Check Requests",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:46:26.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 16,
+    "Table": 2,
+    "thematicBreak": 3,
+    "list": 2,
+    "CodeTabs": 1,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Sending Name Check Requests",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sending Name Check Requests",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "To send a name check request, you can use the [Account Name Check API](https://modulr.readme.io/reference/createoutboundcop)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To send a name check request, you can use the Account Name Check API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createoutboundcop",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Information required:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Information required:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        97
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        API Field\n      </th>\n\n      <th>\n        Description\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        name\n      </td>\n\n      <td>\n        The payee's account name. For increased accuracy you should provide the correct payee name as held at the receiving institution, and not a short name or nickname.  \n\n        We recommend you obtain first name(s) and last name(s) separately for personal accounts wherever possible, to improve match rates.  \n\n        Each name element must be separated by a space and you should not include titles or honorifics. Our API supports UTF-8 encoding so accents can be provided in the request.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        accountNumber\n      </td>\n\n      <td>\n        The payee's account number.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        sortCode\n      </td>\n\n      <td>\n        The payee's sort code.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        accountType\n      </td>\n\n      <td>\n        The type of account that will be paid (either Personal or Business).\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        paymentAccountId\n      </td>\n\n      <td>\n        The ID of the Modulr account that the subsequent payment will be initiated from.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        secondaryAccountId (optional)\n      </td>\n\n      <td>\n        Additional data, such as a Building Society Roll Number or Credit Card number, that is used by the receiving Payment Service Provider to identify the payee (often in conjunction with the account number and/ or sort code).  \n\n        **This data must be provided if it is requested by the receiving Payment Service Provider otherwise they will be unable to identify the payee and carry out the name check.**  \n\n        When a given account number, sort code and secondaryAccountId have been checked, you **must** re-check the details if the secondaryAccountId is later modified.  \n\n        We maintain a list of PSPs that require this data, which may change from time to time, and recommend that you check it by making a GET call to [/account-name-check/srd-accounts](https://modulr.readme.io/reference/getsrdaccounts).\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "API Field",
+          "Description"
+        ],
+        "rows": [
+          [
+            "name",
+            "The payee's account name. For increased accuracy you should provide the correct payee name as held at the receiving institution, and not a short name or nickname.We recommend you obtain first name(s) and last name(s) separately for personal accounts wherever possible, to improve match rates.Each name element must be separated by a space and you should not include titles or honorifics. Our API supports UTF-8 encoding so accents can be provided in the request."
+          ],
+          [
+            "accountNumber",
+            "The payee's account number."
+          ],
+          [
+            "sortCode",
+            "The payee's sort code."
+          ],
+          [
+            "accountType",
+            "The type of account that will be paid (either Personal or Business)."
+          ],
+          [
+            "paymentAccountId",
+            "The ID of the Modulr account that the subsequent payment will be initiated from."
+          ],
+          [
+            "secondaryAccountId (optional)",
+            "Additional data, such as a Building Society Roll Number or Credit Card number, that is used by the receiving Payment Service Provider to identify the payee (often in conjunction with the account number and/ or sort code).This data must be provided if it is requested by the receiving Payment Service Provider otherwise they will be unable to identify the payee and carry out the name check.When a given account number, sort code and secondaryAccountId have been checked, you must re-check the details if the secondaryAccountId is later modified.We maintain a list of PSPs that require this data, which may change from time to time, and recommend that you check it by making a GET call to /account-name-check/srd-accounts."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getsrdaccounts",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        101,
+        101
+      ],
+      "raw": "# Testing your integration within the sandbox environment",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Testing your integration within the sandbox environment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        103,
+        104
+      ],
+      "raw": "* **You must always use sort code 000000**\n* We will always return a MATCHED result unless simulating another result by supplying a value in the secondaryAccountID field",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "You must always use sort code 000000We will always return a MATCHED result unless simulating another result by supplying a value in the secondaryAccountID field",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        106,
+        106
+      ],
+      "raw": "To test other scenarios as listed in this guide, you can provide the desired result in the secondaryAccountId field prefixed with a percent sign. For some results, we will append \"z\" to the end of the name string.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To test other scenarios as listed in this guide, you can provide the desired result in the secondaryAccountId field prefixed with a percent sign. For some results, we will append \"z\" to the end of the name string.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        108,
+        143
+      ],
+      "raw": "```json Example 1 Request\n{\n  \"accountNumber\": \"12345678\",\n  \"accountType\": \"PERSONAL\",\n  \"name\": \"Joe Bloggs\",\n  \"paymentAccountId\": \"A123AAA4\",\n  \"sortCode\": \"000000\"\n}\n```\n```json Example 1 Response\n{\n  \"id\": \"C12001569Z\",\n  \"result\": {\n    \"code\": \"MATCH\"\n  }\n}\n```\n```json Example 2 Request\n{\n  \"accountNumber\": \"12345678\",\n  \"accountType\": \"PERSONAL\",\n  \"name\": \"Joe Bloggs\",\n  \"paymentAccountId\": \"A123AAA4\",\n  \"sortCode\": \"000000\",\n  \"secondaryAccountId\": \"%CLOSE_MATCH\"\n}\n```\n```json Example 2 Response\n{\n  \"id\": \"C12001569Z\",\n  \"result\": {\n    \"code\": \"CLOSE_MATCH\",\n    \"name\": \"Joseph Bloggsz\"\n  }\n}\n```",
+      "kind": "codeTabs",
+      "syntax": "markdown",
+      "component": "CodeTabs",
+      "text": "Example 1 Request",
+      "target": {
+        "component": "CodeGroup",
+        "status": "transform",
+        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
+      },
+      "inline": [],
+      "tabs": [
+        {
+          "lang": "json",
+          "title": "Example 1 Request",
+          "code": "{\n  \"accountNumber\": \"12345678\",\n  \"accountType\": \"PERSONAL\",\n  \"name\": \"Joe Bloggs\",\n  \"paymentAccountId\": \"A123AAA4\",\n  \"sortCode\": \"000000\"\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Example 1 Response",
+          "code": "{\n  \"id\": \"C12001569Z\",\n  \"result\": {\n    \"code\": \"MATCH\"\n  }\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Example 2 Request",
+          "code": "{\n  \"accountNumber\": \"12345678\",\n  \"accountType\": \"PERSONAL\",\n  \"name\": \"Joe Bloggs\",\n  \"paymentAccountId\": \"A123AAA4\",\n  \"sortCode\": \"000000\",\n  \"secondaryAccountId\": \"%CLOSE_MATCH\"\n}"
+        },
+        {
+          "lang": "json",
+          "title": "Example 2 Response",
+          "code": "{\n  \"id\": \"C12001569Z\",\n  \"result\": {\n    \"code\": \"CLOSE_MATCH\",\n    \"name\": \"Joseph Bloggsz\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "i": 10,
+      "lines": [
+        145,
+        145
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        147,
+        147
+      ],
+      "raw": "# Interpreting name check responses",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Interpreting name check responses",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        149,
+        149
+      ],
+      "raw": "There are three outcomes of a successful request:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "There are three outcomes of a successful request:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        151,
+        151
+      ],
+      "raw": "**The details match.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The details match.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        153,
+        153
+      ],
+      "raw": "The account details (name and account type) you provided matched the information held by the payee’s bank so you can proceed with creating a new beneficiary or payment. You do not need to submit further account name check requests when using these account details in the future unless you believe the account details have changed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The account details (name and account type) you provided matched the information held by the payee’s bank so you can proceed with creating a new beneficiary or payment. You do not need to submit further account name check requests when using these account details in the future unless you believe the account details have changed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        155,
+        155
+      ],
+      "raw": "Remember, you must still exercise caution when creating payments. The service is an account name checking service and does not protect against all types of fraud. If something does not seem right about a payment stop and question it even if the details match.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Remember, you must still exercise caution when creating payments. The service is an account name checking service and does not protect against all types of fraud. If something does not seem right about a payment stop and question it even if the details match.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        157,
+        157
+      ],
+      "raw": "**The details are similar.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The details are similar.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        159,
+        159
+      ],
+      "raw": "The payee’s bank holds slightly different account name or account type information. Creating a payment could lead to the funds being sent to the wrong account and you may not be able to recover the money. If the account name you provided is similar to the account name held by the payee’s bank, the actual account name will be provided in the response body so that you can check the details and decide whether or not to proceed. If updated account details are obtained you can submit another account name check request before proceeding.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The payee’s bank holds slightly different account name or account type information. Creating a payment could lead to the funds being sent to the wrong account and you may not be able to recover the money. If the account name you provided is similar to the account name held by the payee’s bank, the actual account name will be provided in the response body so that you can check the details and decide whether or not to proceed. If updated account details are obtained you can submit another account name check request before proceeding.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        161,
+        161
+      ],
+      "raw": "**The details do not match.**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The details do not match.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        163,
+        163
+      ],
+      "raw": "The account name or account type provided do not match the account details held by the payee’s bank. Creating a payment could lead to the funds being sent to the wrong account and you may not be able to recover the money. You are advised to stop and double check the details of the payment. If updated account details are obtained you should submit another account name check request before proceeding. In this type of result the actual account name held by the payee’s bank is NOT returned.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The account name or account type provided do not match the account details held by the payee’s bank. Creating a payment could lead to the funds being sent to the wrong account and you may not be able to recover the money. You are advised to stop and double check the details of the payment. If updated account details are obtained you should submit another account name check request before proceeding. In this type of result the actual account name held by the payee’s bank is NOT returned.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        165,
+        165
+      ],
+      "raw": "**Result Codes**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Result Codes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        167,
+        167
+      ],
+      "raw": "This table lists the possible results of an account name check request and the action that we recommend you take in each scenario.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This table lists the possible results of an account name check request and the action that we recommend you take in each scenario.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        169,
+        171
+      ],
+      "raw": "> ❗️\n>\n> If the sort code or account number are invalid (i.e. fail a modulus check) then the request will not be processed and we will return a 404 error.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "❗️"
+      },
+      "text": "If the sort code or account number are invalid (i.e. fail a modulus check) then the request will not be processed and we will return a 404 error.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "danger"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        173,
+        449
+      ],
+      "raw": "<Table align={[\"left\",\"left\",\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        result.code\n      </th>\n\n      <th>\n        HTTP Status Code\n      </th>\n\n      <th>\n        Result Description\n      </th>\n\n      <th>\n        Recommended Action\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        MATCHED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account name and account type match the name and accountType provided.\n      </td>\n\n      <td>\n        You can proceed with the creation of a beneficiary or payment.  \n\n        **Remember, you must still exercise caution when sending payments. The service is an account name checking service and does not protect against all types of fraud.**\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        NOT\\_MATCHED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account name and account type do not match the name and accountType provided.\n      </td>\n\n      <td>\n        The account details should be checked carefully, and you are advised not to proceed with the creation of the beneficiary or payment. You should edit the details if possible, and submit another account name check request before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        CLOSE\\_MATCH\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The name provided is similar to the account name. The actual account name is provided in result.name.\n      </td>\n\n      <td>\n        The account details should be checked carefully. If you decide to continue with the creation of the beneficiary/payment you should edit the details if necessary before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        BUSINESS\\_ACCOUNT\\_NAME\\_MATCHED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account name matches the name provided but the account is a business account, not a personal account.\n      </td>\n\n      <td>\n        The account details should be checked carefully before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        PERSONAL\\_ACCOUNT\\_NAME\\_MATCHED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account name matches the name provided but the account is a personal account, not a business account.\n      </td>\n\n      <td>\n        The account details should be checked carefully before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        BUSINESS\\_ACCOUNT\\_CLOSE\\_MATCH\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The name provided is similar to the account name and the account is a business account, not a personal account. The actual account name is provided in result.name.\n      </td>\n\n      <td>\n        The account details should be checked carefully. If you decide to continue with the creation of the beneficiary/payment you should edit the details if necessary before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        PERSONAL\\_ACCOUNT\\_CLOSE\\_MATCH\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The name provided is similar to the account name and the account is a personal account, not a business account. The actual account name is provided in result.name.\n      </td>\n\n      <td>\n        The account details should be checked carefully. If you decide to continue with the creation of the beneficiary/payment you should edit the details if necessary before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        ACCOUNT\\_DOES\\_NOT\\_EXIST\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account does not exist.\n      </td>\n\n      <td>\n        You should not proceed. The account details should be checked carefully. You should edit the details if possible and submit another account name check request before creating a beneficiary or payment.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        SECONDARY\\_ACCOUNT\\_ID\\_NOT\\_FOUND\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The secondaryAccountId is not valid.\n      </td>\n\n      <td>\n        The account details should be checked carefully. The account could not be identified using the secondary account reference. You should edit the details if possible and submit another account name check request before proceeding.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        ACCOUNT\\_NOT\\_SUPPORTED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account does not support account name check requests.\n      </td>\n\n      <td>\n        You should check the account details carefully and proceed only if you are satisfied that they are correct.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        ACCOUNT\\_SWITCHED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account has been switched using the Current Account Switching Service.\n      </td>\n\n      <td>\n        You should not proceed with the creation of a beneficiary or payment using these account details. Obtain the new account details if possible, edit the details and submit another account name check request before creating a beneficiary or payment.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        WRONG\\_PARTICIPANT\n      </td>\n\n      <td>\n        500\n      </td>\n\n      <td>\n        The account name check cannot be completed for the account number and sort code provided.\n      </td>\n\n      <td>\n        You should check the account details carefully and proceed only if you are satisfied that they are correct.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        NO\\_RESPONSE\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The bank did not respond to the account name check request.  Try again later.\n      </td>\n\n      <td>\n        It is recommended you try the check again after some time. If you do decide to continue with this result you should check the account details carefully and proceed only if you are satisfied that they are correct.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        NOT\\_ENROLLED\n      </td>\n\n      <td>\n        201\n      </td>\n\n      <td>\n        The account name check could not be completed as the bank does not accept account name check requests.\n      </td>\n\n      <td>\n        You should check the account details carefully and proceed only if you are satisfied that they are correct.\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\",\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "result.code",
+          "HTTP Status Code",
+          "Result Description",
+          "Recommended Action"
+        ],
+        "rows": [
+          [
+            "MATCHED",
+            "201",
+            "The account name and account type match the name and accountType provided.",
+            "You can proceed with the creation of a beneficiary or payment.Remember, you must still exercise caution when sending payments. The service is an account name checking service and does not protect against all types of fraud."
+          ],
+          [
+            "NOT_MATCHED",
+            "201",
+            "The account name and account type do not match the name and accountType provided.",
+            "The account details should be checked carefully, and you are advised not to proceed with the creation of the beneficiary or payment. You should edit the details if possible, and submit another account name check request before proceeding."
+          ],
+          [
+            "CLOSE_MATCH",
+            "201",
+            "The name provided is similar to the account name. The actual account name is provided in result.name.",
+            "The account details should be checked carefully. If you decide to continue with the creation of the beneficiary/payment you should edit the details if necessary before proceeding."
+          ],
+          [
+            "BUSINESS_ACCOUNT_NAME_MATCHED",
+            "201",
+            "The account name matches the name provided but the account is a business account, not a personal account.",
+            "The account details should be checked carefully before proceeding."
+          ],
+          [
+            "PERSONAL_ACCOUNT_NAME_MATCHED",
+            "201",
+            "The account name matches the name provided but the account is a personal account, not a business account.",
+            "The account details should be checked carefully before proceeding."
+          ],
+          [
+            "BUSINESS_ACCOUNT_CLOSE_MATCH",
+            "201",
+            "The name provided is similar to the account name and the account is a business account, not a personal account. The actual account name is provided in result.name.",
+            "The account details should be checked carefully. If you decide to continue with the creation of the beneficiary/payment you should edit the details if necessary before proceeding."
+          ],
+          [
+            "PERSONAL_ACCOUNT_CLOSE_MATCH",
+            "201",
+            "The name provided is similar to the account name and the account is a personal account, not a business account. The actual account name is provided in result.name.",
+            "The account details should be checked carefully. If you decide to continue with the creation of the beneficiary/payment you should edit the details if necessary before proceeding."
+          ],
+          [
+            "ACCOUNT_DOES_NOT_EXIST",
+            "201",
+            "The account does not exist.",
+            "You should not proceed. The account details should be checked carefully. You should edit the details if possible and submit another account name check request before creating a beneficiary or payment."
+          ],
+          [
+            "SECONDARY_ACCOUNT_ID_NOT_FOUND",
+            "201",
+            "The secondaryAccountId is not valid.",
+            "The account details should be checked carefully. The account could not be identified using the secondary account reference. You should edit the details if possible and submit another account name check request before proceeding."
+          ],
+          [
+            "ACCOUNT_NOT_SUPPORTED",
+            "201",
+            "The account does not support account name check requests.",
+            "You should check the account details carefully and proceed only if you are satisfied that they are correct."
+          ],
+          [
+            "ACCOUNT_SWITCHED",
+            "201",
+            "The account has been switched using the Current Account Switching Service.",
+            "You should not proceed with the creation of a beneficiary or payment using these account details. Obtain the new account details if possible, edit the details and submit another account name check request before creating a beneficiary or payment."
+          ],
+          [
+            "WRONG_PARTICIPANT",
+            "500",
+            "The account name check cannot be completed for the account number and sort code provided.",
+            "You should check the account details carefully and proceed only if you are satisfied that they are correct."
+          ],
+          [
+            "NO_RESPONSE",
+            "201",
+            "The bank did not respond to the account name check request.  Try again later.",
+            "It is recommended you try the check again after some time. If you do decide to continue with this result you should check the account details carefully and proceed only if you are satisfied that they are correct."
+          ],
+          [
+            "NOT_ENROLLED",
+            "201",
+            "The account name check could not be completed as the bank does not accept account name check requests.",
+            "You should check the account details carefully and proceed only if you are satisfied that they are correct."
+          ]
+        ],
+        "align": [
+          "left",
+          "left",
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        451,
+        451
+      ],
+      "raw": "# Important Information",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Important Information",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        453,
+        453
+      ],
+      "raw": "## Use of the service",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Use of the service",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        455,
+        455
+      ],
+      "raw": "The service must only be used with the sole intention of subsequently creating beneficiaries or payments through your Modulr account. The use of the service for any other purpose is forbidden and is a violation of the terms and conditions of the service.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The service must only be used with the sole intention of subsequently creating beneficiaries or payments through your Modulr account. The use of the service for any other purpose is forbidden and is a violation of the terms and conditions of the service.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        457,
+        457
+      ],
+      "raw": "## End user applications",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "End user applications",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        459,
+        459
+      ],
+      "raw": "If you are using Confirmation of Payee within any customer facing application (such as a payment app or website), or in a way that directly or indirectly exposes the result of a check to an end user, there are additional requirements to take into consideration:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you are using Confirmation of Payee within any customer facing application (such as a payment app or website), or in a way that directly or indirectly exposes the result of a check to an end user, there are additional requirements to take into consideration:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        461,
+        462
+      ],
+      "raw": "* Your service must be available 24/7 and must present name check results to end users in real time.\n* There are several industry guidelines and best practice recommendations regarding the design of CoP user interfaces. We will provide a separate guide that contains the information required, including sample wireframes, to help you design an implementation that is compliant and provides the most optimal user experience.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Your service must be available 24/7 and must present name check results to end users in real time.There are several industry guidelines and best practice recommendations regarding the design of CoP user interfaces. We will provide a separate guide that contains the information required, including sample wireframes, to help you design an implementation that is compliant and provides the most optimal user experience.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        464,
+        464
+      ],
+      "raw": "## Auditing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Auditing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        466,
+        466
+      ],
+      "raw": "We recommend that you maintain a secure audit trail of requests sent, responses received and the subsequent action taken (e.g. payment created) which can be referenced at a later date if needed.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We recommend that you maintain a secure audit trail of requests sent, responses received and the subsequent action taken (e.g. payment created) which can be referenced at a later date if needed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        468,
+        468
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

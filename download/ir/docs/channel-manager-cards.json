@@ -1,0 +1,762 @@
+{
+  "slug": "docs/channel-manager-cards",
+  "source": "https://modulr.readme.io/docs/channel-manager-cards.md",
+  "url": "https://modulr.readme.io/docs/channel-manager-cards",
+  "title": "Channel Manager - Cards",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:57:08.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 32,
+    "br": 2,
+    "Callout": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Channel Manager - Cards",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Channel Manager - Cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Creating Cards",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Creating Cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "When creating a card use endpoint [POST/channel-managers/accounts/\\{aid}/cards](https://modulr.readme.io/reference/channelmanagercreatecard) and supply the following information as mandatory for creating cards for OTA’s:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When creating a card use endpoint POST/channel-managers/accounts/{aid}/cards and supply the following information as mandatory for creating cards for OTA’s:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagercreatecard",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "**Account ID** – account the card is to be created on, this will be obtained from the OTA",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Account ID – account the card is to be created on, this will be obtained from the OTA",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "**Limit** – total card authorisation limit available",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Limit – total card authorisation limit available",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "**Expiry Date** – this must be at minimum one month following the card creation and can be a maximum of 60 months from the date of creation",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Expiry Date – this must be at minimum one month following the card creation and can be a maximum of 60 months from the date of creation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "**Product Code** - this will be the product ID supplied by the OTA, this will also state the currency of the card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Product Code - this will be the product ID supplied by the OTA, this will also state the currency of the card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "**External Reference** – this will be a unique reference for the card which the OTA wishes cards to be created under, you will need this from the OTA",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "External Reference – this will be a unique reference for the card which the OTA wishes cards to be created under, you will need this from the OTA",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "The following are optional details that can be added if required:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following are optional details that can be added if required:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "**Cancellation Date** – date at which you want the card to automatically cancel",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Cancellation Date – date at which you want the card to automatically cancel",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "**Authorisation Window** – these are dates in which the card can be used for authorisations not including account status inquiries (ASI’s)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Authorisation Window – these are dates in which the card can be used for authorisations not including account status inquiries (ASI’s)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "**Custom Fields** – use [POST/channel-managers/custom-fields](https://modulr.readme.io/reference/channelmanagerupdatecardcustomfields) in addition to the create card request to add details that are required by the OTA.  You will need to know the custom field key name and have that input along with the value to successfully add the custom field",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Custom Fields – use POST/channel-managers/custom-fields in addition to the create card request to add details that are required by the OTA.  You will need to know the custom field key name and have that input along with the value to successfully add the custom field",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagerupdatecardcustomfields",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "Successful creation of a card will result in a 204-response code from Modulr and will include a unique reference that is generated at Modulr (example V21000000) that you can store to use later for any other card related activities.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Successful creation of a card will result in a 204-response code from Modulr and will include a unique reference that is generated at Modulr (example V21000000) that you can store to use later for any other card related activities.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## Updating Cards",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Updating Cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "When there is a need to amend an existing card, there’s two endpoints which need to be used and each will do different things.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When there is a need to amend an existing card, there’s two endpoints which need to be used and each will do different things.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "[POST/channel-managers/cards/\\{id}](https://modulr.readme.io/reference/channelmanagerupdatecard)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "POST/channel-managers/cards/{id}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagerupdatecard",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "You will need to supply the card ID that has previously been generated when creating the card as well as what is being amended, the amendable items are:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You will need to supply the card ID that has previously been generated when creating the card as well as what is being amended, the amendable items are:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "**Limit**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Limit",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "**Cancellation Date**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Cancellation Date",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "**Authorisation Window**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Authorisation Window",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        49,
+        51
+      ],
+      "raw": "> 🚧 Incorrect Data\n>\n> If any other details are incorrect then the card will need to be cancelled by the OTA and a new card set up in place",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "Incorrect DataIf any other details are incorrect then the card will need to be cancelled by the OTA and a new card set up in place",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "[PATCH/channel-managers/cards/\\{id}](https://modulr.readme.io/reference/channelmanagerupdatecard_1)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PATCH/channel-managers/cards/{id}",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagerupdatecard_1",
+          "line": 53
+        }
+      ]
+    },
+    {
+      "i": 24,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "Again you will need to supply the card ID and on this call the only permissible actions are fully deleting the cancellation date and the authorisation windows.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Again you will need to supply the card ID and on this call the only permissible actions are fully deleting the cancellation date and the authorisation windows.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        57,
+        63
+      ],
+      "raw": "> 📘 Blocking / Unblocking Cards\n>\n> For any blocking or unblocking of cards please use the following endpoints to pass the request through:\n>\n> [Block Cards](https://modulr.readme.io/reference/blockcard)\n>\n> [Unblock Cards](https://modulr.readme.io/reference/unblockcard)",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Blocking / Unblocking CardsFor any blocking or unblocking of cards please use the following endpoints to pass the request through:Block CardsUnblock Cards",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/blockcard",
+          "line": 61
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/unblockcard",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 65
+        }
+      ]
+    },
+    {
+      "i": 27,
+      "lines": [
+        67,
+        67
+      ],
+      "raw": "## Retrieving Cards",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Retrieving Cards",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "This is a self-managed report function that operates on set details, more detailed reports will be made available to you (see Reports sections)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is a self-managed report function that operates on set details, more detailed reports will be made available to you (see Reports sections)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "When calling [GET/channel-managers/cards](https://modulr.readme.io/reference/channelmanagergetcards) you have a list of parameters that you are able to search by, these are:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When calling GET/channel-managers/cards you have a list of parameters that you are able to search by, these are:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagergetcards",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "i": 30,
+      "lines": [
+        73,
+        73
+      ],
+      "raw": "**Created Dates** – Both FROM and TO dates are available however the data will only return back cards created in the last 7 days",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Created Dates – Both FROM and TO dates are available however the data will only return back cards created in the last 7 days",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        75,
+        75
+      ],
+      "raw": "**Status** – The specific state the card is in (ACTIVE, CANCELLED, EXPIRED, BLOCKED, SUSPENDED)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Status – The specific state the card is in (ACTIVE, CANCELLED, EXPIRED, BLOCKED, SUSPENDED)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        77,
+        77
+      ],
+      "raw": "**Card ID** – The specific card ID of the card you are wanting to query",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Card ID – The specific card ID of the card you are wanting to query",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "**Account ID** – The specific account ID you want to retrieve cards for",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Account ID – The specific account ID you want to retrieve cards for",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "**External Reference** – The specific external reference for the card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "External Reference – The specific external reference for the card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        83,
+        83
+      ],
+      "raw": "**Currency** – The currency of the card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Currency – The currency of the card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "**Custom Field Key** – Specific key used for populating custom fields",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Custom Field Key – Specific key used for populating custom fields",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        87,
+        87
+      ],
+      "raw": "**Custom Field Value** – The specific value that has been input on a card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Custom Field Value – The specific value that has been input on a card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "**Account ID’s** – List of account ID’s you wish to return cards on",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Account ID’s – List of account ID’s you wish to return cards on",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "**Channel Manager ID** – The unique ID for you (obtained when onboarded to Modulr)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Channel Manager ID – The unique ID for you (obtained when onboarded to Modulr)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "If however, you are just looking to see the specific state a card is in use [POST/channel-managers/enquiry](https://modulr.readme.io/reference/channelmanagercardenquiry) and it will return all current details on the card.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If however, you are just looking to see the specific state a card is in use POST/channel-managers/enquiry and it will return all current details on the card.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/channelmanagercardenquiry",
+          "line": 93
+        }
+      ]
+    }
+  ]
+}

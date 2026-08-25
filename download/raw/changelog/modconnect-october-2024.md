@@ -1,0 +1,33 @@
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# ModConnect- October 2024
+
+<Callout icon="🎃" theme="default">
+  ### Top pick this month
+
+  * Approvals - Batch Payments | Scheduled Payment Date Column
+</Callout>
+
+![](https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png)
+
+# New this month
+
+## Approvals - Batch Payments | Scheduled Payment Date Column
+
+A new ***Scheduled** column is now live in the****Approvals - Batch Payments*** screen in the Modulr portal. This column indicates the range of Payment Dates for the Batch, so you can better plan your account funding, and catch potentially unexpected immediate payments.
+
+The column displays dates as:
+
+* A range of dates (The earliest and latest date that Payments are scheduled for)
+  * e.g. 27 Apr - 5 May 2023
+  * A single date (When Payments are all scheduled for the same date)
+    * e.g. 14 May 2023
+* Just Immediately (When all the Payments within the Batch don’t have a scheduled payment date)
+* Immediately followed by a date range (When there is a mix of Payments in the Batch with a scheduled payment date and without a scheduled payment date)
+* e.g. Immediately, 27 Apr - 5 May 2023
+
+*Note: Where a Batch contains Immediately - it means there are payments present that could be sent Immediately - pending availability of funds.*
+
+*\*The Approvals Screen is pictured below, with the Scheduled column in Batches highlighted.*
+
+![](https://files.readme.io/7b0c95c7a802aabed36582ca093d1fc8095c3c51fcfbe7f56d53824f0edc38b4-image.png)

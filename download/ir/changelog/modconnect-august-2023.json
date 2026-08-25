@@ -1,0 +1,472 @@
+{
+  "slug": "changelog/modconnect-august-2023",
+  "source": "https://modulr.readme.io/changelog/modconnect-august-2023.md",
+  "url": "https://modulr.readme.io/changelog/modconnect-august-2023",
+  "title": "ModConnect - August 2023",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 9,
+    "Callout": 1,
+    "list": 2,
+    "Image": 2,
+    "paragraph": 10
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "# ModConnect - August 2023",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "ModConnect - August 2023",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        10
+      ],
+      "raw": "<Callout icon=\"💸\" theme=\"default\">\n  ### Top picks this month\n\n  * Open Banking Payment Initiation Service | UK Expansion\n  * Modulr Portal  | File Upload\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "💸",
+        "theme": "default"
+      },
+      "text": "Top picks this monthOpen Banking Payment Initiation Service | UK ExpansionModulr Portal  | File Upload",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            6,
+            6
+          ],
+          "raw": "  ### Top picks this month",
+          "kind": "heading",
+          "syntax": "markdown",
+          "depth": 3,
+          "text": "Top picks this month",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 3,
+          "lines": [
+            8,
+            9
+          ],
+          "raw": "  * Open Banking Payment Initiation Service | UK Expansion\n  * Modulr Portal  | File Upload",
+          "kind": "list",
+          "syntax": "markdown",
+          "text": "Open Banking Payment Initiation Service | UK ExpansionModulr Portal  | File Upload",
+          "attrs": {
+            "ordered": "false"
+          },
+          "target": {
+            "component": null,
+            "status": "transform",
+            "note": "normalise `*`/`+` markers to `-`"
+          },
+          "inline": []
+        }
+      ],
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        12,
+        12
+      ],
+      "raw": "<Image align=\"center\" src=\"https://files.readme.io/9c9932b-MC_strip_2.png\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "src": "https://files.readme.io/9c9932b-MC_strip_2.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        14,
+        14
+      ],
+      "raw": "## New features via API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "New features via API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "### Open Banking Payment Initiation Service | UK Expansion",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Open Banking Payment Initiation Service | UK Expansion",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "Modulr continues to expand its Payment Initiation Service connectivity. You can now initiate payments from the following financial institutions:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modulr continues to expand its Payment Initiation Service connectivity. You can now initiate payments from the following financial institutions:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        20,
+        25
+      ],
+      "raw": "* HSBC - Kinetic\n* Mettle\n* Tide\n* Ulster Bank (UK)\n* Virgin Money\n* Wise",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "HSBC - KineticMettleTideUlster Bank (UK)Virgin MoneyWise",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "You can find our full supported bank list and read about how to use the provider list [API in our Developer Guide.](https://modulr.readme.io/docs/supported-banks-and-aspsps)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can find our full supported bank list and read about how to use the provider list API in our Developer Guide.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/supported-banks-and-aspsps",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## New features added in Modulr Portal",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "New features added in Modulr Portal",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "### Modulr Portal | File Upload",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Modulr Portal | File Upload",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "We've improved the way you make file upload payments! From September, you will have the option to process payments using file upload as **Batch** or **Bulk**.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We've improved the way you make file upload payments! From September, you will have the option to process payments using file upload as Batch or Bulk.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "**Batch** allows a single approval for the entire batch, making it easier and saving you time. Batch uploads are processed with strict processing ON, this means that if any payment within the batch fails, the entire batch will fail.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Batch allows a single approval for the entire batch, making it easier and saving you time. Batch uploads are processed with strict processing ON, this means that if any payment within the batch fails, the entire batch will fail.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "**Bulk** uploads require multiple approvals, for each payment within the file. Bulk uploads are processed with strict processing OFF, this means that any failed payments will show in pending payments, and successful payments will process as normal.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Bulk uploads require multiple approvals, for each payment within the file. Bulk uploads are processed with strict processing OFF, this means that any failed payments will show in pending payments, and successful payments will process as normal.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "<Image align=\"center\" src=\"https://files.readme.io/e088b45-File_Upload_1.gif\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "align": "center",
+        "src": "https://files.readme.io/e088b45-File_Upload_1.gif"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 15,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "## Minor Enhancements & Bugs resolved",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Minor Enhancements & Bugs resolved",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "### Cards | Card Creation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Cards | Card Creation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "You can now add postcodes with accented characters from non-UK clients when you create cards via API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can now add postcodes with accented characters from non-UK clients when you create cards via API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "### Outbound payments | Deprecated fields removal",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Outbound payments | Deprecated fields removal",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "We have simplified our payments API and documentation by removing the below from November 2023:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We have simplified our payments API and documentation by removing the below from November 2023:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        51,
+        51
+      ],
+      "raw": "‘Customer ID’ field (sourceCustomerId) in the payment APIs when creating an outbound payment, only allowing for sourceAccountId moving forward.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "‘Customer ID’ field (sourceCustomerId) in the payment APIs when creating an outbound payment, only allowing for sourceAccountId moving forward.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "The list of payments in the batch payment submission response and batch retrieval endpoint. API users can retrieve the list of payments within a batch by using the payment search endpoint with the ID of the batch they’re searching for. We’re updating our batch payment submission and retrieval endpoints to make them consistent with Modulr’s other APIs that handle large volumes of data.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The list of payments in the batch payment submission response and batch retrieval endpoint. API users can retrieve the list of payments within a batch by using the payment search endpoint with the ID of the batch they’re searching for. We’re updating our batch payment submission and retrieval endpoints to make them consistent with Modulr’s other APIs that handle large volumes of data.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "The destinationId and destinationType fields in the payment creation APIs. API users will be required to use the equivalent id and type fields under the destination field in the relevant API requests.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The destinationId and destinationType fields in the payment creation APIs. API users will be required to use the equivalent id and type fields under the destination field in the relevant API requests.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

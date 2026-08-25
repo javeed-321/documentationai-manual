@@ -1,0 +1,201 @@
+{
+  "slug": "docs/direct-debit-collections-1",
+  "source": "https://modulr.readme.io/docs/direct-debit-collections-1.md",
+  "url": "https://modulr.readme.io/docs/direct-debit-collections-1",
+  "title": "Direct Debit Collections (UK - GBP)",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:46:55.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 5,
+    "list": 1,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Direct Debit Collections (UK - GBP)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Direct Debit Collections (UK - GBP)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "If you are wanting to receive money from your end users - or anyone else - then a convenient way to do this is to ask their permission to do so in advance, and pull the amount of money you need at the time you need it. Modulr allows you to add this capability via our Direct Debit Collection API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you are wanting to receive money from your end users - or anyone else - then a convenient way to do this is to ask their permission to do so in advance, and pull the amount of money you need at the time you need it. Modulr allows you to add this capability via our Direct Debit Collection API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "The guides here are divided into three sections:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The guides here are divided into three sections:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        16
+      ],
+      "raw": "* [Getting started](https://modulr.readme.io/docs/what-is-dd-collections); this explains what is needed to get up and running with the Direct Debit Collection API.\n* [Setting up Mandates](https://modulr.readme.io/docs/setting-up-mandates); explains the processes and timelines when setting up a mandate.\n* [Starting Collections](https://modulr.readme.io/docs/starting-collections); helps you get started in setting up collections.\n* [Use cases](https://modulr.readme.io/docs/why-would-i-want-dd-collections); some Direct Debit Collections use cases.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Getting started; this explains what is needed to get up and running with the Direct Debit Collection API.Setting up Mandates; explains the processes and timelines when setting up a mandate.Starting Collections; helps you get started in setting up collections.Use cases; some Direct Debit Collections use cases.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/what-is-dd-collections",
+          "line": 13
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/setting-up-mandates",
+          "line": 14
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/starting-collections",
+          "line": 15
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/why-would-i-want-dd-collections",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "You are able to go here for details on the Direct Debit Collection endpoints: [API Reference](/reference#getmandatesusingget)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You are able to go here for details on the Direct Debit Collection endpoints: API Reference",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "The Direct Debit Scheme is governed by a set of rules and guidance in the [Service Users Guide and Rules to the Direct Debit Scheme](https://www.bacs.co.uk/sugr/) this is accessible via the link provided (Pay.UK registration required) or through our implementation team if you are ineligible to register . You must follow these rules, and any guidance from Modulr in your operation of Direct Debit Collections.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Direct Debit Scheme is governed by a set of rules and guidance in the Service Users Guide and Rules to the Direct Debit Scheme this is accessible via the link provided (Pay.UK registration required) or through our implementation team if you are ineligible to register . You must follow these rules, and any guidance from Modulr in your operation of Direct Debit Collections.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "The rules are amended from time to time by the scheme owner, Pay.UK - please pay attention to any updated rules & adapt your processes as soon as possible to reflect.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The rules are amended from time to time by the scheme owner, Pay.UK - please pay attention to any updated rules & adapt your processes as soon as possible to reflect.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "> 📘 The guide is only applicable for Direct Debit - Direct Access Partners",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "The guide is only applicable for Direct Debit - Direct Access Partners",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

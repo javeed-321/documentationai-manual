@@ -1,0 +1,486 @@
+{
+  "slug": "docs/customer-verification-application-statuses",
+  "source": "https://modulr.readme.io/docs/customer-verification-application-statuses.md",
+  "url": "https://modulr.readme.io/docs/customer-verification-application-statuses",
+  "title": "Customer Verification: Application Statuses",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-11T09:55:19.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 5,
+    "paragraph": 13,
+    "thematicBreak": 4,
+    "Table": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Customer Verification: Application Statuses",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Customer Verification: Application Statuses",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "An application moves through a defined set of statuses as it progresses through the customer verification process. Your webhook handler must be able to process all of these states.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An application moves through a defined set of statuses as it progresses through the customer verification process. Your webhook handler must be able to process all of these states.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Status reference",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Status reference",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        24
+      ],
+      "raw": "| Status            | Description                                                                                                                                                    |\n| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `NEW`             | Application created. The customer has not yet started entering data.                                                                                           |\n| `IN_PROGRESS`     | The customer has started providing data but has not yet submitted.                                                                                             |\n| `SUBMITTED`       | The customer's application has been submitted and is awaiting a result of `APPROVED`, `PENDING_STEP_UP`, `MANUAL_REVIEW` or `DECLINED`.                        |\n| `PENDING_STEP_UP` | The customer submitted their initial application, but Modulr's CDD orchestration platform or CDD Operations team has requested further information to proceed. |\n| `MANUAL_REVIEW`   | All information required for a manual decision has been received. May result in `APPROVED`, `PENDING_STEP_UP`, or `DECLINED`.                                  |\n| `APPROVED`        | Application approved. A Customer ID has been issued and accounts can be created.                                                                               |\n| `DECLINED`        | Application declined. The customer will not receive access to Modulr products.                                                                                 |\n| `EXPIRED`         | A `NEW` or `IN_PROGRESS` application has been open beyond Modulr's expiry threshold. The customer must start a new application from scratch.                   |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Status",
+          "Description"
+        ],
+        "rows": [
+          [
+            "NEW",
+            "Application created. The customer has not yet started entering data."
+          ],
+          [
+            "IN_PROGRESS",
+            "The customer has started providing data but has not yet submitted."
+          ],
+          [
+            "SUBMITTED",
+            "The customer's application has been submitted and is awaiting a result of APPROVED, PENDING_STEP_UP, MANUAL_REVIEW or DECLINED."
+          ],
+          [
+            "PENDING_STEP_UP",
+            "The customer submitted their initial application, but Modulr's CDD orchestration platform or CDD Operations team has requested further information to proceed."
+          ],
+          [
+            "MANUAL_REVIEW",
+            "All information required for a manual decision has been received. May result in APPROVED, PENDING_STEP_UP, or DECLINED."
+          ],
+          [
+            "APPROVED",
+            "Application approved. A Customer ID has been issued and accounts can be created."
+          ],
+          [
+            "DECLINED",
+            "Application declined. The customer will not receive access to Modulr products."
+          ],
+          [
+            "EXPIRED",
+            "A NEW or IN_PROGRESS application has been open beyond Modulr's expiry threshold. The customer must start a new application from scratch."
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "## Typical status flows",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Typical status flows",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "**Straight-through (automated approval)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Straight-through (automated approval)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "`NEW` > `IN_PROGRESS` > `SUBMITTED` > `APPROVED`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "NEW > IN_PROGRESS > SUBMITTED > APPROVED",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "**Step-up required (automated approval)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Step-up required (automated approval)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        36,
+        36
+      ],
+      "raw": "`NEW` > `IN_PROGRESS` > `SUBMITTED` > `PENDING_STEP_UP` > `APPROVED`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "NEW > IN_PROGRESS > SUBMITTED > PENDING_STEP_UP > APPROVED",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "**Manual review with step-up (manual approval)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Manual review with step-up (manual approval)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "`NEW` > `IN_PROGRESS` > `SUBMITTED` > `MANUAL_REVIEW` > `PENDING_STEP_UP` > `MANUAL_REVIEW` >`APPROVED`",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "NEW > IN_PROGRESS > SUBMITTED > MANUAL_REVIEW > PENDING_STEP_UP > MANUAL_REVIEW >APPROVED",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "## What to do for each status",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "What to do for each status",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "`IN_PROGRESS` - No action required. Store the status against your customer record.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "IN_PROGRESS - No action required. Store the status against your customer record.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "`PENDING_STEP_UP` - Notify your customer that further information is needed. Re-invoke the SDK (Steps 5-8 of the integration guide) using the same `applicationId`. The SDK will surface the specific step-up requirements automatically.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "PENDING_STEP_UP - Notify your customer that further information is needed. Re-invoke the SDK (Steps 5-8 of the integration guide) using the same applicationId. The SDK will surface the specific step-up requirements automatically.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "`MANUAL_REVIEW` - No action required. Modulr's CDD Operations team is reviewing the application. Monitor for the next status change.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "MANUAL_REVIEW - No action required. Modulr's CDD Operations team is reviewing the application. Monitor for the next status change.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "`APPROVED` - Await the `CUSTOMER_CREATED` webhook to receive the `customerId` and proceed with account creation.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "APPROVED - Await the CUSTOMER_CREATED webhook to receive the customerId and proceed with account creation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "`DECLINED` - The customer will not be onboarded. Notify them appropriately.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "DECLINED - The customer will not be onboarded. Notify them appropriately.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "`EXPIRED` - The customer must restart. Create a new application via `POST /applications`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "EXPIRED - The customer must restart. Create a new application via POST /applications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "## Related",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Related",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        62,
+        63
+      ],
+      "raw": "* [Integration Guide](https://modulr.readme.io/docs/customer-verification-integration-guide)\n* [Webhook - Application Status Change](https://modulr.readme.io/docs/webhook-application-status-change)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Integration GuideWebhook - Application Status Change",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-verification-integration-guide",
+          "line": 62
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-application-status-change",
+          "line": 63
+        }
+      ]
+    }
+  ]
+}

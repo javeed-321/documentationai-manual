@@ -1,0 +1,209 @@
+{
+  "slug": "docs/security",
+  "source": "https://modulr.readme.io/docs/security.md",
+  "url": "https://modulr.readme.io/docs/security",
+  "title": "Security",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:45:44.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 8,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Security",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Security",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Access to the Modulr API must be over HTTPS in all environments.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Access to the Modulr API must be over HTTPS in all environments.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "HMAC is used to authenticate API calls. As such, you are required to calculate a signature which must be included in the authorization header when making requests.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "HMAC is used to authenticate API calls. As such, you are required to calculate a signature which must be included in the authorization header when making requests.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "The signature will be unique per API request and will include:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The signature will be unique per API request and will include:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        16
+      ],
+      "raw": "* Your **API Key** (Sometimes referred to as your **token**)\n* Your **API HMAC secret** (Sometimes referred to as your **HMAC** or **Secret**)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Your API Key (Sometimes referred to as your token)Your API HMAC secret (Sometimes referred to as your HMAC or Secret)",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "For Production: these will be provided during onboarding.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For Production: these will be provided during onboarding.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "For Sandbox: these will be provided when you create your Sandbox Account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For Sandbox: these will be provided when you create your Sandbox Account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "Keys and secrets must be kept secure as they authenticate all requests as being approved by your organisation. Instructions on creating the signature are detailed here: [Authentication](https://modulr.readme.io/docs/authentication).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Keys and secrets must be kept secure as they authenticate all requests as being approved by your organisation. Instructions on creating the signature are detailed here: Authentication.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/authentication",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "Access to the API in the live environment is restricted by IP address. Your IP addresses will be requested during onboarding.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Access to the API in the live environment is restricted by IP address. Your IP addresses will be requested during onboarding.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "Note that sandbox keys may be time limited to 1 month to allow evaluation. Should you require an extension please contact us.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Note that sandbox keys may be time limited to 1 month to allow evaluation. Should you require an extension please contact us.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

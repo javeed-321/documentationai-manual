@@ -1,0 +1,220 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "paths": {
+    "/vrp": {
+      "post": {
+        "tags": [
+          "Variable Recurring Payments"
+        ],
+        "summary": "Initiate a Variable Recurring Payment.",
+        "description": "Initiates a new Variable Recurring Payment using an existing authorised consent.",
+        "operationId": "initiateVrpPayment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pispgateway.VrpPaymentRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Variable Recurring Payment initiated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pispgateway.VrpPaymentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The consent cannot be processed as it does not exist.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/pispgateway.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "pispgateway.VrpPaymentRequest": {
+        "type": "object",
+        "properties": {
+          "consentId": {
+            "type": "string",
+            "description": "The unique identifier of the VRP consent initiation request at Modulr.",
+            "example": "E210000004"
+          },
+          "payment": {
+            "$ref": "#/components/schemas/pispgateway.Payment",
+            "description": "Payment details for the VRP payment initiation request."
+          },
+          "interactionType": {
+            "type": "string",
+            "description": "PSU interaction type permitted under this consent. Must be one of: IN_SESSION (customer is present), OFF_SESSION (customer is not present).",
+            "enum": [
+              "IN_SESSION",
+              "OFF_SESSION"
+            ]
+          }
+        },
+        "required": [
+          "consentId",
+          "payment"
+        ]
+      },
+      "pispgateway.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "pispgateway.VrpPaymentResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the VRP payment initiation request at Modulr",
+            "example": "V21000001E"
+          },
+          "status": {
+            "type": "string",
+            "description": "The current status of vrp payment. Must be one of “SUBMITTED”, “ACCEPTEDWITHOUTPOSTING”, “ACCEPTEDSETTLEMENTINPROCESS”, “PENDING”, “REJECTED”, “ACCEPTEDCREDITSETTLEMENTCOMPLETED”, “ACCEPTEDSETTLEMENTCOMPLETED”, “RECEIVED”, “CANCELLED”, “BLOCKED”, “ACCEPTEDTECHNICALVALIDATION”, “ACCEPTEDCUSTOMERPROFILE”, “ACCEPTEDFUNDSCHECKED”, “ACCEPTEDWITHCHANGE”, “ACCEPTEDSETTLEMENTCOMPLETEDCREDITORACCOUNT”, “ACCEPTEDSETTLEMENTCOMPLETEDDEBITORACCOUNT”, “ER_GENERAL”, “ER_EXTSYS”",
+            "enum": [
+              "SUBMITTED",
+              "ACCEPTEDWITHOUTPOSTING",
+              "ACCEPTEDSETTLEMENTINPROCESS",
+              "PENDING",
+              "REJECTED",
+              "ACCEPTEDCREDITSETTLEMENTCOMPLETED",
+              "ACCEPTEDSETTLEMENTCOMPLETED",
+              "RECEIVED",
+              "CANCELLED",
+              "BLOCKED",
+              "ACCEPTEDTECHNICALVALIDATION",
+              "ACCEPTEDCUSTOMERPROFILE",
+              "ACCEPTEDFUNDSCHECKED",
+              "ACCEPTEDWITHCHANGE",
+              "ACCEPTEDSETTLEMENTCOMPLETEDCREDITORACCOUNT",
+              "ACCEPTEDSETTLEMENTCOMPLETEDDEBITORACCOUNT",
+              "ER_GENERAL",
+              "ER_EXTSYS"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "pispgateway.Payment": {
+        "type": "object",
+        "properties": {
+          "currency": {
+            "type": "string",
+            "description": "Currency of the payment amount. Must be specified in ISO 4217 format."
+          },
+          "amount": {
+            "type": "number",
+            "description": "Payment amount",
+            "example": "100.00"
+          },
+          "reference": {
+            "type": "string",
+            "description": "A reference used to unambiguously refer to the payment transaction. Min 6 to max 18 characters. Can contain alphanumeric, '-', '.', '&', '/' and space."
+          }
+        },
+        "required": [
+          "currency",
+          "reference"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}

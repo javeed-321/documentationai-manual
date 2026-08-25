@@ -1,0 +1,226 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Get in-app provisioning data for Apple Pay
+
+Retrieves and encrypts the data needed for the client application to provision a card to Apple Pay
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Cards",
+      "description": "Cards API"
+    }
+  ],
+  "paths": {
+    "/cards/{cardId}/in-app-provisioning/apple": {
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Get in-app provisioning data for Apple Pay",
+        "description": "Retrieves and encrypts the data needed for the client application to provision a card to Apple Pay",
+        "operationId": "getInAppProvisioningForApple",
+        "parameters": [
+          {
+            "name": "cardId",
+            "in": "path",
+            "description": "Card ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "V110000001"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/card.AppleInAppProvisioningRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "In app provisioning data for Apple Pay retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/card.AppleInAppProvisioningResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/card.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "card.AppleInAppProvisioningResponse": {
+        "type": "object",
+        "description": "AppleInAppProvisioningRequest",
+        "properties": {
+          "ephemeralPublicKey": {
+            "type": "string",
+            "description": "Ephemeral public key generated to encrypt the data on the provisioning attempt"
+          },
+          "encryptedPassData": {
+            "type": "string",
+            "description": "Encrypted payload data requested"
+          },
+          "activationData": {
+            "type": "string",
+            "description": "Encrypted OTP for the card provider"
+          }
+        },
+        "required": [
+          "activationData",
+          "encryptedPassData",
+          "ephemeralPublicKey"
+        ]
+      },
+      "card.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "card.AppleInAppProvisioningRequest": {
+        "type": "object",
+        "description": "Apple in app provisioning request",
+        "properties": {
+          "leafCertificate": {
+            "type": "string",
+            "description": "Apple issued public base 64 encoded certificate to encrypt the provisioning data",
+            "minLength": 1
+          },
+          "additionalCertificates": {
+            "type": "array",
+            "description": "Apple issued public base 64 encoded certificates that complete the chain including the root certificate",
+            "items": {
+              "type": "string"
+            }
+          },
+          "nonce": {
+            "type": "string",
+            "description": "Hex encoded nonce generated by the client",
+            "minLength": 1
+          },
+          "nonceSignature": {
+            "type": "string",
+            "description": "Hex encoded nonce signed with the private key to verify the certificate public key",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "additionalCertificates",
+          "leafCertificate",
+          "nonce",
+          "nonceSignature"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

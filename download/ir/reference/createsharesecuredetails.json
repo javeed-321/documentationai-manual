@@ -1,0 +1,108 @@
+{
+  "slug": "reference/createsharesecuredetails",
+  "source": "https://modulr.readme.io/reference/createsharesecuredetails.md",
+  "url": "https://modulr.readme.io/reference/createsharesecuredetails",
+  "title": "Share secure card details via EMAIL or RETURN methods",
+  "description": "This endpoint allows the user to create a link to share secure card details for a specific card",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-04-21T08:30:35.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Share secure card details via EMAIL or RETURN methods",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Share secure card details via EMAIL or RETURN methods",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This endpoint allows the user to create a link to share secure card details for a specific card",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This endpoint allows the user to create a link to share secure card details for a specific card",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        256
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Share secure card details\",\n      \"description\": \"Share secure card details operations\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/share-secure-details\": {\n      \"post\": {\n        \"tags\": [\n          \"Share secure card details\"\n        ],\n        \"summary\": \"Share secure card details via EMAIL or RETURN methods\",\n        \"description\": \"This endpoint allows the user to create a link to share secure card details for a specific card\",\n        \"operationId\": \"createShareSecureDetails\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"The ID of the card to share secure card details for\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"Share secure card details link successfully created\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.CreateShareSecureCardDetailsResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Invalid permissions\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.CreateShareSecureCardDetailsResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.ShareSecureCardDetailsRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Share secure card details request\",\n        \"properties\": {\n          \"shareCardDetails\": {\n            \"$ref\": \"#/components/schemas/card.shareDetails\"\n          }\n        }\n      },\n      \"card.shareDetails\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"method\": {\n            \"type\": \"string\",\n            \"description\": \"Method to share secure card details. Can be one of RETURN or EMAIL. Will default to EMAIL if not provided.\",\n            \"enum\": [\n              \"RETURN\",\n              \"EMAIL\"\n            ]\n          },\n          \"emails\": {\n            \"type\": \"array\",\n            \"description\": \"Emails to share secure card details with. Optional: Required if no method provided or if method EMAIL. Must be null for method RETURN\",\n            \"items\": {\n              \"type\": \"string\",\n              \"format\": \"email\"\n            },\n            \"maxItems\": 50,\n            \"minItems\": 0\n          },\n          \"noOfLinkAccesses\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of times token/link shared will be accessible. Default of 3\"\n          },\n          \"expiryDate\": {\n            \"type\": \"string\",\n            \"format\": \"date\",\n            \"description\": \"Date of expiry of the secure card details link should be default of 15 days. Must match date format of yyyy-mm-dd and be in the future.\",\n            \"example\": \"2026-01-01\"\n          },\n          \"otherDetailsToShare\": {\n            \"type\": \"array\",\n            \"description\": \"List of other card details to share. Will be validated against fields in card response. Default is nothing.\",\n            \"items\": {\n              \"type\": \"string\"\n            }\n          },\n          \"message\": {\n            \"type\": \"string\",\n            \"description\": \"Message to be shared with the details. Only alphanumeric characters maximum of 200 and allowed chars -/:€$£#¢%().,!@\",\n            \"maxLength\": 200,\n            \"minLength\": 0,\n            \"pattern\": \"^[a-zA-Z0-9\\\\-/:€$£#¢%().,!@ ]*$\"\n          },\n          \"externalReference\": {\n            \"type\": \"string\",\n            \"description\": \"External reference for the shared secure detail link\",\n            \"maxLength\": 50,\n            \"minLength\": 1,\n            \"pattern\": \"[\\\\w -]*\"\n          }\n        }\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"card.CreateShareSecureCardDetailsResponse\": {\n        \"type\": \"object\",\n        \"description\": \"Response for creating a share secure card details link.\",\n        \"properties\": {\n          \"link\": {\n            \"type\": \"string\",\n            \"description\": \"Link to secure card details. Only returned for method RETURN\"\n          },\n          \"passcode\": {\n            \"type\": \"string\",\n            \"description\": \"passcode to view the secured card details. Only returned for method RETURN\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Share secure card details\",\n      \"description\": \"Share secure card details operations\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/share-secure-details\": {\n      \"post\": {\n        \"tags\": [\n          \"Share secure card details\"\n        ],\n        \"summary\": \"Share secure card details via EMAIL or RETURN methods\",\n        \"description\": \"This endpoint allows the user to create a link to share secure card details for a specific card\",\n        \"operationId\": \"createShareSecureDetails\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"The ID of the card to share secure card details for\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/card.ShareSecureCardDetailsRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"Share secure card details link successfully created\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.CreateShareSecureCardDetailsResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          },\n          \"403\": {\n            \"description\": \"Invalid permissions\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/card.CreateShareSecureCardDetailsResponse\"\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.ShareSecureCardDetailsRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Share secure card details request\",\n        \"properties\": {\n          \"shareCardDetails\": {\n            \"$ref\": \"#/components/schemas/card.shareDetails\"\n          }\n        }\n      },\n      \"card.shareDetails\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"method\": {\n            \"type\": \"string\",\n            \"description\": \"Method to share secure card details. Can be one of RETURN or EMAIL. Will default to EMAIL if not provided.\",\n            \"enum\": [\n              \"RETURN\",\n              \"EMAIL\"\n            ]\n          },\n          \"emails\": {\n            \"type\": \"array\",\n            \"description\": \"Emails to share secure card details with. Optional: Required if no method provided or if method EMAIL. Must be null for method RETURN\",\n            \"items\": {\n              \"type\": \"string\",\n              \"format\": \"email\"\n            },\n            \"maxItems\": 50,\n            \"minItems\": 0\n          },\n          \"noOfLinkAccesses\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \"Number of times token/link shared will be accessible. Default of 3\"\n          },\n          \"expiryDate\": {\n            \"type\": \"string\",\n            \"format\": \"date\",\n            \"description\": \"Date of expiry of the secure card details link should be default of 15 days. Must match date format of yyyy-mm-dd and be in the future.\",\n            \"example\": \"2026-01-01\"\n          },\n          \"otherDetailsToShare\": {\n            \"type\": \"array\",\n            \"description\": \"List of other card details to share. Will be validated against fields in card response. Default is nothing.\",\n            \"items\": {\n              \"type\": \"string\"\n            }\n          },\n          \"message\": {\n            \"type\": \"string\",\n            \"description\": \"Message to be shared with the details. Only alphanumeric characters maximum of 200 and allowed chars -/:€$£#¢%().,!@\",\n            \"maxLength\": 200,\n            \"minLength\": 0,\n            \"pattern\": \"^[a-zA-Z0-9\\\\-/:€$£#¢%().,!@ ]*$\"\n          },\n          \"externalReference\": {\n            \"type\": \"string\",\n            \"description\": \"External reference for the shared secure detail link\",\n            \"maxLength\": 50,\n            \"minLength\": 1,\n            \"pattern\": \"[\\\\w -]*\"\n          }\n        }\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"card.CreateShareSecureCardDetailsResponse\": {\n        \"type\": \"object\",\n        \"description\": \"Response for creating a share secure card details link.\",\n        \"properties\": {\n          \"link\": {\n            \"type\": \"string\",\n            \"description\": \"Link to secure card details. Only returned for method RETURN\"\n          },\n          \"passcode\": {\n            \"type\": \"string\",\n            \"description\": \"passcode to view the secured card details. Only returned for method RETURN\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

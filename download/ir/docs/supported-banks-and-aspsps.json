@@ -1,0 +1,341 @@
+{
+  "slug": "docs/supported-banks-and-aspsps",
+  "source": "https://modulr.readme.io/docs/supported-banks-and-aspsps.md",
+  "url": "https://modulr.readme.io/docs/supported-banks-and-aspsps",
+  "title": "Supported ASPSP (Banks)",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-02-20T11:41:19.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "Callout": 1,
+    "paragraph": 5,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Supported ASPSP (Banks)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Supported ASPSP (Banks)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        17
+      ],
+      "raw": "<Callout icon=\"📘\" theme=\"info\">\n  These are the ASPSP institutions that you can connect to using the Payment Initiation Service.\n\n  When developing your application you must use our dynamic [provider list API](https://modulr.readme.io/reference/getaspsproviders) as this will tell you the specific capabilities supported by each institution that we are connected to and also whether they are currently available or not.\n\n  We strongly recommend that you call this endpoint each time that you use the service and that your application supports changes in the response as the list may change from time-to-time when we add new banks or change their supported capabilities.\n\n  Are we missing a bank connection or Open Banking capability?  [Let us know](https://forms.modulrfinance.com/231551815548964).\n</Callout>",
+      "kind": "callout",
+      "syntax": "jsx",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘",
+        "theme": "info"
+      },
+      "text": "These are the ASPSP institutions that you can connect to using the Payment Initiation Service.When developing your application you must use our dynamic provider list API as this will tell you the specific capabilities supported by each institution that we are connected to and also whether they are currently available or not.We strongly recommend that you call this endpoint each time that you use the service and that your application supports changes in the response as the list may change from time-to-time when we add new banks or change their supported capabilities.Are we missing a bank connection or Open Banking capability?  Let us know.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "children": [
+        {
+          "i": 2,
+          "lines": [
+            10,
+            10
+          ],
+          "raw": "  These are the ASPSP institutions that you can connect to using the Payment Initiation Service.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "These are the ASPSP institutions that you can connect to using the Payment Initiation Service.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 3,
+          "lines": [
+            12,
+            12
+          ],
+          "raw": "  When developing your application you must use our dynamic [provider list API](https://modulr.readme.io/reference/getaspsproviders) as this will tell you the specific capabilities supported by each institution that we are connected to and also whether they are currently available or not.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "When developing your application you must use our dynamic provider list API as this will tell you the specific capabilities supported by each institution that we are connected to and also whether they are currently available or not.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": [
+            {
+              "kind": "absoluteInternalLink",
+              "value": "https://modulr.readme.io/reference/getaspsproviders",
+              "line": 12
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "lines": [
+            14,
+            14
+          ],
+          "raw": "  We strongly recommend that you call this endpoint each time that you use the service and that your application supports changes in the response as the list may change from time-to-time when we add new banks or change their supported capabilities.",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "We strongly recommend that you call this endpoint each time that you use the service and that your application supports changes in the response as the list may change from time-to-time when we add new banks or change their supported capabilities.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        },
+        {
+          "i": 5,
+          "lines": [
+            16,
+            16
+          ],
+          "raw": "  Are we missing a bank connection or Open Banking capability?  [Let us know](https://forms.modulrfinance.com/231551815548964).",
+          "kind": "paragraph",
+          "syntax": "markdown",
+          "text": "Are we missing a bank connection or Open Banking capability?  Let us know.",
+          "target": {
+            "component": null,
+            "status": "direct"
+          },
+          "inline": []
+        }
+      ],
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getaspsproviders",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        19,
+        66
+      ],
+      "raw": "| Connection Name                    |\n| :--------------------------------- |\n| Allied Irish Bank                  |\n| AIB UK Business - First Trust Bank |\n| AIB UK Personal - First Trust Bank |\n| Bank of Ireland UK                 |\n| Bank of Ireland UK (Business)      |\n| Bank of Scotland (Business)        |\n| Bank of Scotland (Personal)        |\n| Bank of Scotland EU (Commercial)   |\n| Bank of Scotland UK (Commercial)   |\n| Barclaycard                        |\n| Barclaycard Commercial Payments    |\n| Barclays Business                  |\n| Barclays Corporate                 |\n| Barclays Personal                  |\n| Barclays Wealth                    |\n| Chase UK                           |\n| Chelsea Building Society           |\n| Coutts & Company                   |\n| Cumberland Building Society        |\n| Danske Bank                        |\n| Danske Bank Business UK            |\n| First Direct                       |\n| Halifax Personal                   |\n| HSBC Kinetic                       |\n| HSBC Personal                      |\n| HSBC UK Business                   |\n| Lloyds (Business)                  |\n| Lloyds (Personal)                  |\n| Lloyds EU (Commercial)             |\n| Lloyds UK (Commercial)             |\n| Mettle                             |\n| Nationwide                         |\n| Natwest                            |\n| Revolut                            |\n| Royal Bank of Scotland             |\n| Royal Bank of Scotland Bankline    |\n| Santander                          |\n| Starling                           |\n| Tesco Bank                         |\n| Tide                               |\n| Ulster Bank (UK)                   |\n| Ulster Bank Bankline (NI)          |\n| Virgin Money                       |\n| Wise                               |\n| Yorkshire Building Society         |\n| Zempler Bank (Formerly Cashplus)\\* |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Connection Name"
+        ],
+        "rows": [
+          [
+            "Allied Irish Bank"
+          ],
+          [
+            "AIB UK Business - First Trust Bank"
+          ],
+          [
+            "AIB UK Personal - First Trust Bank"
+          ],
+          [
+            "Bank of Ireland UK"
+          ],
+          [
+            "Bank of Ireland UK (Business)"
+          ],
+          [
+            "Bank of Scotland (Business)"
+          ],
+          [
+            "Bank of Scotland (Personal)"
+          ],
+          [
+            "Bank of Scotland EU (Commercial)"
+          ],
+          [
+            "Bank of Scotland UK (Commercial)"
+          ],
+          [
+            "Barclaycard"
+          ],
+          [
+            "Barclaycard Commercial Payments"
+          ],
+          [
+            "Barclays Business"
+          ],
+          [
+            "Barclays Corporate"
+          ],
+          [
+            "Barclays Personal"
+          ],
+          [
+            "Barclays Wealth"
+          ],
+          [
+            "Chase UK"
+          ],
+          [
+            "Chelsea Building Society"
+          ],
+          [
+            "Coutts & Company"
+          ],
+          [
+            "Cumberland Building Society"
+          ],
+          [
+            "Danske Bank"
+          ],
+          [
+            "Danske Bank Business UK"
+          ],
+          [
+            "First Direct"
+          ],
+          [
+            "Halifax Personal"
+          ],
+          [
+            "HSBC Kinetic"
+          ],
+          [
+            "HSBC Personal"
+          ],
+          [
+            "HSBC UK Business"
+          ],
+          [
+            "Lloyds (Business)"
+          ],
+          [
+            "Lloyds (Personal)"
+          ],
+          [
+            "Lloyds EU (Commercial)"
+          ],
+          [
+            "Lloyds UK (Commercial)"
+          ],
+          [
+            "Mettle"
+          ],
+          [
+            "Nationwide"
+          ],
+          [
+            "Natwest"
+          ],
+          [
+            "Revolut"
+          ],
+          [
+            "Royal Bank of Scotland"
+          ],
+          [
+            "Royal Bank of Scotland Bankline"
+          ],
+          [
+            "Santander"
+          ],
+          [
+            "Starling"
+          ],
+          [
+            "Tesco Bank"
+          ],
+          [
+            "Tide"
+          ],
+          [
+            "Ulster Bank (UK)"
+          ],
+          [
+            "Ulster Bank Bankline (NI)"
+          ],
+          [
+            "Virgin Money"
+          ],
+          [
+            "Wise"
+          ],
+          [
+            "Yorkshire Building Society"
+          ],
+          [
+            "Zempler Bank (Formerly Cashplus)*"
+          ]
+        ],
+        "align": [
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "\\*requires a minimum transaction value of £1.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "*requires a minimum transaction value of £1.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

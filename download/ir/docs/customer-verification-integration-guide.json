@@ -1,0 +1,2002 @@
+{
+  "slug": "docs/customer-verification-integration-guide",
+  "source": "https://modulr.readme.io/docs/customer-verification-integration-guide.md",
+  "url": "https://modulr.readme.io/docs/customer-verification-integration-guide",
+  "title": "Customer Verification: Integration Guide",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-08-14T09:43:39.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 21,
+    "paragraph": 40,
+    "thematicBreak": 13,
+    "blockquote": 2,
+    "code": 23,
+    "list": 2,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Customer Verification: Integration Guide",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Customer Verification: Integration Guide",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This guide walks through the full integration step by step, with example code for each stage. All code examples reference KYC (Know Your Customer) scenarios, but the same pattern applies to KYB (Know Your Business) applications.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This guide walks through the full integration step by step, with example code for each stage. All code examples reference KYC (Know Your Customer) scenarios, but the same pattern applies to KYB (Know Your Business) applications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "## Step 1: <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/createapplication\">Create an Application</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 1: Create an Application",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/createapplication",
+          "line": 13
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createapplication",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "Before the SDK can be invoked, create an application instance for each customer via the Create Application API. Store the returned `id` against your customer record - it is used in all subsequent API calls and webhooks.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before the SDK can be invoked, create an application instance for each customer via the Create Application API. Store the returned id against your customer record - it is used in all subsequent API calls and webhooks.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "> **Note:** Create a separate application for each business a customer wishes to onboard, even if ownership is identical across businesses.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Note: Create a separate application for each business a customer wishes to onboard, even if ownership is identical across businesses.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        21
+      ],
+      "raw": "```http\nPOST /applications\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "POST /applications"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        27
+      ],
+      "raw": "```json\n{\n  \"legalEntity\": \"MFBV\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"legalEntity\": \"MFBV\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "**Response (201 Created)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response (201 Created)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        35
+      ],
+      "raw": "```json\n{\n  \"id\": \"APP21000MG\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"APP21000MG\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## Step 2: Submit KYC/KYB Data via API (Optional)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 2: Submit KYC/KYB Data via API (Optional)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "Skip this step if you are using the SDK-only route. Jump straight to [Step 5](https://modulr.readme.io/docs/customer?isFramePreview=true#step-5-create-a-short-lived-token).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Skip this step if you are using the SDK-only route. Jump straight to Step 5.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer?isFramePreview=true#step-5-create-a-short-lived-token",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "If you hold verified customer data already and want to reduce friction in the onboarding journey, you can pre-populate compliance data via the API before invoking the SDK.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you hold verified customer data already and want to reduce friction in the onboarding journey, you can pre-populate compliance data via the API before invoking the SDK.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "### <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/createapplicationassociate\">Create a Compliance Associate</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Create a Compliance Associate",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/createapplicationassociate",
+          "line": 45
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createapplicationassociate",
+          "line": 45
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "Submit identity data for each individual (the primary customer or associated individuals for a business application).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Submit identity data for each individual (the primary customer or associated individuals for a business application).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        49,
+        51
+      ],
+      "raw": "```http\nPOST /applications/{applicationId}/compliance/associates\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "POST /applications/{applicationId}/compliance/associates"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        53,
+        72
+      ],
+      "raw": "```json\n{\n  \"types\": [\"INDIVIDUAL\"],\n  \"firstName\": \"Clara\",\n  \"middleName\": \"Optional\",\n  \"lastName\": \"Burt\",\n  \"dateOfBirth\": \"1942-01-02\",\n  \"contactDetails\": {\n    \"email\": \"clara@example.com\",\n    \"phone\": \"07415626822\"\n  },\n  \"homeAddress\": {\n    \"addressLine1\": \"1 House Street\",\n    \"addressLine2\": \"Optional\",\n    \"country\": \"GB\",\n    \"postCode\": \"E147HG\",\n    \"postTown\": \"Edinburgh\"\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"types\": [\"INDIVIDUAL\"],\n  \"firstName\": \"Clara\",\n  \"middleName\": \"Optional\",\n  \"lastName\": \"Burt\",\n  \"dateOfBirth\": \"1942-01-02\",\n  \"contactDetails\": {\n    \"email\": \"clara@example.com\",\n    \"phone\": \"07415626822\"\n  },\n  \"homeAddress\": {\n    \"addressLine1\": \"1 House Street\",\n    \"addressLine2\": \"Optional\",\n    \"country\": \"GB\",\n    \"postCode\": \"E147HG\",\n    \"postTown\": \"Edinburgh\"\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "**Response (201 Created)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response (201 Created)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        76,
+        80
+      ],
+      "raw": "```json\n{\n  \"id\": \"ASS0000001\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"ASS0000001\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        82,
+        82
+      ],
+      "raw": "**Associate types:** Use `INDIVIDUAL` for KYC. For business applications, available types include `DIRECTOR`, `PARTNER`, `BENE_OWNER`, and `SOLETRADER`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Associate types: Use INDIVIDUAL for KYC. For business applications, available types include DIRECTOR, PARTNER, BENE_OWNER, and SOLETRADER.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        84,
+        84
+      ],
+      "raw": "### <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/updateknowyourcustomerbyapplicationid\">Submit KYB/KYC Data</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Submit KYB/KYC Data",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/updateknowyourcustomerbyapplicationid",
+          "line": 84
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/updateknowyourcustomerbyapplicationid",
+          "line": 84
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        86,
+        86
+      ],
+      "raw": "Provide expected activity details for the customer's Modulr account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Provide expected activity details for the customer's Modulr account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        88,
+        90
+      ],
+      "raw": "```http\nPUT /applications/APP0000001/compliance/know-your-customer\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "PUT /applications/APP0000001/compliance/know-your-customer"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        92,
+        97
+      ],
+      "raw": "```json\n{\n  \"expectedMonthlySpend\": 10000,\n  \"expectedMonthlyTransactions\": 50\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"expectedMonthlySpend\": 10000,\n  \"expectedMonthlyTransactions\": 50\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "**Response: 204 No Content**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response: 204 No Content",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        101,
+        101
+      ],
+      "raw": "### <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/updatepersonalinformationforassociate_1\">Submit Associate Personal Info</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Submit Associate Personal Info",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/updatepersonalinformationforassociate_1",
+          "line": 101
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/updatepersonalinformationforassociate_1",
+          "line": 101
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "lines": [
+        103,
+        103
+      ],
+      "raw": "Provide nationality data for the associate.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Provide nationality data for the associate.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        105,
+        107
+      ],
+      "raw": "```http\nPUT /applications/{applicationId}/compliance/associates/{associateId}/personal-info\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "PUT /applications/{applicationId}/compliance/associates/{associateId}/personal-info"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        109,
+        113
+      ],
+      "raw": "```json\n{\n  \"nationalities\": [\"GB\", \"CA\"]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"nationalities\": [\"GB\", \"CA\"]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        115,
+        115
+      ],
+      "raw": "**Response: 204 No Content**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response: 204 No Content",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        117,
+        117
+      ],
+      "raw": "### <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/updatetaxresidenciesforassociate_1\">Submit Associate Tax Residencies</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Submit Associate Tax Residencies",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/updatetaxresidenciesforassociate_1",
+          "line": 117
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/updatetaxresidenciesforassociate_1",
+          "line": 117
+        }
+      ]
+    },
+    {
+      "i": 33,
+      "lines": [
+        119,
+        121
+      ],
+      "raw": "```http\nPUT /applications/{applicationId}/compliance/associates/{associateId}/tax-residencies\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "PUT /applications/{applicationId}/compliance/associates/{associateId}/tax-residencies"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        123,
+        127
+      ],
+      "raw": "```json\n{\n  \"taxResidencies\": [\"ES\", \"FR\"]\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"taxResidencies\": [\"ES\", \"FR\"]\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        129,
+        129
+      ],
+      "raw": "**Response: 204 No Content**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response: 204 No Content",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        131,
+        131
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        133,
+        133
+      ],
+      "raw": "## Step 3: Handle APPLICATION\\_STATUS\\_CHANGE Webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 3: Handle APPLICATION_STATUS_CHANGE Webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        135,
+        135
+      ],
+      "raw": "Once the customer starts entering data, Modulr sends `APPLICATION_STATUS_CHANGE` webhook events to your registered endpoint. You must process these throughout the entire application lifecycle.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once the customer starts entering data, Modulr sends APPLICATION_STATUS_CHANGE webhook events to your registered endpoint. You must process these throughout the entire application lifecycle.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "See the full webhook reference: <Anchor target=\"_blank\" href=\"https://modulr.readme.io/docs/webhook-application-status-change\">Webhook - Application Status Change</Anchor>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "See the full webhook reference: Webhook - Application Status Change",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/docs/webhook-application-status-change",
+          "line": 137
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-application-status-change",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "i": 40,
+      "lines": [
+        139,
+        139
+      ],
+      "raw": "Your webhook handler must be **idempotent** - the same event may be delivered more than once. Respond with `HTTP 200` to acknowledge receipt. Modulr will retry on failure.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Your webhook handler must be idempotent - the same event may be delivered more than once. Respond with HTTP 200 to acknowledge receipt. Modulr will retry on failure.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        141,
+        141
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        143,
+        143
+      ],
+      "raw": "## Step 4 (optional): [Upload ID verification docs / biometric selfie image](https://modulr.readme.io/reference/uploaddocument)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 4 (optional): Upload ID verification docs / biometric selfie image",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/uploaddocument",
+          "line": 143
+        }
+      ]
+    },
+    {
+      "i": 43,
+      "lines": [
+        145,
+        145
+      ],
+      "raw": "We would generally always recommend that any documents that are used as part of the KYB/C application are being uploaded via our Customer Verification SDK (steps 6-9) to maximise the best chance of an automated approval, however, if you are already capturing these documents through your own providers for other purposes, you have the optional route of providing these documents/selfie captured images via API.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We would generally always recommend that any documents that are used as part of the KYB/C application are being uploaded via our Customer Verification SDK (steps 6-9) to maximise the best chance of an automated approval, however, if you are already capturing these documents through your own providers for other purposes, you have the optional route of providing these documents/selfie captured images via API.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        147,
+        149
+      ],
+      "raw": "```http\nPOST /applications/{applicationId}/compliance/associates/{associateId}/documents\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "POST /applications/{applicationId}/compliance/associates/{associateId}/documents"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        151,
+        158
+      ],
+      "raw": "```json\n{\n  \"fileName\": \"string\",\n  \"content\": \"string\",\n  \"type\": \"DRIVING_LICENCE\",\n  \"side\": \"FRONT\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"fileName\": \"string\",\n  \"content\": \"string\",\n  \"type\": \"DRIVING_LICENCE\",\n  \"side\": \"FRONT\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        160,
+        160
+      ],
+      "raw": "**Response (201 Created)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response (201 Created)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        162,
+        166
+      ],
+      "raw": "```json\n{\n  \"id\": \"ACD0000001\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"id\": \"ACD0000001\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        168,
+        168
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        170,
+        170
+      ],
+      "raw": "## Step 5: <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/verifyapplication\">Initiate Application Verification</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 5: Initiate Application Verification",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/verifyapplication",
+          "line": 170
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/verifyapplication",
+          "line": 170
+        }
+      ]
+    },
+    {
+      "i": 50,
+      "lines": [
+        172,
+        172
+      ],
+      "raw": "If you submitted data via the API in Step 2, call the verify endpoint to trigger Modulr's CDD orchestration. If you used the SDK-only route, the SDK makes this call automatically.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you submitted data via the API in Step 2, call the verify endpoint to trigger Modulr's CDD orchestration. If you used the SDK-only route, the SDK makes this call automatically.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 51,
+      "lines": [
+        174,
+        176
+      ],
+      "raw": "```http\nPOST /applications/{applicationId}/verify\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "POST /applications/{applicationId}/verify"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 52,
+      "lines": [
+        178,
+        178
+      ],
+      "raw": "No request body required.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "No request body required.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        180,
+        180
+      ],
+      "raw": "**Response: 200 OK**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response: 200 OK",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 54,
+      "lines": [
+        182,
+        182
+      ],
+      "raw": "After this call, monitor `APPLICATION_STATUS_CHANGE` webhooks. The application will transition to one of:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After this call, monitor APPLICATION_STATUS_CHANGE webhooks. The application will transition to one of:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 55,
+      "lines": [
+        184,
+        186
+      ],
+      "raw": "* `APPROVED` - all KYB/KYC checks passed\n* `PENDING_STEP_UP` - further information required from the customer\n* `MANUAL_REVIEW` - application queued for human review",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "APPROVED - all KYB/KYC checks passedPENDING_STEP_UP - further information required from the customerMANUAL_REVIEW - application queued for human review",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 56,
+      "lines": [
+        188,
+        188
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 57,
+      "lines": [
+        190,
+        190
+      ],
+      "raw": "## Step 6: <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/createsdkkey\">Create a Short-lived Token</Anchor>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 6: Create a Short-lived Token",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/createsdkkey",
+          "line": 190
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createsdkkey",
+          "line": 190
+        }
+      ]
+    },
+    {
+      "i": 58,
+      "lines": [
+        192,
+        192
+      ],
+      "raw": "Before initialising the SDK, request a short-lived token and HMAC from the Modulr keys endpoint.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before initialising the SDK, request a short-lived token and HMAC from the Modulr keys endpoint.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 59,
+      "lines": [
+        194,
+        194
+      ],
+      "raw": "> **Important:** This call must be made server-side. Never expose the token or HMAC in client-side code or logs.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Important: This call must be made server-side. Never expose the token or HMAC in client-side code or logs.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 60,
+      "lines": [
+        196,
+        198
+      ],
+      "raw": "```http\nPOST /keys/applications/{applicationId}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "http",
+        "title": null,
+        "code": "POST /keys/applications/{applicationId}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 61,
+      "lines": [
+        200,
+        200
+      ],
+      "raw": "**Response (201 Created)**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Response (201 Created)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 62,
+      "lines": [
+        202,
+        208
+      ],
+      "raw": "```json\n{\n  \"expires\": \"2026-04-06 12:31:58\",\n  \"hmac\": \"sdk::hmac_052c3013012e\",\n  \"token\": \"token_6e5522ad78ff\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"expires\": \"2026-04-06 12:31:58\",\n  \"hmac\": \"sdk::hmac_052c3013012e\",\n  \"token\": \"token_6e5522ad78ff\"\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 63,
+      "lines": [
+        210,
+        210
+      ],
+      "raw": "The token has a short TTL. Request a fresh token immediately before each SDK initialisation.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The token has a short TTL. Request a fresh token immediately before each SDK initialisation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 64,
+      "lines": [
+        212,
+        212
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 65,
+      "lines": [
+        214,
+        214
+      ],
+      "raw": "## Step 7: Initialise the Customer Verification SDK",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 7: Initialise the Customer Verification SDK",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 66,
+      "lines": [
+        216,
+        216
+      ],
+      "raw": "Use the token, HMAC, and application ID from the previous steps to initialise the SDK.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Use the token, HMAC, and application ID from the previous steps to initialise the SDK.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 67,
+      "lines": [
+        218,
+        231
+      ],
+      "raw": "```javascript\nconst sdkInstance = await ModulrCustomerVerificationSdk.init({\n  token,\n  hmac,\n  applicationId: 'APP21000MG',\n\n  onInit: (result) => {\n    console.log('SDK initialised:', result.status, result.message);\n  },\n  onError: (error) => {\n    console.error('SDK error:', error);\n  }\n});\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "const sdkInstance = await ModulrCustomerVerificationSdk.init({\n  token,\n  hmac,\n  applicationId: 'APP21000MG',\n\n  onInit: (result) => {\n    console.log('SDK initialised:', result.status, result.message);\n  },\n  onError: (error) => {\n    console.error('SDK error:', error);\n  }\n});"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 68,
+      "lines": [
+        233,
+        233
+      ],
+      "raw": "### Custom Styling (Optional)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Custom Styling (Optional)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 69,
+      "lines": [
+        235,
+        235
+      ],
+      "raw": "The SDK supports visual customisation to match your product's design system. All styling properties are optional - omit the block entirely to use Modulr defaults.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The SDK supports visual customisation to match your product's design system. All styling properties are optional - omit the block entirely to use Modulr defaults.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 70,
+      "lines": [
+        237,
+        280
+      ],
+      "raw": "```javascript\nconst sdkInstance = await ModulrCustomerVerificationSdk.init({\n  token,\n  hmac,\n  applicationId: 'APP21000MG',\n\n  customStyle: {\n    theme: {\n      primaryColor: '#111111',\n      backgroundColor: '#FFFFFF',\n      textColor: '#111111',\n      borderRadius: '4px',\n      iconColor: '#111111',\n      successColor: '#008756',\n      errorColor: '#D91E18'\n    },\n    componentOverride: {\n      PrimaryButton: {\n        default: {\n          backgroundColor: '#111111',\n          textColor: '#FFFFFF',\n          borderRadius: '4px',\n          border: '#111111',\n          boxShadow: '0'\n        },\n        hover: {\n          backgroundColor: '#78808F',\n          textColor: '#FFFFFF',\n          borderRadius: '4px',\n          border: '#78808F',\n          boxShadow: '0'\n        }\n      }\n    }\n  },\n\n  onInit: (result) => {\n    console.log('SDK initialised:', result.status, result.message);\n  },\n  onError: (error) => {\n    console.error('SDK error:', error);\n  }\n});\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "const sdkInstance = await ModulrCustomerVerificationSdk.init({\n  token,\n  hmac,\n  applicationId: 'APP21000MG',\n\n  customStyle: {\n    theme: {\n      primaryColor: '#111111',\n      backgroundColor: '#FFFFFF',\n      textColor: '#111111',\n      borderRadius: '4px',\n      iconColor: '#111111',\n      successColor: '#008756',\n      errorColor: '#D91E18'\n    },\n    componentOverride: {\n      PrimaryButton: {\n        default: {\n          backgroundColor: '#111111',\n          textColor: '#FFFFFF',\n          borderRadius: '4px',\n          border: '#111111',\n          boxShadow: '0'\n        },\n        hover: {\n          backgroundColor: '#78808F',\n          textColor: '#FFFFFF',\n          borderRadius: '4px',\n          border: '#78808F',\n          boxShadow: '0'\n        }\n      }\n    }\n  },\n\n  onInit: (result) => {\n    console.log('SDK initialised:', result.status, result.message);\n  },\n  onError: (error) => {\n    console.error('SDK error:', error);\n  }\n});"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 71,
+      "lines": [
+        282,
+        282
+      ],
+      "raw": "Only call `open()` (Step 7) after `onInit` fires successfully.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Only call open() (Step 7) after onInit fires successfully.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 72,
+      "lines": [
+        284,
+        284
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 73,
+      "lines": [
+        286,
+        286
+      ],
+      "raw": "## Step 8: Open the Customer Verification SDK",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 8: Open the Customer Verification SDK",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 74,
+      "lines": [
+        288,
+        288
+      ],
+      "raw": "Call `open()` once the SDK has initialised. The SDK can be displayed as a modal (default) or embedded inline in a container element.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Call open() once the SDK has initialised. The SDK can be displayed as a modal (default) or embedded inline in a container element.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 75,
+      "lines": [
+        290,
+        290
+      ],
+      "raw": "### Modal mode (default)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Modal mode (default)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 76,
+      "lines": [
+        292,
+        298
+      ],
+      "raw": "```javascript\nawait sdkInstance.open({\n  onResult: (data) => console.log('Result:', data),\n  onError: (error) => console.error('Error:', error),\n  onClose: () => console.log('Closed')\n});\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "await sdkInstance.open({\n  onResult: (data) => console.log('Result:', data),\n  onError: (error) => console.error('Error:', error),\n  onClose: () => console.log('Closed')\n});"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 77,
+      "lines": [
+        300,
+        300
+      ],
+      "raw": "### Inline / embedded mode",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Inline / embedded mode",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 78,
+      "lines": [
+        302,
+        309
+      ],
+      "raw": "```javascript\nawait sdkInstance.open({\n  containerId: 'your-container-element-id',\n  onResult: (data) => console.log('Result:', data),\n  onError: (error) => console.error('Error:', error),\n  onClose: () => console.log('Closed')\n});\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "await sdkInstance.open({\n  containerId: 'your-container-element-id',\n  onResult: (data) => console.log('Result:', data),\n  onError: (error) => console.error('Error:', error),\n  onClose: () => console.log('Closed')\n});"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 79,
+      "lines": [
+        311,
+        311
+      ],
+      "raw": "`containerId` must reference a visible DOM element. Use `onClose` to clean up your UI when the customer exits the SDK.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "containerId must reference a visible DOM element. Use onClose to clean up your UI when the customer exits the SDK.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 80,
+      "lines": [
+        313,
+        313
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 81,
+      "lines": [
+        315,
+        315
+      ],
+      "raw": "## Step 9: Close the SDK",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 9: Close the SDK",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 82,
+      "lines": [
+        317,
+        317
+      ],
+      "raw": "The SDK can be closed programmatically at any time.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The SDK can be closed programmatically at any time.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 83,
+      "lines": [
+        319,
+        321
+      ],
+      "raw": "```javascript\nModulrCustomerVerificationSdk.close();\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "javascript",
+        "title": null,
+        "code": "ModulrCustomerVerificationSdk.close();"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 84,
+      "lines": [
+        323,
+        323
+      ],
+      "raw": "The `onClose` callback registered in `open()` fires whether the SDK is closed by the user or programmatically.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The onClose callback registered in open() fires whether the SDK is closed by the user or programmatically.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 85,
+      "lines": [
+        325,
+        325
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 86,
+      "lines": [
+        327,
+        327
+      ],
+      "raw": "## Step 10: Handle PENDING\\_STEP\\_UP",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 10: Handle PENDING_STEP_UP",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 87,
+      "lines": [
+        329,
+        329
+      ],
+      "raw": "If further information is required after initial submission, Modulr sends an `APPLICATION_STATUS_CHANGE` webhook with status `PENDING_STEP_UP`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If further information is required after initial submission, Modulr sends an APPLICATION_STATUS_CHANGE webhook with status PENDING_STEP_UP.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 88,
+      "lines": [
+        331,
+        331
+      ],
+      "raw": "When you receive this:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "When you receive this:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 89,
+      "lines": [
+        333,
+        335
+      ],
+      "raw": "1. Notify your customer that further information is required.\n2. Re-invoke the SDK (repeat <Anchor target=\"_blank\" href=\"https://modulr.readme.io/docs/customer?isFramePreview=true#step-5-create-a-short-lived-token\">Steps 6-9</Anchor>) using the same `applicationId`. A fresh short-lived token is required for each invocation.\n3. The SDK will automatically surface the step-up form for the outstanding requirements.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Notify your customer that further information is required.Re-invoke the SDK (repeat Steps 6-9) using the same applicationId. A fresh short-lived token is required for each invocation.The SDK will automatically surface the step-up form for the outstanding requirements.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/docs/customer?isFramePreview=true#step-5-create-a-short-lived-token",
+          "line": 334
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer?isFramePreview=true#step-5-create-a-short-lived-token",
+          "line": 334
+        }
+      ]
+    },
+    {
+      "i": 90,
+      "lines": [
+        337,
+        337
+      ],
+      "raw": "This applies both after automated CDD checks and after a manual review decision - meaning these notifications could come back within a few seconds for automated step-ups, or hours/days after the initial submission depending on the complexity of the manual review.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This applies both after automated CDD checks and after a manual review decision - meaning these notifications could come back within a few seconds for automated step-ups, or hours/days after the initial submission depending on the complexity of the manual review.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 91,
+      "lines": [
+        339,
+        339
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 92,
+      "lines": [
+        341,
+        341
+      ],
+      "raw": "## Step 11: Receive CUSTOMER\\_CREATED",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 11: Receive CUSTOMER_CREATED",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 93,
+      "lines": [
+        343,
+        343
+      ],
+      "raw": "Once the application reaches `APPROVED` status, Modulr sends a `CUSTOMER_CREATED` webhook containing the new `customerId`.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once the application reaches APPROVED status, Modulr sends a CUSTOMER_CREATED webhook containing the new customerId.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 94,
+      "lines": [
+        345,
+        345
+      ],
+      "raw": "Store the `customerId` against your customer record. Use it in subsequent <Anchor target=\"_blank\" href=\"https://modulr.readme.io/reference/createaccount\">Account Creation API</Anchor> calls.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Store the customerId against your customer record. Use it in subsequent Account Creation API calls.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/reference/createaccount",
+          "line": 345
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createaccount",
+          "line": 345
+        }
+      ]
+    },
+    {
+      "i": 95,
+      "lines": [
+        347,
+        347
+      ],
+      "raw": "See the full webhook reference: <Anchor target=\"_blank\" href=\"https://modulr.readme.io/docs/webhook-customer-created\">Webhook - Customer Created</Anchor>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "See the full webhook reference: Webhook - Customer Created",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/docs/webhook-customer-created",
+          "line": 347
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-customer-created",
+          "line": 347
+        }
+      ]
+    },
+    {
+      "i": 96,
+      "lines": [
+        349,
+        349
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 97,
+      "lines": [
+        351,
+        351
+      ],
+      "raw": "## Step 12: Monitor CUSTOMER\\_STATUS\\_CHANGE",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Step 12: Monitor CUSTOMER_STATUS_CHANGE",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 98,
+      "lines": [
+        353,
+        353
+      ],
+      "raw": "Once a customer is live on Modulr, monitor the `CUSTOMER_STATUS_CHANGE` webhook to track ongoing lifecycle events, including `BLOCKED` status which prevents payment processing.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once a customer is live on Modulr, monitor the CUSTOMER_STATUS_CHANGE webhook to track ongoing lifecycle events, including BLOCKED status which prevents payment processing.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 99,
+      "lines": [
+        355,
+        355
+      ],
+      "raw": "See the full webhook reference: <Anchor target=\"_blank\" href=\"https://modulr.readme.io/docs/customer-status\">Webhook - Customer Status Change</Anchor>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "See the full webhook reference: Webhook - Customer Status Change",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "anchorJsx",
+          "value": "https://modulr.readme.io/docs/customer-status",
+          "line": 355
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/customer-status",
+          "line": 355
+        }
+      ]
+    },
+    {
+      "i": 100,
+      "lines": [
+        357,
+        357
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 101,
+      "lines": [
+        359,
+        359
+      ],
+      "raw": "## Integration Checklist",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Integration Checklist",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 102,
+      "lines": [
+        361,
+        374
+      ],
+      "raw": "| Step | Item                                                 | Required?                        |\n| ---- | ---------------------------------------------------- | -------------------------------- |\n| 1    | Create Application                                   | Yes                              |\n| 2    | Submit KYC/KYB Data via API                          | Optional                         |\n| 3    | Handle APPLICATION\\_STATUS\\_CHANGE webhook           | Yes                              |\n| 4    | Upload ID verification docs / biometric selfie image | Optional                         |\n| 5    | Initiate Application Verification                    | Only if using API pre-population |\n| 6    | Create Short-lived Token                             | Yes                              |\n| 7    | Initialise SDK                                       | Yes                              |\n| 8    | Open SDK                                             | Yes                              |\n| 9    | Close SDK                                            | Yes                              |\n| 10   | Handle PENDING\\_STEP\\_UP                             | Yes                              |\n| 11   | Handle CUSTOMER\\_CREATED webhook                     | Yes                              |\n| 12   | Handle CUSTOMER\\_STATUS\\_CHANGE webhook              | Yes                              |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Step",
+          "Item",
+          "Required?"
+        ],
+        "rows": [
+          [
+            "1",
+            "Create Application",
+            "Yes"
+          ],
+          [
+            "2",
+            "Submit KYC/KYB Data via API",
+            "Optional"
+          ],
+          [
+            "3",
+            "Handle APPLICATION_STATUS_CHANGE webhook",
+            "Yes"
+          ],
+          [
+            "4",
+            "Upload ID verification docs / biometric selfie image",
+            "Optional"
+          ],
+          [
+            "5",
+            "Initiate Application Verification",
+            "Only if using API pre-population"
+          ],
+          [
+            "6",
+            "Create Short-lived Token",
+            "Yes"
+          ],
+          [
+            "7",
+            "Initialise SDK",
+            "Yes"
+          ],
+          [
+            "8",
+            "Open SDK",
+            "Yes"
+          ],
+          [
+            "9",
+            "Close SDK",
+            "Yes"
+          ],
+          [
+            "10",
+            "Handle PENDING_STEP_UP",
+            "Yes"
+          ],
+          [
+            "11",
+            "Handle CUSTOMER_CREATED webhook",
+            "Yes"
+          ],
+          [
+            "12",
+            "Handle CUSTOMER_STATUS_CHANGE webhook",
+            "Yes"
+          ]
+        ],
+        "align": [
+          null,
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    }
+  ]
+}

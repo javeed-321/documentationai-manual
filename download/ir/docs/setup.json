@@ -1,0 +1,157 @@
+{
+  "slug": "docs/setup",
+  "source": "https://modulr.readme.io/docs/setup.md",
+  "url": "https://modulr.readme.io/docs/setup",
+  "title": "General Tokenisation Setup",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:29:44.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "list": 1,
+    "Callout": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# General Tokenisation Setup",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "General Tokenisation Setup",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Visa Metadata Requirements",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Visa Metadata Requirements",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "To ensure a card program is set up correctly for Tokenisation you will need to provide Modulr the following information:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To ensure a card program is set up correctly for Tokenisation you will need to provide Modulr the following information:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        27
+      ],
+      "raw": "* Digital Card Art\n* Digital Icon\n* Visa Co-Brand Reference\n* Privacy Policy URL\n* Terms & Conditions URL\n* Terms & Conditions (plain text file)\n* Customer Service Contact Number\n* Customer Service Email Address\n* Website URL\n* Fraud Service Contact Number (if different from above)\n* iOS Mobile Banking App Launch URL\n* iOS Mobile Banking App ID\n* iOS Mobile Banking Store ID\n* Android Mobile Banking App Name\n* Android Mobile Banking URL",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Digital Card ArtDigital IconVisa Co-Brand ReferencePrivacy Policy URLTerms & Conditions URLTerms & Conditions (plain text file)Customer Service Contact NumberCustomer Service Email AddressWebsite URLFraud Service Contact Number (if different from above)iOS Mobile Banking App Launch URLiOS Mobile Banking App IDiOS Mobile Banking Store IDAndroid Mobile Banking App NameAndroid Mobile Banking URL",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        29,
+        47
+      ],
+      "raw": "> 👍 Digital Card Art\n>\n> Below are the specifications on how the digital card art will need to be presented:\n>\n> * Card art should represent the physical card, but should not be a picture/photo of the physical card\n> * Card shouldn’t include shading or three-dimensional elements attempting to look like a physical card\n> * Card art should not include cardholder name, PAN, BIN or expiry, either generically or the actual values\n> * Card art should not include items that only make sense on a physical plastic card, such as labels describing embossed attributes, or EMVchip contacts, or static pictures of dynamic elements like holograms\n> * Card art may include the Contactless Indicator, even if the physical card is not contactless enabled\n> * Corners on card art must be squared\n> * Card art must be landscape orientation, 1536 pixel x 969 pixel (proportional to an ISO ID-1 size card) and submitted as a.PNG file\n> * Card art should be in 72 DPIColor format for all sizes is RGB, 16+ color bit depth, non-interlaced\n> * Files must be named using the following file structure:D-pixel (propor-ional to a.png\n>\n> The card program will also need to supply the colouring used for the cards in the following format:\n>\n> * Background - rgb(rrr, ggg, bbb) ie. rgb(122, 255, 84). Range is 0 to 255.\n> * Foreground - rgb(rrr, ggg, bbb) ie. rgb(122, 255, 84). Range is 0 to 255.\n> * Label - rgb(rrr, ggg, bbb) ie. rgb(122, 255, 84). Range is 0 to 255.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "Digital Card ArtBelow are the specifications on how the digital card art will need to be presented:Card art should represent the physical card, but should not be a picture/photo of the physical cardCard shouldn’t include shading or three-dimensional elements attempting to look like a physical cardCard art should not include cardholder name, PAN, BIN or expiry, either generically or the actual valuesCard art should not include items that only make sense on a physical plastic card, such as labels describing embossed attributes, or EMVchip contacts, or static pictures of dynamic elements like hologramsCard art may include the Contactless Indicator, even if the physical card is not contactless enabledCorners on card art must be squaredCard art must be landscape orientation, 1536 pixel x 969 pixel (proportional to an ISO ID-1 size card) and submitted as a.PNG fileCard art should be in 72 DPIColor format for all sizes is RGB, 16+ color bit depth, non-interlacedFiles must be named using the following file structure:D-pixel (propor-ional to a.pngThe card program will also need to supply the colouring used for the cards in the following format:Background - rgb(rrr, ggg, bbb) ie. rgb(122, 255, 84). Range is 0 to 255.Foreground - rgb(rrr, ggg, bbb) ie. rgb(122, 255, 84). Range is 0 to 255.Label - rgb(rrr, ggg, bbb) ie. rgb(122, 255, 84). Range is 0 to 255.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        49,
+        53
+      ],
+      "raw": "> 👍 Digital Icon Specifications\n>\n> * Icon must be 100 x 100 pixels and submitted in a PNG format\n> * This icon will be used for things like notifications related to the card.\n> * This icon should be the primary brand associated with the card in the wallet, either the bank or the co-brand, if applicable",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "Digital Icon SpecificationsIcon must be 100 x 100 pixels and submitted in a PNG formatThis icon will be used for things like notifications related to the card.This icon should be the primary brand associated with the card in the wallet, either the bank or the co-brand, if applicable",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

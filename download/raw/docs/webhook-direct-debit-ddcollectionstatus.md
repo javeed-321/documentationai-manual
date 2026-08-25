@@ -1,0 +1,83 @@
+---
+updatedAt: 2026-06-10T09:44:45.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Webhook - Direct Debit, DD Collection Status
+
+### Succesful Collections
+
+The `DDCollectionStatus` event is triggered when the collection has reached Day 5 of the collection cycle and we consider the collection as successful.
+
+```json Successful Collections
+{
+  "Amount": "7.68",
+  "EventId": "343a583e-e4e7-42f2-a77f-0e9f71cd07e2",
+  "Currency": "GBP",
+  "SortCode": "000000",
+  "AccountId": "A120XYJ1",
+  "EventName": "DDCOLLECTIONSTATUS",
+  "EventTime": "2024-07-02T09:30:01+0000",
+  "MandateId": "G2107Q0Y",
+  "CustomerId": "",
+  "AccountName": "ACCOUNT HOLDER",
+  "CollectionId": "K21000544F",
+  "AccountNumber": "70851219",
+  "Representable": false,
+  "CollectionDate": "2024-06-28",
+  "CollectionStatus": "SUCCESS",
+  "MandateReference": "KXMIRNBDRO",
+  "ServiceUserNumber": "570832",
+  "CollectionScheduleId": "Q21001A8",
+  "DirectDebitDirection": "Inbound"
+}
+```
+
+### Unsuccesful Collections
+
+The `DDCollectionStatus` event is triggered when Modulr receives an ARUDD (Automated return of unpaid Direct Debit). The collection amount will be returned to the Sending bank.
+
+```json Failed Collections
+{
+  "Amount": "9.11",
+  "EventId": "2d7eed47-000f-4564-a434-72e9edb03a1c",
+  "Currency": "GBP",
+  "SortCode": "236972",
+  "AccountId": "A210000C98",
+  "EventName": "DDCOLLECTIONSTATUS",
+  "EventTime": "2026-05-07T13:27:11+0100",
+  "MandateId": "G21001CU",
+  "CustomerId": "",
+  "AccountName": "AUTOTESTACCOUNT",
+  "CollectionId": "K2100001FP",
+  "ReturnReason": "Refer to Payer",
+  "AccountNumber": "01847171",
+  "Representable": true,
+  "CollectionDate": "2026-05-06",
+  "CollectionStatus": "REPRESENTABLE",
+  "MandateReference": "W4XM7J76",
+  "ReturnReasonCode": "REFER_TO_PAYER",
+  "ServiceUserNumber": "246248",
+  "CollectionScheduleId": "Q21001A8",
+  "DirectDebitDirection": "Inbound"
+}
+ 
+```
+
+The table below shows the list of ARUDD reasons, Modulr's actions on the Mandate and Collection Schedule, and if they are Re-presentable (if retries are allowed).
+
+| Reason                                               | Modulr Mandate Action | Modulr Collection Schedule Action | Representable?                                                                                                                     |
+| :--------------------------------------------------- | :-------------------- | :-------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| Refer to Payer                                       | No Action             | No Action                         | Y                                                                                                                                  |
+| Instruction Cancelled                                | Cancel                | Cancel                            | N                                                                                                                                  |
+| Payer Deceased                                       | Cancel                | Cancel                            | N                                                                                                                                  |
+| Account Transferred                                  | Suspend               | Suspend                           | N- Resubmission won't be changing anything on this collection, a New collection would have to be created with the updated details. |
+| Advance Notice Disputed                              | Suspend               | Suspend                           | Y                                                                                                                                  |
+| No account(Or wrong account type)                    | Cancel                | Cancel                            | N                                                                                                                                  |
+| No instruction                                       | Cancel                | Cancel                            | N                                                                                                                                  |
+| Amount Differs                                       | Suspend               | Suspend                           | Y                                                                                                                                  |
+| Amount not yet Due                                   | Suspend               | Suspend                           | Y                                                                                                                                  |
+| Presentation overdue                                 | Suspend               | Suspend                           | Y                                                                                                                                  |
+| Service user differs                                 | Cancel                | Cancel                            | N                                                                                                                                  |
+| Payer has closed their account for an unknown reason | Cancel                | Cancel                            | N                                                                                                                                  |

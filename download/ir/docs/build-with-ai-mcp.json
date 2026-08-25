@@ -1,0 +1,1044 @@
+{
+  "slug": "docs/build-with-ai-mcp",
+  "source": "https://modulr.readme.io/docs/build-with-ai-mcp.md",
+  "url": "https://modulr.readme.io/docs/build-with-ai-mcp",
+  "title": "Build With AI (MCP)",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-07-07T12:28:59.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `@` (U+0040) in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag (note: to create a link in MDX, use `[text](url)`)",
+  "components": {
+    "boilerplate": 1,
+    "heading": 15,
+    "blockquote": 2,
+    "paragraph": 20,
+    "thematicBreak": 5,
+    "list": 2,
+    "code": 9,
+    "Image": 1,
+    "Table": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Build With AI (MCP)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Build With AI (MCP)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "> **Early access**: The Modulr MCP is available for early access. We're actively improving the experience based on developer feedback — if something doesn't work as expected, let us know (see [Feedback](#feedback) below).",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Early access: The Modulr MCP is available for early access. We're actively improving the experience based on developer feedback — if something doesn't work as expected, let us know (see Feedback below).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Modulr supports the **Model Context Protocol (MCP)** — an open standard that connects AI coding assistants directly to Modulr's published API reference, including endpoints, request shapes, and field requirements. When you enable the Modulr MCP in your AI tool, it can search and reason over this documentation to help you build your integration faster.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Modulr supports the Model Context Protocol (MCP) — an open standard that connects AI coding assistants directly to Modulr's published API reference, including endpoints, request shapes, and field requirements. When you enable the Modulr MCP in your AI tool, it can search and reason over this documentation to help you build your integration faster.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "The MCP does not store or manage your credentials — any sandbox API calls use credentials configured in your own AI tool. See [Before you start](#before-you-start) to get set up.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The MCP does not store or manage your credentials — any sandbox API calls use credentials configured in your own AI tool. See Before you start to get set up.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "## Before you start",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Before you start",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "No credentials are needed to connect to the MCP and discover Modulr's API reference. If you want your AI tool to make sandbox API calls, you will need:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "No credentials are needed to connect to the MCP and discover Modulr's API reference. If you want your AI tool to make sandbox API calls, you will need:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        22
+      ],
+      "raw": "1. **Modulr developer credentials** — see [Getting Started](https://modulr.readme.io/docs/getting-started) to begin your orientation and [Getting Sandbox Access](https://modulr.readme.io/docs/gaining-use-of-the-api) to get your sandbox base URL, API token, and account ID. You'll need these once you start making real API calls.\n2. **Authentication configured** — see [Authentication](https://modulr.readme.io/docs/authentication). Use HMAC authentication from the start — it is mandatory in production",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr developer credentials — see Getting Started to begin your orientation and Getting Sandbox Access to get your sandbox base URL, API token, and account ID. You'll need these once you start making real API calls.Authentication configured — see Authentication. Use HMAC authentication from the start — it is mandatory in production",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/getting-started",
+          "line": 21
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/gaining-use-of-the-api",
+          "line": 21
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/authentication",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "Start by testing in sandbox. Production integrations should only go live after implementation review and validation with your Modulr implementation team.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Start by testing in sandbox. Production integrations should only go live after implementation review and validation with your Modulr implementation team.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "The MCP works best alongside the existing documentation. If you're new to Modulr, start with the [Fundamentals](https://modulr.readme.io/docs/fundamentals) section first — the MCP accelerates development, but it doesn't replace understanding how the platform works.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The MCP works best alongside the existing documentation. If you're new to Modulr, start with the Fundamentals section first — the MCP accelerates development, but it doesn't replace understanding how the platform works.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/fundamentals",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        28
+      ],
+      "raw": "> **Important:** Never include API keys, HMAC secrets, or customer data in your prompts. Manage credentials through your tool's configuration, not in conversation with the AI assistant.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Important: Never include API keys, HMAC secrets, or customer data in your prompts. Manage credentials through your tool's configuration, not in conversation with the AI assistant.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        30,
+        30
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## Connect your AI tool",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Connect your AI tool",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        34,
+        34
+      ],
+      "raw": "The Modulr MCP server is available at:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Modulr MCP server is available at:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        36,
+        38
+      ],
+      "raw": "```\nhttps://modulr.readme.io/mcp\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "https://modulr.readme.io/mcp"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "The MCP exposes tools for searching Modulr's API reference, retrieving endpoint details, and making sandbox API calls to exposed endpoints. There are no rate limits during early access; this is subject to change.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The MCP exposes tools for searching Modulr's API reference, retrieving endpoint details, and making sandbox API calls to exposed endpoints. There are no rate limits during early access; this is subject to change.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "### Claude Code",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Claude Code",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        44,
+        46
+      ],
+      "raw": "```bash\nclaude mcp add --transport http modulr https://modulr.readme.io/mcp\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "bash",
+        "title": null,
+        "code": "claude mcp add --transport http modulr https://modulr.readme.io/mcp"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "### Claude.ai / Claude Desktop",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Claude.ai / Claude Desktop",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        50,
+        50
+      ],
+      "raw": "Add the Modulr MCP as a custom connector. From **Settings > Connectors > Add custom connector**, use `https://modulr.readme.io/mcp` as the remote MCP server URL.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Add the Modulr MCP as a custom connector. From Settings > Connectors > Add custom connector, use https://modulr.readme.io/mcp as the remote MCP server URL.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "### Cursor",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Cursor",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        54,
+        62
+      ],
+      "raw": "```json\n{\n  \"mcpServers\": {\n    \"modulr\": {\n      \"url\": \"https://modulr.readme.io/mcp\"\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"mcpServers\": {\n    \"modulr\": {\n      \"url\": \"https://modulr.readme.io/mcp\"\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "### OpenAI Codex",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "OpenAI Codex",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        66,
+        69
+      ],
+      "raw": "```toml\n[mcp_servers.modulr]\nurl = \"https://modulr.readme.io/mcp\"\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "toml",
+        "title": null,
+        "code": "[mcp_servers.modulr]\nurl = \"https://modulr.readme.io/mcp\""
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "### Gemini CLI",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Gemini CLI",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        73,
+        81
+      ],
+      "raw": "```json\n{\n  \"mcpServers\": {\n    \"modulr\": {\n      \"httpUrl\": \"https://modulr.readme.io/mcp\"\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"mcpServers\": {\n    \"modulr\": {\n      \"httpUrl\": \"https://modulr.readme.io/mcp\"\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        83,
+        83
+      ],
+      "raw": "### VS Code (Copilot)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "VS Code (Copilot)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "Add to `.vscode/mcp.json` in your workspace, or your user-level MCP configuration:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Add to .vscode/mcp.json in your workspace, or your user-level MCP configuration:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        87,
+        96
+      ],
+      "raw": "```json\n{\n  \"servers\": {\n    \"modulr\": {\n      \"type\": \"http\",\n      \"url\": \"https://modulr.readme.io/mcp\"\n    }\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"servers\": {\n    \"modulr\": {\n      \"type\": \"http\",\n      \"url\": \"https://modulr.readme.io/mcp\"\n    }\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        98,
+        98
+      ],
+      "raw": "### Other tools",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Other tools",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        100,
+        100
+      ],
+      "raw": "Other MCP-compatible tools may also connect using `https://modulr.readme.io/mcp`, provided they support remote Streamable HTTP MCP servers.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Other MCP-compatible tools may also connect using https://modulr.readme.io/mcp, provided they support remote Streamable HTTP MCP servers.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        102,
+        102
+      ],
+      "raw": "### Verify your connection",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "Verify your connection",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        104,
+        104
+      ],
+      "raw": "After connecting, ask your assistant:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "After connecting, ask your assistant:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        106,
+        108
+      ],
+      "raw": "```\nUsing the Modulr MCP, what API resources are available for creating accounts?\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "Using the Modulr MCP, what API resources are available for creating accounts?"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        110,
+        110
+      ],
+      "raw": "If the answer does not reference Modulr documentation or MCP tools, check that the server is enabled and trusted in your AI tool's settings.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If the answer does not reference Modulr documentation or MCP tools, check that the server is enabled and trusted in your AI tool's settings.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        112,
+        112
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        114,
+        114
+      ],
+      "raw": "## Getting better results",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Getting better results",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        116,
+        116
+      ],
+      "raw": "**Include \"Modulr\" in your prompts.** This ensures your AI assistant uses the Modulr MCP tools rather than its general training knowledge. For example:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Include \"Modulr\" in your prompts. This ensures your AI assistant uses the Modulr MCP tools rather than its general training knowledge. For example:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        118,
+        121
+      ],
+      "raw": "```\nUsing Modulr, I need to collect monthly repayments from borrowers via Direct\nDebit. What API calls do I need?\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "Using Modulr, I need to collect monthly repayments from borrowers via Direct\nDebit. What API calls do I need?"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        123,
+        123
+      ],
+      "raw": "**Supplement with guide pages.** The MCP is strongest for API reference discovery — endpoints, request shapes, and field requirements. For end-to-end integration flows, you may get better results by pasting the relevant guide page URL into your prompt for additional context, or refer to the [Modulr documentation](https://modulr.readme.io/docs) alongside your AI tool:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Supplement with guide pages. The MCP is strongest for API reference discovery — endpoints, request shapes, and field requirements. For end-to-end integration flows, you may get better results by pasting the relevant guide page URL into your prompt for additional context, or refer to the Modulr documentation alongside your AI tool:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        125,
+        125
+      ],
+      "raw": "<Image src=\"https://files.readme.io/82dbab2cbafbde2244d613fb68d36e47e8c04ff16afd14396104f78616bd33c7-image.png\" align=\"center\" />",
+      "kind": "image",
+      "syntax": "jsx",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/82dbab2cbafbde2244d613fb68d36e47e8c04ff16afd14396104f78616bd33c7-image.png",
+        "align": "center"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 42,
+      "lines": [
+        127,
+        130
+      ],
+      "raw": "```\nRead https://modulr.readme.io/docs/set-up-recurring-collections and use it\nalongside the Modulr MCP to help me implement recurring collections.\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": null,
+        "title": null,
+        "code": "Read https://modulr.readme.io/docs/set-up-recurring-collections and use it\nalongside the Modulr MCP to help me implement recurring collections."
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/set-up-recurring-collections",
+          "line": 128
+        }
+      ]
+    },
+    {
+      "i": 43,
+      "lines": [
+        132,
+        132
+      ],
+      "raw": "**Iterate.** One prompt rarely covers an entire integration — follow up with specific questions as you build.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Iterate. One prompt rarely covers an entire integration — follow up with specific questions as you build.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        134,
+        134
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        136,
+        136
+      ],
+      "raw": "## AI content",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "AI content",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        138,
+        138
+      ],
+      "raw": "The Modulr MCP is an AI-assisted development tool. Outputs should be treated as a starting point for sandbox development — not as production-ready code. AI-generated code and recommendations must always be reviewed, validated, and tested before use in production.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Modulr MCP is an AI-assisted development tool. Outputs should be treated as a starting point for sandbox development — not as production-ready code. AI-generated code and recommendations must always be reviewed, validated, and tested before use in production.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        140,
+        140
+      ],
+      "raw": "### What the MCP is best used for",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 3,
+      "text": "What the MCP is best used for",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        142,
+        142
+      ],
+      "raw": "The MCP is designed to accelerate sandbox development. It is not a substitute for a proper implementation process.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The MCP is designed to accelerate sandbox development. It is not a substitute for a proper implementation process.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        144,
+        149
+      ],
+      "raw": "| What to expect                              | What to plan for                                                  |\n| ------------------------------------------- | ----------------------------------------------------------------- |\n| Fast scaffolding and prototyping            | Human review before production                                    |\n| Documentation-grounded endpoint discovery   | Alignment with Modulr's documentation and implementation teams    |\n| Reduced time to first sandbox API call      | Iterative prompting — one prompt rarely produces a complete flow  |\n| Useful starting code and examples to review | Production hardening: auth, webhooks, error handling, Bacs timing |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "What to expect",
+          "What to plan for"
+        ],
+        "rows": [
+          [
+            "Fast scaffolding and prototyping",
+            "Human review before production"
+          ],
+          [
+            "Documentation-grounded endpoint discovery",
+            "Alignment with Modulr's documentation and implementation teams"
+          ],
+          [
+            "Reduced time to first sandbox API call",
+            "Iterative prompting — one prompt rarely produces a complete flow"
+          ],
+          [
+            "Useful starting code and examples to review",
+            "Production hardening: auth, webhooks, error handling, Bacs timing"
+          ]
+        ],
+        "align": [
+          null,
+          null
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        151,
+        151
+      ],
+      "raw": "Complex integrations — particularly those involving Bacs scheme rules, production authentication (HMAC HTTP Signatures), webhook security, and operational safeguards — benefit significantly from working with Modulr's implementation team. The MCP gets you started; the implementation process gets you live.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Complex integrations — particularly those involving Bacs scheme rules, production authentication (HMAC HTTP Signatures), webhook security, and operational safeguards — benefit significantly from working with Modulr's implementation team. The MCP gets you started; the implementation process gets you live.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 51,
+      "lines": [
+        153,
+        153
+      ],
+      "raw": "***",
+      "kind": "thematicBreak",
+      "syntax": "markdown",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 52,
+      "lines": [
+        155,
+        155
+      ],
+      "raw": "## Feedback",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Feedback",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        157,
+        157
+      ],
+      "raw": "We're iterating on the MCP based on how developers use it. If you run into issues, have suggestions, or want to share what worked well:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We're iterating on the MCP based on how developers use it. If you run into issues, have suggestions, or want to share what worked well:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 54,
+      "lines": [
+        159,
+        160
+      ],
+      "raw": "* **Email:** <implementation@modulrfinance.com>\n* **Your Modulr contact:** Raise it with your implementation or solutions engineer directly",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Email: implementation@modulrfinance.comYour Modulr contact: Raise it with your implementation or solutions engineer directly",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 55,
+      "lines": [
+        162,
+        162
+      ],
+      "raw": "Your feedback directly shapes what we build next.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Your feedback directly shapes what we build next.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

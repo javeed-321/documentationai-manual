@@ -1,0 +1,247 @@
+{
+  "slug": "docs/what-is-dd-collections",
+  "source": "https://modulr.readme.io/docs/what-is-dd-collections.md",
+  "url": "https://modulr.readme.io/docs/what-is-dd-collections",
+  "title": "Getting started",
+  "description": "With the Direct Debit Collection API",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:56:10.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 7,
+    "list": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Getting started",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Getting started",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "With the Direct Debit Collection API",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "With the Direct Debit Collection API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "## Starting out on Sandbox",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Starting out on Sandbox",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "To test the Direct Debit Collection API, you will need to get set up in our Sandbox environment. To do this [contact us](https://www.modulrfinance.com/contact).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To test the Direct Debit Collection API, you will need to get set up in our Sandbox environment. To do this contact us.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "We will:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We will:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        18
+      ],
+      "raw": "* Set you up with a dedicated collection account.\n* Make sure your users have permission to access Direct Debits.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Set you up with a dedicated collection account.Make sure your users have permission to access Direct Debits.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        20,
+        20
+      ],
+      "raw": "Once this has been done you can start to experiment in Sandbox with the Direct Debit collection API, which is detailed [here](https://modulr.readme.io/reference/getmandates).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once this has been done you can start to experiment in Sandbox with the Direct Debit collection API, which is detailed here.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getmandates",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "## Starting out on Production",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Starting out on Production",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        24,
+        24
+      ],
+      "raw": "To onboard you will need to go through an additional process, as the Direct Debit scheme has specific requirements that need to be met. These requirements focus on the way the agreement is made with the payer and there are also different fees that need to be paid to Modulr for these type of payments.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "To onboard you will need to go through an additional process, as the Direct Debit scheme has specific requirements that need to be met. These requirements focus on the way the agreement is made with the payer and there are also different fees that need to be paid to Modulr for these type of payments.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "Onboarding steps (after Sandbox steps above):",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Onboarding steps (after Sandbox steps above):",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        33
+      ],
+      "raw": "* You provide the documentation needed for signing off your DD collections experience.\n* The documentation gets signed off and you get a BACS Service User Number (SUN).\n* We set you up on production with users and accounts.\n* We enable your specified account on production to act as the collection account (N.B. this should not be used for any other inbound payments).\n* You integrate with our production environment.\n* You test & go live.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "You provide the documentation needed for signing off your DD collections experience.The documentation gets signed off and you get a BACS Service User Number (SUN).We set you up on production with users and accounts.We enable your specified account on production to act as the collection account (N.B. this should not be used for any other inbound payments).You integrate with our production environment.You test & go live.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "A Direct Debit collection account, which is just a normal Modulr eMoney account, needs to be connected to a Service User Number, which you will receive once on-boarded to the Direct Debit service. Once this has been connected you will be able to set up mandates with the payers you want to receive payments from. These payments then need to be scheduled and then eventually they will be paid into the collection account - all explained in the next section.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "A Direct Debit collection account, which is just a normal Modulr eMoney account, needs to be connected to a Service User Number, which you will receive once on-boarded to the Direct Debit service. Once this has been connected you will be able to set up mandates with the payers you want to receive payments from. These payments then need to be scheduled and then eventually they will be paid into the collection account - all explained in the next section.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

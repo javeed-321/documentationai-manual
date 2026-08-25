@@ -1,0 +1,515 @@
+{
+  "slug": "docs/api-integration-overview",
+  "source": "https://modulr.readme.io/docs/api-integration-overview.md",
+  "url": "https://modulr.readme.io/docs/api-integration-overview",
+  "title": "API Integration overview",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:36:26.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 9,
+    "Callout": 6,
+    "list": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# API Integration overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Integration overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        10
+      ],
+      "raw": "**Below is a brief overview of the API's available for Card creation and management\\&#xA;**\\\n[Create a new card](https://modulr.readme.io/reference/createcard) API endpoint should be used to create new *Virtual* cards. You will notice that the URL is referencing an account identifier, as all cards are created under a specified account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Below is a brief overview of the API's available for Card creation and management&#xA;Create a new card API endpoint should be used to create new Virtual cards. You will notice that the URL is referencing an account identifier, as all cards are created under a specified account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/createcard",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "lines": [
+        12,
+        14
+      ],
+      "raw": "> 📘\n>\n> Note that the process to create Physical cards is [different](https://modulr.readme.io/docs/physical-cards-overview) and that an additional [activation](https://modulr.readme.io/reference/activatecard) step is also required before the physical card can be used",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Note that the process to create Physical cards is different and that an additional activation step is also required before the physical card can be used",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/physical-cards-overview",
+          "line": 14
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/activatecard",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "lines": [
+        16,
+        18
+      ],
+      "raw": "> ❗️ Card Expiry Date\n>\n> Cards can be created with the expiry date ranging from one month (to the end of **next** month) to 5 years. It is important to know that where card expiry is being set as shortest possible value (i.e. next month), that a **BST timezone must be used** to determine the card expiry value to avoid card failures during the summertime period. i.e. Cards created between 23:00 - 00:00 UTC time on 30th September (which is already 1st of October in BST), must have an expiry set as November same year or later.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "❗️"
+      },
+      "text": "Card Expiry DateCards can be created with the expiry date ranging from one month (to the end of next month) to 5 years. It is important to know that where card expiry is being set as shortest possible value (i.e. next month), that a BST timezone must be used to determine the card expiry value to avoid card failures during the summertime period. i.e. Cards created between 23:00 - 00:00 UTC time on 30th September (which is already 1st of October in BST), must have an expiry set as November same year or later.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "danger"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        20,
+        24
+      ],
+      "raw": "> 📘 Cancellation Date\n>\n> Cards are able to be created with a specific cancellation date, this is an optional requirement and if utilised  must be set before the expiry date.\n>\n> Cards that have a cancellation date set will automatically cancel at 00:00 UTC on the day specified.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Cancellation DateCards are able to be created with a specific cancellation date, this is an optional requirement and if utilised  must be set before the expiry date.Cards that have a cancellation date set will automatically cancel at 00:00 UTC on the day specified.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        26,
+        37
+      ],
+      "raw": "> 📘 Authorisation Window\n>\n> Authorisation Windows is an optional field that provides cardholders with the ability to define specific time periods during which their cards can be used to make transactions. This feature enhances security and control over card usage by allowing customers to align transaction capabilities with their individual needs or spending habits.\n>\n> Both the Start Date and the End Date are optional fields however, please note:\n>\n> * If both dates are selected then transactions are only allowed in this time frame, any that are requested outside of this will be declined\n> * If no Start Date supplied then the card will be available to transact on from the time the card is in an ACTIVE state\n> * If no End Date supplied the the card will be available to transact on until the cancellation date or expiry date, which ever is first\n> * If no dates entered then card will operate as normal\n>\n> **Note** - Account Status Inquiry's (ASI's) will still be allowed outside the Authorisation Window",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Authorisation WindowAuthorisation Windows is an optional field that provides cardholders with the ability to define specific time periods during which their cards can be used to make transactions. This feature enhances security and control over card usage by allowing customers to align transaction capabilities with their individual needs or spending habits.Both the Start Date and the End Date are optional fields however, please note:If both dates are selected then transactions are only allowed in this time frame, any that are requested outside of this will be declinedIf no Start Date supplied then the card will be available to transact on from the time the card is in an ACTIVE stateIf no End Date supplied the the card will be available to transact on until the cancellation date or expiry date, which ever is firstIf no dates entered then card will operate as normalNote - Account Status Inquiry's (ASI's) will still be allowed outside the Authorisation Window",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        39,
+        42
+      ],
+      "raw": "**You can retrieve information on existing cards via one the following API's\\&#xA;**\\\n[View the details of an existing card](https://modulr.readme.io/reference/getcard) - This will return a single card by CARD ID\\\n[View the details of existing cards by account](https://modulr.readme.io/reference/getcardsbyaccount) - This will return details (array of) of all cards created under a specific account.\\\n[View card activities](https://modulr.readme.io/reference/getcardactivities) API can be used for one of the following use-cases:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can retrieve information on existing cards via one the following API's&#xA;View the details of an existing card - This will return a single card by CARD IDView the details of existing cards by account - This will return details (array of) of all cards created under a specific account.View card activities API can be used for one of the following use-cases:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcard",
+          "line": 40
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcardsbyaccount",
+          "line": 41
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcardactivities",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "lines": [
+        44,
+        46
+      ],
+      "raw": "1. View activities for a specific list of cards over a date range. Last 7-day limit applies; must specify \"fromCreatedDate\" and \"toCreatedDate\"\n2. View activities for all cards created under a specific list of accounts over a date range. Last 7-day limit applies; must specify \"fromCreatedDate\" and \"toCreatedDate\"\n3. View all activities for a single card (all activities since card inception). Must only specify a single Card ID value; no time limit will apply if both \"fromCreatedDate\" and \"toCreatedDate\" values are not set",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "View activities for a specific list of cards over a date range. Last 7-day limit applies; must specify \"fromCreatedDate\" and \"toCreatedDate\"View activities for all cards created under a specific list of accounts over a date range. Last 7-day limit applies; must specify \"fromCreatedDate\" and \"toCreatedDate\"View all activities for a single card (all activities since card inception). Must only specify a single Card ID value; no time limit will apply if both \"fromCreatedDate\" and \"toCreatedDate\" values are not set",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        48,
+        50
+      ],
+      "raw": "> 📘\n>\n> Example output of this API can be found here: [Example Card Activities (API response)](https://modulr.readme.io/docs/example-card-activities-api-response)",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Example output of this API can be found here: Example Card Activities (API response)",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/example-card-activities-api-response",
+          "line": 50
+        }
+      ]
+    },
+    {
+      "i": 10,
+      "lines": [
+        52,
+        54
+      ],
+      "raw": "**Managing your cards\\&#xA;**\\\nCards can be Blocked using [Block an existing card](https://modulr.readme.io/reference/blockcard) and then unblocked using [Unblock an existing card](https://modulr.readme.io/reference/unblockcard) endpoints.\\\nTo Cancel the card you should use [Cancel an existing card](https://modulr.readme.io/reference/cancelcard) endpoint. More details on how those actions affect card statuses can be found on the [Card Lifecycle](https://modulr.readme.io/docs/card-lifecycle) page",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Managing your cards&#xA;Cards can be Blocked using Block an existing card and then unblocked using Unblock an existing card endpoints.To Cancel the card you should use Cancel an existing card endpoint. More details on how those actions affect card statuses can be found on the Card Lifecycle page",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/blockcard",
+          "line": 53
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/unblockcard",
+          "line": 53
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/cancelcard",
+          "line": 54
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/card-lifecycle",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "Cards can be Updated using [Update a card](https://modulr.readme.io/reference/update) endpoint. Information which can be updated is:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Cards can be Updated using Update a card endpoint. Information which can be updated is:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/update",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "lines": [
+        58,
+        61
+      ],
+      "raw": "1. Cardholder details (Name, Address, DOB, Phone Number)\n2. Card Limit (Increased or decreased. Minimum and Maximum values apply)\n3. Cancellation Date (removed and amended)\n4. Authorisation Window (removed and amended)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cardholder details (Name, Address, DOB, Phone Number)Card Limit (Increased or decreased. Minimum and Maximum values apply)Cancellation Date (removed and amended)Authorisation Window (removed and amended)",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "If the cardholder has entered his CVC2/CVV2 wrong 3 times in a row, that card will no longer be accepted for any e-commerce transactions. In that case, [PIN Unblock call](https://modulr.readme.io/reference/unblockpin) can also be used to unblock CVC2/CVV2",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If the cardholder has entered his CVC2/CVV2 wrong 3 times in a row, that card will no longer be accepted for any e-commerce transactions. In that case, PIN Unblock call can also be used to unblock CVC2/CVV2",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/unblockpin",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "**Physical Card management\\&#xA;**&#x54;here are a number of API endpoints which are only applicable to managing Physical Card types:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Physical Card management&#xA;There are a number of API endpoints which are only applicable to managing Physical Card types:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        67,
+        69
+      ],
+      "raw": "1. Status of physical card creation can be monitored using [get physical card create tasks by account endpoint](https://modulr.readme.io/reference/getcreatephysicalcardasynctasksbyaccount)\n2. To get a PIN, you should use [Retrieve PIN endpoint](https://modulr.readme.io/reference/retrievepin)\n3. In case of PIN being entered wrong 3 times in a row, it can be then unblocked using [PIN Unblock endpoint](https://modulr.readme.io/reference/unblockpin)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Status of physical card creation can be monitored using get physical card create tasks by account endpointTo get a PIN, you should use Retrieve PIN endpointIn case of PIN being entered wrong 3 times in a row, it can be then unblocked using PIN Unblock endpoint",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/getcreatephysicalcardasynctasksbyaccount",
+          "line": 67
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/retrievepin",
+          "line": 68
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/unblockpin",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "lines": [
+        71,
+        72
+      ],
+      "raw": "**Restricted Endpoints\\&#xA;**\\\nThere are some endpoints which are classified as \"restricted\". Those endpoints cannot be accessed with default permissions and will be enabled on a customer by customer basis.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Restricted Endpoints&#xA;There are some endpoints which are classified as \"restricted\". Those endpoints cannot be accessed with default permissions and will be enabled on a customer by customer basis.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "[\\[Restricted\\] Suspend an existing card](ref:suspendcard)  and [\\[Restricted\\] Unsuspend a card](ref:unsuspendcard) endpoints are used to Suspend the card while there is an ongoing fraud investigation. This functionality is primarily used by customers who use own fraud monitoring platforms.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "[Restricted] Suspend an existing card  and [Restricted] Unsuspend a card endpoints are used to Suspend the card while there is an ongoing fraud investigation. This functionality is primarily used by customers who use own fraud monitoring platforms.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:suspendcard",
+          "line": 74
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:unsuspendcard",
+          "line": 74
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "lines": [
+        76,
+        76
+      ],
+      "raw": "[\\[Restricted\\] Expire an existing authorisation](ref:expireauthorisation) endpoint can be used to release funds held by the authorisation before it expires. Releasing authorisation early may result in account overspent, therefore, this should only be used when there is the certainty of authorisation not clearing.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "[Restricted] Expire an existing authorisation endpoint can be used to release funds held by the authorisation before it expires. Releasing authorisation early may result in account overspent, therefore, this should only be used when there is the certainty of authorisation not clearing.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:expireauthorisation",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        78,
+        80
+      ],
+      "raw": "> 📘\n>\n> Full API details can be found here: [Cards](https://modulr.readme.io/reference/cards)",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Full API details can be found here: Cards",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/cards",
+          "line": 80
+        }
+      ]
+    }
+  ]
+}

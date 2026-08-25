@@ -1,0 +1,92 @@
+{
+  "slug": "docs/webhook-account-status-change",
+  "source": "https://modulr.readme.io/docs/webhook-account-status-change.md",
+  "url": "https://modulr.readme.io/docs/webhook-account-status-change",
+  "title": "Webhook - Account Status Change",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:28:54.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 1,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Webhook - Account Status Change",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Webhook - Account Status Change",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "The Account Status Change webhook is used to notify subscribed users that an account has changed status so may be blocked from making or receiving payments, or have been returned to being able to being available for payment processing.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The Account Status Change webhook is used to notify subscribed users that an account has changed status so may be blocked from making or receiving payments, or have been returned to being able to being available for payment processing.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        20
+      ],
+      "raw": "```json ACCOUNT_STATUS_CHANGE\n{\n \"EventName\": \"ACCOUNTSTATUSCHANGE\",\n \"EventTime\": \"2023-02-02T02:02:02+0000\",\n \"AccountId\" : \"A210A21023\",\n \"CustomerId\": \"C210C21023\",\n \"OldStatus\": \"ACTIVE\",\n \"NewStatus\": \"BLOCKED\"\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": "ACCOUNT_STATUS_CHANGE",
+        "code": "{\n \"EventName\": \"ACCOUNTSTATUSCHANGE\",\n \"EventTime\": \"2023-02-02T02:02:02+0000\",\n \"AccountId\" : \"A210A21023\",\n \"CustomerId\": \"C210C21023\",\n \"OldStatus\": \"ACTIVE\",\n \"NewStatus\": \"BLOCKED\"\n}"
+      },
+      "text": "ACCOUNT_STATUS_CHANGE",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

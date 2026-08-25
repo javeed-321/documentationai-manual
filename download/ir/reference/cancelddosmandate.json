@@ -1,0 +1,161 @@
+{
+  "slug": "reference/cancelddosmandate",
+  "source": "https://modulr.readme.io/reference/cancelddosmandate.md",
+  "url": "https://modulr.readme.io/reference/cancelddosmandate",
+  "title": "Cancel a specific Mandate",
+  "description": "Used to request the cancellation of a Mandate.",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-06-11T13:31:39.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 2,
+    "list": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Cancel a specific Mandate",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Cancel a specific Mandate",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Used to request the cancellation of a Mandate.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Used to request the cancellation of a Mandate.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Learn more about implementing these endpoints with our below guides",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Learn more about implementing these endpoints with our below guides",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        15
+      ],
+      "raw": "* [Payment Collection Use Cases](https://modulr.readme.io/docs/collecting-payments-with-modulr-use-case-guides)\n* [Set Up Recurring Collections](https://modulr.readme.io/docs/set-up-recurring-collections)\n* [Failed Payments Recovery](https://modulr.readme.io/docs/failed-payment-recovery-direct-debit-pay-by-bank)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Payment Collection Use CasesSet Up Recurring CollectionsFailed Payments Recovery",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/collecting-payments-with-modulr-use-case-guides",
+          "line": 13
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/set-up-recurring-collections",
+          "line": 14
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/failed-payment-recovery-direct-debit-pay-by-bank",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        190
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/directdebits/cancel\": {\n      \"post\": {\n        \"tags\": [\n          \"Direct Debit Outbound Mandate Operations\"\n        ],\n        \"summary\": \"Cancel a specific Mandate\",\n        \"description\": \"Used to request the cancellation of a Mandate.\",\n        \"operationId\": \"cancelDdosMandate\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/directdebitoutbound.MandateCancelRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Mandate was successfully cancelled\"\n          },\n          \"400\": {\n            \"description\": \"Bad Request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/directdebitoutbound.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"directdebitoutbound.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"directdebitoutbound.MandateCancelRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Details of the Mandate Cancel Request\",\n        \"properties\": {\n          \"mandateId\": {\n            \"type\": \"string\",\n            \"description\": \"Mandate Id\",\n            \"minLength\": 1\n          },\n          \"accountId\": {\n            \"type\": \"string\",\n            \"description\": \"Account Id\",\n            \"minLength\": 1\n          },\n          \"cancellationCode\": {\n            \"type\": \"string\",\n            \"description\": \"Cancellation Code\",\n            \"enum\": [\n              \"REFER_TO_PAYER\",\n              \"INSTRUCTION_CANCELLED_BY_PAYER\",\n              \"PAYER_DECEASED\",\n              \"ACCOUNT_TRANSFERRED\",\n              \"ACCOUNT_CLOSED\",\n              \"ACCOUNT_OR_INSTRUCTION_TRANSFERRED\",\n              \"ADVANCE_NOTICE_DISPUTED\",\n              \"INSTRUCTION_AMENDED\",\n              \"INSTRUCTION_REINSTATED\"\n            ]\n          },\n          \"merchantNumber\": {\n            \"type\": \"string\",\n            \"description\": \"Merchant Number\",\n            \"minLength\": 1\n          }\n        },\n        \"required\": [\n          \"accountId\",\n          \"cancellationCode\",\n          \"mandateId\",\n          \"merchantNumber\"\n        ]\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"paths\": {\n    \"/directdebits/cancel\": {\n      \"post\": {\n        \"tags\": [\n          \"Direct Debit Outbound Mandate Operations\"\n        ],\n        \"summary\": \"Cancel a specific Mandate\",\n        \"description\": \"Used to request the cancellation of a Mandate.\",\n        \"operationId\": \"cancelDdosMandate\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/directdebitoutbound.MandateCancelRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Mandate was successfully cancelled\"\n          },\n          \"400\": {\n            \"description\": \"Bad Request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/directdebitoutbound.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"directdebitoutbound.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"directdebitoutbound.MandateCancelRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Details of the Mandate Cancel Request\",\n        \"properties\": {\n          \"mandateId\": {\n            \"type\": \"string\",\n            \"description\": \"Mandate Id\",\n            \"minLength\": 1\n          },\n          \"accountId\": {\n            \"type\": \"string\",\n            \"description\": \"Account Id\",\n            \"minLength\": 1\n          },\n          \"cancellationCode\": {\n            \"type\": \"string\",\n            \"description\": \"Cancellation Code\",\n            \"enum\": [\n              \"REFER_TO_PAYER\",\n              \"INSTRUCTION_CANCELLED_BY_PAYER\",\n              \"PAYER_DECEASED\",\n              \"ACCOUNT_TRANSFERRED\",\n              \"ACCOUNT_CLOSED\",\n              \"ACCOUNT_OR_INSTRUCTION_TRANSFERRED\",\n              \"ADVANCE_NOTICE_DISPUTED\",\n              \"INSTRUCTION_AMENDED\",\n              \"INSTRUCTION_REINSTATED\"\n            ]\n          },\n          \"merchantNumber\": {\n            \"type\": \"string\",\n            \"description\": \"Merchant Number\",\n            \"minLength\": 1\n          }\n        },\n        \"required\": [\n          \"accountId\",\n          \"cancellationCode\",\n          \"mandateId\",\n          \"merchantNumber\"\n        ]\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}

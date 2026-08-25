@@ -1,0 +1,400 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Initiate standing order from ASPSP
+
+Initiate a new standing order to the specified destination account from an account held at an ASPSP.
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "paths": {
+    "/standing-order-initiations": {
+      "post": {
+        "tags": [
+          "Payment Initiations"
+        ],
+        "summary": "Initiate standing order from ASPSP",
+        "description": "Initiate a new standing order to the specified destination account from an account held at an ASPSP.",
+        "operationId": "createStandingOrderInitiation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pispgateway.CreateStandingOrderInitiationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pispgateway.CreateStandingOrderInitiationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/pispgateway.MessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "pispgateway.StandingOrderPaymentAmount": {
+        "type": "object",
+        "description": "The amount of the standing order",
+        "properties": {
+          "currency": {
+            "type": "string",
+            "description": "Currency of the account in ISO 4217 format. Default is GBP",
+            "enum": [
+              "GBP"
+            ]
+          },
+          "recurringAmount": {
+            "type": "number",
+            "description": "Recurring amount of the payment in Major Currency Units - '1' = 1.00 GBP",
+            "example": "100.00",
+            "maximum": 2147483647,
+            "minimum": 0.01
+          }
+        },
+        "required": [
+          "currency",
+          "recurringAmount"
+        ]
+      },
+      "pispgateway.MerchantDetails": {
+        "type": "object",
+        "description": "Merchant details for the payment context",
+        "properties": {
+          "categoryCode": {
+            "type": "string",
+            "description": "Merchant category code conform to ISO 18245, related to the type of services or goods provided for the transaction. Must be specified if paymentContextCode is either ECOMMERCEGOODS or ECOMMERCESERVICES",
+            "maxLength": 4,
+            "minLength": 3
+          },
+          "customerId": {
+            "type": "string",
+            "description": "Merchant customer identification, must be specified if paymentContextCode is either ECOMMERCEGOODS or ECOMMERCESERVICES",
+            "maxLength": 70,
+            "minLength": 1
+          }
+        }
+      },
+      "pispgateway.StandingOrderPayment": {
+        "type": "object",
+        "description": "The payment of the standing order",
+        "properties": {
+          "destination": {
+            "$ref": "#/components/schemas/pispgateway.Destination",
+            "description": "The destination account for the payment"
+          },
+          "amount": {
+            "$ref": "#/components/schemas/pispgateway.StandingOrderPaymentAmount",
+            "description": "The amount of the standing order"
+          },
+          "reference": {
+            "type": "string",
+            "description": "Reference to be used for the Payment. This will appear on the Account statement/the recipient's bank account. Min 6 to max 18 characters. Can contain alphanumeric, '-', '.', '&', '/' and space.",
+            "example": "Invoice ABC123",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "amount",
+          "destination",
+          "reference"
+        ]
+      },
+      "pispgateway.CreateStandingOrderInitiationRequest": {
+        "type": "object",
+        "description": "Request object to Initiate Standing Order",
+        "properties": {
+          "aspspId": {
+            "type": "string",
+            "description": "Identifier for ASPSP being used for the standing order",
+            "example": "H100000001",
+            "minLength": 1
+          },
+          "payment": {
+            "$ref": "#/components/schemas/pispgateway.StandingOrderPayment",
+            "description": "The payment of the standing order"
+          },
+          "schedule": {
+            "$ref": "#/components/schemas/pispgateway.StandingOrderSchedule",
+            "description": "The schedule of the standing order"
+          },
+          "context": {
+            "$ref": "#/components/schemas/pispgateway.PaymentContext",
+            "description": "Payment context used to specify additional details for risk scoring"
+          }
+        },
+        "required": [
+          "aspspId",
+          "context",
+          "payment",
+          "schedule"
+        ]
+      },
+      "pispgateway.DeliveryAddress": {
+        "type": "object",
+        "description": "Information that locates and identifies a specific address, as defined by postal services or in free format text, must be specified if paymentContextCode is ECOMMERCEGOODS",
+        "properties": {
+          "addressLine1": {
+            "type": "string",
+            "description": "First line of the address",
+            "maxLength": 70,
+            "minLength": 0
+          },
+          "addressLine2": {
+            "type": "string",
+            "description": "Second line of the address",
+            "maxLength": 70,
+            "minLength": 0
+          },
+          "postTown": {
+            "type": "string",
+            "description": "The post town",
+            "maxLength": 35,
+            "minLength": 0
+          },
+          "postCode": {
+            "type": "string",
+            "description": "The postcode",
+            "maxLength": 16,
+            "minLength": 0
+          },
+          "country": {
+            "type": "string",
+            "description": "The country",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "addressLine1",
+          "country",
+          "postCode",
+          "postTown"
+        ]
+      },
+      "pispgateway.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "pispgateway.StandingOrderSchedule": {
+        "type": "object",
+        "description": "The schedule of the standing order",
+        "properties": {
+          "frequency": {
+            "type": "string",
+            "description": "Type of the capability, can be one of WEEKLY, MONTHLY",
+            "enum": [
+              "WEEKLY",
+              "MONTHLY"
+            ]
+          },
+          "initialDate": {
+            "type": "string",
+            "description": "The date on which the standing order should begin. This must be at least 3 days in the future from today. Date format 'yyyy-MM-dd'",
+            "example": "2021-03-25"
+          },
+          "finalDate": {
+            "type": "string",
+            "description": "The optional date on which the standing order should end. If unspecified, the standing order will continue until cancelled.This must be at least 3 days in the future from today. Date format 'yyyy-MM-dd'",
+            "example": "2021-03-25"
+          }
+        },
+        "required": [
+          "frequency",
+          "initialDate"
+        ]
+      },
+      "pispgateway.PaymentContext": {
+        "type": "object",
+        "description": "Payment context for the initiation request",
+        "properties": {
+          "paymentContextCode": {
+            "type": "string",
+            "description": "Indicates type of Payment Context, can be one of BILLPAYMENT, ECOMMERCEGOODS, ECOMMERCESERVICES, OTHER, PARTYTOPARTY. If no value or paymentContext is provided, PARTYTOPARTY is considered the default value.",
+            "enum": [
+              "BILLPAYMENT",
+              "ECOMMERCEGOODS",
+              "ECOMMERCESERVICES",
+              "OTHER",
+              "PARTYTOPARTY"
+            ]
+          },
+          "deliveryAddress": {
+            "$ref": "#/components/schemas/pispgateway.DeliveryAddress",
+            "description": "Delivery address, must be specified if paymentContextCode is 'ECOMMERCEGOODS'"
+          },
+          "merchant": {
+            "$ref": "#/components/schemas/pispgateway.MerchantDetails",
+            "description": "The merchant for the payment context"
+          }
+        },
+        "required": [
+          "merchant"
+        ]
+      },
+      "pispgateway.Destination": {
+        "type": "object",
+        "description": "The destination account for the payment",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Indicates the type of destination. Can be one of ACCOUNT, SCAN",
+            "enum": [
+              "ACCOUNT",
+              "SCAN"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "description": "Identifier of the destination account if using ACCOUNT type",
+            "example": "A1100001"
+          },
+          "accountNumber": {
+            "type": "string",
+            "description": "Account Number of destination account if using SCAN type",
+            "example": "12345678",
+            "pattern": "^[0-9]{8}$"
+          },
+          "sortCode": {
+            "type": "string",
+            "description": "Sort Code of destination account if using SCAN type",
+            "example": "000000",
+            "pattern": "^[0-9]{6}$"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of destination account if using SCAN type (this may be truncated)",
+            "example": "Test",
+            "maxLength": 70,
+            "minLength": 0
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "pispgateway.CreateStandingOrderInitiationResponse": {
+        "type": "object",
+        "description": "Response object to Initiate Standing Order",
+        "properties": {
+          "standingOrderInitiationId": {
+            "type": "string",
+            "description": "The unique identifier of the standing order initiation request at Modulr",
+            "example": "I000000001"
+          },
+          "redirectUrl": {
+            "type": "string",
+            "description": "A redirect URL for the user to authorise the standing order initiation request at the ASPSP",
+            "example": "https://www.bankofmoney.com/authorize"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

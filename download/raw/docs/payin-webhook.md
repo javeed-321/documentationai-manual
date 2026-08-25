@@ -1,0 +1,501 @@
+---
+updatedAt: 2026-07-14T08:44:55.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Webhook - Inbound Payments
+
+### Inbound Payment
+
+The `PAYIN` event is triggered when a Payment reaches your Modulr EMI account or a Refund is processed in a card that's associated with one of your accounts
+
+| Parameter                                           | Description                                                                                                                                                                                                                                          |
+| :-------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type                                                | Type of Payment received                                                                                                                                                                                                                             |
+| Payee                                               | Details of the Payee including Name, Address if available and Sortcode and Account Number.                                                                                                                                                           |
+| Payer                                               | Details of the Payer including Name, Address if available and Sortcode and Account Number. There May also be Email, Phone Number and DOB in this block if the information is available.                                                              |
+| Amount                                              | Amount of the Payment                                                                                                                                                                                                                                |
+| EventId                                             | Unique id for the webhook event. This can change if webhook needs to be resent.                                                                                                                                                                      |
+| Currency                                            | Currency of the Payment Received.                                                                                                                                                                                                                    |
+| DateTime                                            | The Date and timestamp when the Payment was posted to Modulr - All Dates and times are UTC based.                                                                                                                                                    |
+| AccountId                                           | Modulr Unique Account reference for the account that received the payment                                                                                                                                                                            |
+| EventName                                           | Type of event: PAYIN - Funds received to an Account                                                                                                                                                                                                  |
+| EventTime                                           | Date and Timestamp for the Event - All Dates and times are UTC based.                                                                                                                                                                                |
+| PaymentAppliedTime                                  | The exact date and timestamp when the payment has been credited to the receiver's account                                                                                                                                                            |
+| PayerName                                           | Name of the Payer who sent the Payment                                                                                                                                                                                                               |
+| PaymentId                                           | Modulr Unique Payment Reference for the payment received.                                                                                                                                                                                            |
+| SchemeInfo                                          | Scheme information for the received payment in this example this is a FPID                                                                                                                                                                           |
+| ReturnReason                                        | Display the return reason for the returned transaction. See [Payment Return Reasons](https://modulr.readme.io/docs/payment-return-reasons)                                                                                                                                     |
+| TransactionId                                       | Modulr Unique Transaction Reference for the payment received. Transactions are only created when a payment is processed successfully in case of failed payment it is possible to receive a webhook without a TransactionId.                          |
+| OriginalSchemeId                                    | References the original FPID (Faster Payment ID)                                                                                                                                                                                                     |
+| PaymentReference                                    | Reference associated with the Payment                                                                                                                                                                                                                |
+| AccountExternalRef                                  | This is the Alias Name given on the Modulr Platform to the sending account                                                                                                                                                                           |
+| SourceExternalReference                             | This is the External Reference that is set on the payment request in the field: externalReference. This can be used to link payments back to your system using a unique identifier.                                                                  |
+| OriginatedOverseas                                  | This flag identifies if the received payment originated overseas.                                                                                                                                                                                    |
+| OriginatingPayment                                  | Details of the Institution the payment was received from.                                                                                                                                                                                            |
+| RemitterInfo **(\*NEW - Go Live Date - 24th July)** | This is the new Parameter for PAYIN webhook for type PI\_FAST. This tag is present when unstructured remittance (RmtInf/Ustrd) is provided in the incoming FPS message. This parameter is not part of other PAYIN webhook where type is not PI\_FAST |
+
+## RemitterInfo Field Detail
+
+| PAYIN webhook field                     | Description                                                                                                                                                              | Pacs field   |
+| :-------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------- |
+| PaymentReference                        | Structured Payment Reference.                                                                                                                                            | otherId      |
+| RemitterInfo (Available from 24th July) | Free Text Remittance narrative - new parameter added. This field will only present if the value has been provided else there is no change in the existing functionality. | RmtInf/Ustrd |
+
+## Duplication Check
+
+PaymentId should be used as your main duplication check, as there are times where the EventId could change or in the event of a failed payment the TransactionId would be empty. This is important particularly if a webhook has failed and needs to be resent.
+
+## Example PAYIN Webhooks
+
+### Faster Payment Example
+
+```json PI_FAST Webhook Example (without RemitterInfo)
+{
+    "Type": "PI_FAST",
+    "Payee": {
+        "Name": "Harry Potter",
+        "Address": {},
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "040010",
+            "AccountNumber": "00001457"
+        }
+    },
+    "Payer": {
+        "Name": "Hermione Granger",
+        "Address": {},
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "203002",
+            "AccountNumber": "00004588"
+        }
+    },
+    "Amount": "6.00",
+    "EventId": "7a1b81bc-5d5c-4045-9099-66b6ea841969",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T16:38:06+0000",
+    "AccountId": "A120C8D3",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T16:38:06+0000",
+    "PaymentAppliedTime": "2020-01-01T16:38:06+0000",
+    "PayerName": "Hermione Granger",
+    "PaymentId": "P12000MWF8",
+    "SchemeInfo": {
+        "Id": "FP00009O144093771020200101826070123"
+    },
+    "TransactionId": "T12000N5TJ",
+    "PaymentReference": "Payment from Hermione Granger: For herbs",
+    "AccountExternalRef": "HOGWARTS ACADEMY",
+    "OriginatedOverseas": false,
+    "OriginatingPayment": {
+        "Institution": {
+            "Id": "070436"
+        }
+    }
+}
+```
+```json PI_FAST webhook example (with RemitterInfo)
+{
+    "Type": "PI_FAST",
+    "Payee": {
+        "Name": "Harry Potter",
+        "Address": {},
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "040010",
+            "AccountNumber": "00001457"
+        }
+    },
+    "Payer": {
+        "Name": "Hermione Granger",
+        "Address": {},
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "203002",
+            "AccountNumber": "00004588"
+        }
+    },
+    "Amount": "6.00",
+    "EventId": "7a1b81bc-5d5c-4045-9099-66b6ea841969",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T16:38:06+0000",
+    "AccountId": "A120C8D3",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T16:38:06+0000",
+    "PaymentAppliedTime": "2020-01-01T16:38:06+0000",
+    "PayerName": "Hermione Granger",
+    "PaymentId": "P12000MWF8",
+    "SchemeInfo": {
+        "Id": "FP00009O144093771020200101826070123"
+    },
+    "TransactionId": "T12000N5TJ",
+    "PaymentReference": "Payment from Hermione Granger: For herbs",
+    "AccountExternalRef": "HOGWARTS ACADEMY",
+    "OriginatedOverseas": false,
+    "OriginatingPayment": {
+        "Institution": {
+            "Id": "070436"
+        }
+    },
+"RemitterInfo": "Live Remitter info Details"
+}
+```
+
+### Internal Transfer Webhook Example
+
+The following scenarios are where you would receive an internal transfer webhook:<br />Payment between two different accounts on the same customer<br />Payment between two different accounts on different customers under the same partner<br />Payment between two different accounts that are both Modulr Clients
+
+```json Internal Transfer Webhook Example
+{
+    "Type": "INT_INTERC",
+    "Payer": {
+        "Name": "Harry Potter",
+        "Email": "HPotter1@hogwarts.co.uk",
+        "Address": {
+            "Country": "GB",
+            "PostCode": "CR3 8UN",
+            "PostTown": "Little Whinging",
+            "AddressLine1": "4 Privet Drive"
+        },
+        "BirthDate": "1980-07-31",
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "040010",
+            "AccountNumber": "00001245"
+        },
+        "PhoneNumber": "+(44)7712345678"
+    },
+    "Amount": "25",
+    "EventId": "c02d2949-d5d6-4dfd-af17-bc0c8686d041",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T16:58:01+0000",
+    "AccountId": "A120C8D3",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T16:58:01+0000",
+    "PayerName": "Harry Potter",
+    "PaymentId": "P12000MWF9",
+    "TransactionId": "T12000N5TT",
+    "PaymentReference": "IC/T12000N5T2",
+    "AccountExternalRef": "HOGWARTS ACADEMY",
+    "OriginatedOverseas": false,
+    "SourceExternalReference": "Haz Pots"
+}
+```
+
+### BACS Payment Webhook Example
+
+```json BACS Payment Webhook Example
+{
+    "Type": "PI_BACS",
+    "Payee": {
+        "Name": "Ronald Weasley",
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "040010",
+            "AccountNumber": "00004785"
+        }
+    },
+    "Payer": {
+        "Name": "Fred Weasley",
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "011000",
+            "AccountNumber": "00004124"
+        }
+    },
+    "Amount": "20.11",
+    "EventId": "67fcb4d1-b6f2-4377-af31-9e9061f3189d",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T03:06:30+0000",
+    "AccountId": "A120C8D9",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T09:03:15+0000",
+    "PayerName": "Fred Weasley",
+    "PaymentId": "P12000MWF1",
+    "SchemeInfo": {
+        "Id": "58e0494627027e37c2d367191c9d4fee4f571ba396268d143eb536ff5aedd6f5-0F78B466",
+        "Name": "BACS"
+    },
+    "TransactionId": "T12000N5T1",
+    "PaymentReference": "Payment from Fred Weasley: 60046452",
+    "AccountExternalRef": "Ron's Cash",
+    "OriginatedOverseas": false
+}
+```
+
+### Direct Debit Payment In Webhook Example
+
+```json DD Payment In Webhook Example
+{
+    "Type": "PI_DD",
+    "Amount": "40.99",
+    "EventId": "ba187786-11b9-48ef-b1ea-894abcbc2eb7",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T12:19:21+0000",
+    "AccountId": "A120C8D5",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T12:19:21+0000",
+    "PayerName": "",
+    "PaymentId": "A120C8D5_363921",
+    "TransactionId": "T12000N5T1",
+    "PaymentReference": "Dumbledore - 208856PU",
+    "AccountExternalRef": "8162f318-e215-4802-a406-b17dbee8e434",
+    "OriginatedOverseas": false
+}
+```
+
+### Direct Debit Internal Transfer Webhook Example
+
+```json DD Internal Transfer Webhook Example
+{
+  "Type": "PI_DD_PEND",
+  "Payee": {
+    "Identifier": {
+      "Type": "SCAN",
+      "SortCode": "040010",
+      "AccountNumber": "47900002"
+    }
+  },
+  "Payer": {
+    "Identifier": {
+      "Type": "SCAN",
+      "SortCode": "040010",
+      "AccountNumber": "47900002"
+    }
+  },
+  "Amount": "437.44",
+  "EventId": "53c2f793-4b66-46e0-9ca9-d63f68d2bcf4",
+  "Currency": "GBP",
+  "DateTime": "2025-01-01T10:04:11+0000",
+  "AccountId": "A2105JXXXX",
+  "EventName": "PAYIN",
+  "EventTime": "2025-01-01T10:04:11+0000",
+  "PayerName": "",
+  "PaymentId": "K21004XXXX",
+  "TransactionId": "T2117XX0XX",
+  "PaymentReference": "Account credit under collection [K21004XXXX]",
+  "AccountExternalRef": "Snape Funds",
+  "OriginatedOverseas": false,
+  "PaymentAppliedTime": "2025-01-01T10:04:11.616+0000"
+}
+```
+
+<br />
+
+### Chaps Payment Webhook Example
+
+```json CHAPS Payment Webhook Example
+{
+    "Type": "PI_CHAPS",
+    "Payee": {
+        "Name": "Severus Snape",
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "040010",
+            "AccountNumber": "47900002"
+        }
+    },
+    "Payer": {
+        "Name": "Albus Dumbledore",
+        "Identifier": {
+            "Type": "SCAN",
+            "SortCode": "608310",
+            "AccountNumber": "40004668"
+        }
+    },
+    "Amount": "50.00",
+    "EventId": "f8484677-30df-457a-845f-1d632d7b3ec1",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T17:03:51+0000",
+    "AccountId": "A120C8E2",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T17:03:52+0000",
+    "PayerName": "Albus Dumbledore",
+    "PaymentId": "P12000MTT1",
+    "SchemeInfo": {
+        "Id": "e91d650f38bf4130b91020200101826601270",
+        "Name": "TRANSFER"
+    },
+    "TransactionId": "T12000N5Y1",
+    "PaymentReference": "Payment from Albus Dumbledore: Transfer",
+    "AccountExternalRef": "Snape Funds",
+    "OriginatedOverseas": false
+}
+```
+
+### SEPA Webhook Example
+
+```json SEPA Credit Transfer
+{
+    "Type": "PI_SECT",
+    "Payee": {
+        "Name": "Draco Malfoy",
+        "Address": {},
+        "Identifier": {
+            "Bic": "MOCKGB22XXX",
+            "Iban": "GB17MOCK04001000002271",
+            "Type": "IBAN"
+        }
+    },
+    "Payer": {
+        "Name": "Dobby",
+        "Address": {
+            "Country": "ES",
+            "AddressLine1": "BERTAMIRANS",
+            "AddressLine2": "DO POETA DA MAIA 17 PISO 3 PUERTA"
+        },
+        "Identifier": {
+            "Bic": "BBVEESMMXXX",
+            "Iban": "ES4501821265660206212452",
+            "Type": "IBAN"
+        }
+    },
+    "Amount": "20",
+    "EventId": "a72063a0-8774-4ceb-ab14-401fcd5e7068",
+    "Currency": "EUR",
+    "DateTime": "2020-01-01T07:20:00+0000",
+    "AccountId": "A120C8E2",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T07:20:03+0000",
+    "PayerName": "Draco Malfoy",
+    "PaymentId": "P12000MTB1",
+    "SchemeInfo": {
+        "Id": "NOTPROVIDED",
+        "Name": "SEPA"
+    },
+    "TransactionId": "T12000N5V4",
+    "PaymentReference": "Payment from Dobby: NOTPROVIDED",
+    "AccountExternalRef": "Draco's Account",
+    "OriginatedOverseas": true
+}
+```
+```json SEPA Instant
+{
+    "Type": "PI_SEPA_INST",
+    "Payee": {
+        "Name": "Draco Malfoy",
+        "Address": {},
+        "Identifier": {
+            "Bic": "MOCKGB22XXX",
+            "Iban": "GB17MOCK04001000002271",
+            "Type": "IBAN"
+        }
+    },
+    "Payer": {
+        "Name": "Dobby",
+        "Address": {
+            "Country": "ES",
+            "AddressLine1": "BERTAMIRANS",
+            "AddressLine2": "DO POETA DA MAIA 17 PISO 3 PUERTA"
+        },
+        "Identifier": {
+            "Bic": "BBVEESMMXXX",
+            "Iban": "ES4501821265660206212452",
+            "Type": "IBAN"
+        }
+    },
+    "Amount": "20",
+    "EventId": "a72063a0-8774-4ceb-ab14-401fcd5e7068",
+    "Currency": "EUR",
+    "DateTime": "2020-01-01T07:20:00+0000",
+    "AccountId": "A120C8E2",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T07:20:03+0000",
+    "PayerName": "Draco Malfoy",
+    "PaymentId": "P12000MTB1",
+    "SchemeInfo": {
+        "Id": "NOTPROVIDED",
+        "Name": "SEPA_INSTANT"
+    },
+    "TransactionId": "T12000N5V4",
+    "PaymentReference": "Payment from Dobby: NOTPROVIDED",
+    "AccountExternalRef": "Draco's Account",
+    "OriginatedOverseas": true
+}
+```
+
+### Card Refund Webhook Example
+
+The PaymentId field contains the card activity BID which you can use to query additional details from the card [activities](https://modulr.readme.io/reference/getcardactivities) API
+
+```json
+{
+    "Type": "PI_VISA",
+    "Amount": "40.99",
+    "EventId": "ba187786-11b9-48ef-b1ea-894abcbc2eb7",
+    "Currency": "GBP",
+    "DateTime": "2020-01-01T12:19:21+0000",
+    "AccountId": "A120C8D5",
+    "EventName": "PAYIN",
+    "EventTime": "2020-01-01T12:19:21+0000",
+    "PayerName": "",
+    "PaymentId": "X11000DYTA", // Card Activity ID
+    "TransactionId": "T12000N5T1",
+    "PaymentReference": "Dumbledore - 208856PU",
+    "AccountExternalRef": "8162f318-e215-4802-a406-b17dbee8e434",
+    "SourceExternalReference": "10",  // Order ID
+    "OriginatedOverseas": false
+}
+```
+
+### Outbound Reversed Payments Webhook Example
+
+The following example illustrates the use of the `PAYIN` Webhook for the scenario of a returned payment which is sent back as separate operation after been correctly flagged as a return.
+
+This scenario only applies to transactions of type `PO_REV`. The PAYIN Webhook is used because the reversal of a payment OUT is a payment IN.
+
+Note that notifications are not sent for transactions of type `PI_REV`.
+
+```json Outbound Reversed Payments Webhook Example
+{
+	"Type": "PO_REV",
+	"Payee": {
+		"Name": "Ibrahim Tijani",
+		"Address": {
+			"Country": "GB",
+			"AddressLine1": "191 Ballards RoadDagenhamRM10 9AR"
+		},
+		"Identifier": {
+			"Type": "SCAN",
+			"Country": "GB",
+			"SortCode": "040085",
+			"AccountNumber": "07182376"
+		}
+	},
+	"Payer": {
+		"Name": "Ibrahim Tijani",
+		"Address": {},
+		"Identifier": {
+			"Type": "SCAN",
+			"SortCode": "230363",
+			"AccountNumber": "00415988"
+		}
+	},
+	"Amount": "0.01",
+	"EventId": "b18a3885-082b-410e-96e1-e6be7c4d1d1b",
+	"Currency": "GBP",
+	"DateTime": "2021-12-03T00:01:20+0000",
+	"AccountId": "A216XFNF",
+	"EventName": "PAYIN",
+	"EventTime": "2021-12-03T00:01:21+0000",
+	"PayerName": "Ibrahim Tijani",
+	"PaymentId": "P21071YXQW",
+	"SchemeInfo": {
+		"Id": "17470906129345513 2020211203826232507"
+	},
+	"ReturnReason": "Account blocked",
+	"TransactionId": "T2109NH5Q1",
+	"OriginalSchemeId": "MODULO00P21071YXQF1020211203826040085",
+	"PaymentReference": "Return: Ibrahim Tijani - 9byGaQj1",
+	"AccountExternalRef": "78a3532d-3315-41db-b8dc-c4f5d525a143",
+	"OriginatedOverseas": false,
+	"OriginatingPayment": {
+		"Institution": {}
+	},
+	"PaymentAppliedTime": "2021-12-03T00:01:20.841+0000"
+}
+```
+
+<br />

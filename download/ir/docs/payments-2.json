@@ -1,0 +1,194 @@
+{
+  "slug": "docs/payments-2",
+  "source": "https://modulr.readme.io/docs/payments-2.md",
+  "url": "https://modulr.readme.io/docs/payments-2",
+  "title": "Payments",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:35:19.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 2,
+    "Table": 1,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Payments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Payments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Payments are at the heart of the Modulr platform.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Payments are at the heart of the Modulr platform.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "The following pages provide detail on the following payment concepts:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following pages provide detail on the following payment concepts:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        109
+      ],
+      "raw": "<Table align={[\"left\",\"left\"]}>\n  <thead>\n    <tr>\n      <th>\n        Concept\n      </th>\n\n      <th>\n        Outline\n      </th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr>\n      <td>\n        Outbound Payment\n      </td>\n\n      <td>\n        Funds sent out of a Modulr account to another account held at Modulr or elsewhere.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Inbound Payments\n      </td>\n\n      <td>\n        Funds received into a Modulr account from another account held at Modulr or elsewhere.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Payment Types\n      </td>\n\n      <td>\n        The various ways in which payment are categorised.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Payment Statuses\n      </td>\n\n      <td>\n        The various states a payment can be in whilst being processed.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Payment Approvals\n      </td>\n\n      <td>\n        Approving payments before they are processed.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Future Dated Payments\n      </td>\n\n      <td>\n        Delaying the sending of outbound payments to some date in the future.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Waiting for Funds\n      </td>\n\n      <td>\n        Waiting for the source account to have sufficient funds before a payment is processed.\n      </td>\n    </tr>\n\n    <tr>\n      <td>\n        Payment Rules\n      </td>\n\n      <td>\n        Transferring funds to alterative accounts upon receipt of inbound payments.\n      </td>\n    </tr>\n  </tbody>\n</Table>",
+      "kind": "table",
+      "syntax": "jsx",
+      "component": "Table",
+      "attrs": {
+        "align": "{[\"left\",\"left\"]}"
+      },
+      "table": {
+        "header": [
+          "Concept",
+          "Outline"
+        ],
+        "rows": [
+          [
+            "Outbound Payment",
+            "Funds sent out of a Modulr account to another account held at Modulr or elsewhere."
+          ],
+          [
+            "Inbound Payments",
+            "Funds received into a Modulr account from another account held at Modulr or elsewhere."
+          ],
+          [
+            "Payment Types",
+            "The various ways in which payment are categorised."
+          ],
+          [
+            "Payment Statuses",
+            "The various states a payment can be in whilst being processed."
+          ],
+          [
+            "Payment Approvals",
+            "Approving payments before they are processed."
+          ],
+          [
+            "Future Dated Payments",
+            "Delaying the sending of outbound payments to some date in the future."
+          ],
+          [
+            "Waiting for Funds",
+            "Waiting for the source account to have sufficient funds before a payment is processed."
+          ],
+          [
+            "Payment Rules",
+            "Transferring funds to alterative accounts upon receipt of inbound payments."
+          ]
+        ],
+        "align": [
+          "left",
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "rebuild as a markdown table; only cells with block content need HTML"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        111,
+        113
+      ],
+      "raw": "> 📘 Payments in the Sandbox Environment\n>\n> The sandbox environment is for testing purposes and is therefor isolated from the live environment. When making outbound payments or receiving inbound payments, no real money is involved.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Payments in the Sandbox EnvironmentThe sandbox environment is for testing purposes and is therefor isolated from the live environment. When making outbound payments or receiving inbound payments, no real money is involved.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

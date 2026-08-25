@@ -1,0 +1,603 @@
+{
+  "slug": "docs/receiving-dd-collections",
+  "source": "https://modulr.readme.io/docs/receiving-dd-collections.md",
+  "url": "https://modulr.readme.io/docs/receiving-dd-collections",
+  "title": "Receiving DD Collections",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2025-09-05T18:56:07.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 11,
+    "Image": 3,
+    "list": 6,
+    "Callout": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Receiving DD Collections",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Receiving DD Collections",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Once an account has been enabled to accept Direct Debit collections and has an active mandate, Merchants can start sending collection requests to Modulr and we will send those funds from the account.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Once an account has been enabled to accept Direct Debit collections and has an active mandate, Merchants can start sending collection requests to Modulr and we will send those funds from the account.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Below is the high level flow for DD Outbound collections, it starts from Day 1 to Day 3, these are the flow for successful collections and the unsuccessful flow happens from Day 3 to Day 5.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Below is the high level flow for DD Outbound collections, it starts from Day 1 to Day 3, these are the flow for successful collections and the unsuccessful flow happens from Day 3 to Day 5.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "![](https://files.readme.io/3eb956c-DD_Outbound_Collection_flow.PNG \"DD Outbound Collection flow.PNG\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/3eb956c-DD_Outbound_Collection_flow.PNG",
+        "title": "DD Outbound Collection flow.PNG"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/3eb956c-DD_Outbound_Collection_flow.PNG",
+          "line": 13
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "## Collection Process",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Collection Process",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "**Day 1:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 1:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "1. Merchant sends the collection request to BACS.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Merchant sends the collection request to BACS.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "**Day 2:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 2:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        23,
+        24
+      ],
+      "raw": "1. BACS sends the collection request to Modulr at 22:30 and Modulr sends the Incoming Debit Notification Webhook to let the Partner know which collection has been received and which account will be debited.\n2. Modulr checks if the collection is valid (please check the FAQs for the validations).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "BACS sends the collection request to Modulr at 22:30 and Modulr sends the Incoming Debit Notification Webhook to let the Partner know which collection has been received and which account will be debited.Modulr checks if the collection is valid (please check the FAQs for the validations).",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "**Day 3:**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 3:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        28,
+        30
+      ],
+      "raw": "1. Partner informs Modulr if they want to reject collections by their customers.\n2. If the collection is valid, then Modulr debits the Customer's account at 4:00 at first attempt. If the collection was successful then Modulr sends out a PayOut webhook to the Partner to let them know that the collection has been debited.\n3. If the collection is valid and the 1st attempt fails, Modulr retries to debit the Customer's account at 15:00 for a second time. Same applies, if the collection was successful, the PayOut webhook is triggered to the Partner.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Partner informs Modulr if they want to reject collections by their customers.If the collection is valid, then Modulr debits the Customer's account at 4:00 at first attempt. If the collection was successful then Modulr sends out a PayOut webhook to the Partner to let them know that the collection has been debited.If the collection is valid and the 1st attempt fails, Modulr retries to debit the Customer's account at 15:00 for a second time. Same applies, if the collection was successful, the PayOut webhook is triggered to the Partner.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "**Start of Unpaid Collections**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Start of Unpaid Collections",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        34,
+        36
+      ],
+      "raw": "4. Modulr will treat collections that failed to debit or rejected debit as unpaid and change their status to Rejected. Modulr allows Partners to reject payment using the [Reject Collection](https://modulr.readme.io/reference/rejectcollection).\\\n   5\\. Modulr debits the unpaid collections from the Partner's Account.\\\n   6\\. Modulr generates [ARUDDs](https://www.bacs.co.uk/resources/reason-codes/) to return the unpaid collection funds and sends it to BACS.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr will treat collections that failed to debit or rejected debit as unpaid and change their status to Rejected. Modulr allows Partners to reject payment using the Reject Collection.5. Modulr debits the unpaid collections from the Partner's Account.6. Modulr generates ARUDDs to return the unpaid collection funds and sends it to BACS.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/rejectcollection",
+          "line": 34
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "Collections can be rejected by partners at any point during the cycle until 5pm on Day 3 by calling the \"Reject Collection\" endpoint. Even if the payer account was already debited, by calling the reject endpoint, Modulr will immediately return the funds back to the account if requested before the cut-off time. Modulr also allows partners to skip debit attempts if needed via this endpoint. All refund requests made by the customer or the partner after 5pm, will have to be requested through the Direct Debit Indemnity Claim Service (DDIC).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Collections can be rejected by partners at any point during the cycle until 5pm on Day 3 by calling the \"Reject Collection\" endpoint. Even if the payer account was already debited, by calling the reject endpoint, Modulr will immediately return the funds back to the account if requested before the cut-off time. Modulr also allows partners to skip debit attempts if needed via this endpoint. All refund requests made by the customer or the partner after 5pm, will have to be requested through the Direct Debit Indemnity Claim Service (DDIC).",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "The SKIP\\_DEBIT\\_ATTEMPT reason code is utilised by Partners to request Modulr to alter the debit order in cases in which there are 2 or more collections to be processed against the same account on the same day. Processing order of collections is first arrived first processed. Partners will be able to find the order of processing by ordering the ClaimId field in Incoming Collection Notification.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The SKIP_DEBIT_ATTEMPT reason code is utilised by Partners to request Modulr to alter the debit order in cases in which there are 2 or more collections to be processed against the same account on the same day. Processing order of collections is first arrived first processed. Partners will be able to find the order of processing by ordering the ClaimId field in Incoming Collection Notification.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        42,
+        42
+      ],
+      "raw": "**Day 5 (for Returned Collections):**",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Day 5 (for Returned Collections):",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "1. Modulr receives the returned funds from the merchant's bank and Modulr sends the funds to the Partner's account.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Modulr receives the returned funds from the merchant's bank and Modulr sends the funds to the Partner's account.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "![](https://files.readme.io/b2a4ca0-image.png)",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/b2a4ca0-image.png"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/b2a4ca0-image.png",
+          "line": 46
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 19,
+      "lines": [
+        48,
+        48
+      ],
+      "raw": "## API and Webhooks",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API and Webhooks",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        50,
+        51
+      ],
+      "raw": "Utilise the following APIs to manage Direct Debits\\\n**[Reject](https://modulr.readme.io/reference/rejectcollection)**– reject a Direct Debit collection or confirm that the next debit attempt should be skipped.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Utilise the following APIs to manage Direct DebitsReject– reject a Direct Debit collection or confirm that the next debit attempt should be skipped.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/reference/rejectcollection",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "The collection processing notifications are sent using the existing Notification Service",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The collection processing notifications are sent using the existing Notification Service",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        55,
+        58
+      ],
+      "raw": "* **[Webhook - Direct Debit, Incoming Collection](https://modulr.readme.io/docs/webhook-direct-debit-incoming-collection)** Notification informs Partner that debit will be attempted.\n* **[Webhook - Direct Debit, Unpaid Collection](https://modulr.readme.io/docs/webhook-direct-debit-unpaid-collection)** Notification informs Partner that their nominated account will be debited.\n* **[Webhook - Direct Debit, Return Funds](https://modulr.readme.io/docs/webhook-direct-debit-return-funds)** Notification informs Partner that funds associated with unpaid collections have be credited.\n* **[Webhook - Outbound Payments](https://modulr.readme.io/docs/payout-webhook)** and **[Webhook - Inbound Payments](https://modulr.readme.io/docs/payin-webhook)** notify when an account is debited or credited – these notifications apply to all payment types.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Webhook - Direct Debit, Incoming Collection Notification informs Partner that debit will be attempted.Webhook - Direct Debit, Unpaid Collection Notification informs Partner that their nominated account will be debited.Webhook - Direct Debit, Return Funds Notification informs Partner that funds associated with unpaid collections have be credited.Webhook - Outbound Payments and Webhook - Inbound Payments notify when an account is debited or credited – these notifications apply to all payment types.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-incoming-collection",
+          "line": 55
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-unpaid-collection",
+          "line": 56
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/webhook-direct-debit-return-funds",
+          "line": 57
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payout-webhook",
+          "line": 58
+        },
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/payin-webhook",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "![](https://files.readme.io/8bd388b-Capture.PNG \"Capture.PNG\")",
+      "kind": "image",
+      "syntax": "markdown",
+      "component": "Image",
+      "attrs": {
+        "src": "https://files.readme.io/8bd388b-Capture.PNG",
+        "title": "Capture.PNG"
+      },
+      "target": {
+        "component": "Image",
+        "status": "transform",
+        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
+      },
+      "inline": [
+        {
+          "kind": "markdownImage",
+          "value": "https://files.readme.io/8bd388b-Capture.PNG",
+          "line": 60
+        }
+      ],
+      "notes": [
+        "no alt text — Documentation.AI pages need one"
+      ]
+    },
+    {
+      "i": 24,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "## FAQs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "FAQs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        64,
+        66
+      ],
+      "raw": "> 📘 Do you validate incoming both Mandates and Collections?\n>\n> Yes we do. We check if the account exist, the account is active, account is enabled to accept Direct Debits, and received mandate or collection belong to a Direct Debit Partner.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Do you validate incoming both Mandates and Collections?Yes we do. We check if the account exist, the account is active, account is enabled to accept Direct Debits, and received mandate or collection belong to a Direct Debit Partner.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        68,
+        70
+      ],
+      "raw": "> 📘 Validations for Mandates only\n>\n> We match if the incoming mandate is unique for the same payer and merchant.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Validations for Mandates onlyWe match if the incoming mandate is unique for the same payer and merchant.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        72,
+        74
+      ],
+      "raw": "> 📘 Validations for Collection only\n>\n> We check if the account has an active mandate lodged.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Validations for Collection onlyWe check if the account has an active mandate lodged.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    }
+  ]
+}

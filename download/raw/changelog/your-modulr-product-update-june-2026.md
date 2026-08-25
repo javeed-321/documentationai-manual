@@ -1,0 +1,23 @@
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Your Modulr Product Update June 2026
+
+<br />
+
+<Image align="center" width="600px" src="https://files.readme.io/c806c32a1e1f8d958d6b133f07bf730184c7487ac2607f302edb83b882f59c4b-image.png" />
+
+<br />
+
+<Image align="center" width="600px" src="https://files.readme.io/6180500c9af673242159c47d94224b4f78c269a5bfc35eb1589999a63c4118fd-image.png" />
+
+# FPS inbound payments: new RemitterInfo field in webhook 
+
+A new RemitterInfo field is being added to the Faster Payments (FPS) inbound payment (PAYIN) webhook. FPS PACS messages carry two distinct pieces of payer-supplied information: a structured payment reference, already surfaced as PaymentReference, and a free-text remittance narrative (RmtInf/Ustrd).
+
+The new RemitterInfo field surfaces free-text payment descriptions such as invoice numbers, order references, or payment reasons as a standalone field, leaving all existing fields completely unchanged.
+
+**How it works:** when RmtInf/Ustrd is present in the PACS message, RemitterInfo appears in your PAYIN webhook payload. When absent, the field is omitted, with no nulls and no empty strings. All existing fields are unchanged. 
+
+No action is required. Customers wishing to use RemitterInfo can begin reading the new field immediately after release.
+
+This will be live on 10 July 2026.

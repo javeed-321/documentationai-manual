@@ -1,0 +1,451 @@
+{
+  "slug": "docs/commercial-vrp-overview",
+  "source": "https://modulr.readme.io/docs/commercial-vrp-overview.md",
+  "url": "https://modulr.readme.io/docs/commercial-vrp-overview",
+  "title": "Commercial VRP Overview",
+  "description": "",
+  "section": "Guides",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-06-30T08:31:29.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "paragraph": 9,
+    "Callout": 2,
+    "list": 2,
+    "Table": 1,
+    "br": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Commercial VRP Overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Commercial VRP Overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "## Overview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Overview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "Commercial Variable Recurring Payments (cVRP) lets a user authorise a trusted third party to initiate recurring payments on their behalf, with each payment varying in amount and timing but always within pre-agreed limits set at the point of consent. The user authenticates once, subsequent payments can be made without the user needing to re-authenticate with their bank, as long as each payment stays within those limits.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Commercial Variable Recurring Payments (cVRP) lets a user authorise a trusted third party to initiate recurring payments on their behalf, with each payment varying in amount and timing but always within pre-agreed limits set at the point of consent. The user authenticates once, subsequent payments can be made without the user needing to re-authenticate with their bank, as long as each payment stays within those limits.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "cVRP is a **Me-to-Them** payment type, meaning the payer and the recipient are different people or organisations. If you are building for **Me-to-Me** payments -- where the same person or entity owns both accounts -- see [Sweeping VRP](https://modulr.readme.io/docs/variable-recurring-payments) instead.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "cVRP is a Me-to-Them payment type, meaning the payer and the recipient are different people or organisations. If you are building for Me-to-Me payments -- where the same person or entity owns both accounts -- see Sweeping VRP instead.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "absoluteInternalLink",
+          "value": "https://modulr.readme.io/docs/variable-recurring-payments",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        21
+      ],
+      "raw": "> 🚧 cVRP restrictions\n>\n> cVRP payments can only be made between two UK accounts\n>\n> cVRP payments can only be made in GBP\n>\n> All cVRP payments are made via the Faster Payments (FPS) rail",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "cVRP restrictionscVRP payments can only be made between two UK accountscVRP payments can only be made in GBPAll cVRP payments are made via the Faster Payments (FPS) rail",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "## cVRP consent types",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "cVRP consent types",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "The cVRP specification defines multiple consent types. **Modulr currently supports CVRP1**, which covers the Wave 1 roll-out of cVRP in the UK. Support for additional consent types will be added in future and this page will be updated accordingly.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The cVRP specification defines multiple consent types. Modulr currently supports CVRP1, which covers the Wave 1 roll-out of cVRP in the UK. Support for additional consent types will be added in future and this page will be updated accordingly.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "## Eligible use cases (CVRP1)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Eligible use cases (CVRP1)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "Commercial VRP is currently scoped to a defined set of low-risk sectors as part of the initial Wave 1 roll-out.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Commercial VRP is currently scoped to a defined set of low-risk sectors as part of the initial Wave 1 roll-out.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "Your use case must fall within one of the following categories to be eligible:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Your use case must fall within one of the following categories to be eligible:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        33,
+        37
+      ],
+      "raw": "* Energy, Utilities and Telecoms\n* Regulated financial services firms (i.e. accounts with FSCS protection)\n* E-money institutions (EMIs)\n* Local and central government\n* Charities",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Energy, Utilities and TelecomsRegulated financial services firms (i.e. accounts with FSCS protection)E-money institutions (EMIs)Local and central governmentCharities",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "If you are unsure whether your use case is in scope, speak to your Modulr point of contact before starting your integration.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you are unsure whether your use case is in scope, speak to your Modulr point of contact before starting your integration.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "## Banks supporting cVRP",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Banks supporting cVRP",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "cVRP is currently available with the following banks in the UK. This list will be updated as more banks are onboarded.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "cVRP is currently available with the following banks in the UK. This list will be updated as more banks are onboarded.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        45,
+        52
+      ],
+      "raw": "| Banks                                            |\n| :----------------------------------------------- |\n| Barclays                                         |\n| HSBC                                             |\n| Lloyds                                           |\n| NatWest                                          |\n| Santander                                        |\n| Nationwide (available from 24 July 2026 onwards) |",
+      "kind": "table",
+      "syntax": "markdown",
+      "component": "Table",
+      "table": {
+        "header": [
+          "Banks"
+        ],
+        "rows": [
+          [
+            "Barclays"
+          ],
+          [
+            "HSBC"
+          ],
+          [
+            "Lloyds"
+          ],
+          [
+            "NatWest"
+          ],
+          [
+            "Santander"
+          ],
+          [
+            "Nationwide (available from 24 July 2026 onwards)"
+          ]
+        ],
+        "align": [
+          "left"
+        ],
+        "emptyHeader": false
+      },
+      "target": {
+        "component": null,
+        "status": "direct",
+        "note": "GFM table; watch for an empty `| |` header row"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "## High-level customer journey",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "High-level customer journey",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "Setting up a cVRP follows the same two-stage flow as Sweeping VRP: the user first authorises a consent, then payments can be initiated against that consent without further authentication.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Setting up a cVRP follows the same two-stage flow as Sweeping VRP: the user first authorises a consent, then payments can be initiated against that consent without further authentication.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "The journey breaks down as follows:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The journey breaks down as follows:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        60,
+        65
+      ],
+      "raw": "1. **Select bank** – the user selects their bank so they can be directed to the correct authentication URL. Only banks with the `COMMERCIAL_VRP` capability enabled should be presented in your customer journey.\n2. **Create a cVRP consent** – you submit a consent request to Modulr specifying the destination account and the payment limits. The user is redirected to their bank to review and authorise the consent.\n3. **User authorises** – the user logs in to their bank and approves the consent parameters. They are redirected back to your application.\n4. **Initiate payments** – once the consent is authorised, you can initiate payments against it at any time, without any further action from the user, provided each payment falls within the consent limits.\n5. **Get payment status** – receive the status of a payment using the payment ID returned at initiation.\n6. **Revoke consent** – the user or you can revoke the consent at any time. Revoked consents cannot be reinstated.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Select bank – the user selects their bank so they can be directed to the correct authentication URL. Only banks with the COMMERCIAL_VRP capability enabled should be presented in your customer journey.Create a cVRP consent – you submit a consent request to Modulr specifying the destination account and the payment limits. The user is redirected to their bank to review and authorise the consent.User authorises – the user logs in to their bank and approves the consent parameters. They are redirected back to your application.Initiate payments – once the consent is authorised, you can initiate payments against it at any time, without any further action from the user, provided each payment falls within the consent limits.Get payment status – receive the status of a payment using the payment ID returned at initiation.Revoke consent – the user or you can revoke the consent at any time. Revoked consents cannot be reinstated.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        67,
+        69
+      ],
+      "raw": "> 📘 Consent vs payment\n>\n> The consent is the agreement between the end user and you that defines what payments are permitted. The consent ID generated at authorisation is then used to initiate individual payments. If no consent exists, no payments can be made.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Consent vs paymentThe consent is the agreement between the end user and you that defines what payments are permitted. The consent ID generated at authorisation is then used to initiate individual payments. If no consent exists, no payments can be made.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        71,
+        71
+      ],
+      "raw": "<br />",
+      "kind": "html",
+      "syntax": "html",
+      "component": "br",
+      "attrs": {},
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "<br /> is not needed — blocks are spaced by the parser"
+      },
+      "inline": [
+        {
+          "kind": "breakTag",
+          "value": "<br />",
+          "line": 71
+        }
+      ]
+    }
+  ]
+}

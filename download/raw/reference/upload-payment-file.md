@@ -1,0 +1,211 @@
+---
+updatedAt: 2026-05-27T10:50:49.000Z
+---
+
+Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Upload payment file and store valid payments
+
+Uploads the payment file and store the valid files extracted payments for later creating payments
+
+# OpenAPI definition
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Modulr API",
+    "description": "Modulr API",
+    "license": {
+      "name": "© Modulr Finance",
+      "url": "https://www.modulrfinance.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.modulrfinance.com/api-sandbox-token"
+    }
+  ],
+  "security": [
+    {
+      "modulo_security": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "File Upload",
+      "description": "Upload payment files"
+    }
+  ],
+  "paths": {
+    "/payment-files": {
+      "post": {
+        "tags": [
+          "File Upload"
+        ],
+        "summary": "Upload payment file and store valid payments",
+        "description": "Uploads the payment file and store the valid files extracted payments for later creating payments",
+        "operationId": "upload-payment-file",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/paymentfileupload.FileUploadRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "File upload response with the file bid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/paymentfileupload.FileUploadResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid upload content or file size exceeded",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/paymentfileupload.MessageResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 error code is issued when problem occurred during decoding and decompressing file content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/paymentfileupload.FileUploadResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HMAC": []
+          },
+          {
+            "TOKEN": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "paymentfileupload.MessageResponse": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "GENERAL",
+              "BUSINESSRULE",
+              "MFASTATUS",
+              "MFAERROR",
+              "MFATIMEOUT",
+              "MFADEVICEMM",
+              "MFAMESSAGEINVALID",
+              "NOTFOUND",
+              "DUPLICATE",
+              "INVALID",
+              "CONNECTION",
+              "RETRY",
+              "RATELIMIT",
+              "PERMISSION",
+              "NOTACCEPTABLE",
+              "MFAVERIFICATION",
+              "TOKENEXPIRED"
+            ]
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "sourceService": {
+            "type": "string"
+          }
+        }
+      },
+      "paymentfileupload.FileUploadResponse": {
+        "type": "object",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "description": "Unique id of the uploaded file",
+            "example": "F1100001",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "fileId"
+        ]
+      },
+      "paymentfileupload.FileUploadRequest": {
+        "type": "object",
+        "description": "File upload request body",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "description": "Original file name",
+            "minLength": 1
+          },
+          "content": {
+            "type": "string",
+            "description": "The file content must be zipped using gzip format and then Base64 encoded",
+            "minLength": 1
+          },
+          "submissionType": {
+            "type": "string",
+            "description": "BATCH restricts operations to batch level.  BULK (default) allows payment level operations such as approval",
+            "enum": [
+              "BATCH",
+              "BULK"
+            ]
+          },
+          "processingDate": {
+            "type": "string",
+            "description": "Allows overriding the file processing date"
+          }
+        },
+        "required": [
+          "content",
+          "fileName"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "modulo_security": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "TOKEN": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  }
+}
+```

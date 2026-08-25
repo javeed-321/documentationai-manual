@@ -1,0 +1,108 @@
+{
+  "slug": "reference/updatecardauthentication",
+  "source": "https://modulr.readme.io/reference/updatecardauthentication.md",
+  "url": "https://modulr.readme.io/reference/updatecardauthentication",
+  "title": "Update card authentication",
+  "description": "Support knowledge based authentication (KBA)",
+  "section": "API Reference",
+  "kind": "api",
+  "frontmatter": {
+    "updatedAt": "2026-05-27T10:50:49.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 2,
+    "paragraph": 1,
+    "code": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://modulr.readme.io/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Update card authentication",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Update card authentication",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Support knowledge based authentication (KBA)",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Support knowledge based authentication (KBA)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# OpenAPI definition",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "OpenAPI definition",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        203
+      ],
+      "raw": "```json\n{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Cards\",\n      \"description\": \"Cards API\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/authentication\": {\n      \"put\": {\n        \"tags\": [\n          \"Cards\"\n        ],\n        \"summary\": \"Update card authentication\",\n        \"description\": \"Support knowledge based authentication (KBA)\",\n        \"operationId\": \"updateCardAuthentication\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"The ID of the card which has authentication information to be updated\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/card.UpdateCardAuthenticationRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"204\": {\n            \"description\": \"Card authentication updated\"\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.UpdateCardAuthenticationRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Authentication\",\n        \"properties\": {\n          \"knowledgeBase\": {\n            \"type\": \"array\",\n            \"description\": \"3DS Knowledge-Based Authentication (KBA) answers\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.CardKnowledgeBasedAuthentication\"\n            }\n          }\n        },\n        \"required\": [\n          \"knowledgeBase\"\n        ]\n      },\n      \"card.CardKnowledgeBasedAuthentication\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"3DS knowledge-based authentication answer type\",\n            \"enum\": [\n              \"FIRST_PET_NAME\",\n              \"MATERNAL_GRANDMOTHER_MAIDEN_NAME\",\n              \"FAVOURITE_CHILDHOOD_FRIEND\",\n              \"FIRST_CAR\",\n              \"CITY_PARENTS_MET\"\n            ]\n          },\n          \"answer\": {\n            \"type\": \"string\",\n            \"description\": \"3DS knowledge-based authentication answer\",\n            \"maxLength\": 45,\n            \"minLength\": 1\n          }\n        },\n        \"required\": [\n          \"answer\",\n          \"type\"\n        ]\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}\n```",
+      "kind": "code",
+      "syntax": "markdown",
+      "code": {
+        "lang": "json",
+        "title": null,
+        "code": "{\n  \"openapi\": \"3.1.0\",\n  \"info\": {\n    \"title\": \"Modulr API\",\n    \"description\": \"Modulr API\",\n    \"license\": {\n      \"name\": \"© Modulr Finance\",\n      \"url\": \"https://www.modulrfinance.com\"\n    },\n    \"version\": \"1.0\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://api-sandbox.modulrfinance.com/api-sandbox-token\"\n    }\n  ],\n  \"security\": [\n    {\n      \"modulo_security\": []\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"Cards\",\n      \"description\": \"Cards API\"\n    }\n  ],\n  \"paths\": {\n    \"/cards/{cardId}/authentication\": {\n      \"put\": {\n        \"tags\": [\n          \"Cards\"\n        ],\n        \"summary\": \"Update card authentication\",\n        \"description\": \"Support knowledge based authentication (KBA)\",\n        \"operationId\": \"updateCardAuthentication\",\n        \"parameters\": [\n          {\n            \"name\": \"cardId\",\n            \"in\": \"path\",\n            \"description\": \"The ID of the card which has authentication information to be updated\",\n            \"required\": true,\n            \"style\": \"simple\",\n            \"explode\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/card.UpdateCardAuthenticationRequest\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"204\": {\n            \"description\": \"Card authentication updated\"\n          },\n          \"400\": {\n            \"description\": \"Invalid request\",\n            \"content\": {\n              \"*/*\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/card.MessageResponse\"\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"security\": [\n          {\n            \"HMAC\": []\n          },\n          {\n            \"TOKEN\": []\n          }\n        ]\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"card.UpdateCardAuthenticationRequest\": {\n        \"type\": \"object\",\n        \"description\": \"Authentication\",\n        \"properties\": {\n          \"knowledgeBase\": {\n            \"type\": \"array\",\n            \"description\": \"3DS Knowledge-Based Authentication (KBA) answers\",\n            \"items\": {\n              \"$ref\": \"#/components/schemas/card.CardKnowledgeBasedAuthentication\"\n            }\n          }\n        },\n        \"required\": [\n          \"knowledgeBase\"\n        ]\n      },\n      \"card.CardKnowledgeBasedAuthentication\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"3DS knowledge-based authentication answer type\",\n            \"enum\": [\n              \"FIRST_PET_NAME\",\n              \"MATERNAL_GRANDMOTHER_MAIDEN_NAME\",\n              \"FAVOURITE_CHILDHOOD_FRIEND\",\n              \"FIRST_CAR\",\n              \"CITY_PARENTS_MET\"\n            ]\n          },\n          \"answer\": {\n            \"type\": \"string\",\n            \"description\": \"3DS knowledge-based authentication answer\",\n            \"maxLength\": 45,\n            \"minLength\": 1\n          }\n        },\n        \"required\": [\n          \"answer\",\n          \"type\"\n        ]\n      },\n      \"card.MessageResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"field\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"GENERAL\",\n              \"BUSINESSRULE\",\n              \"MFASTATUS\",\n              \"MFAERROR\",\n              \"MFATIMEOUT\",\n              \"MFADEVICEMM\",\n              \"MFAMESSAGEINVALID\",\n              \"NOTFOUND\",\n              \"DUPLICATE\",\n              \"INVALID\",\n              \"CONNECTION\",\n              \"RETRY\",\n              \"RATELIMIT\",\n              \"PERMISSION\",\n              \"NOTACCEPTABLE\",\n              \"MFAVERIFICATION\",\n              \"TOKENEXPIRED\"\n            ]\n          },\n          \"errorCode\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          },\n          \"sourceService\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"modulo_security\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      },\n      \"TOKEN\": {\n        \"type\": \"apiKey\",\n        \"name\": \"Authorization\",\n        \"in\": \"header\"\n      }\n    }\n  },\n  \"x-readme\": {\n    \"proxy-enabled\": false\n  }\n}"
+      },
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    }
+  ]
+}
