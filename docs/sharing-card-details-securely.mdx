@@ -1,0 +1,56 @@
+---
+title: "Sharing Card Details Securely"
+---
+
+## Overview
+
+Being able to share card details in a secure way is always challenging as usually it entails sending the details via email to a merchant’s email address and not knowing if this has been picked up by the correct person.
+
+As a result, Modulr have created the ability to be able to send to recipients the card details in a secure and controlled way giving you the ability to manage who see’s the details and how many times.
+
+This works by sending a secure link direct to the email address required for the merchant to then use to view the details when required, you can tailor what gets sent and how its accessed by following the below.
+
+## Sending Secure Card Details
+
+Secure card details can be sent either at the time of creating the card or you can choose a specific card when required.
+
+Equally you have the option available to send the details direct to the merchant automatically or return them to yourself for you to send when required.
+
+<Callout kind="info">
+  You will need the Card ID to be able to send the secure card details
+</Callout>
+
+To send the secure card details you need to use the [Share Card Details](/reference/createsharesecuredetails#/) endpoint and inputting the details within the SHARECARDDETAILS object.
+
+<Callout kind="info">
+  The default will always be EMAIL unless specified and the email address will always be required
+</Callout>
+
+All other information is set to default options however, you can also configure the number of times the link can be accessed, have a specific date for the link to expire and if there's anything else you wish to send across.
+
+The basic information sent will be the following:
+
+- Card PAN
+- Expiry Date
+- CVC
+- Card Scheme
+- Card Currency
+
+When completed you will receive a Share Secure Details ID which you should store for future use relating to that request.
+
+## Managing the Shared Details
+
+If there is a need to amend details of what's been sent then this is able to be completed by using the [Amend Shared Card Details](/reference/updatesharesecuredetails#/) endpoint.
+
+You can also retrieve details on what you have shared via the following methods:
+
+- [Return Card Share Details](/reference/getsharesecurecarddetails#/) – Returns all information about a card in which you have shared the secure details
+- [Return Share Details ](/reference/getsharesecurecarddetailsbyid#/) – Returns all the information on a specific Share Secure Card Details request
+- [Return Share Details Activity ](/reference/getsharesecurecarddetailstokenactivity#/) – Returns all the activity that’s been completed on a specific Share Secure Card Details request
+
+## Removing Shared Details
+
+If there is no longer a need for the card details to be shared then you can remove them by either of the two options:
+
+- [Delete Share Details for Card](/reference/deletesharesecuredetailscardlink#/) – This will delete all the details shared for a specific card
+- [Delete Share Details Request ](/reference/deletesharesecuredetails#/) – This will remove an individual request that’s been previously sent

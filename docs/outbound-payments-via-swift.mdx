@@ -1,0 +1,151 @@
+---
+title: "Outbound Payments via SWIFT"
+---
+
+<Callout kind="danger">
+  **Only applicable to customers authorised payments via SWIFT**
+
+  Payment requests made via SWIFT by customers who are not authorised for SWIFT will be rejected.
+</Callout>
+
+# Required information
+
+### Payment Request
+
+To make an outbound payment from your Modulr account via SWIFT, the [Create Payments](/reference/sendpayment) must be used.
+
+To ensure successful processing, you must chose the correct destination type and supply the required fields based on where the destination country the beneficiary account is located.
+
+| Destination Country (or Region) | Destination Type | Required Payment Request Fields     |
+| :------------------------------ | :--------------- | :---------------------------------- |
+| United Kingdom                  | SCAN             | • Sort Code • Account Number        |
+| Europe                          | IBAN             | IBAN                                |
+| United States                   | ANBRN            | • abaRoutingNumber • Account Number |
+| Japan and Hong Kong             | AN               | Account Number                      |
+
+<Callout kind="alert">
+  **Important**
+
+  In addition to the above required fields, the SWIFT BIC must also be provided for each destination type
+
+  Only the following characters should be used:
+
+  - alphabetic letters (a-z & A-Z)
+  - numerals (0-9)
+  - a limited set of special characters include: space, period, parentheses, hyphen, slash, less than, plus, ampersand, dollar sign, asterisk, semicolon, percent sign, at sign, equal sign, double quote, and backslash
+</Callout>
+
+Further, it is highly recommended that you include as much information about the beneficiary as possible in the payment request to help minimise the chance of delays or rejections during the payment journey.
+
+Note: Modulr only supports international payments to specific countries from accounts in a given currency. See [Allowed Destinations for supported currencies](/docs/allowed-destinations-for-modulr-supported-currencies) for more information.
+
+# Example Payment Requests
+
+<CodeGroup tabs="SCAN (UK),IBAN (EU),ANBRN (US)">
+  ```json title="SCAN (UK)"
+  {
+      "sourceAccountId": "A210000005",
+      "destination": {
+          "type": "SCAN",
+          "sortCode": "000000",
+          "accountNumber": "45678958",
+          "name": "payee name",
+          "address": {
+              "addressLine1": "modulr avenue",
+              "addressLine2": "1st floor",
+              "postTown": "London",
+              "countrySubDivision": "London",
+              "postCode": "SW126TP",
+              "country":"GB"
+          },
+          "birthdate": "2000-01-01",
+          "emailAddress": "ABC@modulrfinance.com",
+          "phoneNumber": "00897654",
+          "bic": "BARCGB22",
+          "countrySpecificDetails": {
+              "bankName": "Trusted Bank",
+              "bankAddress": "2100 Sideway",
+              "bankCity": "London",
+              "bankCountry": "GB,
+              "bankBranchName": "London",
+              "bankBranchCode": "44-55",
+              "business": true
+          }
+      },
+      "currency": "EUR",
+      "amount": 1.00,
+      "reference": "reference field"
+    }
+  ```
+
+  ```json title="IBAN (EU)"
+  {
+      "sourceAccountId": "A210000005",
+      "destination": {
+          "type": "IBAN",
+          "iban": "GB86BARC20038014469149",
+          "name": "payee name",
+          "address": {
+              "addressLine1": "modulr avenue",
+              "addressLine2": "1st floor",
+              "postTown": "Barcelona",
+              "countrySubDivision": "Barcelona",
+              "postCode": "22889",
+              "country": "ES"
+          },
+          "birthdate": "2000-01-01",
+          "emailAddress": "ABC@modulrfinance.com",
+          "phoneNumber": "00897654",
+          "bic": "BARCGB22",
+          "countrySpecificDetails": {
+              "bankName": "Trusted Bank",
+              "bankAddress": "3100 XYZ",
+              "bankCity": "Barcelona",
+              "bankCountry": "ES",
+              "bankBranchName": "Barcelona",
+              "bankBranchCode": "2100",
+              "business": true
+          }
+      },
+      "currency": "DKK",
+      "amount": 1.00,
+      "reference": "reference field"
+  }
+  ```
+
+  ```json title="ANBRN (US)"
+  {
+      "sourceAccountId": "A210000007",
+      "destinationType": "ANBRN",
+      "destination": {
+          "type": "ANBRN",
+          "accountNumber": "45678956",
+          "name": "Destination ANBRN Beneficiary",
+          "address": {
+              "addressLine1": "345 Broadway",
+              "postTown": "New York",
+              "postCode": "08989",
+              "country": "US",
+              "countrySubDivision":"New York"
+          },
+          "birthdate": "2000-01-01",
+          "emailAddress": "ABC@modulrfinance.com", 
+          "phoneNumber": "00897654", 
+          "bic": "BARCUS22",
+          "countrySpecificDetails": {
+              "bankName": "XYZ Bank",
+              "bankAddress": "2100 Broadway",
+              "bankCity": "New York City",
+              "bankBranchName": "New York",
+              "bankBranchCode": "44-04",
+              "abaRoutingNumber": "123456789",
+              "business": true,
+              "bankCountry": "US"
+          }
+      },
+      "currency": "USD",
+      "amount": 10.00,
+      "reference": "Payment 100139005A1104889665"
+  }
+  ```
+</CodeGroup>

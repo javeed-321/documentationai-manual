@@ -1,0 +1,133 @@
+---
+title: "Bacs Day 2 - Early funding"
+---
+
+According to the BACS Scheme rules, incoming direct credits can be applied to the Customer’s accounts on Day 3 of BACS processing cycle. It is Modulr’s intention to provide service which is more efficient by notifying customers about upcoming credits before payment messages are sent. This will allow them to offer their clients the ability to receive credits one day earlier.
+
+**What is it?**\
+Bacs is a 3 working day service. A Bacs payment is initiated on Day 1 and the recipient is credited on Day 3. Modulr’s Bacs Inbound Early service allows select customers to be credited at 6.30 pm on Day 2.
+
+**Why should our customers care about BACS Day 2?**\
+This service has the benefit of allowing our customers access to incoming payments earlier than they would otherwise, improving cash flow and opening new product opportunities e.g. Monzo offers its customer the choice to get their salary a day early.
+
+**How do Customers sign up to Bacs Early?**\
+After making a request to the sales manager, customers will need an account that is enabled for Bacs Early. There is a ‘Bacs Day 2’ checkbox that can be enabled at a Partner, customer, or account level. Enabling a Partner automatically enables all existing associated customers and accounts, and new ones that are created. Similarly, enabling a Customer for Bacs early automatically enables all existing and future accounts. It is possible for a Partner to be enabled but for specific customers/accounts under that partner to be disabled.  All Bacs Inbound payments received to a Bacs Early enabled account will be credited on Day 2. If a Partner wants some Bacs payment on Day 2 and others on Day 3, they will need two accounts: one account enabled for Bacs Early and the other not enabled.
+
+**Proposed Approach**\
+To allow our clients to make money available to their customers one day earlier, Modulr will be informing them about the incoming direct credits that are due to be applied on the next processing day. Customers will be receiving webhooks with the relevant information extracted from the incoming direct credit transactions file. Only credit in transactions that are not reversed nor recalled on the same day and have been sent to the accounts that are open and not blocked will be included in the notifications.
+
+The notification that will be sent on Day 2 of BACS processing cycle will be followed by applying for the credit as per the normal process on Day 3 of BACS processing cycle.
+
+It will be the customer's responsibility to match the received credit notification with the actual payment record that will be applied on day 3 of BACS processing cycle. Modulr will provide unique references for both the payment and the notification, however, all payments will be applied to the relevant accounts on day 3.
+
+**Timing for sending webhooks**\
+Although BACS credit transactions are received early in the morning of Day 2 of BACS processing cycle, Participants have until 3:00 pm of that day to request a manual recall of any of the sent credits. To accommodate for this process regulated by the Scheme, incoming credit notifications will be sent to customers after 3:30 pm on Day 2 of the BACS processing cycle.
+
+**Webbook notifications**
+
+Upcoming credit sent for Day 2
+
+```json title="Credit Notification Webhook"
+{
+  "Type": "PI_BACS",
+  "Payee": {
+    "Name": "MODULR HOLDINGS LIMITED",
+    "Identifier": {
+      "Type": "SCAN",
+      "SortCode": "040073",
+      "AccountNumber": "00108812"
+    }
+  },
+  "Payer": {
+    "Name": "MODULR HOLDINGS GB",
+    "Identifier": {
+      "Type": "SCAN",
+      "SortCode": "608242",
+      "AccountNumber": "40079912"
+    }
+  },
+  "Amount": "0.03",
+  "EventId": "deb16f45-adaa-4c2c-8129-b3164947cb6b",
+  "Currency": "GBP",
+  "DateTime": "2022-08-15T00:00:00+0000",
+  "AccountId": "A214C9GB",
+  "EventName": "UPCOMINGCREDIT",
+  "EventTime": "2022-08-12T15:46:06+0000",
+  "PayerName": "MODULR HOLDINGS GB",
+  "SchemeInfo": {
+    "Id": "9db688be9c02715ddeab5ef61304a1863d7d551932dd7019ad42ebdb4c1ab451-052B4038",
+    "Name": "BACS"
+  },
+  "PaymentReference": "Payment from MODULR HOLDINGS GB: BACS TEST",
+  "AccountExternalRef": "STS LP HP",
+  "OriginatedOverseas": false
+}
+```
+
+PayIn Webhook sent for Day 2 credits
+
+```json
+{
+  "Type": "PI_BACS",
+  "Payee": {
+    "Name": "MODULR HOLDINGS",
+    "Identifier": {
+      "Type": "SCAN",
+      "SortCode": "048873",
+      "AccountNumber": "00188323"
+    }
+  },
+  "Payer": {
+    "Name": "MODULR HOLDINGS GB",
+    "Identifier": {
+      "Type": "SCAN",
+      "SortCode": "609242",
+      "AccountNumber": "40079812"
+    }
+  },
+  "Amount": "0.03",
+  "EventId": "b4dda89a-dac9-4d7b-a405-2ce619566a68",
+  "Currency": "GBP",
+  "DateTime": "2022-08-12T17:43:06+0000",
+  "AccountId": "A214C42X",
+  "EventName": "PAYIN",
+  "EventTime": "2022-08-12T17:43:06+0000",
+  "PayerName": "MODULR HOLDINGS GB",
+  "PaymentId": "P210BGZK5T",
+  "SchemeInfo": {
+    "Id": "225936fc40b7ebd6d5aa6603244ad677e180b26e2d7a59780b3ee766dc8be642-052B4077",
+    "Name": "BACS"
+  },
+  "TransactionId": "T210GBX95H",
+  "PaymentReference": "Payment from MODULR HOLDINGS GB: BACS TEST",
+  "AccountExternalRef": "STS test Bacs",
+  "OriginatedOverseas": false,
+  "PaymentAppliedTime": "2022-08-12T17:43:06.168+0000"
+}
+```
+
+## FAQs
+
+<Callout kind="info">
+  **What time will funds be credits?**
+
+  Between 18.30-20.00 on Day 2.
+</Callout>
+
+<Callout kind="info">
+  **Can I still get Bacs payments on Day 3?**
+
+  Yes, customers can receive funds on Day 3. Customers can easily create multiple accounts, which can be set up to credit Bacs payments on Day 2 or Day 3 as desired.
+</Callout>
+
+<Callout kind="info">
+  **Could Bacs Early Credits be reversed?**
+
+  The scheme rule says the Sending PSP has up to 15.30 on Day 2 to reverse BACS payments. Modulr will exclude these payments when crediting your account on Day 2.
+</Callout>
+
+<Callout kind="info">
+  **How much do you charge for Bacs Early Credits?**
+
+  Modulr is a Direct Participant of Bacs and requires no sponsor bank. This allows us to offer highly competitive fees. Please contact us for more information.
+</Callout>

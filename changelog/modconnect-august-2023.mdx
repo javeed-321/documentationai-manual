@@ -1,0 +1,55 @@
+---
+title: "ModConnect - August 2023"
+---
+
+<Callout kind="info">
+  **Top picks this month**
+
+  - Open Banking Payment Initiation Service | UK Expansion
+  - Modulr Portal  | File Upload
+</Callout>
+
+<Image src="https://files.readme.io/9c9932b-MC_strip_2.png" alt="MC strip 2" caption=" " />
+
+## New features via API
+
+### Open Banking Payment Initiation Service | UK Expansion
+
+Modulr continues to expand its Payment Initiation Service connectivity. You can now initiate payments from the following financial institutions:
+
+- HSBC - Kinetic
+- Mettle
+- Tide
+- Ulster Bank (UK)
+- Virgin Money
+- Wise
+
+You can find our full supported bank list and read about how to use the provider list [API in our Developer Guide.](/docs/supported-banks-and-aspsps)
+
+## New features added in Modulr Portal
+
+### Modulr Portal | File Upload
+
+We've improved the way you make file upload payments! From September, you will have the option to process payments using file upload as **Batch** or **Bulk**.
+
+**Batch** allows a single approval for the entire batch, making it easier and saving you time. Batch uploads are processed with strict processing ON, this means that if any payment within the batch fails, the entire batch will fail.
+
+**Bulk** uploads require multiple approvals, for each payment within the file. Bulk uploads are processed with strict processing OFF, this means that any failed payments will show in pending payments, and successful payments will process as normal.
+
+<Image src="https://files.readme.io/e088b45-File_Upload_1.gif" alt="File Upload 1" caption=" " />
+
+## Minor Enhancements & Bugs resolved
+
+### Cards | Card Creation
+
+You can now add postcodes with accented characters from non-UK clients when you create cards via API.
+
+### Outbound payments | Deprecated fields removal
+
+We have simplified our payments API and documentation by removing the below from November 2023:
+
+‘Customer ID’ field (sourceCustomerId) in the payment APIs when creating an outbound payment, only allowing for sourceAccountId moving forward.
+
+The list of payments in the batch payment submission response and batch retrieval endpoint. API users can retrieve the list of payments within a batch by using the payment search endpoint with the ID of the batch they’re searching for. We’re updating our batch payment submission and retrieval endpoints to make them consistent with Modulr’s other APIs that handle large volumes of data.
+
+The destinationId and destinationType fields in the payment creation APIs. API users will be required to use the equivalent id and type fields under the destination field in the relevant API requests.

@@ -1,0 +1,71 @@
+---
+title: "ModConnect- September 2024"
+---
+
+<Callout kind="info">
+  **Top picks this month**
+
+  - Customer Portal - Batch Approvals - Listing & Details Pages - Search & Filter Uplift
+  - Customer Portal - Multi-User Approvals for single payments
+  - Fraud Case Management Portal
+</Callout>
+
+<Image src="https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png" alt="Image" caption=" " />
+
+# New this month
+
+## Modulr Portal - Batch Approvals - Listing & Details Pages - Search & Filter Uplift
+
+The Batch Payment Approvals Listing page in the Modulr Portal will soon be uplifted with the following updates:
+
+- A refreshed and simplified look
+- Advanced client side Searching, Filtering & Sorting by
+  - Creation Date
+  - ID
+  - Reference
+  - Currency
+  - No. of Payments
+  - Total Batch Value
+- The ability to load up to 100 batches at a time (from 25)
+- The ability to export table data to .xlsx file
+- Clearer visuals for batches with multiple currencies
+
+<Image src="https://files.readme.io/fdb7151275783f812be6fca98d67d4e6f12d7760ff82deb90fc1ce8cca0601dd-image.png" alt="Image" caption=" " />
+
+The Batch Details view (when you click into a specific batch to see more detail), will also have a refreshed look that mirrors the experience of the Payment Approvals Listing page.
+
+If you have any questions, please contact your customer success manager or Modulr customer support at [support@modulrfinance.com](mailto:support@modulrfinance.com).
+
+## Modulr Portal - Multi-User Approvals for single payments
+
+Multi-User Approvals on single payments will be live in the Modulr Portal in October. Now, when creating single payments, you can choose to have a payment require approval from a defined number of users. Approvals can occur in any order and will be successful once the required number has been met. When a payment that has been approved needs additional approval, the user will see the following screen:
+
+<Image src="https://files.readme.io/0e2d3ac8107365dffde04f0363d1475da8cfbbb581e4dd51205cd1a41a57c821-image.png" alt="Image" caption=" " />
+
+Multi-User Approvals, once turned on, will apply to both batch and single payments. This functionality can also be paired with approval thresholds, which dictates a minimum value of a payment for which approval will be required.
+
+To enable multiple approvals or approval thresholds, please contact your customer success manager or Modulr customer support at [support@modulrfinance.com](mailto:support@modulrfinance.com).
+
+## API Request Time Checks
+
+Starting from the 4th of November, all endpoints in the Modulr API will be updated to consistently enforce a maximum 5-second difference between the timestamp in the request and the current time. Any requests that do not meet this time requirement will be rejected with an Authentication failure response.
+
+This change is being implemented as a measure to bolster security. Minimising the time difference (Clock Skew) to 5 seconds aligns with security best practices, thereby enhancing the overall security of our platform. We advise using a synchronised time source, such as Network Time Protocol (NTP), to ensure your systems interacting with the Modulr APIs maintain accurate time.
+
+If you have any questions, please contact your customer success manager or Modulr customer support at [support@modulrfinance.com](mailto:support@modulrfinance.com).
+
+## Customer Portal - User Activity Report
+
+The user activity report is being updated to include details of activities not directly linked to the account, such as changes in payment approvals. The inclusion of this additional detail allows admins to track all user activities, not just those linked to the account, such as new user creation or batches.
+
+This update will involve renaming certain columns and updating the range of values that appear in certain columns. The columns **Customer BID, Customer Name, Account BID** are being changed to **Entity Type, Entity ID, Owning Entity Type, Owning Entity ID,** where **Owning entity type** would be **ACCOUNT** for existing records, but could be other values going forward depending on what has been acted against.
+
+This change will only affect users who download the User Activity report and use software to automatically parse it.
+
+If you have any questions, please contact your customer success manager or Modulr customer support at [support@modulrfinance.com](mailto:support@modulrfinance.com).
+
+## Fraud Case Management Portal
+
+In alignment with the APP Fraud Mandatory Reimbursement Model, effective from 7 October 2024, we have developed a Fraud Case Management System to assist with the collaboration and tracking of payments regarding all types of fraud. Partners will be able to respond directly to Fraud reports and have a view of related APP Fraud reimbursement payments. Partners will be given access to the system on a phased rollout with priority given to partners with fraud volume.
+
+If you have any questions regarding this update, or the APP Fraud Mandatory Reimbursement Model, please do not hesitate to contact your customer success manager or [compliance@modulrfinance.com](mailto:compliance@modulrfinance.com).

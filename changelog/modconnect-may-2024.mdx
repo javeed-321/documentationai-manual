@@ -1,0 +1,44 @@
+---
+title: "ModConnect- May 2024"
+---
+
+<Callout kind="info">
+  **Top picks this month**
+
+  - Direct Debit Collections | Core referencing
+  - Direct Debit Collections | Get Collections - pagination
+</Callout>
+
+<Image src="https://files.readme.io/5df9ecc-ModConnectv2.png" alt="ModConnectv2" caption=" " />
+
+# Minor Enhancements & Bugs Resolved
+
+## Direct Debit Collections | Core referencing
+
+### We enhanced our handling of Direct Debit references by adding support for 'Core' referencing with a new optional parameter: `collectionReference`.
+
+When creating the collection schedule, you can now add an additional optional parameter which will be suffixed to the mandate reference on collection requests. This change makes it easier for your payers to identify corresponding debits on their account if you use a mandate (DDI) for multiple purposes.  Each collection can now have a core reference inherited from the Mandate (DDI) and separate suffix, allowing the collection of multiple Direct Debit agreements under the same mandate and on the same day.
+
+For example, a schedule is set up using `collectionReference` of `JUNE 24` for a mandate with reference `GB/1234LT`. The Direct Debit is collected with a combined reference `GB/1234LT-JUNE 24`.
+
+This feature is enabled automatically by specifying a collectionReference. For more information please see [Starting Collections ](/docs/starting-collections) .
+
+Please contact your customer success manager if you require more information.
+
+# Direct Debit Collections | Get Collections - pagination
+
+Our Direct Debits Collections API pagination has been enhanced to increase the number of records in our response. This enhancement means you will need to change how you call our GET collections endpoint, and these changes must be in place by July 1, 2024.
+
+To support a smooth transition, our GET Collections endpoint currently supports both the existing behaviour and the enhancement that you will need to support from July 1st.
+
+The enhancement we've introduced to the GET Collections endpoint offers a flexible pagination system. By default, it paginates collections with 20 results returned per page. However, you have the freedom to adjust the number of returns per page to any value between 1 and 500. Additionally, if the account lacks a mandate or the given mandate is absent, the system will return an empty page with a 200 status, avoiding exceptions.
+
+You can continue to call our GET Collections endpoint as you have done historically until June 30th. From July 1st, we will require customers to paginate if they have more than 20 collections. Please ensure that necessary changes are made to accommodate this change.
+
+Our readme documentation relating to our GET Collections endpoint can be found using the following links:
+
+[Get all collectionschedules for a mandate](/reference/getcollectionschedules)
+
+[Get all collection activities of an account](/reference/getcollections)
+
+Please contact your customer success manager if you require more information.

@@ -1,0 +1,23 @@
+---
+title: "General implementation notes"
+---
+
+## Backwards Compatibility
+
+The following api changes are considered backwards compatible, and should be handled by you:
+
+- Adding new API endpoints
+- Adding new properties to the responses from existing API endpoints
+- Reordering properties returned from existing API endpoints
+- Adding optional request parameters to existing API endpoints
+- Altering the format or length of IDs
+- Altering the message attributes returned by validation failures / other errors
+- Sending webhooks for new event types
+
+To ensure these changes are handled correctly and do not cause failures on your system we recommend all clients utilise a lenient json parser.
+
+## Datetime fields
+
+Please note that where the format for datetime is 2019-03-20T00:00:00+0000, because this parameter is supplied on the URL, it needs to be URL encoded. So the date you send to us would actually look like `2019-03-20T00%3A00%3A00%2B0000`. Here is a useful link about encoding & decoding parameters: [https://meyerweb.com/eric/tools/dencoder/](https://meyerweb.com/eric/tools/dencoder/).
+
+The format that we have documented for an endpoint cannot be changed and other formats for that endpoint are not supported.

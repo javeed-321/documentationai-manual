@@ -1,0 +1,30 @@
+---
+title: "API Base URLs and Authentication Methods"
+description: "Learn about the different Base URL options for use in the Modulr Sandbox"
+---
+
+Learn about the different Base URL options for use in the Modulr Sandbox
+
+Within the Sandbox environment there are two authentication methods available:
+
+If you are accessing our API directly from your code and have set-up HMAC [(Instructions here](/docs/authentication)) on how to calculate the hmac value are here: [Authentication](/docs/authentication)), the URL you should use for the Modulr API sandbox environment is:
+
+- [https://api-sandbox.modulrfinance.com/api-sandbox/](https://api-sandbox.modulrfinance.com/api-sandbox/)
+
+If you wish to try our API's **without** first setting up HMAC, you can use our token URL instead using your **API Key**:
+
+- [https://api-sandbox.modulrfinance.com/api-sandbox-token/](https://api-sandbox.modulrfinance.com/api-sandbox-token/)
+
+<Callout kind="danger">
+  **Authentication in Production**
+
+  HMAC is the only authentication method used in Production. Use of the token is only in our Sandbox environment.
+
+  You will be provided with the production environment URL during onboarding to the production service.
+
+  Failing to use the correct URLs may result in requests being rejected or silently ignored
+</Callout>
+
+There can be additional onboarding processes for certain functionality:\
+[Getting started with DD collections →](/docs/what-is-dd-collections)\
+[Getting started with Virtual Cards →](/docs/getting-started-with-virtual-cards)

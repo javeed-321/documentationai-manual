@@ -1,19 +1,19 @@
 {
-  "name": "Pipedrive Developer Documentation",
-  "initialRoute": "docs/getting-started",
-  "logo-light": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
-  "logo-dark": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
-  "logo-small-light": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
-  "logo-small-dark": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
-  "favicon": "https://files.readme.io/bd96346-favicon.ico",
+  "name": "Modulr",
+  "initialRoute": "docs/intro",
+  "logo-light": "https://files.readme.io/c4bb314659a04661303bfe4fee150950c306719b886e257c4f19e7da5ef24a78-small-readme_top_logodeveloper.png",
+  "logo-dark": "https://files.readme.io/8dccedf-small-readme_top_logodeveloper.png",
+  "logo-small-light": "https://files.readme.io/c4bb314659a04661303bfe4fee150950c306719b886e257c4f19e7da5ef24a78-small-readme_top_logodeveloper.png",
+  "logo-small-dark": "https://files.readme.io/8dccedf-small-readme_top_logodeveloper.png",
+  "favicon": "https://files.readme.io/fa6ab3e-favicon.ico",
   "colors": {
     "light": {
-      "brand": "#017737",
+      "brand": "#003056",
       "heading": "#1a1a1a",
       "text": "#374151"
     },
     "dark": {
-      "brand": "#019545",
+      "brand": "#0083ea",
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
@@ -26,350 +26,1769 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Pipedrive Developer Documentation",
+        "tab": "Guides",
         "icon": "book",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Introduction",
             "pages": [
               {
-                "title": "Getting started",
-                "path": "docs/getting-started"
+                "title": "Welcome",
+                "path": "docs/intro"
               },
               {
-                "title": "Developer sandbox account",
-                "path": "docs/developer-sandbox-account"
+                "title": "Contact",
+                "path": "docs/help-support"
               },
               {
-                "title": "Pipedrive API in Postman or Insomnia",
-                "path": "docs/run-pipedrive-api-in-postman-or-insomnia"
-              },
-              {
-                "title": "Creating an app",
-                "path": "docs/marketplace-creating-a-proper-app"
-              },
-              {
-                "title": "create-pipedrive-app CLI",
-                "path": "docs/create-pipedrive-app-cli"
-              },
-              {
-                "title": "Pipedrive API v2 overview",
-                "path": "docs/pipedrive-api-v2"
-              },
-              {
-                "title": "Pipedrive API v2 migration guide",
-                "path": "docs/pipedrive-api-v2-migration-guide"
-              },
-              {
-                "title": "Allowlisting Pipedrive IP addresses",
-                "path": "docs/allowlisting-pipedrive-ip-addresses"
+                "title": "Modulr Portal User Guides",
+                "path": "docs/using-the-customer-portal-sandbox-and-production"
               }
             ]
           },
           {
-            "group": "Core API Concepts",
+            "group": "Sandbox & Customer Portal Access",
             "pages": [
               {
-                "title": "About the Pipedrive API",
-                "path": "docs/core-api-concepts-about-pipedrive-api"
+                "title": "Modulr Access Types",
+                "path": "docs/types-of-businesses-1"
               },
               {
-                "title": "Changes to the API",
-                "path": "docs/changes-to-the-api"
+                "title": "Getting Sandbox Access",
+                "path": "docs/gaining-use-of-the-api"
               },
               {
-                "title": "Requests",
-                "path": "docs/core-api-concepts-requests"
+                "title": "API Base URLs and Authentication Methods",
+                "path": "docs/api-base-urls"
               },
               {
-                "title": "Rate limiting",
-                "path": "docs/core-api-concepts-rate-limiting"
-              },
-              {
-                "title": "Responses",
-                "path": "docs/core-api-concepts-responses"
-              },
-              {
-                "title": "Date format",
-                "path": "docs/core-api-concepts-date-format"
-              },
-              {
-                "title": "Pagination",
-                "path": "docs/core-api-concepts-pagination"
-              },
-              {
-                "title": "HTTP status codes",
-                "path": "docs/core-api-concepts-http-status-codes"
-              },
-              {
-                "title": "Authentication",
-                "path": "docs/core-api-concepts-authentication"
-              },
-              {
-                "title": "Custom fields",
-                "path": "docs/core-api-concepts-custom-fields"
+                "title": "Build With AI (MCP)",
+                "path": "docs/build-with-ai-mcp"
               }
             ]
           },
           {
-            "group": "Marketplace",
+            "group": "Using the API",
             "pages": [
               {
-                "title": "About the Marketplace",
-                "path": "docs/about-the-marketplace"
-              },
-              {
-                "title": "App installation flows",
-                "path": "docs/app-installation-flows"
-              },
-              {
-                "group": "Developer Hub",
+                "group": "Getting Started",
                 "pages": [
                   {
-                    "title": "Developer Hub",
-                    "path": "docs/developer-hub"
+                    "title": "Getting Started",
+                    "path": "docs/getting-started"
                   },
                   {
-                    "title": "Registering a public app",
-                    "path": "docs/marketplace-registering-the-app"
+                    "title": "Security",
+                    "path": "docs/security"
                   },
                   {
-                    "title": "Registering a private app",
-                    "path": "docs/marketplace-registering-a-private-app"
+                    "title": "Authentication",
+                    "path": "docs/authentication"
                   },
                   {
-                    "title": "Updating approved apps",
-                    "path": "docs/marketplace-updating-the-existing-app"
+                    "title": "General implementation notes",
+                    "path": "docs/implementation-notes"
                   },
                   {
-                    "title": "Deleting an app",
-                    "path": "docs/marketplace-deleting-the-existing-app"
+                    "title": "Limits and Errors",
+                    "path": "docs/limits-and-errors"
+                  },
+                  {
+                    "title": "Versioning",
+                    "path": "docs/versioning"
+                  },
+                  {
+                    "title": "Error handling and duplicate prevention",
+                    "path": "docs/error-handling"
                   }
                 ]
               },
               {
-                "title": "Client ID and client secret",
-                "path": "docs/client-id-and-client-secret"
+                "group": "Fundamentals",
+                "pages": [
+                  {
+                    "title": "Fundamentals",
+                    "path": "docs/apis-to-aid-with-reconciliation"
+                  },
+                  {
+                    "title": "Payments and Transactions",
+                    "path": "docs/payments-and-transactions"
+                  },
+                  {
+                    "title": "Webhooks",
+                    "path": "docs/webhooks"
+                  },
+                  {
+                    "title": "Reversals and Reconciliation",
+                    "path": "docs/reversals"
+                  },
+                  {
+                    "title": "Combining Webhooks and APIs",
+                    "path": "docs/reconciliation"
+                  }
+                ]
               },
               {
-                "title": "App approval process",
-                "path": "docs/marketplace-app-approval-process"
+                "group": "Notifications (Webhooks & Emails)",
+                "pages": [
+                  {
+                    "title": "Notifications (Webhooks & Emails)",
+                    "path": "docs/notifications-1"
+                  },
+                  {
+                    "title": "Webhook - Application Status Change",
+                    "path": "docs/webhook-application-status-change"
+                  },
+                  {
+                    "title": "Webhook - Customer Created",
+                    "path": "docs/webhook-customer-created"
+                  },
+                  {
+                    "title": "Webhook - Customer Status",
+                    "path": "docs/customer-status"
+                  },
+                  {
+                    "title": "Webhook - Customer Verification Status",
+                    "path": "docs/custvstat-webhook"
+                  },
+                  {
+                    "title": "Webhook - Account Status Change",
+                    "path": "docs/webhook-account-status-change"
+                  },
+                  {
+                    "title": "Webhook - Inbound Payments",
+                    "path": "docs/payin-webhook"
+                  },
+                  {
+                    "title": "Webhook - Outbound Payments",
+                    "path": "docs/payout-webhook"
+                  },
+                  {
+                    "title": "Webhook - Payment Approval Status Change",
+                    "path": "docs/payment-approval-rejection-webhook"
+                  },
+                  {
+                    "title": "Webhook - Batch Payment Approval Status Change",
+                    "path": "docs/webhook-batch-payment-approval-status-change"
+                  },
+                  {
+                    "title": "Webhook - Payment Compliance Status",
+                    "path": "docs/paymentcompliancestatus-webhook"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit Mandate Status",
+                    "path": "docs/ddmandate-webhook"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit, Upcoming Collection Credit",
+                    "path": "docs/upcomingddcollectioncredit-webhook"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit, DD Collection Status",
+                    "path": "docs/webhook-direct-debit-ddcollectionstatus"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit, Incoming Collection",
+                    "path": "docs/webhook-direct-debit-incoming-collection"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit, Unpaid Collection",
+                    "path": "docs/webhook-direct-debit-unpaid-collection"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit, Return Funds",
+                    "path": "docs/webhook-direct-debit-return-funds"
+                  },
+                  {
+                    "title": "Webhook - Direct Debit Collections Indemnity Claim (DDIC) ",
+                    "path": "docs/webhook-direct-debit-collections-ddic"
+                  }
+                ]
               },
               {
-                "title": "Pipedrive Developer Partner Agreement",
-                "path": "docs/marketplace-vendor-agreement"
+                "group": "Customers",
+                "pages": [
+                  {
+                    "title": "Customers",
+                    "path": "docs/customer"
+                  },
+                  {
+                    "title": "Industry Codes for Modulr KYC",
+                    "path": "docs/industry-codes-for-modulr-kyc"
+                  },
+                  {
+                    "title": "Customer Verification: Overview",
+                    "path": "docs/customer-verification-overview"
+                  },
+                  {
+                    "title": "Customer Verification: Integration Guide",
+                    "path": "docs/customer-verification-integration-guide"
+                  },
+                  {
+                    "title": "Customer Verification: Application Statuses",
+                    "path": "docs/customer-verification-application-statuses"
+                  },
+                  {
+                    "title": "Customer Verification SDK",
+                    "path": "docs/customer-verification-sdk"
+                  }
+                ]
+              },
+              {
+                "title": "Accounts",
+                "path": "docs/account"
+              },
+              {
+                "group": "Payments",
+                "pages": [
+                  {
+                    "title": "Payments",
+                    "path": "docs/payments-2"
+                  },
+                  {
+                    "title": "Inbound Payments",
+                    "path": "docs/inbound-payments"
+                  },
+                  {
+                    "title": "Outbound Payments",
+                    "path": "docs/outbound-payments"
+                  },
+                  {
+                    "title": "Bulk payments",
+                    "path": "docs/bulk-payments"
+                  },
+                  {
+                    "title": "Batch Payments",
+                    "path": "docs/batch-payments-1"
+                  },
+                  {
+                    "title": "Payment Approvals",
+                    "path": "docs/approvals"
+                  },
+                  {
+                    "title": "Payment Types",
+                    "path": "docs/payment-types"
+                  },
+                  {
+                    "title": "Payment Statuses",
+                    "path": "docs/payment-statuses"
+                  },
+                  {
+                    "title": "Returned Payments",
+                    "path": "docs/payment-return-reasons"
+                  },
+                  {
+                    "title": "Payment rules",
+                    "path": "docs/rules-1"
+                  },
+                  {
+                    "title": "Future Dated",
+                    "path": "docs/future-dated-payments"
+                  },
+                  {
+                    "title": "Waiting for funds",
+                    "path": "docs/waiting-for-funds"
+                  },
+                  {
+                    "title": "UK Payment Purpose & Category Codes",
+                    "path": "docs/uk-payment-purpose-category-codes"
+                  }
+                ]
+              },
+              {
+                "title": "European Payments",
+                "path": "docs/european-payments"
+              },
+              {
+                "group": "International Payments",
+                "pages": [
+                  {
+                    "title": "International Payments",
+                    "path": "docs/international-payments"
+                  },
+                  {
+                    "title": "Inbound Payments via SWIFT",
+                    "path": "docs/inbound-payments-via-swift"
+                  },
+                  {
+                    "group": "Outbound Payments via SWIFT",
+                    "pages": [
+                      {
+                        "title": "Outbound Payments via SWIFT",
+                        "path": "docs/outbound-payments-via-swift"
+                      },
+                      {
+                        "title": "Allowed destinations for supported currencies",
+                        "path": "docs/allowed-destinations-for-modulr-supported-currencies"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Direct Debits (Outbound & Collections)",
+                "pages": [
+                  {
+                    "title": "Direct Debits (Outbound & Collections)",
+                    "path": "docs/direct-debits-outbound-collections"
+                  },
+                  {
+                    "group": "Direct Debit Outbound",
+                    "pages": [
+                      {
+                        "title": "Direct Debit Outbound",
+                        "path": "docs/direct-debit-outbound-1"
+                      },
+                      {
+                        "title": "Receiving Mandates",
+                        "path": "docs/receiving-mandates"
+                      },
+                      {
+                        "title": "Receiving DD Collections",
+                        "path": "docs/receiving-dd-collections"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Direct Debit Collections (UK - GBP)",
+                    "pages": [
+                      {
+                        "title": "Direct Debit Collections (UK - GBP)",
+                        "path": "docs/direct-debit-collections-1"
+                      },
+                      {
+                        "title": "Getting started",
+                        "path": "docs/what-is-dd-collections"
+                      },
+                      {
+                        "title": "Setting up Mandates",
+                        "path": "docs/setting-up-mandates"
+                      },
+                      {
+                        "title": "Starting Collections",
+                        "path": "docs/starting-collections"
+                      },
+                      {
+                        "title": "Payer Name Verification (PNV)",
+                        "path": "docs/payer-name-verification-pnv"
+                      },
+                      {
+                        "title": "Managing Direct Debit Indemnity Claims (DDIC)",
+                        "path": "docs/managing-direct-debit-indemnity-claims-ddic"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Payment Initiation Service",
+                "pages": [
+                  {
+                    "title": "Payment Initiation Service",
+                    "path": "docs/pisp"
+                  },
+                  {
+                    "title": "Getting Started with the Payment Initiation Service",
+                    "path": "docs/getting-started-with-pisp"
+                  },
+                  {
+                    "title": "Single Immediate Payments",
+                    "path": "docs/single-immediate-payments-overview"
+                  },
+                  {
+                    "title": "Fixed Recurring Payments (Standing Orders)",
+                    "path": "docs/fixed-recurring-payments-standing-order-overview"
+                  },
+                  {
+                    "title": "Supported ASPSP (Banks)",
+                    "path": "docs/supported-banks-and-aspsps"
+                  },
+                  {
+                    "title": "Open Banking V4 API transition",
+                    "path": "docs/open-banking-v4-api-transition"
+                  }
+                ]
+              },
+              {
+                "title": "Bacs Day 2 - Early funding",
+                "path": "docs/bacs-day-2-early-funding"
+              },
+              {
+                "group": "Cards",
+                "pages": [
+                  {
+                    "title": "Cards",
+                    "path": "docs/cards-1"
+                  },
+                  {
+                    "title": "Getting started with Virtual Cards",
+                    "path": "docs/getting-started-with-virtual-cards"
+                  },
+                  {
+                    "title": "Getting started with Physical Cards",
+                    "path": "docs/physical-cards-overview"
+                  },
+                  {
+                    "title": "Replacing a card",
+                    "path": "docs/replacing-a-card-copy"
+                  },
+                  {
+                    "title": "Card Lifecycle",
+                    "path": "docs/card-lifecycle"
+                  },
+                  {
+                    "title": "Transaction Lifecycle",
+                    "path": "docs/card-transaction-lifecycle"
+                  },
+                  {
+                    "title": "Card Notifications",
+                    "path": "docs/card-notifications"
+                  },
+                  {
+                    "title": "API Integration overview",
+                    "path": "docs/api-integration-overview"
+                  },
+                  {
+                    "title": "PCI - Retrieve secure card details",
+                    "path": "docs/retrieve-secure-card-details"
+                  },
+                  {
+                    "title": "Sharing Card Details Securely",
+                    "path": "docs/sharing-card-details-securely"
+                  },
+                  {
+                    "title": "PIN Management",
+                    "path": "docs/pin-management"
+                  },
+                  {
+                    "title": "Card Activities Simulation",
+                    "path": "docs/example-card-activities-api-response"
+                  },
+                  {
+                    "title": "Custom Reference Fields",
+                    "path": "docs/custom-reference-fields"
+                  },
+                  {
+                    "title": "Card Reports",
+                    "path": "docs/card-reports"
+                  },
+                  {
+                    "title": "Card Report Notifications",
+                    "path": "docs/card-report-notifications"
+                  },
+                  {
+                    "title": "Card Controls",
+                    "path": "docs/card-controls"
+                  },
+                  {
+                    "title": "Transaction decline reasons",
+                    "path": "docs/decline-reasons"
+                  },
+                  {
+                    "title": "Tokenisation - Overview",
+                    "path": "docs/mobile-wallets"
+                  },
+                  {
+                    "title": "Provisioning Journey",
+                    "path": "docs/provisioning-journey-1"
+                  },
+                  {
+                    "title": "Token Management",
+                    "path": "docs/token-management"
+                  },
+                  {
+                    "title": "General Tokenisation Setup",
+                    "path": "docs/setup"
+                  },
+                  {
+                    "group": "Channel Managers",
+                    "pages": [
+                      {
+                        "title": "Channel Managers",
+                        "path": "docs/channel-managers"
+                      },
+                      {
+                        "title": "Channel Managers - Overview",
+                        "path": "docs/channel-managers-overview"
+                      },
+                      {
+                        "title": "Channel Manager - Cards",
+                        "path": "docs/channel-manager-cards"
+                      },
+                      {
+                        "title": "Channel Manager - Activities",
+                        "path": "docs/channel-manager-activities"
+                      },
+                      {
+                        "title": "Channel Manager - Reports",
+                        "path": "docs/channel-manager-reports"
+                      },
+                      {
+                        "title": "Channel Manager - Notifications",
+                        "path": "docs/channel-manager-notifications"
+                      },
+                      {
+                        "title": "Channel Manager - Setting Up A Webhook ",
+                        "path": "docs/channel-manager-setting-up-a-webhook"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Bulk Card Operations",
+                    "path": "docs/bulk-card-operations"
+                  }
+                ]
+              },
+              {
+                "group": "Variable Recurring Payments",
+                "pages": [
+                  {
+                    "title": "Variable Recurring Payments",
+                    "path": "docs/variable-recurring-payments"
+                  },
+                  {
+                    "title": "VRP overview",
+                    "path": "docs/vrp-overview"
+                  },
+                  {
+                    "title": "Getting started with VRP",
+                    "path": "docs/getting-started-with-vrp"
+                  },
+                  {
+                    "title": "VRP consent",
+                    "path": "docs/create-a-vrp-consent"
+                  },
+                  {
+                    "title": "Initiate a VRP payment",
+                    "path": "docs/initiate-a-vrp-payment-using-a-consent"
+                  }
+                ]
+              },
+              {
+                "group": "Commercial Variable Recurring Payments",
+                "pages": [
+                  {
+                    "title": "Commercial Variable Recurring Payments",
+                    "path": "docs/commercial-variable-recurring-payments"
+                  },
+                  {
+                    "title": "Commercial VRP Overview",
+                    "path": "docs/commercial-vrp-overview"
+                  },
+                  {
+                    "title": "Getting started with cVRP",
+                    "path": "docs/getting-started-with-cvrp"
+                  },
+                  {
+                    "title": "Creating a cVRP Consent",
+                    "path": "docs/creating-a-cvrp-consent"
+                  },
+                  {
+                    "title": "Sandbox: Initiating a cVRP consent",
+                    "path": "docs/sandbox-test-by-initiating-a-cvrp-consent"
+                  },
+                  {
+                    "title": "Creating a cVRP Payment",
+                    "path": "docs/creating-a-cvrp-payment"
+                  },
+                  {
+                    "title": "Sandbox: Initiating a cVRP payment",
+                    "path": "docs/sandbox-test-by-initiating-a-cvrp-payment"
+                  }
+                ]
+              },
+              {
+                "group": "Confirmation of Payee (CoP)",
+                "pages": [
+                  {
+                    "title": "Confirmation of Payee (CoP)",
+                    "path": "docs/confirmation-of-payee"
+                  },
+                  {
+                    "title": "Sending Name Check Requests",
+                    "path": "docs/sending-name-check-requests"
+                  },
+                  {
+                    "title": "Responding to Name Check Requests",
+                    "path": "docs/responding-to-name-check-requests"
+                  }
+                ]
+              },
+              {
+                "group": "EU Verification of Payee (VoP)",
+                "pages": [
+                  {
+                    "title": "EU Verification of Payee (VoP)",
+                    "path": "docs/eu-verification-of-payee-vop"
+                  },
+                  {
+                    "title": "Sending verification of payee checks",
+                    "path": "docs/sending-vop-check-requests"
+                  },
+                  {
+                    "title": "Responding to verification of payee check requests",
+                    "path": "docs/responding-to-vop-check-requests"
+                  }
+                ]
+              },
+              {
+                "title": "Third Party Providers",
+                "path": "docs/third-party-providers-access"
+              },
+              {
+                "title": "Platform Reporting and Reconciliation",
+                "path": "docs/reports-and-reconciliation"
               }
             ]
           },
           {
-            "group": "App extensions",
+            "group": "Using the Modulr Portal",
             "pages": [
               {
-                "title": "App extensions overview",
-                "path": "docs/app-extensions"
-              },
-              {
-                "title": "Link actions",
-                "path": "docs/app-extensions-actions"
-              },
-              {
-                "group": "JSON modals",
+                "group": "Delegates",
                 "pages": [
                   {
-                    "title": "JSON modals",
-                    "path": "docs/app-extensions-json-modals"
-                  },
+                    "title": "Delegates",
+                    "path": "docs/delegate-access-1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Modulr API",
+            "pages": [
+              {
+                "group": "Accounts",
+                "pages": [
                   {
-                    "title": "Component library",
-                    "path": "docs/json-modals-component-library"
-                  },
-                  {
-                    "title": "User interaction handling",
-                    "path": "docs/json-modals-user-interaction-handling"
+                    "title": "Create account by customer",
+                    "path": "reference/createaccount"
                   }
                 ]
               },
               {
-                "group": "JSON panels",
+                "group": "Cards",
                 "pages": [
                   {
-                    "title": "JSON panels",
-                    "path": "docs/app-extensions-json-panels"
+                    "title": "Card Simulator",
+                    "path": "reference/card-simulator"
                   },
                   {
-                    "title": "Adding a JSON panel",
-                    "path": "docs/json-panels-adding-a-panel"
+                    "group": "Card Simulator",
+                    "pages": [
+                      {
+                        "title": "Create a card authorisation",
+                        "path": "reference/createauthorisation"
+                      }
+                    ]
                   },
                   {
-                    "title": "Actions in JSON panels",
-                    "path": "docs/json-panels-actions-in-panels"
+                    "group": "Async",
+                    "pages": [
+                      {
+                        "title": "Get tasks",
+                        "path": "reference/getasynctasks"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Activities, Reports & Reports Notifications",
+                    "pages": [
+                      {
+                        "title": "Retrieve card report type notification configuration for partner",
+                        "path": "reference/getnotificationconfigurationsforagivenpartnerandreporttype"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Custom Fields",
+                    "pages": [
+                      {
+                        "title": "Bulk create partner custom field keys",
+                        "path": "reference/bulkcreatepartnercustomfieldkeys"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Share secure card details",
+                    "pages": [
+                      {
+                        "title": "Retrieve a single share secure card details record",
+                        "path": "reference/getsharesecurecarddetailsbyid"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Channel Manager Card",
+                    "pages": [
+                      {
+                        "title": "Channel Manager Update card",
+                        "path": "reference/channelmanagerupdatecard"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Channel Manager Webhook Notifications",
+                    "pages": [
+                      {
+                        "title": "Channel Manager Webhook Notifications",
+                        "path": "reference/webhook-notifications"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Restricted",
+                    "pages": [
+                      {
+                        "title": "[Restricted] Unsuspend a card",
+                        "path": "reference/unsuspendcard"
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "group": "Custom UI extensions",
+                "group": "Beneficiaries",
                 "pages": [
                   {
-                    "title": "Custom UI extensions",
-                    "path": "docs/custom-ui-extensions"
-                  },
-                  {
-                    "title": "Custom floating window",
-                    "path": "docs/custom-ui-extensions-floating-window"
-                  },
-                  {
-                    "title": "Custom panels",
-                    "path": "docs/custom-ui-extensions-panels"
-                  },
-                  {
-                    "title": "Custom modals",
-                    "path": "docs/custom-ui-extensions-modals"
-                  },
-                  {
-                    "title": "Custom UI for app settings",
-                    "path": "docs/custom-ui-extensions-app-settings"
+                    "title": "Create a new beneficiary for a specified customer",
+                    "path": "reference/createbeneficiary"
                   }
                 ]
               },
               {
-                "title": "Video calling app extension",
-                "path": "docs/video-calling-app-extension"
-              },
-              {
-                "group": "Messaging app extension",
+                "group": "Confirmation of Payee",
                 "pages": [
                   {
-                    "title": "Messaging app extension",
-                    "path": "docs/messaging-app-extension"
+                    "title": "Create an account name check",
+                    "path": "reference/createoutboundcop"
+                  }
+                ]
+              },
+              {
+                "group": "Customers",
+                "pages": [
+                  {
+                    "title": "Create a new customer",
+                    "path": "reference/createcustomer"
+                  }
+                ]
+              },
+              {
+                "group": "Direct Debits",
+                "pages": [
+                  {
+                    "title": "Direct Debits",
+                    "path": "reference/direct-debits"
                   },
                   {
-                    "title": "Implementing messaging app extension",
-                    "path": "docs/implementing-messaging-app-extension"
-                  },
+                    "group": "Direct Debit Outbound Mandate Operations",
+                    "pages": [
+                      {
+                        "title": "Direct Debit Outbound Mandate Operations",
+                        "path": "reference/direct-debit-outbound-mandate-operations"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Payments",
+                "pages": [
                   {
-                    "title": "Error codes and troubleshooting",
-                    "path": "docs/error-codes-and-troubleshooting-for-messaging-app-extension"
+                    "title": "Create a payment",
+                    "path": "reference/sendpayment"
+                  }
+                ]
+              },
+              {
+                "group": "Rules",
+                "pages": [
+                  {
+                    "title": "Create a Rule",
+                    "path": "reference/createrule"
+                  }
+                ]
+              },
+              {
+                "group": "Transactions",
+                "pages": [
+                  {
+                    "title": "Get transactions for a specific Account",
+                    "path": "reference/gettransactionsbyaccount"
+                  }
+                ]
+              },
+              {
+                "group": "Document",
+                "pages": [
+                  {
+                    "title": "Uploads and stores document",
+                    "path": "reference/upload"
+                  }
+                ]
+              },
+              {
+                "group": "Access Group",
+                "pages": [
+                  {
+                    "title": "Create access group",
+                    "path": "reference/createaccessgroup"
+                  }
+                ]
+              },
+              {
+                "group": "File Upload",
+                "pages": [
+                  {
+                    "title": "Upload payment file and store valid payments",
+                    "path": "reference/upload-payment-file"
+                  }
+                ]
+              },
+              {
+                "group": "Notification",
+                "pages": [
+                  {
+                    "title": "Set up a Notification for a Partner",
+                    "path": "reference/addpartnernotification"
+                  }
+                ]
+              },
+              {
+                "group": "Cards Bulk Operations",
+                "pages": [
+                  {
+                    "title": "List active bulk card requests",
+                    "path": "reference/getactivebulkcardrequests"
+                  }
+                ]
+              },
+              {
+                "group": "Integration Notification",
+                "pages": [
+                  {
+                    "title": "Retrieve all Webhook Notification Subscriptions for a Customer.",
+                    "path": "reference/getallcustomerwebhooknotificationsubscriptions"
+                  }
+                ]
+              },
+              {
+                "group": "Variable Recurring Payments",
+                "pages": [
+                  {
+                    "title": "Initiate a Variable Recurring Payment.",
+                    "path": "reference/initiatevrppayment"
+                  }
+                ]
+              },
+              {
+                "group": "Payment Initiations",
+                "pages": [
+                  {
+                    "title": "Initiate standing order from ASPSP",
+                    "path": "reference/createstandingorderinitiation"
+                  }
+                ]
+              },
+              {
+                "group": "Verification of Payee",
+                "pages": [
+                  {
+                    "title": "Create Verification of Payee (VOP) request",
+                    "path": "reference/createoutboundvop"
                   }
                 ]
               }
             ]
           },
           {
-            "group": "App Functionalities",
+            "group": "API Reference",
             "pages": [
               {
-                "title": "App sharing: Adding apps to multiple users",
-                "path": "docs/app-sharing-adding-apps-to-multiple-users"
+                "title": "Activate a physical card",
+                "path": "reference/activatecard"
+              },
+              {
+                "title": "Set up a Notification for a Customer",
+                "path": "reference/addcustomernotification"
+              },
+              {
+                "title": "Set up a new Webhook Notification Subscription for a Customer.",
+                "path": "reference/addcustomerwebhooknotificationsubscription"
+              },
+              {
+                "title": "Block a specific account",
+                "path": "reference/blockaccount"
+              },
+              {
+                "title": "Block an existing card",
+                "path": "reference/blockcard"
+              },
+              {
+                "title": "Bulk create customer custom field keys",
+                "path": "reference/bulkcreatecustomercustomfieldkeys"
+              },
+              {
+                "title": "Cancel the batch payment",
+                "path": "reference/cancelbatchpayments"
+              },
+              {
+                "title": "Bulk mandate cancellation request for the given account-id.",
+                "path": "reference/cancelbulkmandate"
+              },
+              {
+                "title": "Cancel an existing card",
+                "path": "reference/cancelcard"
+              },
+              {
+                "title": "Cancel a Direct Debit collection for the given collection-id.",
+                "path": "reference/cancelcollection"
+              },
+              {
+                "title": "Cancel a Direct Debit collection schedule for the given collection-id.",
+                "path": "reference/cancelcollectionschedule"
+              },
+              {
+                "title": "Cancel a specific Mandate",
+                "path": "reference/cancelddosmandate"
+              },
+              {
+                "title": "Cancel Mandate for given mandate-id.",
+                "path": "reference/cancelmandate"
+              },
+              {
+                "title": "Card enquiry",
+                "path": "reference/cardenquiry"
+              },
+              {
+                "title": "Channel Manager Card enquiry",
+                "path": "reference/channelmanagercardenquiry"
+              },
+              {
+                "title": "Channel Manager Create card ",
+                "path": "reference/channelmanagercreatecard"
+              },
+              {
+                "title": "Create a Webhook notification configuration",
+                "path": "reference/channelmanagercreatewebhooknotification"
+              },
+              {
+                "title": "Retrieve channel manager's card activities",
+                "path": "reference/channelmanagergetcardactivities"
+              },
+              {
+                "title": "Retrieve channel manager's cards",
+                "path": "reference/channelmanagergetcards"
+              },
+              {
+                "title": "Retrieve Webhook notification configuration",
+                "path": "reference/channelmanagergetwebhooknotification"
+              },
+              {
+                "title": "Retrieve Webhook notification configurations",
+                "path": "reference/channelmanagergetwebhooknotifications"
+              },
+              {
+                "title": "Retrieve Webhook notification configurations",
+                "path": "reference/channelmanagergetwebhooknotifications_1"
+              },
+              {
+                "title": "Channel Manager Replace card ",
+                "path": "reference/channelmanagerreplacecard"
+              },
+              {
+                "title": "Channel Manager download a specific card report",
+                "path": "reference/channelmanagerretrievereport"
+              },
+              {
+                "title": "Retrieve channel manager's card reports",
+                "path": "reference/channelmanagersearchcardreports"
+              },
+              {
+                "title": "Channel Manager Update card",
+                "path": "reference/channelmanagerupdatecard_1"
+              },
+              {
+                "title": "Channel Manager Update Card Custom Fields",
+                "path": "reference/channelmanagerupdatecardcustomfields"
+              },
+              {
+                "title": "Update a specific Webhook notification configuration for a Channel Manager",
+                "path": "reference/channelmanagerupdatewebhooknotification"
+              },
+              {
+                "title": "Close an account",
+                "path": "reference/closeaccount"
+              },
+              {
+                "title": "Confirm the availability of funds in an account.",
+                "path": "reference/confirmfunds"
+              },
+              {
+                "title": "Create a New Onboarding Application",
+                "path": "reference/createapplication"
+              },
+              {
+                "title": "Add an individual/associated entity to an Onboarding Application",
+                "path": "reference/createapplicationassociate"
+              },
+              {
+                "title": "Bulk request of Direct Debit mandates for the given account-id.",
+                "path": "reference/createbulkmandate"
+              },
+              {
+                "title": "Add a business entity to an Onboarding Application",
+                "path": "reference/createbusiness"
+              },
+              {
+                "title": "Create a new virtual card",
+                "path": "reference/createcard"
+              },
+              {
+                "title": "Create a standalone chargeback",
+                "path": "reference/createchargeback"
+              },
+              {
+                "title": "Chargeback an existing settlement",
+                "path": "reference/createchargebackforsettlement"
+              },
+              {
+                "title": "Reverse a chargeback",
+                "path": "reference/createchargebackreversal"
+              },
+              {
+                "title": "Create the collection schedule for the given mandate-id.",
+                "path": "reference/createcollectionschedule"
+              },
+              {
+                "title": "Simulate a credit authorisation",
+                "path": "reference/createcreditauthorisation"
+              },
+              {
+                "title": "Create a Direct Debit mandate for the given account-id.",
+                "path": "reference/createmandate"
+              },
+              {
+                "title": "Create an offline transaction",
+                "path": "reference/createofflinetransaction"
+              },
+              {
+                "title": "Simulate an original credit",
+                "path": "reference/createoriginalcredit"
+              },
+              {
+                "title": "Create an account name check for Direct Debit Payer",
+                "path": "reference/createoutboundcheckforpnv"
+              },
+              {
+                "title": "Initiate payment from ASPSP",
+                "path": "reference/createpaymentinitiation"
+              },
+              {
+                "title": "Endpoint to mock the credit of an account",
+                "path": "reference/createpayments"
+              },
+              {
+                "title": "Create a new physical card",
+                "path": "reference/createphysicalcard"
+              },
+              {
+                "title": "Resettlement of a chargeback",
+                "path": "reference/createresettlement"
+              },
+              {
+                "title": "Create a secure Customer Verification SDK Session",
+                "path": "reference/createsdkkey"
+              },
+              {
+                "title": "Create a settlement without prior authorisation",
+                "path": "reference/createsettlement"
+              },
+              {
+                "title": "Share secure card details via EMAIL or RETURN methods",
+                "path": "reference/createsharesecuredetails"
+              },
+              {
+                "title": "Deactivate card token",
+                "path": "reference/deactivatecardtoken"
+              },
+              {
+                "title": "Delete card report notification configuration for customer and report type",
+                "path": "reference/deleteallnotificationconfigurationsforagivencustomerandreporttype"
+              },
+              {
+                "title": "Delete card report notification configuration for partner and report type",
+                "path": "reference/deleteallnotificationconfigurationsforagivenpartnerandreporttype"
+              },
+              {
+                "title": "Delete beneficiaries for a specified customer",
+                "path": "reference/deletebeneficiaries"
+              },
+              {
+                "title": "Mark bulk request as deleted",
+                "path": "reference/deletebulkrequest"
+              },
+              {
+                "title": "Delete card custom field",
+                "path": "reference/deletecardcustomfield"
+              },
+              {
+                "title": "Delete customer custom field key",
+                "path": "reference/deletecustomercustomfieldkey"
+              },
+              {
+                "title": "Delete a Webhook Notification Subscription for a Customer using the Notification ID.",
+                "path": "reference/deletecustomerwebhooknotificationsubscription"
+              },
+              {
+                "title": "Delete partner custom field key",
+                "path": "reference/deletepartnercustomfieldkey"
+              },
+              {
+                "title": "Delete share secure card details",
+                "path": "reference/deletesharesecuredetails"
+              },
+              {
+                "title": "Delete all share secure card details for a card",
+                "path": "reference/deletesharesecuredetailscardlink"
+              },
+              {
+                "title": "Edit an account",
+                "path": "reference/editaccount"
+              },
+              {
+                "title": "Edit a specific customer using a unique customer reference",
+                "path": "reference/editcustomer"
+              },
+              {
+                "title": "Update a specific notification by unique reference for a specific customer",
+                "path": "reference/editcustomernotification"
+              },
+              {
+                "title": "Update a specific Webhook Notification Subscription for a Customer.",
+                "path": "reference/editcustomerwebhooknotificationsubscription"
+              },
+              {
+                "title": "Update a specific notification by unique reference for a specific partner",
+                "path": "reference/editpartnernotification"
+              },
+              {
+                "title": "[Restricted] Expire an existing authorisation",
+                "path": "reference/expireauthorisation"
+              },
+              {
+                "title": "Simulate a card expiry",
+                "path": "reference/expirecard"
+              },
+              {
+                "title": "Mark application as closed for modification",
+                "path": "reference/finaliseapplication"
+              },
+              {
+                "title": "Create secure card details token",
+                "path": "reference/generatecardholdertoken"
+              },
+              {
+                "title": "Get the latest status of multiple uploaded payment files",
+                "path": "reference/get-payment-files-statuses"
+              },
+              {
+                "title": "Get the customer-level summaries of multiple uploaded payment files",
+                "path": "reference/get-payment-files-summaries"
+              },
+              {
+                "title": "Get access group",
+                "path": "reference/getaccessgroup"
+              },
+              {
+                "title": "Get a list of access groups",
+                "path": "reference/getaccessgroups"
+              },
+              {
+                "title": "Get an account",
+                "path": "reference/getaccount"
+              },
+              {
+                "title": "Get accounts using filter",
+                "path": "reference/getaccounts"
+              },
+              {
+                "title": "Get accounts by customer",
+                "path": "reference/getaccountsbycustomer"
+              },
+              {
+                "title": "Get all Notifications for a Customer",
+                "path": "reference/getallcustomernotifications"
+              },
+              {
+                "title": "Get all Notifications linked directly to a Partner",
+                "path": "reference/getallpartnernotifications"
+              },
+              {
+                "title": "Get supported ASPSPs",
+                "path": "reference/getaspsproviders"
+              },
+              {
+                "title": "Get all associates for a customer",
+                "path": "reference/getassociatesbycustomer"
+              },
+              {
+                "title": "Get a card task",
+                "path": "reference/getasynctask"
+              },
+              {
+                "title": "Get batch payment by ID",
+                "path": "reference/getbatchpayment"
+              },
+              {
+                "title": "Get batch payments by a given set of parameters",
+                "path": "reference/getbatchpayments"
+              },
+              {
+                "title": "Retrieve beneficiaries",
+                "path": "reference/getbeneficiaries"
+              },
+              {
+                "title": "Get bulk cards by id",
+                "path": "reference/getbulkcardsinfo"
+              },
+              {
+                "title": "Get business entity for an Onboarding Application",
+                "path": "reference/getbusiness"
+              },
+              {
+                "title": "Get business addresses for an Onboarding Application",
+                "path": "reference/getbusinessaddresses"
+              },
+              {
+                "title": "View the details of an existing card",
+                "path": "reference/getcard"
+              },
+              {
+                "title": "View activities for specific cards or over a date range",
+                "path": "reference/getcardactivities"
+              },
+              {
+                "title": "View the details of existing cards",
+                "path": "reference/getcards"
+              },
+              {
+                "title": "View the details of existing cards by account",
+                "path": "reference/getcardsbyaccount"
+              },
+              {
+                "title": "Get card tokens",
+                "path": "reference/getcardtokens"
+              },
+              {
+                "title": "Get all collection activities of an account",
+                "path": "reference/getcollections"
+              },
+              {
+                "title": "Get all collectionschedules for a mandate",
+                "path": "reference/getcollectionschedules"
+              },
+              {
+                "title": "Get physical card create tasks by account",
+                "path": "reference/getcreatephysicalcardasynctasksbyaccount"
+              },
+              {
+                "title": "Retrieve a specific customer using a unique customer reference",
+                "path": "reference/getcustomer"
+              },
+              {
+                "title": "View existing customer card custom field keys",
+                "path": "reference/getcustomercustomfieldkeys"
+              },
+              {
+                "title": "Retrieve a specific notification by unique reference for a specific customer",
+                "path": "reference/getcustomernotification"
+              },
+              {
+                "title": "Retrieve customers using filters",
+                "path": "reference/getcustomers"
+              },
+              {
+                "title": "Retrieve a specific Webhook Notification Subscription for a Customer using the Notification ID.",
+                "path": "reference/getcustomerwebhooknotificationsubscription"
+              },
+              {
+                "title": "Get compliance documents uploaded for an application associate",
+                "path": "reference/getdocuments"
+              },
+              {
+                "title": "Retrieve failed Webhook Notifications for a Webhook using the Notification ID.",
+                "path": "reference/getfailedwebhooknotifications"
+              },
+              {
+                "title": "Check if a particular webhook has failed",
+                "path": "reference/getfailedwebhooks"
+              },
+              {
+                "title": "Get in-app provisioning data for Apple Pay",
+                "path": "reference/getinappprovisioningforapple"
+              },
+              {
+                "title": "Get an Indemnity Claim for a given id",
+                "path": "reference/getindemnityclaim"
+              },
+              {
+                "title": "Get Indemnity Claims based on search criteria",
+                "path": "reference/getindemnityclaims"
+              },
+              {
+                "title": "Retrieve locked beneficiary entities",
+                "path": "reference/getlocks"
+              },
+              {
+                "title": "Get Mandates based on search criteria.",
+                "path": "reference/getmandates"
+              },
+              {
+                "title": "Retrieve card report type notification configuration for customer",
+                "path": "reference/getnotificationconfigurationsforagivencustomerandreporttype"
+              },
+              {
+                "title": "Get card token OTP details",
+                "path": "reference/getotpdetails"
+              },
+              {
+                "title": "View existing partner card custom field keys",
+                "path": "reference/getpartnercustomfieldkeys"
+              },
+              {
+                "title": "Retrieve a specific notification by unique reference for a specific partner",
+                "path": "reference/getpartnernotification"
+              },
+              {
+                "title": "Get payment initiation request details",
+                "path": "reference/getpaymentinitiation"
+              },
+              {
+                "title": "Retrieve payments",
+                "path": "reference/getpayments"
+              },
+              {
+                "title": "Get Reconciliations based on search criteria.",
+                "path": "reference/getreconciliations"
+              },
+              {
+                "title": "Retrieve a Rule by rule type on a specific account",
+                "path": "reference/getrule"
+              },
+              {
+                "title": "Get all Rules for a specific Account",
+                "path": "reference/getrules"
+              },
+              {
+                "title": "Retrieve secure card details (PAN + CVV + PIN)",
+                "path": "reference/getsecurecarddetails"
+              },
+              {
+                "title": "Retrieve share secure card details",
+                "path": "reference/getsharesecurecarddetails"
+              },
+              {
+                "title": "Retrieve share details activity of token",
+                "path": "reference/getsharesecurecarddetailstokenactivity"
+              },
+              {
+                "title": "Get SRD Accounts",
+                "path": "reference/getsrdaccounts"
+              },
+              {
+                "title": "Get standing order initiation request details",
+                "path": "reference/getstandingorderinitiation"
+              },
+              {
+                "title": "Get VRP consent.",
+                "path": "reference/getvrpconsent"
+              },
+              {
+                "title": "Get Variable Recurring Payment",
+                "path": "reference/getvrppayment"
+              },
+              {
+                "title": "Create a VRP consent",
+                "path": "reference/initiateconsentcreation"
+              },
+              {
+                "title": "Edit a specific Rule",
+                "path": "reference/modifyrule"
+              },
+              {
+                "title": "Edit a customer",
+                "path": "reference/patchcustomer"
+              },
+              {
+                "title": "Perform an account status inquiry",
+                "path": "reference/performaccountstatusinquiry"
+              },
+              {
+                "title": "Create payments from an uploaded file",
+                "path": "reference/proceed"
+              },
+              {
+                "title": "Create payments from one or more uploaded files",
+                "path": "reference/proceed_1"
+              },
+              {
+                "title": "Create a card refund",
+                "path": "reference/refund"
+              },
+              {
+                "title": "Reject Collection",
+                "path": "reference/rejectcollection"
+              },
+              {
+                "title": "Delete a Rule",
+                "path": "reference/removerules"
+              },
+              {
+                "title": "Replace a card",
+                "path": "reference/replacecard"
+              },
+              {
+                "title": "Represent collection for given collection id",
+                "path": "reference/representcollection"
+              },
+              {
+                "title": "Reset card PIN",
+                "path": "reference/resetpin"
+              },
+              {
+                "title": "Retrieve all Mandates for an account",
+                "path": "reference/retrievemandates"
+              },
+              {
+                "title": "Retrieve PIN",
+                "path": "reference/retrievepin"
+              },
+              {
+                "title": "Download a specific card report",
+                "path": "reference/retrievepresignedreporturl"
+              },
+              {
+                "title": "Download a specific card report",
+                "path": "reference/retrievereport"
+              },
+              {
+                "title": "Reverse the card authorisation",
+                "path": "reference/reverseauthorisation"
+              },
+              {
+                "title": "Reverse a credit authorisation",
+                "path": "reference/reversecreditauthorisation"
+              },
+              {
+                "title": "Reverse an original credit",
+                "path": "reference/reverseoriginalcredit"
+              },
+              {
+                "title": "Revoke a VRP consent.",
+                "path": "reference/revokevrpconsent"
+              },
+              {
+                "title": "Retrieve card reports",
+                "path": "reference/searchreports"
+              },
+              {
+                "title": "Reset card PIN",
+                "path": "reference/secureresetpin"
+              },
+              {
+                "title": "Settle the full or partial card authorisation",
+                "path": "reference/settleauthorisation"
+              },
+              {
+                "title": "Get an upload file latest status",
+                "path": "reference/status"
+              },
+              {
+                "title": "Submit a business application for verification",
+                "path": "reference/submitapplication"
+              },
+              {
+                "title": "Submit an associate for verification",
+                "path": "reference/submitassociateforverification"
+              },
+              {
+                "title": "Make a batch payment",
+                "path": "reference/submitbatchpayments"
+              },
+              {
+                "title": "Submit bulk cards operations",
+                "path": "reference/submitbulkcardoperations"
+              },
+              {
+                "title": "Get paginated summaries of child file uploads",
+                "path": "reference/summaries"
+              },
+              {
+                "title": "[Restricted] Suspend an existing card",
+                "path": "reference/suspendcard"
+              },
+              {
+                "title": "Suspend card token",
+                "path": "reference/suspendcardtoken"
+              },
+              {
+                "title": "Toggled notifications for customer and card report type",
+                "path": "reference/togglenotificationsforagivencustomerandreporttype"
+              },
+              {
+                "title": "Toggle card report notification for partner and report type",
+                "path": "reference/togglenotificationsforagivenpartnerandreporttype"
+              },
+              {
+                "title": "Unbind a device from a card token",
+                "path": "reference/unbinddevice"
+              },
+              {
+                "title": "Unblock a specific account",
+                "path": "reference/unblockaccount"
+              },
+              {
+                "title": "Unblock an existing card",
+                "path": "reference/unblockcard"
+              },
+              {
+                "title": "Unblock PIN",
+                "path": "reference/unblockpin"
+              },
+              {
+                "title": "Unsuspend card token",
+                "path": "reference/unsuspendcardtoken"
+              },
+              {
+                "title": "Update a card",
+                "path": "reference/update"
+              },
+              {
+                "title": "Update access group",
+                "path": "reference/updateaccessgroup"
+              },
+              {
+                "title": "Update a business entity for an Onboarding Application",
+                "path": "reference/updatebusiness"
+              },
+              {
+                "title": "Create or Update a business address for an Onboarding Application",
+                "path": "reference/updatebusinessaddress"
+              },
+              {
+                "title": "Update card",
+                "path": "reference/updatecard"
+              },
+              {
+                "title": "Update card authentication",
+                "path": "reference/updatecardauthentication"
+              },
+              {
+                "title": "Update a card's custom fields",
+                "path": "reference/updatecardcustomfields"
+              },
+              {
+                "title": "Create or update customer identification information",
+                "path": "reference/updatecustomeridentificationinfosbycustomerid"
+              },
+              {
+                "title": "Create or update the department code for an associate",
+                "path": "reference/updatedepartmentforassociate"
+              },
+              {
+                "title": "Create or update identification document details for an associate",
+                "path": "reference/updateidentificationdocumentsdetailsforassociate"
+              },
+              {
+                "title": "Create or Update Know Your Customer Data for a Customer Application",
+                "path": "reference/updateknowyourcustomerbyapplicationid"
+              },
+              {
+                "title": "Update report type notification configuration for customer",
+                "path": "reference/updatenotificationconfigurationsforagivencustomerandreporttype"
+              },
+              {
+                "title": "Update report type notification configuration for partner",
+                "path": "reference/updatenotificationconfigurationsforagivenpartnerandreporttype"
+              },
+              {
+                "title": "Create or update an associate’s personal details",
+                "path": "reference/updatepersonalinformationforassociate"
+              },
+              {
+                "title": "Create or Update Personal Details for an Application Associate",
+                "path": "reference/updatepersonalinformationforassociate_1"
+              },
+              {
+                "title": "Set the secured funding limit for an account",
+                "path": "reference/updatesecuredfundinglimit"
+              },
+              {
+                "title": "Update share secure details",
+                "path": "reference/updatesharesecuredetails"
+              },
+              {
+                "title": "Create or update a customer’s tax identifiers",
+                "path": "reference/updatetaxidentifiersbycustomerid"
+              },
+              {
+                "title": "Create or update tax identifiers for an associate",
+                "path": "reference/updatetaxidentifiersforassociate"
+              },
+              {
+                "title": "Create or update the list of countries where an associate is considered tax-resident",
+                "path": "reference/updatetaxresidenciesforassociate"
+              },
+              {
+                "title": "Create or Update Tax Residency Information for an Application Associate",
+                "path": "reference/updatetaxresidenciesforassociate_1"
+              },
+              {
+                "title": "Uploads and stores documents associated with an existing customer record",
+                "path": "reference/upload_1"
+              },
+              {
+                "title": "Upload CSV file with bulk card operations",
+                "path": "reference/uploadbulkcards"
+              },
+              {
+                "title": "Upload an identity document or biometric selfie for an application associate",
+                "path": "reference/uploaddocument"
+              },
+              {
+                "title": "Submit an application for verification",
+                "path": "reference/verifyapplication"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Product Updates",
+        "groups": [
           {
-            "group": "OAuth 2.0",
+            "group": "Product Updates",
             "pages": [
               {
-                "title": "OAuth 2.0 overview",
-                "path": "docs/marketplace-oauth-api"
+                "title": "Your Modulr Product Update June 2026",
+                "path": "changelog/your-modulr-product-update-june-2026"
               },
               {
-                "title": "OAuth authorization",
-                "path": "docs/marketplace-oauth-authorization"
+                "title": "Your Modulr Product Update May 2026",
+                "path": "changelog/your-modulr-product-update-may-2026"
               },
               {
-                "title": "Scopes and permission explanations",
-                "path": "docs/marketplace-scopes-and-permissions-explanations"
+                "title": "Your Modulr Product Update January 2026",
+                "path": "changelog/your-modulr-product-update-january-2026"
               },
               {
-                "title": "State parameter",
-                "path": "docs/marketplace-oauth-authorization-state-parameter"
+                "title": "Your Modulr Product Update October 2025",
+                "path": "changelog/your-modulr-product-update-october-2025"
               },
               {
-                "title": "Getting user data",
-                "path": "docs/marketplace-getting-user-data"
+                "title": "Your Modulr Product Update September 2025",
+                "path": "changelog/your-modulr-product-update-september-2025"
               },
               {
-                "title": "Webhooks for apps",
-                "path": "docs/webhooks-for-apps"
+                "title": "ModConnect July 2025",
+                "path": "changelog/modconnect-july-2025"
               },
               {
-                "title": "Handling user app uninstallation",
-                "path": "docs/app-uninstallation"
+                "title": "ModConnect June 2025",
+                "path": "changelog/modconnect-june-2025"
               },
               {
-                "title": "OAuth status codes",
-                "path": "docs/marketplace-oauth-and-api-proxy-status-codes"
+                "title": "ModConnect May 2025",
+                "path": "changelog/modconnect-may-2025"
               },
               {
-                "title": "Migrating existing integration users",
-                "path": "docs/marketplace-migrating-existing-integration-users"
+                "title": "ModConnect April 2025",
+                "path": "changelog/modconnect-april-2025"
+              },
+              {
+                "title": "ModConnect Quarterly Round Up 1 2025",
+                "path": "changelog/modconnect-quarterly-round-up"
+              },
+              {
+                "title": "ModConnect- Quarterly Round Up 2024",
+                "path": "changelog/modconnect-quarterly-round-up-2024"
+              },
+              {
+                "title": "ModConnect- October 2024",
+                "path": "changelog/modconnect-october-2024"
+              },
+              {
+                "title": "ModConnect- September 2024",
+                "path": "changelog/modconnect-september-2024"
+              },
+              {
+                "title": "ModConnect- August 2024",
+                "path": "changelog/modconnect-august-2024"
+              },
+              {
+                "title": "ModConnect-July 2024",
+                "path": "changelog/modconnect-july-2024"
+              },
+              {
+                "title": "ModConnect- May 2024",
+                "path": "changelog/modconnect-may-2024"
+              },
+              {
+                "title": "ModConnect - April 2024",
+                "path": "changelog/modconnect-april-2024"
+              },
+              {
+                "title": "ModConnect - February 2024",
+                "path": "changelog/modconnect-february-2024"
+              },
+              {
+                "title": "ModConnect - January 2024",
+                "path": "changelog/modconnect-january-2024"
+              },
+              {
+                "title": "ModConnect - Quarterly Round Up",
+                "path": "changelog/modconnect-annual-round-up"
+              },
+              {
+                "title": "ModConnect - September 2023",
+                "path": "changelog/modconnect-september-2023"
+              },
+              {
+                "title": "ModConnect - August 2023",
+                "path": "changelog/modconnect-august-2023"
+              },
+              {
+                "title": "ModConnect - July 2023",
+                "path": "changelog/modconnect-july-2023"
+              },
+              {
+                "title": "ModConnect - June 2023",
+                "path": "changelog/modconnect-june-2023"
+              },
+              {
+                "title": "ModConnect – May 2023",
+                "path": "changelog/modconnect-may-2023"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Recipes",
+        "icon": "chef-hat",
+        "pages": [
           {
-            "group": "Tutorials and Articles",
-            "pages": [
-              {
-                "group": "Guide for Webhooks v2",
-                "pages": [
-                  {
-                    "title": "Guide for Webhooks v2",
-                    "path": "docs/guide-for-webhooks-v2"
-                  },
-                  {
-                    "title": "List of Webhooks v2",
-                    "path": "docs/list-of-webhooks-v2"
-                  }
-                ]
-              },
-              {
-                "title": "Webhooks v2 migration guide",
-                "path": "docs/webhooks-v2-migration-guide"
-              },
-              {
-                "title": "Guide for Webhooks",
-                "path": "docs/guide-for-webhooks"
-              },
-              {
-                "title": "Guide for optimizing API usage",
-                "path": "docs/guide-for-optimizing-api-usage"
-              },
-              {
-                "title": "Subscriptions API migration guide",
-                "path": "docs/subscriptions-api-migration-guide"
-              },
-              {
-                "group": "Tutorials",
-                "pages": [
-                  {
-                    "title": "Tutorials",
-                    "path": "docs/tutorials"
-                  },
-                  {
-                    "title": "How to find the API token",
-                    "path": "docs/how-to-find-the-api-token"
-                  },
-                  {
-                    "title": "How to get the company domain",
-                    "path": "docs/how-to-get-the-company-domain"
-                  },
-                  {
-                    "title": "Enabling API for company users",
-                    "path": "docs/enabling-api-for-company-users"
-                  }
-                ]
-              },
-              {
-                "title": "Working with labels",
-                "path": "docs/working-with-labels"
-              },
-              {
-                "title": "LeadBooster Browser API",
-                "path": "docs/leadbooster-browser-api"
-              },
-              {
-                "title": "FAQ",
-                "path": "docs/faq"
-              }
-            ]
+            "title": "HMAC Authentication",
+            "path": "recipes/hmac-authentication"
           }
         ]
       }

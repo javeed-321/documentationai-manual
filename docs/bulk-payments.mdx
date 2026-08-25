@@ -1,0 +1,23 @@
+---
+title: "Bulk payments"
+description: "Creating multiple single payments with a single file upload"
+---
+
+Creating multiple single payments with a single file upload
+
+Instead of creating single payments one-by-one, we've made it easier for you to create all of them in one bulk by using the [same batch payment endpoint](/reference/submitbatchpayments) `/batchpayments`
+
+To instruct the endpoint to treat the series of payments as individual payments instead of a batch, simply indicate the value of '_submissionType: bulk_' in your request body. If no value was provided when making the API call, the default value for _submissionType_ field is 'bulk'.
+
+**Default value fo&#x72;_&#x73;ubmissionType_**
+
+The default value for the _submissionType_ field is '_bulk_'. If you want to create a batch payment instead, you have to specify '_submissionType: batch_' in your request body when making the API call.
+
+**Default value fo&#x72;_&#x73;trictProcessing_**
+
+The default value for strictProcessing will depend on the value of submissionType.
+
+- When _submissionType_ is set to 'batch', strictProcessing will always be set to true
+- When _submissionType_ is set to 'bulk' or is not specified, _strictProcessing_ can take the value of true/false, depending on your preference.
+
+For more information on what strictProcessing and submissionType is, and what they do, please refer to the [endpoint documentation on our API guide](/reference/submitbatchpayments).

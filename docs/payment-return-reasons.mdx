@@ -1,0 +1,36 @@
+---
+title: "Returned Payments"
+---
+
+## Background
+
+Outbound payments can be returned to us for a variety of reasons.
+
+When outbound payments are returned to us, they are payments into our platform so we trigger sending the [PAYIN Webhook](/docs/payin-webhook).
+
+We are normally provided with the reason for the return in the form of a code, with each payment scheme having their own codes. So you can understand the reason why a payment was returned, we map these codes into a consolidated list of return reasons which we provide in the ReturnReason field of the PAYIN webhook.
+
+## Return Reasons
+
+The list of "Return Reasons" with a description as to what each Return Reason means is outlined below:
+
+| Return Reason      | Meaning                                                                                       |
+| :----------------- | :-------------------------------------------------------------------------------------------- |
+| ACCADDRESSINVALID  | The beneficiaries address was missing or invalid                                              |
+| ACCNOCURRENCY      | The account was not in the currency specified in the payment                                  |
+| ACCNOREFINFO       | The account could not be identified and requires information in the reference field to do so. |
+| ACCTRANSFERRED     | The account has been transferred to another provider                                          |
+| BENSCANUNKNOWN     | The account is unknown                                                                        |
+| BENACCCLOSED       | The account has been closed                                                                   |
+| BENACCNAMEBENACCNR | The beneficiaries name did not match that on the account                                      |
+| BENACCSTOPPED      | The account has been blocked                                                                  |
+| BENDECEASED        | The beneficiary is deceased                                                                   |
+| BENREQ             | At the request of the beneficiary                                                             |
+| BICINVALID         | The wrong BIC was supplied                                                                    |
+| DUPLICATE          | The payment was deemed to be a duplicate                                                      |
+| RECALL             | As the result of a successful recall request                                                  |
+| REGULATION         | A regulatory requirement was not met                                                          |
+| SENDERREQ          | At the request of the sender                                                                  |
+| SENSITIVITIES      | No reason specified due to sensitive nature                                                   |
+| TANDC              | The terms & conditions of the account prevented the payment being credited                    |
+| OTHER              | The precise reason cannot be ascertained                                                      |

@@ -1,0 +1,48 @@
+---
+title: "PIN Management"
+---
+
+This section explains how PIN codes operate and how they should be managed for your physical cards programme
+
+## Offline and Online PIN
+
+Anyone who is new to card issuing will need to learn that each physical card has 2 PIN codes:
+
+- Offline PIN - which is stored on the card chip and can be read without the card reader going online. Most stores will check PIN value on the chip as opposed to going online
+- Online PIN is not stored on the card. An encrypted PIN can be sent online to the host for validation against the latest value. The are some merchants using card readers which go online to check the PIN. ATMs always check this value
+
+When the card is first created, both Online and Offline PIN match, but you need to be aware of the process and limitations behind the PIN changes.
+
+## Retrieving and passing the PIN to the Cardholder
+
+PIN value can be retrieved and passed to the cardholder via [Retrieve PIN](/reference/retrievepin) endpoint (if you are PCI DSS compliant) or by the cardholder directly via [Retrieve secure card details](/docs/retrieve-secure-card-details) mechanism.
+
+<Callout kind="info">
+  **Please note that you will always get back the Online PIN value**
+
+  If the PIN has been changed via the API, but the card has not been yet used at the terminal which goes online to check the PIN (or ATM), the PIN on the chip (Offline PIN) will remain unchanged. It is not possible to retrieve the Offline PIN value via APIs
+</Callout>
+
+## Changing PIN
+
+Online PIN value can be changed via [Reset card PIN](/reference/resetpin) endpoint (if you are PCI DSS compliant), via [Secure Reset card PIN](/reference/secureresetpin) endpoint if you are using the [Retrieve secure card details](/docs/retrieve-secure-card-details) solution or at ATM.
+
+When the card is then used at a terminal which goes online to check for PIN, it will update the Offine PIN on the chip as part of the Chip and PIN transaction. Please note that all ATMs always go online, hence changing the PIN at ATM or using ATM after the PIN change via API is guaranteed to update both Online and Offline PIN values at the same time.
+
+<Callout kind="alert">
+  **New PIN may not work straight away!**
+
+  Note that not many merchants will use devices which go online to check the PIN - a large number of them will simply read the value on the chip (Offline PIN). This means that if (Online) PIN has been changed via API, the cardholder may still get an invalid PIN error if they then try to use the new value with a merchant.
+
+  If that happens, they either need to enter the OLD PIN for that transaction, after which a new PIN will be then loaded on the card, find a merchant which does Online PIN verification or use the card at any ATM before attempting a transaction with a new PIN in store.
+</Callout>
+
+## Blocked PIN management
+
+Both PINs can be blocked **independently** of each other. If the cardholder has entered the PIN wrong 3 times in a row with a merchant who does Offline PIN checks, the PIN on the chip will be then blocked. Note that the Online PIN will remain active and there is no way for you to know whether the Offline PIN is currently blocked.
+
+**To unblock the Offline PIN, the cardholder should:\&#xA;**\
+Option 1. Use PIN Unblock option at ATM. Correct Online PIN should be entered\
+Option 2. Use the card via EMV Chip and PIN transaction on the device which does Online PIN check. If the Online PIN has been entered correctly, the Offline PIN will be automatically unblocked
+
+If the cardholder has entered the PIN wrong 3 times in a row with a merchant who does Online PIN checks, the Online PIN will then be blocked. Transactions will then be declined with the reason "DR: Online PIN try limit exceeded". To unblock the Online PIN, the [Unblock PIN](/reference/unblockpin) call should be made before then proceeding to any of the options listed above.

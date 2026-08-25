@@ -1,0 +1,82 @@
+---
+title: "API Integration overview"
+---
+
+**Below is a brief overview of the API's available for Card creation and management\&#xA;**\
+[Create a new card](/reference/createcard) API endpoint should be used to create new _Virtual_ cards. You will notice that the URL is referencing an account identifier, as all cards are created under a specified account.
+
+<Callout kind="info">
+  Note that the process to create Physical cards is [different](/docs/physical-cards-overview) and that an additional [activation](/reference/activatecard) step is also required before the physical card can be used
+</Callout>
+
+<Callout kind="danger">
+  **Card Expiry Date**
+
+  Cards can be created with the expiry date ranging from one month (to the end of **next** month) to 5 years. It is important to know that where card expiry is being set as shortest possible value (i.e. next month), that a **BST timezone must be used** to determine the card expiry value to avoid card failures during the summertime period. i.e. Cards created between 23:00 - 00:00 UTC time on 30th September (which is already 1st of October in BST), must have an expiry set as November same year or later.
+</Callout>
+
+<Callout kind="info">
+  **Cancellation Date**
+
+  Cards are able to be created with a specific cancellation date, this is an optional requirement and if utilised  must be set before the expiry date.
+
+  Cards that have a cancellation date set will automatically cancel at 00:00 UTC on the day specified.
+</Callout>
+
+<Callout kind="info">
+  **Authorisation Window**
+
+  Authorisation Windows is an optional field that provides cardholders with the ability to define specific time periods during which their cards can be used to make transactions. This feature enhances security and control over card usage by allowing customers to align transaction capabilities with their individual needs or spending habits.
+
+  Both the Start Date and the End Date are optional fields however, please note:
+
+  - If both dates are selected then transactions are only allowed in this time frame, any that are requested outside of this will be declined
+  - If no Start Date supplied then the card will be available to transact on from the time the card is in an ACTIVE state
+  - If no End Date supplied the the card will be available to transact on until the cancellation date or expiry date, which ever is first
+  - If no dates entered then card will operate as normal
+
+  **Note** - Account Status Inquiry's (ASI's) will still be allowed outside the Authorisation Window
+</Callout>
+
+**You can retrieve information on existing cards via one the following API's\&#xA;**\
+[View the details of an existing card](/reference/getcard) - This will return a single card by CARD ID\
+[View the details of existing cards by account](/reference/getcardsbyaccount) - This will return details (array of) of all cards created under a specific account.\
+[View card activities](/reference/getcardactivities) API can be used for one of the following use-cases:
+
+1. View activities for a specific list of cards over a date range. Last 7-day limit applies; must specify "fromCreatedDate" and "toCreatedDate"
+2. View activities for all cards created under a specific list of accounts over a date range. Last 7-day limit applies; must specify "fromCreatedDate" and "toCreatedDate"
+3. View all activities for a single card (all activities since card inception). Must only specify a single Card ID value; no time limit will apply if both "fromCreatedDate" and "toCreatedDate" values are not set
+
+<Callout kind="info">
+  Example output of this API can be found here: [Example Card Activities (API response)](/docs/example-card-activities-api-response)
+</Callout>
+
+**Managing your cards\&#xA;**\
+Cards can be Blocked using [Block an existing card](/reference/blockcard) and then unblocked using [Unblock an existing card](/reference/unblockcard) endpoints.\
+To Cancel the card you should use [Cancel an existing card](/reference/cancelcard) endpoint. More details on how those actions affect card statuses can be found on the [Card Lifecycle](/docs/card-lifecycle) page
+
+Cards can be Updated using [Update a card](/reference/update) endpoint. Information which can be updated is:
+
+1. Cardholder details (Name, Address, DOB, Phone Number)
+2. Card Limit (Increased or decreased. Minimum and Maximum values apply)
+3. Cancellation Date (removed and amended)
+4. Authorisation Window (removed and amended)
+
+If the cardholder has entered his CVC2/CVV2 wrong 3 times in a row, that card will no longer be accepted for any e-commerce transactions. In that case, [PIN Unblock call](/reference/unblockpin) can also be used to unblock CVC2/CVV2
+
+**Physical Card management\&#xA;**&#x54;here are a number of API endpoints which are only applicable to managing Physical Card types:
+
+1. Status of physical card creation can be monitored using [get physical card create tasks by account endpoint](/reference/getcreatephysicalcardasynctasksbyaccount)
+2. To get a PIN, you should use [Retrieve PIN endpoint](/reference/retrievepin)
+3. In case of PIN being entered wrong 3 times in a row, it can be then unblocked using [PIN Unblock endpoint](/reference/unblockpin)
+
+**Restricted Endpoints\&#xA;**\
+There are some endpoints which are classified as "restricted". Those endpoints cannot be accessed with default permissions and will be enabled on a customer by customer basis.
+
+[\[Restricted\] Suspend an existing card](/reference/suspendcard)  and [\[Restricted\] Unsuspend a card](/reference/unsuspendcard) endpoints are used to Suspend the card while there is an ongoing fraud investigation. This functionality is primarily used by customers who use own fraud monitoring platforms.
+
+[\[Restricted\] Expire an existing authorisation](/reference/expireauthorisation) endpoint can be used to release funds held by the authorisation before it expires. Releasing authorisation early may result in account overspent, therefore, this should only be used when there is the certainty of authorisation not clearing.
+
+<Callout kind="info">
+  Full API details can be found here: [Cards](/reference/cards)
+</Callout>

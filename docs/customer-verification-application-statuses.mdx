@@ -1,0 +1,59 @@
+---
+title: "Customer Verification: Application Statuses"
+---
+
+An application moves through a defined set of statuses as it progresses through the customer verification process. Your webhook handler must be able to process all of these states.
+
+---
+
+## Status reference
+
+| Status            | Description                                                                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NEW`             | Application created. The customer has not yet started entering data.                                                                                           |
+| `IN_PROGRESS`     | The customer has started providing data but has not yet submitted.                                                                                             |
+| `SUBMITTED`       | The customer's application has been submitted and is awaiting a result of `APPROVED`, `PENDING_STEP_UP`, `MANUAL_REVIEW` or `DECLINED`.                        |
+| `PENDING_STEP_UP` | The customer submitted their initial application, but Modulr's CDD orchestration platform or CDD Operations team has requested further information to proceed. |
+| `MANUAL_REVIEW`   | All information required for a manual decision has been received. May result in `APPROVED`, `PENDING_STEP_UP`, or `DECLINED`.                                  |
+| `APPROVED`        | Application approved. A Customer ID has been issued and accounts can be created.                                                                               |
+| `DECLINED`        | Application declined. The customer will not receive access to Modulr products.                                                                                 |
+| `EXPIRED`         | A `NEW` or `IN_PROGRESS` application has been open beyond Modulr's expiry threshold. The customer must start a new application from scratch.                   |
+
+---
+
+## Typical status flows
+
+**Straight-through (automated approval)**
+
+`NEW` > `IN_PROGRESS` > `SUBMITTED` > `APPROVED`
+
+**Step-up required (automated approval)**
+
+`NEW` > `IN_PROGRESS` > `SUBMITTED` > `PENDING_STEP_UP` > `APPROVED`
+
+**Manual review with step-up (manual approval)**
+
+`NEW` > `IN_PROGRESS` > `SUBMITTED` > `MANUAL_REVIEW` > `PENDING_STEP_UP` > `MANUAL_REVIEW` >`APPROVED`
+
+---
+
+## What to do for each status
+
+`IN_PROGRESS` - No action required. Store the status against your customer record.
+
+`PENDING_STEP_UP` - Notify your customer that further information is needed. Re-invoke the SDK (Steps 5-8 of the integration guide) using the same `applicationId`. The SDK will surface the specific step-up requirements automatically.
+
+`MANUAL_REVIEW` - No action required. Modulr's CDD Operations team is reviewing the application. Monitor for the next status change.
+
+`APPROVED` - Await the `CUSTOMER_CREATED` webhook to receive the `customerId` and proceed with account creation.
+
+`DECLINED` - The customer will not be onboarded. Notify them appropriately.
+
+`EXPIRED` - The customer must restart. Create a new application via `POST /applications`.
+
+---
+
+## Related
+
+- [Integration Guide](/docs/customer-verification-integration-guide)
+- [Webhook - Application Status Change](/docs/webhook-application-status-change)

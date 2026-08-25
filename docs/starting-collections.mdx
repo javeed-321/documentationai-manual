@@ -1,0 +1,295 @@
+---
+title: "Starting Collections"
+---
+
+## Collection Schedule
+
+The Collection Schedule is used to hold the information on the payment’s frequency, the payment amount, and currency. For example, a Collection Schedule can be set up to collect £100 on 15th of every month for the next 12 months. Modulr will then automatically create individual Collections to receive payments as per the schedule. Collection Schedules can also be set up to collect a one-off payment.
+
+Collection Schedules can be set up to collect a certain amount as a first payment and a different amount as the regular recurring payment. For example, you can specify that the first payment is for £200 on 20th April, and the regular recurring payments should be on a monthly basis for of £100 to be collected on the 1st of every month. The regular recurring amount needs to be for the same amount. If the collection amount will vary then a new Collection Schedule needs to be made for each collection. Please note that every time a new single collection is requested the Payer needs to be notified of this new amount; this is something you will need to make sure happens as it is a rule of the Direct Debit scheme.
+
+For details on all the parameters needed for the POST /mandates/id/collectionschedules endpoint the documentation is here: [Create a scheduled collection](/reference/createcollectionschedule)
+
+**Advance Notice**
+
+At least 3 working days’ Advance notice must be given by our Partner to their customers before the first Direct Debit is collected in the form of an email.
+
+Advance notice must be given before the first collection but is not required for subsequent collections. Advance notice must also be given if the Service User makes any changes to the Direct Debit amount, due date or frequency. The timescale of this communication, or advance notice period, must adhere to what was originally advised in the Direct Debit Guarantee, and must also be delivered by the method of communication as advised to the Payer. For re-presentable collections, no advance notice is needed again.
+
+[Contact us](https://www.modulrfinance.com/contact-us) to get the BACS' guidelines on the UI for signing up new customers and Advance Notices for Direct Debit.
+
+## Core Referencing
+
+When creating the collection schedule, an additional optional parameter `collectionReference` can be included which will be suffixed to the mandate reference on collection requests. This change makes it easier for payers to identify corresponding debits on their account when using a mandate (DDI) for multiple purposes.
+
+Each collection can now have a core reference inherited from the Mandate (DDI) and separate suffix, allowing the collection of multiple Direct Debit agreements under the same mandate and on the same day.
+
+The `collectionReference` and core mandate reference combined can be up to a maximum of 18 characters.
+
+_**Examples**_
+
+A schedule is set up using`collectionReference -JUNE 24`for a mandate with reference `GB/1234LT`. The Direct Debit is collected with a combined reference `GB/1234LT-JUNE 24`.
+
+Multiple one-off schedules are set up with invoice numbers for a  mandate with ‘core’ reference `GG/567998` . Using collectionReference of `INV1298` or `INV4578` results  in DD Collections with `GG/567998-INV1298` and `GG/567998-INV4578` respectively.
+
+## Collection Request
+
+**New mandate and first collection** The diagram below displays the flow from Mandate creation when a payer signs up for a Direct Debit through to collection. It gives a high-level overview of the process with the shortest timeline needed to do a first collection including the returns (ARUDD) process. Note: customer communications on the Direct Debit not illustrated - the Advance Notice must be given to the payer ahead of the first collection.
+
+Included in the diagram are the mandate creation, collection schedule, main collection and returns (ARUDD) cycles. Funds from successful collections should only be withdrawn from the collection account on Day 5 of the collections cycle when the Collection Schedule status is "SUCCESSFUL"
+
+<Image src="https://files.readme.io/96ce028831c5149fedc9aca3bbf9c57325f8679bc4a0838c87fee8c67967efaa-DD_Collections_cycle_at_Modulr.drawio.png" alt="DD Collections cycle at Modulr drawio" caption=" " />
+
+**Existing mandate and new collection** For existing mandates and collection schedules, the Partner can be assured that Modulr will create and send the collection request two working days before the collection date. The Partner does not have to do anything else and the timeline is shorten because of an existing mandate on a customer's account.
+
+<Image src="https://files.readme.io/801f143-DD_Collection_Process.png" alt="DD Collection Process" caption=" " />
+
+## Timeline of events for Collections
+
+_Note: Timings are current UK Timezone GMT/BST as appropriate_
+
+**Happy Path**
+
+Day 1:
+
+1. The Collection Schedule triggers Collection request to start the process of collecting funds from the Partner’s customer.
+2. Modulr generates a file that includes collection amount from the customer.
+3. Modulr’s cut-off time is at 3:30PM, as Modulr needs to transform the file into a format accepted by BACS. The status changes to “**Processing**”.
+4. At 5:10PM, Modulr sends the file to the Scheme
+5. Collection Schedule creates a collection request for the next due date.
+
+Day 2:
+
+1. The Paying bank receives the collection request from the Scheme.
+2. Modulr sends the [Webhook - Upcoming Collection Credit](/docs/webhook-direct-debit-ddcollectionstatus) at 4:45PM to tell the Partners that funds will arrive in their account tomorrow.
+
+Day 3: The funds are debited from the Paying bank regardless if the customer has any sufficient funds or not.
+
+1. Modulr receives the funds from the Paying Bank and transfers the funds into the Partner's account at 03:00 AM to 07:00AM.
+2. When Modulr credits the funds into the Partner's account, we send the [PayIn Webhook](/docs/payin-webhook) to notify them.
+
+Day 5:
+
+1. Modulr sets the collection's status to "Success", if the collection does not receive an [ARUDD](https://www.bacs.co.uk/Services/bacsschemes/directdebit/services/Pages/Services.aspx#:~:text=ARUDD%20is%20the%20automated%20system,return%20unpaid%20Direct%20Debit%20payments.)(Automated Return of Unpaid Direct Debits Service).
+
+<Image src="https://files.readme.io/3ceaced-New_Mandate_and_Collection-New_Collection_-_Happy_3.jpg" alt="New Mandate and Collection New Collection Happy 3" caption=" " />
+
+**Unhappy Path** ARUDDs are messages to tell Modulr that a collection was unsuccessful due to a variety of reasons (i.e. Insufficient funds, no DDI, and more). It will trigger the process of returning funds to the Paying bank on Day 4 and Day 5.
+
+Day 3:
+
+1. Modulr receives the funds from the Paying Bank and transfers the funds into the Partner's account at 03:00 AM to 07:00AM.
+2. When Modulr credits the funds into the Partner's account, we send the [Webhook - Inbound Payments](/docs/payin-webhook)  to notify them.
+3. The Paying bank generates an ARUDDs file against a collection and sends the file to the Scheme.
+
+Day 4:
+
+1. The scheme processes the ARUDD file and tells Modulr that a collection has an ARUDDs.
+2. Modulr sends [Webhook - Direct Debit, DD Collection Status](/docs/webhook-direct-debit-ddcollectionstatus) to our Partner informing them of the failed collection at 10:15 AM.
+
+Day 5:
+
+1. Modulr debits the Partner's account and returns the amount to the Paying bank. The collection’s status is “Failed”.
+
+**Late Unhappy Collections** In the vast majority of cases, the Paying Bank sends an ARUDD on Day 3. However, in a minority of cases they send the ARUDD on Day 4. The process will be similar to the unhappy collection but will start at **Day 4** where the Paying bank generates the file and sends to the scheme and so on.
+
+<Image src="https://files.readme.io/ba28de0-New_Mandate_and_Collection-New_Collection_-_Unhappy_Path_4.jpg" alt="New Mandate and Collection New Collection Unhappy Path 4" caption=" " />
+
+**Updates on Collection progress** Modulr provides a [GET /collections endpoint](/reference/getcollections) which will give the Partner a list of collection activities related to an account, these will account for collections and any indemnities.
+
+## Collection Statuses
+
+- **Scheduled** - Collection Request is created and waiting to be sent to BACS.
+- **Processing** - Collection Request has been sent to BACS.
+- **Success** - Collection has not received an ARUDDs and on Day 5, we consider them a successful collection.
+- **Cancelled** - Partner cancels the collection request.
+- **Failed** - Partner cancels the collections request or collection is failed because the reason was not representable.
+- **Representable** - Upon receiving an ARUDDs, BACS tells Modulr if the collection can be retried.
+- **Represented** - Partner retries on a representable collection.
+
+\_Representable means a failed collection can be retried following the scheme representment guidance (see below)
+
+## APIs and Webhooks related to Collections
+
+<Image src="https://files.readme.io/245c0f5-collection_api_flow.png" alt="Collection api flow" caption=" " />
+
+**Create Collection Schedule API** - [https://modulr.readme.io/reference/createcollectionschedule](/reference/createcollectionschedule) **Get All Collection Schedule API** - [https://modulr.readme.io/reference/getcollectionschedules](/reference/getcollectionschedules) **Get All Collection Activities of an account API** - [https://modulr.readme.io/reference/getcollections](/reference/getcollections) **Cancel Collection Request API** - [https://modulr.readme.io/reference/cancelcollection](/reference/cancelcollection)
+
+**PAYIN Webhook** - [https://modulr.readme.io/docs/payin-webhook](/docs/payin-webhook) **UPCOMINGDDCOLLECTIONCREDIT Webhook** - [https://modulr.readme.io/docs/upcomingddcollectioncredit-webhook](/docs/upcomingddcollectioncredit-webhook) **DDCOLLECTIONSTATUS** - [https://modulr.readme.io/docs/webhook-direct-debit-ddcollectionstatus](/docs/webhook-direct-debit-ddcollectionstatus)
+
+## Representment of unpaid Direct Debits
+
+A Direct Debit that has been returned unpaid with a status of **Representable** may be retried using the [represent collection ](/reference/representcollection)endpoint. There are specific scheme rules about the ability to represent and process in the Service Users Guide and Rules to the Direct Debit Scheme that must be followed - see extract below:
+
+_Re-presentation of an unpaid Direct Debit may continue for__**one month**\*\* from the date on which first presentation was made._
+
+_Rule: If payment has not been made within this period, the service user must make other arrangements directly with the payer for collecting the amount due or give advance notice of the new collection date and amount. Refer to section 4B ‘Advance notice’.f the Service Users Guide and Rules to the Direct Debit Scheme]\_&#xA;_
+
+_Guidance:_
+
+- _If a Direct Debit is returned unpaid by the paying PSP it is recommended that the service user should liaise with the payer to offer a new collection date. A service user should give at least 5 working days’ notice to the payer of the new collection date_
+- _If the Direct Debit has been returned for the reason ‘refer to payer’ then additional advance notice is not mandatory but is recommended._
+
+Following these rules, it is only practical to represent an unpaid Direct Debit 3 times (following the initial collection attempt) within the one month limit.
+
+## Sandbox
+
+**Creating your first mandate on the Sandbox** Once set up, the first logical step is to try to use the POST /accounts/\{id}/mandates endpoint to [create a mandate](/reference/createmandate). Typically, when you have built your user interface, your app will be using this endpoint to send through the information to Modulr that was entered by your customers in your mandate form.
+
+Please note that reference for each mandate needs to be provided. This will be the reference lodged with BACS scheme.
+
+Reference field requirements are:
+
+- Must be between 6 and 10 characters long, inclusive. May only contain alphanumeric characters.
+- Must be unique.
+- Only upper case characters are allowed, so any alphabetic characters supplied in this string will be converted to upper case before processing.
+
+Once set up with access to Sandbox, you will be able start looking at integrating with the Modulr Direct Debit Collection endpoints.
+
+To arrive at this point we assume you have:
+
+- Been onboarded as a customer on Sandbox. As part of this have a collection account set up as well as a general account and users set up that can access Direct Debit Collections. For help [contact us](https://www.modulrfinance.com/contact-us).
+- Worked out how to securely connect to the Modulr API using the credentials you received in the onboarding process.
+
+**Mocking collection activity** Since there are no actual collections on Sandbox, there needs to be some way to test the integration. In order to achieve this we have a Sandbox-only endpoint, POST /external-services-mock/collections, that allows you to add the required collections and then call GET /collections to retrieve the expected collection activity.
+
+An example would be that a request using POST /external-services-mock/collections, such as:
+
+```json
+[   
+    {
+      "activityDate": "2020-06-25",
+      "amount": 50.00,
+      "collectionScheduleBid": "Q120026P",
+      "customerReference" :  "DDI12347",
+      "originalActivityDate": "2020-06-25",
+      "reconciliationReference" : 14,
+      "reconciliationDate" : "2020-06-25",
+      "status" : "H",
+      "type": "COLLECTION",
+      "payerName": "Arakere"
+    }
+]
+```
+
+**Things to note:** The dates in the call should be tomorrow's date, or date for which you will attempt to GET collections. We process mocked collections on daily schedule. I.e. if you create a mock call today, you will be able to retrieve the collections through the GET call tomorrow.
+
+Please note:
+
+- There can only be 1 collection for a given combination of **activityDate** & **customerReference**
+- **collectionScheduleBid** should be a valid schedule ID ("Q Id"), in a format of Qxxxxxxx
+- **customerReference** should be a valid mandate customer reference and mandate should be ACTIVE
+- **status:** Valid statuses are “H” Success, “F” Failed
+- **activityDate** must be the **currentDate**, if the GET call has to return the collection
+
+The aforementioned POST request would then produce, when calling GET /collections, the following response:
+
+```json
+{
+      "activityDate": "2018-01-09",
+      "amount": 100,
+      "collectionScheduleId": "Q9200001",
+      "mandateId": "G0000001",
+      "message": "Instruction Cancelled",
+      "originalActivityDate": "2021-01-09",
+      "payerName": "Mr John Doe",
+      "reconciliationDate": "2021-01-09",
+      "reconciliationReference": "2021-01-09",
+      "status": "FAILED",
+      "type": "COLLECTION"
+}
+```
+
+<Callout kind="info">
+  **Sandbox and Direct Debit collection endpoints**
+
+  Please note that in the Sandbox environment we do not connect to the Direct Debit scheme, as this is just a test environment. In Sandbox we do offer the ability to use all the endpoints available in our production environment, but some of these need to have data set up by you prior to using them. How to do this is detailed below.
+</Callout>
+
+## FAQs
+
+<Callout kind="info">
+  **How are returned direct debits treated?**
+
+  If there is a collection failure due to any reason (such as insufficient funds), you will know the next working day via [Webhook - Direct Debit, DD Collection Status](/docs/webhook-direct-debit-ddcollectionstatus) after the funds has been credited to your account.
+
+  On rare occasions, you might be made aware of a rejected one more day later. This is referred to as a "late cancellation" and is deemed an exceptional scenario, but one that the BACS scheme allows to happen. The funds of that return will be deducted from the settlement account.
+</Callout>
+
+<Callout kind="info">
+  **There is no longer any paperwork involved, this is all automated. Correct?**
+
+  Absolutely!
+</Callout>
+
+<Callout kind="info">
+  **What are the timelines of Mandate and Collection creation?**
+
+  Please see the image above (A Mandate takes 4 working days to set up from the time the API call is posted on the Modulr platform. A collection can happen at the soonest 2 days after requested on the platform. Therefore the first collection can be a minimum of 6 working days from the Mandate request.)
+</Callout>
+
+<Callout kind="info">
+  **Can we submit Direct Debit requests via file?**
+
+  That is not a supported method (You can build a UI that enables the upload of a file that then parses it, and then connects to our API if you like, but Modulr will not support the UI.
+</Callout>
+
+<Callout kind="info">
+  **When are collection funds available in the Modulr collection account?**
+
+  We credit the funds into the Partner's account after two working days from the collection request (Day 3 of the Bacs cycle).
+
+  **Note: These funds are still subject to potential Automated Return of Unpaid Direct Debit (ARUDD) and must** not \*\*be removed from the account until end of day 4 working days from the collection request (Day 5 of the Bacs cycle) unless specifically agreed with Modulr.
+</Callout>
+
+<Callout kind="info">
+  **What types of checks are needed/guarantees required to be a DD customer?**
+
+  There is an application process, where any specific collateral (reserve) requirements and limits are set, and the Service User must sign a Indemnity deed. There is a separate onboarding process where your Direct Debit collection experience is verified and a SUN is provided.
+</Callout>
+
+<Callout kind="info">
+  **How do I get notification of cancelled or amended collections?**
+
+  As part of the activity is response to GET /collections
+</Callout>
+
+<Callout kind="info">
+  **Can we transfer our current SUN?**
+
+  We can work with your current provider to transfer ownership of the SUN. If we can't transfer ownership of your existing SUN to Modulr, we can set up one of our own SUNs and migrate your existing Direct Debit Instructions over.
+</Callout>
+
+<Callout kind="info">
+  **What is the indemnity claim challenge  process?**
+
+  If you are a Service User with contacts on the Bacs Payment Services website (PSW) you will be notified of Direct Debit Indemnity Claims (DDIC) via this channel & can manage challenges here.
+
+  If Modulr is the service user on you behalf, you should contact Modulr customer services (after having found out about the indemnity via email) to challenge the claim. Modulr will then pass on to the Direct Debit scheme.
+
+  A Direct Debit Indemnity claim can be challenged in certain circumstances by providing evidence to refute the claim, this must be done within 10 days of the claim being received. If successful the claim will be cancelled by the paying PSP; their decision is final on any DDIC challenge.
+</Callout>
+
+<Callout kind="info">
+  **Is the Direct Debit collection account only able to be used for Direct Debit collections?**
+
+  Technically the account is a Faster Payments account that has the Direct Debit collection product added to it, and the collection payments are actually Faster Payments. Also payments out would be Faster Payments and can be made as needed. Payments in should be restricted to DD collections as otherwise other payments will confuse any reconciliation. If you need another way to get funds, e.g. for customers to make non DD ad-hoc payments, then you should create other accounts for that purpose (ideally one per one of your customers).
+</Callout>
+
+<Callout kind="info">
+  **Are custom schedules (different amounts per collection) available?**
+
+  Yes, but not in the same collection schedule; to collect a different amount you will need to set up a new scheduled collection (with "ONCE" frequency) for each different amount under the same mandate.&#x20;
+</Callout>
+
+<Callout kind="info">
+  **How do you handle retries?**
+
+  If a collection fails for a reason that can be retried (e.g. Refer to payer), the transaction status will be updated to REPRESENTABLE and notified the [Webhook - Direct Debit, DD Collection Status](/docs/webhook-direct-debit-ddcollectionstatus). A transaction with this status can be resubmitted using the /[represent ](/reference/representcollection)endpoint - the Direct Debit scheme rules must be followed. Practically as representation should only take place up to one month from the original collection date, this allows for a maximum of 3 representations (allowing for notice)
+</Callout>
+
+<Callout kind="info">
+  **When does collection activity get updated?**
+
+  We get activity updated at 10:30AM every working day.
+</Callout>
