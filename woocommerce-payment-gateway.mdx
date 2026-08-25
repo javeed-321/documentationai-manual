@@ -1,0 +1,100 @@
+---
+title: WooCommerce Payment Gateway
+description: >-
+  Install and configure the WooCommerce Payment Gateway addon to accept trip
+  payments through WooCommerce-supported gateways in WP Travel Engine.
+type: guide
+---
+## Overview
+
+With the [WooCommerce Payment Gateway addon](https://wptravelengine.com/plugins/woocommerce-payments/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro), you can accept trip payments through various WooCommerce-supported gateways.
+
+This guide walks you through addon installation, setup, and initial configuration.
+
+### Requirements
+
+To use this payment gateway, you need:
+
+- WP Travel Engine plugin version 5.4.0 or later.
+- WooCommerce version 6.4 or later.
+- WP Travel Engine – WooCommerce Payment Gateway version 1.1.1 or later.
+
+## How to install the WooCommerce Payment Gateway addon
+
+<Callout kind="info">
+  See [how to activate the Pro addon license key](https://docs.wptravelengine.com/article/activate-pro-addon-license-key/) for instructions on installing and activating the plugin.
+</Callout>
+
+<Callout kind="alert">
+  To use the WooCommerce Payment Gateway in WP Travel Engine, you must first install the [WooCommerce plugin](https://wordpress.org/plugins/woocommerce/).
+</Callout>
+
+## How to configure the WooCommerce gateway
+
+<Steps title-type="h3">
+  <Step title="Navigate to WooCommerce payment settings">
+    Navigate to **WP Travel Engine > Settings > Payments > WooCommerce**.
+  </Step>
+
+  <Step title="Enable the gateway">
+    Toggle on the WooCommerce Payment Gateway to switch it on.
+  </Step>
+
+  <Step title="Save your changes">
+    Click **Save and Continue** to secure your changes.
+  </Step>
+</Steps>
+
+## How to set the WooCommerce checkout page
+
+When you enable the WooCommerce payment gateway, a checkout page is automatically assigned for each trip. If no page is assigned, or you'd like to use a different page, follow these steps:
+
+<Steps title-type="h3">
+  <Step title="Open Page Settings">
+    Go to **WP Travel Engine > Settings > General > Page Settings**.
+  </Step>
+
+  <Step title="Choose your checkout page">
+    Choose the desired checkout page from the **Checkout Page** dropdown menu.
+  </Step>
+
+  <Step title="Configure related pages">
+    Configure additional settings, such as the Thank You Page and Terms and Conditions.
+  </Step>
+
+  <Step title="Save your changes">
+    Click **Save and Continue**.
+  </Step>
+</Steps>
+
+## How to set the currency in WooCommerce
+
+The final step is to configure the currency in the WooCommerce plugin so that both WP Travel Engine and WooCommerce use the same currency value.
+
+<Steps title-type="h3">
+  <Step title="Open WooCommerce general settings">
+    Go to **Dashboard > WooCommerce > Settings > General**.
+  </Step>
+
+  <Step title="Find the currency options">
+    Scroll down to the **Currency options** section.
+  </Step>
+
+  <Step title="Match the WP Travel Engine currency">
+    Select the same currency you've configured for WP Travel Engine.
+  </Step>
+
+  <Step title="Save your changes">
+    Click **Save Changes**.
+  </Step>
+</Steps>
+
+## Trip checkout demo
+
+Once all required configurations are complete, when a customer books a trip and proceeds to checkout, they're directed to the WooCommerce Checkout page.
+
+Customers fill in the required booking details and use the available payment gateway to complete payment. Once payment is complete, they're directed to the WooCommerce Order Received page.
+
+<Callout kind="info">
+  As the admin, you can view booking details on the backend through **WP Travel Engine > Bookings** and **WooCommerce > Orders**.
+</Callout>

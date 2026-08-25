@@ -1,0 +1,169 @@
+---
+title: Legal Documents
+description: >-
+  Show your business certificates, licenses, and policies on your website so
+  travelers can trust your tour company before they book.
+type: guide
+---
+## Build trust with your documents
+
+Legal Documents lets you upload important business papers to your website and show them to travelers in one place. This helps people feel more confident about booking with you.
+
+For example, you might upload your tourism board registration certificate, VAT certificate, or insurance document. If a traveler wants to check whether your company is registered or insured, you can send them to that page on your site.
+
+<Callout kind="info" collapsed="false">
+  Legal Documents requires [WP Travel Engine](https://wptravelengine.com/) v5.0+ installed and activated on your website.
+</Callout>
+
+<Video uid="ba752207-05c2-4792-8254-9b6e5aaeac97" src="https://www.youtube.com/embed/qGbniKFud1o" render-type="iframe" width="594" height="334" controls="true" allow-full-screen="true" style="width: 594px; height: auto; cursor: pointer;" />
+
+## Installing the Legal Documents add-on
+
+Install and activate the add-on first so the document settings appear inside your WordPress dashboard.
+
+<Callout kind="info" collapsed="false">
+  Need help with setup first? See [how to activate a Pro add-on license key](/article/activate-pro-addon-license-key/) for the full installation and activation walkthrough.
+</Callout>
+
+Once the add-on is active, you are ready to upload your first document.
+
+## How it works
+
+You can upload legal and business documents that help travelers understand your company is real and properly set up. This is useful for treks, day tours, multi-day packages, and any trip where travelers want to check your business details before they pay.
+
+You can upload documents such as a PAN Registration Certificate, Company Registration Certificate, Certificate of Tourism Industry Division, Sales Commission Agreement, Certificate of Value Added Tax (VAT), Service Contract, Liability Waiver, Privacy Policy, Insurance Requirements, Commercial Real Estate Lease, or Non-Disclosure Agreement.
+
+These documents can be in any of the following file formats:
+
+- JPEG
+- PNG
+- PDF
+
+After you upload the documents, you can show them on any page, post, or widget with a shortcode. A shortcode is a small piece of text you paste into WordPress to tell it to display a specific feature.
+
+You will use this shortcode to show your document list on the front end of your site. The `cols` argument controls how many columns are used to display the documents. If you set it to `3`, visitors will see the documents arranged in three columns.
+
+<Callout kind="info" collapsed="false">
+  If you offer group tours or high-value adventure trips, this page can answer common trust questions before a traveler contacts you. For example, you can upload your insurance certificate or business registration and link that page in emails or booking pages.
+</Callout>
+
+Now that you know what the add-on does, you can start adding your documents.
+
+## Uploading a document
+
+What you will need before you start: the Legal Documents add-on must be active, and the document file should be saved on your computer in JPEG, PNG, or PDF format.
+
+<Steps>
+  <Step title="Open Legal Documents" title-type="p">
+    First, go to the place where all uploaded documents are managed.
+
+    Go to **Dashboard** on the left sidebar of your WordPress admin area. Then go to **WP Travel Engine** and click **Legal Documents**.
+  </Step>
+
+  <Step title="Enter the document details" title-type="p">
+    This helps travelers understand what they are looking at before they open the file.
+
+    In the Upload Documents form, enter the document name and description. For example, you might write "Company Registration Certificate" as the name and add a short note saying it confirms your trekking company is registered.
+  </Step>
+
+  <Step title="Choose the file" title-type="p">
+    Now you will attach the actual document from your computer.
+
+    Click the **Choose File** button and select the file you want to upload.
+  </Step>
+
+  <Step title="Upload the document" title-type="p">
+    This saves the document to your website so you can display it later.
+
+    Click **Upload Now**.
+
+    If the upload works, your document will appear in the list on the same screen. You can then add more documents if needed.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871652817-u6gvixm7l1k-legal-document-upload-now-button.legal-document-upload-now-button?fm=auto&auto=compress%2Cformat" width="458" height="502" alt="" />
+  </Step>
+</Steps>
+
+Once your documents are uploaded, the next step is to place them on a page that travelers can visit.
+
+## Showing documents on a page
+
+What you will need before you start: at least one document should already be uploaded, and you should be logged in to your WordPress dashboard.
+
+<Steps>
+  <Step title="Add a new page" title-type="p">
+    You need a page where visitors can view your certificates and policies.
+
+    Go to **Dashboard** on the left sidebar. Then go to **Pages** and click **Add New**. Enter a clear title for the page, such as "Legal Documents", "Company Certificates", or "Business Licenses".
+  </Step>
+
+  <Step title="Add a Shortcode block" title-type="p">
+    WordPress uses blocks to build pages. The Shortcode block is the place where you paste the text that tells WordPress what to display.
+
+    Click the Add block **+** icon and select the **Shortcode** block.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871687636-fcoujee98qj-legal-document-add-new.legal-document-add-new?fm=auto&auto=compress%2Cformat" width="1024" height="360" alt="" />
+  </Step>
+
+  <Step title="Enter the shortcode" title-type="p">
+    This step tells WordPress to show your uploaded documents on the page.
+
+    Paste the following shortcode into the Shortcode block. The `cols` argument sets the number of columns used to display the documents.
+
+    ```typescript
+    [WPTE_LIST_LEGAL_DOCUMENTS cols="3"]
+    ```
+
+    If you keep `cols="3"`, your documents will appear in three columns. This can work well if you want to show several items at once, such as a registration certificate, insurance document, and VAT certificate.
+  </Step>
+
+  <Step title="Publish the page" title-type="p">
+    Publishing makes the page live on your website.
+
+    Click **Publish** in the top right of the page. Then click **Publish** again if WordPress asks for confirmation.
+
+    After publishing, open the page on your site and check that your documents appear.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871721431-l6ghyom4ck-legal-document-publish-button.legal-document-publish-button?fm=auto&auto=compress%2Cformat" width="768" height="214" alt="" />
+  </Step>
+</Steps>
+
+Your document page is now ready to share with travelers, partners, or anyone who needs to verify your business details.
+
+## Features
+
+The Legal Documents add-on also gives you a few tools to manage the documents after upload. These are helpful when business details change over time.
+
+### Edit document
+
+Use **Edit** when the file is correct but the title or description needs to change. For example, if you wrote the wrong certificate name, you can update the text without uploading the file again.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871756061-2ednicca6js-legal-document-edit-doc.legal-document-edit-doc?fm=auto&auto=compress%2Cformat" width="768" height="348" alt="" />
+
+### Preview document
+
+Use **Preview** when you want to check the file before sending the page to travelers. This is useful if you uploaded a PDF and want to confirm it opens properly.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871781965-cn83p7fjkn4-legal-document-preview-doc.legal-document-preview-doc?fm=auto&auto=compress%2Cformat" width="768" height="713" alt="" />
+
+### Delete document
+
+Use **Delete** when a file should no longer appear on your website. For example, if an old insurance document has expired, remove it and upload the new one.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871813113-ems6cydkump-legal-document-delete-button.legal-document-delete-button?fm=auto&auto=compress%2Cformat" width="768" height="382" alt="" />
+
+### Sort documents
+
+Use drag and drop to change the order of your documents. This helps you put the most important items first, such as your tourism registration or company license.
+
+Documents on the live page appear in the same order you set here.
+
+## Frontend preview
+
+This is how the document list looks on the front end of your website. Your visitors will be able to open and view the files from this page.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786871880689-lb8g3b5mrnt-legal-document-frontend-preview.legal-document-frontend-preview?fm=auto&auto=compress%2Cformat" width="768" height="891" alt="" />
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

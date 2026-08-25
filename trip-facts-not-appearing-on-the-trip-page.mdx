@@ -1,0 +1,81 @@
+---
+title: 'Fix: Trip Facts Not Appearing on the Trip Page'
+description: >-
+  Troubleshoot Trip Facts (Trip Info) that aren't showing on your single trip
+  page by checking global settings, per-trip fields, and display toggles.
+type: guide
+---
+If **Trip Facts** (also called **Trip Info**) aren't appearing on your trip page, walk through the settings below to make sure they're configured and enabled correctly.
+
+## Configure global Trip Info fields
+
+Trip Info fields are managed globally, then applied to individual trips.
+
+<Steps title-type="h3">
+  <Step title="Open the global Trip Info settings">
+    Go to **Dashboard → Settings → General → Trip Settings → Trip Info**.
+
+    This is where you create, edit, or delete the Trip Info fields available across your site.
+  </Step>
+
+  <Step title="Add a new Trip Info field">
+    Click **Add trip info**, then fill in:
+
+    - **Field name**
+    - **Field icon**
+    - **Field type**
+    - **Field placeholder**
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-6-1024x490.png" width="1024" height="490" alt="Trip Info global settings showing the Add trip info button" />
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-7-1024x490.png" width="1024" height="490" alt="Trip Info field configuration form with name, icon, type, and placeholder" />
+  </Step>
+
+  <Step title="Add the info to a specific trip">
+    Once a Trip Info field exists globally, open the trip's edit page to fill in its value for that trip.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-8-1024x532.png" width="1024" height="532" alt="Trip edit page with Trip Info fields available for entry" />
+  </Step>
+</Steps>
+
+## Enable Trip Info display on the single trip page
+
+Even with Trip Info fields configured, they won't show on the frontend unless the display option is turned on.
+
+<Callout kind="alert">
+  There's a global toggle that controls whether Trip Info appears at all. If Trip Facts still aren't showing after adding fields, check this setting first.
+</Callout>
+
+<Steps title-type="h3">
+  <Step title="Open the Single Trip display settings">
+    Go to **Dashboard → WP Travel Engine → Settings → Display → Single Trip → General**.
+  </Step>
+
+  <Step title="Enable Show Trip Infos">
+    Turn on the **Show Trip Infos** option.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-1-1024x486.png" width="1024" height="486" alt="Single Trip General display settings with the Show Trip Infos option" />
+
+    Enabling this reveals two additional placement options.
+  </Step>
+</Steps>
+
+### Show Trip Infos on Sidebar
+
+Enable this to display the Trip Info section in the single trip page's sidebar.
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-2-1024x486.png" width="1024" height="486" alt="Show Trip Infos on Sidebar toggle in display settings" />
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-3-1024x486.png" width="1024" height="486" alt="Trip Info displayed in the single trip page sidebar" />
+
+### Show Trip Infos on Main Content Area
+
+Enable this to display the Trip Info section within the trip's main content area instead of the sidebar.
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-5-1024x486.png" width="1024" height="486" alt="Show Trip Infos on Main Content Area toggle in display settings" />
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/image-4-1024x486.png" width="1024" height="486" alt="Trip Info displayed in the single trip page main content area" />
+
+## Still having trouble?
+
+Contact the [WP Travel Engine support team](https://wptravelengine.com/support-ticket/) for further assistance.

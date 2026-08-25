@@ -1,0 +1,74 @@
+---
+title: Import Starter Site
+description: >-
+  Import a Travel Monster starter template, including its theme configuration,
+  styling, and demo pages, using the Demo Importer Plus plugin.
+type: tutorial
+---
+## Before you begin
+
+Both the Travel Monster theme and the Travel Monster Pro plugin offer a variety of starter templates you can use to launch a new website. Importing a template brings in that template's theme configuration and its pre-built pages, so it's the fastest way to start with a fully styled site rather than a blank one.
+
+<Callout kind="info" collapsed="false">
+  You need the [Demo Importer Plus](https://wordpress.org/plugins/demo-importer-plus/) plugin installed and activated to access the starter templates.
+</Callout>
+
+## Import a starter template
+
+<Steps>
+  <Step title="Open Demo Importer Plus" title-type="p">
+    Go to **Appearance > Demo Importer Plus** in your WordPress admin dashboard. You'll see the list of available starter templates.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-9-1024x478.png" width="1024" height="478" alt="Demo Importer Plus screen listing available Travel Monster starter templates" />
+  </Step>
+
+  <Step title="Choose a template" title-type="p">
+    Select the template you want to use. You can import the complete site or a single template individually.
+
+    <Callout kind="tip" collapsed="false">
+      If you're starting a new site, import the complete site rather than a single template. This brings in all of the styles, settings, and demo content together, so your site matches the template's design out of the box.
+    </Callout>
+  </Step>
+
+  <Step title="Import the complete site" title-type="p">
+    Click **Import Complete Site** and follow the on-screen process.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-10-1024x480.png" width="1024" height="480" alt="Import Complete Site button in Demo Importer Plus" />
+  </Step>
+
+  <Step title="Wait for the import to finish" title-type="p">
+    Stay on the page and avoid navigating away while the import runs. Depending on your hosting performance, this can take a few minutes. You'll be notified once the process completes, and you can then review the results on your site.
+  </Step>
+</Steps>
+
+## Server requirements for a smooth import
+
+The more images a starter site includes, the longer the import takes. If an import fails partway through, it's usually because your server's PHP `max_execution_time` is set too low.
+
+Ask your hosting provider to confirm the following PHP configuration values before importing:
+
+| Setting               | Recommended value |
+| --------------------- | ----------------- |
+| `upload_max_filesize` | `128M`            |
+| `post_max_size`       | `128M`            |
+| `max_execution_time`  | `300`             |
+| `max_input_time`      | `300`             |
+
+<Callout kind="info" collapsed="false">
+  If you're not familiar with editing PHP settings yourself, your hosting company can apply these values for you.
+</Callout>
+
+## Verify the import
+
+Once the import finishes, visit your site's front end to confirm the demo pages, styling, and menus from the chosen template have loaded correctly.
+
+<Callout kind="tip" collapsed="true">
+  If you run into issues while importing a starter site, reach out to the [WP Travel Engine support team](https://wptravelengine.com/support-ticket/) for assistance.
+</Callout>
+
+## Next step
+
+<Card title="Configure Site Identity" href="/article/configure-site-identity" icon="settings" horizontal="true">
+  Set your site title, tagline, and logo now that your starter content is in place.
+</Card>
+

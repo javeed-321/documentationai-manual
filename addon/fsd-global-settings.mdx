@@ -1,0 +1,308 @@
+---
+title: Global Settings
+description: >-
+  Configure site-wide Fixed Starting Dates options including booking modal,
+  display options, excluded dates, availability labels, and the departure
+  calendar widget.
+---
+## Global settings location
+
+These settings apply to all trips using Fixed Starting Dates across your site, and you can access them at `WP Travel Engine > Settings > Extensions > Fixed Starting Dates > General`.
+
+## Enable FSD for trips
+
+Use this setting to control whether the Fixed Starting Dates section appears on trip pages across your site.
+
+<ParamField body="Enable Trip Fixed Starting Dates for Trips" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Turns the Fixed Starting Dates section on or off for trip pages at the global level.
+</ParamField>
+
+### Section title
+
+Set the heading shown above the departure date list on trip pages.
+
+<ParamField body="Fixed Starting Dates Section Title" param-type="string" required="false" deprecated="false" show-location="false">
+  Enter a custom title such as `Available Departures` or `Trip Dates`.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  Leave this field blank to use the default heading.
+</Callout>
+
+## Booking modal options
+
+Enable this option to skip the date picker in the booking popup when the traveler has already selected a departure date from the trip page list.
+
+<ParamField body="Skip Date Selection in Booking Modal" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Removes the date selection field from the booking modal after a traveler chooses a date from the Fixed Starting Dates table.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  Enable this option for a smoother booking flow when travelers always choose their departure date from the date list before opening the booking modal.
+</Callout>
+
+## FSD below banner
+
+Use this setting to control where the Fixed Starting Dates section appears on trip pages by default.
+
+<ParamField body="Show FSD below Banner" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Displays the Fixed Starting Dates section just below the trip banner instead of below the main trip content.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  Individual trip settings can override this global placement.
+</Callout>
+
+## Trip expiry message
+
+Customize the message shown when a trip has passed its expiry date and is no longer available for booking.
+
+<ParamField body="Trip Expiry Message" param-type="string" required="false" deprecated="false" show-location="false">
+  Sets the message shown for expired trips. For example, `This trip is expired.`
+</ParamField>
+
+## Display options
+
+Display options control which columns and details appear in the departure dates table on trip pages and in related shortcode output.
+
+### Date availability label
+
+Turn this option on to show availability labels such as Guaranteed, Limited, or Available beside each departure date.
+
+<ParamField body="Date Availability Label" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Shows or hides availability labels in the dates table.
+</ParamField>
+
+### Price
+
+Show the package price for each departure date in the table.
+
+<ParamField body="Price" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Displays the package price for each departure date. By default, the price comes from the primary package.
+</ParamField>
+
+### Space left
+
+Choose how remaining seat availability is calculated and displayed for each departure date.
+
+<ParamField body="Space left" param-type="option" required="false" deprecated="false" show-location="false" enum="Primary Package,Total Seats">
+  Shows how many seats remain for each departure date, based on either the primary package or the combined total seat pool.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  Use `Total Seats` when you want the dates table to reflect the full remaining seat pool more clearly.
+
+  For example, if General Settings allows 10 seats and your packages are Standard with 4 seats and Premium with 3 seats, the display can show the primary package count of 4 or the total available package seats of 7.
+</Callout>
+
+### Dates per pagination
+
+Set how many departure dates appear on each page when you display dates through shortcodes.
+
+<ParamField body="Number of Trip Dates per pagination" param-type="integer" required="false" deprecated="false" show-location="false">
+  Controls pagination size for shortcode output. For example, set this to `10` to show 10 departure dates per page.
+</ParamField>
+
+## Departure date status
+
+Use departure date status settings to show booking progress and apply visual status labels based on seat occupancy.
+
+<ParamField body="Display Booked Seats" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Shows how many seats are already booked for each departure date.
+</ParamField>
+
+<ParamField body="Display Status" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Shows availability labels and colors for each departure date based on booking percentage.
+</ParamField>
+
+<ParamField body="Available" param-type="status" required="false" deprecated="false" show-location="false">
+  Predefined status for dates with `0%` booked seats. You can change the label and color, but not the percentage rule.
+</ParamField>
+
+<ParamField body="Sold Out" param-type="status" required="false" deprecated="false" show-location="false">
+  Predefined status for dates with `100%` booked seats. You can change the label and color, but not the percentage rule.
+</ParamField>
+
+<ParamField body="Add Status" param-type="custom status" required="false" deprecated="false" show-location="false">
+  Adds a custom availability status such as `Limited` and lets you define its booking threshold, label, and color.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  A common setup is `0%` for Available, `80%` for Limited with a yellow color, and `100%` for Sold Out with a red color.
+</Callout>
+
+## Excluded dates
+
+Use excluded dates to block booking on specific dates across all trips or for a selected group of trips.
+
+<Steps>
+  <Step title="Open the Exclude Dates tab" icon="settings" title-type="p">
+    Go to the `Exclude Dates` tab in the Fixed Starting Dates settings.
+  </Step>
+
+  <Step title="Select the dates to block" icon="calendar" title-type="p">
+    In `Select Dates`, choose one or more dates, or enable `Select a range of dates using the range calendar`.
+  </Step>
+
+  <Step title="Add the selected dates" icon="plus" title-type="p">
+    Click `Add Dates` to create the exclusion entry.
+  </Step>
+
+  <Step title="Choose block behavior" icon="shield" title-type="p">
+    Select one of these behaviors:
+
+    - `Block Entire Trip Duration` blocks trips that include the selected date anywhere in the itinerary.
+    - `Block Start Date Only` blocks trips from starting on the selected date.
+    - `Block Specific Time Slots` blocks only the selected start times on that date.
+  </Step>
+
+  <Step title="Add time slots when needed" icon="clock" title-type="p">
+    If you chose `Block Specific Time Slots`, add start times under `Select Time Slots`. Click `Add Time` to include multiple slots.
+  </Step>
+
+  <Step title="Choose which trips the exclusion applies to" icon="folder" title-type="p">
+    Under `Apply Exclusion To`, choose `All Trips`, `Specific Trips`, or `All Except Selected Trips`.
+  </Step>
+
+  <Step title="Select trips for scoped exclusions" icon="check-circle" title-type="p">
+    If you chose `Specific Trips` or `All Except Selected Trips`, search for and select the trips that the rule should include or exclude.
+  </Step>
+
+  <Step title="Repeat the rule every year if needed" icon="refresh-cw" title-type="p">
+    Enable `Repeat Yearly` if the same date should be blocked every year.
+  </Step>
+
+  <Step title="Save the exclusion" icon="save" title-type="p">
+    Click `Save Settings` to apply the excluded dates rule.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  If you apply an exclusion to `All Trips`, no trip can be booked on that day even when individual trips still have seats available. Check the scope on each exclusion entry before you save it.
+</Callout>
+
+<Callout kind="tip" collapsed="false">
+  Use `All Except Selected Trips` when most trips should remain closed on a date but a few specific trips still need to stay bookable.
+</Callout>
+
+## Trip archive
+
+Use these settings to control how Fixed Starting Dates appear on trip archive pages and trip cards.
+
+<ParamField body="Show trips with fixed starting dates" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Limits archive pages to trips that have Fixed Starting Dates configured.
+</ParamField>
+
+<ParamField body="Show Dates on Cards" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Shows departure dates directly on trip cards in archive views.
+</ParamField>
+
+<ParamField body="No. of Dates on Cards" param-type="integer" required="false" deprecated="false" show-location="false">
+  Sets how many upcoming departure dates appear on each card. For example, `3` shows the next three departures.
+</ParamField>
+
+## Private trips
+
+Use private trip settings when travelers need to contact you before choosing a date or confirming availability.
+
+<ParamField body="Enable Private Trip" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Displays private trip options in the Fixed Starting Dates experience.
+</ParamField>
+
+<ParamField body="Private Trip Description" param-type="string" required="false" deprecated="false" show-location="false">
+  Adds a short description or instruction for travelers.
+</ParamField>
+
+<ParamField body="Private Trip Form" param-type="shortcode" required="false" deprecated="false" show-location="false">
+  Adds a form shortcode, such as an enquiry form, alongside departure dates.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  Use this feature when travelers should contact you for available dates, custom scheduling, or booking status before continuing.
+</Callout>
+
+## Availability labels
+
+Create and manage custom availability labels that you can assign to departure dates.
+
+<ParamField body="Default labels" param-type="list" required="false" deprecated="false" show-location="false">
+  The add-on includes `Guaranteed`, `Available`, and `Limited` by default.
+</ParamField>
+
+<ParamField body="Add More Labels" param-type="action" required="false" deprecated="false" show-location="false">
+  Creates a new custom availability label.
+</ParamField>
+
+<ParamField body="Label color" param-type="color" required="false" deprecated="false" show-location="false">
+  Assigns a unique color to each availability label by using the color picker.
+</ParamField>
+
+<ParamField body="Delete label" param-type="action" required="false" deprecated="false" show-location="false">
+  Removes a custom label from the system and from any trips where it was assigned.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  When you delete a label, any trip that used it reverts to `Choose Label` in the backend.
+</Callout>
+
+## Trip departure calendar
+
+The trip departure calendar displays upcoming trip departures in a structured grid or list layout for easier browsing.
+
+<Callout kind="alert" collapsed="false">
+  Use this feature with WP Travel Engine version `6.6.9` or later and Fixed Starting Dates add-on version `2.6.2` or later. List View is not available on mobile devices.
+</Callout>
+
+### Departure calendar settings
+
+<Steps>
+  <Step title="Choose the default layout" icon="layout-grid" title-type="p">
+    Set `Default Layout` to `Grid` for compact cards or `List` for a stacked single-column layout. The list view includes two list style options.
+  </Step>
+
+  <Step title="Set the number of trips per row" icon="columns" title-type="p">
+    For grid layout, choose `2`, `3`, or `4` trips per row. Tablets automatically adjust to two per row, and mobile devices stack trips in a single column.
+  </Step>
+
+  <Step title="Set the number of trips to display" icon="bar-chart" title-type="p">
+    Choose any value from `3` to `48`. The calendar loads more trips with infinite scroll when more results are available.
+
+    A multiple of your trips-per-row setting usually creates the cleanest layout.
+  </Step>
+
+  <Step title="Choose trip facts to show" icon="info" title-type="p">
+    Select up to four trip facts to display, such as `Duration`, `Difficulty`, and `Activities`.
+  </Step>
+
+  <Step title="Show available seats" icon="users" title-type="p">
+    Enable `Show Available Seats` to display badges such as `X Spots left` or `Sold Out` based on total availability.
+  </Step>
+
+  <Step title="Filter to booked trips only" icon="check-circle" title-type="p">
+    Enable `Show Only Booked Trips` to display only trips with at least one confirmed booking.
+  </Step>
+
+  <Step title="Hide sold-out trips" icon="x-circle" title-type="p">
+    Enable `Show Only Available Trips` to hide trips that are fully booked.
+  </Step>
+
+  <Step title="Configure the sticky filter" icon="settings" title-type="p">
+    Enable `Sticky Filter` to keep the filter bar visible while visitors scroll. Set separate pixel offsets for `Desktop`, `Tablet`, and `Mobile`.
+
+    <Callout kind="tip" collapsed="false">
+      Match the offset to your header height so the sticky filter does not overlap the top of the page.
+    </Callout>
+
+    <Callout kind="alert" collapsed="false">
+      Sticky Filter does not work while you are logged in as an administrator. Test it in an incognito window or while logged out.
+    </Callout>
+  </Step>
+
+  <Step title="Add a contact button" icon="external-link" title-type="p">
+    Enable `Show Contact Button` to add a button such as `Contact Us` to each trip. You can customize the label and choose whether the link opens in the same tab or a new tab.
+  </Step>
+</Steps>
+
+## Saving settings
+
+Click `Save Settings` after adjusting your Fixed Starting Dates options to apply the changes site-wide.

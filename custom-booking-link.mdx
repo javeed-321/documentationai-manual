@@ -1,0 +1,250 @@
+---
+title: Custom Booking Link
+description: >-
+  Send travelers to an external booking platform or replace the booking button
+  with your own code. Set it once for all trips, or customize it per trip.
+type: guide
+---
+## Custom Booking Link
+
+The Custom Booking Link add-on changes what happens when someone clicks your trip booking button. You can send travelers to another booking platform. You can also replace the button with your own HTML code.
+
+Say you list trips on your website but process actual bookings through a platform like Rezdy or Bokun. Instead of letting travelers start booking here and then redirecting them by hand, this add-on sends them straight to your booking platform when they click the button. You can set one link for all trips first. Then you can change it for individual trips where needed.
+
+That makes it easier to keep your booking flow consistent across your site.
+
+## What this add-on gives you
+
+| Feature                | What it helps you do                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------ |
+| External link redirect | Send travelers straight to another booking platform without editing every trip one by one. |
+| Custom HTML mode       | Replace the booking button with your own form, widget, or other code.                      |
+| Per-trip override      | Use a different booking setup for one trip while the rest keep the main setting.           |
+| New tab control        | Choose whether the booking link opens in the same browser tab or a new one.                |
+
+You can start with the main site-wide setup. Then you can fine-tune individual trips later.
+
+## What you'll need before you start
+
+<Callout kind="info" collapsed="false">
+  - You have **WP Travel Engine** installed and activated on your WordPress site.
+  - You have updated **WP Travel Engine** to the latest version.
+  - You have installed and activated the **Custom Booking Link** add-on.
+</Callout>
+
+Once those pieces are in place, you are ready to turn the add-on on and check that it appears in your settings.
+
+## Installing the add-on
+
+<Callout kind="info" collapsed="false">
+  See [how to activate a Pro add-on license key](/article/activate-pro-addon-license-key/) for the full installation and activation walkthrough.
+</Callout>
+
+If you have already installed and activated the add-on, the next step is to make sure WordPress is showing it in the right place.
+
+## Checking that the add-on is active
+
+<Callout kind="info" collapsed="false">
+  Before you change any booking settings, check that the add-on is active. This confirms WordPress can see it and WP Travel Engine can use it.
+</Callout>
+
+<Steps>
+  <Step title="Go to your WordPress dashboard" title-type="p">
+    Log in to your site's admin area.
+
+    If you are new to WordPress, this is the main control panel for your website.
+  </Step>
+
+  <Step title="Open Extensions settings" title-type="p">
+    In the left sidebar, go to **WP Travel Engine → Settings → Extensions**.
+
+    This is where WP Travel Engine keeps add-on settings.
+  </Step>
+
+  <Step title="Confirm the tab appears" title-type="p">
+    Look for the **Custom Booking Link** tab alongside the other settings tabs.
+
+    If you can see that tab, the add-on is active and ready to use.
+
+    If the tab does not appear, deactivate and reactivate the add-on from the **Plugins** screen in your WordPress dashboard.
+  </Step>
+</Steps>
+
+Now you know the add-on is active. The next step is to set up the booking link for all your trips.
+
+## Setting up your booking link for all trips
+
+These settings work across your whole site. Any trip without its own override will follow these settings.
+
+That makes this the best place to start.
+
+### Turning it on
+
+Turn on **Allow Custom Booking Link** to enable the feature across your trips.
+
+Once this is on, WP Travel Engine can use your custom booking setup instead of the default booking flow.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786696351096-pd3j3godb0q-Allow-Custom-Booking-Link.Allow Custom Booking Link?fm=auto&auto=compress%2Cformat" width="2048" height="1229" alt="" />
+
+With that switched on, you can choose how the booking button should behave.
+
+### Choosing how the booking button works
+
+This choice matters because it changes what travelers see when they try to book.
+
+Under **Booking Type**, choose one of these options:
+
+**External Link** sends travelers to another page when they click the booking button. This works well if you take bookings in a separate platform such as Rezdy or Bokun.
+
+**Custom HTML** replaces the button with your own code. HTML is the code used to place things like buttons, forms, and widgets on a page. This works well if another booking tool gives you an embed code for a form or widget.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786696392071-ce8dbt0f4du-Booking-Type.Booking Type?fm=auto&auto=compress%2Cformat" width="2048" height="1229" alt="" />
+
+Pick the option that matches how you already take bookings. Then fill in the matching fields below.
+
+### If you chose External Link
+
+Use this option when you want the booking button to send people to another website or booking page.
+
+For example, if your Annapurna trek is listed on your site but bookings happen in Rezdy, you can point the button straight to that Rezdy booking page.
+
+- Enter a label in **Button Label**. This is the text travelers will see on the button. If you leave it blank, WP Travel Engine uses **Book Now**.
+- Enter the full URL in **Booking Link**. This is the page travelers will go to after clicking the button.
+- Turn on **Open in new Tab** if you want the booking page to open in a new browser tab. This helps people keep your website open while they look at the booking page.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786696440159-wqa82pnxnrn-External-Link.External Link?fm=auto&auto=compress%2Cformat" width="2048" height="1229" alt="" />
+
+Once this is saved, your booking button will send travelers where you want them to go.
+
+### If you chose Custom HTML
+
+Use this option when another platform gives you code to paste into your website.
+
+A widget is a small embedded tool that can show a form, calendar, or booking box right on the page. If your booking provider gives you a widget code, paste it into **HTML Code**.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786696467754-vyw9ng1nkip-HTML-Code.HTML Code?fm=auto&auto=compress%2Cformat" width="768" height="418" alt="" />
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786696510448-1f2m8v73j02-HTML-Code-Frontend.HTML Code Frontend?fm=auto&auto=compress%2Cformat" width="768" height="303" alt="" />
+
+<Callout kind="alert" collapsed="false">
+  Custom HTML replaces the booking button entirely. Make sure your HTML includes a working call-to-action - customers won't see the default booking button at all.
+</Callout>
+
+If your booking setup is different for one special trip, you can override these main settings on that trip only.
+
+## Using a different booking link for one trip
+
+This is helpful when most of your tours use one booking platform, but one special trek or partner-run package uses another.
+
+For example, you might send most day tours to Bokun, but one multi-day partner trek needs to go to a separate booking page. In that case, leave your main setup in place and override that one trip.
+
+<Steps>
+  <Step title="Open the trip" title-type="p">
+    Open the trip you want to edit and click **Edit**.
+
+    This opens the WordPress editor for that specific trip.
+  </Step>
+
+  <Step title="Open the Custom Booking Link tab" title-type="p">
+    Go to **WP Travel Engine – Trip Settings → Advanced Settings**.
+
+    Then click the **Custom Booking Link** tab.
+  </Step>
+
+  <Step title="Enable the override" title-type="p">
+    Turn on **Override Global Booking Link**.
+
+    This tells WP Travel Engine to use different booking settings for this trip only.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786696554424-fvas4jzj9ee-Override-Global-Booking-Link.Override Global Booking Link?fm=auto&auto=compress%2Cformat" width="1024" height="495" alt="" />
+  </Step>
+
+  <Step title="Choose a booking type" title-type="p">
+    Under **Booking Type**, choose **External Link** or **Custom HTML**.
+
+    These work the same way as the main site-wide settings.
+  </Step>
+
+  <Step title="Fill in the fields" title-type="p">
+    Fill in the fields that match your choice.
+
+    If you picked **External Link**, add the button label, booking link, and new tab setting.
+
+    If you picked **Custom HTML**, paste your code into **HTML Code**.
+  </Step>
+
+  <Step title="Save your changes" title-type="p">
+    Click **Save**.
+
+    After saving, check the trip page on the front end of your site to confirm the new booking setup is showing.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  The override only affects this trip. All other trips continue using the global booking link settings.
+</Callout>
+
+That gives you a flexible setup. Next, if something does not look right, use the fixes below.
+
+## Troubleshooting
+
+### The booking button hasn't changed on my trip page
+
+First, make sure **Allow Custom Booking Link** is turned on in your main settings. If that toggle is off, nothing will change on the front end.
+
+Then clear your site cache. A cache is a saved copy of your page that speeds up loading, but it can also show an older version of your page. Also check whether that trip has its own override turned on and pointing somewhere else.
+
+### My custom link opens in the same tab and takes people away from my site
+
+Go back to your booking link settings and turn on **Open in new Tab**.
+
+After you save, the link should open in a new browser tab instead of replacing your site page.
+
+### The Custom Booking Link tab isn't showing up in my settings
+
+The add-on may not be active.
+
+Go to the **Plugins** screen in your WordPress dashboard. Deactivate the **Custom Booking Link** add-on. Then reactivate it. After that, check **WP Travel Engine → Settings → Extensions** again.
+
+### My custom HTML code isn't showing up
+
+First, make sure you selected **Custom HTML** as the booking type. If **External Link** is selected, WP Travel Engine will ignore the HTML field.
+
+Next, check your code for mistakes. If there is a typo or a missing closing tag, the code may not display. Then clear your cache and check the trip page again.
+
+### I set a per-trip override but it isn't working
+
+Make sure **Override Global Booking Link** is turned on for that specific trip.
+
+Then make sure you clicked **Save** after making changes. If it still does not work, clear your cache and check the trip page again.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can I use Custom HTML globally and an External Link for a specific trip?" default-open="false">
+    Yes. The trip-level override works on its own. You can use one booking type in the main settings and a different booking type on a specific trip.
+  </Expandable>
+
+  <Expandable title="Will the Button Label set globally show on all trips?" default-open="false">
+    Yes, unless that trip has its own override with a different label.
+  </Expandable>
+
+  <Expandable title="Does Custom HTML support embedded booking widgets from third-party platforms?" default-open="false">
+    Yes. If the platform gives you an embeddable HTML snippet, paste it into **HTML Code**.
+  </Expandable>
+
+  <Expandable title="Can I use a different booking link for each trip without setting up a global link first?" default-open="false">
+    Yes. You can set per-trip overrides on their own. The global settings are a starting point, not a requirement. Each trip can have its own booking link regardless.
+  </Expandable>
+
+  <Expandable title="What happens if a traveler already started filling out the booking form?" default-open="false">
+    With **External Link** mode, travelers go to your external link as soon as they click the booking button, so they never see the WP Travel Engine booking form.
+
+    With **Custom HTML** mode, your code replaces the booking button entirely, so there is no default form to fill out.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

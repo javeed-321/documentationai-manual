@@ -1,0 +1,264 @@
+---
+title: Travel Insurance
+description: >-
+  Let travelers add insurance during checkout, create plans for different trips,
+  and manage coverage settings from one place in WP Travel Engine.
+type: guide
+---
+The Travel Insurance add-on lets you offer coverage as part of the booking process instead of sending travelers elsewhere to sort it out on their own. You can create your own insurance plans, attach them to specific trips, or send travelers to an affiliate partner if that fits your business better. When it is set up, travelers will see their insurance options right on the checkout page.
+
+## What you'll need before you start
+
+You will move through this much faster if a few basics are already in place.
+
+<Callout kind="info" collapsed="false">
+  - A WordPress website with the premium version of **WP Travel Engine** installed and set up. WordPress is the system behind your site, and you manage it from your WordPress dashboard.
+  - The **Travel Insurance** add-on installed and your license key activated.
+  - At least one published trip so you can test how insurance appears at checkout.
+  - Your affiliate link details if you want to send travelers to a partner insurance provider instead of using your own plans.
+</Callout>
+
+Once those are ready, you can start setting up the add-on with confidence.
+
+## Why offer travel insurance to your travelers
+
+Travel insurance helps your travelers feel safer about booking, especially for bigger trips or higher-value packages. It also gives your business a clear way to offer extra protection without handling every travel problem yourself.
+
+- **Protect travelers from common problems** - Coverage can help with issues like medical emergencies, trip cancellation, or lost luggage.
+- **Build trust at checkout** - When travelers see insurance offered clearly, it shows you have thought about the full travel experience.
+- **Create another income stream** - Insurance plans can add extra revenue to each booking.
+- **Reduce pressure on your team** - Insurance can help limit what travelers expect your company to cover when plans change.
+- **Stand out from competitors** - If two tour companies offer similar trips, added protection can help a traveler choose yours.
+
+For example, someone booking a 12-day trek may feel very different about their trip once they see an option for cancellation or emergency coverage. That extra confidence can help them complete the booking instead of waiting and thinking it over.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787035555314-kvdp7ai9mzh-travel-insurance-frontend.travel-insurance-frontend?fm=auto&auto=compress%2Cformat" width="2560" height="1570" alt="" />
+
+<Callout kind="info" collapsed="false">
+  See [how to activate a Pro add-on license key](/article/activate-pro-addon-license-key/) for the full installation and activation walkthrough.
+</Callout>
+
+## Setting up Travel Insurance
+
+You manage the main Travel Insurance settings from your WordPress dashboard. In the left sidebar, go to **Settings** → **Extensions** → **Travel Insurance**.
+
+This is where you control the text travelers see at checkout, create insurance plans, and turn affiliate links on or off. If you set things up here first, adding insurance to individual trips becomes much easier later.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787035590412-eyn5txd0lw-travel-insurance-global-settings.travel-insurance-global-settings?fm=auto&auto=compress%2Cformat" width="2560" height="1468" alt="" />
+
+### Checkout settings
+
+These settings control how the insurance section looks and reads on the checkout page. Each field already has default content, so you are not starting from a blank screen. You can edit the wording any time to match the way your business speaks to travelers.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787035701482-2uhqoavfsgl-travel-insurance-checkout.travel-insurance-checkout?fm=auto&auto=compress%2Cformat" width="1233" height="906" alt="" />
+
+- **Section Title** - This is the main heading travelers see. A clear option is **Add Travel Insurance** or **Protect Your Trip**.
+- **Section Description** - Use this space to explain why insurance matters in plain language. For example, you might mention trip cancellation, medical help, or lost baggage for a multi-day hiking package.
+- **Opt-in Question Text** - This is the question that asks whether the traveler wants insurance. Keep it direct so the choice feels clear.
+- **Yes/No Radio Button Labels** - These are the labels on the two choice buttons. A good example is **Yes, add Travel Insurance** and **No, I don't need Travel Insurance**.
+- **Insurance Follow-up Question** - This question appears when a traveler selects **No**. You can ask why they are declining coverage.
+- **Require Reason for Declining Insurance** - Turn this on if you want the traveler to answer the follow-up question before they continue. Leave it off if you want to ask the question without blocking checkout.
+- **Plan Details Button Label** - This is the button travelers click to read more about a plan. Clear labels include **View Plan Details** or **See Coverage Details**.
+- **Show Per-Day Pricing** - Turn this on if you want travelers to see how the plan price breaks down by day. This can help on longer trips where the total cost feels large at first glance.
+
+For example, if you run a 10-day cultural tour and the full insurance cost is $255.00, showing **$25.50 per day** can make the price easier to understand.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787035787854-n185pk44zkr-travel-insurance-perday-price-frontend.travel-insurance-perday-price-frontend?fm=auto&auto=compress%2Cformat" width="956" height="303" alt="" />
+
+Now that the checkout wording is in place, you can create the actual insurance plans travelers will choose from.
+
+### Creating insurance plans
+
+Insurance plans are the options you present to travelers at checkout. You might create one simple plan for day tours and a more complete one for longer or more expensive trips.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787035818767-g63112delub-travel-insurance-insurance-plans.travel-insurance-insurance-plans?fm=auto&auto=compress%2Cformat" width="1042" height="446" alt="" />
+
+<Steps>
+  <Step title="Add a new plan" title-type="p">
+    Start by creating the plan itself so you have something to attach to your trips.
+
+    Click **Add New Insurance Plan**.
+  </Step>
+
+  <Step title="Name the plan" title-type="p">
+    Pick a name travelers will understand right away.
+
+    Enter the **Plan Name** such as **Basic**, **Premium**, or **Adventure Trek Cover**.
+  </Step>
+
+  <Step title="Add the plan details" title-type="p">
+    This is where you decide what the plan says and how it is priced.
+
+    Click **Edit** to open the plan details, then fill in the fields below.
+
+    - **Short Description** - Summarize the plan in one or two lines. For example, a day tour operator might write that the plan covers trip interruption and emergency medical support.
+    - **Pricing Type** - Choose how the plan cost should be calculated. There are two options:
+
+      **Fixed per person** - Use this when every traveler should pay the same set amount. This price applies to each traveler individually. If four people book a guided trek and the insurance is priced at a fixed amount, each person is charged that amount.
+
+      **Percentage of Trip Cost** - Use this when the insurance price should rise or fall with the booking total. The plan price is calculated as a percentage of the total trip cost. That total can include all travelers, accommodation choices, and add-ons such as gear rental. The final amount is then divided among the travelers.
+    - **Coverage Details** - Add the full list of what the plan includes. You can use headings, text, and bullet points to make it easy to scan.
+    - **Label** - Add a short tag like **Best Plan** or **Recommended** if you want one option to stand out.
+    - **Include in Package** - Turn this on if the insurance is already part of the trip package. When you do, the insurance cost becomes 0 and travelers will see it as included.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036391221-keue9obkikh-travel-insurance-insurance-included.travel-insurance-insurance-included?fm=auto&auto=compress%2Cformat" width="1024" height="717" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  If you sell very different trip types, create plans that match them. A fixed-price plan can work well for short city tours. A percentage-based plan can make more sense for longer packages with room upgrades, porter service, or equipment rental.
+</Callout>
+
+### Affiliate links
+
+If you do not want to manage your own insurance plans for every trip, you can send travelers to a partner provider instead. This works well if you already have an affiliate relationship with an insurance company.
+
+Turn on **Travel Insurance Affiliate** to enable a global affiliate link for travel insurance.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036440047-wngeo76mnni-travel-insurance-affiliate.travel-insurance-affiliate?fm=auto&auto=compress%2Cformat" width="1024" height="639" alt="" />
+
+After you switch it on, enter the affiliate **Description**, **Link Label**, and **URL**. That link will then appear on the checkout page for travelers to click.
+
+A real-world example would be a tour operator who runs international trekking packages but wants travelers to buy coverage from a specialist insurance provider. In that case, the checkout can guide the traveler to that provider with a clear link and short explanation.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036495363-ob5qn1em36-travel-insurance-affiliate-frontend.travel-insurance-affiliate-frontend?fm=auto&auto=compress%2Cformat" width="2560" height="1172" alt="" />
+
+Once your global settings are ready, you can decide how insurance should work on each individual trip.
+
+## Adding Travel Insurance to a single trip
+
+Global settings save time, but not every trip needs the same setup. A short local food tour may need a different insurance option than a 14-day mountain trip.
+
+Fields you leave empty will use the global settings. Fields you change here will apply only to this one trip.
+
+<Steps>
+  <Step title="Open the trip" title-type="p">
+    First, go to the trip where you want to change the insurance setup.
+
+    In the left sidebar of your WordPress dashboard, go to **Trips** → **All Trips**. Then open the trip you want to edit.
+  </Step>
+
+  <Step title="Open the Travel Insurance tab" title-type="p">
+    This tab holds the insurance settings for that one trip.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036533779-mp3wbw005lc-travel-insurance-trip-settings.travel-insurance-trip-settings?fm=auto&auto=compress%2Cformat" width="1024" height="573" alt="" />
+  </Step>
+
+  <Step title="Set whether insurance is mandatory" title-type="p">
+    Decide whether travelers must take insurance for this trip or whether they can choose.
+
+    Use **Mark Travel Insurance Mandatory** to turn mandatory insurance on or off. If you switch it off, travelers will see the normal opt-in question at checkout.
+  </Step>
+
+  <Step title="Choose the insurance type" title-type="p">
+    This setting decides whether the trip uses your own plans or an affiliate option.
+
+    Under **Add Travel Insurance Type**, choose the option that fits this trip. There are two options:
+
+    **Global Insurance Plans** - Choose this option when you want to show plans you created in the global settings.
+
+    - Use the multi-select dropdown to pick one or more plans.
+    - Selected plans appear as tags so you can see them at a glance.
+    - You can override the **Price**, **Short Description**, **Coverage Details**, and **Label** for this trip only.
+    - You cannot override the **Plan Name** or **Pricing Type**.
+    - You can choose a default plan and change the display order.
+
+    For example, you might use the same Premium plan across many trips but lower the price for an off-season package to encourage more bookings.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036773547-cg613c35ohf-travel-insurance-global-insurance-plan.travel-insurance-global-insurance plan?fm=auto&auto=compress%2Cformat" width="1024" height="573" alt="" />
+
+    **Affiliate Link** - Choose this option when you want to send travelers to an outside insurance provider for this specific trip.
+
+    - **Global** uses the affiliate settings you already set up in the main Travel Insurance settings.
+    - **Custom** lets you enter different affiliate details for this trip and override the global version.
+
+    This can help if one overseas expedition needs a specialist insurer, while your standard local tours use another setup.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036808347-5qhaj1gvn2h-travel-insurance-affiliate-link.travel-insurance-affiliate-link?fm=auto&auto=compress%2Cformat" width="2560" height="1226" alt="" />
+  </Step>
+
+  <Step title="Allow multiple plans if needed" title-type="p">
+    Most businesses will offer one plan at a time. Turn this on only if offering more than one selection makes sense for how you sell.
+
+    Use **Allow Multiple Insurance** if you want travelers to choose more than one plan at checkout.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787036856804-nrc61oco89o-travel-insurance-allow-multiple-insurance-toggle.travel-insurance-allow-multiple-insurance-toggle?fm=auto&auto=compress%2Cformat" width="1024" height="573" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Changes you make here affect only this trip. Your global settings stay the same for every other trip.
+</Callout>
+
+## Troubleshooting
+
+These are the most common things that trip operators run into during setup. If something looks wrong, check here before you start over.
+
+### I turned on Travel Insurance, but nothing shows on checkout
+
+Check that the trip is published and that Travel Insurance is actually added to that trip. If you are using trip-level settings, make sure you selected either **Insurance Plans** or **Affiliate Link** for that trip. Then open the checkout again and test with that same trip.
+
+### My insurance plan is not showing up on the trip
+
+Open the trip and check whether the plan was selected in the **Insurance Plans** area. Creating a plan in global settings does not attach it to every trip automatically. You still need to choose the plan for the trip where you want it to appear.
+
+### The traveler cannot continue after selecting No
+
+This usually means **Require Reason for Declining Insurance** is turned on. When that setting is enabled, the traveler must answer the follow-up question before checkout can continue. If you do not want to block checkout, turn that setting off.
+
+### The price looks wrong
+
+Start by checking the plan's **Pricing Type**. A **Fixed per person** plan charges each traveler the set amount, while a **Percentage of Trip Cost** plan changes based on the booking total. If your trip has extras like accommodation upgrades or gear rental, those can affect the percentage-based amount.
+
+### I changed the global settings, but this trip still shows old information
+
+That usually means the trip has its own custom insurance settings. Trip-level changes override global settings. Open the trip's **Travel Insurance** tab and review any custom values there.
+
+### My affiliate link is not appearing
+
+First, make sure **Travel Insurance Affiliate** is turned on. Then check that the **Description**, **Link Label**, and **URL** are filled in. If you are setting the link on a single trip, also make sure that trip is using **Affiliate Link** and not **Insurance Plans**.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="What happens if I delete a plan that was used in previous bookings?" default-open="false">
+    If you delete a plan, it will no longer appear for new bookings. Past bookings still keep that plan in the record, so your old booking details stay accurate.
+  </Expandable>
+
+  <Expandable title="Can I sell insurance through an affiliate and still show one of my own plans on a different trip?" default-open="false">
+    Yes. Each trip can use its own insurance source. One trip can send travelers to an affiliate provider, while another trip can show the plans you created yourself.
+  </Expandable>
+
+  <Expandable title="Will the insurance cost be included in the final tax calculation?" default-open="false">
+    Yes. Insurance is added to the subtotal before discount, booking fee, and tax are calculated. That means tax is worked out on the full amount.
+  </Expandable>
+
+  <Expandable title="What happens if I delete a global plan?" default-open="false">
+    If you delete a global plan, it is removed from future booking options and from the trips where it was applied. Past bookings that already used that plan stay unchanged.
+  </Expandable>
+
+  <Expandable title="Can I delete a plan for a single trip only?" default-open="false">
+    Yes. Removing a plan from one trip only affects that trip. The plan stays active globally and remains available for other trips. Past bookings for that trip also stay unchanged.
+  </Expandable>
+
+  <Expandable title="Should I use one insurance plan for every trip?" default-open="false">
+    Not always. If all your trips are similar, one plan may be enough. If you run very different products, like short day tours and long trekking packages, separate plans often make the pricing and coverage easier for travelers to understand.
+  </Expandable>
+
+  <Expandable title="When should I use a fixed price instead of a percentage of trip cost?" default-open="false">
+    Use a fixed price when you want a simple amount per traveler, such as for a rafting day trip or a city walking tour. Use a percentage of trip cost when the booking value changes a lot because of room upgrades, add-ons, or longer itineraries.
+  </Expandable>
+
+  <Expandable title="Can I make insurance mandatory for only some trips?" default-open="false">
+    Yes. You can turn on **Mark Travel Insurance Mandatory** for one trip and leave it optional for others. This is useful if one trip has higher risk, higher cost, or stricter partner requirements.
+  </Expandable>
+
+  <Expandable title="Can travelers see what each plan includes before they choose?" default-open="false">
+    Yes. You can add full **Coverage Details** to each plan and set a clear **Plan Details Button Label** so travelers know where to click. This is especially helpful when you offer more than one level of cover.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you are still stuck or have a question we did not cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we will get you sorted.
+</Callout>
+

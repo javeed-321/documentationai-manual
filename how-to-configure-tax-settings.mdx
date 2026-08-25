@@ -1,0 +1,71 @@
+---
+title: How to Configure Tax Settings
+description: >-
+  Add tax to every booking automatically, choose how prices appear to travelers,
+  and show a clear tax label during checkout.
+type: guide
+---
+## Overview
+
+Add a tax percentage to every booking automatically from your WordPress dashboard, which is the main admin area where you manage your website. You can also choose whether tax is already included in the trip price or added later at checkout, and change the label travelers see.
+
+<Video uid="f053cceb-e377-416d-8f6f-5516a5c2f825" src="https://www.youtube.com/embed/31B1lr0Vb34?si=mAIXA7xBXwc4He_N" render-type="iframe" width="560" height="315" controls="true" allow-full-screen="true" />
+
+## How to enable tax settings
+
+<Callout kind="info" collapsed="false" color="#10b981">
+  Before you start, make sure you can log in to your WordPress dashboard. You will need access to the admin area of your website to change payment settings.
+</Callout>
+
+<Steps>
+  <Step title="Navigate to Tax Settings" title-type="p">
+    This is where all tax-related options are stored.
+
+    In the left sidebar of your WordPress dashboard, go to **WP Travel Engine** > **Settings** > **Payments** > **Tax Settings**.
+  </Step>
+
+  <Step title="Enable Apply Tax" title-type="p">
+    This turns on tax for your trip bookings.
+
+    Find the **Apply Tax** toggle and switch it on. Once enabled, WP Travel Engine will start using your tax settings for bookings.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787569279976-np9muuym5i9-tax-settings.png?fm=auto&auto=compress%2Cformat" width="1024" height="486" alt="" />
+  </Step>
+
+  <Step title="Specify the tax value" title-type="p">
+    This number controls how much tax gets added to each booking.
+
+    Enter the tax value you want to apply. For example, if your local tax rate is 10%, every booking will use that percentage. If you sell a guided day tour, a multi-day trek, or a package with gear rental add-ons, the tax value will be applied automatically based on your setup.
+
+    Once you save the setting, you are ready to choose how tax appears to your travelers.
+  </Step>
+</Steps>
+
+## Available tax options
+
+After you enable tax, you can adjust a few settings to match how you want prices shown on your site.
+
+| Setting        | Description                                                                                                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Custom Label   | Change the tax label to match your business or local rules. You can use `%s` to show the tax number and `%%` to show the percent sign. For example, `VAT %s%%` would appear as `VAT 10%` if your tax rate is 10. |
+| Trip Prices    | Choose whether the trip price your traveler sees already includes tax, or whether tax is added as a separate amount during checkout.                                                                             |
+| Tax Percentage | Set the tax percentage that applies to every booking. This is the number WP Travel Engine uses when calculating tax for your trips.                                                                              |
+
+### Trip Prices modes
+
+#### Tax included in price
+
+Use this option if you want the displayed trip price to already contain tax.
+
+Say you run a 3-day trek for $500 and tax is 10%. The traveler sees $500 and pays $500. The tax is already included in that amount. This works well if you want pricing to feel straightforward on trip pages, especially for fixed-price packages or seasonal offers.
+
+#### Tax added at checkout
+
+Use this option if you want to show the base trip price first and add tax later as a separate line item.
+
+Say you run a day tour for $100 and tax is 10%. The traveler sees $100 on the trip page. At checkout, they see $100 plus $10 tax for a total of $110. This option can be useful if you want travelers to see the tax amount clearly before they complete the booking.
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're stuck or have a question we didn't cover, our support team is happy to help. Reach out at [our support page](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

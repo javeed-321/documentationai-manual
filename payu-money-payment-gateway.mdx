@@ -1,0 +1,65 @@
+---
+title: PayU Money Payment Gateway
+description: >-
+  Install and configure the PayU Money Payment Gateway addon to accept credit
+  card and debit card payments in Indian Rupees for your WP Travel Engine trips.
+type: guide
+---
+## Overview
+
+[PayU Money Payment Gateway](https://wptravelengine.com/plugins/payu-money-payment-gateway/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) is an extension for WP Travel Engine that lets you accept trip and tour payments through PayU Money, one of India's leading financial services.
+
+PayU Money Payment Gateway supports credit card and debit card payments, and only accepts payment in Indian Rupee (INR) currency.
+
+<Callout kind="info">
+  PayU Money Payment Gateway requires [WP Travel Engine](https://wptravelengine.com/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) v3.0.5 or later.
+</Callout>
+
+## Requirements
+
+You must have an active merchant account with PayU Money to use this payment gateway. You'll need:
+
+- A PayU Money Merchant Key
+- A PayU Money Merchant Salt
+
+## Installation
+
+<Steps title-type="h3">
+  <Step title="Download the extension">
+    Download the extension from your dashboard.
+  </Step>
+
+  <Step title="Upload the plugin folder">
+    Upload the folder to your `/wp-content/plugins/` directory.
+  </Step>
+
+  <Step title="Activate the plugin">
+    Activate **WP Travel Engine – PayU Money Payment Gateway** from the Plugins menu within WordPress.
+  </Step>
+</Steps>
+
+## Configure the gateway
+
+<Steps title-type="h3">
+  <Step title="Open PayU Money Bolt settings">
+    Go to **WP Travel Engine > Settings > Payments > PayU Money Bolt**.
+  </Step>
+
+  <Step title="Enter your merchant credentials">
+    Click **PayU Money Bolt** to configure the settings.
+  </Step>
+
+  <Step title="Set your currency to INR">
+    Go to **Trips > Settings > Misc** and choose Indian Rupee as the currency code, since PayU Money only accepts INR.
+  </Step>
+</Steps>
+
+<ParamField name="Merchant Key" param-type="string" required="true">
+  Your PayU Money Merchant Key.
+</ParamField>
+
+<ParamField name="Merchant Salt" param-type="string" required="true">
+  Your PayU Money Merchant Salt.
+</ParamField>
+
+Once configured, when a traveler books a trip through the PayU Money Payment Gateway, they see a payment popup on the same screen to complete a secure payment.

@@ -1,0 +1,281 @@
+---
+title: Private Trips
+description: >-
+  Hide selected trips from public view and share them by direct link, with
+  optional password protection for private groups and VIP bookings.
+type: guide
+---
+## Keep selected trips private
+
+Private Trips lets you hide specific trips from your public trip listings. You can then share those trips only with the people you want to invite.
+
+This works well when you are building a custom trip for a family, a corporate group, a school departure, or a VIP guest. The trip stays out of your public search and archive pages. Your travelers still get the same booking and checkout experience once they open the link.
+
+For example, you might create a 7-day Annapurna trek for one private group with custom dates, porter add-ons, and group pricing. With Private Trips, that trip stays hidden from everyone else on your site.
+
+<Video uid="8c0e03f0-1c88-40c5-9865-d35ff8b9a26c" src="https://www.youtube.com/embed/Y-_jvflUoUc" render-type="iframe" width="644" height="362" controls="true" allow-full-screen="true" style="width: 644px; height: auto; cursor: pointer;" />
+
+## Key features
+
+- Hide trips from all public listings.
+- Access trips only via a direct link.
+- Optional password protection for controlled access.
+- Customizable lock screen content.
+- Fully compatible with all trip features and payments.
+
+## Benefits at a glance
+
+| Feature                | Benefit                                             |
+| ---------------------- | --------------------------------------------------- |
+| Private Visibility     | Keep exclusive trips hidden from the public.        |
+| Direct Link Access     | Share trips only with intended travelers.           |
+| Password Protection    | Add an extra layer of access control.               |
+| Unchanged Booking Flow | Travelers enjoy the same smooth booking experience. |
+| Full Compatibility     | Works with all packages, pricing, and payments.     |
+
+These are the main benefits. Next, make sure you have everything in place before you turn the feature on.
+
+## Prerequisites
+
+Before you use the Private Trips add-on, make sure these are already in place:
+
+- You have WP Travel Engine installed and activated on your WordPress site. You need Version 6.7.5 or later.
+- You have installed and activated the Private Trips add-on.
+- You have created at least one trip in WP Travel Engine.
+
+A plugin is a tool you add to WordPress to give your site extra features. In this case, the Private Trips add-on is the extra tool that adds private trip controls to your trip settings.
+
+## Installing the Private Trips add-on
+
+You need the add-on installed and active before the private trip settings will appear inside a trip.
+
+<Callout kind="info" collapsed="false">
+  See [how to activate a Pro add-on license key](/article/activate-pro-addon-license-key/) for the full installation and activation walkthrough.
+</Callout>
+
+### Verification
+
+This quick check helps you confirm the add-on is active before you spend time setting up a trip.
+
+<Steps>
+  <Step title="Open an existing trip" title-type="p">
+    Open any existing trip page from your WordPress dashboard.
+
+    If you already have a custom departure, a day hike, or a private cultural tour set up, you can use that trip for this check.
+  </Step>
+
+  <Step title="Go to Advanced Settings" title-type="p">
+    Look for **WP Travel Engine** settings inside the trip editor. Then open **Trip Settings → Advanced Settings**.
+
+    This is where WP Travel Engine keeps extra controls for that trip.
+  </Step>
+
+  <Step title="Confirm the Private Trip tab is available" title-type="p">
+    Check whether you can see the **Private Trips** tab.
+
+    If the tab does not appear, deactivate and reactivate the add-on from the **Plugins** screen in WordPress.
+  </Step>
+</Steps>
+
+If you can see the tab, you are ready to set up the trip.
+
+## Configuring the Private Trip settings
+
+Private Trips are set up one trip at a time. You manage them inside the **Private Trips** tab in that trip's **Advanced Settings**.
+
+That means you can keep one trip public and make another one private. For example, your regular Everest Base Camp package can stay public while a custom 10-person company retreat stays hidden.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786955869630-vmh02hdavfr-Private-trips-settings.Private-trips-settings?fm=auto&auto=compress%2Cformat" width="1536" height="756" alt="" />
+
+### Allow Private Trip Mode
+
+Turn on **Allow Private Trip Mode** when you want to hide the trip from the public and share it only by link.
+
+When you enable it:
+
+- The trip is hidden from public trip listings, archive pages, and search results.
+- A **Trip Link** is generated automatically.
+- You can copy and share the trip link with selected customers.
+
+For example, if you create a private birdwatching weekend for one returning client, that trip will not appear in your public trip list once this setting is on.
+
+<Callout kind="info" collapsed="false">
+  If you turn this option off later, the trip becomes public again right away.
+</Callout>
+
+### Apply Password Protection
+
+Turn on **Apply Password Protection** if you want one more layer of control.
+
+With this enabled, travelers who open the trip link will first see a lock screen. They must enter the correct password before they can view the trip and continue to book.
+
+This is useful when you are sharing a trip with a school group, a corporate incentive group, or a partner agency and you do not want the link passed around without control.
+
+### Trip Password
+
+Add the password travelers must enter to unlock the private trip. This field is required when password protection is turned on.
+
+Use something you can share clearly with travelers. For example, if you are running a private Dolpo trek for a photography club, you might send the trip link by email and the password in a separate message.
+
+<Callout kind="info" collapsed="false">
+  You can change the password at any time by editing the trip.
+</Callout>
+
+### Lock Screen Title
+
+Set the heading text shown on the password screen.
+
+This is a good place to tell travelers they are in the right place. For example, you could write: "Private Booking - Alpine Team Retreat".
+
+### Lock Screen Message
+
+Set the message shown below the title on the lock screen. Use this to guide travelers or explain why they are seeing the screen.
+
+For example, you might write: "This trip page is for confirmed members of the June Island Hopping group. Enter the password sent by your trip coordinator."
+
+### Unlock Button Label
+
+Choose the text shown on the button travelers click after entering the password.
+
+A clear label helps avoid confusion. For example, "View Trip" may feel more natural to travelers than a generic button label.
+
+## Frontend preview
+
+This is what travelers will see when password protection is turned on.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786955916545-auiatr363bh-Private-trips-frontend.Private-trips-frontend?fm=auto&auto=compress%2Cformat" width="2048" height="1031" alt="" />
+
+<Callout kind="alert" collapsed="false">
+  If you are logged into the WordPress admin dashboard, the password screen may not appear. Administrators can bypass it. To test the traveler experience, open the trip link in an incognito window or log out of your admin account first.
+</Callout>
+
+Once you have checked the front-end view, you can choose the setup that fits the kind of private booking you want to offer.
+
+## Use cases
+
+### Private trip without password
+
+This setup works best when you want the trip hidden from the public but you do not need a password screen.
+
+**Situation:** You are creating a custom trip for a specific customer, corporate group, or partner, and you do not want the trip to appear in public listings or search results.
+
+A good example is a private 3-day safari package with custom lodging and child pricing for one family. You can send them the trip link directly and keep it off your public site.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786955959153-690lx0zz0q-Private-trips-without-Password.Private-trips-without-Password?fm=auto&auto=compress%2Cformat" width="1024" height="588" alt="" />
+
+<Steps>
+  <Step title="Enable private mode" title-type="p">
+    Turn on **Allow Private Trip Mode** for the trip.
+
+    This hides the trip from your public listings.
+  </Step>
+
+  <Step title="Skip password protection" title-type="p">
+    Leave **Apply Password Protection** turned off.
+
+    This means anyone with the direct trip link can open the page.
+  </Step>
+
+  <Step title="Share the trip link" title-type="p">
+    Copy the generated **Trip Link** and send it directly to the customer.
+
+    You might send it by email or WhatsApp after you confirm dates, price, and optional add-ons such as gear rental or airport pickup.
+  </Step>
+</Steps>
+
+**Benefit:** The trip stays hidden from the public, while the customer can still access and book it through the direct link.
+
+### Password-protected exclusive trip
+
+This setup works best when the trip should stay hidden and only approved travelers should get in.
+
+**Situation:** You are organizing an invite-only or VIP trip and want to ensure only authorized travelers can view and book it.
+
+A good example is a private departure for a company team, a yoga retreat group, or a luxury photography tour with limited spaces.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786956028964-okjjqfdufso-Private-trips-with-Password.Private-trips-with-Password?fm=auto&auto=compress%2Cformat" width="1024" height="594" alt="" />
+
+<Steps>
+  <Step title="Enable private mode" title-type="p">
+    Turn on **Allow Private Trip Mode**.
+
+    This removes the trip from your public trip pages.
+  </Step>
+
+  <Step title="Enable password protection" title-type="p">
+    Turn on **Apply Password Protection**.
+
+    Travelers will need the password before they can see the trip details.
+  </Step>
+
+  <Step title="Set the password and lock screen content" title-type="p">
+    Add a **Trip Password** and fill in the lock screen text.
+
+    Use the title and message to tell travelers what trip they are opening and where to get help if they cannot access it.
+  </Step>
+
+  <Step title="Share access separately" title-type="p">
+    Send the trip link and password separately to your selected travelers.
+
+    For example, you might email the trip link and send the password in a follow-up message to the group organizer.
+  </Step>
+</Steps>
+
+**Benefit:** You control who can access the trip, while travelers still go through the usual booking process after they unlock it.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Does making a trip private affect the booking process?" default-open="false">
+    No. The booking flow stays the same for travelers.
+
+    They can still choose dates, packages, pricing options, and complete checkout as usual.
+  </Expandable>
+
+  <Expandable title="Can private trips accept payments and add-ons?" default-open="false">
+    Yes. Private trips support all standard pricing, packages, add-ons, and payment gateways.
+
+    For example, you can still offer group discounts, room upgrades, porter service, or gear rental on a private trip.
+  </Expandable>
+
+  <Expandable title="Can I remove the password but keep the trip private?" default-open="false">
+    Yes. Turn off password protection and keep **Allow Private Trip Mode** on.
+
+    The trip will stay hidden from public view and remain accessible by direct link.
+  </Expandable>
+
+  <Expandable title="Can a private trip be made public again?" default-open="false">
+    Yes. Turn off Private Trip Mode and the trip becomes publicly visible again.
+
+    It can then appear in your listings, archive pages, and search results.
+  </Expandable>
+
+  <Expandable title="Will private trips still work with seasonal pricing or custom packages?" default-open="false">
+    Yes. Private Trips works with all trip features.
+
+    If you set up seasonal pricing for a winter trek or create a custom multi-day package for a private group, those settings still work the same way.
+  </Expandable>
+
+  <Expandable title="Do I need to create a separate trip for each private group?" default-open="false">
+    In most cases, yes. That is the clearest way to manage different dates, prices, group discounts, or add-ons for different customers.
+
+    For example, if two corporate groups need different itineraries or room setups, keeping them as separate trips helps you avoid mix-ups.
+  </Expandable>
+
+  <Expandable title="What if a traveler says the password screen does not appear?" default-open="false">
+    First, check whether you are testing while logged into WordPress as an administrator. Admin users can bypass the lock screen.
+
+    Ask the traveler to open the link in a private or incognito browser window. If needed, test the same way on your side.
+  </Expandable>
+
+  <Expandable title="Can I change the trip link or password after I share it?" default-open="false">
+    You can change the password at any time by editing the trip.
+
+    The page already states that a **Trip Link** is generated automatically. If you make changes to access details, tell travelers clearly which link and password they should use going forward.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

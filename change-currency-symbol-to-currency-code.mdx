@@ -1,0 +1,46 @@
+---
+title: Change Currency Symbol to Currency Code (e.g. $ to USD)
+description: >-
+  Display prices with the currency code instead of the currency symbol by
+  editing the Amount Display Format in WP Travel Engine's currency settings.
+type: guide
+---
+## Symbol vs. code display
+
+By default, WP Travel Engine displays trip prices using a **currency symbol** — for example, `$100`. If you'd rather show the **currency code** instead — for example, `100 USD` — you can switch this by editing the amount display format placeholder in currency settings.
+
+<Callout kind="info">
+  Showing the currency code instead of the symbol is useful when your site serves an international audience and a symbol like `$` or `£` could be ambiguous about which currency is actually being charged.
+</Callout>
+
+## Switch the display format
+
+<Steps title-type="h3">
+  <Step title="Open Currency Settings">
+    In your WordPress dashboard, go to **WP Travel Engine > Settings > Currency > General**.
+  </Step>
+
+  <Step title="Find Amount Display Format">
+    Locate the **Amount Display Format** field on this tab.
+  </Step>
+
+  <Step title="Replace the placeholder">
+    Remove `%CURRENCY_SYMBOL%` from the field and replace it with `%CURRENCY_CODE%`.
+  </Step>
+
+  <Step title="Save your settings">
+    Save the changes. Prices across your site — the pricing widget, cart, and checkout — now display with the currency code instead of the symbol.
+  </Step>
+</Steps>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2023/02/image-4-1024x508.png" width="1024" height="508" alt="Amount Display Format field in WP Travel Engine currency settings with the currency code placeholder" />
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2023/02/image-3-1024x463.png" width="1024" height="463" alt="Trip price displayed with the currency code instead of the currency symbol" />
+
+<Callout kind="tip">
+  You can combine both placeholders in the same format string — for example, `%CURRENCY_SYMBOL%%AMOUNT% %CURRENCY_CODE%` — if you want to show the symbol and the code together.
+</Callout>
+
+## Related settings
+
+If you also need to switch which currency is used for pricing and payment (not just how it's displayed), see [Changing the Default Currency (Dollar) in WP Travel Engine](/article/changing-the-default-currency).

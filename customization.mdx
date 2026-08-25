@@ -1,0 +1,125 @@
+---
+title: Design and Customization
+description: Customize the look and feel of your travel site using blocks, templates, and integrations with page builders.
+---
+
+## Overview
+
+WP Travel Engine provides flexible tools to tailor your travel website's appearance and user interactions. You can leverage Gutenberg blocks and patterns for quick layouts, integrate with popular page builders like Elementor and Divi, and fine-tune elements such as the user dashboard and social login. These options ensure your site matches your brand while delivering an intuitive experience for trip planners and customers.
+
+<Callout kind="tip">
+Start with the WP Travel Engine blocks for native WordPress customization before diving into third-party builders.
+</Callout>
+
+## Using WP Travel Engine Blocks and Patterns
+
+WP Travel Engine includes dedicated Gutenberg blocks for trips, itineraries, search forms, and more. These blocks allow drag-and-drop customization without coding.
+
+<Steps>
+  <Step title="Access Blocks" icon="blocks">
+    In the WordPress editor, search for `WP Travel Engine` in the block inserter. Popular blocks include `Trip Search`, `Trip List`, and `Trip Itinerary`.
+  </Step>
+  <Step title="Apply Patterns" icon="patterns">
+    Use pre-built patterns from the Patterns library. Insert a `WP Travel Engine` pattern for ready-made trip showcases.
+  </Step>
+  <Step title="Customize Styles" icon="brush">
+    Adjust block settings for colors, spacing, and typography. Match your brand using the block editor's style tools.
+  </Step>
+</Steps>
+
+```jsx
+// Example block usage in a page template
+register_block_type( 'wpte/trip-search', {
+  // Block configuration
+} );
+```
+
+## Integrating with Page Builders
+
+Enhance designs with seamless integrations for Elementor and Divi.
+
+<Tabs>
+  <Tab title="Elementor" icon="layers">
+    Install the WP Travel Engine Elementor addon. Drag widgets like `Trip Listing` or `Single Trip` onto your canvas.
+
+    <CodeGroup tabs="Shortcode,Widget">
+    ````html
+    [wpte_trip_search]
+    ````
+    ````html
+    <!-- Elementor renders the widget directly -->
+    ````
+    </CodeGroup>
+
+    <Image
+      src="https://example.com/elementor-trip-widget.png"
+      alt="Elementor WP Travel Engine widget in action"
+      width="800"
+      height="400"
+    />
+  </Tab>
+  <Tab title="Divi" icon="magic">
+    Use Divi modules for WP Travel Engine elements. Enable the integration in Divi settings.
+
+    <CodeGroup tabs="Module,Shortcode">
+    ````html
+    <!-- Divi Trip module -->
+    <div class="et_pb_module et_pb_wpte_trip_list">
+    ````
+    ````html
+    [wpte_trip_list]
+    ````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+## Configuring User Dashboard and Social Login
+
+Personalize customer experiences with dashboard customizations and easy logins.
+
+<Columns cols={2}>
+  <Card title="User Dashboard" icon="user" href="#">
+    Customize via WP Travel Engine > Settings > Dashboard. Add tabs for bookings, itineraries, and profiles.
+  </Card>
+  <Card title="Social Login" icon="share-2" href="#">
+    Enable Google, Facebook, or Apple login. Configure in Settings > Social Login with your app credentials.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Dashboard Layout" default-open="false">
+  Use custom CSS to rearrange dashboard sections:
+
+````css
+.wpte-user-dashboard .booking-tab {
+  order: 1;
+}
+````
+
+</Expandable>
+
+## Layout Customization Best Practices
+
+| Layout Element | Customization Method | Example Benefit |
+| -------------- | -------------------- | --------------- |
+| Trip Cards | Block spacing & hover effects | Improved scannability |
+| Search Form | Widget positioning | Better conversion rates |
+| Single Trip Page | Template overrides | Brand-aligned itineraries |
+| Mobile Responsiveness | Theme customizer | Seamless mobile booking |
+
+<Callout kind="success">
+Test customizations on staging sites to ensure compatibility across devices.
+</Callout>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Create Trips" icon="map" href="/create-and-manage-trips">
+    Build your first trip with itineraries and pricing.
+  </Card>
+  <Card title="User Portal" icon="users" href="/customer-experience">
+    Set up advanced customer features.
+  </Card>
+  <Card title="Advanced Settings" icon="settings" href="/configuration">
+    Dive into pro configurations.
+  </Card>
+</Columns>

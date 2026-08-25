@@ -1,0 +1,277 @@
+---
+title: Razorpay Payment Gateway
+description: >-
+  Set up Razorpay in WP Travel Engine so travelers can pay for your tours
+  online, then test the checkout flow before you go live.
+type: guide
+---
+## Overview
+
+Razorpay lets you take secure online payments on your travel booking website. Once it is connected to WP Travel Engine, your travelers can pay during checkout instead of contacting you later for payment.
+
+That means fewer manual follow-ups for you. It also gives your customers a smoother booking experience when they book a day tour, a trek, or a multi-day package on your site.
+
+### What is Razorpay Payment Gateway?
+
+Razorpay is an online payment service that collects money from your customers and sends payment updates back to your website. In plain terms, it is the tool that handles the payment part of your booking process.
+
+When someone books a tour on your site, Razorpay helps them pay using one of the payment methods it supports. Your site then gets confirmation that the payment was successful, failed, or still needs attention.
+
+### Supported payment methods
+
+When you connect Razorpay with WP Travel Engine, your customers can pay using:
+
+- Credit and debit cards (Visa and Mastercard)
+- Net banking (major banks in India)
+- UPI (Unified Payments Interface)
+- Digital wallets (Airtel Payments Bank, Mobikwik, Jio Money, Freecharge, and others)
+- Pay Later options (LazyPay, ICICI, ePayLater, Kotak Mahindra Bank, Amazon Pay Later, RazorpayX Postpaid, and others)
+
+This gives travelers more choice at checkout. For example, one guest booking a weekend wildlife tour may prefer UPI, while another booking a family holiday package may want to pay by card.
+
+<Callout kind="info" collapsed="false">
+  For more detail on supported payment methods, see [Razorpay's payment methods documentation](https://razorpay.com/docs/payments/payment-methods/).
+</Callout>
+
+### Supported regions
+
+Razorpay primarily supports businesses and payments in India. It also allows businesses with international operations to accept payments from global customers using cards. Check the full list of supported regions on the [Razorpay website](https://razorpay.com/accept-international-payments/).
+
+If you serve travelers from outside India, review this carefully before you go live. That helps you avoid surprises when someone tries to pay for a tour from another country.
+
+### Why use Razorpay for your travel booking website?
+
+- **Wide range of payment options:** Let customers pay using their preferred method.
+- **Instant payment processing:** Give customers a smooth and reliable payment experience.
+- **Enhanced security:** Razorpay complies with PCI-DSS standards for secure transactions.
+- **Real-time updates:** Get instant payment confirmation for bookings on your WP Travel Engine site.
+
+For many tour businesses, that means fewer payment questions after checkout. It also helps you confirm bookings faster and move on to the next customer.
+
+## Step-by-step configuration guide
+
+Before you begin, keep your WordPress login, your WP Travel Engine Pro addon access, and your Razorpay account ready.
+
+### 1. Install the Razorpay Payment Gateway addon
+
+This addon must be installed before Razorpay can appear in your payment settings.
+
+<Steps>
+  <Step title="Install and activate the addon" title-type="p">
+    Follow the [pro addon installation and license activation guide](https://docs.wptravelengine.com/article/wptravelengine-pro/).
+
+    If you are new to WordPress, your WordPress dashboard is the admin area you see after logging in. The menu you need is in the left sidebar.
+  </Step>
+</Steps>
+
+Once the addon is active, you are ready to enter your payment details.
+
+### 2. Configure the Razorpay Payment Gateway settings
+
+This is where you connect your website to your Razorpay account. You will do this inside your WordPress dashboard.
+
+Navigate to **Admin Dashboard > WP Travel Engine > Settings > Payments > Razorpay**. You can find the main WordPress menu on the left sidebar.
+
+#### General
+
+These fields tell your site how to show Razorpay at checkout and how to connect to your Razorpay account.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787569829646-bm0dyt8ecqk-Razor-pay.png?fm=auto&auto=compress%2Cformat" width="1024" height="452" alt="" />
+
+<ParamField body="label" param-type="string" required="false" deprecated="false" show-location="true">
+  This changes the name customers see for Razorpay on the checkout page. By default, the label is set to "Razorpay," but you can change it to something clearer, such as "Pay with Razorpay."
+
+  This is helpful if you want the payment option to feel more familiar to your travelers at checkout.
+</ParamField>
+
+<ParamField body="key_id" param-type="string" required="true" deprecated="false" show-location="true">
+  This is your Razorpay Key ID. An API key is a private connection code that lets your website talk to Razorpay securely.
+
+  Find it by logging in to your Razorpay Dashboard and navigating to **Settings > API Keys**. Copy the Key ID and paste it into this field. See Razorpay's guide on [generating Test and Live API keys](https://razorpay.com/docs/payments/dashboard/account-settings/api-keys/) for more detail.
+
+  <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787569884277-5b7u6vk3qfq-Razor-pay-2.png?fm=auto&auto=compress%2Cformat" width="2048" height="903" alt="" />
+</ParamField>
+
+<ParamField body="secret_key" param-type="string" required="true" deprecated="false" show-location="true">
+  This is your Razorpay Secret Key. It works with the Key ID to confirm that your website is allowed to use your Razorpay account.
+
+  Find it alongside your Key ID in **Razorpay Dashboard > API Keys**. Copy the Secret Key and paste it into this field.
+
+  <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787569920519-9dvnz6x31j4-razor-pay-3.png?fm=auto&auto=compress%2Cformat" width="2048" height="906" alt="" />
+</ParamField>
+
+After these fields are filled in, your site can connect to Razorpay. Next, you will set up webhooks so your bookings update properly after payment.
+
+#### Webhooks
+
+A webhook is an automatic message sent from Razorpay to your website when a payment changes. For example, it tells your site when a traveler's payment is approved, captured, or failed.
+
+This step matters because it helps keep booking payments in sync. Without it, you may not see the right payment status inside WP Travel Engine.
+
+<Steps>
+  <Step title="Copy the webhook URL" title-type="p">
+    In your Razorpay addon settings, copy the **Webhook URL** shown there by clicking the copy icon next to it.
+
+    This URL is the address Razorpay will use to send payment updates back to your website.
+  </Step>
+
+  <Step title="Open webhook settings in Razorpay" title-type="p">
+    Go to your Razorpay Dashboard. Click **Account & Settings** in the left sidebar. Then under **Website and app settings**, click **Webhooks**.
+
+    You are now in the place where Razorpay sends payment updates to your site.
+  </Step>
+
+  <Step title="Add a new webhook" title-type="p">
+    On the Webhooks page, click **+ Add New Webhook**.
+
+    This creates a new connection between Razorpay and your website.
+  </Step>
+
+  <Step title="Configure the webhook" title-type="p">
+    In the Webhook Setup window, paste the webhook URL you copied from your site.
+
+    Then enter a secret key of your choice and store it somewhere safe. This secret key is a private password that helps your site verify the message really came from Razorpay.
+
+    Subscribe to the `payment.authorized`, `payment.captured`, and `payment.failed` events. Then click **Create Webhook**.
+
+    For example, if a traveler pays a deposit for a group trekking package, these events help your site know whether the payment went through or failed.
+  </Step>
+
+  <Step title="Save the secret key in WP Travel Engine" title-type="p">
+    Go back to your Razorpay addon settings in WP Travel Engine and paste the same secret key you used when creating the webhook.
+
+    The secret key must match in both places or your site may not trust the payment updates.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  Keep your webhook secret key somewhere safe, such as your business password manager or a secure admin note. You may need it later if you reconnect Razorpay or check a payment issue.
+</Callout>
+
+With webhooks in place, Razorpay can send payment updates back to your site. Now you can switch the gateway on for customers.
+
+### 3. Enable the Razorpay Payment Gateway for bookings
+
+This step makes Razorpay available on your booking checkout page.
+
+<Steps>
+  <Step title="Open Payment settings" title-type="p">
+    Navigate to **Admin Dashboard > WP Travel Engine > Settings > Payments > General**.
+
+    If you are unsure where to look, start from the WordPress dashboard and use the left sidebar menu.
+  </Step>
+
+  <Step title="Review available gateways" title-type="p">
+    Under the **Payment Gateways** section, you will see the payment methods available on your site.
+
+    This is where you choose which payment options travelers can use when they book.
+  </Step>
+
+  <Step title="Enable Razorpay" title-type="p">
+    Find **Razorpay** and check the box next to it to enable it.
+
+    Once enabled, customers will be able to choose Razorpay during checkout.
+  </Step>
+
+  <Step title="Save your settings" title-type="p">
+    Click **Save Changes**.
+
+    Your site now knows Razorpay is an active payment option.
+  </Step>
+</Steps>
+
+That completes the setup inside WordPress. Before you accept real bookings, test everything once.
+
+### 4. Test the Razorpay Payment Gateway
+
+Testing helps you catch problems before a real traveler sees them. It is the safest way to confirm the full booking and payment flow works.
+
+<Steps>
+  <Step title="Switch to Test Mode in Razorpay" title-type="p">
+    Go to your Razorpay Dashboard and switch to Test Mode under **Settings > API Keys** to generate test credentials.
+
+    Test Mode lets you practice payments without charging real money. See Razorpay's [Test Mode documentation](https://razorpay.com/docs/x/dashboard/test-mode/) for more detail.
+  </Step>
+
+  <Step title="Enter test credentials in WP Travel Engine" title-type="p">
+    Paste the test Key ID and Secret Key into the Razorpay settings in WP Travel Engine.
+
+    This makes your website use the test connection instead of your live payment account.
+  </Step>
+
+  <Step title="Enable Debug Mode" title-type="p">
+    Enable Debug Mode via **WP Travel Engine > Settings > Payments > General**.
+
+    Debug Mode helps record extra detail if something goes wrong during testing.
+  </Step>
+
+  <Step title="Make a test booking" title-type="p">
+    Create a test booking on your website and complete the payment using the test payment details Razorpay provides.
+
+    For example, try booking one of your own tours, such as a half-day city walk or a three-day hiking package, and go through the same checkout steps a customer would use.
+  </Step>
+
+  <Step title="Switch back to Live Mode" title-type="p">
+    After testing is complete, switch back to Live Mode and enter your live API keys.
+
+    This is the final step before real customers start paying through Razorpay.
+  </Step>
+</Steps>
+
+Once your test booking works, you are ready for a final check on the live site.
+
+## Final verification
+
+Take a quick look at the customer side of your website before you move on.
+
+- Navigate to the checkout page on your website and confirm the Razorpay payment option appears with the correct label.
+- Perform a live booking to confirm the payment flow works as expected.
+
+If both checks work, your payment setup is ready for customers.
+
+## Troubleshooting
+
+If something does not look right, work through the issues below. These are the most common ones people run into, and each one has a short fix.
+
+### Razorpay isn't showing up at checkout
+
+This usually means Razorpay isn't turned on in your payment settings. Go to **WP Travel Engine > Settings > Payments > General** in your WordPress dashboard. Find **Razorpay** in the list and make sure the box next to it is checked. Then click **Save Changes** at the bottom of the page.
+
+If it is checked and still not showing, make sure you entered your Key ID and Secret Key in the Razorpay settings page first. Razorpay won't appear at checkout until those fields are filled in.
+
+### I pasted my API keys but payments aren't going through
+
+Double-check that you copied the keys correctly from your Razorpay Dashboard. Go to **Settings > API Keys** in Razorpay and copy both the Key ID and the Secret Key again. Sometimes extra spaces get copied at the beginning or end without you noticing. Paste them carefully into the matching fields in **WP Travel Engine > Settings > Payments > Razorpay**.
+
+Also make sure you're using the right keys for the right mode. If you're testing, use your test keys. If you're ready to accept real payments, use your live keys. Mixing them up is a common mix-up.
+
+### My test payment worked but the booking status didn't update
+
+This usually means the webhook isn't set up correctly. Go back to the webhook steps above and check two things. First, make sure the webhook URL from your WordPress site was pasted into Razorpay correctly. Second, make sure the secret key you entered in Razorpay matches the one you saved in WP Travel Engine. They need to be identical.
+
+Also check that you subscribed to the right events in Razorpay: `payment.authorized`, `payment.captured`, and `payment.failed`. If any of these are missing, your site won't get the updates it needs.
+
+### I switched to Live Mode but forgot to update my API keys
+
+This is easy to miss. When you switch from Test Mode to Live Mode in Razorpay, you get a new set of keys. Go to your Razorpay Dashboard, make sure you're in Live Mode, and copy your live Key ID and Secret Key. Then go to **WP Travel Engine > Settings > Payments > Razorpay** in WordPress and replace the test keys with the live ones. Click **Save Changes**.
+
+If you don't do this, your site will still be using test keys. Payments will look like they go through in test mode, but real travelers' cards won't be charged.
+
+### The Razorpay option shows up but the payment page is blank or errors out
+
+This can happen if your website's server is blocking connections to Razorpay. This is not something you can fix inside WordPress. Contact your hosting provider and ask them to make sure your server allows outgoing connections to Razorpay. Most hosts allow this by default, but some security settings can block it.
+
+### I changed the Razorpay label but the old name is still showing at checkout
+
+Your website might be showing a saved (cached) version of the page. A cache is a temporary copy of your site that loads faster for visitors. Sometimes it takes a little while for the cache to update. Try clearing your website cache if you use a caching plugin. If that doesn't help, wait a few minutes and check again. The new label should appear shortly.
+
+## Conclusion
+
+You now have the Razorpay Payment Gateway addon set up to accept online payments for your tour bookings. That gives your customers a smoother way to pay and gives you faster payment confirmation on your WP Travel Engine site.
+
+Whether you sell day tours, private departures, or multi-day packages, this setup helps you take bookings without handling every payment manually. If you run into trouble, help is available.
+
+<Callout kind="tip" collapsed="false">
+  If you encounter any issues or need further assistance, reach out to our [support team](https://wptravelengine.com/support-ticket/).
+</Callout>
+

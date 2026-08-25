@@ -1,0 +1,46 @@
+---
+title: Authorize.net Payment Gateway
+description: >-
+  Configure the Authorize.net Payment Gateway addon to accept credit card
+  payments directly on your website through your Authorize.net account in WP
+  Travel Engine.
+type: guide
+---
+## Overview
+
+The [Authorize.net Payment Gateway](https://wptravelengine.com/plugins/authorize-net-payment-gateway/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) extension lets you accept credit cards directly on your website through your Authorize.net account.
+
+<Callout kind="info">
+  Authorize.net Payment Gateway requires the WP Travel Engine plugin to be installed.
+</Callout>
+
+## Requirements
+
+To receive payments with Authorize.net in WP Travel Engine, you'll need:
+
+- An Authorize.net API Login ID
+- An Authorize.net Transaction Key
+
+## Main setting
+
+<Steps title-type="h3">
+  <Step title="Open Payment settings">
+    Go to **Trips > Settings > Payment**.
+  </Step>
+
+  <Step title="Show the credential fields">
+    Tick the option to show the Authorize.net API Login ID and Transaction Key fields.
+  </Step>
+
+  <Step title="Enter your credentials">
+    Enter your API Login ID and Transaction Key.
+  </Step>
+</Steps>
+
+<ParamField name="API Login ID" param-type="string" required="true">
+  Your Authorize.net API Login ID.
+</ParamField>
+
+<ParamField name="Transaction Key" param-type="string" required="true">
+  Your Authorize.net Transaction Key.
+</ParamField>

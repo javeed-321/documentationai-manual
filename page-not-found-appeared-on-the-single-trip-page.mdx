@@ -1,0 +1,34 @@
+---
+title: 'Fix: Page Not Found Error on the Single Trip Page'
+description: >-
+  Resolve a Page Not Found error on single trip pages by updating your WordPress
+  Permalink structure to Post name.
+type: guide
+---
+If visiting a single trip page shows a **Page Not Found** error, this is usually related to the permalink structure set in your WordPress dashboard.
+
+## Solution
+
+<Steps title-type="h3">
+  <Step title="Open your Permalink settings">
+    Go to **Settings → Permalinks** in your WordPress admin dashboard.
+  </Step>
+
+  <Step title="Select the Post name structure">
+    Under **Permalink structure**, select **Post name**.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2023/12/image-5-1024x513.png" width="1024" height="513" alt="WordPress Permalink settings page with the Post name option selected" />
+  </Step>
+
+  <Step title="Save your changes">
+    Click **Save Changes** at the bottom of the page.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  If **Post name** is already selected, click **Save Changes** anyway and check whether the issue persists. Re-saving the permalink structure regenerates your site's rewrite rules, which often resolves the error on its own.
+</Callout>
+
+## Still having trouble?
+
+Contact the [WP Travel Engine support team](https://wptravelengine.com/support-ticket/) for further assistance.

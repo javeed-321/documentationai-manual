@@ -1,0 +1,160 @@
+---
+title: Conditional Price
+description: >-
+  Learn how to set trip prices for specific dates and create group discounts so
+  your booking prices match your season, demand, and group size.
+type: guide
+---
+Set different prices for specific travel dates and offer group discounts from the same trip settings. This helps you charge more during busy dates, offer better rates during quieter periods, and show the right price to travelers at the time of booking.
+
+If you do not add a conditional price for a date, WP Travel Engine uses your global price settings instead. That gives you a fallback price for any date you leave unchanged.
+
+<Video uid="2457bc42-0660-4966-910a-6fafe7d78ca8" src="https://www.youtube.com/embed/XaUBV8FHIQQ" render-type="iframe" width="643" height="362" controls="true" allow-full-screen="true" style="width: 643px; height: auto; cursor: pointer;" />
+
+## Key features
+
+The Conditional Price add-on gives you more control over how each trip is priced.
+
+- **Different prices for different dates:** Charge one price for busy dates and another for slower dates.
+- **Separate prices for adults and children:** Set different rates for each traveler type when needed.
+- **Automatic price updates on the booking form:** Travelers see the price that matches the date they choose.
+- **Group discounts by booking size:** Offer lower rates for larger groups booking together.
+
+## Install the add-on
+
+What you'll need before you start: You need access to your WordPress dashboard and the Conditional Price add-on installed and activated.
+
+An add-on is an extra feature you install inside WP Travel Engine to add new tools to your site. Once this add-on is active, you can start setting date-based prices for your trips.
+
+For detailed instructions, see [how to install and activate the license for Pro add-ons](/article/wptravelengine-pro/).
+
+## Add conditional pricing to a trip
+
+What you'll need before you start: The Conditional Price add-on must already be active, and the trip you want to edit should already exist.
+
+You will set these prices inside the trip settings in your WordPress dashboard. The WordPress dashboard is the main admin area you see after you log in, with the menu on the left sidebar.
+
+<Steps>
+  <Step title="Open the trip" title-type="p">
+    This takes you to the trip you want to update.
+
+    In your WordPress dashboard, go to **Trips** on the left sidebar. Then choose the trip where you want to add date-based pricing.
+  </Step>
+
+  <Step title="Open trip settings" title-type="p">
+    This is where you can change the trip details and pricing.
+
+    Click **Edit** for that trip to open its settings screen.
+  </Step>
+
+  <Step title="Open the Dates tab" title-type="p">
+    This is where you tell the system which dates should use a different price.
+
+    Inside the trip settings, go to the **Date and Price** section. Click **Edit Pricing & Dates**. Then open the **Dates** tab.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786691917181-cgy2sfxlu3w-Date-Tab-in-Conditional-Price.Date Tab in Conditional Price?fm=auto&auto=compress%2Cformat" width="1536" height="794" alt="" />
+  </Step>
+
+  <Step title="Set conditional prices" title-type="p">
+    This lets you charge the right amount for each travel date.
+
+    Add the price you want for each date. You can set separate prices for **Adults** and **Children**. For example, you might charge more for a long holiday weekend trek and keep a lower price for midweek departures.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786691957631-2de4rl3f57x-Set-Conditional-Price.Set Conditional Price?fm=auto&auto=compress%2Cformat" width="1335" height="790" alt="" />
+  </Step>
+
+  <Step title="Save your changes" title-type="p">
+    This makes your new prices live on the trip.
+
+    Click **Save Changes** to apply the pricing you added.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  If you leave the Conditional Pricing fields empty, WP Travel Engine will use the **Global Price** instead. If you set group prices inside Conditional Pricing, those group prices will override the default Global Pricing group price.
+</Callout>
+
+Now that your date-based prices are in place, you can add group discounts for travelers booking together.
+
+## Add group discounts
+
+What you'll need before you start: Open the same trip and go to the **Date and Price** settings.
+
+Group pricing helps you reward larger bookings with a better rate. For example, you might give a lower per-person price to a family booking a private day tour or a small group joining a multi-day package.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786691988260-fjt8pd4268-Adding-Group-Discount.Adding Group Discount?fm=auto&auto=compress%2Cformat" width="1024" height="544" alt="" />
+
+<Steps>
+  <Step title="Open Group Pricing" title-type="p">
+    This is where you set your group discount levels.
+
+    In the **Date and Price** settings, scroll down until you see the **Group Pricing** section.
+  </Step>
+
+  <Step title="Set the first tier" title-type="p">
+    Start with your smallest group range, so you have a base group offer.
+
+    Enter the **Number of Persons** and the matching **Group Price**. For example, for 1-5 people, you might set the price at $1000.
+  </Step>
+
+  <Step title="Add more tiers" title-type="p">
+    More tiers let you offer better prices to larger groups.
+
+    Click **+ Add Group** to add more group sizes. For example, you could set $900 for 6-10 people and $850 for 11-15 people.
+  </Step>
+
+  <Step title="Save your changes" title-type="p">
+    This applies your group discount settings to the trip.
+
+    Click **Save Changes** to keep your new group pricing.
+  </Step>
+</Steps>
+
+Here is the same group pricing example in table form so you can picture how the tiers work:
+
+| Group size   | Price |
+| ------------ | ----- |
+| 1-5 people   | $1000 |
+| 6-10 people  | $900  |
+| 11-15 people | $850  |
+
+This setup gives larger groups a lower price. That can help you win more family bookings, friend groups, or small private tour requests.
+
+## What travelers see on the booking page
+
+When someone books a trip, they see the price for the date they choose. They do not need to work it out on their own.
+
+WP Travel Engine updates the price automatically based on the values you set. That keeps the booking process clear and helps avoid confusion about the total cost.
+
+## Example workflow
+
+Picture a weekend trek that is more popular than weekday departures. You set the weekend price at $200 and the weekday price at $150.
+
+A traveler chooses a Saturday departure on the booking page. WP Travel Engine picks the weekend price for that date and shows it in the booking summary. If another traveler chooses a Tuesday departure, the lower weekday price appears instead.
+
+That means your prices match real demand without needing to change them by hand each time.
+
+## Use cases
+
+### Seasonal pricing adjustments
+
+Raise prices during busy seasons and lower them during quieter months. For example, you might charge more for a mountain trek during peak autumn trekking season and offer a lower rate during the rainy season.
+
+### Holiday and special event pricing
+
+Charge a higher rate for dates when demand is naturally stronger. For example, a city day tour during a festival weekend or a holiday departure may support a premium price.
+
+### Tiered pricing for different age groups
+
+Set different prices for adults and children when that fits the trip. For example, a family-friendly wildlife tour might include a lower child rate while keeping the full adult price.
+
+## Wrap up
+
+Conditional Price gives you more control over what you charge for each trip. You can set prices by date, adjust rates for adults and children, and offer better pricing for larger groups.
+
+That makes it easier to match your prices to your season, your demand, and the kind of travelers you want to attract.
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

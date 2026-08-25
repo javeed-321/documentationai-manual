@@ -1,0 +1,49 @@
+---
+title: 'Fix: "Label" Text Appears Instead of Pricing Category'
+description: >-
+  Resolve the booking form showing the literal word "Label" instead of your
+  pricing category name by switching your permalink structure to Post name.
+type: guide
+---
+## What causes this issue
+
+If travelers see the literal word **"Label"** instead of your actual pricing category name (like **Adult** or **Child**) after selecting a date on the booking form, this is almost always caused by your WordPress site using the **Plain** permalink structure. WP Travel Engine's pricing widget relies on the **Post name** permalink structure to correctly resolve and display pricing category labels.
+
+<Callout kind="info" collapsed="false">
+  This issue affects the display of pricing category names only — it doesn't affect pricing, availability, or the ability to complete a booking.
+</Callout>
+
+## Fix the permalink structure
+
+<Steps>
+  <Step title="Open Permalink Settings" title-type="p">
+    In your WordPress dashboard, go to **Settings > Permalinks**.
+  </Step>
+
+  <Step title="Select Post name" title-type="p">
+    Choose the **Post name** option from the list of available permalink structures.
+  </Step>
+
+  <Step title="Save changes" title-type="p">
+    Click **Save Changes** at the bottom of the page.
+  </Step>
+
+  <Step title="Verify on the trip page" title-type="p">
+    Open a trip page, select a date on the booking form, and confirm the pricing categories now display their correct labels instead of "Label."
+  </Step>
+</Steps>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2023/03/permalinks-set-1024x518.png" width="1024" height="518" alt="WordPress Permalinks settings page with the Post name structure selected" />
+
+<Callout kind="alert" collapsed="false">
+  Changing your permalink structure can affect existing URLs on your site. If your site depends on a specific permalink structure for SEO or existing links, review the impact before saving, or plan to set up redirects for any URLs that change.
+</Callout>
+
+## Still seeing "Label" after switching?
+
+If the issue persists after switching to Post name permalinks:
+
+- Re-save your permalink settings a second time — this forces WordPress to flush its rewrite rules.
+- Clear any caching plugin and your browser cache, then reload the trip page.
+- Confirm the pricing category itself has a label set under **Trips > Pricing Categories**. See [How to Change the Adult, Child Label](/article/how-to-change-the-adult-child-label) if a category's label field is empty.
+

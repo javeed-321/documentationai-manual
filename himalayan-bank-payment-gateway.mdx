@@ -1,0 +1,114 @@
+---
+title: Himalayan Bank Payment Gateway
+description: >-
+  Install and configure the Himalayan Bank Payment Gateway addon to accept Visa,
+  MasterCard, American Express, and Union Pay payments in Nepal through WP
+  Travel Engine.
+type: guide
+---
+## Overview
+
+[Himalayan Bank Payment Gateway](https://wptravelengine.com/plugins/himalayan-bank-payment-gateway/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) is an extension for [WP Travel Engine](https://wptravelengine.com/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) that lets you accept trip and tour payments through Himalayan Bank, one of the leading banks in Nepal.
+
+Himalayan Bank Payment Gateway works in Nepal with Nepali and US currency only, and supports Visa, MasterCard, American Express, and Union Pay cards.
+
+<Callout kind="info">
+  This addon works on WordPress and only with the [WP Travel Engine](https://wptravelengine.com/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) plugin.
+</Callout>
+
+## How to install the Himalayan Bank Payment Gateway addon
+
+See [how to activate the Pro addon license key](https://docs.wptravelengine.com/article/activate-pro-addon-license-key/) for instructions on installing and activating this addon.
+
+## How does it work?
+
+Tour operators and travel agencies in Nepal can enable the Himalayan Bank Payment Gateway for trip booking by setting up a Himalayan Bank account with two key details: a Merchant ID and a Secret Key.
+
+When a traveler books a trip through the Himalayan Bank Payment Gateway, they're taken to Himalayan Bank to make a secure payment. After payment, the trip booking is confirmed and the traveler is redirected back to your website.
+
+For redirection, ask Himalayan Bank to set the Backend URL and Frontend URL of your site on their server:
+
+- The **Backend URL** is where you receive the payment response from the server.
+- The **Frontend URL** is where the payer is redirected after a successful payment.
+
+<Callout kind="tip">
+  WP Travel Engine recommends setting the Frontend URL to the Travelers Information page and adding the `[WTE_HBL_PAYMENT_RESPONSE]` shortcode to that page. For other custom pages, add both the `[WTE_HBL_PAYMENT_RESPONSE]` and `[WP_TRAVEL_ENGINE_BOOK_CONFIRMATION]` shortcodes and assign the page under Confirmation Page Settings.
+</Callout>
+
+## Configuration
+
+<Steps title-type="h3">
+  <Step title="Open HBL Payment settings">
+    Go to **WP Travel Engine > Settings > Payments > HBL Payment**.
+  </Step>
+
+  <Step title="Enter your bank-issued credentials">
+    Enter the Office ID, API Key, and Encryption Key ID. Contact Himalayan Bank to obtain these.
+  </Step>
+
+  <Step title="Generate and enter your merchant keys">
+    Enter a Merchant Signing Private Key and a Merchant Decryption Private Key. See the key generation steps below before entering these.
+  </Step>
+
+  <Step title="Enter the bank's public keys">
+    Enter the PACO Signing Public Key and PACO Encryption Public Key. Contact Himalayan Bank to obtain these.
+  </Step>
+
+  <Step title="Leave the notification URLs at their defaults">
+    Keep the Notification URLs in their default values.
+  </Step>
+
+  <Step title="Save your settings">
+    Click **Save Settings**.
+  </Step>
+</Steps>
+
+### How to generate your merchant keys
+
+<Steps title-type="h4">
+  <Step title="Generate two RSA key pairs">
+    Generate two RSA key pairs using any available tool — for example, [devglan's RSA encryption/decryption tool](https://www.devglan.com/online-tools/rsa-encryption-decryption) produces ready-to-use RSA key pairs. The RSA key size must be 4096 bit.
+  </Step>
+
+  <Step title="Provide the public keys to the bank">
+    Among the two generated key pairs, give the two public keys to Himalayan Bank — one for signing and one for encryption.
+  </Step>
+
+  <Step title="Save the private keys in WP Travel Engine">
+    Save the corresponding private keys under HBL Payment Settings, in the Merchant Signing Private Key and Merchant Decryption Private Key fields.
+  </Step>
+</Steps>
+
+<ParamField name="Office ID" param-type="string" required="true">
+  Provided by Himalayan Bank.
+</ParamField>
+
+<ParamField name="API Key" param-type="string" required="true">
+  Provided by Himalayan Bank.
+</ParamField>
+
+<ParamField name="Encryption Key ID" param-type="string" required="true">
+  Provided by Himalayan Bank.
+</ParamField>
+
+<ParamField name="Merchant Signing Private Key" param-type="string" required="true">
+  Your generated RSA private key used for signing.
+</ParamField>
+
+<ParamField name="Merchant Decryption Private Key" param-type="string" required="true">
+  Your generated RSA private key used for decryption.
+</ParamField>
+
+<ParamField name="PACO Signing Public Key" param-type="string" required="true">
+  Provided by Himalayan Bank.
+</ParamField>
+
+<ParamField name="PACO Encryption Public Key" param-type="string" required="true">
+  Provided by Himalayan Bank.
+</ParamField>
+
+## Enable HBL Payment at checkout
+
+Enable HBL Payment under **Payment General** settings so customers can pay through the HBL Payment Gateway on the checkout page. Once enabled, travelers can choose the Himalayan Bank Payment Gateway as a payment option at checkout.
+
+When a traveler books a trip through the Himalayan Bank Payment Gateway, they're taken to Himalayan Bank to complete a secure payment.

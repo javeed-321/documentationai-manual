@@ -1,657 +1,985 @@
 {
-  "name": "Modulr",
-  "initialRoute": "docs/intro",
-  "logo-light": "https://files.readme.io/c4bb314659a04661303bfe4fee150950c306719b886e257c4f19e7da5ef24a78-small-readme_top_logodeveloper.png",
-  "logo-dark": "https://files.readme.io/8dccedf-small-readme_top_logodeveloper.png",
-  "logo-small-light": "https://files.readme.io/c4bb314659a04661303bfe4fee150950c306719b886e257c4f19e7da5ef24a78-small-readme_top_logodeveloper.png",
-  "logo-small-dark": "https://files.readme.io/8dccedf-small-readme_top_logodeveloper.png",
-  "favicon": "https://files.readme.io/fa6ab3e-favicon.ico",
+  "name": "WP Travel Engine",
   "colors": {
     "light": {
-      "brand": "#003056",
+      "brand": "#0c6b56",
       "heading": "#1a1a1a",
       "text": "#374151"
     },
     "dark": {
-      "brand": "#0083ea",
+      "brand": "#82A2C9",
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
   },
-  "css": [
-    {
-      "src": "styles/brand.css"
-    }
-  ],
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "icon": "book",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Create and Manage Trips",
+            "icon": "rocket",
             "pages": [
               {
-                "title": "Welcome",
-                "path": "docs/intro"
+                "title": "How to add General Info?",
+                "path": "how-to-add-general-info"
               },
               {
-                "title": "Contact",
-                "path": "docs/help-support"
+                "title": "How to add Date and Price Info?",
+                "path": "how-to-add-date-and-price-info"
               },
               {
-                "title": "Modulr Portal User Guides",
-                "path": "docs/using-the-customer-portal-sandbox-and-production"
+                "title": "Seat Allocation and Booking Capacity in WP Travel Engine (with FSD Plugin)",
+                "path": "seat-allocation-and-booking-capacity-in-wp-travel-engine-with-fsd-plugin"
+              },
+              {
+                "title": "How to Add a Trip Itinerary",
+                "path": "how-to-add-a-trip-itinerary"
+              },
+              {
+                "title": "How to Add Trip Overview Info",
+                "path": "how-to-add-trip-overview-info"
+              },
+              {
+                "title": "How to Add Trip Info",
+                "path": "how-to-add-trip-info"
+              },
+              {
+                "title": "How to Add a Trip Gallery",
+                "path": "how-to-add-a-trip-gallery"
+              },
+              {
+                "title": "How to Add Trip Includes and Excludes",
+                "path": "how-to-add-trip-includes-and-excludes"
+              },
+              {
+                "title": "How to add Image Gallery?",
+                "path": "how-to-add-image-gallery"
+              },
+              {
+                "title": "How to display a Trip Duration on the single trip page?",
+                "path": "how-to-display-a-trip-duration-on-the-single-trip-page"
               }
             ]
           },
           {
-            "group": "Sandbox & Customer Portal Access",
+            "group": "Pro Add-ons",
+            "icon": "layers",
             "pages": [
               {
-                "title": "Modulr Access Types",
-                "path": "docs/types-of-businesses-1"
+                "title": "Webhooks and API",
+                "path": "webhooks-and-api"
               },
               {
-                "title": "Getting Sandbox Access",
-                "path": "docs/gaining-use-of-the-api"
+                "title": "Accommodation",
+                "path": "accommodation"
               },
               {
-                "title": "API Base URLs and Authentication Methods",
-                "path": "docs/api-base-urls"
+                "title": "Activity Tour Booking",
+                "path": "activity-tour-booking"
               },
               {
-                "title": "Build With AI (MCP)",
-                "path": "docs/build-with-ai-mcp"
+                "title": "Advanced Analytics",
+                "path": "advanced-analytics"
+              },
+              {
+                "title": "Advanced Email Automator",
+                "path": "advanced-email-automator"
+              },
+              {
+                "title": "Advanced Itinerary Builder",
+                "path": "advanced-itinerary-builder"
+              },
+              {
+                "title": "Booking Fee",
+                "path": "booking-fee"
+              },
+              {
+                "title": "Conditional Price",
+                "path": "conditional-price"
+              },
+              {
+                "title": "Currency Converter",
+                "path": "currency-converter"
+              },
+              {
+                "title": "Custom Booking Link",
+                "path": "custom-booking-link"
+              },
+              {
+                "title": "Elementor Widgets",
+                "path": "elementor-widgets"
+              },
+              {
+                "title": "Email Customizer",
+                "path": "email-customizer"
+              },
+              {
+                "title": "Extra Services",
+                "path": "extra-services"
+              },
+              {
+                "title": "File Downloads",
+                "path": "file-downloads"
+              },
+              {
+                "title": "Form Editor",
+                "path": "form-editor"
+              },
+              {
+                "title": "GA4 eCommerce Tracking",
+                "path": "ga4-ecommerce-tracking"
+              },
+              {
+                "title": "Group Discount",
+                "path": "group-discount"
+              },
+              {
+                "title": "Installment Payments",
+                "path": "installment-payments"
+              },
+              {
+                "title": "Itinerary Downloader",
+                "path": "itinerary-downloader"
+              },
+              {
+                "title": "Legal Documents",
+                "path": "legal-documents"
+              },
+              {
+                "title": "Partial Payment",
+                "path": "partial-payment"
+              },
+              {
+                "title": "Per Trip Emails",
+                "path": "per-trip-emails"
+              },
+              {
+                "title": "Pickup Points",
+                "path": "pickup-points"
+              },
+              {
+                "title": "Price on Request",
+                "path": "price-on-request"
+              },
+              {
+                "title": "Private Trips",
+                "path": "private-trips"
+              },
+              {
+                "title": "Resource Management Add-on",
+                "path": "resource-management-add-on"
+              },
+              {
+                "title": "SliceWP Integration",
+                "path": "slicewp-integration"
+              },
+              {
+                "title": "Social Proof",
+                "path": "social-proof"
+              },
+              {
+                "title": "Trip Fixed Starting Dates Countdown",
+                "path": "trip-fixed-starting-dates-countdown"
+              },
+              {
+                "title": "Trip Fixed Starting Dates",
+                "path": "trip-fixed-starting-dates"
+              },
+              {
+                "title": "Trip Fixed Starting Dates Introduction",
+                "path": "trip-fixed-starting-dates-introduction"
+              },
+              {
+                "title": "Configuring the Global Settings for Trip Fixed Starting Dates",
+                "path": "configuring-the-global-settings-for-trip-fixed-starting-dates"
+              },
+              {
+                "title": "Trip Reviews",
+                "path": "trip-reviews"
+              },
+              {
+                "title": "Trip Weather Forecast",
+                "path": "trip-weather-forecast"
+              },
+              {
+                "title": "Trips Embedder",
+                "path": "trips-embedder"
+              },
+              {
+                "title": "Travel Insurance",
+                "path": "travel-insurance"
+              },
+              {
+                "title": "User History",
+                "path": "user-history"
+              },
+              {
+                "title": "Waitlist",
+                "path": "waitlist"
+              },
+              {
+                "title": "Whatsapp Notification",
+                "path": "whatsapp-notification"
+              },
+              {
+                "title": "WP Travel Engine Pro",
+                "path": "wp-travel-engine-pro"
+              },
+              {
+                "title": "Zapier",
+                "path": "zapier"
+              },
+              {
+                "group": "Fixed Starting Dates",
+                "pages": [
+                  {
+                    "group": "Introduction",
+                    "pages": [
+                      {
+                        "title": "Overview",
+                        "path": "overview"
+                      },
+                      {
+                        "title": "Prerequisites",
+                        "path": "prerequisites"
+                      },
+                      {
+                        "title": "Key Features",
+                        "path": "key-features"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "How to Install the Trip Fixed Starting Dates Add-on",
+                    "pages": [],
+                    "path": "how-to-install-the-trip-fixed-starting-dates-add-on"
+                  },
+                  {
+                    "group": "Global Settings",
+                    "pages": [
+                      {
+                        "title": "General",
+                        "path": "general"
+                      },
+                      {
+                        "title": "Display Options",
+                        "path": "display-options"
+                      },
+                      {
+                        "title": "Exclude Dates",
+                        "path": "exclude-dates"
+                      },
+                      {
+                        "title": "Trip Archive",
+                        "path": "trip-archive"
+                      },
+                      {
+                        "title": "Private Trip",
+                        "path": "private-trip"
+                      },
+                      {
+                        "title": "Availability Labels",
+                        "path": "availability-labels"
+                      },
+                      {
+                        "group": "Trip Departure Calendar",
+                        "pages": [
+                          {
+                            "title": "Departure Calendar Shortcode",
+                            "path": "departure-calendar-shortcode"
+                          }
+                        ],
+                        "path": "trip-departure-calendars"
+                      },
+                      {
+                        "group": "FSD Settings in the Single Trip",
+                        "pages": [
+                          {
+                            "title": "Date Settings in a Single Trip",
+                            "path": "date-settings-in-a-single-trip"
+                          },
+                          {
+                            "title": "Assigning Dates to Packages in FSD",
+                            "path": "assigning-dates-to-packages-in-fsd"
+                          },
+                          {
+                            "title": "Adding Time Slots for Booking",
+                            "path": "adding-time-slots-for-booking"
+                          },
+                          {
+                            "title": "Recurring time",
+                            "path": "recurring-time"
+                          },
+                          {
+                            "title": "Shortcode",
+                            "path": "shortcodes"
+                          }
+                        ]
+                      }
+                    ],
+                    "path": "global-settings"
+                  },
+                  {
+                    "title": "Troubleshooting",
+                    "path": "troubleshooting"
+                  },
+                  {
+                    "title": "FAQs",
+                    "path": "faqs"
+                  }
+                ],
+                "icon": "calendar",
+                "path": "addon/fixed-starting-dates"
               }
             ]
           },
           {
-            "group": "Using the API",
+            "group": "General Setup & Configuration",
             "pages": [
               {
-                "group": "Getting Started",
-                "pages": [
-                  {
-                    "title": "Getting Started",
-                    "path": "docs/getting-started"
-                  },
-                  {
-                    "title": "Security",
-                    "path": "docs/security"
-                  },
-                  {
-                    "title": "Authentication",
-                    "path": "docs/authentication"
-                  },
-                  {
-                    "title": "General implementation notes",
-                    "path": "docs/implementation-notes"
-                  },
-                  {
-                    "title": "Limits and Errors",
-                    "path": "docs/limits-and-errors"
-                  },
-                  {
-                    "title": "Versioning",
-                    "path": "docs/versioning"
-                  },
-                  {
-                    "title": "Error handling and duplicate prevention",
-                    "path": "docs/error-handling"
-                  }
-                ]
+                "title": "How to configure Predefined Pages?",
+                "path": "how-to-configure-predefined-pages"
               },
               {
-                "group": "Fundamentals",
-                "pages": [
-                  {
-                    "title": "Fundamentals",
-                    "path": "docs/apis-to-aid-with-reconciliation"
-                  },
-                  {
-                    "title": "Payments and Transactions",
-                    "path": "docs/payments-and-transactions"
-                  },
-                  {
-                    "title": "Webhooks",
-                    "path": "docs/webhooks"
-                  },
-                  {
-                    "title": "Reversals and Reconciliation",
-                    "path": "docs/reversals"
-                  },
-                  {
-                    "title": "Combining Webhooks and APIs",
-                    "path": "docs/reconciliation"
-                  }
-                ]
+                "title": "How to configure Trip Tabs Settings?",
+                "path": "how-to-configure-trip-tabs-settings"
               },
               {
-                "group": "Notifications (Webhooks & Emails)",
-                "pages": [
-                  {
-                    "title": "Notifications (Webhooks & Emails)",
-                    "path": "docs/notifications-1"
-                  },
-                  {
-                    "title": "Webhook - Application Status Change",
-                    "path": "docs/webhook-application-status-change"
-                  },
-                  {
-                    "title": "Webhook - Customer Created",
-                    "path": "docs/webhook-customer-created"
-                  },
-                  {
-                    "title": "Webhook - Customer Status",
-                    "path": "docs/customer-status"
-                  },
-                  {
-                    "title": "Webhook - Customer Verification Status",
-                    "path": "docs/custvstat-webhook"
-                  },
-                  {
-                    "title": "Webhook - Account Status Change",
-                    "path": "docs/webhook-account-status-change"
-                  },
-                  {
-                    "title": "Webhook - Inbound Payments",
-                    "path": "docs/payin-webhook"
-                  },
-                  {
-                    "title": "Webhook - Outbound Payments",
-                    "path": "docs/payout-webhook"
-                  },
-                  {
-                    "title": "Webhook - Payment Approval Status Change",
-                    "path": "docs/payment-approval-rejection-webhook"
-                  },
-                  {
-                    "title": "Webhook - Batch Payment Approval Status Change",
-                    "path": "docs/webhook-batch-payment-approval-status-change"
-                  },
-                  {
-                    "title": "Webhook - Payment Compliance Status",
-                    "path": "docs/paymentcompliancestatus-webhook"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit Mandate Status",
-                    "path": "docs/ddmandate-webhook"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit, Upcoming Collection Credit",
-                    "path": "docs/upcomingddcollectioncredit-webhook"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit, DD Collection Status",
-                    "path": "docs/webhook-direct-debit-ddcollectionstatus"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit, Incoming Collection",
-                    "path": "docs/webhook-direct-debit-incoming-collection"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit, Unpaid Collection",
-                    "path": "docs/webhook-direct-debit-unpaid-collection"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit, Return Funds",
-                    "path": "docs/webhook-direct-debit-return-funds"
-                  },
-                  {
-                    "title": "Webhook - Direct Debit Collections Indemnity Claim (DDIC) ",
-                    "path": "docs/webhook-direct-debit-collections-ddic"
-                  }
-                ]
+                "title": "How to configure Trip Info Settings?",
+                "path": "how-to-configure-trip-info-settings"
               },
               {
-                "group": "Customers",
-                "pages": [
-                  {
-                    "title": "Customers",
-                    "path": "docs/customer"
-                  },
-                  {
-                    "title": "Industry Codes for Modulr KYC",
-                    "path": "docs/industry-codes-for-modulr-kyc"
-                  },
-                  {
-                    "title": "Customer Verification: Overview",
-                    "path": "docs/customer-verification-overview"
-                  },
-                  {
-                    "title": "Customer Verification: Integration Guide",
-                    "path": "docs/customer-verification-integration-guide"
-                  },
-                  {
-                    "title": "Customer Verification: Application Statuses",
-                    "path": "docs/customer-verification-application-statuses"
-                  },
-                  {
-                    "title": "Customer Verification SDK",
-                    "path": "docs/customer-verification-sdk"
-                  }
-                ]
+                "title": "How to Configure Taxonomy Settings?",
+                "path": "how-to-configure-taxonomy-settings"
               },
               {
-                "title": "Accounts",
-                "path": "docs/account"
+                "title": "How to configure Trip Search Settings?",
+                "path": "how-to-configure-trip-search-settings"
               },
               {
-                "group": "Payments",
-                "pages": [
-                  {
-                    "title": "Payments",
-                    "path": "docs/payments-2"
-                  },
-                  {
-                    "title": "Inbound Payments",
-                    "path": "docs/inbound-payments"
-                  },
-                  {
-                    "title": "Outbound Payments",
-                    "path": "docs/outbound-payments"
-                  },
-                  {
-                    "title": "Bulk payments",
-                    "path": "docs/bulk-payments"
-                  },
-                  {
-                    "title": "Batch Payments",
-                    "path": "docs/batch-payments-1"
-                  },
-                  {
-                    "title": "Payment Approvals",
-                    "path": "docs/approvals"
-                  },
-                  {
-                    "title": "Payment Types",
-                    "path": "docs/payment-types"
-                  },
-                  {
-                    "title": "Payment Statuses",
-                    "path": "docs/payment-statuses"
-                  },
-                  {
-                    "title": "Returned Payments",
-                    "path": "docs/payment-return-reasons"
-                  },
-                  {
-                    "title": "Payment rules",
-                    "path": "docs/rules-1"
-                  },
-                  {
-                    "title": "Future Dated",
-                    "path": "docs/future-dated-payments"
-                  },
-                  {
-                    "title": "Waiting for funds",
-                    "path": "docs/waiting-for-funds"
-                  },
-                  {
-                    "title": "UK Payment Purpose & Category Codes",
-                    "path": "docs/uk-payment-purpose-category-codes"
-                  }
-                ]
+                "title": "How to configure Performance Setting?",
+                "path": "how-to-configure-performance-setting"
               },
               {
-                "title": "European Payments",
-                "path": "docs/european-payments"
+                "title": "How to configure Single Trip settings?",
+                "path": "how-to-configure-single-trip-settings"
               },
               {
-                "group": "International Payments",
-                "pages": [
-                  {
-                    "title": "International Payments",
-                    "path": "docs/international-payments"
-                  },
-                  {
-                    "title": "Inbound Payments via SWIFT",
-                    "path": "docs/inbound-payments-via-swift"
-                  },
-                  {
-                    "group": "Outbound Payments via SWIFT",
-                    "pages": [
-                      {
-                        "title": "Outbound Payments via SWIFT",
-                        "path": "docs/outbound-payments-via-swift"
-                      },
-                      {
-                        "title": "Allowed destinations for supported currencies",
-                        "path": "docs/allowed-destinations-for-modulr-supported-currencies"
-                      }
-                    ]
-                  }
-                ]
+                "title": "How to Configure Checkout Settings?",
+                "path": "how-to-configure-checkout-settings"
               },
               {
-                "group": "Direct Debits (Outbound & Collections)",
-                "pages": [
-                  {
-                    "title": "Direct Debits (Outbound & Collections)",
-                    "path": "docs/direct-debits-outbound-collections"
-                  },
-                  {
-                    "group": "Direct Debit Outbound",
-                    "pages": [
-                      {
-                        "title": "Direct Debit Outbound",
-                        "path": "docs/direct-debit-outbound-1"
-                      },
-                      {
-                        "title": "Receiving Mandates",
-                        "path": "docs/receiving-mandates"
-                      },
-                      {
-                        "title": "Receiving DD Collections",
-                        "path": "docs/receiving-dd-collections"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Direct Debit Collections (UK - GBP)",
-                    "pages": [
-                      {
-                        "title": "Direct Debit Collections (UK - GBP)",
-                        "path": "docs/direct-debit-collections-1"
-                      },
-                      {
-                        "title": "Getting started",
-                        "path": "docs/what-is-dd-collections"
-                      },
-                      {
-                        "title": "Setting up Mandates",
-                        "path": "docs/setting-up-mandates"
-                      },
-                      {
-                        "title": "Starting Collections",
-                        "path": "docs/starting-collections"
-                      },
-                      {
-                        "title": "Payer Name Verification (PNV)",
-                        "path": "docs/payer-name-verification-pnv"
-                      },
-                      {
-                        "title": "Managing Direct Debit Indemnity Claims (DDIC)",
-                        "path": "docs/managing-direct-debit-indemnity-claims-ddic"
-                      }
-                    ]
-                  }
-                ]
+                "title": "How to configure Trip Card/Listing page settings?",
+                "path": "how-to-configure-trip-card/listing-page-settings"
               },
               {
-                "group": "Payment Initiation Service",
-                "pages": [
-                  {
-                    "title": "Payment Initiation Service",
-                    "path": "docs/pisp"
-                  },
-                  {
-                    "title": "Getting Started with the Payment Initiation Service",
-                    "path": "docs/getting-started-with-pisp"
-                  },
-                  {
-                    "title": "Single Immediate Payments",
-                    "path": "docs/single-immediate-payments-overview"
-                  },
-                  {
-                    "title": "Fixed Recurring Payments (Standing Orders)",
-                    "path": "docs/fixed-recurring-payments-standing-order-overview"
-                  },
-                  {
-                    "title": "Supported ASPSP (Banks)",
-                    "path": "docs/supported-banks-and-aspsps"
-                  },
-                  {
-                    "title": "Open Banking V4 API transition",
-                    "path": "docs/open-banking-v4-api-transition"
-                  }
-                ]
+                "title": "How to Configure Trip Archive Settings?",
+                "path": "how-to-configure-trip-archive-settings"
               },
               {
-                "title": "Bacs Day 2 - Early funding",
-                "path": "docs/bacs-day-2-early-funding"
+                "title": "How to Customize Colors Settings?",
+                "path": "how-to-customize-colors-settings"
               },
               {
-                "group": "Cards",
-                "pages": [
-                  {
-                    "title": "Cards",
-                    "path": "docs/cards-1"
-                  },
-                  {
-                    "title": "Getting started with Virtual Cards",
-                    "path": "docs/getting-started-with-virtual-cards"
-                  },
-                  {
-                    "title": "Getting started with Physical Cards",
-                    "path": "docs/physical-cards-overview"
-                  },
-                  {
-                    "title": "Replacing a card",
-                    "path": "docs/replacing-a-card-copy"
-                  },
-                  {
-                    "title": "Card Lifecycle",
-                    "path": "docs/card-lifecycle"
-                  },
-                  {
-                    "title": "Transaction Lifecycle",
-                    "path": "docs/card-transaction-lifecycle"
-                  },
-                  {
-                    "title": "Card Notifications",
-                    "path": "docs/card-notifications"
-                  },
-                  {
-                    "title": "API Integration overview",
-                    "path": "docs/api-integration-overview"
-                  },
-                  {
-                    "title": "PCI - Retrieve secure card details",
-                    "path": "docs/retrieve-secure-card-details"
-                  },
-                  {
-                    "title": "Sharing Card Details Securely",
-                    "path": "docs/sharing-card-details-securely"
-                  },
-                  {
-                    "title": "PIN Management",
-                    "path": "docs/pin-management"
-                  },
-                  {
-                    "title": "Card Activities Simulation",
-                    "path": "docs/example-card-activities-api-response"
-                  },
-                  {
-                    "title": "Custom Reference Fields",
-                    "path": "docs/custom-reference-fields"
-                  },
-                  {
-                    "title": "Card Reports",
-                    "path": "docs/card-reports"
-                  },
-                  {
-                    "title": "Card Report Notifications",
-                    "path": "docs/card-report-notifications"
-                  },
-                  {
-                    "title": "Card Controls",
-                    "path": "docs/card-controls"
-                  },
-                  {
-                    "title": "Transaction decline reasons",
-                    "path": "docs/decline-reasons"
-                  },
-                  {
-                    "title": "Tokenisation - Overview",
-                    "path": "docs/mobile-wallets"
-                  },
-                  {
-                    "title": "Provisioning Journey",
-                    "path": "docs/provisioning-journey-1"
-                  },
-                  {
-                    "title": "Token Management",
-                    "path": "docs/token-management"
-                  },
-                  {
-                    "title": "General Tokenisation Setup",
-                    "path": "docs/setup"
-                  },
-                  {
-                    "group": "Channel Managers",
-                    "pages": [
-                      {
-                        "title": "Channel Managers",
-                        "path": "docs/channel-managers"
-                      },
-                      {
-                        "title": "Channel Managers - Overview",
-                        "path": "docs/channel-managers-overview"
-                      },
-                      {
-                        "title": "Channel Manager - Cards",
-                        "path": "docs/channel-manager-cards"
-                      },
-                      {
-                        "title": "Channel Manager - Activities",
-                        "path": "docs/channel-manager-activities"
-                      },
-                      {
-                        "title": "Channel Manager - Reports",
-                        "path": "docs/channel-manager-reports"
-                      },
-                      {
-                        "title": "Channel Manager - Notifications",
-                        "path": "docs/channel-manager-notifications"
-                      },
-                      {
-                        "title": "Channel Manager - Setting Up A Webhook ",
-                        "path": "docs/channel-manager-setting-up-a-webhook"
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Bulk Card Operations",
-                    "path": "docs/bulk-card-operations"
-                  }
-                ]
+                "title": "How to add a new Pricing Type?",
+                "path": "how-to-add-a-new-pricing-type"
               },
               {
-                "group": "Variable Recurring Payments",
-                "pages": [
-                  {
-                    "title": "Variable Recurring Payments",
-                    "path": "docs/variable-recurring-payments"
-                  },
-                  {
-                    "title": "VRP overview",
-                    "path": "docs/vrp-overview"
-                  },
-                  {
-                    "title": "Getting started with VRP",
-                    "path": "docs/getting-started-with-vrp"
-                  },
-                  {
-                    "title": "VRP consent",
-                    "path": "docs/create-a-vrp-consent"
-                  },
-                  {
-                    "title": "Initiate a VRP payment",
-                    "path": "docs/initiate-a-vrp-payment-using-a-consent"
-                  }
-                ]
+                "title": "How to add Global Trip Highlights?",
+                "path": "how-to-add-global-trip-highlights"
               },
               {
-                "group": "Commercial Variable Recurring Payments",
-                "pages": [
-                  {
-                    "title": "Commercial Variable Recurring Payments",
-                    "path": "docs/commercial-variable-recurring-payments"
-                  },
-                  {
-                    "title": "Commercial VRP Overview",
-                    "path": "docs/commercial-vrp-overview"
-                  },
-                  {
-                    "title": "Getting started with cVRP",
-                    "path": "docs/getting-started-with-cvrp"
-                  },
-                  {
-                    "title": "Creating a cVRP Consent",
-                    "path": "docs/creating-a-cvrp-consent"
-                  },
-                  {
-                    "title": "Sandbox: Initiating a cVRP consent",
-                    "path": "docs/sandbox-test-by-initiating-a-cvrp-consent"
-                  },
-                  {
-                    "title": "Creating a cVRP Payment",
-                    "path": "docs/creating-a-cvrp-payment"
-                  },
-                  {
-                    "title": "Sandbox: Initiating a cVRP payment",
-                    "path": "docs/sandbox-test-by-initiating-a-cvrp-payment"
-                  }
-                ]
+                "title": "How to Configure Currency Settings?",
+                "path": "how-to-configure-currency-settings"
               },
               {
-                "group": "Confirmation of Payee (CoP)",
-                "pages": [
-                  {
-                    "title": "Confirmation of Payee (CoP)",
-                    "path": "docs/confirmation-of-payee"
-                  },
-                  {
-                    "title": "Sending Name Check Requests",
-                    "path": "docs/sending-name-check-requests"
-                  },
-                  {
-                    "title": "Responding to Name Check Requests",
-                    "path": "docs/responding-to-name-check-requests"
-                  }
-                ]
+                "title": "How to Customize the Trip Search / Archive Page",
+                "path": "how-to-customize-the-trip-search-/-archive-page"
               },
               {
-                "group": "EU Verification of Payee (VoP)",
-                "pages": [
-                  {
-                    "title": "EU Verification of Payee (VoP)",
-                    "path": "docs/eu-verification-of-payee-vop"
-                  },
-                  {
-                    "title": "Sending verification of payee checks",
-                    "path": "docs/sending-vop-check-requests"
-                  },
-                  {
-                    "title": "Responding to verification of payee check requests",
-                    "path": "docs/responding-to-vop-check-requests"
-                  }
-                ]
+                "title": "Getting Started",
+                "path": "getting-started"
               },
               {
-                "title": "Third Party Providers",
-                "path": "docs/third-party-providers-access"
-              },
-              {
-                "title": "Platform Reporting and Reconciliation",
-                "path": "docs/reports-and-reconciliation"
+                "title": "How to Set Up Coupons",
+                "path": "how-to-set-up-coupons"
               }
             ]
           },
           {
-            "group": "Using the Modulr Portal",
+            "group": "Payment Settings and Gateways",
             "pages": [
               {
-                "group": "Delegates",
-                "pages": [
-                  {
-                    "title": "Delegates",
-                    "path": "docs/delegate-access-1"
-                  }
-                ]
+                "title": "Stripe Payment Gateway",
+                "path": "stripe-payment-gateway"
+              },
+              {
+                "title": "How to add PayPal Standard?",
+                "path": "how-to-add-paypal-standard"
+              },
+              {
+                "title": "How to configure the Check Payments Settings?",
+                "path": "how-to-configure-the-check-payments-settings"
+              },
+              {
+                "title": "How to configure Tax Settings?",
+                "path": "how-to-configure-tax-settings"
+              },
+              {
+                "title": "Razorpay Payment Gateway",
+                "path": "razorpay-payment-gateway"
+              },
+              {
+                "title": "WeTravel Integration",
+                "path": "wetravel-integration"
+              },
+              {
+                "title": "WooCommerce Payment Gateway",
+                "path": "woocommerce-payment-gateway"
+              },
+              {
+                "title": "PayU Biz Payment Gateway",
+                "path": "payu-biz-payment-gateway"
+              },
+              {
+                "title": "PayU Money Payment Gateway",
+                "path": "payu-money-payment-gateway"
+              },
+              {
+                "title": "PayPal Express Checkout Payment Gateway",
+                "path": "paypal-express-checkout-payment-gateway"
+              },
+              {
+                "title": "PayHere Payment Gateway",
+                "path": "payhere-payment-gateway"
+              },
+              {
+                "title": "PayFast Payment Gateway",
+                "path": "payfast-payment-gateway"
+              },
+              {
+                "title": "Midtrans Payment Gateway",
+                "path": "midtrans-payment-gateway"
+              },
+              {
+                "title": "Himalayan Bank Payment Gateway",
+                "path": "himalayan-bank-payment-gateway"
+              },
+              {
+                "title": "Authorize.net Payment Gateway",
+                "path": "authorizenet-payment-gateway"
+              }
+            ]
+          },
+          {
+            "group": "Email Notifications",
+            "pages": [
+              {
+                "title": "How to resend the booking confirmation email",
+                "path": "how-to-resend-the-booking-confirmation-email"
+              },
+              {
+                "title": "Email Troubleshooting",
+                "path": "email-troubleshooting"
+              },
+              {
+                "title": "How to change booking emails",
+                "path": "how-to-change-booking-emails"
+              },
+              {
+                "title": "How to configure Customer Email?",
+                "path": "how-to-configure-customer-email"
+              },
+              {
+                "title": "How to configure Enquiry Email?",
+                "path": "how-to-configure-enquiry-email"
+              },
+              {
+                "title": "How to configure Admin Email?",
+                "path": "how-to-configure-admin-email"
+              },
+              {
+                "title": "How to follow up or send an email to customers who have booked a tour?",
+                "path": "how-to-follow-up-or-send-an-email-to-customers-who-have-booked-a-tour"
+              },
+              {
+                "title": "How to Customize Header and Footer of Your Email Template",
+                "path": "how-to-customize-header-and-footer-of-your-email-template"
+              },
+              {
+                "title": "Email Personalization Tags",
+                "path": "email-personalization-tags"
+              }
+            ]
+          },
+          {
+            "group": "Licensing & Account Management",
+            "pages": [
+              {
+                "title": "How to Update Your Credit Card Details",
+                "path": "how-to-update-your-credit-card-details"
+              },
+              {
+                "title": "How Can You Manage Your Subscription?",
+                "path": "how-can-you-manage-your-subscription"
+              },
+              {
+                "title": "Why Upgrade to WP Travel Engine Pro",
+                "path": "why-upgrade-to-wp-travel-engine-pro"
+              },
+              {
+                "title": "How to Make a Purchase from Nepal",
+                "path": "how-to-make-a-purchase-from-nepal"
+              },
+              {
+                "title": "How to Make a Purchase from India",
+                "path": "how-to-make-a-purchase-from-india"
+              },
+              {
+                "title": "How generate the Invoice from WP Travel Engine account?",
+                "path": "how-generate-the-invoice-from-wp-travel-engine-account"
+              },
+              {
+                "title": "How to activate the Pro add-on license key?",
+                "path": "how-to-activate-the-pro-add-on-license-key"
+              },
+              {
+                "title": "How to Download Add-ons and Themes After Purchasing?",
+                "path": "how-to-download-add-ons-and-themes-after-purchasing"
+              },
+              {
+                "title": "How to upgrade the purchased plan?",
+                "path": "how-to-upgrade-the-purchased-plan"
+              },
+              {
+                "title": "How to cancel the subscription for your purchase?",
+                "path": "how-to-cancel-the-subscription-for-your-purchase"
+              },
+              {
+                "title": "Unable to Login Into Your Account",
+                "path": "unable-to-login-into-your-account"
+              }
+            ]
+          },
+          {
+            "group": "Multilingual & Translation",
+            "pages": [
+              {
+                "title": "How to Translate Themes and Plugins Using Loco Translate",
+                "path": "how-to-translate-themes-and-plugins-using-loco-translate"
+              },
+              {
+                "title": "How to Build a Multilingual Travel Website Using WP Travel Engine and WPML",
+                "path": "how-to-build-a-multilingual-travel-website-using-wp-travel-engine-and-wpml"
+              },
+              {
+                "title": "How to use Labels Feature for changing Static Strings?",
+                "path": "how-to-use-labels-feature-for-changing-static-strings"
+              },
+              {
+                "title": "How to use TranslatePress with WP Travel Engine?",
+                "path": "how-to-use-translatepress-with-wp-travel-engine"
+              }
+            ]
+          },
+          {
+            "group": "Trip Management and Operations",
+            "pages": [
+              {
+                "title": "How to View and Manage Trip Bookings ?",
+                "path": "how-to-view-and-manage-trip-bookings"
+              },
+              {
+                "title": "Change Currency Symbol to Currency Code",
+                "path": "change-currency-symbol-to-currency-code"
+              },
+              {
+                "title": "Changing the default currency i.e dollar",
+                "path": "changing-the-default-currency-ie-dollar"
+              },
+              {
+                "title": "“Label” text is appeared instead of Pricing Category",
+                "path": "label-text-is-appeared-instead-of-pricing-category"
+              },
+              {
+                "title": "How to Change the Adult, Child Label",
+                "path": "how-to-change-the-adult-child-label"
+              },
+              {
+                "title": "Roles & Capabilities Controlling Who Can Access What in WP Travel Engine",
+                "path": "roles-capabilities"
+              }
+            ]
+          },
+          {
+            "group": "Design & Layout Customization",
+            "pages": [
+              {
+                "title": "Is WP Travel Engine Compatible with Divi Builder?",
+                "path": "is-wp-travel-engine-compatible-with-divi-builder"
+              },
+              {
+                "title": "Can I use WP Travel Engine with Elementor?",
+                "path": "can-i-use-wp-travel-engine-with-elementor"
+              },
+              {
+                "title": "WP Travel Engine – Blocks, Patterns & Templates",
+                "path": "wp-travel-engine-blocks-patterns-templates"
+              }
+            ]
+          },
+          {
+            "group": "FAQ",
+            "pages": [
+              {
+                "title": "How to give WP Travel Engine plugin review on wordpress.org?",
+                "path": "how-to-give-wp-travel-engine-plugin-review-on-wordpressorg"
+              },
+              {
+                "title": "Why can’t I expand the Trip Edit sections (Overview,Itinerary etc.) in the backend?",
+                "path": "why-cant-i-expand-the-trip-edit-sections-overviewitinerary-etc-in-the-backend"
+              },
+              {
+                "title": "How does the Trip Expiry Date feature work in WP Travel Engine?",
+                "path": "how-does-the-trip-expiry-date-feature-work-in-wp-travel-engine"
+              },
+              {
+                "title": "How to add a new filters/taxonomies using Custom Filters",
+                "path": "how-to-add-a-new-filters/taxonomies-using-custom-filters"
+              },
+              {
+                "title": "How to add the Itinerary Downloader button on the archive pages",
+                "path": "how-to-add-the-itinerary-downloader-button-on-the-archive-pages"
+              },
+              {
+                "title": "How to Export Bookings with WP Travel Engine",
+                "path": "how-to-export-bookings-with-wp-travel-engine"
+              },
+              {
+                "title": "How to Customize the WP Travel Engine Trip Slugs",
+                "path": "how-to-customize-the-wp-travel-engine-trip-slugs"
+              },
+              {
+                "title": "How to Customize the Trip Related Trips",
+                "path": "how-to-customize-the-trip-related-trips"
+              },
+              {
+                "title": "How to Sort Pricing Category in WP Travel Engine",
+                "path": "how-to-sort-pricing-category-in-wp-travel-engine"
+              },
+              {
+                "title": "Add FAQs to Your Trips",
+                "path": "add-faqs-to-your-trips"
+              }
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              {
+                "title": "503 and Resource Limit Errors",
+                "path": "503-resource-limit-errors"
+              },
+              {
+                "title": "Created Destinations Not Displayed on the Destination Page",
+                "path": "created-destinations-not-displayed-on-the-destination-page"
+              },
+              {
+                "title": "Resolving the Date and Price Tab Loading Issue",
+                "path": "resolving-the-date-and-price-tab-loading-issue"
+              },
+              {
+                "title": "How to check plugin conflicts in WordPress?",
+                "path": "how-to-check-plugin-conflicts-in-wordpress"
+              },
+              {
+                "title": "Search Result Page Showing a 404 Error",
+                "path": "search-result-page-showing-a-404-error"
+              },
+              {
+                "title": "Trip Facts Not Appearing on the Trip Page",
+                "path": "trip-facts-not-appearing-on-the-trip-page"
+              },
+              {
+                "title": "Page not found appeared on the single trip page",
+                "path": "page-not-found-appeared-on-the-single-trip-page"
+              }
+            ]
+          },
+          {
+            "group": "Travel Monster",
+            "pages": [
+              {
+                "title": "Setup Static Homepage",
+                "path": "setup-static-homepage"
+              },
+              {
+                "title": "Configure Widgets",
+                "path": "configure-widgets"
+              },
+              {
+                "title": "Configure Menus",
+                "path": "configure-menus"
+              },
+              {
+                "title": "Posts & Pages Settings",
+                "path": "posts-pages-settings"
+              },
+              {
+                "title": "Footer Settings",
+                "path": "footer-settings"
+              },
+              {
+                "title": "Header Settings",
+                "path": "header-settings"
+              },
+              {
+                "title": "General Settings",
+                "path": "general-settings"
+              },
+              {
+                "title": "Configure Site Identity",
+                "path": "configure-site-identity"
+              },
+              {
+                "title": "Import Starter Site",
+                "path": "import-starter-site"
+              },
+              {
+                "title": "Install Travel Monster Theme",
+                "path": "install-travel-monster-theme"
+              }
+            ]
+          },
+          {
+            "group": "Travel Monster Pro",
+            "pages": [
+              {
+                "title": "User Social Link",
+                "path": "user-social-link"
+              },
+              {
+                "title": "Misc Settings",
+                "path": "misc-settings"
+              },
+              {
+                "title": "Posts & Pages Settings 2",
+                "path": "posts-pages-settings-2"
+              },
+              {
+                "title": "Footer Settings 2",
+                "path": "footer-settings-2"
+              },
+              {
+                "title": "Header Settings 2",
+                "path": "header-settings-2"
+              },
+              {
+                "title": "General Settings 2",
+                "path": "general-settings-2"
+              },
+              {
+                "title": "Import Starter Site 2",
+                "path": "import-starter-site-2"
+              },
+              {
+                "title": "How To Activate Travel Monster Pro License",
+                "path": "how-to-activate-travel-monster-pro-license"
+              },
+              {
+                "title": "Install and Activate Travel Monster Pro",
+                "path": "install-and-activate-travel-monster-pro"
+              },
+              {
+                "title": "Travel Monster Addons",
+                "path": "travel-monster-addons"
+              }
+            ]
+          },
+          {
+            "group": "Altus AI",
+            "pages": [
+              {
+                "title": "Getting Started with Altus AI",
+                "path": "getting-started-with-altus-ai"
+              },
+              {
+                "title": "Content Generation",
+                "path": "content-generation"
+              },
+              {
+                "title": "Connect AI Assistants via MCP with WP Travel Engine",
+                "path": "connect-ai-assistants-via-mcp-with-wp-travel-engine"
+              },
+              {
+                "title": "Usage & Logs",
+                "path": "usage-logs"
+              }
+            ]
+          },
+          {
+            "group": "WordPress Themes",
+            "pages": [
+              {
+                "title": "Travel Booking Pro",
+                "path": "travel-booking-pro"
+              },
+              {
+                "title": "Travel Booking",
+                "path": "travel-booking"
+              },
+              {
+                "title": "Travel Muni Pro",
+                "path": "travel-muni-pro"
+              },
+              {
+                "title": "Travel Muni",
+                "path": "travel-muni"
+              },
+              {
+                "title": "Travelverse",
+                "path": "travelverse"
+              },
+              {
+                "title": "Pattern Engine",
+                "path": "pattern-engine"
+              }
+            ]
+          },
+          {
+            "group": "Elementor Widgets",
+            "pages": [
+              {
+                "title": "Destination/Activities Slider 3",
+                "path": "destination/activities-slider-3"
+              },
+              {
+                "title": "Destination/Activities Slider 2",
+                "path": "destination/activities-slider-2"
+              },
+              {
+                "title": "Destination/Activities Slider 1",
+                "path": "destination/activities-slider-1"
+              },
+              {
+                "title": "Destination/Activities Module 2",
+                "path": "destination/activities-module-2"
+              },
+              {
+                "title": "Destination/Activities Module 1",
+                "path": "destination/activities-module-1"
+              },
+              {
+                "title": "Destination/Activities 2",
+                "path": "destination/activities-2"
+              },
+              {
+                "title": "Destination/Activities 1",
+                "path": "destination/activities-1"
+              },
+              {
+                "title": "Trips List",
+                "path": "trips-list"
+              },
+              {
+                "title": "Advanced Trips 4",
+                "path": "advanced-trips-4"
+              },
+              {
+                "title": "Advanced Trip 3",
+                "path": "advanced-trip-3"
+              },
+              {
+                "title": "Advanced Trip 2",
+                "path": "advanced-trip-2"
+              },
+              {
+                "title": "Advanced Trip",
+                "path": "advanced-trip"
+              },
+              {
+                "title": "Featured Trip",
+                "path": "featured-trip"
+              },
+              {
+                "title": "Trips Accordion",
+                "path": "trips-accordion"
+              },
+              {
+                "title": "Trips Module Three",
+                "path": "trips-module-three"
+              },
+              {
+                "title": "Trips Module Two",
+                "path": "trips-module-two"
+              },
+              {
+                "title": "Trips Module One",
+                "path": "trips-module-one"
+              },
+              {
+                "title": "Trips Slider",
+                "path": "trips-slider"
+              },
+              {
+                "title": "Trips Slider Two",
+                "path": "trips-slider-two"
+              },
+              {
+                "title": "Trips Slider Three",
+                "path": "trips-slider-three"
+              },
+              {
+                "title": "Trips Tab",
+                "path": "trips-tab"
+              },
+              {
+                "title": "Trip Search",
+                "path": "trip-search"
+              },
+              {
+                "title": "Tour Search widget",
+                "path": "tour-search-widget"
+              },
+              {
+                "title": "Contact widget",
+                "path": "contact-widget"
+              },
+              {
+                "title": "Navigation menu widget",
+                "path": "navigation-menu-widget"
+              },
+              {
+                "title": "Search widget",
+                "path": "search-widget"
+              },
+              {
+                "title": "Site logo widget",
+                "path": "site-logo-widget"
+              },
+              {
+                "title": "Header and Footer Builder",
+                "path": "header-and-footer-builder"
+              },
+              {
+                "title": "Mobile Menu & Off Canvas",
+                "path": "mobile-menu-off-canvas"
+              }
+            ]
+          },
+          {
+            "group": "Customer Experience & Portal",
+            "pages": [
+              {
+                "title": "How to configure User Dashboard?",
+                "path": "how-to-configure-user-dashboard"
+              },
+              {
+                "title": "How to Configure Social Login",
+                "path": "how-to-configure-social-login"
               }
             ]
           }
@@ -662,1769 +990,71 @@
         "icon": "code",
         "groups": [
           {
-            "group": "Modulr API",
+            "group": "Endpoints",
+            "openapi": "api-reference/openapi.yaml",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Help Center",
+        "icon": "help-circle",
+        "pages": [
+          {
+            "title": "Help Center",
+            "path": "help-center",
+            "icon": "home"
+          },
+          {
+            "group": "FAQs",
+            "icon": "help-circle",
+            "expandable": false,
             "pages": [
               {
-                "group": "Accounts",
-                "pages": [
-                  {
-                    "title": "Create account by customer",
-                    "path": "reference/createaccount",
-                    "method": "POST",
-                    "openapi": "api-reference/createaccount.json POST /customers/{customerId}/accounts",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Cards",
-                "pages": [
-                  {
-                    "title": "Card Simulator",
-                    "path": "reference/card-simulator"
-                  },
-                  {
-                    "group": "Card Simulator",
-                    "pages": [
-                      {
-                        "title": "Create a card authorisation",
-                        "path": "reference/createauthorisation",
-                        "method": "POST",
-                        "openapi": "api-reference/createauthorisation.json POST /cards/{cardId}/authorisations",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Async",
-                    "pages": [
-                      {
-                        "title": "Get tasks",
-                        "path": "reference/getasynctasks",
-                        "method": "GET",
-                        "openapi": "api-reference/getasynctasks.json GET /card-tasks",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Activities, Reports & Reports Notifications",
-                    "pages": [
-                      {
-                        "title": "Retrieve card report type notification configuration for partner",
-                        "path": "reference/getnotificationconfigurationsforagivenpartnerandreporttype",
-                        "method": "GET",
-                        "openapi": "api-reference/getnotificationconfigurationsforagivenpartnerandreporttype.json GET /partners/{partnerId}/card-report-types/{reportType}/notifications",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Custom Fields",
-                    "pages": [
-                      {
-                        "title": "Bulk create partner custom field keys",
-                        "path": "reference/bulkcreatepartnercustomfieldkeys",
-                        "method": "POST",
-                        "openapi": "api-reference/bulkcreatepartnercustomfieldkeys.json POST /partner/{partnerId}/bulk-card-custom-fields",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Share secure card details",
-                    "pages": [
-                      {
-                        "title": "Retrieve a single share secure card details record",
-                        "path": "reference/getsharesecurecarddetailsbyid",
-                        "method": "GET",
-                        "openapi": "api-reference/getsharesecurecarddetailsbyid.json GET /cards/{cardId}/share-secure-details/{shareSecureDetailsId}",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Channel Manager Card",
-                    "pages": [
-                      {
-                        "title": "Channel Manager Update card",
-                        "path": "reference/channelmanagerupdatecard",
-                        "method": "POST",
-                        "openapi": "api-reference/channelmanagerupdatecard.json POST /channel-managers/cards/{cardId}",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Channel Manager Webhook Notifications",
-                    "pages": [
-                      {
-                        "title": "Channel Manager Webhook Notifications",
-                        "path": "reference/webhook-notifications"
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Restricted",
-                    "pages": [
-                      {
-                        "title": "[Restricted] Unsuspend a card",
-                        "path": "reference/unsuspendcard",
-                        "method": "POST",
-                        "openapi": "api-reference/unsuspendcard.json POST /cards/{cardId}/unsuspend",
-                        "openapi-mode": "auto"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Beneficiaries",
-                "pages": [
-                  {
-                    "title": "Create a new beneficiary for a specified customer",
-                    "path": "reference/createbeneficiary",
-                    "method": "POST",
-                    "openapi": "api-reference/createbeneficiary.json POST /customers/{customerId}/beneficiaries",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Confirmation of Payee",
-                "pages": [
-                  {
-                    "title": "Create an account name check",
-                    "path": "reference/createoutboundcop",
-                    "method": "POST",
-                    "openapi": "api-reference/createoutboundcop.json POST /account-name-check",
-                    "openapi-mode": "custom"
-                  }
-                ]
-              },
-              {
-                "group": "Customers",
-                "pages": [
-                  {
-                    "title": "Create a new customer",
-                    "path": "reference/createcustomer"
-                  }
-                ]
-              },
-              {
-                "group": "Direct Debits",
-                "pages": [
-                  {
-                    "title": "Direct Debits",
-                    "path": "reference/direct-debits"
-                  },
-                  {
-                    "group": "Direct Debit Outbound Mandate Operations",
-                    "pages": [
-                      {
-                        "title": "Direct Debit Outbound Mandate Operations",
-                        "path": "reference/direct-debit-outbound-mandate-operations"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Payments",
-                "pages": [
-                  {
-                    "title": "Create a payment",
-                    "path": "reference/sendpayment",
-                    "method": "POST",
-                    "openapi": "api-reference/sendpayment.json POST /payments",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Rules",
-                "pages": [
-                  {
-                    "title": "Create a Rule",
-                    "path": "reference/createrule",
-                    "method": "POST",
-                    "openapi": "api-reference/createrule.json POST /rules",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Transactions",
-                "pages": [
-                  {
-                    "title": "Get transactions for a specific Account",
-                    "path": "reference/gettransactionsbyaccount",
-                    "method": "GET",
-                    "openapi": "api-reference/gettransactionsbyaccount.json GET /accounts/{accountId}/transactions",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Document",
-                "pages": [
-                  {
-                    "title": "Uploads and stores document",
-                    "path": "reference/upload",
-                    "method": "POST",
-                    "openapi": "api-reference/upload.json POST /documents",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Access Group",
-                "pages": [
-                  {
-                    "title": "Create access group",
-                    "path": "reference/createaccessgroup",
-                    "method": "POST",
-                    "openapi": "api-reference/createaccessgroup.json POST /access-groups",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "File Upload",
-                "pages": [
-                  {
-                    "title": "Upload payment file and store valid payments",
-                    "path": "reference/upload-payment-file",
-                    "method": "POST",
-                    "openapi": "api-reference/upload-payment-file.json POST /payment-files",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Notification",
-                "pages": [
-                  {
-                    "title": "Set up a Notification for a Partner",
-                    "path": "reference/addpartnernotification",
-                    "method": "POST",
-                    "openapi": "api-reference/addpartnernotification.json POST /partners/{partnerId}/notifications",
-                    "openapi-mode": "custom"
-                  }
-                ]
-              },
-              {
-                "group": "Cards Bulk Operations",
-                "pages": [
-                  {
-                    "title": "List active bulk card requests",
-                    "path": "reference/getactivebulkcardrequests",
-                    "method": "GET",
-                    "openapi": "api-reference/getactivebulkcardrequests.json GET /bulk-cards",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Integration Notification",
-                "pages": [
-                  {
-                    "title": "Retrieve all Webhook Notification Subscriptions for a Customer.",
-                    "path": "reference/getallcustomerwebhooknotificationsubscriptions",
-                    "method": "GET",
-                    "openapi": "api-reference/getallcustomerwebhooknotificationsubscriptions.json GET /customers/{customerId}/integration-notifications",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Variable Recurring Payments",
-                "pages": [
-                  {
-                    "title": "Initiate a Variable Recurring Payment.",
-                    "path": "reference/initiatevrppayment",
-                    "method": "POST",
-                    "openapi": "api-reference/initiatevrppayment.json POST /vrp",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Payment Initiations",
-                "pages": [
-                  {
-                    "title": "Initiate standing order from ASPSP",
-                    "path": "reference/createstandingorderinitiation",
-                    "method": "POST",
-                    "openapi": "api-reference/createstandingorderinitiation.json POST /standing-order-initiations",
-                    "openapi-mode": "auto"
-                  }
-                ]
-              },
-              {
-                "group": "Verification of Payee",
-                "pages": [
-                  {
-                    "title": "Create Verification of Payee (VOP) request",
-                    "path": "reference/createoutboundvop",
-                    "method": "POST",
-                    "openapi": "api-reference/createoutboundvop.json POST /verify-payee",
-                    "openapi-mode": "auto"
-                  }
-                ]
+                "title": "What is WP Travel Engine?",
+                "path": "help-center/faq/what-is-wp-travel-engine"
               }
             ]
           },
           {
-            "group": "API Reference",
+            "group": "Troubleshooting",
+            "icon": "alert-triangle",
+            "expandable": false,
             "pages": [
               {
-                "title": "Activate a physical card",
-                "path": "reference/activatecard",
-                "method": "POST",
-                "openapi": "api-reference/activatecard.json POST /cards/{cardId}/activate",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Set up a Notification for a Customer",
-                "path": "reference/addcustomernotification",
-                "method": "POST",
-                "openapi": "api-reference/addcustomernotification.json POST /customers/{customerId}/notifications",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Set up a new Webhook Notification Subscription for a Customer.",
-                "path": "reference/addcustomerwebhooknotificationsubscription",
-                "method": "POST",
-                "openapi": "api-reference/addcustomerwebhooknotificationsubscription.json POST /customers/{customerId}/integration-notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Block a specific account",
-                "path": "reference/blockaccount",
-                "method": "POST",
-                "openapi": "api-reference/blockaccount.json POST /accounts/{accountId}/block",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Block an existing card",
-                "path": "reference/blockcard",
-                "method": "POST",
-                "openapi": "api-reference/blockcard.json POST /cards/{cardId}/block",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Bulk create customer custom field keys",
-                "path": "reference/bulkcreatecustomercustomfieldkeys",
-                "method": "POST",
-                "openapi": "api-reference/bulkcreatecustomercustomfieldkeys.json POST /customer/{customerId}/bulk-card-custom-fields",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Cancel the batch payment",
-                "path": "reference/cancelbatchpayments",
-                "method": "POST",
-                "openapi": "api-reference/cancelbatchpayments.json POST /batchpayments/{batchPaymentId}/cancel",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Bulk mandate cancellation request for the given account-id.",
-                "path": "reference/cancelbulkmandate",
-                "method": "POST",
-                "openapi": "api-reference/cancelbulkmandate.json POST /mandates/bulk-cancel",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Cancel an existing card",
-                "path": "reference/cancelcard",
-                "method": "POST",
-                "openapi": "api-reference/cancelcard.json POST /cards/{cardId}/cancel",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Cancel a Direct Debit collection for the given collection-id.",
-                "path": "reference/cancelcollection",
-                "method": "POST",
-                "openapi": "api-reference/cancelcollection.json POST /collections/{collectionId}/cancel",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Cancel a Direct Debit collection schedule for the given collection-id.",
-                "path": "reference/cancelcollectionschedule",
-                "method": "POST",
-                "openapi": "api-reference/cancelcollectionschedule.json POST /collectionschedules/{collectionScheduleId}/cancel",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Cancel a specific Mandate",
-                "path": "reference/cancelddosmandate",
-                "method": "POST",
-                "openapi": "api-reference/cancelddosmandate.json POST /directdebits/cancel",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Cancel Mandate for given mandate-id.",
-                "path": "reference/cancelmandate",
-                "method": "POST",
-                "openapi": "api-reference/cancelmandate.json POST /mandates/{mandateId}/cancel",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Card enquiry",
-                "path": "reference/cardenquiry",
-                "method": "POST",
-                "openapi": "api-reference/cardenquiry.json POST /cards/enquiry",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Channel Manager Card enquiry",
-                "path": "reference/channelmanagercardenquiry",
-                "method": "POST",
-                "openapi": "api-reference/channelmanagercardenquiry.json POST /channel-managers/cards/enquiry",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Channel Manager Create card ",
-                "path": "reference/channelmanagercreatecard",
-                "method": "POST",
-                "openapi": "api-reference/channelmanagercreatecard.json POST /channel-managers/accounts/{accountId}/cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a Webhook notification configuration",
-                "path": "reference/channelmanagercreatewebhooknotification",
-                "method": "POST",
-                "openapi": "api-reference/channelmanagercreatewebhooknotification.json POST /channel-managers/webhook-notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve channel manager's card activities",
-                "path": "reference/channelmanagergetcardactivities",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagergetcardactivities.json GET /channel-managers/cards/activities",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve channel manager's cards",
-                "path": "reference/channelmanagergetcards",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagergetcards.json GET /channel-managers/cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve Webhook notification configuration",
-                "path": "reference/channelmanagergetwebhooknotification",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagergetwebhooknotification.json GET /channel-managers/webhook-notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve Webhook notification configurations",
-                "path": "reference/channelmanagergetwebhooknotifications",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagergetwebhooknotifications.json GET /channel-managers/webhook-notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve Webhook notification configurations",
-                "path": "reference/channelmanagergetwebhooknotifications_1",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagergetwebhooknotifications_1.json GET /channel-managers/webhook-notifications/{notificationId}/failures",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Channel Manager Replace card ",
-                "path": "reference/channelmanagerreplacecard",
-                "method": "POST",
-                "openapi": "api-reference/channelmanagerreplacecard.json POST /channel-managers/cards/{cardId}/replace",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Channel Manager download a specific card report",
-                "path": "reference/channelmanagerretrievereport",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagerretrievereport.json GET /channel-managers/card-reports/{reportId}/report",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve channel manager's card reports",
-                "path": "reference/channelmanagersearchcardreports",
-                "method": "GET",
-                "openapi": "api-reference/channelmanagersearchcardreports.json GET /channel-managers/card-reports",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Channel Manager Update card",
-                "path": "reference/channelmanagerupdatecard_1",
-                "method": "PATCH",
-                "openapi": "api-reference/channelmanagerupdatecard_1.json PATCH /channel-managers/cards/{cardId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Channel Manager Update Card Custom Fields",
-                "path": "reference/channelmanagerupdatecardcustomfields",
-                "method": "POST",
-                "openapi": "api-reference/channelmanagerupdatecardcustomfields.json POST /channel-managers/cards/{cardId}/custom-fields",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update a specific Webhook notification configuration for a Channel Manager",
-                "path": "reference/channelmanagerupdatewebhooknotification",
-                "method": "PATCH",
-                "openapi": "api-reference/channelmanagerupdatewebhooknotification.json PATCH /channel-managers/webhook-notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Close an account",
-                "path": "reference/closeaccount",
-                "method": "POST",
-                "openapi": "api-reference/closeaccount.json POST /accounts/{accountId}/close",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Confirm the availability of funds in an account.",
-                "path": "reference/confirmfunds",
-                "method": "POST",
-                "openapi": "api-reference/confirmfunds.json POST /vrp-consents/{consentId}/funds-confirmation",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a New Onboarding Application",
-                "path": "reference/createapplication",
-                "method": "POST",
-                "openapi": "api-reference/createapplication.json POST /applications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Add an individual/associated entity to an Onboarding Application",
-                "path": "reference/createapplicationassociate",
-                "method": "POST",
-                "openapi": "api-reference/createapplicationassociate.json POST /applications/{applicationId}/compliance/associates",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Bulk request of Direct Debit mandates for the given account-id.",
-                "path": "reference/createbulkmandate",
-                "method": "POST",
-                "openapi": "api-reference/createbulkmandate.json POST /mandates/bulk-create",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Add a business entity to an Onboarding Application",
-                "path": "reference/createbusiness",
-                "method": "POST",
-                "openapi": "api-reference/createbusiness.json POST /applications/{applicationId}/compliance/businesses",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a new virtual card",
-                "path": "reference/createcard",
-                "method": "POST",
-                "openapi": "api-reference/createcard.json POST /accounts/{accountId}/cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a standalone chargeback",
-                "path": "reference/createchargeback",
-                "method": "POST",
-                "openapi": "api-reference/createchargeback.json POST /cards/{cardId}/chargebacks",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Chargeback an existing settlement",
-                "path": "reference/createchargebackforsettlement",
-                "method": "POST",
-                "openapi": "api-reference/createchargebackforsettlement.json POST /cards/{cardId}/activities/{settlementActivityId}/chargebacks",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Reverse a chargeback",
-                "path": "reference/createchargebackreversal",
-                "method": "POST",
-                "openapi": "api-reference/createchargebackreversal.json POST /activities/{chargebackActivityId}/chargeback-reversal",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Create the collection schedule for the given mandate-id.",
-                "path": "reference/createcollectionschedule",
-                "method": "POST",
-                "openapi": "api-reference/createcollectionschedule.json POST /mandates/{mandateId}/collectionschedules",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Simulate a credit authorisation",
-                "path": "reference/createcreditauthorisation",
-                "method": "POST",
-                "openapi": "api-reference/createcreditauthorisation.json POST /cards/{cardId}/credit-authorisations",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a Direct Debit mandate for the given account-id.",
-                "path": "reference/createmandate",
-                "method": "POST",
-                "openapi": "api-reference/createmandate.json POST /accounts/{accountId}/mandates",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Create an offline transaction",
-                "path": "reference/createofflinetransaction",
-                "method": "POST",
-                "openapi": "api-reference/createofflinetransaction.json POST /cards/{cardId}/offline-transactions",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Simulate an original credit",
-                "path": "reference/createoriginalcredit",
-                "method": "POST",
-                "openapi": "api-reference/createoriginalcredit.json POST /cards/{cardId}/original-credits",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create an account name check for Direct Debit Payer",
-                "path": "reference/createoutboundcheckforpnv",
-                "method": "POST",
-                "openapi": "api-reference/createoutboundcheckforpnv.json POST /account-name-check/payer",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Initiate payment from ASPSP",
-                "path": "reference/createpaymentinitiation",
-                "method": "POST",
-                "openapi": "api-reference/createpaymentinitiation.json POST /payment-initiations",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Endpoint to mock the credit of an account",
-                "path": "reference/createpayments",
-                "method": "POST",
-                "openapi": "api-reference/createpayments.json POST /credit",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a new physical card",
-                "path": "reference/createphysicalcard",
-                "method": "POST",
-                "openapi": "api-reference/createphysicalcard.json POST /accounts/{accountId}/physical-cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Resettlement of a chargeback",
-                "path": "reference/createresettlement",
-                "method": "POST",
-                "openapi": "api-reference/createresettlement.json POST /activities/{chargebackActivityId}/resettlement",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a secure Customer Verification SDK Session",
-                "path": "reference/createsdkkey",
-                "method": "POST",
-                "openapi": "api-reference/createsdkkey.json POST /keys/applications/{applicationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a settlement without prior authorisation",
-                "path": "reference/createsettlement",
-                "method": "POST",
-                "openapi": "api-reference/createsettlement.json POST /cards/{cardId}/settlements",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Share secure card details via EMAIL or RETURN methods",
-                "path": "reference/createsharesecuredetails",
-                "method": "POST",
-                "openapi": "api-reference/createsharesecuredetails.json POST /cards/{cardId}/share-secure-details",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Deactivate card token",
-                "path": "reference/deactivatecardtoken",
-                "method": "POST",
-                "openapi": "api-reference/deactivatecardtoken.json POST /card-tokens/{tokenId}/deactivate",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete card report notification configuration for customer and report type",
-                "path": "reference/deleteallnotificationconfigurationsforagivencustomerandreporttype",
-                "method": "DELETE",
-                "openapi": "api-reference/deleteallnotificationconfigurationsforagivencustomerandreporttype.json DELETE /customers/{customerId}/card-report-types/{reportType}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete card report notification configuration for partner and report type",
-                "path": "reference/deleteallnotificationconfigurationsforagivenpartnerandreporttype",
-                "method": "DELETE",
-                "openapi": "api-reference/deleteallnotificationconfigurationsforagivenpartnerandreporttype.json DELETE /partners/{partnerId}/card-report-types/{reportType}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete beneficiaries for a specified customer",
-                "path": "reference/deletebeneficiaries",
-                "method": "DELETE",
-                "openapi": "api-reference/deletebeneficiaries.json DELETE /customers/{customerId}/beneficiaries",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Mark bulk request as deleted",
-                "path": "reference/deletebulkrequest",
-                "method": "DELETE",
-                "openapi": "api-reference/deletebulkrequest.json DELETE /bulk-cards/{bulkRequestId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete card custom field",
-                "path": "reference/deletecardcustomfield",
-                "method": "DELETE",
-                "openapi": "api-reference/deletecardcustomfield.json DELETE /cards/{cardId}/custom-fields/{key}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete customer custom field key",
-                "path": "reference/deletecustomercustomfieldkey",
-                "method": "DELETE",
-                "openapi": "api-reference/deletecustomercustomfieldkey.json DELETE /customer/{customerId}/card-custom-fields/{key}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete a Webhook Notification Subscription for a Customer using the Notification ID.",
-                "path": "reference/deletecustomerwebhooknotificationsubscription",
-                "method": "DELETE",
-                "openapi": "api-reference/deletecustomerwebhooknotificationsubscription.json DELETE /customers/{customerId}/integration-notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete partner custom field key",
-                "path": "reference/deletepartnercustomfieldkey",
-                "method": "DELETE",
-                "openapi": "api-reference/deletepartnercustomfieldkey.json DELETE /partner/{partnerId}/card-custom-fields/{key}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete share secure card details",
-                "path": "reference/deletesharesecuredetails",
-                "method": "DELETE",
-                "openapi": "api-reference/deletesharesecuredetails.json DELETE /share-secure-details/{shareId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Delete all share secure card details for a card",
-                "path": "reference/deletesharesecuredetailscardlink",
-                "method": "DELETE",
-                "openapi": "api-reference/deletesharesecuredetailscardlink.json DELETE /cards/{cardId}/share-secure-details",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Edit an account",
-                "path": "reference/editaccount",
-                "method": "PUT",
-                "openapi": "api-reference/editaccount.json PUT /accounts/{accountId}",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Edit a specific customer using a unique customer reference",
-                "path": "reference/editcustomer",
-                "method": "PUT",
-                "openapi": "api-reference/editcustomer.json PUT /customers/{customerId}",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Update a specific notification by unique reference for a specific customer",
-                "path": "reference/editcustomernotification",
-                "method": "PUT",
-                "openapi": "api-reference/editcustomernotification.json PUT /customers/{customerId}/notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update a specific Webhook Notification Subscription for a Customer.",
-                "path": "reference/editcustomerwebhooknotificationsubscription",
-                "method": "PUT",
-                "openapi": "api-reference/editcustomerwebhooknotificationsubscription.json PUT /customers/{customerId}/integration-notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update a specific notification by unique reference for a specific partner",
-                "path": "reference/editpartnernotification",
-                "method": "PUT",
-                "openapi": "api-reference/editpartnernotification.json PUT /partners/{partnerId}/notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "[Restricted] Expire an existing authorisation",
-                "path": "reference/expireauthorisation",
-                "method": "POST",
-                "openapi": "api-reference/expireauthorisation.json POST /authorisations/{authId}/expire",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Simulate a card expiry",
-                "path": "reference/expirecard",
-                "method": "POST",
-                "openapi": "api-reference/expirecard.json POST /cards/{cardId}/expire",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Mark application as closed for modification",
-                "path": "reference/finaliseapplication",
-                "method": "POST",
-                "openapi": "api-reference/finaliseapplication.json POST /applications/{applicationId}/finalisations",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create secure card details token",
-                "path": "reference/generatecardholdertoken",
-                "method": "POST",
-                "openapi": "api-reference/generatecardholdertoken.json POST /cards/{cardId}/secure-details-token",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get the latest status of multiple uploaded payment files",
-                "path": "reference/get-payment-files-statuses",
-                "method": "GET",
-                "openapi": "api-reference/get-payment-files-statuses.json GET /payment-files",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get the customer-level summaries of multiple uploaded payment files",
-                "path": "reference/get-payment-files-summaries",
-                "method": "GET",
-                "openapi": "api-reference/get-payment-files-summaries.json GET /payment-files/summaries",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get access group",
-                "path": "reference/getaccessgroup",
-                "method": "GET",
-                "openapi": "api-reference/getaccessgroup.json GET /access-groups/{accessGroupId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get a list of access groups",
-                "path": "reference/getaccessgroups",
-                "method": "GET",
-                "openapi": "api-reference/getaccessgroups.json GET /access-groups",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get an account",
-                "path": "reference/getaccount",
-                "method": "GET",
-                "openapi": "api-reference/getaccount.json GET /accounts/{accountId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get accounts using filter",
-                "path": "reference/getaccounts",
-                "method": "GET",
-                "openapi": "api-reference/getaccounts.json GET /accounts",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get accounts by customer",
-                "path": "reference/getaccountsbycustomer",
-                "method": "GET",
-                "openapi": "api-reference/getaccountsbycustomer.json GET /customers/{customerId}/accounts",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get all Notifications for a Customer",
-                "path": "reference/getallcustomernotifications",
-                "method": "GET",
-                "openapi": "api-reference/getallcustomernotifications.json GET /customers/{customerId}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get all Notifications linked directly to a Partner",
-                "path": "reference/getallpartnernotifications",
-                "method": "GET",
-                "openapi": "api-reference/getallpartnernotifications.json GET /partners/{partnerId}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get supported ASPSPs",
-                "path": "reference/getaspsproviders",
-                "method": "GET",
-                "openapi": "api-reference/getaspsproviders.json GET /aspsps",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get all associates for a customer",
-                "path": "reference/getassociatesbycustomer",
-                "method": "GET",
-                "openapi": "api-reference/getassociatesbycustomer.json GET /customers/{customerId}/associates",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get a card task",
-                "path": "reference/getasynctask",
-                "method": "GET",
-                "openapi": "api-reference/getasynctask.json GET /card-tasks/{taskId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get batch payment by ID",
-                "path": "reference/getbatchpayment",
-                "method": "GET",
-                "openapi": "api-reference/getbatchpayment.json GET /batchpayments/{id}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get batch payments by a given set of parameters",
-                "path": "reference/getbatchpayments",
-                "method": "GET",
-                "openapi": "api-reference/getbatchpayments.json GET /batchpayments",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve beneficiaries",
-                "path": "reference/getbeneficiaries",
-                "method": "GET",
-                "openapi": "api-reference/getbeneficiaries.json GET /beneficiaries",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get bulk cards by id",
-                "path": "reference/getbulkcardsinfo",
-                "method": "GET",
-                "openapi": "api-reference/getbulkcardsinfo.json GET /bulk-cards/{bulkRequestId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get business entity for an Onboarding Application",
-                "path": "reference/getbusiness",
-                "method": "GET",
-                "openapi": "api-reference/getbusiness.json GET /applications/{applicationId}/compliance/businesses",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get business addresses for an Onboarding Application",
-                "path": "reference/getbusinessaddresses",
-                "method": "GET",
-                "openapi": "api-reference/getbusinessaddresses.json GET /applications/{applicationId}/compliance/businesses/addresses",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "View the details of an existing card",
-                "path": "reference/getcard",
-                "method": "GET",
-                "openapi": "api-reference/getcard.json GET /cards/{cardId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "View activities for specific cards or over a date range",
-                "path": "reference/getcardactivities",
-                "method": "GET",
-                "openapi": "api-reference/getcardactivities.json GET /activities",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "View the details of existing cards",
-                "path": "reference/getcards",
-                "method": "GET",
-                "openapi": "api-reference/getcards.json GET /cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "View the details of existing cards by account",
-                "path": "reference/getcardsbyaccount",
-                "method": "GET",
-                "openapi": "api-reference/getcardsbyaccount.json GET /accounts/{accountId}/cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get card tokens",
-                "path": "reference/getcardtokens",
-                "method": "GET",
-                "openapi": "api-reference/getcardtokens.json GET /cards/{cardId}/tokens",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get all collection activities of an account",
-                "path": "reference/getcollections",
-                "method": "GET",
-                "openapi": "api-reference/getcollections.json GET /collections",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Get all collectionschedules for a mandate",
-                "path": "reference/getcollectionschedules",
-                "method": "GET",
-                "openapi": "api-reference/getcollectionschedules.json GET /collectionschedules",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Get physical card create tasks by account",
-                "path": "reference/getcreatephysicalcardasynctasksbyaccount",
-                "method": "GET",
-                "openapi": "api-reference/getcreatephysicalcardasynctasksbyaccount.json GET /accounts/{accountId}/physical-card-request-tasks",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve a specific customer using a unique customer reference",
-                "path": "reference/getcustomer",
-                "method": "GET",
-                "openapi": "api-reference/getcustomer.json GET /customers/{customerId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "View existing customer card custom field keys",
-                "path": "reference/getcustomercustomfieldkeys",
-                "method": "GET",
-                "openapi": "api-reference/getcustomercustomfieldkeys.json GET /customer/{customerId}/card-custom-fields",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve a specific notification by unique reference for a specific customer",
-                "path": "reference/getcustomernotification",
-                "method": "GET",
-                "openapi": "api-reference/getcustomernotification.json GET /customers/{customerId}/notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve customers using filters",
-                "path": "reference/getcustomers",
-                "method": "GET",
-                "openapi": "api-reference/getcustomers.json GET /customers",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve a specific Webhook Notification Subscription for a Customer using the Notification ID.",
-                "path": "reference/getcustomerwebhooknotificationsubscription",
-                "method": "GET",
-                "openapi": "api-reference/getcustomerwebhooknotificationsubscription.json GET /customers/{customerId}/integration-notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get compliance documents uploaded for an application associate",
-                "path": "reference/getdocuments",
-                "method": "GET",
-                "openapi": "api-reference/getdocuments.json GET /applications/{applicationId}/compliance/associates/{associateId}/documents",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve failed Webhook Notifications for a Webhook using the Notification ID.",
-                "path": "reference/getfailedwebhooknotifications",
-                "method": "GET",
-                "openapi": "api-reference/getfailedwebhooknotifications.json GET /integration-notification-webhooks/{notificationId}/failures",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Check if a particular webhook has failed",
-                "path": "reference/getfailedwebhooks",
-                "method": "GET",
-                "openapi": "api-reference/getfailedwebhooks.json GET /webhooks/{webhookId}/failures",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get in-app provisioning data for Apple Pay",
-                "path": "reference/getinappprovisioningforapple",
-                "method": "POST",
-                "openapi": "api-reference/getinappprovisioningforapple.json POST /cards/{cardId}/in-app-provisioning/apple",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get an Indemnity Claim for a given id",
-                "path": "reference/getindemnityclaim",
-                "method": "GET",
-                "openapi": "api-reference/getindemnityclaim.json GET /indemnity-claims/{indemnityClaimId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get Indemnity Claims based on search criteria",
-                "path": "reference/getindemnityclaims",
-                "method": "GET",
-                "openapi": "api-reference/getindemnityclaims.json GET /indemnity-claims",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve locked beneficiary entities",
-                "path": "reference/getlocks",
-                "method": "GET",
-                "openapi": "api-reference/getlocks.json GET /beneficiaries/{beneficiaryId}/locks",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get Mandates based on search criteria.",
-                "path": "reference/getmandates",
-                "method": "GET",
-                "openapi": "api-reference/getmandates.json GET /mandates",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Retrieve card report type notification configuration for customer",
-                "path": "reference/getnotificationconfigurationsforagivencustomerandreporttype",
-                "method": "GET",
-                "openapi": "api-reference/getnotificationconfigurationsforagivencustomerandreporttype.json GET /customers/{customerId}/card-report-types/{reportType}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get card token OTP details",
-                "path": "reference/getotpdetails",
-                "method": "GET",
-                "openapi": "api-reference/getotpdetails.json GET /card-tokens/{tokenId}/otp",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "View existing partner card custom field keys",
-                "path": "reference/getpartnercustomfieldkeys",
-                "method": "GET",
-                "openapi": "api-reference/getpartnercustomfieldkeys.json GET /partner/{partnerId}/card-custom-fields",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve a specific notification by unique reference for a specific partner",
-                "path": "reference/getpartnernotification",
-                "method": "GET",
-                "openapi": "api-reference/getpartnernotification.json GET /partners/{partnerId}/notifications/{notificationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get payment initiation request details",
-                "path": "reference/getpaymentinitiation",
-                "method": "GET",
-                "openapi": "api-reference/getpaymentinitiation.json GET /payment-initiations/{paymentInitiationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve payments",
-                "path": "reference/getpayments",
-                "method": "GET",
-                "openapi": "api-reference/getpayments.json GET /payments",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get Reconciliations based on search criteria.",
-                "path": "reference/getreconciliations",
-                "method": "GET",
-                "openapi": "api-reference/getreconciliations.json GET /reconciliations",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Retrieve a Rule by rule type on a specific account",
-                "path": "reference/getrule",
-                "method": "GET",
-                "openapi": "api-reference/getrule.json GET /accounts/{id}/rules/{rtype}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get all Rules for a specific Account",
-                "path": "reference/getrules",
-                "method": "GET",
-                "openapi": "api-reference/getrules.json GET /accounts/{id}/rules",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve secure card details (PAN + CVV + PIN)",
-                "path": "reference/getsecurecarddetails",
-                "method": "GET",
-                "openapi": "api-reference/getsecurecarddetails.json GET /cards/secure-details",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve share secure card details",
-                "path": "reference/getsharesecurecarddetails",
-                "method": "GET",
-                "openapi": "api-reference/getsharesecurecarddetails.json GET /cards/{cardId}/share-secure-details",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve share details activity of token",
-                "path": "reference/getsharesecurecarddetailstokenactivity",
-                "method": "GET",
-                "openapi": "api-reference/getsharesecurecarddetailstokenactivity.json GET /cards/{cardId}/share-secure-details/{shareSecureDetailsId}/activity",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get SRD Accounts",
-                "path": "reference/getsrdaccounts",
-                "method": "GET",
-                "openapi": "api-reference/getsrdaccounts.json GET /account-name-check/srd-accounts",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get standing order initiation request details",
-                "path": "reference/getstandingorderinitiation",
-                "method": "GET",
-                "openapi": "api-reference/getstandingorderinitiation.json GET /standing-order-initiations/{standingOrderInitiationId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get VRP consent.",
-                "path": "reference/getvrpconsent",
-                "method": "GET",
-                "openapi": "api-reference/getvrpconsent.json GET /vrp-consents/{consentId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get Variable Recurring Payment",
-                "path": "reference/getvrppayment",
-                "method": "GET",
-                "openapi": "api-reference/getvrppayment.json GET /vrp/{vrpPaymentId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a VRP consent",
-                "path": "reference/initiateconsentcreation",
-                "method": "POST",
-                "openapi": "api-reference/initiateconsentcreation.json POST /vrp-consents",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Edit a specific Rule",
-                "path": "reference/modifyrule",
-                "method": "PUT",
-                "openapi": "api-reference/modifyrule.json PUT /rules/{ruleId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Edit a customer",
-                "path": "reference/patchcustomer",
-                "method": "PATCH",
-                "openapi": "api-reference/patchcustomer.json PATCH /customers/{customerId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Perform an account status inquiry",
-                "path": "reference/performaccountstatusinquiry",
-                "method": "POST",
-                "openapi": "api-reference/performaccountstatusinquiry.json POST /cards/{cardId}/account-status-inquiry",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create payments from an uploaded file",
-                "path": "reference/proceed",
-                "method": "POST",
-                "openapi": "api-reference/proceed.json POST /payment-files/{fileId}/proceed",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create payments from one or more uploaded files",
-                "path": "reference/proceed_1",
-                "method": "POST",
-                "openapi": "api-reference/proceed_1.json POST /payment-files/proceed",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create a card refund",
-                "path": "reference/refund",
-                "method": "POST",
-                "openapi": "api-reference/refund.json POST /cards/{cardId}/refunds",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Reject Collection",
-                "path": "reference/rejectcollection",
-                "method": "POST",
-                "openapi": "api-reference/rejectcollection.json POST /directdebits/reject",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Delete a Rule",
-                "path": "reference/removerules",
-                "method": "DELETE",
-                "openapi": "api-reference/removerules.json DELETE /rules",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Replace a card",
-                "path": "reference/replacecard",
-                "method": "POST",
-                "openapi": "api-reference/replacecard.json POST /cards/{cardId}/replace",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Represent collection for given collection id",
-                "path": "reference/representcollection",
-                "method": "POST",
-                "openapi": "api-reference/representcollection.json POST /collection/{collectionId}/represent",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Reset card PIN",
-                "path": "reference/resetpin",
-                "method": "POST",
-                "openapi": "api-reference/resetpin.json POST /cards/{cardId}/pin",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve all Mandates for an account",
-                "path": "reference/retrievemandates",
-                "method": "GET",
-                "openapi": "api-reference/retrievemandates.json GET /directdebits/enquire/{accountId}",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Retrieve PIN",
-                "path": "reference/retrievepin",
-                "method": "GET",
-                "openapi": "api-reference/retrievepin.json GET /cards/{cardId}/pin",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Download a specific card report",
-                "path": "reference/retrievepresignedreporturl",
-                "method": "GET",
-                "openapi": "api-reference/retrievepresignedreporturl.json GET /card-reports/{reportId}/download",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Download a specific card report",
-                "path": "reference/retrievereport",
-                "method": "GET",
-                "openapi": "api-reference/retrievereport.json GET /card-reports/{reportId}/report",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Reverse the card authorisation",
-                "path": "reference/reverseauthorisation",
-                "method": "POST",
-                "openapi": "api-reference/reverseauthorisation.json POST /authorisations/{authId}/reverse",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Reverse a credit authorisation",
-                "path": "reference/reversecreditauthorisation",
-                "method": "POST",
-                "openapi": "api-reference/reversecreditauthorisation.json POST /credit-authorisations/{creditAuthId}/reverse",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Reverse an original credit",
-                "path": "reference/reverseoriginalcredit",
-                "method": "POST",
-                "openapi": "api-reference/reverseoriginalcredit.json POST /cards/{cardId}/original-credits/{originalCreditActivityId}/reverse",
-                "openapi-mode": "custom"
-              },
-              {
-                "title": "Revoke a VRP consent.",
-                "path": "reference/revokevrpconsent",
-                "method": "DELETE",
-                "openapi": "api-reference/revokevrpconsent.json DELETE /vrp-consents/{consentId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Retrieve card reports",
-                "path": "reference/searchreports",
-                "method": "GET",
-                "openapi": "api-reference/searchreports.json GET /card-reports",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Reset card PIN",
-                "path": "reference/secureresetpin",
-                "method": "POST",
-                "openapi": "api-reference/secureresetpin.json POST /cards/secure-pin-reset",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Settle the full or partial card authorisation",
-                "path": "reference/settleauthorisation",
-                "method": "POST",
-                "openapi": "api-reference/settleauthorisation.json POST /authorisations/{authId}/settle",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get an upload file latest status",
-                "path": "reference/status",
-                "method": "GET",
-                "openapi": "api-reference/status.json GET /payment-files/{fileId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Submit a business application for verification",
-                "path": "reference/submitapplication",
-                "method": "POST",
-                "openapi": "api-reference/submitapplication.json POST /applications/{applicationId}/submissions",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Submit an associate for verification",
-                "path": "reference/submitassociateforverification",
-                "method": "POST",
-                "openapi": "api-reference/submitassociateforverification.json POST /applications/{applicationId}/associates/{associateId}/submissions",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Make a batch payment",
-                "path": "reference/submitbatchpayments",
-                "method": "POST",
-                "openapi": "api-reference/submitbatchpayments.json POST /batchpayments",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Submit bulk cards operations",
-                "path": "reference/submitbulkcardoperations",
-                "method": "POST",
-                "openapi": "api-reference/submitbulkcardoperations.json POST /bulk-cards",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Get paginated summaries of child file uploads",
-                "path": "reference/summaries",
-                "method": "GET",
-                "openapi": "api-reference/summaries.json GET /payment-files/{fileId}/summaries",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "[Restricted] Suspend an existing card",
-                "path": "reference/suspendcard",
-                "method": "POST",
-                "openapi": "api-reference/suspendcard.json POST /cards/{cardId}/suspend",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Suspend card token",
-                "path": "reference/suspendcardtoken",
-                "method": "POST",
-                "openapi": "api-reference/suspendcardtoken.json POST /card-tokens/{tokenId}/suspend",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Toggled notifications for customer and card report type",
-                "path": "reference/togglenotificationsforagivencustomerandreporttype",
-                "method": "POST",
-                "openapi": "api-reference/togglenotificationsforagivencustomerandreporttype.json POST /customers/{customerId}/card-report-types/{reportType}/notifications/status",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Toggle card report notification for partner and report type",
-                "path": "reference/togglenotificationsforagivenpartnerandreporttype",
-                "method": "POST",
-                "openapi": "api-reference/togglenotificationsforagivenpartnerandreporttype.json POST /partners/{partnerId}/card-report-types/{reportType}/notifications/status",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Unbind a device from a card token",
-                "path": "reference/unbinddevice",
-                "method": "POST",
-                "openapi": "api-reference/unbinddevice.json POST /card-tokens/{tokenId}/devices/{deviceId}/unbind",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Unblock a specific account",
-                "path": "reference/unblockaccount",
-                "method": "POST",
-                "openapi": "api-reference/unblockaccount.json POST /accounts/{accountId}/unblock",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Unblock an existing card",
-                "path": "reference/unblockcard",
-                "method": "POST",
-                "openapi": "api-reference/unblockcard.json POST /cards/{cardId}/unblock",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Unblock PIN",
-                "path": "reference/unblockpin",
-                "method": "POST",
-                "openapi": "api-reference/unblockpin.json POST /cards/{cardId}/pin/unblock",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Unsuspend card token",
-                "path": "reference/unsuspendcardtoken",
-                "method": "POST",
-                "openapi": "api-reference/unsuspendcardtoken.json POST /card-tokens/{tokenId}/unsuspend",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update a card",
-                "path": "reference/update",
-                "method": "POST",
-                "openapi": "api-reference/update.json POST /cards/{cardId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update access group",
-                "path": "reference/updateaccessgroup",
-                "method": "PUT",
-                "openapi": "api-reference/updateaccessgroup.json PUT /access-groups/{accessGroupId}/content",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update a business entity for an Onboarding Application",
-                "path": "reference/updatebusiness",
-                "method": "PUT",
-                "openapi": "api-reference/updatebusiness.json PUT /applications/{applicationId}/compliance/businesses/{businessId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or Update a business address for an Onboarding Application",
-                "path": "reference/updatebusinessaddress",
-                "method": "PUT",
-                "openapi": "api-reference/updatebusinessaddress.json PUT /applications/{applicationId}/compliance/businesses/{businessId}/addresses",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update card",
-                "path": "reference/updatecard",
-                "method": "PATCH",
-                "openapi": "api-reference/updatecard.json PATCH /cards/{cardId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update card authentication",
-                "path": "reference/updatecardauthentication",
-                "method": "PUT",
-                "openapi": "api-reference/updatecardauthentication.json PUT /cards/{cardId}/authentication",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update a card's custom fields",
-                "path": "reference/updatecardcustomfields",
-                "method": "POST",
-                "openapi": "api-reference/updatecardcustomfields.json POST /cards/{cardId}/custom-fields",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update customer identification information",
-                "path": "reference/updatecustomeridentificationinfosbycustomerid",
-                "method": "PUT",
-                "openapi": "api-reference/updatecustomeridentificationinfosbycustomerid.json PUT /customers/{customerId}/compliance/identification-info",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update the department code for an associate",
-                "path": "reference/updatedepartmentforassociate",
-                "method": "PUT",
-                "openapi": "api-reference/updatedepartmentforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/fr/department",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update identification document details for an associate",
-                "path": "reference/updateidentificationdocumentsdetailsforassociate",
-                "method": "PUT",
-                "openapi": "api-reference/updateidentificationdocumentsdetailsforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/document-details",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or Update Know Your Customer Data for a Customer Application",
-                "path": "reference/updateknowyourcustomerbyapplicationid",
-                "method": "PUT",
-                "openapi": "api-reference/updateknowyourcustomerbyapplicationid.json PUT /applications/{applicationId}/compliance/know-your-customer",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update report type notification configuration for customer",
-                "path": "reference/updatenotificationconfigurationsforagivencustomerandreporttype",
-                "method": "POST",
-                "openapi": "api-reference/updatenotificationconfigurationsforagivencustomerandreporttype.json POST /customers/{customerId}/card-report-types/{reportType}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update report type notification configuration for partner",
-                "path": "reference/updatenotificationconfigurationsforagivenpartnerandreporttype",
-                "method": "POST",
-                "openapi": "api-reference/updatenotificationconfigurationsforagivenpartnerandreporttype.json POST /partners/{partnerId}/card-report-types/{reportType}/notifications",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update an associate’s personal details",
-                "path": "reference/updatepersonalinformationforassociate",
-                "method": "PUT",
-                "openapi": "api-reference/updatepersonalinformationforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/personal-info",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or Update Personal Details for an Application Associate",
-                "path": "reference/updatepersonalinformationforassociate_1",
-                "method": "PUT",
-                "openapi": "api-reference/updatepersonalinformationforassociate_1.json PUT /applications/{applicationId}/compliance/associates/{associateId}/personal-info",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Set the secured funding limit for an account",
-                "path": "reference/updatesecuredfundinglimit",
-                "method": "PUT",
-                "openapi": "api-reference/updatesecuredfundinglimit.json PUT /accounts/{accountId}/secured-funding",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Update share secure details",
-                "path": "reference/updatesharesecuredetails",
-                "method": "PUT",
-                "openapi": "api-reference/updatesharesecuredetails.json PUT /cards/{cardId}/share-secure-details/{shareSecureDetailsId}",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update a customer’s tax identifiers",
-                "path": "reference/updatetaxidentifiersbycustomerid",
-                "method": "PUT",
-                "openapi": "api-reference/updatetaxidentifiersbycustomerid.json PUT /customers/{customerId}/compliance/tax-identifiers",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update tax identifiers for an associate",
-                "path": "reference/updatetaxidentifiersforassociate",
-                "method": "PUT",
-                "openapi": "api-reference/updatetaxidentifiersforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/tax-identifiers",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or update the list of countries where an associate is considered tax-resident",
-                "path": "reference/updatetaxresidenciesforassociate",
-                "method": "PUT",
-                "openapi": "api-reference/updatetaxresidenciesforassociate.json PUT /customers/{customerId}/compliance/associates/{associateId}/tax-residencies",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Create or Update Tax Residency Information for an Application Associate",
-                "path": "reference/updatetaxresidenciesforassociate_1",
-                "method": "PUT",
-                "openapi": "api-reference/updatetaxresidenciesforassociate_1.json PUT /applications/{applicationId}/compliance/associates/{associateId}/tax-residencies",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Uploads and stores documents associated with an existing customer record",
-                "path": "reference/upload_1",
-                "method": "POST",
-                "openapi": "api-reference/upload_1.json POST /customers/{customerId}/documents",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Upload CSV file with bulk card operations",
-                "path": "reference/uploadbulkcards",
-                "method": "POST",
-                "openapi": "api-reference/uploadbulkcards.json POST /bulk-cards/upload",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Upload an identity document or biometric selfie for an application associate",
-                "path": "reference/uploaddocument",
-                "method": "PUT",
-                "openapi": "api-reference/uploaddocument.json PUT /applications/{applicationId}/compliance/associates/{associateId}/documents",
-                "openapi-mode": "auto"
-              },
-              {
-                "title": "Submit an application for verification",
-                "path": "reference/verifyapplication",
-                "method": "POST",
-                "openapi": "api-reference/verifyapplication.json POST /applications/{applicationId}/verify",
-                "openapi-mode": "auto"
+                "title": "Fix Plugin Conflict",
+                "path": "help-center/troubleshooting/fix-plugin-conflict"
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Product Updates",
-        "groups": [
+          },
           {
-            "group": "Product Updates",
+            "group": "Guides",
+            "icon": "book-open",
+            "expandable": false,
             "pages": [
               {
-                "title": "Your Modulr Product Update June 2026",
-                "path": "changelog/your-modulr-product-update-june-2026"
-              },
-              {
-                "title": "Your Modulr Product Update May 2026",
-                "path": "changelog/your-modulr-product-update-may-2026"
-              },
-              {
-                "title": "Your Modulr Product Update January 2026",
-                "path": "changelog/your-modulr-product-update-january-2026"
-              },
-              {
-                "title": "Your Modulr Product Update October 2025",
-                "path": "changelog/your-modulr-product-update-october-2025"
-              },
-              {
-                "title": "Your Modulr Product Update September 2025",
-                "path": "changelog/your-modulr-product-update-september-2025"
-              },
-              {
-                "title": "ModConnect July 2025",
-                "path": "changelog/modconnect-july-2025"
-              },
-              {
-                "title": "ModConnect June 2025",
-                "path": "changelog/modconnect-june-2025"
-              },
-              {
-                "title": "ModConnect May 2025",
-                "path": "changelog/modconnect-may-2025"
-              },
-              {
-                "title": "ModConnect April 2025",
-                "path": "changelog/modconnect-april-2025"
-              },
-              {
-                "title": "ModConnect Quarterly Round Up 1 2025",
-                "path": "changelog/modconnect-quarterly-round-up"
-              },
-              {
-                "title": "ModConnect- Quarterly Round Up 2024",
-                "path": "changelog/modconnect-quarterly-round-up-2024"
-              },
-              {
-                "title": "ModConnect- October 2024",
-                "path": "changelog/modconnect-october-2024"
-              },
-              {
-                "title": "ModConnect- September 2024",
-                "path": "changelog/modconnect-september-2024"
-              },
-              {
-                "title": "ModConnect- August 2024",
-                "path": "changelog/modconnect-august-2024"
-              },
-              {
-                "title": "ModConnect-July 2024",
-                "path": "changelog/modconnect-july-2024"
-              },
-              {
-                "title": "ModConnect- May 2024",
-                "path": "changelog/modconnect-may-2024"
-              },
-              {
-                "title": "ModConnect - April 2024",
-                "path": "changelog/modconnect-april-2024"
-              },
-              {
-                "title": "ModConnect - February 2024",
-                "path": "changelog/modconnect-february-2024"
-              },
-              {
-                "title": "ModConnect - January 2024",
-                "path": "changelog/modconnect-january-2024"
-              },
-              {
-                "title": "ModConnect - Quarterly Round Up",
-                "path": "changelog/modconnect-annual-round-up"
-              },
-              {
-                "title": "ModConnect - September 2023",
-                "path": "changelog/modconnect-september-2023"
-              },
-              {
-                "title": "ModConnect - August 2023",
-                "path": "changelog/modconnect-august-2023"
-              },
-              {
-                "title": "ModConnect - July 2023",
-                "path": "changelog/modconnect-july-2023"
-              },
-              {
-                "title": "ModConnect - June 2023",
-                "path": "changelog/modconnect-june-2023"
-              },
-              {
-                "title": "ModConnect – May 2023",
-                "path": "changelog/modconnect-may-2023"
+                "title": "Setup First Tour",
+                "path": "help-center/guides/setup-first-tour"
               }
             ]
           }
         ]
       },
       {
-        "tab": "Recipes",
-        "icon": "chef-hat",
+        "tab": "Changelog",
+        "icon": "clock",
         "pages": [
           {
-            "title": "HMAC Authentication",
-            "path": "recipes/hmac-authentication"
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
           }
         ]
       }
     ]
+  },
+  "seo": {
+    "robots:index": false,
+    "robots:follow": true
   }
 }

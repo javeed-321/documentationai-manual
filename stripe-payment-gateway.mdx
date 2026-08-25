@@ -1,0 +1,345 @@
+---
+title: Stripe Payment Gateway
+description: >-
+  Accept credit cards, Apple Pay, and Google Pay on your tour booking form using
+  Stripe. Set it up in a few steps without writing any code.
+type: guide
+---
+## Overview
+
+Stripe is a payment service that processes card payments for businesses all over the world. When you connect it to WP Travel Engine, your travelers can pay for trips right on your website using their credit card, Apple Pay, or Google Pay. You don't need to send them to a separate page or handle card details yourself. Stripe takes care of the security side for you.
+
+The Stripe Payment Gateway addon works inside your existing booking form. Travelers pick their trip, enter their details, and pay - all without leaving your site.
+
+## What you'll need before you start
+
+Before you set up Stripe, make sure you have these ready:
+
+- The WP Travel Engine plugin installed and active on your WordPress site. A plugin is a small add-on that gives your WordPress site extra features. WP Travel Engine is the plugin that powers your trip bookings.
+- The [Stripe Payment Gateway addon](https://wptravelengine.com/plugins/stripe-payment-gateway/) purchased and installed. This is a separate add-on that connects WP Travel Engine to Stripe.
+- A verified Stripe account. You can create one for free at [stripe.com](https://stripe.com). Stripe will ask for some basic information about your business to verify your account. This usually takes a day or two.
+
+<div style="position:relative;height:0;width:100%;overflow:hidden;z-index:99999;box-sizing:border-box;padding-bottom:calc(49.63541667% + 32px)">
+<iframe src="https://www.guidejar.com/embed/31dec612-f972-4ff8-a52f-59f05b0ef060?type=1&amp;controls=on" width="100%" height="100%" style="position:absolute;inset:0" allowfullscreen="" frameborder="0"></iframe>
+</div>
+
+<Callout kind="info" collapsed="false">
+  Not sure how to install the addon or activate your license key? See our guide on [how to activate the Pro addon license key](/how-to-activate-the-pro-add-on-license-key).
+</Callout>
+
+## How to turn on Stripe as a payment option
+
+This step adds Stripe to the list of payment methods your travelers see at checkout. It only takes a moment, but it's the first thing you need to do before anything else works.
+
+<Steps>
+  <Step title="Open your WordPress dashboard" title-type="p">
+    Log in to your WordPress dashboard. This is the admin area of your website, usually found at **yoursite.com/wp-admin**.
+  </Step>
+
+  <Step title="Go to Payment settings" title-type="p">
+    On the left sidebar of your WordPress dashboard, click **WP Travel Engine**, then click **Settings**, then click the **Payment** tab at the top of the page, and then click **General**.
+  </Step>
+
+  <Step title="Turn on Stripe" title-type="p">
+    You'll see a list of payment gateways on this page. Find **Stripe** in that list and check the box next to it.
+  </Step>
+
+  <Step title="Save your changes" title-type="p">
+    Scroll to the bottom of the page and click **Save Settings**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787559855274-we3e276tsm-Stripe-enable-payment-gateway.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="680" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  You can turn on more than one payment method at the same time. For example, if you want to offer both Stripe and PayPal, check both boxes and save. Your travelers will see all enabled options at checkout and can pick whichever they prefer.
+</Callout>
+
+Good, Stripe is now turned on. Next, you need to connect it to your actual Stripe account so it can process real payments.
+
+## Connecting your Stripe account
+
+To process payments, your website needs to know it's allowed to use your Stripe account. You do this by entering two special codes called API keys. An API key is a kind of password that lets your website talk to Stripe securely. You'll need two of them: a Publishable Key and a Secret Key.
+
+<Steps>
+  <Step title="Find your API keys in Stripe" title-type="p">
+    Log in to your [Stripe Dashboard](https://dashboard.stripe.com). On the left sidebar, click **Developers**, then click **API Keys**.
+  </Step>
+
+  <Step title="Copy your keys" title-type="p">
+    You'll see two keys on this page. Copy the **Publishable Key** (it starts with `pk_live_`) and the **Secret Key** (it starts with `sk_live_`). You can copy each one by clicking the copy button next to it.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787559925717-0q3nx1lquqa-Stripe-API-Keys.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="569" alt="" />
+  </Step>
+
+  <Step title="Go back to your WordPress site" title-type="p">
+    Open a new browser tab and go to your WordPress dashboard. Navigate to **WP Travel Engine > Settings > Payment > Stripe Payment**.
+  </Step>
+
+  <Step title="Paste your keys" title-type="p">
+    Paste the Publishable Key into the **Publishable Key** field and the Secret Key into the **Secret Key** field.
+  </Step>
+
+  <Step title="Save your changes" title-type="p">
+    Click **Save Changes** at the bottom of the page.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560002172-0ectzyrusduv-Stripe-settings.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="605" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  Stripe gives you two sets of keys: live keys and test keys. Use **test keys** only while you're practicing or checking that everything works. When you're ready to accept real payments from real travelers, switch to your **live keys**. The live keys start with `pk_live_` and `sk_live_`.
+</Callout>
+
+That's the core connection done. Your website can now process payments through Stripe. The next sections cover optional features you can turn on to make checkout smoother and give you more control over how and when travelers are charged.
+
+## Setting up webhooks so Stripe can update your bookings
+
+A webhook is an automatic message that Stripe sends to your website when something happens with a payment. For example, when a traveler's card is charged successfully, Stripe sends a message to let your website know the booking is confirmed. Without webhooks set up, your booking status might not update even though the payment went through. This step makes sure your bookings and payments stay in sync.
+
+<Steps>
+  <Step title="Copy your webhook URL from WordPress" title-type="p">
+    In your WordPress dashboard, go to **WP Travel Engine > Settings > Payment > Stripe Payment**. You'll see a webhook endpoint URL displayed on this page. It looks something like `https://yoursite.com/?stripe=wptravelengine-webhook`. Copy this URL.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560051645-3ti7y72i39i-stripe-webhook.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="306" alt="" />
+  </Step>
+
+  <Step title="Add an endpoint in Stripe" title-type="p">
+    Go to your [Stripe Dashboard](https://dashboard.stripe.com). On the left sidebar, click **Developers**, then click **Webhooks**. Click the **+ Add Endpoint** button (it might say **Add Destination** instead).
+  </Step>
+
+  <Step title="Select the right events" title-type="p">
+    Stripe will ask which events you want to be notified about. Select only the **Payment Intent** events. These cover the key moments: when a payment succeeds, fails, is booked, or is cancelled. Choosing these ensures your booking status updates correctly.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560112637-p42m25c8l3h-stripe-payment-intent.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="552" alt="" />
+  </Step>
+
+  <Step title="Add your webhook URL" title-type="p">
+    Paste the webhook URL you copied from WordPress into the endpoint URL field. Then click **Create Destination** (or **Add Endpoint**).
+  </Step>
+
+  <Step title="Copy the signing secret" title-type="p">
+    Once the endpoint is created, Stripe gives you a **Signing Secret**. This is a code that proves the message really came from Stripe. Copy it.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560165497-5ybzqm0idzq-stripe-signing.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="374" alt="" />
+  </Step>
+
+  <Step title="Save the signing secret in WordPress" title-type="p">
+    Go back to your WordPress dashboard, to the same **Stripe Payment** settings page. Paste the signing secret into the **Signing Secret** field and click **Save Changes**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560192454-njk7sxpi0vq-stripe-webhook-settings.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="605" alt="" />
+  </Step>
+</Steps>
+
+That's webhooks sorted. Your website will now know automatically whenever a payment goes through or fails. You won't need to manually check whether a booking was paid for.
+
+## Preapproved payments: hold the card, charge later
+
+Preapproved payments let you hold a traveler's card and charge it later, instead of charging right away. This gives you time to review the booking before taking their money.
+
+Say you run small-group treks with a limited number of spots. A traveler books online, but you want to confirm you have space before charging them. With preapproved payments, Stripe checks that the traveler's card is valid and sets aside the funds. You then review the booking and charge the card when you're ready.
+
+This is also useful if you want to approve or reject a booking before the actual charge is made, or if you need to confirm details with a traveler before payment goes through.
+
+To turn it on, go to **WP Travel Engine > Settings > Payment > Stripe Payment** in your WordPress dashboard and check the box labeled **Enable Preapproved Payment**. Then click **Save Changes**.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560242468-c9a6rzgs8su-stripe-preapproved.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="605" alt="" />
+
+<Callout kind="info" collapsed="false">
+  When preapproved payments are turned on, travelers will see this option at checkout alongside any other payment methods that support preapproval. After you approve a booking, you'll need to go to your Stripe Dashboard to capture the payment manually. This means you click a button in Stripe to actually charge the held card.
+</Callout>
+
+## Saving payment details for later charges
+
+Sometimes you might want to charge a traveler after their original booking. For example, if someone damages equipment on a trek and you need to charge a fee, or if a traveler adds a last-minute upgrade. The Future Usage (Off Session) setting lets Stripe save a traveler's payment details securely so you can charge them later without asking for their card again.
+
+This is called an "off-session" payment because the traveler isn't actively on your website when the charge happens. You're charging them from your Stripe Dashboard using the card they previously saved.
+
+### How to turn it on
+
+This setting tells Stripe to save each traveler's card details during checkout, so you can use them for future charges from your Stripe Dashboard.
+
+<Steps>
+  <Step title="Open Stripe Payment settings" title-type="p">
+    In your WordPress dashboard, go to **WP Travel Engine > Settings > Payment > Stripe Payment**.
+  </Step>
+
+  <Step title="Turn on Future Usage" title-type="p">
+    Find the toggle labeled **Setup Future Usage (Off Session)** and turn it on.
+  </Step>
+
+  <Step title="Save your changes" title-type="p">
+    Click **Save Changes** at the bottom of the page. From now on, Stripe will automatically save each traveler's payment method when they check out.
+  </Step>
+</Steps>
+
+### How to charge a customer using saved details
+
+When a traveler has paid after you turned on Future Usage, their card details are saved in Stripe. Here's how to charge them again:
+
+<Steps>
+  <Step title="Open your Stripe Dashboard" title-type="p">
+    Log in to your [Stripe Dashboard](https://dashboard.stripe.com) and click **Customers** on the left sidebar.
+  </Step>
+
+  <Step title="Find the customer" title-type="p">
+    Look for the traveler you want to charge. You can search by name or email. Click on their name to open their profile.
+  </Step>
+
+  <Step title="Create the payment" title-type="p">
+    Click **Create Payment** and follow the prompts. Stripe will use the saved card details to process the charge. The traveler doesn't need to do anything.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560361236-u2e9cvu7wos-stripe-create-a-payment.png?fm=auto&auto=compress%2Cformat" width="768" height="360" alt="" />
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560384608-mlen8cyw9t-stripe-create-payment.png?fm=auto&auto=compress%2Cformat" width="284" height="300" alt="" />
+  </Step>
+</Steps>
+
+### When this comes in handy
+
+Here are some real situations where saving payment details helps your tour business:
+
+- A traveler cancels at the last minute and your cancellation policy allows a fee. You can charge the fee without asking for their card again.
+- A traveler adds an extra service during the trip, like gear rental or a room upgrade. You can bill them for it afterward.
+- You want to save a traveler's card on file when they inquire about a trip, then charge them later once they confirm. This is useful for onboarding new customers.
+
+## Link by Stripe: faster checkout for returning travelers
+
+Link is a feature from Stripe that remembers a traveler's payment details across websites. If a traveler has used Link before on any site that supports it, they can pay on your site with one click. They won't need to type in their card number or address again.
+
+This is handy for repeat customers. Say someone books a day tour with you in the spring and comes back to book a multi-day trek in the fall. With Link, their checkout is much faster the second time around. When paying is quicker, more travelers follow through and complete their booking instead of abandoning it halfway.
+
+To turn Link on or off, go to your [Stripe Dashboard](https://dashboard.stripe.com), click **Settings**, then **Payment Methods**, then **Stripe Payment**, and look for **Link By Stripe**. Toggle it on.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560433228-uz7imozcjap-stripe-link-by-stripe.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="392" alt="" />
+
+You don't need to do anything in WordPress for this. WP Travel Engine picks it up automatically once it's turned on in Stripe.
+
+## Apple Pay and Google Pay
+
+Apple Pay and Google Pay let travelers pay using the card saved in their phone's digital wallet, without typing in card details. This is especially useful for travelers booking on their phone, which is how many people browse and book trips these days.
+
+- **Apple Pay** works on Safari, on both iPhone and Mac.
+- **Google Pay** works on Chrome, on both Android phones and desktop computers.
+
+### How to turn them on
+
+You'll need to turn these on in both Stripe and WP Travel Engine. It takes about a minute in each place.
+
+<Steps>
+  <Step title="Turn them on in Stripe" title-type="p">
+    Log in to your [Stripe Dashboard](https://dashboard.stripe.com). Go to **Settings > Payment Methods** and turn on both **Apple Pay** and **Google Pay**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560462160-sfax8umjswo-stripe-apple-pay.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="428" alt="" />
+  </Step>
+
+  <Step title="Turn them on in WP Travel Engine" title-type="p">
+    In your WordPress dashboard, go to **WP Travel Engine > Settings > Payment > Stripe Payment**. Find the **Apple Pay/Google Pay** toggle and turn it on. Click **Save Changes**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560549405-ctz05bmxab5-stripe-apple-google.png?fm=auto&auto=compress%2Cformat" width="1023" height="442" alt="" />
+  </Step>
+</Steps>
+
+Once both are turned on, your checkout form will automatically show Apple Pay or Google Pay to travelers whose device and browser support it. You don't need to do anything else.
+
+<Callout kind="info" collapsed="false">
+  **Good to know: why Apple Pay or Google Pay might not appear on your checkout page**
+
+  If you don't see Apple Pay or Google Pay when testing your checkout, it usually means the device or browser doesn't meet the requirements. Here's what needs to be in place:
+
+  - The traveler's phone wallet must have at least one valid card added.
+  - Apple Pay requires Safari and a device that supports Face ID or Touch ID. Google Pay requires Chrome.
+  - The browser must be allowed to check for saved payment methods:
+    - **Chrome:** Settings > Autofill and passwords > Payment methods > turn on "Allow sites to check if you have payment methods saved."
+    - **Safari:** Settings > Advanced > turn on "Allow websites to check for Apple Pay and Apple Card."
+  - The traveler must be in a supported region. Stripe doesn't show Apple Pay or Google Pay for IP addresses in India or for Stripe accounts based in India.
+  - Private browsing modes (Chrome Incognito or Safari Private Browsing) can prevent these from showing up.
+  - For Apple Pay, you need to register your website domain in your Stripe Dashboard under **Settings > Payment**.
+
+  This list is mostly for your own testing. Your travelers' devices will handle these requirements automatically. If a traveler's device supports Apple Pay or Google Pay, they'll see it. If not, they'll still be able to pay with a regular card.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560681040-iz4xxk8q10i-stripe-browser.jpg?fm=auto&auto=compress%2Cformat" width="768" height="384" alt="" />
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560697387-5thj6e0l6a-stripe-device.jpg?fm=auto&auto=compress%2Cformat" width="768" height="344" alt="" />
+
+## Enabling other payment methods in Stripe
+
+Stripe supports more than just cards. You can also offer buy-now-pay-later options like Klarna or Afterpay, depending on what's available in your country. These extra options are turned on in your Stripe Dashboard, and WP Travel Engine will automatically show them on your checkout form if they're compatible with your setup. No extra work needed on your WordPress site.
+
+<Steps>
+  <Step title="Open Payment Methods in Stripe" title-type="p">
+    Log in to your [Stripe Dashboard](https://dashboard.stripe.com) and go to **Settings > Payment Methods**.
+  </Step>
+
+  <Step title="Browse the available options" title-type="p">
+    You'll see a list of payment methods, including card payments (Visa, MasterCard, AMEX), Apple Pay, Google Pay, Link by Stripe, and buy-now-pay-later options like Klarna or Afterpay.
+  </Step>
+
+  <Step title="Turn on the ones you want" title-type="p">
+    Click the toggle next to each payment method you want to accept. That's it. WP Travel Engine will detect them automatically.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787560721708-r4lqwvyv8mf-stripe-additional.jpg?fm=auto&auto=compress%2Cformat" width="1024" height="534" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  The currency you set in WP Travel Engine affects which payment methods show up at checkout. Go to **WP Travel Engine > Settings > General > Currency** to set your preferred currency. Only payment methods that work with that currency will appear. For example, if you choose EUR, travelers will see card payments, Apple Pay, Google Pay, and Klarna, since all of these support euros.
+</Callout>
+
+## Troubleshooting
+
+### Stripe isn't showing up at checkout
+
+First, check that Stripe is turned on in **WP Travel Engine > Settings > Payment > General**. Then check your currency setting in **WP Travel Engine > Settings > General > Currency**. Stripe only shows up if it supports the currency you've selected. If you recently changed your currency, try saving your settings again.
+
+### My API keys aren't working
+
+Double-check that you copied both keys correctly from your Stripe Dashboard. Make sure you didn't accidentally copy extra spaces at the beginning or end. Also confirm you're using live keys (starting with `pk_live_` and `sk_live_`) if you're accepting real payments, not test keys.
+
+### Booking status isn't updating after a payment
+
+This usually means your webhook isn't set up correctly. Go back to the webhook setup steps above and make sure you copied the webhook URL from WordPress into Stripe. Check that you selected the **Payment Intent** events. Also verify that you copied the signing secret back into your WordPress settings.
+
+### Payment was approved but the customer wasn't charged
+
+You probably have preapproved payments turned on. This means Stripe holds the card but doesn't charge it automatically. You need to go to your Stripe Dashboard and capture the payment manually. Look for the payment under **Payments** in Stripe and click **Capture**.
+
+### Apple Pay or Google Pay aren't appearing
+
+Check the requirements listed in the "Good to know" note in the Apple Pay and Google Pay section above. Most commonly, this happens because you're testing on a device that doesn't support these features, or you're using a private browsing window. Try opening your checkout page in a regular Safari or Chrome window on a device that has Apple Pay or Google Pay set up.
+
+## Frequently asked questions
+
+### Do I need a Stripe account to use this addon?
+
+Yes. You need a verified Stripe account to accept payments through this addon. You can sign up for one at [stripe.com](https://stripe.com).
+
+### Can I test Stripe before going live?
+
+Yes. Stripe gives you test API keys that let you run through the checkout process without charging a real card. Use the test keys (starting with `pk_test_` and `sk_test_`) while you're setting things up. Switch to live keys when you're ready to accept real payments.
+
+### Where do I find my API keys?
+
+Log in to your [Stripe Dashboard](https://dashboard.stripe.com) and go to **Developers > API Keys**. You'll see both your Publishable Key and Secret Key on that page.
+
+### What does Link by Stripe do?
+
+Link saves a traveler's payment details so they can check out faster next time. If a traveler has used Link on any website before, they can pay on your site with one click. No card number needed.
+
+### What is preapproved payment?
+
+Preapproved payment holds a traveler's card without charging it right away. You review the booking first, then charge the card from your Stripe Dashboard when you're ready. It's useful when you want to confirm availability or approve a booking before taking payment.
+
+### Can I use Stripe alongside other payment methods?
+
+Yes. You can turn on Stripe along with PayPal, bank transfer, or any other payment gateway WP Travel Engine supports. Your travelers will see all enabled options at checkout and can choose whichever they prefer.
+
+### Will my travelers' card details be stored on my website?
+
+No. Stripe handles all card details on their own secure servers. Your website never sees or stores the actual card numbers. This is one of the main reasons tour operators choose Stripe for online payments.
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

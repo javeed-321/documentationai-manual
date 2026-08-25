@@ -1,0 +1,256 @@
+---
+title: Social Login
+description: >-
+  Let customers sign in faster with Google, Facebook, or LinkedIn, then add
+  those login options to your WP Travel Engine site in a few simple steps.
+type: guide
+---
+Social Login gives your customers a quicker way to sign in. Instead of filling out a registration form, they can use their Google, Facebook, or LinkedIn account and get straight to booking.
+
+WP Travel Engine supports **Facebook**, **Google**, and **LinkedIn**. Setting it up takes two parts. First, you create an app with the social provider to get your login credentials. Then, you paste those credentials into your WP Travel Engine settings. It sounds like a lot at first, but once you go step by step, it is very manageable.
+
+<Callout kind="info" collapsed="false">
+  You only need to set up the providers you want to offer. If you only want Google login, you can skip the Facebook and LinkedIn sections.
+</Callout>
+
+## Set up Google Login
+
+Google login is a good place to start if you want a familiar sign-in option for most customers. You will create a Google project, add your site details, and then copy the credentials into WP Travel Engine.
+
+<Steps>
+  <Step title="Open the Google API Console" title-type="p">
+    Go to the [Google API Console](https://console.developers.google.com/apis/) and sign in with your Google account.
+  </Step>
+
+  <Step title="Create or choose a project" title-type="p">
+    If you do not have a project yet, click **Create Project** on the right side of the screen.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563041177-qa70de2kdv8-social-login-create.png?fm=auto&auto=compress%2Cformat" width="1024" height="213" alt="" />
+
+    If you already have a project, click the project name in the top bar, then click **New Project** in the window that opens.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563119566-2zqd08lfxj6-social-login-new-project.png?fm=auto&auto=compress%2Cformat" width="1024" height="541" alt="" />
+  </Step>
+
+  <Step title="Give the project a name" title-type="p">
+    Enter a name for the project and click **Create**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563195669-jrwvwzf6t0p-social-login-project-name.png?fm=auto&auto=compress%2Cformat" width="567" height="452" alt="" />
+
+    When the project is ready, make sure it is selected in the top bar.
+  </Step>
+
+  <Step title="Open the OAuth consent screen" title-type="p">
+    In the left-hand menu, click **OAuth consent screen**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563292118-u3lhcavni0a-social-login-OAuth.png?fm=auto&auto=compress%2Cformat" width="899" height="549" alt="" />
+  </Step>
+
+  <Step title="Pick the user type" title-type="p">
+    Choose the **User Type** that fits your setup, then click **Create**. If you want anyone with a Google account to sign in, choose **External**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563339658-sfwbw2c9he-social-login-consent.png?fm=auto&auto=compress%2Cformat" width="822" height="519" alt="" />
+  </Step>
+
+  <Step title="Fill in the consent screen details" title-type="p">
+    - **App name**: the name people will see on the consent screen
+    - **User support email**: an email address users can contact
+    - **Authorised domains**: click **Add Domain** and enter your site domain, such as `yoursite.com`
+    - **Developer contact information**: an email Google can use to contact you about the project
+
+    Click **Save and continue** when you are done.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563498425-cpvz0024l1u-social-login-app-domain.png?fm=auto&auto=compress%2Cformat" width="857" height="903" alt="" />
+  </Step>
+
+  <Step title="Create your OAuth credentials" title-type="p">
+    Click **Credentials** on the left, then click **Create Credentials** at the top and choose **OAuth client ID**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563526369-8l18belqo44-social-loging-client-ID.png?fm=auto&auto=compress%2Cformat" width="988" height="530" alt="" />
+  </Step>
+
+  <Step title="Set up your OAuth client" title-type="p">
+    Choose **Web application** as the application type and enter a name for the OAuth client ID.
+
+    Under **Authorised redirect URIs**, click **Add URI** and enter:
+
+    ```typescript
+    https://yoursite.com/wp-login.php?wte_login=google
+    ```
+
+    Replace `yoursite.com` with your own site URL, then click **Create**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563577394-mb524jgx5w8-social-login-create--OAuth.png?fm=auto&auto=compress%2Cformat" width="819" height="884" alt="" />
+  </Step>
+
+  <Step title="Copy the Client ID and Client Secret" title-type="p">
+    A window will show your credentials. If you do not see it, open **Credentials** from the left-hand menu, click your app name, and copy the **Client ID** and **Client Secret** there. You will use both when you [add your credentials to WP Travel Engine](#add-your-credentials-to-wp-travel-engine).
+
+    <Callout kind="alert" collapsed="false">
+      Google apps start in **Testing** mode. That means only a limited number of people can use them. If you want anyone with a Google account to log in, go to **OAuth consent screen**, click **Publish App** under **Publishing status**, and confirm the change.
+    </Callout>
+  </Step>
+</Steps>
+
+## Set up Facebook Login
+
+Facebook login takes a few extra details, but the flow is still straightforward. You will create a Facebook app, connect it to your site, and then copy the app credentials into WP Travel Engine.
+
+<Steps>
+  <Step title="Sign up as a Facebook developer" title-type="p">
+    While logged in to Facebook, go to the [Facebook developer registration page](https://developers.facebook.com/async/registration) and finish the [registration steps](https://developers.facebook.com/docs/development/register/). If you already have a developer account, head straight to the [Facebook Apps dashboard](https://developers.facebook.com/apps/).
+  </Step>
+
+  <Step title="Create your app" title-type="p">
+    In the Apps panel, click **Create App**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563608058-yn5admv18x-Social-login-facebook.png?fm=auto&auto=compress%2Cformat" width="1024" height="404" alt="" />
+
+    In the popup, choose the **Consumer** app type and click **Next**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563649048-uhmunz3btx-social-login-consumer.png?fm=auto&auto=compress%2Cformat" width="1024" height="765" alt="" />
+  </Step>
+
+  <Step title="Add the app details" title-type="p">
+    Enter an **App Display Name**, which is what people will see on the consent screen, and an **App contact email**. You can also add a **Business Manager Account** if you want to.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563700237-ygrji1cf2pd-social-login-basic.png?fm=auto&auto=compress%2Cformat" width="1024" height="474" alt="" />
+
+    Click **Create app** and complete the security check.
+  </Step>
+
+  <Step title="Set up Facebook Login" title-type="p">
+    Find **Facebook Login** in the products list and click **Set Up**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563737754-uuf3mrhwkt-social-login-facebook-setup.png?fm=auto&auto=compress%2Cformat" width="1024" height="492" alt="" />
+
+    Choose the **Web** platform, enter your site URL in the **Site URL** field, and click **Save**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563767139-axwnmyfqe4g-social-login-web.png?fm=auto&auto=compress%2Cformat" width="1024" height="643" alt="" />
+  </Step>
+
+  <Step title="Add the OAuth redirect URL" title-type="p">
+    Under **Products > Facebook Login > Settings**, add this URL to **Valid OAuth Redirect URIs**:
+
+    ```typescript
+    https://yoursite.com/wp-login.php?wte_login=facebook
+    ```
+
+    Replace `yoursite.com` with your own site URL, then click **Save Changes**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563802913-cdffvzeztx-social-login-settings.png?fm=auto&auto=compress%2Cformat" width="1024" height="522" alt="" />
+  </Step>
+
+  <Step title="Add your app domain" title-type="p">
+    Go to **Settings > Basic** and enter your site domain in the **App Domains** field, such as `yoursite.com`.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787563854996-56u0a817v2-social-login-facebook-basic.png?fm=auto&auto=compress%2Cformat" width="1024" height="426" alt="" />
+  </Step>
+
+  <Step title="Add privacy and data deletion details" title-type="p">
+    Fill in the **Privacy Policy URL** field with a public page that explains what data you collect and how you use it.
+
+    Under **User data deletion**, choose **Data deletion instructions URL** and add the link to a page that explains how users can delete their account on your site.
+  </Step>
+
+  <Step title="Choose a category and make the app live" title-type="p">
+    Choose a **Category** and upload an **App Icon**, then click **Save Changes**.
+
+    New apps start as private, so only you can log in with them at first. Switch **App Mode** from **Development** to **Live** in the top bar.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564001549-lrrfkamqufk-social-login-app-mode.png?fm=auto&auto=compress%2Cformat" width="1024" height="241" alt="" />
+  </Step>
+
+  <Step title="Ask for advanced access to permissions" title-type="p">
+    By default, your app only has Standard access, which is not enough for Facebook Login. Go to **App Review > Permissions and Features**, find **public\_profile** and **email**, and click **Get advanced access** next to each one.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564034626-hfo01gfjksn-social-login-permission.png?fm=auto&auto=compress%2Cformat" width="1024" height="348" alt="" />
+
+    <Callout kind="alert" collapsed="false">
+      If Facebook will not let you switch from Development to Live mode, check your Privacy Policy URL and Data Deletion URL first. Both pages need to be real, public, and accessible.
+    </Callout>
+  </Step>
+
+  <Step title="Copy the App ID and App Secret" title-type="p">
+    Go to **Settings > Basic**. You will see your **App ID** at the top of the page. Click **Show** to reveal the **App Secret**. You will use both when you [add your credentials to WP Travel Engine](#add-your-credentials-to-wp-travel-engine).
+  </Step>
+</Steps>
+
+## Set up LinkedIn Login
+
+LinkedIn login is useful if your audience prefers signing in with their professional account. The setup is shorter than the others, and you will only need a few app details before you can connect it to your site.
+
+<Steps>
+  <Step title="Create a LinkedIn app" title-type="p">
+    Go to the [LinkedIn Developers portal](https://developer.linkedin.com/) and click **Create app**. Sign in with your LinkedIn account if needed.
+  </Step>
+
+  <Step title="Fill in the app details" title-type="p">
+    - **App name**: enter a name for your app
+    - **LinkedIn Page**: add your LinkedIn Company Page URL, or create a new one
+    - **Privacy policy URL**: add the link to your site's privacy policy page
+    - **App logo**: upload a logo for your app
+
+    Read the terms of service, tick the confirmation box, and click **Create app**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564167647-png7dayvzwm-social-login-linkdin.png?fm=auto&auto=compress%2Cformat" width="1024" height="896" alt="" />
+  </Step>
+
+  <Step title="Add an authorized redirect URL" title-type="p">
+    Open the **Auth** tab and add this URL under **Authorized redirect URLs**:
+
+    ```typescript
+    https://yoursite.com/wp-login.php?wte_login=linkedin
+    ```
+
+    Replace `yoursite.com` with your own site URL and click **Update**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564202493-k628do4oosr-social-login-linkdin-2.png?fm=auto&auto=compress%2Cformat" width="1024" height="800" alt="" />
+  </Step>
+
+  <Step title="Turn on Sign In with LinkedIn" title-type="p">
+    Open the **Products** tab and click **Select** on **Sign In with LinkedIn**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564228113-2w15l2ptr5q-social-login-linkdin-3.png?fm=auto&auto=compress%2Cformat" width="1024" height="533" alt="" />
+  </Step>
+
+  <Step title="Verify your company page" title-type="p">
+    In the **Settings** tab, verify the company LinkedIn account you selected. You can skip this if you created the company page in the earlier step.
+  </Step>
+
+  <Step title="Wait for the OAuth scopes to show up" title-type="p">
+    Go back to the **Auth** tab and wait a few seconds for `r_liteprofile` and `r_emailaddress` to appear under **OAuth 2.0 scopes**.
+  </Step>
+
+  <Step title="Copy the Client ID and Client Secret" title-type="p">
+    When the app is ready, you will find the **Client ID** and **Client Secret key** under **Application credentials**. You will use both when you [add your credentials to WP Travel Engine](#add-your-credentials-to-wp-travel-engine).
+  </Step>
+</Steps>
+
+## Add your credentials to WP Travel Engine
+
+Now that you have the credentials from your social provider, you are ready to add them to your site. In your WordPress admin area, go to **WP Travel Engine > Settings > Dashboard > Social Login**.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564255593-gv52r5yb9mc-social-login-configuration.png?fm=auto&auto=compress%2Cformat" width="1024" height="490" alt="" />
+
+| Setting              | Description                                                                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Display Social Login | Turn this on first to show social login on your WP Travel Engine login page. If this stays off, your provider buttons will not appear. |
+| Facebook             | Turn this on if you want to offer Facebook login, then paste in the **Client ID** and **Client Secret** from your Facebook app.        |
+| Google               | Turn this on if you want to offer Google login, then paste in the **Client ID** and **Client Secret** from your Google project.        |
+| LinkedIn             | Turn this on if you want to offer LinkedIn login, then paste in the **Client ID** and **Client Secret** from your LinkedIn app.        |
+
+<Callout kind="tip" collapsed="false">
+  You can turn on one provider or all three. Your customers will see a button for each provider you enable.
+</Callout>
+
+## See it on your site
+
+You made it through the setup. Once you save your credentials and enable at least one provider, the social login buttons will show up on your WP Travel Engine login page.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787564293901-m6wxqdnp21-social-login-frontend.png?fm=auto&auto=compress%2Cformat" width="1024" height="794" alt="" />
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

@@ -1,0 +1,316 @@
+---
+title: Currency Converter
+description: >-
+  Let travelers view trip prices in their own currency so they can understand
+  costs faster, feel more confident, and book with fewer questions.
+type: guide
+---
+## Show trip prices in more than one currency
+
+Show your trip prices in the currency your travelers know best. That small change can make a big difference. When someone from another country looks at one of your treks, day tours, or multi-day packages, they can understand the cost right away.
+
+Instead of showing only your base currency, you can let visitors switch to other currencies like EUR, GBP, AUD, or INR. The add-on uses real-time exchange rates, so the displayed amount stays current.
+
+If you sell to travelers from different countries, this helps them feel more comfortable while they browse. It also cuts down on the back-and-forth that happens when someone is trying to work out the price on their own.
+
+<Video uid="b085313a-25a1-4675-ad1f-d7cc1ca311ee" src="https://www.youtube.com/embed/PRdopWptZZs" render-type="iframe" width="642" height="361" controls="true" allow-full-screen="true" style="width: 642px; height: auto; cursor: pointer;" />
+
+<Callout kind="info" collapsed="false">
+  Your customer will still pay in your site's base currency at checkout. The currency switcher is only for display. It helps people see the price in a familiar currency before they pay.
+</Callout>
+
+## Key features
+
+These are the main things the add-on helps you do on your trip pages.
+
+- **Show prices in familiar currencies:** A traveler from the UK can view your Everest trek in GBP. A traveler from Australia can look at the same trip in AUD.
+- **Update rates automatically:** Exchange rates can refresh on their own, so you do not need to keep changing them by hand.
+- **Keep the switcher visible:** You can turn on a sticky currency switcher so visitors can change currency while they scroll through a trip page.
+- **Control what visitors see:** Add the currencies you want, choose a title, and decide where the switcher appears.
+- **Build trust with international travelers:** People are more likely to continue booking when they understand the price right away.
+
+Once you know what the add-on does, you are ready to set it up.
+
+## What you'll need before you start
+
+Get these ready first. That will make the setup much smoother.
+
+- **WP Travel Engine Pro installed and activated.** A plugin is a small tool you add to WordPress to give your website more features. WP Travel Engine is the plugin that runs your trip booking system.
+- **The Currency Converter add-on installed and activated.** An add-on is an extra tool that connects to WP Travel Engine to add one specific feature.
+- **An API key from a currency exchange service.** An API key is like a password that lets your website talk to another service. In this case, it lets your site fetch live exchange rates.
+
+Once these are in place, you can move into the setup with confidence.
+
+## Setting up the Currency Converter
+
+You will do all of this from your WordPress dashboard. That is the main admin area you see after you log in.
+
+The settings live on the left sidebar of your dashboard. Go to **WP Travel Engine**. Then click **Settings**. Open **Extension**. Then choose **Currency Converter**.
+
+<Steps>
+  <Step title="Open the Currency Converter settings" title-type="p">
+    This takes you straight to the settings you need.
+
+    On the left sidebar of your WordPress dashboard, click **WP Travel Engine**. Then click **Settings**. Open **Extension**. Then click **Currency Converter**.
+  </Step>
+
+  <Step title="Turn on the main currency converter setting" title-type="p">
+    This is the setting that makes the add-on start working on your site.
+
+    Find **Apply Currency Converter** and turn it on.
+  </Step>
+
+  <Step title="Save your changes before testing" title-type="p">
+    This makes sure your new settings show up on your site.
+
+    After you change the settings, click **Save**. Then open one of your trip pages to check how the switcher looks.
+  </Step>
+</Steps>
+
+You are now in the right place. Next, you can go through each setting one by one.
+
+### Enable Currency Converter
+
+These settings control whether the converter appears and where your visitors can find it. If you want a traveler to switch from USD to EUR while checking a Nepal trek or a family day tour, this is where that starts.
+
+The front end is the part of your site visitors see - the pages they browse.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786692839210-sms48sudlea-Enable-Currency-Converter.Enable Currency Converter?fm=auto&auto=compress%2Cformat" width="1536" height="589" alt="" />
+
+- **Apply Currency Converter:** Turns the whole currency converter on or off across your site.
+- **Apply Sticky Currency Switcher:** Keeps the currency switcher visible while someone scrolls. This helps on long trip pages with lots of itinerary details, photos, and inclusions.
+- **Show Currency Converter Before Booking Calendar:** Places the switcher above the trip booking calendar so people can change currency before they look at dates and pricing.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786692883548-na44r5jt3qs-Currency-Converter-Toggles.Currency Converter Toggles?fm=auto&auto=compress%2Cformat" width="1536" height="539" alt="" />
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786692908572-hk6l6iae58h-Currency-Converter-Toggles-in-Frontend.Currency Converter Toggles in Frontend?fm=auto&auto=compress%2Cformat" width="768" height="369" alt="" />
+
+If you want the switcher to stand out more, the sticky option is often a good choice. Once that is set, you can give the switcher a title your travelers will understand.
+
+### Currency Converter Title
+
+This title tells visitors what the switcher is for. A clear title helps people notice it without wondering what the dropdown does.
+
+For example, if someone lands on your Kilimanjaro package page, a title like **Check Prices in Your Local Currency** makes the purpose clear right away.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786692942483-zschd2hmw0k-Currency-Converter-Title.Currency Converter Title?fm=auto&auto=compress%2Cformat" width="1024" height="216" alt="" />
+
+Add a custom title such as **Currency Converter** or **Check Prices in Your Local Currency**. If you sell to international travelers, plain wording usually works best.
+
+Once the title is in place, the next thing the add-on needs is access to live exchange rates.
+
+### API Key
+
+The API key lets your website pull in real-time exchange rates. Without it, the add-on cannot update prices from a currency service.
+
+You can use either of these services:
+
+- [**Free API Key**](https://currencyfreaks.com/) - good for basic use with limited requests.
+- [**Premium API Key**](https://www.currencyconverterapi.com/pricing) - a better fit for larger sites with more visitors.
+
+If you get regular traffic from several countries, a premium plan may be worth it. That can matter if you run seasonal campaigns, group tours, or popular fixed departures that get lots of price checks every day.
+
+After you add the key, choose the license type that matches it. That helps the add-on use the right service settings.
+
+### License Type
+
+This tells the add-on whether you are using a free or premium currency service plan. It helps the plugin use the right setup for your account.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786692989975-vmofauxrllg-License-Type.License Type?fm=auto&auto=compress%2Cformat" width="1024" height="231" alt="" />
+
+Select **Free** or **Premium** based on the key you entered. Premium supports advanced features such as faster updates and additional currencies.
+
+Once that matches your account, you can decide how prices should update and how visitors should see them.
+
+### Currencies
+
+This section controls how your site chooses a currency and how often rates change. These settings matter most if you want prices to feel local without extra manual work from you.
+
+- **Geo Locate:** Detects a visitor's location and shows prices in that person's local currency.
+- **Auto Update Rate:** Keeps exchange rates updated automatically from the API service.
+
+If someone in Germany visits your site, Geo Locate can show your Annapurna trek price in EUR. If someone in India visits, the same trip can show in INR.
+
+<Callout kind="tip" collapsed="false">
+  Example: On Monday, 1 USD equals 0.92 EUR. A USD 1,000 trip shows as 920 EUR. On Friday, 1 USD equals 0.95 EUR. If **Auto Update Rate** is on, that same trip now shows as 950 EUR without you changing anything. If **Auto Update Rate** is off, the trip will still show 920 EUR until you update the rate yourself.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786693015213-o17ts7ab7b-Currencies-.Currencies ?fm=auto&auto=compress%2Cformat" width="1024" height="207" alt="" />
+
+#### Detection Mode
+
+Detection Mode decides how the add-on picks the right currency for a visitor. This is especially important if you use caching on your site.
+
+A cache is a saved copy of a page that helps it load faster.
+
+If this setting sounds technical, do not worry. You usually only need to change it if your site uses a tool that speeds up pages by showing saved versions to visitors.
+
+<Tabs>
+  <Tab title="Standard">
+    Use this when a visitor lands on your site for the first time and you want the plugin to detect that visitor's location and apply the matching currency.
+
+    This works well for many sites that are not using aggressive full-page caching.
+  </Tab>
+
+  <Tab title="Cache Compatible">
+    Use this if your site uses a full-page caching tool such as NitroPack, WP Rocket, or Cloudflare.
+
+    In a normal cached setup, different visitors may all see the same saved version of the page. That can cause the wrong currency to appear.
+
+    Cache Compatible mode fixes that by using a cookie to vary the cached content for each visitor's currency. A cookie is a small piece of saved browser data that helps the site remember a setting. The page will reload once automatically so the correct currency can appear.
+  </Tab>
+</Tabs>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786693073158-ftdl1o1bvv-Standard-Detection-Mode.Standard Detection Mode?fm=auto&auto=compress%2Cformat" width="1024" height="420" alt="" />
+
+This setting helps make sure each visitor sees the right currency. After that, you can decide how tidy or exact you want the numbers to look.
+
+#### Decimal settings
+
+These settings control how converted prices look on the page. This is useful if you want cleaner numbers for marketing pages or more precise numbers for detailed pricing.
+
+- **Decimal Digits:** Choose how many numbers appear after the decimal point. For example, 2 shows a converted price like 120.50.
+- **Decimal Rounding:** Turn this on if you want cleaner whole-number prices. For example, 120.50 becomes 121.
+
+If you sell premium private trips, rounded numbers can look cleaner. If you sell lower-priced day tours or gear rental add-ons, showing decimals may feel more accurate.
+
+<Callout kind="info" collapsed="false">
+  These settings do not apply to Geolocated Currency, Base Currency, or zero-decimal currencies.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786693137368-eri62298nov-Decimal-Settings.Decimal Settings?fm=auto&auto=compress%2Cformat" width="1024" height="265" alt="" />
+
+Once these settings look right, you can choose which currencies people can switch to.
+
+### Add Currency
+
+This is where you decide which currencies appear on the front end of your site. You do not need to add every currency in the world. Start with the ones your customers use most.
+
+For example, if most of your bookings come from the UK, Australia, and Germany, you might start with GBP, AUD, and EUR.
+
+<Steps>
+  <Step title="Click Add Currency" title-type="p">
+    This opens the list where you choose what currencies your visitors can use.
+
+    Click **Add Currency** to add a currency to the front end of your site.
+  </Step>
+
+  <Step title="Choose a currency code" title-type="p">
+    This decides which currencies your travelers will see in the switcher.
+
+    Pick any currency code from the dropdown list. For example, you might add EUR and GBP for European travelers, or AUD for travelers booking adventure holidays from Australia.
+  </Step>
+
+  <Step title="Review the exchange rate" title-type="p">
+    This helps you confirm that each added currency is pulling in a rate against your base currency.
+
+    Each added currency shows its exchange rate relative to your base currency. Examples include Bahraini Dinar 0.377, Afghan Afghani 71.255, Australian Dollar 1.67983, and Croatian Kuna 7.02062.
+  </Step>
+</Steps>
+
+You can also choose how much control you want over the rates.
+
+- **Manually edit exchange rates** if you want to use your own fixed custom rates.
+- **Update all rates with one click** using your API key.
+
+Manual rates can be useful if you want stable display pricing during a short seasonal campaign. That can help if you are promoting a fixed-price spring trek or a limited-time group discount.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786693166602-0vblxz41a7v-Add-Currency.Add Currency?fm=auto&auto=compress%2Cformat" width="1024" height="457" alt="" />
+
+At this point, the converter is ready. The last thing worth knowing is how to get the best results from it.
+
+## Good to know
+
+These tips can help you keep the setup clear and useful for your travelers.
+
+- **Use Geo Locate when most of your customers come from different countries:** This helps people see a familiar currency as soon as they land on your site.
+- **Keep Auto Update Rate turned on if you want current prices:** This is helpful when exchange rates move often.
+- **Add only the currencies you actually need:** Too many options can make the switcher feel cluttered.
+- **Match currencies to your market:** If most of your bookings come from Asia and Europe, focus on the currencies travelers in those regions use most.
+
+A small, clear setup is usually better than a long list of rarely used currencies. If something does not look right, the fixes below are the best place to start.
+
+## Troubleshooting
+
+### The currency switcher isn't showing up on my trip page
+
+Start with the basics. Make sure the add-on is installed and turned on under **Extensions**, then **Currency Converter**.
+
+Next, check that **Apply Currency Converter** is turned on. Click **Save** after any change. Then reload one of your trip pages and check again.
+
+### My exchange rates are not updating
+
+First, make sure **Auto Update Rate** is turned on. Then check that your API key is still valid and active.
+
+Free keys often have daily limits. If you have reached that limit, new rates may stop coming in until your quota resets.
+
+### The wrong currency is showing to visitors
+
+If **Geo Locate** is turned on, the add-on may be choosing a currency based on the visitor's location. Turn it off if you want all visitors to choose their own currency instead.
+
+If your site uses caching, also check **Detection Mode**. Try **Cache Compatible** if you use tools such as NitroPack, WP Rocket, or Cloudflare.
+
+### The prices look wrong after I switch currency
+
+Check the exchange rate shown in the **Add Currency** list. If the rate looks old, update all rates with your API key or turn on **Auto Update Rate**.
+
+If you entered a manual rate earlier, that custom number may be the reason. Review the rate you saved and adjust it if needed.
+
+### The switcher is not showing where I expected on the page
+
+Turn on **Show Currency Converter Before Booking Calendar** if you want it above the booking area. Turn on **Apply Sticky Currency Switcher** if you want it to stay visible while people scroll.
+
+After that, open a trip page and check both places. Look near the booking section and also look for the sticky switcher on the screen.
+
+### The switcher does not look right on mobile
+
+Try one display option at a time. Some layouts look better above the booking calendar than in a floating position on a smaller screen.
+
+Open a trip page on your phone after each change. That makes it easier to see which option feels clearer for your customers.
+
+### Visitors see the wrong currency until the page reloads
+
+This can happen on sites that use full-page caching. A cache is a saved version of a page that helps it load faster.
+
+Move **Detection Mode** to **Cache Compatible** if you use tools such as NitroPack, WP Rocket, or Cloudflare. That mode allows one automatic reload so the correct currency can appear for each visitor.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Do I need an API key for the converter to work?" default-open="false">
+    Yes. The API key is required to fetch real-time exchange rates. Use a free key for basic usage or a premium key if you need higher limits and faster updates.
+  </Expandable>
+
+  <Expandable title="Can I set my own exchange rates?" default-open="false">
+    Yes. You can enter your own rates for each currency if you want fixed display prices instead of live updates.
+  </Expandable>
+
+  <Expandable title="How often are exchange rates updated?" default-open="false">
+    If **Auto Update Rate** is turned on, the rates update automatically based on how often your API provider refreshes them.
+  </Expandable>
+
+  <Expandable title="Can I show only specific currencies?" default-open="false">
+    Yes. You can add only the currencies you want in the **Add Currency** section. That works well if you mainly sell to a few regions.
+  </Expandable>
+
+  <Expandable title="Will the customer pay in their selected currency?" default-open="false">
+    No. Payments are always processed in your site's base currency. The converter is only there to help customers understand the price before checkout.
+  </Expandable>
+
+  <Expandable title="Should I use live rates or manual rates?" default-open="false">
+    Use live rates if you want prices to reflect the current market. Use manual rates if you want stable display pricing for a short campaign, a seasonal offer, or a fixed package promotion.
+  </Expandable>
+
+  <Expandable title="Do I need to add every currency?" default-open="false">
+    No. Most tour operators get better results by adding only the currencies their customers use most. A shorter list is easier for visitors to scan.
+  </Expandable>
+
+  <Expandable title="Can I use this with group discounts or gear rental add-ons?" default-open="false">
+    The currency converter helps display trip prices in another currency. If your pricing setup includes extras such as gear rental or different trip options, review the front end carefully so you can confirm the displayed amounts look the way you expect.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

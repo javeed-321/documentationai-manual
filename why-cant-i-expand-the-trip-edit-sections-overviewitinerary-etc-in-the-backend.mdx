@@ -1,0 +1,59 @@
+---
+title: >-
+  Why Can't I Expand the Trip Edit Sections (Overview, Itinerary, etc.) in the
+  Backend?
+description: >-
+  Fix Trip Edit sections like Overview and Itinerary that won't expand in the
+  WordPress dashboard — usually caused by using the Classic Editor instead of
+  the Block Editor.
+type: reference
+---
+## Overview
+
+If you're unable to expand sections like Itinerary, Overview, and others while editing a trip in the WordPress dashboard, it's usually because of the editor you're using.
+
+## Cause
+
+- You're using the **Classic Editor** to add or edit trips.
+- From **WP Travel Engine v6.1.0**, the Trip Editor has been rebuilt using a React-based interface that relies on the WordPress REST API.
+- The Classic Editor doesn't fully support this setup, which prevents the Trip Edit sections from opening.
+
+<Callout kind="info">
+  WordPress itself now uses the Block Editor (Gutenberg) as the default editor, and ongoing WP Travel Engine development is optimized for it. The Classic Editor will not be supported moving forward.
+</Callout>
+
+## Solution
+
+To resolve this, switch to the Block Editor.
+
+<Steps title-type="h3">
+  <Step title="Deactivate the Classic Editor plugin">
+    If you don't need it elsewhere, go to **Plugins > Installed Plugins**, locate **Classic Editor**, and click **Deactivate**.
+  </Step>
+
+  <Step title="Or switch only for trips (optional)">
+    If you want to keep the Classic Editor for posts and pages but use the Block Editor for trips only, follow this guide: [How to switch between Classic Editor and Gutenberg](https://gutenberghub.com/how-to-switch-between-wordpress-classic-editor-and-gutenberg/).
+  </Step>
+
+  <Step title="Edit trips with the Block Editor">
+    Once the Classic Editor is disabled for trips, you'll be able to expand and use all sections (Itinerary, Overview, etc.) without issue.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  The WP Travel Engine Trip Editor now requires the Block Editor. Switching from the Classic Editor to Gutenberg for trips resolves this issue.
+</Callout>
+
+Contact our [support team](https://wptravelengine.com/support-ticket/) for any other assistance.
+
+## Related articles
+
+<Columns cols="2">
+  <Card title="How to add Trip Itinerary?" href="/article/trip-itinerary" icon="map">
+    Learn how to build out the Itinerary section for a trip.
+  </Card>
+
+  <Card title="How to add General Info?" href="/article/general-information" icon="file-text">
+    Add general trip information using the Trip Editor.
+  </Card>
+</Columns>

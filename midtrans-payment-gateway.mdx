@@ -1,0 +1,82 @@
+---
+title: Midtrans Payment Gateway
+description: >-
+  Install and configure the Midtrans Payment Gateway addon to accept trip
+  payments in Indonesian Rupiah through WP Travel Engine.
+type: guide
+---
+## Overview
+
+[Midtrans Payment Gateway](https://wptravelengine.com/plugins/midtrans-payment-gateway/) is an extension for WP Travel Engine that lets tour operators accept trip and tour payments through [Midtrans](https://midtrans.com/), one of Indonesia's popular merchant services.
+
+<Callout kind="info">
+  Midtrans Payment Gateway requires [WP Travel Engine](https://wordpress.org/plugins/wp-travel-engine/) v3.0.6 or later.
+</Callout>
+
+## Requirements
+
+You must have an active merchant account with Midtrans to use this payment gateway. You'll need:
+
+- A Merchant ID
+- A Client Key
+- A Server Key
+
+Only payments in Indonesian Rupiah (IDR) can be accepted.
+
+## Installation
+
+<Steps title-type="h3">
+  <Step title="Download the extension">
+    Download the extension from your dashboard.
+  </Step>
+
+  <Step title="Upload the plugin folder">
+    Upload the folder to your `/wp-content/plugins/` directory.
+  </Step>
+
+  <Step title="Activate the plugin">
+    Activate **WP Travel Engine – Midtrans Payment Gateway** from the Plugins menu within WordPress.
+  </Step>
+</Steps>
+
+## Configure the redirection URLs
+
+The redirection URL is used to redirect your customer after the payment process through Midtrans is complete.
+
+<Callout kind="info">
+  Go to the [Midtrans MAP portal](https://docs.midtrans.com/en/welcome/preparation.html#step4) to configure and save your redirection URLs on the Settings dashboard.
+</Callout>
+
+## Configure the gateway
+
+<Steps title-type="h3">
+  <Step title="Open Payment settings">
+    Go to **WP Travel Engine > Settings > Payments**.
+  </Step>
+
+  <Step title="Select Midtrans">
+    You'll see Midtrans as an option to enable the Midtrans Payment Gateway for trip bookings. Click **Midtrans** to configure its settings.
+  </Step>
+
+  <Step title="Enter your merchant credentials">
+    Enter your Merchant ID, Client Key, and Server Key. You can find these credentials on the Midtrans MAP Dashboard under **Settings > Access Keys**.
+  </Step>
+
+  <Step title="Set the currency to IDR">
+    Go to **WP Travel Engine > Settings > Miscellaneous > Currency** and choose Indonesian Rupiah as the Currency Code.
+  </Step>
+</Steps>
+
+<ParamField name="Merchant ID" param-type="string" required="true">
+  Your Midtrans Merchant ID.
+</ParamField>
+
+<ParamField name="Client Key" param-type="string" required="true">
+  Your Midtrans Client Key.
+</ParamField>
+
+<ParamField name="Server Key" param-type="string" required="true">
+  Your Midtrans Server Key.
+</ParamField>
+
+Once configured, your customers can pay through Midtrans using any of its available payment methods.

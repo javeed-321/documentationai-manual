@@ -1,0 +1,286 @@
+---
+title: WhatsApp Notification Addon
+description: >-
+  Get instant WhatsApp alerts when travelers book your trips or send enquiries,
+  so you never miss a lead even when you're away from your computer.
+type: guide
+---
+## Get booking and enquiry alerts on WhatsApp
+
+The WhatsApp Notification Addon sends new booking and enquiry details straight to your WhatsApp number. This means you can see new leads and sales even when you are away from your computer.
+
+This add-on is a plugin. A plugin is a small extension that adds extra features to WordPress. WordPress is the system running your website. You manage it from your WordPress dashboard. This is the main admin area you open after logging in.
+
+You do not need WP Travel Engine Pro to use this add-on. It works with the free version too. That makes it useful if you want quick alerts without upgrading your whole setup.
+
+The add-on uses credits to send messages. Think of credits like message tokens. Each booking alert uses 1 credit. Each enquiry alert also uses 1 credit. If someone books your Annapurna Base Camp trek, that alert uses 1 credit. If another traveler sends an enquiry about your Everest helicopter tour, that uses 1 more credit.
+
+Now you know how credits work. You are ready to set everything up.
+
+## What you'll need before you start
+
+Make sure you have these ready before you begin:
+
+- WP Travel Engine (latest version) installed and activated.
+- WhatsApp Plugin for WP Travel Engine purchased and installed.
+- WordPress (latest version) running on your site.
+- An active WhatsApp number to receive alerts.
+- A valid license key for the WhatsApp plugin.
+
+Having these ready will make setup smoother. Next, you can see what this add-on helps you do day to day.
+
+## Benefits of the WhatsApp Notification Addon
+
+- Instant alerts - You get a WhatsApp message as soon as someone books a trip or sends an enquiry.
+- Miss no leads - You can keep track of new customers while guiding a tour, meeting a supplier, or traveling between destinations.
+- Customizable templates - You can change the message text to include the details that matter to you. These might be the trip name, traveler name, or paid amount.
+- See why messages fail - You can check error logs inside WordPress if a message does not go through.
+
+These benefits matter most if you need quick updates without sitting in front of your site all day. Next, you will activate your license key.
+
+## Activating the license key
+
+A license key is the code you receive after purchase. It connects your copy of the plugin to your account. This lets it work properly and receive updates.
+
+<Callout kind="info" collapsed="false">
+  What you'll need before you start: your purchased license key and access to your WordPress dashboard on the left sidebar of your site admin area.
+</Callout>
+
+<Steps>
+  <Step title="Open the WhatsApp license settings" title-type="p">
+    This step takes you to the page where you connect the plugin to your purchase.
+
+    In your WordPress dashboard, go to **WP Travel Engine** on the left sidebar. Then open **Settings**. Next, click **WhatsApp** and then **License**.
+  </Step>
+
+  <Step title="Paste in your license key" title-type="p">
+    This step tells the plugin that you have an active purchase.
+
+    Find the license key you received after buying the plugin. Enter it into the license field on the screen.
+  </Step>
+
+  <Step title="Save your settings and activate the key" title-type="p">
+    This step turns on the license so the plugin can work as expected.
+
+    Click **Save Settings**. If the key is valid, the plugin will activate the license.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787124080591-wjw0diwz72f-whatsapp-notification-license.whatsapp-notification-license?fm=auto&auto=compress%2Cformat" width="1024" height="546" alt="" />
+
+    After that, you can move on to the main setup.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  The license must be active to receive updates and use all features.
+</Callout>
+
+## Configuring the WhatsApp plugin
+
+The license is now active. Now you can choose which alerts you want to receive and where they should go. You will do this from the plugin settings inside WordPress.
+
+Go to **WP Travel Engine** on the left sidebar. Then open **Settings**, click **WhatsApp**, and open **General**.
+
+### General settings
+
+<Callout kind="info" collapsed="false">
+  What you'll need before you start: the WhatsApp number where you want to receive alerts and a rough idea of which events matter most to your business.
+</Callout>
+
+<Steps>
+  <Step title="Turn on WhatsApp alerts" title-type="p">
+    This setting switches the whole feature on.
+
+    Find **Receive WhatsApp Alerts** and enable it. If this setting is off, no WhatsApp messages will be sent at all.
+
+    If a message fails later, you can check the log in **Tools** on the left sidebar and then **WhatsApp Notification Log**. That page shows why a message was not sent.
+  </Step>
+
+  <Step title="Enter the WhatsApp number that should receive alerts" title-type="p">
+    This tells the plugin where to send your notifications.
+
+    Add the WhatsApp number you use for business updates. Use the number carefully. Double-check it before saving.
+
+    For example, if you want your office manager to receive all booking alerts for your Kathmandu day tours, enter that WhatsApp number here.
+  </Step>
+
+  <Step title="Choose whether to receive booking alerts" title-type="p">
+    This setting controls messages for new bookings.
+
+    Enable **Receive Booking Alert** if you want a message every time someone completes a booking. This is helpful if you need to react quickly to new sales, confirm availability, or arrange pickups.
+
+    Say you run a multi-day trek with limited departure dates. A booking alert helps you see the new reservation right away. Then you can follow up fast.
+  </Step>
+
+  <Step title="Edit the booking message if you want different details" title-type="p">
+    This helps you shape the message around how you run your tours.
+
+    The booking message template can include details like the booked trip name, customer name, number of travelers, paid amount, and due amount. You will use tags from the table below to add those details.
+
+    For example, if you offer group tours with seasonal pricing, you may want your message to include the trip name, start date, and paid amount. This helps you understand the booking at a glance.
+  </Step>
+
+  <Step title="Choose whether to receive enquiry alerts" title-type="p">
+    This setting controls messages from people who ask questions before they book.
+
+    Enable **Receive Enquiry Alert** if you want WhatsApp messages for new enquiries. This is useful if your customers often ask about gear rental, family pricing, or private departures before making a decision.
+
+    If you turn this on, you can also edit the enquiry message template.
+  </Step>
+
+  <Step title="Save your settings" title-type="p">
+    This makes your changes live.
+
+    Click **Save Settings** after you finish. Your chosen WhatsApp number and alert settings will now be active.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787124123190-s917exnvtwm-whatsapp-notification-number.whatsapp-notification-number?fm=auto&auto=compress%2Cformat" width="1024" height="517" alt="" />
+
+    After that, you can customize your messages with tags.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  You can turn booking alerts on and enquiry alerts off. You can also do the other way around. Pick the mix that fits how you handle leads in your business.
+</Callout>
+
+## List of message tags
+
+Message tags help you pull trip and customer details into each alert automatically. A tag is also called a shortcode. A shortcode is a small placeholder that gets replaced with real information when the message is sent.
+
+For example, if your booking alert includes `{customer_full_name}` and `{booked_trip_name}`, the final WhatsApp message might show "Maya Gurung booked Upper Mustang Jeep Tour." This saves you from opening WordPress every time a new booking comes in.
+
+You can use the following tags when you customize your Booking Alert Message or Enquiry Message. These tags are automatically replaced with the actual booking details when the message is sent.
+
+| Tag                         | Description                                                       |
+| --------------------------- | ----------------------------------------------------------------- |
+| `{booking_id}`              | The unique booking ID number assigned to the booking.             |
+| `{customer_full_name}`      | The full name of the customer who made the booking.               |
+| `{booked_trip_name}`        | The full name of the trip that has been booked.                   |
+| `{customer_email}`          | The email address of the customer.                                |
+| `{trip_name}`               | The name of the trip that is being enquired about.                |
+| `{trip_start_date}`         | The start date of the trip.                                       |
+| `{no_of_travelers}`         | Total number of travelers for the booked trip.                    |
+| `{paid_amount}`             | Total amount paid for the booked trip.                            |
+| `{due_amount}`              | The balance amount still left to pay.                             |
+| `{login_url}`               | The URL that provides the full details of the particular booking. |
+| `{customer_phone}`          | The phone number the customer entered at booking.                 |
+| `{booked_trip_id}`          | The internal ID of the trip. Useful for admin reference.          |
+| `{trip_url}`                | The link to the trip page related to the enquiry or booking.      |
+| `{customer_country}`        | The country from which the user made the enquiry.                 |
+| `{customer_contact_number}` | The contact details of the user who submitted the enquiry.        |
+| `{no_of_children}`          | The number of children included in the trip enquiry.              |
+| `{no_of_adults}`            | The number of adults included in the trip enquiry.                |
+| `{enquiry_subject}`         | The subject line of the message.                                  |
+| `{enquiry_message}`         | The enquiry message.                                              |
+
+Now your messages can include the right details. The next step is to test that everything works.
+
+## Testing the setup
+
+A quick test helps you catch problems before a real customer books. It also gives you confidence that the alerts are working as expected.
+
+<Callout kind="info" collapsed="false">
+  What you'll need before you start: access to one of your trip pages on the front end of your website and your WhatsApp phone nearby.
+</Callout>
+
+<Steps>
+  <Step title="Test an enquiry alert" title-type="p">
+    This checks whether enquiry notifications are working.
+
+    Open one of your trip pages on your website and submit the enquiry form. Use a real-looking test enquiry so the message is easy to recognize.
+
+    For example, you could send an enquiry asking whether your Langtang Valley trek includes porter service.
+
+    If the setup is working, your WhatsApp number should receive the enquiry message shortly after you send the form.
+  </Step>
+
+  <Step title="Test a booking alert" title-type="p">
+    This checks whether booking notifications are working.
+
+    Make a test booking on your site. Use one of your actual trips so the alert is easy to confirm when it arrives.
+
+    If the setup is working, the admin WhatsApp number should receive the booking details after the booking is completed.
+  </Step>
+
+  <Step title="Confirm that the message content looks right" title-type="p">
+    This helps you make sure the alert is useful when real customers contact you.
+
+    Read the WhatsApp message you received. Check that the trip name, customer details, and other tags were filled in the way you expected.
+
+    If something looks unclear, go back to the message template and adjust it before you start relying on the alerts every day.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+### I'm not getting any WhatsApp messages
+
+Check whether **Receive WhatsApp Alerts** is turned on in **WP Travel Engine > Settings > WhatsApp > General**. If that main switch is off, no messages will be sent.
+
+Then check the WhatsApp number you entered. Make sure it is the number you actually want to receive alerts on. Once you confirm both, test again.
+
+### My WhatsApp number seems wrong or messages aren't arriving
+
+Check the number format. Enter the number in international format with the country code.
+
+Do not add a plus sign. Do not add spaces. If your business number is in Nepal, for example, enter the country code and number as one continuous number.
+
+### I ran out of credits and stopped getting alerts
+
+Each booking alert uses 1 credit. Each enquiry alert also uses 1 credit.
+
+If your credits are used up, alerts will stop until you buy a credit top-up or renew your subscription. After you add credits, your alerts can continue again.
+
+### I'm getting alerts for bookings but not enquiries
+
+Check whether **Receive Enquiry Alert** is turned on in the WhatsApp general settings. If it is off, booking alerts can still work while enquiry alerts do not.
+
+Turn it on, save your settings, and then submit a test enquiry from one of your trip pages.
+
+### My license key won't activate
+
+Check the license key for typing mistakes first. A single wrong character can stop activation.
+
+If the key still does not work, check whether it has expired. If needed, get the correct key from your purchase account and try again.
+
+### Where can I see why a message wasn't sent?
+
+Open **Tools** from the left sidebar of your WordPress dashboard. Then open **WhatsApp Notification Log**.
+
+That log shows failed notifications and the reason they did not send. It is the best place to check when a test message does not arrive.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Do I need WP Travel Engine Pro to use this plugin?" default-open="false">
+    No, this add-on works with both free and pro versions of WP Travel Engine.
+  </Expandable>
+
+  <Expandable title="How many credits do I get?" default-open="false">
+    Credits depend on the plan you purchase. Each booking or enquiry message consumes 1 credit.
+  </Expandable>
+
+  <Expandable title="What happens if I run out of credits?" default-open="false">
+    You won't receive WhatsApp alerts until you purchase a credit top-up.
+  </Expandable>
+
+  <Expandable title="Can multiple admin numbers receive alerts?" default-open="false">
+    Currently, the plugin supports one WhatsApp number for receiving notifications.
+  </Expandable>
+
+  <Expandable title="Does each notification cost me a credit?" default-open="false">
+    Yes. Each booking message uses 1 credit. Each enquiry message also uses 1 credit.
+  </Expandable>
+
+  <Expandable title="Can I turn off booking alerts but keep enquiry alerts?" default-open="false">
+    Yes. You can enable or disable **Receive Booking Alert** and **Receive Enquiry Alert** separately in the WhatsApp general settings.
+  </Expandable>
+
+  <Expandable title="How do I know if a message failed to send?" default-open="false">
+    Check **Tools > WhatsApp Notification Log** in your WordPress dashboard. That log shows failed notifications and helps you see what went wrong.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+
