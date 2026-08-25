@@ -2,19 +2,13 @@
 title: "Requests"
 ---
 
----
-
-## updatedAt: 2025-11-12T09:45:36.000Z
-
-# Requests
-
 <Callout kind="info">
   All requests to the Pipedrive API must be made over SSL (https, not http).
 </Callout>
 
 Pipedrive APIs use JSON in the requests bodies. To ensure a proper JSON-formatted request, provide `Content-Type: application/json` in your HTTP request headers. Our API supports UTF-8 for character encoding.
 
-For API v1, the `POST` method also supports a form-encoded body, but you might run into issues with data types. [API v2](https://pipedrive.readme.io/docs/pipedrive-api-v2), however, only accepts JSON bodies for all requests. Our API uses the HTTP verbs for each action:
+For API v1, the `POST` method also supports a form-encoded body, but you might run into issues with data types. [API v2](/docs/pipedrive-api-v2), however, only accepts JSON bodies for all requests. Our API uses the HTTP verbs for each action:
 
 | Method   | Description                                 |
 | :------- | :------------------------------------------ |
@@ -47,7 +41,7 @@ We advise everyone to use `{COMPANYDOMAIN}.pipedrive.com` for faster requests as
 When asking for a collection/list of objects, you can pass in a field selector to indicate which fields you would like to fetch per each object. Most v1 endpoints in our [API reference](https://developers.pipedrive.com/docs/api/v1/) support this, but not all.
 
 <Callout kind="alert">
-  Support for field selectors has been removed from [API v2](https://pipedrive.readme.io/docs/pipedrive-api-v2).
+  Support for field selectors has been removed from [API v2](/docs/pipedrive-api-v2).
 </Callout>
 
 The field selector is supported in requests done with OAuth and requests done with the `api_token`. For example, you may only want to fetch a deal's ID, title, value, and currency when asking the deals list – this can be done by using the following syntax:

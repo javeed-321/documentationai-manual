@@ -2,12 +2,6 @@
 title: "create-pipedrive-app CLI"
 ---
 
----
-
-## updatedAt: 2026-06-09T15:17:58.000Z
-
-# create-pipedrive-app CLI
-
 # Scaffold a Pipedrive app with create-pipedrive-app
 
 Every app that talks to Pipedrive starts with the same setup before you write any business logic. You need an OAuth 2.0 flow, a database, an ORM, environment configuration, a TypeScript project, and a Pipedrive API client that hands you the right token for each company. It's the same boilerplate every time.
@@ -113,7 +107,7 @@ Then add your credentials to `.env`:
 
 Your service is now running.
 
-If you chose app extensions, expose the Vite dev server through an HTTPS tunnel — for example [ngrok](https://ngrok.com/) or [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) — and paste that URL into your app in the [Developer Hub](https://pipedrive.readme.io/docs/developer-hub). The generated frontend already handles SDK initialization, resizing, theme switching, and extension-specific actions.
+If you chose app extensions, expose the Vite dev server through an HTTPS tunnel — for example [ngrok](https://ngrok.com/) or [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) — and paste that URL into your app in the [Developer Hub](/docs/developer-hub). The generated frontend already handles SDK initialization, resizing, theme switching, and extension-specific actions.
 
 <Callout kind="alert">
   App extensions must be served over HTTPS. During development, always point the Developer Hub at your tunnel URL, not at `localhost`.

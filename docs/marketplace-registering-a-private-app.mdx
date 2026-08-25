@@ -2,13 +2,7 @@
 title: "Registering a private app"
 ---
 
----
-
-## updatedAt: 2025-11-12T10:18:35.000Z
-
-# Registering a private app
-
-Private apps, aka internal apps, enable you to share your integration with any user/company in Pipedrive via a direct, unlisted installation link. To do so, you must fill out the parts of the app registration form that cover app creation and [make your private app live](https://pipedrive.readme.io/docs/marketplace-registering-a-private-app#how-to-share-your-private-app).
+Private apps, aka internal apps, enable you to share your integration with any user/company in Pipedrive via a direct, unlisted installation link. To do so, you must fill out the parts of the app registration form that cover app creation and [make your private app live](/docs/marketplace-registering-a-private-app#how-to-share-your-private-app).
 
 <hr />
 
@@ -50,7 +44,7 @@ Read on to find out how and what to fill in each tab.
 
 ### Basic info
 
-<Image src="https://files.readme.io/0417bd8-Developer_Hub_-_Private_app_-_Basic_info.png" alt="Developer Hub > private apps - basic info" caption=" " />
+<Image src="https://files.readme.io/0417bd8-Developer_Hub_-_Private_app_-_Basic_info.png" alt="Developer Hub &gt; private apps - basic info" caption=" " />
 
 This tab has two required fields – App name and OAuth Callback URL. Once you’ve filled this in, click the green “Save” button to save the form. You’ll then be brought to the second tab, “OAuth & access scopes”, where you’ll get your `client_id` and `client_secret` and the option to make your app live via the “Change to live” button.
 
@@ -61,13 +55,13 @@ This tab has two required fields – App name and OAuth Callback URL. Once you�
 
 ### OAuth & Access scopes
 
-<Image src="https://files.readme.io/a08a6fd-Developer_Hub_-_Private_app_-_OAuth__access_scopes.png" alt="Developer Hub > private apps - OAuth & access scopes" caption=" " />
+<Image src="https://files.readme.io/a08a6fd-Developer_Hub_-_Private_app_-_OAuth__access_scopes.png" alt="Developer Hub &gt; private apps - OAuth & access scopes" caption=" " />
 
-| Field                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| :----------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Access scopes (required) | • Using [scopes](https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations), you can specify precisely what data access your application needs. Your selection will depend significantly on the endpoints you use in your app. You can also select the respective scope in this section if you are building a [manifest-based app extension](https://pipedrive.readme.io/docs/app-extensions#manifest-based-app-extensions). • _Example:_ • :white\_check\_mark: _Read users data_ • :white\_check\_mark: _See recent account activity_                                   |
-| Installation URL         | • This is where you can add an optional URL to which users will be redirected when using your direct [installation link](https://pipedrive.readme.io/docs/marketplace-registering-a-private-app#get-your-installation-link). • Use it when you need to start [app authorization](https://pipedrive.readme.io/docs/marketplace-oauth-authorization#step-1-requesting-authorization) outside of Pipedrive, redirect users to a custom landing page, or implement the [state parameter](https://pipedrive.readme.io/docs/marketplace-oauth-authorization-state-parameter)  for additional security. |
-| Client ID                | This is where you will get your app’s unique `client_id` and `client_secret` for [OAuth authorization](https://pipedrive.readme.io/docs/marketplace-oauth-authorization).                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Field                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| :----------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Access scopes (required) | • Using [scopes](/docs/marketplace-scopes-and-permissions-explanations), you can specify precisely what data access your application needs. Your selection will depend significantly on the endpoints you use in your app. You can also select the respective scope in this section if you are building a [manifest-based app extension](/docs/app-extensions#manifest-based-app-extensions). • _Example:_ • :white\_check\_mark: _Read users data_ • :white\_check\_mark: _See recent account activity_        |
+| Installation URL         | • This is where you can add an optional URL to which users will be redirected when using your direct [installation link](/docs/marketplace-registering-a-private-app#get-your-installation-link). • Use it when you need to start [app authorization](/docs/marketplace-oauth-authorization#step-1-requesting-authorization) outside of Pipedrive, redirect users to a custom landing page, or implement the [state parameter](/docs/marketplace-oauth-authorization-state-parameter)  for additional security. |
+| Client ID                | This is where you will get your app’s unique `client_id` and `client_secret` for [OAuth authorization](/docs/marketplace-oauth-authorization).                                                                                                                                                                                                                                                                                                                                                                  |
 
 <Callout kind="success">
   Once you’ve completed filling up the Basic info and OAuth & access scopes, we advise you to **start installing your app and testing it** to see how it works. You can do so by clicking on the green “Install & test” button in the bottom left of the tab.
@@ -75,9 +69,9 @@ This tab has two required fields – App name and OAuth Callback URL. Once you�
 
 ### App extensions
 
-<Image src="https://files.readme.io/d82718a-Developer_Hub_-_Private_app_-_App_extensions.png" alt="Developer Hub - private apps > app extensions" caption=" " />
+<Image src="https://files.readme.io/d82718a-Developer_Hub_-_Private_app_-_App_extensions.png" alt="Developer Hub - private apps &gt; app extensions" caption=" " />
 
-App extensions let you extend Pipedrive’s user interface with your app’s functionality and content to let users do more in one place. Find out more about them [here](https://pipedrive.readme.io/docs/app-extensions).
+App extensions let you extend Pipedrive’s user interface with your app’s functionality and content to let users do more in one place. Find out more about them [here](/docs/app-extensions).
 
 Within Developer Hub, the App extensions tab is where you can add new app extensions and manage the ones you’ve added before. A modal with an app extension creation form will open when you click the button to add the respective app extension.
 
@@ -85,32 +79,32 @@ You can also make your app live via this tab's “Change to live” button.
 
 #### Link actions
 
-Learn more [here](https://pipedrive.readme.io/docs/app-extensions-actions).
+Learn more [here](/docs/app-extensions-actions).
 
-| Field                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Action name (required)        | • Insert your app action’s name that will be displayed in the Pipedrive UI. The name should be short, descriptive of the app action, and be in a sentence case format. • _Example: Send quote - Car Services_                                                                                                                                                                                                                          |
-| Action description            | • To showcase the interactive features of your app, your action’s name and description will appear in the Features section of your Marketplace app listing. • Use the description field to let users know what they can do with this action. • Optional; max 150 characters.                                                                                                                                                           |
-| URL link (required)           | • Add the URL that will redirect the user to the correct app page when an action is clicked. The URL must handle both scenarios of the user being logged into your app and not being logged in. • _Example: [https://www.carservicesapp.com/handle\_action](https://www.carservicesapp.com/handle_action)_                                                                                                                             |
-| [JWT](https://jwt.io/) secret | If left empty, `client_secret` will be used by default.                                                                                                                                                                                                                                                                                                                                                                                |
-| Locations (one required)      | • Specify in which views the app action will be displayed. There can be a maximum of [3 app actions per app](https://pipedrive.readme.io/docs/app-extensions-actions#visibility-in-the-ui) or [custom modals](https://pipedrive.readme.io/docs/custom-ui-extensions-modals) in one view, altogether 21 (7 different views x 3 actions per view). • Example\_: :white\_check\_mark: Activities list :white\_check\_mark: Person details |
+| Field                         | Description                                                                                                                                                                                                                                                                                                                                                                      |
+| :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Action name (required)        | • Insert your app action’s name that will be displayed in the Pipedrive UI. The name should be short, descriptive of the app action, and be in a sentence case format. • _Example: Send quote - Car Services_                                                                                                                                                                    |
+| Action description            | • To showcase the interactive features of your app, your action’s name and description will appear in the Features section of your Marketplace app listing. • Use the description field to let users know what they can do with this action. • Optional; max 150 characters.                                                                                                     |
+| URL link (required)           | • Add the URL that will redirect the user to the correct app page when an action is clicked. The URL must handle both scenarios of the user being logged into your app and not being logged in. • _Example: [https://www.carservicesapp.com/handle\_action](https://www.carservicesapp.com/handle_action)_                                                                       |
+| [JWT](https://jwt.io/) secret | If left empty, `client_secret` will be used by default.                                                                                                                                                                                                                                                                                                                          |
+| Locations (one required)      | • Specify in which views the app action will be displayed. There can be a maximum of [3 app actions per app](/docs/app-extensions-actions#visibility-in-the-ui) or [custom modals](/docs/custom-ui-extensions-modals) in one view, altogether 21 (7 different views x 3 actions per view). • Example\_: :white\_check\_mark: Activities list :white\_check\_mark: Person details |
 
 #### JSON modals
 
-Learn more [here](https://pipedrive.readme.io/docs/app-extensions-json-modals).
+Learn more [here](/docs/app-extensions-json-modals).
 
-| Field                         | Description                                                                                                                                                                                                                                                                                    |
-| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Action name (required)        | • The name of the JSON modal. The name should be short (max 30 characters), actionable, and sentence-cased (only capitalize the first word). • _Example: + Prod. details - Car Services_                                                                                                       |
-| Action description            | • To showcase the interactive features of your app, your action’s name and description will appear in the Features section of your Marketplace app listing. • Use the description field to let users know what they can do with this action. • Optional; max 150 characters.                   |
-| API endpoint (required)       | • All API requests related to this action will be sent to this URL. • _Example: [https://www.carservicesapp.com/handle\_action](https://www.carservicesapp.com/handle_action)_                                                                                                                 |
-| [JWT](https://jwt.io/) secret | If left empty, `client_secret` will be used by default.                                                                                                                                                                                                                                        |
-| JSON schema (required)        | The [JSON schema](https://pipedrive.readme.io/docs/app-extensions-json-modals#schema) for your JSON modal.                                                                                                                                                                                     |
-| Locations (one required)      | • There can be a maximum of 3 app actions or custom modals per location. Each app can have a total of 21 app actions. See more about available locations in [app actions' visibility](https://pipedrive.readme.io/docs/app-extensions-actions#visibility-in-the-ui). • _Example: Deal details_ |
+| Field                         | Description                                                                                                                                                                                                                                                                  |
+| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Action name (required)        | • The name of the JSON modal. The name should be short (max 30 characters), actionable, and sentence-cased (only capitalize the first word). • _Example: + Prod. details - Car Services_                                                                                     |
+| Action description            | • To showcase the interactive features of your app, your action’s name and description will appear in the Features section of your Marketplace app listing. • Use the description field to let users know what they can do with this action. • Optional; max 150 characters. |
+| API endpoint (required)       | • All API requests related to this action will be sent to this URL. • _Example: [https://www.carservicesapp.com/handle\_action](https://www.carservicesapp.com/handle_action)_                                                                                               |
+| [JWT](https://jwt.io/) secret | If left empty, `client_secret` will be used by default.                                                                                                                                                                                                                      |
+| JSON schema (required)        | The [JSON schema](/docs/app-extensions-json-modals#schema) for your JSON modal.                                                                                                                                                                                              |
+| Locations (one required)      | • There can be a maximum of 3 app actions or custom modals per location. Each app can have a total of 21 app actions. See more about available locations in [app actions' visibility](/docs/app-extensions-actions#visibility-in-the-ui). • _Example: Deal details_          |
 
 #### JSON panels
 
-Learn more [here](https://pipedrive.readme.io/docs/app-extensions-json-panels).
+Learn more [here](/docs/app-extensions-json-panels).
 
 | Field                                                           | Description                                                                                                                                                                                                                                                                  |
 | :-------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -119,12 +113,12 @@ Learn more [here](https://pipedrive.readme.io/docs/app-extensions-json-panels).
 | API Endpoint (required)                                         | • The URL of the endpoint which we'll use to fetch the data of the object properties • _Example: [www.api.pipedrive.com/deal-view/visits](http://www.api.pipedrive.com/deal-view/visits)_                                                                                    |
 | HTTP Auth username (required) and HTTP Auth password (required) | Our service will send the HTTP request with these credentials as the Basic Authentication header to protect your data. To protect your data, we strongly recommend using authenticated HTTPS requests. Note that we do not support self-signed certificates.                 |
 | [JWT](https://jwt.io) secret                                    | JWT is required **if** HTTP Auth is not provided.                                                                                                                                                                                                                            |
-| JSON data structure (required)                                  | A JSON file that describes the structure of your JSON panel as seen in the Pipedrive UI. See [here](https://pipedrive.readme.io/docs/json-panels-adding-a-panel#json-data-structure) for more information.                                                                   |
+| JSON data structure (required)                                  | A JSON file that describes the structure of your JSON panel as seen in the Pipedrive UI. See [here](/docs/json-panels-adding-a-panel#json-data-structure) for more information.                                                                                              |
 | Panel locations (one required)                                  | • Choose where the panel will be displayed: • – Deal details • – Person details • – Organization details • Each app can have one JSON or custom panel in each location.                                                                                                      |
 
 #### Custom modals
 
-Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-modals).
+Learn more [here](/docs/custom-ui-extensions-modals).
 
 | Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | :--------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -136,7 +130,7 @@ Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-modals).
 
 #### Custom panels
 
-Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-panels).
+Learn more [here](/docs/custom-ui-extensions-panels).
 
 | Field                          | Description                                                                                                                                                                                                                                                                 |
 | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -148,7 +142,7 @@ Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-panels).
 
 #### Custom floating window
 
-Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-floating-window).
+Learn more [here](/docs/custom-ui-extensions-floating-window).
 
 | Field                                  | Description                                                                                                                                                                                                                  |
 | :------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -160,7 +154,7 @@ Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-floating
 
 #### App settings page
 
-Learn more [here](https://pipedrive.readme.io/docs/custom-ui-extensions-app-settings).
+Learn more [here](/docs/custom-ui-extensions-app-settings).
 
 | Field                                         | Description                                                                                             |
 | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
@@ -185,11 +179,11 @@ NB: app testing only works for users in your sandbox account and cannot be share
 
 To install and test your app, click the “Install and test” notification above your app’s name or the “Install & test” option from the three-dot menu.
 
-<Image src="https://files.readme.io/d219bae-Developer_Hub_-_Private_app_-_install_and_test.png" alt="Developer Hub > private app - install & test" caption=" " />
+<Image src="https://files.readme.io/d219bae-Developer_Hub_-_Private_app_-_install_and_test.png" alt="Developer Hub &gt; private app - install & test" caption=" " />
 
 You can also click the green “Install & test” button at the bottom left of the OAuth & access scopes and App extensions tabs.
 
-<Image src="https://files.readme.io/441903e-Developer_Hub_-_Private_app_-_Install__test_-_OAuth__access_scopes.png" alt="Developer Hub > private app - install & test from the OAuth & access scopes tab" caption=" " />
+<Image src="https://files.readme.io/441903e-Developer_Hub_-_Private_app_-_Install__test_-_OAuth__access_scopes.png" alt="Developer Hub &gt; private app - install & test from the OAuth & access scopes tab" caption=" " />
 
 You will then be brought to the OAuth confirmation dialog where you can allow and install your app to begin testing it.
 
@@ -216,13 +210,13 @@ Note that live private apps cannot be reverted to draft status. Any changes you 
 
 _For new private apps_
 
-<Image src="https://files.readme.io/bc39c67-Developer_Hub_-_Private_app_-_OAuth__access_scopes.png" alt="Developer Hub > private app - new app &#x22;change to live&#x22;" caption=" " />
+<Image src="https://files.readme.io/bc39c67-Developer_Hub_-_Private_app_-_OAuth__access_scopes.png" alt='Developer Hub &gt; private app - new app "change to live"' caption=" " />
 
 After you fill in your app name and callback URL in the Basic info tab and click “Save”, you will be brought to the OAuth & access scopes with the “Change to live” button enabled. Once the “Change to live” button is enabled, you can make your private app live anytime by clicking on it in any tab.
 
 _For draft private apps_
 
-<Image src="https://files.readme.io/17ca8c3-Developer_Hub_-_Private_app_-_draft_app_change_to_live.png" alt="Developer Hub > private app - draft app &#x22;change to live&#x22;" caption=" " />
+<Image src="https://files.readme.io/17ca8c3-Developer_Hub_-_Private_app_-_draft_app_change_to_live.png" alt='Developer Hub &gt; private app - draft app "change to live"' caption=" " />
 
 The “Change to live” button will be enabled once you open your draft private app, as you’ve previously filled in and saved your app name and callback URL. You can make your private app live anytime by clicking “Change to live” in any tab of the app registration form.
 
@@ -236,11 +230,11 @@ When you click on the three-dot menu next to your private app’s name, you will
 
 Once your private app is live, you can share it via its installation link. The installation link can be found in the three-dot menu next to your private app’s name in your Developer Hub dashboard.
 
-<Image src="https://files.readme.io/bdd07b8-Developer_Hub_-_Private_app_-_share_private_app.png" alt="Developer Hub > private app - share install link" caption=" " />
+<Image src="https://files.readme.io/bdd07b8-Developer_Hub_-_Private_app_-_share_private_app.png" alt="Developer Hub &gt; private app - share install link" caption=" " />
 
 You can also find the installation link through the “Share app” button at the bottom left of your app’s OAuth & access scopes tab.
 
-<Image src="https://files.readme.io/4dac119-Developer_Hub_-_Private_app_-_Install__test_-_OAuth__access_scopes.png" alt="Developer Hub > private app - share install link from OAuth & access scopes tab" caption=" " />
+<Image src="https://files.readme.io/4dac119-Developer_Hub_-_Private_app_-_Install__test_-_OAuth__access_scopes.png" alt="Developer Hub &gt; private app - share install link from OAuth & access scopes tab" caption=" " />
 
 <hr />
 

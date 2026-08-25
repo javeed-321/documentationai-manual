@@ -2,12 +2,6 @@
 title: "Pipedrive API v2 migration guide"
 ---
 
----
-
-## updatedAt: 2026-04-30T07:24:34.000Z
-
-# Pipedrive API v2 migration guide
-
 # Migration Guide
 
 This document outlines the differences between Pipedrive API v1 and v2 of endpoints which are available on v2. Where available, please use API v2 for the best performance and developer experience.
@@ -118,7 +112,7 @@ This document outlines the differences between Pipedrive API v1 and v2 of endpoi
   - Numeric fields no longer coerce string input to number and instead throw a validation error.
 - Related objects have been removed from API responses to prevent too eager fetching of unnecessary data. Use subsequent API calls to fetch them if you still need them.
 - All timestamps in the v2 API are now in RFC 3339 format (e.g. `2024-01-01T00:00:00Z` or `2024-01-01T00:00:00.000Z`) unless specified otherwise to ensure clarity regarding timezones.
-- Support for [field selectors](https://pipedrive.readme.io/docs/core-api-concepts-requests#field-selector) has been removed.
+- Support for [field selectors](/docs/core-api-concepts-requests#field-selector) has been removed.
 - V1 endpoints, which were using HTTP PUT method have been switched to use HTTP PATCH method in v2 for compliance with REST best practices.
 - Only `/api/v2/...` prefix is supported. Previously both `/api/v1/...` and `/v1/...` could be used.
 
@@ -394,7 +388,7 @@ Optionally `timezone_name` can be provided when setting the custom field value. 
 
 ### Pagination
 
-Offset based pagination (`start` & `limit`) has been replaced with cursor based pagination (`cursor` & `limit`), which makes iterating over large collections significantly faster. See [Pagination](https://pipedrive.readme.io/docs/core-api-concepts-pagination#cursor-pagination) for more information.
+Offset based pagination (`start` & `limit`) has been replaced with cursor based pagination (`cursor` & `limit`), which makes iterating over large collections significantly faster. See [Pagination](/docs/core-api-concepts-pagination#cursor-pagination) for more information.
 
 ### Sorting
 
@@ -702,11 +696,11 @@ The `prices` object no longer includes the following fields: `id`, `product_id`,
 
 ### GET /api/v1/itemSearch to GET /api/v2/itemSearch
 
-Only change is a switch to cursor based pagination (`cursor` and `limit` instead of `start` and `limit`). See [Pagination](https://pipedrive.readme.io/docs/core-api-concepts-pagination#cursor-pagination) for more information.
+Only change is a switch to cursor based pagination (`cursor` and `limit` instead of `start` and `limit`). See [Pagination](/docs/core-api-concepts-pagination#cursor-pagination) for more information.
 
 ### GET /api/v1/itemSearch/field to GET /api/v2/itemSearch/field
 
-- The endpoint now uses cursor based pagination. See [Pagination](https://pipedrive.readme.io/docs/core-api-concepts-pagination#cursor-pagination) for more information.
+- The endpoint now uses cursor based pagination. See [Pagination](/docs/core-api-concepts-pagination#cursor-pagination) for more information.
 - `field_key` parameter has been renamed to `field`.
 - `field_type` parameter has been renamed to `entity_type`.
 - `entity_type` accepted values have been simplified to just `deal`, `lead` , `person`, `organization`, `product`, `project` from previous `dealField`, `leadField` etc.

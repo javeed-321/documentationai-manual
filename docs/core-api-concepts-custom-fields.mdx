@@ -2,13 +2,7 @@
 title: "Custom fields"
 ---
 
----
-
-## updatedAt: 2026-06-15T14:20:32.000Z
-
-# Custom fields
-
-Custom fields allow you to add additional data to your Pipedrive account that isn't included by default. Each **deal**, **organization**, **person**, **product**, and **project** item can contain custom fields. We have [16 different field types](https://pipedrive.readme.io/docs/core-api-concepts-custom-fields#types-of-custom-fields) available, each with its own uses.
+Custom fields allow you to add additional data to your Pipedrive account that isn't included by default. Each **deal**, **organization**, **person**, **product**, and **project** item can contain custom fields. We have [16 different field types](/docs/core-api-concepts-custom-fields#types-of-custom-fields) available, each with its own uses.
 
 <hr />
 
@@ -90,7 +84,7 @@ $result = json_decode($output, true); // Check if an ID came back, if did print 
 if (!empty($result['data']['id'])) { echo 'Deal was added successfully!' . PHP_EOL; }
 ```
 
-Each custom field type corresponds to a specific data format. To determine in which format you need to submit data into a custom field, make a `GET` request for the same kind of object and check the format of the value of that field. You can find the list of `field_type` in [the table](https://pipedrive.readme.io/docs/core-api-concepts-custom-fields#types-of-custom-fields) below.
+Each custom field type corresponds to a specific data format. To determine in which format you need to submit data into a custom field, make a `GET` request for the same kind of object and check the format of the value of that field. You can find the list of `field_type` in [the table](/docs/core-api-concepts-custom-fields#types-of-custom-fields) below.
 
 <hr />
 
@@ -202,23 +196,23 @@ The `edit_flag` parameter in the response body of an entity's fields can be used
 
 <hr />
 
-When a user first sets up Contact Sync, five new custom fields (Instant messenger, Postal address, Notes, Birthday, Job title) are created for the entire company. These fields are similar to the default Pipedrive fields as they have a field API key that follows the syntax of all default Pipedrive API keys (field name, with an underscore replacing each space), unlike [user-generated custom fields](https://pipedrive.readme.io/docs/core-api-concepts-custom-fields#naming-a-custom-field).
+When a user first sets up Contact Sync, five new custom fields (Instant messenger, Postal address, Notes, Birthday, Job title) are created for the entire company. These fields are similar to the default Pipedrive fields as they have a field API key that follows the syntax of all default Pipedrive API keys (field name, with an underscore replacing each space), unlike [user-generated custom fields](/docs/core-api-concepts-custom-fields#naming-a-custom-field).
 
 Here are the five custom fields created by Contact Sync:
 
-| Field name        | Type       | Show in Add new dialog | Show in detail view | Field API key    | Additional info                                                                                                                                                                           |
-| :---------------- | :--------- | :--------------------- | :------------------ | :--------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Instant messenger | Varchar    | _by default:_ No       | _by default:_ No    | `im`             | Although this is a text field, it accepts an array of objects. ([See example below](https://pipedrive.readme.io/docs/core-api-concepts-custom-fields#instant-messenger-field-and-labels)) |
-| Postal address    | Address    | _by default:_ No       | _by default:_ No    | `postal_address` |                                                                                                                                                                                           |
-| Notes             | Large Text | _by default:_ No       | _by default:_ No    | `notes`          |                                                                                                                                                                                           |
-| Birthday          | Date       | _by default:_ No       | _by default:_ No    | `birthday`       |                                                                                                                                                                                           |
-| Job title         | Text       | _by default:_ No       | _by default:_ No    | `job_title`      |                                                                                                                                                                                           |
+| Field name        | Type       | Show in Add new dialog | Show in detail view | Field API key    | Additional info                                                                                                                                                |
+| :---------------- | :--------- | :--------------------- | :------------------ | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Instant messenger | Varchar    | _by default:_ No       | _by default:_ No    | `im`             | Although this is a text field, it accepts an array of objects. ([See example below](/docs/core-api-concepts-custom-fields#instant-messenger-field-and-labels)) |
+| Postal address    | Address    | _by default:_ No       | _by default:_ No    | `postal_address` |                                                                                                                                                                |
+| Notes             | Large Text | _by default:_ No       | _by default:_ No    | `notes`          |                                                                                                                                                                |
+| Birthday          | Date       | _by default:_ No       | _by default:_ No    | `birthday`       |                                                                                                                                                                |
+| Job title         | Text       | _by default:_ No       | _by default:_ No    | `job_title`      |                                                                                                                                                                |
 
 You can also see these fields in the Pipedrive web app by going to _Company settings > Data fields > Person_. It's not possible to add any other fields to Contact Sync.
 
 #### Contact Sync and custom fields duplication
 
-Contact Sync directly affects these five fields, as the data for these fields is updated every time the Contact Sync source is updated. As such, when using these fields, please note that they may be duplicated by users who create custom fields with the same name. This can cause issues where the field names match, but the API keys do not because one has a Pipedrive API key and the other has a [40-character hashed API key](https://pipedrive.readme.io/docs/core-api-concepts-custom-fields#naming-a-custom-field). Therefore, a user may have two fields with different information in them.
+Contact Sync directly affects these five fields, as the data for these fields is updated every time the Contact Sync source is updated. As such, when using these fields, please note that they may be duplicated by users who create custom fields with the same name. This can cause issues where the field names match, but the API keys do not because one has a Pipedrive API key and the other has a [40-character hashed API key](/docs/core-api-concepts-custom-fields#naming-a-custom-field). Therefore, a user may have two fields with different information in them.
 
 #### Instant messenger field and labels
 

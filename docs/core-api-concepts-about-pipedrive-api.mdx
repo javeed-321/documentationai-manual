@@ -2,17 +2,11 @@
 title: "About the Pipedrive API"
 ---
 
----
-
-## updatedAt: 2025-11-12T09:49:43.000Z
-
-# About the Pipedrive API
-
 <Callout kind="info">
   An **application programming interface** (API) is a set of functionalities that a service owner provides so people can use its features and/or build software applications. An API details how a user makes requests and the responses they receive in return.
 </Callout>
 
-Pipedrive is a sales CRM with an intuitive [RESTful API](https://developers.pipedrive.com/docs/api/v1), webhooks, app extensions and API clients to help you build [an app](https://pipedrive.readme.io/docs/marketplace-creating-a-proper-app) for the [Pipedrive Marketplace](https://pipedrive.com/marketplace).
+Pipedrive is a sales CRM with an intuitive [RESTful API](https://developers.pipedrive.com/docs/api/v1), webhooks, app extensions and API clients to help you build [an app](/docs/marketplace-creating-a-proper-app) for the [Pipedrive Marketplace](https://pipedrive.com/marketplace).
 
 <hr />
 
@@ -22,7 +16,7 @@ Pipedrive is a sales CRM with an intuitive [RESTful API](https://developers.pipe
 
 Our Pipedrive **RESTful API Reference** can be accessed via [https://developers.pipedrive.com/docs/api/v1/](https://developers.pipedrive.com/docs/api/v1/), where you will find a list of endpoints and their descriptions.
 
-Calls to our API are validated against an API token or an `access_token` when using [OAuth 2.0](https://pipedrive.readme.io/docs/marketplace-oauth-api). Our API supports UTF-8 for character encoding. Learn how to find and use the `api_token` [here](https://pipedrive.readme.io/docs/tutorials).
+Calls to our API are validated against an API token or an `access_token` when using [OAuth 2.0](/docs/marketplace-oauth-api). Our API supports UTF-8 for character encoding. Learn how to find and use the `api_token` [here](/docs/tutorials).
 
 <Image src="https://files.readme.io/3e08ec2-Pipedrive_full_ERD.jpeg" alt="3687" caption="Pipedrive Entity Relationship Diagram (ERD)" />
 
@@ -30,13 +24,13 @@ Calls to our API are validated against an API token or an `access_token` when us
 
 Webhooks enable you to obtain real-time, programmatic notifications from Pipedrive regarding changes to your data as they happen. Instead of pulling information via our API, webhooks will push information to your endpoint.
 
-You can create webhooks via the web app and our API. You can create a webhook programmatically by making a `POST` request to the webhook’s endpoint. Pipedrive will then send a notification when an event is triggered (e.g., a new lead is added) as an HTTP post with a JSON body to the endpoint(s) you have specified.  Find out more about webhooks [here](https://pipedrive.readme.io/docs/guide-for-webhooks).
+You can create webhooks via the web app and our API. You can create a webhook programmatically by making a `POST` request to the webhook’s endpoint. Pipedrive will then send a notification when an event is triggered (e.g., a new lead is added) as an HTTP post with a JSON body to the endpoint(s) you have specified.  Find out more about webhooks [here](/docs/guide-for-webhooks).
 
 ### App extensions
 
 App extensions enable apps built for the Pipedrive Marketplace to give additional value to their users. With app extensions, the app’s functionality will be available directly inside the Pipedrive platform’s UI and users will be able to interact with and see the custom functionality of your app.
 
-This also helps to increase your app's visibility and brand awareness, as the app icon will be displayed inside Pipedrive after a user has installed it. Find out more about app extensions [here](https://pipedrive.readme.io/docs/app-extensions).
+This also helps to increase your app's visibility and brand awareness, as the app icon will be displayed inside Pipedrive after a user has installed it. Find out more about app extensions [here](/docs/app-extensions).
 
 ### API clients
 
@@ -90,14 +84,14 @@ Key aspects of leads:
 
 - Leads must always have one person (contacts) or organization (contacts) linked with them
 - Leads can only have one source (LeadSource). Leads created through the API have a set source “API”.
-- Leads can only have the same [custom fields](https://pipedrive.readme.io/docs/core-api-concepts-custom-fields) (DealFields) as deals
+- Leads can only have the same [custom fields](/docs/core-api-concepts-custom-fields) (DealFields) as deals
 - Leads can only be converted to deals via the Pipedrive web app\\
 
 ### Deals
 
 <Image src="https://files.readme.io/9892096-Deals_ERD.jpeg" alt="2443" caption="Deals ERD" />
 
-[Deals](https://pipedrive.readme.io/docs/creating-a-deal) are ongoing transactions pursued with a person or an organization. It’s tracked and processed through the Stages of a pipeline until it’s won or lost. Deals can be converted from leads via the Pipedrive web app.
+[Deals](/docs/creating-a-deal) are ongoing transactions pursued with a person or an organization. It’s tracked and processed through the Stages of a pipeline until it’s won or lost. Deals can be converted from leads via the Pipedrive web app.
 
 In Pipedrive, deals contain all actions taken towards closing a sale, for example, activities, emails (mailbox), notes and files, and have their own custom fields (DealFields). Products and subscriptions can also be attached to deals.
 
@@ -107,7 +101,7 @@ A deal can be linked with either a person or organization (contacts) but it must
 
 <Image src="https://files.readme.io/f6130f6-Persons__Organizations_Contacts_ERD.jpeg" alt="2073" caption="Persons & organizations (contacts) ERD" />
 
-Persons (or people) are the specific customers of the sales process, while [organizations](https://pipedrive.readme.io/docs/adding-an-organization) are the companies that the persons work at. Persons and organizations are considered contacts and they rest in one centralized hub in the Pipedrive web app. The ERD above depicts how different core and adjacent entities can either relate to contacts as a whole or persons/organizations specifically.
+Persons (or people) are the specific customers of the sales process, while [organizations](/docs/adding-an-organization) are the companies that the persons work at. Persons and organizations are considered contacts and they rest in one centralized hub in the Pipedrive web app. The ERD above depicts how different core and adjacent entities can either relate to contacts as a whole or persons/organizations specifically.
 
 Both persons and organizations can have activities, notes and files attached to them and their respective main fields and custom fields (PersonFields and OrganizationFields). Emails (Mailbox) and products can only be linked to persons while OrganizationRelationships can only be linked to organizations.
 
@@ -121,12 +115,12 @@ Key aspects of Persons and organizations (contacts):
 
 <Image src="https://files.readme.io/fcf6339-Activities_ERD.jpeg" alt="2043" caption="Activities ERD" />
 
-[Activities](https://pipedrive.readme.io/docs/adding-an-activity) are any actions a user does towards the closing of a sale. There are different types of activities (ActivityTypes) that can be performed, e.g. a phone call (CallLogs), a meeting or a task. You can have custom activity types and custom fields (ActivityFields) for activities. Users can schedule activities in relation to a person, an organization or a lead/deal.
+[Activities](/docs/adding-an-activity) are any actions a user does towards the closing of a sale. There are different types of activities (ActivityTypes) that can be performed, e.g. a phone call (CallLogs), a meeting or a task. You can have custom activity types and custom fields (ActivityFields) for activities. Users can schedule activities in relation to a person, an organization or a lead/deal.
 
 Key aspects of activities:
 
 - Associating an activity with a deal will also associate the activity with the person and/or organization linked to the deal
-- Currently, Files [can only be added](https://pipedrive.readme.io/docs/adding-a-file) to activities via the API
+- Currently, Files [can only be added](/docs/adding-a-file) to activities via the API
 
 #### CallLogs
 
@@ -142,7 +136,7 @@ CallLogs for [calls made via the Pipedrive mobile app](https://support.pipedrive
 
 <Image src="https://files.readme.io/cb9b52c-Products_ERD.jpeg" alt="1401" caption="Products ERD" />
 
-[Products](https://pipedrive.readme.io/docs/adding-a-product) are goods and/or services that your company deals with. Products can have their own custom fields (ProductFields) and be attached to deals. Persons (contacts) can be added as participants and users can be added as followers for a product. Files can also be added to products.
+[Products](/docs/adding-a-product) are goods and/or services that your company deals with. Products can have their own custom fields (ProductFields) and be attached to deals. Persons (contacts) can be added as participants and users can be added as followers for a product. Files can also be added to products.
 
 ### Users
 
@@ -152,4 +146,4 @@ A Company within pipedrive comprises Users who may be grouped into teams. The ER
 
 Goals may be related to a company, a team and/or a user. Users and teams can have their own specific PermissionSets and Roles, which are a part of the visibility groups’ feature. Users can also have their own UserSettings and UserConnections.
 
-2 main types of webhooks can be created: [webhooks related to a company](https://pipedrive.readme.io/docs/guide-for-webhooks) and [webhooks for apps](https://pipedrive.readme.io/docs/webhooks-for-apps). When querying webhooks, a user can obtain the webhooks they’ve created, while apps can only see and delete webhooks that have the type set as `type= 'application'`.
+2 main types of webhooks can be created: [webhooks related to a company](/docs/guide-for-webhooks) and [webhooks for apps](/docs/webhooks-for-apps). When querying webhooks, a user can obtain the webhooks they’ve created, while apps can only see and delete webhooks that have the type set as `type= 'application'`.

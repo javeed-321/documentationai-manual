@@ -2,20 +2,14 @@
 title: "Authentication"
 ---
 
----
-
-## updatedAt: 2026-01-05T14:54:16.000Z
-
-# Authentication
-
 <Callout kind="info">
   All requests to our API need **authentication**.
 </Callout>
 
 ## If you're creating an app
 
-Continue to [OAuth 2.0 overview](https://pipedrive.readme.io/docs/marketplace-oauth-api).\
-You can find our step-by-step guide to getting OAuth 2.0 implemented in your app in [OAuth authorization](https://pipedrive.readme.io/docs/marketplace-oauth-authorization) .
+Continue to [OAuth 2.0 overview](/docs/marketplace-oauth-api).\
+You can find our step-by-step guide to getting OAuth 2.0 implemented in your app in [OAuth authorization](/docs/marketplace-oauth-authorization) .
 
 ## If you're working with an API token integration
 
@@ -27,7 +21,7 @@ curl --request GET \
 --header "x-api-token: 659c9fddb16335e48cc67114694b52074e812e03"
 ```
 
-[How to find the API token?](https://pipedrive.readme.io/docs/how-to-find-the-api-token)
+[How to find the API token?](/docs/how-to-find-the-api-token)
 
 <Callout kind="info">
   Keep in mind that an API token is tied to a specific user and company, giving access to all user's data. You can only have one active API token at any time. If you change the API token, all existing integrations using this API token will not be able to make successful requests against our API and stop working.

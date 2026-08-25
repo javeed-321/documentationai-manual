@@ -1,18 +1,28 @@
 {
-  "name": "pipedrive.readme.io",
+  "name": "Pipedrive Developer Documentation",
   "initialRoute": "docs/getting-started",
+  "logo-light": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
+  "logo-dark": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
+  "logo-small-light": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
+  "logo-small-dark": "https://files.readme.io/8dfae1b-small-ppdev3x.png",
+  "favicon": "https://files.readme.io/bd96346-favicon.ico",
   "colors": {
     "light": {
-      "brand": "#3143e3",
+      "brand": "#017737",
       "heading": "#1a1a1a",
       "text": "#374151"
     },
     "dark": {
-      "brand": "#85a1ff",
+      "brand": "#019545",
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
   },
+  "css": [
+    {
+      "src": "styles/brand.css"
+    }
+  ],
   "navigation": {
     "tabs": [
       {
@@ -138,15 +148,15 @@
                 ]
               },
               {
-                "title": "Client Id And Client Secret",
+                "title": "Client ID and client secret",
                 "path": "docs/client-id-and-client-secret"
               },
               {
-                "title": "Marketplace App Approval Process",
+                "title": "App approval process",
                 "path": "docs/marketplace-app-approval-process"
               },
               {
-                "title": "Marketplace Vendor Agreement",
+                "title": "Pipedrive Developer Partner Agreement",
                 "path": "docs/marketplace-vendor-agreement"
               }
             ]
@@ -155,26 +165,26 @@
             "group": "App extensions",
             "pages": [
               {
-                "title": "App Extensions",
+                "title": "App extensions overview",
                 "path": "docs/app-extensions"
               },
               {
-                "title": "App Extensions Actions",
+                "title": "Link actions",
                 "path": "docs/app-extensions-actions"
               },
               {
                 "group": "JSON modals",
                 "pages": [
                   {
-                    "title": "App Extensions Json Modals",
+                    "title": "JSON modals",
                     "path": "docs/app-extensions-json-modals"
                   },
                   {
-                    "title": "Json Modals Component Library",
+                    "title": "Component library",
                     "path": "docs/json-modals-component-library"
                   },
                   {
-                    "title": "Json Modals User Interaction Handling",
+                    "title": "User interaction handling",
                     "path": "docs/json-modals-user-interaction-handling"
                   }
                 ]
@@ -183,15 +193,15 @@
                 "group": "JSON panels",
                 "pages": [
                   {
-                    "title": "App Extensions Json Panels",
+                    "title": "JSON panels",
                     "path": "docs/app-extensions-json-panels"
                   },
                   {
-                    "title": "Json Panels Adding A Panel",
+                    "title": "Adding a JSON panel",
                     "path": "docs/json-panels-adding-a-panel"
                   },
                   {
-                    "title": "Json Panels Actions In Panels",
+                    "title": "Actions in JSON panels",
                     "path": "docs/json-panels-actions-in-panels"
                   }
                 ]
@@ -200,44 +210,44 @@
                 "group": "Custom UI extensions",
                 "pages": [
                   {
-                    "title": "Custom Ui Extensions",
+                    "title": "Custom UI extensions",
                     "path": "docs/custom-ui-extensions"
                   },
                   {
-                    "title": "Custom Ui Extensions Floating Window",
+                    "title": "Custom floating window",
                     "path": "docs/custom-ui-extensions-floating-window"
                   },
                   {
-                    "title": "Custom Ui Extensions Panels",
+                    "title": "Custom panels",
                     "path": "docs/custom-ui-extensions-panels"
                   },
                   {
-                    "title": "Custom Ui Extensions Modals",
+                    "title": "Custom modals",
                     "path": "docs/custom-ui-extensions-modals"
                   },
                   {
-                    "title": "Custom Ui Extensions App Settings",
+                    "title": "Custom UI for app settings",
                     "path": "docs/custom-ui-extensions-app-settings"
                   }
                 ]
               },
               {
-                "title": "Video Calling App Extension",
+                "title": "Video calling app extension",
                 "path": "docs/video-calling-app-extension"
               },
               {
                 "group": "Messaging app extension",
                 "pages": [
                   {
-                    "title": "Messaging App Extension",
+                    "title": "Messaging app extension",
                     "path": "docs/messaging-app-extension"
                   },
                   {
-                    "title": "Implementing Messaging App Extension",
+                    "title": "Implementing messaging app extension",
                     "path": "docs/implementing-messaging-app-extension"
                   },
                   {
-                    "title": "Error Codes And Troubleshooting For Messaging App Extension",
+                    "title": "Error codes and troubleshooting",
                     "path": "docs/error-codes-and-troubleshooting-for-messaging-app-extension"
                   }
                 ]
@@ -248,7 +258,7 @@
             "group": "App Functionalities",
             "pages": [
               {
-                "title": "App Sharing Adding Apps To Multiple Users",
+                "title": "App sharing: Adding apps to multiple users",
                 "path": "docs/app-sharing-adding-apps-to-multiple-users"
               }
             ]
@@ -257,39 +267,39 @@
             "group": "OAuth 2.0",
             "pages": [
               {
-                "title": "Marketplace Oauth Api",
+                "title": "OAuth 2.0 overview",
                 "path": "docs/marketplace-oauth-api"
               },
               {
-                "title": "Marketplace Oauth Authorization",
+                "title": "OAuth authorization",
                 "path": "docs/marketplace-oauth-authorization"
               },
               {
-                "title": "Marketplace Scopes And Permissions Explanations",
+                "title": "Scopes and permission explanations",
                 "path": "docs/marketplace-scopes-and-permissions-explanations"
               },
               {
-                "title": "Marketplace Oauth Authorization State Parameter",
+                "title": "State parameter",
                 "path": "docs/marketplace-oauth-authorization-state-parameter"
               },
               {
-                "title": "Marketplace Getting User Data",
+                "title": "Getting user data",
                 "path": "docs/marketplace-getting-user-data"
               },
               {
-                "title": "Webhooks For Apps",
+                "title": "Webhooks for apps",
                 "path": "docs/webhooks-for-apps"
               },
               {
-                "title": "App Uninstallation",
+                "title": "Handling user app uninstallation",
                 "path": "docs/app-uninstallation"
               },
               {
-                "title": "Marketplace Oauth And Api Proxy Status Codes",
+                "title": "OAuth status codes",
                 "path": "docs/marketplace-oauth-and-api-proxy-status-codes"
               },
               {
-                "title": "Marketplace Migrating Existing Integration Users",
+                "title": "Migrating existing integration users",
                 "path": "docs/marketplace-migrating-existing-integration-users"
               }
             ]
@@ -301,29 +311,29 @@
                 "group": "Guide for Webhooks v2",
                 "pages": [
                   {
-                    "title": "Guide For Webhooks V2",
+                    "title": "Guide for Webhooks v2",
                     "path": "docs/guide-for-webhooks-v2"
                   },
                   {
-                    "title": "List Of Webhooks V2",
+                    "title": "List of Webhooks v2",
                     "path": "docs/list-of-webhooks-v2"
                   }
                 ]
               },
               {
-                "title": "Webhooks V2 Migration Guide",
+                "title": "Webhooks v2 migration guide",
                 "path": "docs/webhooks-v2-migration-guide"
               },
               {
-                "title": "Guide For Webhooks",
+                "title": "Guide for Webhooks",
                 "path": "docs/guide-for-webhooks"
               },
               {
-                "title": "Guide For Optimizing Api Usage",
+                "title": "Guide for optimizing API usage",
                 "path": "docs/guide-for-optimizing-api-usage"
               },
               {
-                "title": "Subscriptions Api Migration Guide",
+                "title": "Subscriptions API migration guide",
                 "path": "docs/subscriptions-api-migration-guide"
               },
               {
@@ -334,29 +344,29 @@
                     "path": "docs/tutorials"
                   },
                   {
-                    "title": "How To Find The Api Token",
+                    "title": "How to find the API token",
                     "path": "docs/how-to-find-the-api-token"
                   },
                   {
-                    "title": "How To Get The Company Domain",
+                    "title": "How to get the company domain",
                     "path": "docs/how-to-get-the-company-domain"
                   },
                   {
-                    "title": "Enabling Api For Company Users",
+                    "title": "Enabling API for company users",
                     "path": "docs/enabling-api-for-company-users"
                   }
                 ]
               },
               {
-                "title": "Working With Labels",
+                "title": "Working with labels",
                 "path": "docs/working-with-labels"
               },
               {
-                "title": "Leadbooster Browser Api",
+                "title": "LeadBooster Browser API",
                 "path": "docs/leadbooster-browser-api"
               },
               {
-                "title": "Faq",
+                "title": "FAQ",
                 "path": "docs/faq"
               }
             ]
