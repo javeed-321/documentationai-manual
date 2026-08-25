@@ -1,0 +1,47 @@
+# Edge Diagnostics Documentation
+
+> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/edge-diagnostics/docs/llms.txt): full section index
+- [Get started](https://techdocs.akamai.com/edge-diagnostics/docs/get-started/llms.txt)
+- [Tools](https://techdocs.akamai.com/edge-diagnostics/docs/tools/llms.txt)
+- [Problem scenarios](https://techdocs.akamai.com/edge-diagnostics/docs/problem-scenarios/llms.txt)
+- [Resources](https://techdocs.akamai.com/edge-diagnostics/docs/resources/llms.txt)
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/edge-diagnostics/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/edge-diagnostics/reference/api/llms.txt)
+- [Edge server locations](https://techdocs.akamai.com/edge-diagnostics/reference/edge-server-locations/llms.txt)
+- [IP verification](https://techdocs.akamai.com/edge-diagnostics/reference/ip-verification/llms.txt)
+- [IP network location](https://techdocs.akamai.com/edge-diagnostics/reference/ip-network-location/llms.txt)
+- [IP verification and location](https://techdocs.akamai.com/edge-diagnostics/reference/ip-verification-and-location/llms.txt)
+- [GTM properties](https://techdocs.akamai.com/edge-diagnostics/reference/gtm-properties/llms.txt)
+- [IPA hostnames](https://techdocs.akamai.com/edge-diagnostics/reference/ipa-hostnames/llms.txt)
+- [Error translator](https://techdocs.akamai.com/edge-diagnostics/reference/error-translator/llms.txt)
+- [User diagnostic data](https://techdocs.akamai.com/edge-diagnostics/reference/user-diagnostic-data/llms.txt)
+- [Error statistics](https://techdocs.akamai.com/edge-diagnostics/reference/error-statistics/llms.txt)
+- [Metadata Tracer](https://techdocs.akamai.com/edge-diagnostics/reference/metadata-tracer/llms.txt)
+- [ESI debugger](https://techdocs.akamai.com/edge-diagnostics/reference/esi-debugger/llms.txt)
+- [CURL](https://techdocs.akamai.com/edge-diagnostics/reference/curl/llms.txt)
+- [GREP](https://techdocs.akamai.com/edge-diagnostics/reference/grep/llms.txt)
+- [ARL translator](https://techdocs.akamai.com/edge-diagnostics/reference/arl-translator/llms.txt)
+- [DIG](https://techdocs.akamai.com/edge-diagnostics/reference/dig/llms.txt)
+- [MTR](https://techdocs.akamai.com/edge-diagnostics/reference/mtr/llms.txt)
+- [URL Health Check](https://techdocs.akamai.com/edge-diagnostics/reference/url-health-check/llms.txt)
+- [Connectivity problems](https://techdocs.akamai.com/edge-diagnostics/reference/connectivity-problems/llms.txt)
+- [Content problems](https://techdocs.akamai.com/edge-diagnostics/reference/content-problems/llms.txt)
+
+## Recipes
+
+- [Recipes index](https://techdocs.akamai.com/edge-diagnostics/recipes/llms.txt): full section index
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edge-diagnostics/changelog/llms.txt): full section index

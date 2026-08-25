@@ -1,0 +1,9 @@
+# mPulse Documentation
+
+> mPulse is ​Akamai​'s real user measurement solution that maps user behavior to business performance as it's happening. With mPulse you can collect detailed business and performance data directly from your users' browser or mobile application in real time, and then drill down for a closer look at the performance of all your resources across all of your page views to identify the root cause of latencies and lost revenue.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/mpulse/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Beacons
+- [Send a beacon](https://techdocs.akamai.com/mpulse/reference/post-beacons.md): Send performance data to mPulse.  To send a beacon, you need to first run the [Get a beacon configuration](ref:get-config) operation. From the response, you can use the `beacon_url` to send a beacon.  See [What is in an mPulse beacon](https://techdocs.akamai.com/mpulse-boomerang/docs/whats-in-an-mpulse-beacon) for the full list of available beacon parameters.
+- [Get a beacon configuration](https://techdocs.akamai.com/mpulse/reference/get-config.md): You need the API Key for your mPulse app, as well as the additional required fields covered below. This operation gets the data needed in order to run the Send a Beacon operation, such as `h.key`, `h.d`, `h.t`, `h.cr` and `beacon_url`.  You need to run this operation before you can send a beacon.

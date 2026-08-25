@@ -1,0 +1,20 @@
+# Edge Diagnostics Documentation
+
+> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Tools
+- [Translate Error String](https://techdocs.akamai.com/edge-diagnostics/docs/translate-error-string.md)
+- [User Diagnostic Data](https://techdocs.akamai.com/edge-diagnostics/docs/user-diagnostic-data.md)
+- [Verify and Locate IP](https://techdocs.akamai.com/edge-diagnostics/docs/verify-locate-ip.md)
+- [View Logs (GREP)](https://techdocs.akamai.com/edge-diagnostics/docs/view-logs-grep.md)
+- [Get Error Statistics](https://techdocs.akamai.com/edge-diagnostics/docs/get-error-statistics.md)
+- [Metadata Tracer](https://techdocs.akamai.com/edge-diagnostics/docs/metadata-tracer-mdt.md)
+- [ESI Debugger](https://techdocs.akamai.com/edge-diagnostics/docs/esi-debugger.md)
+- [Request Content (CURL)](https://techdocs.akamai.com/edge-diagnostics/docs/request-content-curl.md)
+- [Test Network Connectivity (MTR)](https://techdocs.akamai.com/edge-diagnostics/docs/network-connectivity-mtr.md)
+- [Get Domain Details (DIG)](https://techdocs.akamai.com/edge-diagnostics/docs/domain-details-dig.md)
+- [Map Diff](https://techdocs.akamai.com/edge-diagnostics/docs/map-diff.md)
+- [Data Center Diagnostics](https://techdocs.akamai.com/edge-diagnostics/docs/data-center-diagnostics.md)
+- [IP Diagnostics](https://techdocs.akamai.com/edge-diagnostics/docs/ip-diagnostics.md)

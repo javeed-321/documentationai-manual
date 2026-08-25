@@ -1,0 +1,13 @@
+---
+title: "User diagnostic data"
+---
+
+# Edge Diagnostics Documentation
+
+> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+## API Reference: User diagnostic data
+
+- [Generate a diagnostic link](https://techdocs.akamai.com/edge-diagnostics/reference/post-user-diagnostic-data-groups.md): Generates a diagnostic link for you to share with end users of a particular URL or IP acceleration hostname experiencing similar issues.  After an end user clicks the link, the tool gathers necessary diagnostic data and asks the end user to submit it. Once submitted, you can check the collected data with  the [Get diagnostic data of a group](/reference/get-user-diagnostic-data-group-records) operation. Each link is valid for 7 days of 50 submissions. To get the list of IP acceleration hostname you can collect diagnostic data for, run the [List IP acceleration hostnames](/reference/get-ipa-hostnames) operation first.
+- [List end user groups](https://techdocs.akamai.com/edge-diagnostics/reference/get-user-diagnostic-data-groups.md): Lists groups created for collecting diagnostic data and their details. A group stores diagnostic data of end users of a particular domain experiencing similar issues submitted with the specific diagnostic link. To create the diagnostic link, run the [Generate a diagnostic link](/reference/post-user-diagnostic-data-groups) operation. To check the data collected for a group, store the returned `groupId` value and use it to run the [Get diagnostic data of a group](/reference/get-user-diagnostic-data-group-records) operation.
+- [Get diagnostic data for an end user group](https://techdocs.akamai.com/edge-diagnostics/reference/get-user-diagnostic-data-group-records.md): Returns collected diagnostic data for a specific group. You can also request additional cURL, DIG, and MTR data. To get the `groupId` value, run the [List groups](/reference/get-user-diagnostic-data-groups) operation first.

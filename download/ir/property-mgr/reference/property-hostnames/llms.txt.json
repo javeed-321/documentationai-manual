@@ -1,0 +1,122 @@
+{
+  "slug": "property-mgr/reference/property-hostnames/llms.txt",
+  "source": "https://techdocs.akamai.com/property-mgr/reference/property-hostnames/llms.txt.md",
+  "url": "https://techdocs.akamai.com/property-mgr/reference/property-hostnames/llms.txt",
+  "title": "Property hostnames",
+  "description": "",
+  "section": "Property Manager",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Property Manager Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Property Manager Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Property hostnames",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Property hostnames",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        10
+      ],
+      "raw": "- [List hostnames for an account](https://techdocs.akamai.com/property-mgr/reference/get-hostnames.md): This operation lists active property hostnames for all properties available in an account. Use the optional query parameters to paginate, sort, and filter the results. You can nest and combine filters to obtain desired results. To view paginated results, use the response's `nextLink` and `previousLink`.\n- [Generate certificate domain validation challenges](https://techdocs.akamai.com/property-mgr/reference/post-certificate-challenges.md): If you're using Default Domain Validation (DV) certificates, you can generate the domain validation challenges ahead of setting hostnames for your property. Ordinarily, you get the challenges when you [add hostnames to a property version](ref:patch-property-version-hostnames) or [add hostnames to a property's hostname bucket](ref:patch-property-hostnames). This operation returns the `validationCname` object that you use to validate the certificate's domain. For each requested property hostname, create a new CNAME record in the DNS configuration and map the object's `hostname` to the `target`.  **Note**: If you're using a new account, first register it on the Akamai network by activating any property version on either staging or production. Otherwise, your attempts to generate certificates will fail with a [403](ref:403) error.\n- [Get audit history](https://techdocs.akamai.com/property-mgr/reference/get-hostname-audit-history.md): Gets a detailed record of all modifications made to a property hostname.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List hostnames for an account: This operation lists active property hostnames for all properties available in an account. Use the optional query parameters to paginate, sort, and filter the results. You can nest and combine filters to obtain desired results. To view paginated results, use the response's nextLink and previousLink.Generate certificate domain validation challenges: If you're using Default Domain Validation (DV) certificates, you can generate the domain validation challenges ahead of setting hostnames for your property. Ordinarily, you get the challenges when you add hostnames to a property version or add hostnames to a property's hostname bucket. This operation returns the validationCname object that you use to validate the certificate's domain. For each requested property hostname, create a new CNAME record in the DNS configuration and map the object's hostname to the target.  Note: If you're using a new account, first register it on the Akamai network by activating any property version on either staging or production. Otherwise, your attempts to generate certificates will fail with a 403 error.Get audit history: Gets a detailed record of all modifications made to a property hostname.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:patch-property-version-hostnames",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:patch-property-hostnames",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:403",
+          "line": 9
+        }
+      ]
+    }
+  ]
+}

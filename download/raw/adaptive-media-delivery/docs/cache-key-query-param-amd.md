@@ -1,0 +1,190 @@
+---
+updatedAt: 2026-03-01T18:58:16.000Z
+---
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Cache Key Query Parameters
+
+This behavior controls whether the query string or portions of it are used to differentiate objects in cache.
+
+This behavior is automatically included in the Default Rule for a property configuration for AMD. Unlike other behaviors that are automatically included in this rule, it's not required. While we recommend you set it in the Default Rule, so that it will apply to all requests, you can remove it from this rule.
+
+# Before you begin
+
+Before you work with this behavior and all caching-related behaviors, ​Akamai​ recommends that you read, [What you need to know about caching](https://techdocs.akamai.com/property-mgr/docs/know-caching) in the Property Manager help. It'll help you better understand caching and how it works within the ​Akamai​ network.
+
+# Implementation
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-cache-key-query-enable-v2.png" width="450" />
+</div>
+
+The default setting for this behavior is **Exclude all parameters**. This means that all requests for the same URL are served from a single cache entry *regardless of the query string in a request*. For example, these two requests would be served from the same object in cache:
+
+```
+http://mymedia.com/directory/manifest?token=1234598765
+http://mymedia.com/directory/manifest?token=9876512345
+```
+
+This setting tells ​Akamai​ to only consider the URL without the query string when looking in the cache. Using the examples above, that would be:
+
+```
+http://mymedia.com/directory/manifest
+```
+
+Is the default **Exclude all parameters** setting appropriate for your content? If not, pick the appropriate setting for your environment to have ​Akamai​ optimize delivery by incorporating use case-based provisioning.
+
+> 🚧 NetStorage doesn't honor query strings
+>
+> If you're using it as your origin server, this needs to be set to **Exclude all parameters**.
+
+Other available options include:
+
+<table>
+<thead>
+<th>Behavior</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Exact Match</th>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Include all parameters (preserve order from request)**
+
+</td>
+<td>
+
+All of the query string parameters in a request are included, and they're applied in the order they exist in the request.
+
+</td>
+<td>
+
+N/A
+
+</td>
+<td>
+
+N/A
+
+</td>
+</tr>
+<tr>
+<td>
+
+**Include all parameters (reorder alphabetically)**
+
+</td>
+<td>
+
+All of the query string parameters in a request are included, but they're reordered alphabetically and then applied.
+
+</td>
+<td>
+
+N/A
+
+</td>
+<td>
+
+N/A
+
+</td>
+</tr>
+<tr>
+<td>
+
+**Include only specified parameters...**
+
+</td>
+<td>
+
+Only specific query strings are included, and all others are ignored.
+
+</td>
+<td>
+
+Enter the query string parameters you want _included in_ the cache key. Matches are determined by prefix-matching each query string. If the query parameter with its value (`name=value&`) contains an item in this list (for example, `name`, `name=`, `name=value`, or `name=value&`), then the parameter and value are _included_. It must also exactly match the case from the request URL, regardless of any other case-sensitivity settings.
+
+</td>
+<td>
+
+#### Yes
+
+To honor a query string in a request, its name needs to be exactly what's set in Parameters. For example, if you input `firststring` and `secondstring` in Parameters, and set this to _Yes_, query string arguments are only accepted if they use the names `firststring` or `secondstring`—`?firststring=<value>`, `?secondstring=<value>`, or `?firststring=<value>&secondstring=<value>`.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-include-only-spec-param-yes-v2.png" />
+</div>
+
+#### No
+
+The individual strings you set in Parameters are included for a request if their name matches a portion of the name in the actual request. For example, assume you included `x-string` and `y-string` as Parameters and set this to "No." If a request includes the query string `?x-strings=1234&a-string=5678&y-string=91011`, both the `x-strings` and `y-string` values are included, and the `a-string` value is ignored.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-include-only-spec-param-no-v2.png" />
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+
+**Exclude only specified parameters**
+
+</td>
+<td>
+
+Specific query strings are excluded, and all others are applied.
+
+</td>
+<td>
+
+Enter the query string parameters you want _excluded from_ the cache key. Matches are determined by prefix matching each query string. If the query parameter with its value (`name=value&`) contains an item in this list (for example, `name`, `name=`, `name=value`, or `name=value&`), then the parameter and value are _excluded_. It needs to also exactly match the case from the request URL, regardless of any other case-sensitivity settings.
+
+</td>
+<td>
+
+#### Yes
+
+To exclude a query string from a request, its name needs to be exactly what's set in Parameters. For example, if you enter `firststring` and `secondstring` in Parameters, and set this to _Yes_, query string arguments are only excluded if they use the names `firststring` or `secondstring`—`?firststring=<value>`, `?secondstring=<value>`, or `?firststring=<value>&secondstring=<value>\`.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-exclude-only-spec-param-yes-v2.png" />
+</div>
+
+#### No
+
+The individual strings you set in Parameters are excluded from a request if their name matches a portion of the name in the actual request. For example, assume you included `x-string` and `y-string` as Parameters and set this to "No." If a request includes the query string `?x-strings=1234&a-string=5678&y-string=91011`, both the `x-strings` and `y-string` values are excluded, and the `a-string` value is included.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-exclude-only-spec-param-no-v2.png" />
+</div>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# Be careful when changing the cache key
+
+If you change the cache key globally or for too many objects on a property that is already active—that is, if you create a new version that has a different cache key for all content—you can create problems for your origin when you activate the new version on production. When you change the cache key, you invalidate cached content that's using the existing cache key. ​Akamai​ edge servers will request new objects from your origin *at a level that can create severe spikes in bandwidth*.
+
+If you need to change the cache keys on an active configuration, you should limit the changes: send them out a few changes at a time over an expanded time frame.
+
+# Sibling pages
+
+* [Default optimizations](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov.md)
+* [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)
+* [Content Provider Code](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-provider-code-amd.md)
+* [Segmented Media Delivery Mode](https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md)
+* [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)
+* [Content Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd.md)
+* [Client Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md)
+* [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)
+* [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)
+* [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)
+* [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)
+* [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)

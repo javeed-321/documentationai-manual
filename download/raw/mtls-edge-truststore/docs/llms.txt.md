@@ -1,0 +1,25 @@
+# Mutual TLS Edge Truststore (Limited Availability) Documentation
+
+> Mutual TLS Edge Truststore is a self-service application that supports the creation, management, and activation of certificate authority certificate sets (CA sets) needed to establish mutual authentication (mTLS) sessions between the client and the Akamai edge.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-edge-truststore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Welcome
+
+- [Welcome index](https://techdocs.akamai.com/mtls-edge-truststore/docs/welcome/llms.txt): full category index
+- [Welcome to Mutual TLS Edge Truststore (Limited Availability)](https://techdocs.akamai.com/mtls-edge-truststore/docs/welcome.md)
+- [Key concepts and terms](https://techdocs.akamai.com/mtls-edge-truststore/docs/key-concepts-terms.md)
+- [Certificate expiration notification](https://techdocs.akamai.com/mtls-edge-truststore/docs/certificate-expiration-notification.md)
+
+## Guides: Get started
+
+- [Get started index](https://techdocs.akamai.com/mtls-edge-truststore/docs/get-started/llms.txt): full category index
+- [Create CA set workflow overview](https://techdocs.akamai.com/mtls-edge-truststore/docs/ca-set-workflow.md)
+- [Protect connections with mTLS](https://techdocs.akamai.com/mtls-edge-truststore/docs/protect-connections-with-mtls.md)
+
+## Guides: Manage certificates
+
+- [Manage certificates index](https://techdocs.akamai.com/mtls-edge-truststore/docs/manage-certificates/llms.txt): full category index
+- [Manage a CA set](https://techdocs.akamai.com/mtls-edge-truststore/docs/manage-ca-sets.md)
+- [Best practices](https://techdocs.akamai.com/mtls-edge-truststore/docs/best-practices.md)
+- [Manage certificates in a set](https://techdocs.akamai.com/mtls-edge-truststore/docs/manage-cert-set.md)

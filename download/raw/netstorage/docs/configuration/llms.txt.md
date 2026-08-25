@@ -1,0 +1,20 @@
+# NetStorage Documentation
+
+> NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Configuration
+- [Create a technical contact](https://techdocs.akamai.com/netstorage/docs/create-a-netstorage-technical-contact.md)
+- [Access NetStorage in Control Center](https://techdocs.akamai.com/netstorage/docs/access-netstorage-in-control-center.md)
+- [Create a storage group](https://techdocs.akamai.com/netstorage/docs/create-a-storage-group.md)
+- [Create an upload account](https://techdocs.akamai.com/netstorage/docs/create-an-upload-account.md)
+- [Configure your access method](https://techdocs.akamai.com/netstorage/docs/access-methods.md)
+- [Configure secure SSH access methods](https://techdocs.akamai.com/netstorage/docs/configure-secure-ssh-access-methods.md)
+- [Aspera Upload Acceleration](https://techdocs.akamai.com/netstorage/docs/aspera-upload-acceleration.md)
+- [File Manager](https://techdocs.akamai.com/netstorage/docs/file-manager.md)
+- [File Transfer Protocol](https://techdocs.akamai.com/netstorage/docs/file-transfer-protocol.md)
+- [NetStorage Usage API](https://techdocs.akamai.com/netstorage/docs/the-netstorage-usage-api-1.md)
+- [Rsync](https://techdocs.akamai.com/netstorage/docs/rsync.md)
+- [Create an ACL rule set](https://techdocs.akamai.com/netstorage/docs/acl-rule-sets.md)
+- [Create a NetStorage alert](https://techdocs.akamai.com/netstorage/docs/create-a-netstorage-alert.md)

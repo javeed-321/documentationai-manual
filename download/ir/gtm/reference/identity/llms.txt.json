@@ -1,0 +1,117 @@
+{
+  "slug": "gtm/reference/identity/llms.txt",
+  "source": "https://techdocs.akamai.com/gtm/reference/identity/llms.txt.md",
+  "url": "https://techdocs.akamai.com/gtm/reference/identity/llms.txt",
+  "title": "Identity",
+  "description": "",
+  "section": "Global Traffic Management",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Global Traffic Management Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Global Traffic Management Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Identity",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Identity",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        10
+      ],
+      "raw": "- [Get identity](https://techdocs.akamai.com/gtm/reference/get-identity.md): This operation returns information about the API client. Run this operation for details on the API client contract such as available load balancing `features` and `permissions` the client has on the domains tied to the contract.\n- [List contracts](https://techdocs.akamai.com/gtm/reference/get-identity-contracts.md): This operation returns a list of API client `contracts`. When you [Create a domain](ref:post-domain), you may need a `contractId` under certain circumstances. Run this operation to view available values.\n- [List groups](https://techdocs.akamai.com/gtm/reference/get-identity-groups.md): This operation returns a list of API client `groups` and their parameters.  When you [Create a domain](ref:post-domain), you may need a `groupId` under certain circumstances. Run this operation to view available values.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Get identity: This operation returns information about the API client. Run this operation for details on the API client contract such as available load balancing features and permissions the client has on the domains tied to the contract.List contracts: This operation returns a list of API client contracts. When you Create a domain, you may need a contractId under certain circumstances. Run this operation to view available values.List groups: This operation returns a list of API client groups and their parameters.  When you Create a domain, you may need a groupId under certain circumstances. Run this operation to view available values.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-domain",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-domain",
+          "line": 10
+        }
+      ]
+    }
+  ]
+}

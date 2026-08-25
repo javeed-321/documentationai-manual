@@ -1,0 +1,22 @@
+# Edge Diagnostics Documentation
+
+> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+- [Edge Diagnostics API](https://techdocs.akamai.com/edge-diagnostics/reference/edge-diagnostics-api-1.md)
+- [API summary](https://techdocs.akamai.com/edge-diagnostics/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/edge-diagnostics/reference/get-started.md)
+- [Rate limiting](https://techdocs.akamai.com/edge-diagnostics/reference/rate-limiting.md)
+- [Asynchronous processes](https://techdocs.akamai.com/edge-diagnostics/reference/asynchronous-processes.md)
+- [Site Shield requests](https://techdocs.akamai.com/edge-diagnostics/reference/site-shield-requests.md)
+- [Sensitive request headers](https://techdocs.akamai.com/edge-diagnostics/reference/sensitive-headers.md)
+- [Errors](https://techdocs.akamai.com/edge-diagnostics/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/edge-diagnostics/reference/400.md)
+- [401](https://techdocs.akamai.com/edge-diagnostics/reference/401.md)
+- [403](https://techdocs.akamai.com/edge-diagnostics/reference/403.md)
+- [404](https://techdocs.akamai.com/edge-diagnostics/reference/404.md)
+- [405](https://techdocs.akamai.com/edge-diagnostics/reference/405.md)
+- [429](https://techdocs.akamai.com/edge-diagnostics/reference/429.md)
+- [500](https://techdocs.akamai.com/edge-diagnostics/reference/500.md)

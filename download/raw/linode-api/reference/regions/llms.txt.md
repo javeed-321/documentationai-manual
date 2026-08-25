@@ -1,0 +1,11 @@
+# Linode API Documentation
+
+> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Regions
+- [List regions](https://techdocs.akamai.com/linode-api/reference/get-regions.md): Lists the regions available for Linode services. Not all services are guaranteed to be available in all regions.   **CLI**  ```shell linode-cli regions list ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)
+- [List regions' availability](https://techdocs.akamai.com/linode-api/reference/get-regions-availability.md): Returns availability data for all regions.   **CLI**  ```shell linode-cli regions list-avail ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)
+- [Get a region](https://techdocs.akamai.com/linode-api/reference/get-region.md): Returns a single Region.   **CLI**  ```shell linode-cli regions view us-east ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)
+- [Get a region's availability](https://techdocs.akamai.com/linode-api/reference/get-region-availability.md): Returns availability data for a single Region.   **CLI**  ```shell linode-cli regions view-avail us-east ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)

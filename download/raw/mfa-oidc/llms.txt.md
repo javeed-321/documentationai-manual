@@ -1,0 +1,13 @@
+# Akamai MFA OIDC API Documentation
+
+> Akamai MFA OIDC API lets you integrate multi-factor authentication (MFA) into OpenID Connect (OIDC) authentication flows using Pushed Authorization Requests (PAR).
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mfa-oidc/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/mfa-oidc/reference/api/llms.txt)
+- [Akamai MFA OIDC](https://techdocs.akamai.com/mfa-oidc/reference/akamai-mfa-oidc/llms.txt)

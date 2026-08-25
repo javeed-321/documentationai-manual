@@ -1,0 +1,12 @@
+# SIA Configuration API Documentation
+
+> Akamai's Secure Internet Access (SIA) Configuration API offers a programmatic interface to manage policy settings to protect against enterprise security and acceptable user policy related events. A distributed configuration encapsulates all the rules for how to process DNS requests for your enterprise.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/etp-config/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Notifications
+- [Create notifications configs](https://techdocs.akamai.com/etp-config/reference/post-notifications-config.md): Create notification configs in bulk.
+- [List notification configurations](https://techdocs.akamai.com/etp-config/reference/get-notifications-config.md): Provides all notification configurations.
+- [Update notification configurations](https://techdocs.akamai.com/etp-config/reference/put-notifications-config.md): Updates the notification configs in bulk.
+- [Get notification configuration for type](https://techdocs.akamai.com/etp-config/reference/get-config-notification-type.md): Gets notification details for the given notification type.
+- [Update the subscribers to notification type](https://techdocs.akamai.com/etp-config/reference/put-config-notification-type.md): Updates the subscribers to the given notification type.

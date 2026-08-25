@@ -1,0 +1,13 @@
+# Cloud Wrapper Documentation
+
+> Akamai's Cloud Wrapper optimizes connectivity between cloud infrastructures and the Akamai Intelligent Edge. It uses custom caching to reduce origin requests and the cost to distribute content from the cloud. If you have a high volume of end-user requests, Cloud Wrapper can help provide consistent, high-quality experiences.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloud-wrapper/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Configuration
+- [Set up and optimize delivery](https://techdocs.akamai.com/cloud-wrapper/docs/optimize-your-property.md)
+- [Determine your requirements](https://techdocs.akamai.com/cloud-wrapper/docs/get-started-with-cloud-wrapper.md)
+- [Add a configuration](https://techdocs.akamai.com/cloud-wrapper/docs/add-a-cloud-wrapper-configuration.md)
+- [Multi CDN tasks](https://techdocs.akamai.com/cloud-wrapper/docs/multi-cdn-tasks.md)
+- [Activate a configuration](https://techdocs.akamai.com/cloud-wrapper/docs/activate-a-cloud-wrapper-configuration.md)
+- [Add the Cloud Wrapper behavior](https://techdocs.akamai.com/cloud-wrapper/docs/add-a-cloud-wrapper-behavior.md)

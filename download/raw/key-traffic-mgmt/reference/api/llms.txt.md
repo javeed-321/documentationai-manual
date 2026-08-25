@@ -1,0 +1,21 @@
+# API Keys and Traffic Management Documentation
+
+> Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/key-traffic-mgmt/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+- [API Keys and Traffic Management API](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-keys-and-traffic-management-api.md)
+- [API summary](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-started.md)
+- [API concepts](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-concepts.md)
+- [Throttle API traffic](https://techdocs.akamai.com/key-traffic-mgmt/reference/throttle-api-traffic.md)
+- [Control API access and usage](https://techdocs.akamai.com/key-traffic-mgmt/reference/control-api-access-and-usage.md)
+- [API workflow](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-workflow.md)
+- [Errors](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/key-traffic-mgmt/reference/400.md)
+- [401](https://techdocs.akamai.com/key-traffic-mgmt/reference/401.md)
+- [403](https://techdocs.akamai.com/key-traffic-mgmt/reference/403.md)
+- [404](https://techdocs.akamai.com/key-traffic-mgmt/reference/404.md)
+- [405](https://techdocs.akamai.com/key-traffic-mgmt/reference/405.md)
+- [500](https://techdocs.akamai.com/key-traffic-mgmt/reference/500.md)

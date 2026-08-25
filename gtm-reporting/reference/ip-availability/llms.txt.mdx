@@ -1,0 +1,11 @@
+---
+title: "IP availability"
+---
+
+# GTM Reporting API Documentation
+
+> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.
+
+## API Reference: IP availability
+
+- [List IP availability per property](https://techdocs.akamai.com/gtm-reporting/reference/get-ip-availability-property.md): GTM combines scores (based on Liveness Tests) from all Web agents to calculate Server Scores and makes liveness decisions. A cutoff value is computed for each property from the median scores for all the servers in the property. Any property server with a score over the cutoff value is considered dead and it won't be handed out. The request should have either start and end time or mostRecent, and not both.  In the response, `handedOut` in JSON or `handOut` in CSV indicates whether the server was handed out and alive indicates whether GTM considered the server as alive or not.

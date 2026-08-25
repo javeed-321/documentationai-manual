@@ -1,0 +1,112 @@
+{
+  "slug": "api-definitions/reference/contracts-and-groups/llms.txt",
+  "source": "https://techdocs.akamai.com/api-definitions/reference/contracts-and-groups/llms.txt.md",
+  "url": "https://techdocs.akamai.com/api-definitions/reference/contracts-and-groups/llms.txt",
+  "title": "Contracts and groups",
+  "description": "",
+  "section": "API Definitions",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# API Definitions Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Definitions Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/api-definitions/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/api-definitions/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Contracts and groups",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Contracts and groups",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        10
+      ],
+      "raw": "- [List contracts and groups](https://techdocs.akamai.com/api-definitions/reference/get-contracts-groups.md): You provision each API endpoint within the context of your contract with Akamai and a Control Center portal group. The response objects encapsulate pairings of contract and group identifiers available within the scope of the user who provisioned the API token, as described in [Get started](ref:api-get-started).\n- [List hostnames](https://techdocs.akamai.com/api-definitions/reference/get-contract-group-hosts.md): Lists all hostnames through which API consumers can access an endpoint service under a given contract and group pairing. You can use Property Manager (or [PAPI](https://techdocs.akamai.com/property-mgr/reference/api)) to create new hostnames to make available to users.\n- [List hostnames with access control groups](https://techdocs.akamai.com/api-definitions/reference/get-contract-group-hosts-acgs.md): Lists all hostnames through which API consumers can access an endpoint service under a given contract and group pairing. Returns each hostname together with the access control group where the hostname is registered. You can use Property Manager (or [PAPI](https://techdocs.akamai.com/property-mgr/reference/api)) to create new hostnames to make available to users.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List contracts and groups: You provision each API endpoint within the context of your contract with Akamai and a Control Center portal group. The response objects encapsulate pairings of contract and group identifiers available within the scope of the user who provisioned the API token, as described in Get started.List hostnames: Lists all hostnames through which API consumers can access an endpoint service under a given contract and group pairing. You can use Property Manager (or PAPI) to create new hostnames to make available to users.List hostnames with access control groups: Lists all hostnames through which API consumers can access an endpoint service under a given contract and group pairing. Returns each hostname together with the access control group where the hostname is registered. You can use Property Manager (or PAPI) to create new hostnames to make available to users.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:api-get-started",
+          "line": 8
+        }
+      ]
+    }
+  ]
+}

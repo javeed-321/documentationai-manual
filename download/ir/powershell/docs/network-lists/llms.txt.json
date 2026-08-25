@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/network-lists/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/network-lists/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/network-lists/llms.txt",
+  "title": "Network Lists",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Network Lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Network Lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        21
+      ],
+      "raw": "- [Configure network lists](https://techdocs.akamai.com/powershell/docs/configure-network-lists.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/nl-index.md)\n- [Item](https://techdocs.akamai.com/powershell/docs/add-networklistitem.md): Add-NetworkListItem\n- [Activation](https://techdocs.akamai.com/powershell/docs/new-networklistactivation.md): New-NetworkListActivation\n- [Network list](https://techdocs.akamai.com/powershell/docs/new-networklist.md): New-NetworkList\n- [Subscription](https://techdocs.akamai.com/powershell/docs/new-networklistsubscription.md): New-NetworkListSubscription\n- [Activation](https://techdocs.akamai.com/powershell/docs/get-networklistactivation.md): Get-NetworkListActivation\n- [Activation status](https://techdocs.akamai.com/powershell/docs/get-networklistactivationstatus.md): Get-NetworkListActivationStatus\n- [Network list](https://techdocs.akamai.com/powershell/docs/get-networklist.md): Get-NetworkList\n- [Snapshot](https://techdocs.akamai.com/powershell/docs/get-networklistsnapshot.md): Get-NetworkListSnapshot\n- [Network list](https://techdocs.akamai.com/powershell/docs/set-networklist.md): Set-NetworkList\n- [Item](https://techdocs.akamai.com/powershell/docs/remove-networklistitem.md): Remove-NetworkListItem\n- [Network list](https://techdocs.akamai.com/powershell/docs/remove-networklist.md): Remove-NetworkList\n- [Subscription](https://techdocs.akamai.com/powershell/docs/remove-networklistsubscription.md): Remove-NetworkListSubscription",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Configure network listsFunction indexItem: Add-NetworkListItemActivation: New-NetworkListActivationNetwork list: New-NetworkListSubscription: New-NetworkListSubscriptionActivation: Get-NetworkListActivationActivation status: Get-NetworkListActivationStatusNetwork list: Get-NetworkListSnapshot: Get-NetworkListSnapshotNetwork list: Set-NetworkListItem: Remove-NetworkListItemNetwork list: Remove-NetworkListSubscription: Remove-NetworkListSubscription",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "slug": "adaptive-media-delivery/docs/define-prop-hn",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-hn.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-hn",
+  "title": "Define property hostnames",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-03-01T18:58:09.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `c` (U+0063) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
+  "components": {
+    "boilerplate": 1,
+    "heading": 6,
+    "paragraph": 7,
+    "div": 1,
+    "list": 2,
+    "Callout": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Define property hostnames",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Define property hostnames",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "You use this content panel to create your property hostname associations. These associations play a key role in getting your streaming media out to ​Akamai​ edge servers, for access to requests from your end users.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You use this content panel to create your property hostname associations. These associations play a key role in getting your streaming media out to ​Akamai​ edge servers, for access to requests from your end users.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        13
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/adaptive-media-delivery/img/prop-hostnames-v1.jpg\" width=\"600\" height=\"212\"/>\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "# Understand the property hostname association",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Understand the property hostname association",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Essentially, you use the hostname for your streaming media to create an \"edge hostname\" that's used to get your Adaptive Media Delivery property to determine how to deliver your streaming media.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Essentially, you use the hostname for your streaming media to create an \"edge hostname\" that's used to get your Adaptive Media Delivery property to determine how to deliver your streaming media.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        21
+      ],
+      "raw": "* **The hostname**. During the property hostname process, you include this to verify that a request belongs to you as our customer, as well as determine which Property Manager configuration (\"property\") to use for delivery settings. This is typically the full hostname or domain name that end users target to access your media, without the `https://`. For example, `www.sportsvideos.baseball.hof-induction.mp4`, `sailing.clipperships.m4v`, and `my.travel.videos.com` are examples of hostnames you could use. This is also referred to as the \"vanity hostname.\"\n\n* **The edge hostname**. Property Manager automatically creates an edge hostname, using the hostname you provide. An edge hostname uses the \"​Akamai​ Intelligent Platform\" to map requests for your media to ​Akamai​ edge servers. For example, if you provided the hostname `my.travel.videos.com` for your site, Property Manager creates the edge hostname, `my.travel.videos.com.akamaized.net`.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "The hostname. During the property hostname process, you include this to verify that a request belongs to you as our customer, as well as determine which Property Manager configuration (\"property\") to use for delivery settings. This is typically the full hostname or domain name that end users target to access your media, without the https://. For example, www.sportsvideos.baseball.hof-induction.mp4, sailing.clipperships.m4v, and my.travel.videos.com are examples of hostnames you could use. This is also referred to as the \"vanity hostname.\"The edge hostname. Property Manager automatically creates an edge hostname, using the hostname you provide. An edge hostname uses the \"​Akamai​ Intelligent Platform\" to map requests for your media to ​Akamai​ edge servers. For example, if you provided the hostname my.travel.videos.com for your site, Property Manager creates the edge hostname, my.travel.videos.com.akamaized.net.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "Later, when you're ready to go live, you change the DNS record for your hostname to \"CNAME\" to the edge hostname to acknowledge this association. End-user requests to your hostname are redirected to the edge hostname. These resolve to ​Akamai​ edge servers that read from your Adaptive Media Delivery property to determine how to deliver your media. The actual delivery is based on rules and behaviors you establish in your Adaptive Media Delivery property.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Later, when you're ready to go live, you change the DNS record for your hostname to \"CNAME\" to the edge hostname to acknowledge this association. End-user requests to your hostname are redirected to the edge hostname. These resolve to ​Akamai​ edge servers that read from your Adaptive Media Delivery property to determine how to deliver your media. The actual delivery is based on rules and behaviors you establish in your Adaptive Media Delivery property.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "Edge hostnames work behind the scenes and are not visible in the URLs of content served to end users.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Edge hostnames work behind the scenes and are not visible in the URLs of content served to end users.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "## Your content is cached on edge servers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Your content is cached on edge servers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "You can set various [caching rules and behaviors](https://techdocs.akamai.com/property-mgr/docs/caching-2) in your Adaptive Media Delivery property, and some are automatically applied as best practices. When a request for your media content goes through your edge hostname and it's processed by your property, that content is held in cache on the ​Akamai​ edge network. This reduces the need to access your origin and can also speed up delivery to other customers, that also make requests to the same edge hostname.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can set various caching rules and behaviors in your Adaptive Media Delivery property, and some are automatically applied as best practices. When a request for your media content goes through your edge hostname and it's processed by your property, that content is held in cache on the ​Akamai​ edge network. This reduces the need to access your origin and can also speed up delivery to other customers, that also make requests to the same edge hostname.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "# Set up secure authentication",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Set up secure authentication",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "If you haven't already, you need to [set up a certificate](https://techdocs.akamai.com/adaptive-media-delivery/docs/prepare-your-environment) if you want to deliver your media content via HTTPS.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you haven't already, you need to set up a certificate if you want to deliver your media content via HTTPS.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        35,
+        37
+      ],
+      "raw": "> 👍 Consider using mTLS\n>\n> To offer more security for this connection, consider setting up your authentication using mutual transport layer security (mTLS). It requires that both the client and edge network server authenticate using a secure certificate. See its [tutorial](https://techdocs.akamai.com/adaptive-media-delivery/docs/protect-connections-with-mtls) for complete details.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "Consider using mTLSTo offer more security for this connection, consider setting up your authentication using mutual transport layer security (mTLS). It requires that both the client and edge network server authenticate using a secure certificate. See its tutorial for complete details.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "# Set up a secure property hostname",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Set up a secure property hostname",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "You use Property Manager for this, and the process is predominantly the same regardless of product. To maintain consistent instructions, it's covered in the Property Manager [documentation](https://techdocs.akamai.com/property-mgr/docs/serve-content-over-https).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You use Property Manager for this, and the process is predominantly the same regardless of product. To maintain consistent instructions, it's covered in the Property Manager documentation.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        43,
+        45
+      ],
+      "raw": "> 📘 Non-secure property hostnames\n>\n> As a best practice and to meet industry standards, you should use secure authentication. But, Property Manager also offers multiple ways to [create non-secure (HTTP) property hostnames](https://techdocs.akamai.com/property-mgr/docs/serve-content-over-http), too.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "Non-secure property hostnamesAs a best practice and to meet industry standards, you should use secure authentication. But, Property Manager also offers multiple ways to create non-secure (HTTP) property hostnames, too.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "# Sibling pages",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sibling pages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        49,
+        54
+      ],
+      "raw": "* [Create a new AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/create-new-prop.md)\n* [Define property variables (optional)](https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-vars-optal.md)\n* [Define property configuration settings](https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-config-settings.md)\n* [Finalize your AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/finalize-amd-prop.md)\n* [Test your AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/test-amd-prop.md)\n* [Go live with AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/go-live.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a new AMD propertyDefine property variables (optional)Define property configuration settingsFinalize your AMD propertyTest your AMD propertyGo live with AMD",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

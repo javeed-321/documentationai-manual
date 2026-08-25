@@ -1,0 +1,106 @@
+{
+  "slug": "cloudtest/reference/tenant-management/llms.txt",
+  "source": "https://techdocs.akamai.com/cloudtest/reference/tenant-management/llms.txt.md",
+  "url": "https://techdocs.akamai.com/cloudtest/reference/tenant-management/llms.txt",
+  "title": "Tenant management",
+  "description": "",
+  "section": "CloudTest",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# CloudTest Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "CloudTest Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Using Akamai's CloudTest to optimize your approach to load testing with a scalable, global platform. CloudTest provides testing capabilities for web and mobile apps, APIs, databases, and web services. Realtime analytics and customizable dashboards provide actionable intelligence, allowing for root-cause analysis while tests run.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Using Akamai's CloudTest to optimize your approach to load testing with a scalable, global platform. CloudTest provides testing capabilities for web and mobile apps, APIs, databases, and web services. Realtime analytics and customizable dashboards provide actionable intelligence, allowing for root-cause analysis while tests run.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/cloudtest/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/cloudtest/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Tenant management",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Tenant management",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [Initiate tenant sub-data deletion](https://techdocs.akamai.com/cloudtest/reference/post-tenant-subdata-delete.md): This action submits a background task to delete results and monitors under given tenant for passed auth token. It returns a jobId.  Use the jobId to make subsequent calls to track the status of the task.\n- [List tenant management tasks](https://techdocs.akamai.com/cloudtest/reference/get-tenant-mgmt-tasks.md): Get a list of all tasks.\n- [Get a tenant management task](https://techdocs.akamai.com/cloudtest/reference/get-tenant-mgmt-task.md): Returns a specific task.\n- [Stop a tenant management task](https://techdocs.akamai.com/cloudtest/reference/delete-tenant-mgmt-task.md): Attempts to stop a task.  Stopping a task doesn't undo any deleted results but stops the task as quickly as possible. A status of `STOPPED` means that the task was stopped before it completed. A status of `COMPLETED` means that the task completed before it received the instruction to stop.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Initiate tenant sub-data deletion: This action submits a background task to delete results and monitors under given tenant for passed auth token. It returns a jobId.  Use the jobId to make subsequent calls to track the status of the task.List tenant management tasks: Get a list of all tasks.Get a tenant management task: Returns a specific task.Stop a tenant management task: Attempts to stop a task.  Stopping a task doesn't undo any deleted results but stops the task as quickly as possible. A status of STOPPED means that the task was stopped before it completed. A status of COMPLETED means that the task completed before it received the instruction to stop.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

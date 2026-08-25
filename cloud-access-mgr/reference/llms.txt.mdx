@@ -1,0 +1,64 @@
+---
+title: "API Reference index"
+description: "full section index"
+---
+
+# Cloud Access Manager Documentation
+
+> Akamai's Cloud Access Manager enables cloud origin authentication and allows you to securely store and manage your cloud origin credentials in the form of access keys.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/cloud-access-mgr/reference/api/llms.txt): full category index
+- [Cloud Access Manager API](https://techdocs.akamai.com/cloud-access-mgr/reference/api.md)
+- [API summary](https://techdocs.akamai.com/cloud-access-mgr/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/cloud-access-mgr/reference/get-started.md)
+- [Concepts](https://techdocs.akamai.com/cloud-access-mgr/reference/concepts.md)
+- [Hypermedia](https://techdocs.akamai.com/cloud-access-mgr/reference/hypermedia.md)
+- [Rate limiting](https://techdocs.akamai.com/cloud-access-mgr/reference/rate-limiting.md)
+- [Resource limiting](https://techdocs.akamai.com/cloud-access-mgr/reference/resource-limiting.md)
+- [Asynchronous requests](https://techdocs.akamai.com/cloud-access-mgr/reference/asynchronous-requests.md)
+- [Usage examples](https://techdocs.akamai.com/cloud-access-mgr/reference/usage-examples.md)
+- [Errors](https://techdocs.akamai.com/cloud-access-mgr/reference/errors.md)
+- [400](https://techdocs.akamai.com/cloud-access-mgr/reference/400.md)
+- [401](https://techdocs.akamai.com/cloud-access-mgr/reference/401.md)
+- [403](https://techdocs.akamai.com/cloud-access-mgr/reference/403.md)
+- [404](https://techdocs.akamai.com/cloud-access-mgr/reference/404.md)
+- [405](https://techdocs.akamai.com/cloud-access-mgr/reference/405.md)
+- [409](https://techdocs.akamai.com/cloud-access-mgr/reference/409.md)
+- [415](https://techdocs.akamai.com/cloud-access-mgr/reference/415.md)
+- [429](https://techdocs.akamai.com/cloud-access-mgr/reference/429.md)
+- [500](https://techdocs.akamai.com/cloud-access-mgr/reference/500.md)
+- [501](https://techdocs.akamai.com/cloud-access-mgr/reference/501.md)
+- [502](https://techdocs.akamai.com/cloud-access-mgr/reference/502.md)
+- [503](https://techdocs.akamai.com/cloud-access-mgr/reference/503.md)
+
+## API Reference: Access keys
+
+- [Access keys index](https://techdocs.akamai.com/cloud-access-mgr/reference/access-keys/llms.txt): full category index
+- [Create an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/post-access-key.md): Creates a new access key. An access key's name needs to be unique within a user account. Once an access key has been created, it's available on both the staging and production Akamai networks.
+- [List access keys](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-keys.md): Returns detailed information about all access keys available to the current user account.
+- [Get an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key.md): Returns details for a specific access key.
+- [Update an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/put-access-key.md): Updates an access key's name.
+- [Delete an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/delete-access-key.md): Deletes a specific access key.
+- [Create an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/post-access-key-version.md): Rotates an access key to a new version. You should only need to do this if your cloud provider credentials have changed, for example because they've expired or been compromised. Only two versions of an access key can exist and be active at the same time. If you have two access key versions you have to [delete](/reference/delete-access-key-version) one of them before you can create another version.
+- [List access key versions](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-versions.md): Returns detailed information about all of the versions for a specific access key.
+- [Get an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-version.md): Returns detailed information for a specific version of an access key.
+- [Delete an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/delete-access-key-version.md): Deletes a specific version of an access key. This operation works asynchronously. If you receive a successful 202 response, the request has been accepted and it's been added to the queue for deletion. You can use the `Location` header that's returned in the response to check the status of the request. You can't delete an access key version if it is still in use.
+- [Look up properties](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-version-properties.md): Returns information about all of the Property Manager properties that use a specific version of an access key. This operation gets the data directly. To avoid any latency problems, run the [Perform a property lookup request asynchronously](/reference/get-property-lookup) operation.
+- [Get an ID for an asynchronous property lookup request](https://techdocs.akamai.com/cloud-access-mgr/reference/get-async-version-property-lookup.md): Get the unique identifier used to perform an [asynchronous property lookup request](/reference/get-property-lookup).
+
+## API Reference: Property lookups
+
+- [Property lookups index](https://techdocs.akamai.com/cloud-access-mgr/reference/property-lookups/llms.txt): full category index
+- [Perform a property lookup request asynchronously](https://techdocs.akamai.com/cloud-access-mgr/reference/get-property-lookup.md): Provides functionality similar to the [Perform a property lookup request](/reference/get-access-key-version-properties) operation, but accesses the data asynchronously after running the [Get an ID for an asynchronous property lookup request](/reference/get-async-version-property-lookup) operation to obtain the `lookupId`.
+
+## API Reference: Access key version status requests
+
+- [Access key version status requests index](https://techdocs.akamai.com/cloud-access-mgr/reference/access-key-version-status-requests/llms.txt): full category index
+- [Get the status of an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-version-create-request.md): Returns the current status and other details for a request to create a new access key version.
+
+## API Reference: Access key creation status requests
+
+- [Access key creation status requests index](https://techdocs.akamai.com/cloud-access-mgr/reference/access-key-creation-status-requests/llms.txt): full category index
+- [Get the status of an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-create-request.md): Returns the current status and other details for a request to create a new access key.

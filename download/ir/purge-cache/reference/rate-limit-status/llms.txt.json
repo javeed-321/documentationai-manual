@@ -1,0 +1,117 @@
+{
+  "slug": "purge-cache/reference/rate-limit-status/llms.txt",
+  "source": "https://techdocs.akamai.com/purge-cache/reference/rate-limit-status/llms.txt.md",
+  "url": "https://techdocs.akamai.com/purge-cache/reference/rate-limit-status/llms.txt",
+  "title": "Rate limit status",
+  "description": "",
+  "section": "Purge Cache",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Purge Cache Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Purge Cache Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/purge-cache/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/purge-cache/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Rate limit status",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Rate limit status",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        8
+      ],
+      "raw": "- [Check rate and object limit statuses](https://techdocs.akamai.com/purge-cache/reference/post-rate-limit-status.md): The Fast Purge API uses a token bucket model for [rate limiting](ref:rate-limiting) to protect itself from inadvertent or malicious overuse. For each Akamai account, there's a rate limit shared by all object types (CP codes, cache tags, and URL/ARLs), and three separate resource limits for each object type. Each purge request uses one rate limit token from the requests bucket. Each purge object in a request takes up a token from the resource bucket. This operation fetches information on the remaining number of requests and objects for a specific account. You can use these details to monitor the request consumption or throttle requests to prevent exceeding the limits, which results in the [429](ref:429) error.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Check rate and object limit statuses: The Fast Purge API uses a token bucket model for rate limiting to protect itself from inadvertent or malicious overuse. For each Akamai account, there's a rate limit shared by all object types (CP codes, cache tags, and URL/ARLs), and three separate resource limits for each object type. Each purge request uses one rate limit token from the requests bucket. Each purge object in a request takes up a token from the resource bucket. This operation fetches information on the remaining number of requests and objects for a specific account. You can use these details to monitor the request consumption or throttle requests to prevent exceeding the limits, which results in the 429 error.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:rate-limiting",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:429",
+          "line": 8
+        }
+      ]
+    }
+  ]
+}

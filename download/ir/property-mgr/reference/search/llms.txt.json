@@ -1,0 +1,112 @@
+{
+  "slug": "property-mgr/reference/search/llms.txt",
+  "source": "https://techdocs.akamai.com/property-mgr/reference/search/llms.txt.md",
+  "url": "https://techdocs.akamai.com/property-mgr/reference/search/llms.txt",
+  "title": "Search",
+  "description": "",
+  "section": "Property Manager",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Property Manager Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Property Manager Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Search",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Search",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        8
+      ],
+      "raw": "- [Search properties or includes](https://techdocs.akamai.com/property-mgr/reference/post-search-find-by-value.md): This operation searches includes by name, or properties either by name, hostname, or edge hostname for which they're currently active. Specify a search request object with a single query member. The response lists the matching set of currently active property or include versions, and also the latest version if inactive. Each of the response's versions features additional context for the property or include in which it appears, or the account, contract, or group under which it's deployed. Note that to perform more complex searches for content within a rule tree, run [Bulk search a set of properties or includes](ref:post-bulk-search) instead.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Search properties or includes: This operation searches includes by name, or properties either by name, hostname, or edge hostname for which they're currently active. Specify a search request object with a single query member. The response lists the matching set of currently active property or include versions, and also the latest version if inactive. Each of the response's versions features additional context for the property or include in which it appears, or the account, contract, or group under which it's deployed. Note that to perform more complex searches for content within a rule tree, run Bulk search a set of properties or includes instead.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-search",
+          "line": 8
+        }
+      ]
+    }
+  ]
+}

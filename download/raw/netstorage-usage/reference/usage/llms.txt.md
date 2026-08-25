@@ -1,0 +1,30 @@
+# NetStorage Usage API Documentation
+
+> Akamai's NetStorage Usage API provides HTTP methods you can use to manage your NetStorage content. Communication is conducted via the Edge network using a HTTP(S) client of your own design. The client could be a web-based browser or scripted tools integrated with your content management system so long as each request provides the required NetStorage HTTP headers. With it, you can perform operations such as uploading, deleting, and listing of content, thus providing you another option for interfacing with your NetStorage account. HTTPS with Transport Layer Security (TLS) can be used.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage-usage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Usage
+- [delete action](https://techdocs.akamai.com/netstorage-usage/reference/put-delete.md): Use this action to delete content from your storage group.
+- [Usage details for "delete"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-delete.md)
+- [dir action](https://techdocs.akamai.com/netstorage-usage/reference/get-dir.md): Use the `dir` action to list the objects directly within the specified directory, similar to a standard `ls` or `dir` command.
+- [Usage details for "dir"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-dir.md)
+- [download action](https://techdocs.akamai.com/netstorage-usage/reference/get-download.md): Use this action to download a specified file from a NetStorage storage group.
+- [Usage details for "download"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-download.md)
+- [du action](https://techdocs.akamai.com/netstorage-usage/reference/get-du.md): Use this action to return disk usage information for a specified directory in a NetStorage storage group.
+- [list action](https://techdocs.akamai.com/netstorage-usage/reference/get-list.md): Use this action to list the objects directly within the specified directory, similar to a standard `ls` or `dir` command.
+- [mkdir action](https://techdocs.akamai.com/netstorage-usage/reference/put-mkdir.md): You can use the `mkdir` action to create a new [explicit directory](https://techdocs.akamai.com/netstorage/docs/netstorage-file-structure#implicit-vs-explicit-directories) in a storage group.
+- [Usage details for "mkdir"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-mkdir.md)
+- [mtime action](https://techdocs.akamai.com/netstorage-usage/reference/post-mtime.md): Use the `mtime` action to change a the modification time ("touch") of a storage group object.
+- [quick-delete action](https://techdocs.akamai.com/netstorage-usage/reference/post-quick-delete.md): You can use `quick-delete` to perform a delete of a selected directory, including all contents.
+- [Usage details for "quick-delete"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-quick-delete.md)
+- [rename action](https://techdocs.akamai.com/netstorage-usage/reference/put-rename.md): You can use the `rename` action to target a specific file or symbolic link in order to rename it.
+- [Usage details for "rename"](https://techdocs.akamai.com/netstorage-usage/reference/you-can-move-a-file-with-the-rename-action.md)
+- [rmdir action](https://techdocs.akamai.com/netstorage-usage/reference/put-rmdir.md): Use this action to delete an empty directory.
+- [Usage details for "rmdir"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-rmdir.md)
+- [stat action](https://techdocs.akamai.com/netstorage-usage/reference/get-stat.md): Use this action to view the stat structure (information) for a named file, symlink, or directory.
+- [Usage details for "stat"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-stat.md)
+- [symlink action](https://techdocs.akamai.com/netstorage-usage/reference/post-symlink.md): You can create a symbolic link using this action.
+- [Usage details for "symlink"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-symlink.md)
+- [upload action](https://techdocs.akamai.com/netstorage-usage/reference/put-upload.md): You can upload files to a storage group with the `upload` action. You need to include "non-empty" header content to serve as the `[Body]` for an "upload" action.
+- [Usage details for "upload"](https://techdocs.akamai.com/netstorage-usage/reference/usage-details-for-upload.md)

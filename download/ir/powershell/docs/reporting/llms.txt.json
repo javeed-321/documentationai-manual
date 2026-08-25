@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/reporting/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/reporting/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/reporting/llms.txt",
+  "title": "Reporting",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Reporting",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Reporting",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        18
+      ],
+      "raw": "- [Monitor performance](https://techdocs.akamai.com/powershell/docs/reports.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/reporting-index.md)\n- [Legacy report](https://techdocs.akamai.com/powershell/docs/get-legacyreport.md): Get-LegacyReport\n- [Legacy report type](https://techdocs.akamai.com/powershell/docs/get-legacyreporttype.md): Get-LegacyReportType\n- [Legacy report type versions](https://techdocs.akamai.com/powershell/docs/get-legacyreporttypeversions.md): Get-LegacyReportTypeVersions\n- [Product family](https://techdocs.akamai.com/powershell/docs/get-reportproductfamily.md): Get-ReportProductFamily\n- [Report](https://techdocs.akamai.com/powershell/docs/get-report.md): Get-Report\n- [Report type](https://techdocs.akamai.com/powershell/docs/get-reporttype.md): Get-ReportType\n- [Reporting area](https://techdocs.akamai.com/powershell/docs/get-reportingarea.md): Get-ReportingArea\n- [Legacy report](https://techdocs.akamai.com/powershell/docs/new-legacyreport.md): New-LegacyReport\n- [Report](https://techdocs.akamai.com/powershell/docs/new-report.md): New-Report",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Monitor performanceFunction indexLegacy report: Get-LegacyReportLegacy report type: Get-LegacyReportTypeLegacy report type versions: Get-LegacyReportTypeVersionsProduct family: Get-ReportProductFamilyReport: Get-ReportReport type: Get-ReportTypeReporting area: Get-ReportingAreaLegacy report: New-LegacyReportReport: New-Report",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

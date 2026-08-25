@@ -1,0 +1,106 @@
+{
+  "slug": "edge-dns/reference/api/llms.txt",
+  "source": "https://techdocs.akamai.com/edge-dns/reference/api/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edge-dns/reference/api/llms.txt",
+  "title": "API",
+  "description": "",
+  "section": "Edge DNS",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Edge DNS Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Edge DNS Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-dns/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-dns/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        29
+      ],
+      "raw": "- [Edge DNS API v2](https://techdocs.akamai.com/edge-dns/reference/edge-dns-api.md)\n- [API summary](https://techdocs.akamai.com/edge-dns/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/edge-dns/reference/get-started.md)\n- [Use pagination](https://techdocs.akamai.com/edge-dns/reference/use-pagination.md)\n- [Group IDs and access level](https://techdocs.akamai.com/edge-dns/reference/group-ids-access-level.md)\n- [Supported DNS resource record types](https://techdocs.akamai.com/edge-dns/reference/supported-dns-resource-record-types.md)\n- [Use change lists](https://techdocs.akamai.com/edge-dns/reference/use-change-lists.md)\n- [Example: Create a new primary zone](https://techdocs.akamai.com/edge-dns/reference/example-create-new-primary-zone.md)\n- [Zone create failure states](https://techdocs.akamai.com/edge-dns/reference/zone-create-failure-vals.md)\n- [Subzone grants](https://techdocs.akamai.com/edge-dns/reference/subzone-grants.md)\n- [Definitions of the activationState](https://techdocs.akamai.com/edge-dns/reference/activation-state-definitions.md)\n- [Edge DNS API Troubleshooting](https://techdocs.akamai.com/edge-dns/reference/edns-api-troubleshooting.md)\n- [Errors](https://techdocs.akamai.com/edge-dns/reference/api-errors.md)\n- [304](https://techdocs.akamai.com/edge-dns/reference/304.md)\n- [400](https://techdocs.akamai.com/edge-dns/reference/400.md): Bad request\n- [401](https://techdocs.akamai.com/edge-dns/reference/401.md): API authentication error\n- [403](https://techdocs.akamai.com/edge-dns/reference/403.md): Forbidden\n- [404](https://techdocs.akamai.com/edge-dns/reference/404.md): Not found\n- [405](https://techdocs.akamai.com/edge-dns/reference/405.md): Method Not Allowed\n- [409](https://techdocs.akamai.com/edge-dns/reference/409.md): Conflict\n- [415](https://techdocs.akamai.com/edge-dns/reference/415.md): Unsupported Media Type\n- [503](https://techdocs.akamai.com/edge-dns/reference/503.md): Service Unavailable",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Edge DNS API v2API summaryGet startedUse paginationGroup IDs and access levelSupported DNS resource record typesUse change listsExample: Create a new primary zoneZone create failure statesSubzone grantsDefinitions of the activationStateEdge DNS API TroubleshootingErrors304400: Bad request401: API authentication error403: Forbidden404: Not found405: Method Not Allowed409: Conflict415: Unsupported Media Type503: Service Unavailable",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

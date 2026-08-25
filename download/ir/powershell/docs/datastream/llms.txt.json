@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/datastream/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/datastream/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/datastream/llms.txt",
+  "title": "Datastream",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Datastream",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Datastream",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        26
+      ],
+      "raw": "- [Create data streams](https://techdocs.akamai.com/powershell/docs/datastream.md)\n- [Data sets](https://techdocs.akamai.com/powershell/docs/data-sets.md)\n- [Destinations](https://techdocs.akamai.com/powershell/docs/destinations.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/ds-index.md)\n- [Activation history](https://techdocs.akamai.com/powershell/docs/get-datastreamactivationhistory.md): Get-DataStreamActivationHistory\n- [Data set fields](https://techdocs.akamai.com/powershell/docs/get-datastreamdatasets.md): Get-DatastreamDatasets\n- [Data stream](https://techdocs.akamai.com/powershell/docs/get-datastream.md): Get-DataStream\n- [EDNS zones](https://techdocs.akamai.com/powershell/docs/get-datastreamednszones.md): Get-DatastreamEDNSZones\n- [Groups](https://techdocs.akamai.com/powershell/docs/get-datastreamgroups.md): Get-DatastreamGroups\n- [GTM properties](https://techdocs.akamai.com/powershell/docs/get-datastreamgtmproperties.md): Get-DatastreamGTMProperties\n- [History](https://techdocs.akamai.com/powershell/docs/get-datastreamhistory.md): Get-DataStreamHistory\n- [Properties](https://techdocs.akamai.com/powershell/docs/get-datastreamproperties.md): Get-DatastreamProperties\n- [Upload metrics](https://techdocs.akamai.com/powershell/docs/get-datastreammetrics.md): Get-DataStreamMetrics\n- [Activation](https://techdocs.akamai.com/powershell/docs/new-datastreamactivation.md): New-DataStreamActivation\n- [Data stream](https://techdocs.akamai.com/powershell/docs/new-datastream.md): New-DataStream\n- [Deactivation](https://techdocs.akamai.com/powershell/docs/new-datastreamdeactivation.md): New-DataStreamDeactivation\n- [Data stream](https://techdocs.akamai.com/powershell/docs/set-datastream.md): Set-DataStream\n- [Data stream](https://techdocs.akamai.com/powershell/docs/update-datastream.md): Update-DataStream\n- [Data stream](https://techdocs.akamai.com/powershell/docs/remove-datastream.md): Remove-DataStream",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create data streamsData setsDestinationsFunction indexActivation history: Get-DataStreamActivationHistoryData set fields: Get-DatastreamDatasetsData stream: Get-DataStreamEDNS zones: Get-DatastreamEDNSZonesGroups: Get-DatastreamGroupsGTM properties: Get-DatastreamGTMPropertiesHistory: Get-DataStreamHistoryProperties: Get-DatastreamPropertiesUpload metrics: Get-DataStreamMetricsActivation: New-DataStreamActivationData stream: New-DataStreamDeactivation: New-DataStreamDeactivationData stream: Set-DataStreamData stream: Update-DataStreamData stream: Remove-DataStream",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

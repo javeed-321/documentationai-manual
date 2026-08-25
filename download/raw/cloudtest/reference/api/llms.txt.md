@@ -1,0 +1,21 @@
+# CloudTest Documentation
+
+> Using Akamai's CloudTest to optimize your approach to load testing with a scalable, global platform. CloudTest provides testing capabilities for web and mobile apps, APIs, databases, and web services. Realtime analytics and customizable dashboards provide actionable intelligence, allowing for root-cause analysis while tests run.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloudtest/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+- [CloudTest API](https://techdocs.akamai.com/cloudtest/reference/api.md)
+- [API summary](https://techdocs.akamai.com/cloudtest/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/cloudtest/reference/get-started.md)
+- [API concepts](https://techdocs.akamai.com/cloudtest/reference/api-concepts.md)
+- [Rate limiting](https://techdocs.akamai.com/cloudtest/reference/rate-limiting.md)
+- [Asynchronous operations](https://techdocs.akamai.com/cloudtest/reference/asynchronous-operations.md)
+- [Errors](https://techdocs.akamai.com/cloudtest/reference/errors.md)
+- [400](https://techdocs.akamai.com/cloudtest/reference/400.md)
+- [401](https://techdocs.akamai.com/cloudtest/reference/401.md)
+- [403](https://techdocs.akamai.com/cloudtest/reference/403.md)
+- [404](https://techdocs.akamai.com/cloudtest/reference/404.md)
+- [405](https://techdocs.akamai.com/cloudtest/reference/405.md)
+- [429](https://techdocs.akamai.com/cloudtest/reference/429.md)
+- [500](https://techdocs.akamai.com/cloudtest/reference/500.md)

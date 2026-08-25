@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/sla/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/sla/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/sla/llms.txt",
+  "title": "SLA",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: SLA",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: SLA",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        17
+      ],
+      "raw": "- [Set up SLA test configurations](https://techdocs.akamai.com/powershell/docs/set-up-sla-test-configurations.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/sla-index.md)\n- [Availability report](https://techdocs.akamai.com/powershell/docs/get-slaavailabilityreport.md): Get-SLAAvailabilityReport\n- [Performance report](https://techdocs.akamai.com/powershell/docs/get-slaperformancereport.md): Get-SLAPerformanceReport\n- [Test agent group](https://techdocs.akamai.com/powershell/docs/get-slatestagentgroup.md): Get-SLATestAgentGroup\n- [Test configuration](https://techdocs.akamai.com/powershell/docs/get-slatestconfiguration.md): Get-SLATestConfiguration\n- [Test configuration quota](https://techdocs.akamai.com/powershell/docs/get-slatestconfigurationquota.md): Get-SLATestConfigurationQuota\n- [Test configuration](https://techdocs.akamai.com/powershell/docs/new-slatestconfiguration.md): New-SLATestConfiguration\n- [Test configuration](https://techdocs.akamai.com/powershell/docs/remove-slatestconfiguration.md): Remove-SLATestConfiguration\n- [Test configuration](https://techdocs.akamai.com/powershell/docs/set-slatestconfiguration.md): Set-SLATestConfiguration",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Set up SLA test configurationsFunction indexAvailability report: Get-SLAAvailabilityReportPerformance report: Get-SLAPerformanceReportTest agent group: Get-SLATestAgentGroupTest configuration: Get-SLATestConfigurationTest configuration quota: Get-SLATestConfigurationQuotaTest configuration: New-SLATestConfigurationTest configuration: Remove-SLATestConfigurationTest configuration: Set-SLATestConfiguration",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+# Edge Diagnostics Documentation
+
+> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/edge-diagnostics/reference/api/llms.txt): full category index
+- [Edge Diagnostics API](https://techdocs.akamai.com/edge-diagnostics/reference/edge-diagnostics-api-1.md)
+- [API summary](https://techdocs.akamai.com/edge-diagnostics/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/edge-diagnostics/reference/get-started.md)
+- [Rate limiting](https://techdocs.akamai.com/edge-diagnostics/reference/rate-limiting.md)
+- [Asynchronous processes](https://techdocs.akamai.com/edge-diagnostics/reference/asynchronous-processes.md)
+- [Site Shield requests](https://techdocs.akamai.com/edge-diagnostics/reference/site-shield-requests.md)
+- [Sensitive request headers](https://techdocs.akamai.com/edge-diagnostics/reference/sensitive-headers.md)
+- [Errors](https://techdocs.akamai.com/edge-diagnostics/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/edge-diagnostics/reference/400.md)
+- [401](https://techdocs.akamai.com/edge-diagnostics/reference/401.md)
+- [403](https://techdocs.akamai.com/edge-diagnostics/reference/403.md)
+- [404](https://techdocs.akamai.com/edge-diagnostics/reference/404.md)
+- [405](https://techdocs.akamai.com/edge-diagnostics/reference/405.md)
+- [429](https://techdocs.akamai.com/edge-diagnostics/reference/429.md)
+- [500](https://techdocs.akamai.com/edge-diagnostics/reference/500.md)
+
+## API Reference: Edge server locations
+
+- [Edge server locations index](https://techdocs.akamai.com/edge-diagnostics/reference/edge-server-locations/llms.txt): full category index
+- [List available edge server locations](https://techdocs.akamai.com/edge-diagnostics/reference/get-edge-locations.md): Lists active edge server locations you can use to run [Request content with cURL](ref:post-curl), [Get domain details with dig](ref:post-dig), [Test network connectivity with MTR](ref:post-mtr), [Run the URL health check](ref:post-url-health-check), [Run the connectivity problems scenario](ref:post-connectivity-problems), and [Run the content problems scenario](ref:post-content-problems) operations. To get a subset of edge servers supporting metadata tracer, run the [List available edge server locations for metadata tracing](ref:get-mdt-locations) operation.
+
+## API Reference: IP verification
+
+- [IP verification index](https://techdocs.akamai.com/edge-diagnostics/reference/ip-verification/llms.txt): full category index
+- [Verify an IP](https://techdocs.akamai.com/edge-diagnostics/reference/post-verify-edge-ip.md): Verifies if an IP belongs to an edge server. For IPs verified positively, you can continue gathering diagnostic data with [Request content with cURL](ref:post-curl), [Get domain details with dig](ref:post-dig), or [Test network connectivity with MTR](ref:post-mtr) operations. You can enter up to 10 IPs.
+
+## API Reference: IP network location
+
+- [IP network location index](https://techdocs.akamai.com/edge-diagnostics/reference/ip-network-location/llms.txt): full category index
+- [Locate an IP network](https://techdocs.akamai.com/edge-diagnostics/reference/post-locate-ip.md): Returns geolocation data of an IP's network. You can enter up to 10 IPs.
+
+## API Reference: IP verification and location
+
+- [IP verification and location index](https://techdocs.akamai.com/edge-diagnostics/reference/ip-verification-and-location/llms.txt): full category index
+- [Verify and locate an IP](https://techdocs.akamai.com/edge-diagnostics/reference/post-verify-locate-ip.md): Verifies if an IP belongs to an edge server and gets the geolocation data of its network. For IPs verified positively, you can continue gathering diagnostic data with [Request content with cURL](ref:post-curl), [Get domain details with dig](ref:post-dig), or [Test network connectivity with MTR](ref:post-mtr) operations.
+
+## API Reference: GTM properties
+
+- [GTM properties index](https://techdocs.akamai.com/edge-diagnostics/reference/gtm-properties/llms.txt): full category index
+- [List GTM properties](https://techdocs.akamai.com/edge-diagnostics/reference/get-gtm-properties.md): Lists GTM properties you have access to. You can use the returned `hostname` values to run [Test network connectivity with MTR](ref:post-mtr) and [Get domain details with dig](ref:post-dig) operations for a GTM hostname. Note, that the [Test network connectivity with MTR](ref:post-mtr) operation requires also hostname's test and target IP values, that you can get with the [List test and target IPs for a GTM hostname](ref:get-gtm-property-domain-gtm-property-ips) operation.
+- [List test and target IPs for a GTM hostname](https://techdocs.akamai.com/edge-diagnostics/reference/get-gtm-property-domain-gtm-property-ips.md): Lists test and target IPs for a GTM property. You can use the returned data to run the [Test network connectivity with MTR](ref:post-mtr) operation for a GTM hostname. To get the data necessary for this request, run the [List GTM properties](ref:get-gtm-properties) operation first.
+
+## API Reference: IPA hostnames
+
+- [IPA hostnames index](https://techdocs.akamai.com/edge-diagnostics/reference/ipa-hostnames/llms.txt): full category index
+- [List IP acceleration hostnames](https://techdocs.akamai.com/edge-diagnostics/reference/get-ipa-hostnames.md): Lists IP acceleration (IPA) hostnames you have  access to and can [generate a diagnostic link](ref:post-user-diagnostic-data-groups) to collect  diagnostic data.
+
+## API Reference: Error translator
+
+- [Error translator index](https://techdocs.akamai.com/edge-diagnostics/reference/error-translator/llms.txt): full category index
+- [Translate error string](https://techdocs.akamai.com/edge-diagnostics/reference/post-error-translator.md): Launches an [asynchronous](ref:asynchronous-processes) request to fetch summary and logs for an error with a specific reference code. You can also translate any Global Request Number (GRN) generated by the Property Manager's Global Request Number behavior. You can get the error logs from the last 6 or 24 hours depending on the server and traffic conditions. For operations in progress, the returned object contains `retryAfter`, `requestId`, and `link`. In this case, wait for the duration of the `retryAfter` interval, then either use the `requestId` to run the [Get a translate error string response](ref:get-error-translator-request) operation, or simply GET the `link`.
+- [Get a translate error string response](https://techdocs.akamai.com/edge-diagnostics/reference/get-error-translator-request.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Translate error string](ref:post-error-translator) request. For operations with the `SUCCESS` status, the response includes details about the error. For operations in progress, the returned object contains `retryAfter`, `requestId`, and `link`. In this case, wait for the duration of the `retryAfter` interval, then run this operation again or simply GET the `link`.
+
+## API Reference: User diagnostic data
+
+- [User diagnostic data index](https://techdocs.akamai.com/edge-diagnostics/reference/user-diagnostic-data/llms.txt): full category index
+- [Generate a diagnostic link](https://techdocs.akamai.com/edge-diagnostics/reference/post-user-diagnostic-data-groups.md): Generates a diagnostic link for you to share with end users of a particular URL or IP acceleration hostname experiencing similar issues.  After an end user clicks the link, the tool gathers necessary diagnostic data and asks the end user to submit it. Once submitted, you can check the collected data with  the [Get diagnostic data of a group](ref:get-user-diagnostic-data-group-records) operation. Each link is valid for 7 days of 50 submissions. To get the list of IP acceleration hostname you can collect diagnostic data for, run the [List IP acceleration hostnames](ref:get-ipa-hostnames) operation first.
+- [List end user groups](https://techdocs.akamai.com/edge-diagnostics/reference/get-user-diagnostic-data-groups.md): Lists groups created for collecting diagnostic data and their details. A group stores diagnostic data of end users of a particular domain experiencing similar issues submitted with the specific diagnostic link. To create the diagnostic link, run the [Generate a diagnostic link](ref:post-user-diagnostic-data-groups) operation. To check the data collected for a group, store the returned `groupId` value and use it to run the [Get diagnostic data of a group](ref:get-user-diagnostic-data-group-records) operation.
+- [Get diagnostic data for an end user group](https://techdocs.akamai.com/edge-diagnostics/reference/get-user-diagnostic-data-group-records.md): Returns collected diagnostic data for a specific group. You can also request additional cURL, DIG, and MTR data. To get the `groupId` value, run the [List groups](ref:get-user-diagnostic-data-groups) operation first.
+
+## API Reference: Error statistics
+
+- [Error statistics index](https://techdocs.akamai.com/edge-diagnostics/reference/error-statistics/llms.txt): full category index
+- [Get error statistics](https://techdocs.akamai.com/edge-diagnostics/reference/post-estats.md): Returns HTTP status codes distribution statistics from delivering a URL or CP code based on the nine-second traffic sample from the last two minutes. You can filter the results by `delivery` and `errorType`. The `delivery` is the delivery type of your resource, either `ENHANCED_TLS` or `STANDARD_TLS`. The `STANDARD_TLS` value returns data for the HTTP traffic with Standard TLS hostname,  whereas `ENHANCED_TLS` for the HTTPS traffic with Enhanced TLS hostname.  Without this filter, Edge Diagnostics checks on its own the type of delivery used by your resource and returns data for it. If your resource uses both delivery types, then Edge Diagnostics returns data for the type which got all data collected faster. If you choose the delivery type not used by your resource, then the results are empty. If you want to add this filter, you can run the [Get an edge hostname](https://techdocs.akamai.com/edge-hostnames/reference/get-edgehostnameid)  operation in [Edge Hostnames API](https://techdocs.akamai.com/edge-hostnames/reference/api) to confirm the delivery type of your resource. It's the `securityType` value.  The `errorType` filter is for the traffic's direction. The `EDGE_ERRORS` value returns data for the traffic between a customer and an edge server and `ORIGIN_ERRORS` between the edge server and the origin. Without this filter, Edge Diagnostics returns data for both directions.
+
+## API Reference: Metadata Tracer
+
+- [Metadata Tracer index](https://techdocs.akamai.com/edge-diagnostics/reference/metadata-tracer/llms.txt): full category index
+- [Launch a metadata tracing request](https://techdocs.akamai.com/edge-diagnostics/reference/post-mdt.md): Launches an [asynchronous](ref:asynchronous-processes) request to trace metadata for a URL configured in Property Manager. The metadata tracing works for the current property version active either on staging or production. To run the operation for a location, run the [List available locations for metadata tracing](ref:get-mdt-locations) operation first to get available values. If you don't provide a location ID or an edge server IP, then Edge Diagnostics runs the operation using a random location. The operation doesn't support requests for zone apex mapping (ZAM) and hostnames lacking a CNAME on the staging environment.
+- [List available edge server locations for metadata tracing](https://techdocs.akamai.com/edge-diagnostics/reference/get-mdt-locations.md): Lists active locations you can use to run the [Launch a metadata tracing request](ref:post-mdt) operation together with information about supported HTTP methods. The operation responds with a subset of edge servers returned by the [List available edge server locations](ref:get-edge-locations) operation.
+- [Check a metadata tracing request status](https://techdocs.akamai.com/edge-diagnostics/reference/get-mdt-request.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Launch a Metadata Tracer request](ref:post-mdt) operation. For operations with the `SUCCESS` status, the response includes the metadata details. For requests with the `Accept: text/html` request header, results are in static HTML format. To learn more about the results, check [How to read the results](ref:mdt-results).
+- [How to read the results](https://techdocs.akamai.com/edge-diagnostics/reference/mdt-results.md)
+
+## API Reference: ESI debugger
+
+- [ESI debugger index](https://techdocs.akamai.com/edge-diagnostics/reference/esi-debugger/llms.txt): full category index
+- [Get an ESI debugging report](https://techdocs.akamai.com/edge-diagnostics/reference/post-debug.md): This operation provides a debugging report on the ESI code of your source page and all pages that the source page references.
+
+## API Reference: CURL
+
+- [CURL index](https://techdocs.akamai.com/edge-diagnostics/reference/curl/llms.txt): full category index
+- [Request content with cURL](https://techdocs.akamai.com/edge-diagnostics/reference/post-curl.md): Requests content using the `curl` command to provide the raw HTML for a URL, including request headers. You can run this operation for a specific location, an edge server IP, or a Site Shield map. If you want to get the data for a location, you need to run the [List available edge server locations](ref:get-edge-locations) operation first to get `edgeLocationId`. And if you want to run this operation for an IP,  you may need to [verify an IP](ref:post-verify-edge-ip) to check if it belongs to an edge server. If you provide neither a location nor an edge server IP, then Edge Diagnostics runs the operation using a random edge server IP.
+
+## API Reference: GREP
+
+- [GREP index](https://techdocs.akamai.com/edge-diagnostics/reference/grep/llms.txt): full category index
+- [Launch a GREP request](https://techdocs.akamai.com/edge-diagnostics/reference/post-grep.md): Launches an [asynchronous](ref:asynchronous-processes) request to fetch logs for an edge server IP address using the `grep` command.  To verify if an IP belongs to an edge server, run the [Verify an IP](ref:post-verify-edge-ip) operation first. If you known the exact values to filter the logs by and you want to get the data directly, run the synchronous [Get specific logs](ref:get-grep) operation.
+- [Get specific logs](https://techdocs.akamai.com/edge-diagnostics/reference/get-grep.md): Using the `grep` command, returns logs that match the query parameters. This operation gets the data  directly. If you don't have detailed information about the logs or you want to avoid latency, run the [Launch a GREP request](ref:post-grep) operation. If you provide request parameters  for which Edge Diagnostics doesn't find logs, you get the validation error.
+- [Check a GREP request status](https://techdocs.akamai.com/edge-diagnostics/reference/get-grep-request.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Launch a GREP request](ref:post-grep) request.  Operations with the `SUCCESS` status include also the `grep` logs.
+
+## API Reference: ARL translator
+
+- [ARL translator index](https://techdocs.akamai.com/edge-diagnostics/reference/arl-translator/llms.txt): full category index
+- [Translate an Akamaized URL](https://techdocs.akamai.com/edge-diagnostics/reference/post-translated-url.md): Provides basic information about a specific hostname or domain name, such as typecode, origin server, CP code, serial number, and TTL. A URL becomes an [Akamaized URL (ARL)](doc:arl-syntax) once it's on an edge server.
+
+## API Reference: DIG
+
+- [DIG index](https://techdocs.akamai.com/edge-diagnostics/reference/dig/llms.txt): full category index
+- [Get domain details with dig](https://techdocs.akamai.com/edge-diagnostics/reference/post-dig.md): Uses the `dig` command to provide DNS details for the location  of an edge server, a hostname or a domain name, or a GTM hostname. The results may help you diagnose issues with domain name resolutions.  You can run this operation either for a specific location or an edge IP. If you want to get the data for a location, you need to run the [List available edge server locations](ref:get-edge-locations) operation first to get `edgeLocationId`. To run this operation for an IP,  you may need to [verify an IP](ref:post-verify-edge-ip), if it belongs to an edge server. And to run this operation for a GTM hostname, you need to run the [List GTM properties](ref:get-gtm-properties) operation first. If you don't provide neither a location ID nor an edge server IP, then Edge Diagnostics runs the operation using a random edge server IP.
+
+## API Reference: MTR
+
+- [MTR index](https://techdocs.akamai.com/edge-diagnostics/reference/mtr/llms.txt): full category index
+- [Test network connectivity with MTR](https://techdocs.akamai.com/edge-diagnostics/reference/post-mtr.md): Uses MTR to provide information about packet loss and latency between an edge server IP, location, or Site Shield map and a remote destination. To run this operation for an IP, you may need to [verify an IP](ref:post-verify-edge-ip) if it belongs to an edge server. To run this operation for a GTM hostname, run [List GTM properties](ref:get-gtm-properties) and [List test and target IPs for a GTM hostname](ref:get-gtm-property-domain-gtm-property-ips) operations first to get the test and target IPs for the hostname.
+
+## API Reference: URL Health Check
+
+- [URL Health Check index](https://techdocs.akamai.com/edge-diagnostics/reference/url-health-check/llms.txt): full category index
+- [Run the URL health check](https://techdocs.akamai.com/edge-diagnostics/reference/post-url-health-check.md): Launches an [asynchronous](ref:asynchronous-processes) request to simultaneously run [Launch a GREP request](ref:post-grep), [Get domain details with dig](ref:post-dig), [Request content with cURL](ref:post-curl), [Test network connectivity with MTR](ref:post-mtr) and [Translate an Akamaized URL](ref:post-translated-url) operations for a URL. Successful operations return fetched GREP, dig, cURL, and MTR data and [Akamaized URL (ARL)](doc:arl-syntax) details.
+- [Get a URL health check response](https://techdocs.akamai.com/edge-diagnostics/reference/get-url-health-check-requests.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Run the URL health check](ref:post-url-health-check) request. Operations with the `SUCCESS` status include also fetched GREP, dig, cURL, and MTR data.
+
+## API Reference: Connectivity problems
+
+- [Connectivity problems index](https://techdocs.akamai.com/edge-diagnostics/reference/connectivity-problems/llms.txt): full category index
+- [Run the Connectivity problems scenario](https://techdocs.akamai.com/edge-diagnostics/reference/post-connectivity-problems.md): Launches an [asynchronous](ref:asynchronous-processes) request to simultaneously run [Launch a GREP request](ref:post-grep), [Request content with cURL](ref:post-curl), and [Test network connectivity with MTR](ref:post-mtr) operations for a URL. It may help you diagnose issues with slow download and high response time. Successful operations return fetched GREP, cURL, and MTR data.
+- [Get the Connectivity problems scenario response](https://techdocs.akamai.com/edge-diagnostics/reference/get-connectivity-problems-request.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Run the connectivity problems scenario](ref:post-connectivity-problems) request. Operations with the `SUCCESS` status include also fetched GREP, cURL, and MTR data.
+
+## API Reference: Content problems
+
+- [Content problems index](https://techdocs.akamai.com/edge-diagnostics/reference/content-problems/llms.txt): full category index
+- [Run the Content problems scenario](https://techdocs.akamai.com/edge-diagnostics/reference/post-content-problems.md): Launches an [asynchronous](ref:asynchronous-processes) request to simultaneously run [Launch a GREP request](ref:post-grep) and [Request content with cURL](ref:post-curl) operations for a URL. It may help you diagnose issues with slow download and high response time. Successful operations return fetched GREP and cURL data.
+- [Get the Content problems scenario response](https://techdocs.akamai.com/edge-diagnostics/reference/get-content-problems.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Run the content problems scenario](ref:post-content-problems) request. Operations with the `SUCCESS` status include fetched GREP and cURL data.

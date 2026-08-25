@@ -1,0 +1,11 @@
+# CloudTest Documentation
+
+> Using Akamai's CloudTest to optimize your approach to load testing with a scalable, global platform. CloudTest provides testing capabilities for web and mobile apps, APIs, databases, and web services. Realtime analytics and customizable dashboards provide actionable intelligence, allowing for root-cause analysis while tests run.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloudtest/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Results management
+- [Request a delete of test results](https://techdocs.akamai.com/cloudtest/reference/post-result-delete.md): This action submits a background task to delete results. It returns a jobId.  Use the jobId to make subsequent calls to track the status of the task.
+- [List results management tasks](https://techdocs.akamai.com/cloudtest/reference/get-management-tasks.md): Get a list of all tasks.
+- [Get a results management task](https://techdocs.akamai.com/cloudtest/reference/get-mgmt-task.md): Returns task info for the specified task.
+- [Stop a results management task](https://techdocs.akamai.com/cloudtest/reference/delete-mgmt-task.md): Attempts to stop a task.  Stopping a task doesn't undo any deleted results. It just tells the task to stop as quickly as it can. A status of `STOPPED` means that the task was stopped before it completed. A status of `COMPLETED` means that the task completed before it received the stop command.

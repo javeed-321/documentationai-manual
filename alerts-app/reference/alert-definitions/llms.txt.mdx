@@ -1,0 +1,20 @@
+---
+title: "Alert definitions"
+---
+
+# Alerts Documentation
+
+> Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.
+
+## API Reference: Alert definitions
+
+- [Create a new alert](https://techdocs.akamai.com/alerts-app/reference/post-definition.md): Creates a new alert definition based on a template. The template's required `fields` represent criteria you may use to trigger an alert, but the new definition's `fields` specify the set of values that actually trigger the alert. After you create a new alert, it may take a couple of minutes before it has enough information before it can fire.
+- [List alerts](https://techdocs.akamai.com/alerts-app/reference/get-definitions.md): Lists alert instances that are configured to fire under certain conditions. Optionally filter alerts by relevant fields or their values.
+- [Get an alert](https://techdocs.akamai.com/alerts-app/reference/get-definition.md): Get a single alert instance that is configured to fire under certain conditions.
+- [Update an alert](https://techdocs.akamai.com/alerts-app/reference/put-definition.md): Modifies the criteria that determine when an alert fires.
+- [Remove an alert](https://techdocs.akamai.com/alerts-app/reference/delete-definition.md): Deletes an alert and stops it from firing. It can take a few minutes to propagate alert deactivation.
+- [List adaptive alert activity log](https://techdocs.akamai.com/alerts-app/reference/get-definition-alert-activities.md): Lists a history of an alert definition's _modifications_. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.
+- [List fired alerts](https://techdocs.akamai.com/alerts-app/reference/get-definition-alert-firings.md): Lists a history of an alert definition's _firings_. Firings for the last 30 days are arranged chronologically in the `data` array, with the most recent at the end.  This lists alerts that have a defined `endTime` to indicate they are no longer in progress. For others, run the [List active firings](/reference/get-active-alert-firings) operation.
+- [Create a new modeling suppressions](https://techdocs.akamai.com/alerts-app/reference/post-definition-suppression.md): Creates a new time range for an adaptive alert definition that gets ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.
+- [List modeling suppressions](https://techdocs.akamai.com/alerts-app/reference/get-definition-suppressions.md): Lists all time ranges for an adaptive alert definition that are ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.
+- [Unsuppress alert modeling](https://techdocs.akamai.com/alerts-app/reference/delete-definition-suppression.md): Removes a suppression, and makes an adaptive alert definition reconsider a previously suppressed period of time when modeling your site's expected range of behavior. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert. Suppressions that are too old to affect alert firings are automatically removed, so there is no need to run this operation simply to trim them from the [list of modeling suppressions](/reference/get-definition-suppressions).

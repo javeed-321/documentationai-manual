@@ -1,0 +1,106 @@
+{
+  "slug": "edge-dns/docs/monitor-and-report/llms.txt",
+  "source": "https://techdocs.akamai.com/edge-dns/docs/monitor-and-report/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edge-dns/docs/monitor-and-report/llms.txt",
+  "title": "Monitor and report",
+  "description": "",
+  "section": "Edge DNS",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Edge DNS Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Edge DNS Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-dns/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-dns/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Monitor and report",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Monitor and report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        21
+      ],
+      "raw": "- [Set up infrastructure security analytics](https://techdocs.akamai.com/edge-dns/docs/security-analytics.md)\n- [NXDOMAIN spike detection](https://techdocs.akamai.com/edge-dns/docs/nxdomain-spike-detection.md)\n- [Dangling CNAME detection](https://techdocs.akamai.com/edge-dns/docs/dangling-cname-detection.md)\n- [DNS hijacking detection](https://techdocs.akamai.com/edge-dns/docs/dns-hijacking-detection.md)\n- [Related domain detection](https://techdocs.akamai.com/edge-dns/docs/related-domain-detection.md)\n- [Manage the related domains report](https://techdocs.akamai.com/edge-dns/docs/manage-related-domains.md)\n- [Manage infrastructure security analytics](https://techdocs.akamai.com/edge-dns/docs/manage-security-analytics.md)\n- [Create a destination in Infrastructure Security Analytics](https://techdocs.akamai.com/edge-dns/docs/create-destination-sa.md)\n- [Monitor and report on service, traffic, and threats](https://techdocs.akamai.com/edge-dns/docs/monitor-rpt-svc-traffic-threats.md)\n- [Monitor and report on events](https://techdocs.akamai.com/edge-dns/docs/monitor-rpt-events.md)\n- [Monitor performance with alerts](https://techdocs.akamai.com/edge-dns/docs/monitor-perf-alerts.md)\n- [Schedule log delivery](https://techdocs.akamai.com/edge-dns/docs/enable-log-delivery.md)\n- [Send Edge DNS data to your SIEM solution](https://techdocs.akamai.com/edge-dns/docs/edns-siem-config.md)\n- [Send Prolexic data to your SIEM solution](https://techdocs.akamai.com/edge-dns/docs/prolexic-data-to-siem.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Set up infrastructure security analyticsNXDOMAIN spike detectionDangling CNAME detectionDNS hijacking detectionRelated domain detectionManage the related domains reportManage infrastructure security analyticsCreate a destination in Infrastructure Security AnalyticsMonitor and report on service, traffic, and threatsMonitor and report on eventsMonitor performance with alertsSchedule log deliverySend Edge DNS data to your SIEM solutionSend Prolexic data to your SIEM solution",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

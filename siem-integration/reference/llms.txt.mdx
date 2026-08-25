@@ -1,0 +1,34 @@
+---
+title: "API Reference index"
+description: "full section index"
+---
+
+# SIEM Integration Documentation
+
+> Akamai’s SIEM Integration Solution integrates third-party Security Information and Event Management (SIEM) applications with Akamai Security Business Unit solutions including Kona Site Defender, Bot Manager, Client Reputation, and Web Application Protector. This solution lets customers choose security configurations and firewall policies that capture and filter security events based on an attack category.  Cloud Security customers can leverage pre-built connectors with Splunk, HP ArchSight, IBM QRadar, and Intel McAfee SIEM applications. They can also develop their own custom connector for specific SIEM solutions. The SIEM connector uses an Akamai API to pull security events data into the SIEM application securely and in real time.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/siem-integration/reference/api/llms.txt): full category index
+- [SIEM Integration API](https://techdocs.akamai.com/siem-integration/reference/api.md)
+- [API summary](https://techdocs.akamai.com/siem-integration/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/siem-integration/reference/api-get-started.md)
+- [Query modes](https://techdocs.akamai.com/siem-integration/reference/query-parameter-combinations.md)
+- [Rate limits](https://techdocs.akamai.com/siem-integration/reference/rate-limits.md)
+- [Multi-JSON responses](https://techdocs.akamai.com/siem-integration/reference/multi-json-response-format-1.md)
+- [Configuration rule data](https://techdocs.akamai.com/siem-integration/reference/configuration-rule.md)
+- [Offset context](https://techdocs.akamai.com/siem-integration/reference/offsetcontext.md)
+- [Errors](https://techdocs.akamai.com/siem-integration/reference/errors.md)
+- [400](https://techdocs.akamai.com/siem-integration/reference/400.md)
+- [403](https://techdocs.akamai.com/siem-integration/reference/403.md)
+- [404](https://techdocs.akamai.com/siem-integration/reference/404.md)
+- [416](https://techdocs.akamai.com/siem-integration/reference/416.md)
+- [428](https://techdocs.akamai.com/siem-integration/reference/428.md)
+- [429](https://techdocs.akamai.com/siem-integration/reference/429.md)
+- [500](https://techdocs.akamai.com/siem-integration/reference/500.md)
+- [503](https://techdocs.akamai.com/siem-integration/reference/503.md)
+
+## API Reference: Security Events
+
+- [Security Events index](https://techdocs.akamai.com/siem-integration/reference/security-events/llms.txt): full category index
+- [Fetch security events](https://techdocs.akamai.com/siem-integration/reference/get-config.md): Get security events data from your security configurations using one of two modes: [offset or time-based](https://techdocs.akamai.com/siem-integration/reference/query-parameter-combinations). Each mode orders event logs based on the logs' storage time in the database, not the time when the events actually occurred. This may result in delayed event logs in subsequent offset requests, or older event logs in time-based requests. While both methods have a 5-second latency, using `offset` allows subsequent calls to return logs for the 5 seconds omitted from the previous request. The time-based method omits logs from that 5 seconds of latency, so you may miss some logs from that period.   If the connection is disrupted, use time-based mode to replay security events that occurred in the last 12 hours up to 5 seconds before your requested time range. Use `offset` and `limit` parameters in offset mode. Use `from`, `to`, and `limit` parameters in time-based mode. The potentially large response contains a series of JSON objects, each separated with a line break and each corresponding to a security event. The last line of the response is an [offset context](https://techdocs.akamai.com/siem-integration/reference/offsetcontext) object that provides `total` records fetched, an `offset` to use a starting point for the next batch of data, and any `limit` you specified. Run this operation continuously as long as it returns new logs to ensure you don't miss any. The API may return a maximum of 600,000 logs per request, while your configurations might generate many more in periods of high traffic.

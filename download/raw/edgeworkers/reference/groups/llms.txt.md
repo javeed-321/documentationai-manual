@@ -1,0 +1,9 @@
+# EdgeWorkers Documentation
+
+> Use Akamai's EdgeWorkers service to execute JavaScript functions at the edge and create customized web experiences based on geolocation, device characteristics, and more.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edgeworkers/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Groups
+- [List permission groups](https://techdocs.akamai.com/edgeworkers/reference/get-groups.md): View a list of groups and the associated permission capabilities, for example: activate a version or fetch an EdgeWorker ID.
+- [Get a permission group](https://techdocs.akamai.com/edgeworkers/reference/get-group.md): View details on the capabilities enabled within a specified group, for example: activate a version or fetch an EdgeWorker ID.

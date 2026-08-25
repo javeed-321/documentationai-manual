@@ -1,0 +1,18 @@
+# Cloud Access Manager Documentation
+
+> Akamai's Cloud Access Manager enables cloud origin authentication and allows you to securely store and manage your cloud origin credentials in the form of access keys.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloud-access-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Access keys
+- [Create an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/post-access-key.md): Creates a new access key. An access key's name needs to be unique within a user account. Once an access key has been created, it's available on both the staging and production Akamai networks.
+- [List access keys](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-keys.md): Returns detailed information about all access keys available to the current user account.
+- [Get an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key.md): Returns details for a specific access key.
+- [Update an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/put-access-key.md): Updates an access key's name.
+- [Delete an access key](https://techdocs.akamai.com/cloud-access-mgr/reference/delete-access-key.md): Deletes a specific access key.
+- [Create an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/post-access-key-version.md): Rotates an access key to a new version. You should only need to do this if your cloud provider credentials have changed, for example because they've expired or been compromised. Only two versions of an access key can exist and be active at the same time. If you have two access key versions you have to [delete](ref:delete-access-key-version) one of them before you can create another version.
+- [List access key versions](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-versions.md): Returns detailed information about all of the versions for a specific access key.
+- [Get an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-version.md): Returns detailed information for a specific version of an access key.
+- [Delete an access key version](https://techdocs.akamai.com/cloud-access-mgr/reference/delete-access-key-version.md): Deletes a specific version of an access key. This operation works asynchronously. If you receive a successful 202 response, the request has been accepted and it's been added to the queue for deletion. You can use the `Location` header that's returned in the response to check the status of the request. You can't delete an access key version if it is still in use.
+- [Look up properties](https://techdocs.akamai.com/cloud-access-mgr/reference/get-access-key-version-properties.md): Returns information about all of the Property Manager properties that use a specific version of an access key. This operation gets the data directly. To avoid any latency problems, run the [Perform a property lookup request asynchronously](ref:get-property-lookup) operation.
+- [Get an ID for an asynchronous property lookup request](https://techdocs.akamai.com/cloud-access-mgr/reference/get-async-version-property-lookup.md): Get the unique identifier used to perform an [asynchronous property lookup request](ref:get-property-lookup).

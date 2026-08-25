@@ -1,0 +1,106 @@
+{
+  "slug": "client-access-control/docs/update-the-cidr-block-list/llms.txt",
+  "source": "https://techdocs.akamai.com/client-access-control/docs/update-the-cidr-block-list/llms.txt.md",
+  "url": "https://techdocs.akamai.com/client-access-control/docs/update-the-cidr-block-list/llms.txt",
+  "title": "Update the CIDR block list",
+  "description": "",
+  "section": "Client Access Control",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Client Access Control Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Client Access Control Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Manage access between your web assets and the edge servers on the Akamai network. With Client Access Control you can retrieve information about the CIDR blocks that currently connect your content to the Akamai network. When Akamai updates the CIDR blocks used for access, use Client Access Control to review the changes and send an acknowledgement to Akamai once you update your Access Control List.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Manage access between your web assets and the edge servers on the Akamai network. With Client Access Control you can retrieve information about the CIDR blocks that currently connect your content to the Akamai network. When Akamai updates the CIDR blocks used for access, use Client Access Control to review the changes and send an acknowledgement to Akamai once you update your Access Control List.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/client-access-control/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/client-access-control/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Update the CIDR block list",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Update the CIDR block list",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [Process overview](https://techdocs.akamai.com/client-access-control/docs/process-ov.md)\n- [Access the CIDR Lists application](https://techdocs.akamai.com/client-access-control/docs/access-cidr-lists-app.md)\n- [Review the CIDR List screen fields](https://techdocs.akamai.com/client-access-control/docs/review-cidr-list-screen-fields.md)\n- [Review and download proposed CIDR Lists](https://techdocs.akamai.com/client-access-control/docs/review-dl-proposed-cidr-lists.md)\n- [Update the CIDR Lists on your network](https://techdocs.akamai.com/client-access-control/docs/update-cidr-lists-network.md)\n- [Acknowledge that you have updated the CIDR Lists](https://techdocs.akamai.com/client-access-control/docs/acknowledge-have-updated-cidr-lists.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Process overviewAccess the CIDR Lists applicationReview the CIDR List screen fieldsReview and download proposed CIDR ListsUpdate the CIDR Lists on your networkAcknowledge that you have updated the CIDR Lists",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

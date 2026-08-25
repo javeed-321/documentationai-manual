@@ -1,0 +1,21 @@
+# Ion Documentation
+
+> No matter how users choose to connect, Akamai Ion offers them a seamless experience across different device types and network conditions. Akamai continuously monitors real users, automatically applies best practice performance optimizations, and adapts experiences as content, user behavior, and network conditions change. Ion combines the scalability of Akamai’s global content delivery platform with fast dynamic content acceleration. Ion also leverages Akamai cellular optimizations that lower both latency and user engagement disruptions.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/ion/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Custom configuration
+- [Create a new custom Ion property](https://techdocs.akamai.com/ion/docs/create-a-new-ion-property.md)
+- [Define property hostnames](https://techdocs.akamai.com/ion/docs/define-property-hostnames.md)
+- [Define property variables (optional)](https://techdocs.akamai.com/ion/docs/define-property-variables-optional.md)
+- [Define property configuration settings](https://techdocs.akamai.com/ion/docs/define-property-configuration-settings.md)
+- [Configure the Default Rule](https://techdocs.akamai.com/ion/docs/set-up-your-origin-server.md)
+- [Configure the Augment insights rule](https://techdocs.akamai.com/ion/docs/the-augment-insights-rule.md)
+- [Configure the Accelerate delivery rule](https://techdocs.akamai.com/ion/docs/configure-the-accelerate-delivery-rule.md)
+- [Configure the Offload origin rule](https://techdocs.akamai.com/ion/docs/configure-the-origin-offload-rule.md)
+- [Configure the Strengthen security rule](https://techdocs.akamai.com/ion/docs/configure-the-strengthen-security-rule.md)
+- [Configure the Increase availability rule](https://techdocs.akamai.com/ion/docs/configure-the-increase-availability-rule.md)
+- [Configure the Minimize payload rule](https://techdocs.akamai.com/ion/docs/configure-the-minimize-payload-rule.md)
+- [Finalize your Ion property](https://techdocs.akamai.com/ion/docs/finalize-your-ion-property.md)
+- [Test your Ion property](https://techdocs.akamai.com/ion/docs/test-your-ion-property.md)
+- [Go live with Ion](https://techdocs.akamai.com/ion/docs/go-live-with-ion.md)

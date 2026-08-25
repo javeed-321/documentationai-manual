@@ -1,0 +1,17 @@
+# SIEM Integration Documentation
+
+> Akamai’s SIEM Integration Solution integrates third-party Security Information and Event Management (SIEM) applications with Akamai Security Business Unit solutions including Kona Site Defender, Bot Manager, Client Reputation, and Web Application Protector. This solution lets customers choose security configurations and firewall policies that capture and filter security events based on an attack category.  Cloud Security customers can leverage pre-built connectors with Splunk, HP ArchSight, IBM QRadar, and Intel McAfee SIEM applications. They can also develop their own custom connector for specific SIEM solutions. The SIEM connector uses an Akamai API to pull security events data into the SIEM application securely and in real time.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/siem-integration/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Jul 2026 — New versions of Splunk(v1.4.24) and CEF(v1.7.14) connectors now available](https://techdocs.akamai.com/siem-integration/changelog/jul-2026-new-versions-of-splunkv1424-and-cefv1714-connectors-now-available.md)
+- [Apr 30, 2026 — Geographic data updated](https://techdocs.akamai.com/siem-integration/changelog/apr-30-2026-geographic-data-updated.md)
+- [Apr 2026 — CEF connector 1.7.13.1](https://techdocs.akamai.com/siem-integration/changelog/apr-2026-cef-connector-17131.md)
+- [Feb 2026 — Firewall for AI integration](https://techdocs.akamai.com/siem-integration/changelog/feb-2026-firewall-for-ai-integration.md)
+- [Feb 2026 — New versions of Splunk and CEF connectors now available](https://techdocs.akamai.com/siem-integration/changelog/feb-2026-new-versions-of-splunk-and-cef-connectors-now-available.md)
+- [Oct 2025 — Splunk connector 1.4.22](https://techdocs.akamai.com/siem-integration/changelog/oct-2025-splunk-connector-1422.md)
+- [Oct 2025 — CEF connector 1.7.11.2](https://techdocs.akamai.com/siem-integration/changelog/oct-2025-cef-connector-17112.md)
+- [Aug 2025 — CEF connector 1.7.10.1](https://techdocs.akamai.com/siem-integration/changelog/aug-2025-cef-connector-17101.md)
+- [Jul 2025 — Splunk connector 1.4.21](https://techdocs.akamai.com/siem-integration/changelog/jul-2025-splunk-connector-1421.md)
+- [May 2024 — CEF connector 1.7.9](https://techdocs.akamai.com/siem-integration/changelog/may-2024-cef-connector-179.md)

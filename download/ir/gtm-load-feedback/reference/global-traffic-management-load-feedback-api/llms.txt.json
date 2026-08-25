@@ -1,0 +1,106 @@
+{
+  "slug": "gtm-load-feedback/reference/global-traffic-management-load-feedback-api/llms.txt",
+  "source": "https://techdocs.akamai.com/gtm-load-feedback/reference/global-traffic-management-load-feedback-api/llms.txt.md",
+  "url": "https://techdocs.akamai.com/gtm-load-feedback/reference/global-traffic-management-load-feedback-api/llms.txt",
+  "title": "Global Traffic Management Load Feedback API",
+  "description": "",
+  "section": "GTM Load Feedback API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# GTM Load Feedback API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "GTM Load Feedback API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Global Traffic Management Load Feedback API allows users to submit load data for a GTM domain in either JSON or XML format via POST, and to fetch the current load state via GET.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Global Traffic Management Load Feedback API allows users to submit load data for a GTM domain in either JSON or XML format via POST, and to fetch the current load state via GET.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-load-feedback/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-load-feedback/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Global Traffic Management Load Feedback API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Global Traffic Management Load Feedback API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        9
+      ],
+      "raw": "- [Submit load data](https://techdocs.akamai.com/gtm-load-feedback/reference/post-domain-resource.md): Use this action to submit load data. The URL specifies the `domain`, `resource`, and `datacenterId` of the instance to which the load data pertains. The data may be submitted in either XML or JSON format. To support legacy clients, we allow `region` as an alias for `datacenterId`. The timestamp string should be in XSD format.\n- [Get load data](https://techdocs.akamai.com/gtm-load-feedback/reference/get-domain-resource.md): Use this action to fetch the load data for a resource instance. The URL format is the same as the POST action. The API returns either XML or JSON, depending on your `Accept` header. If both are specified, or there is no `Accept` header, the default is JSON. In this sample data, we're fetching load for a resource called `connections` in datacenter 100, in the `example.akadns.net` domain.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Submit load data: Use this action to submit load data. The URL specifies the domain, resource, and datacenterId of the instance to which the load data pertains. The data may be submitted in either XML or JSON format. To support legacy clients, we allow region as an alias for datacenterId. The timestamp string should be in XSD format.Get load data: Use this action to fetch the load data for a resource instance. The URL format is the same as the POST action. The API returns either XML or JSON, depending on your Accept header. If both are specified, or there is no Accept header, the default is JSON. In this sample data, we're fetching load for a resource called connections in datacenter 100, in the example.akadns.net domain.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

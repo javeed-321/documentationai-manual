@@ -1,0 +1,106 @@
+{
+  "slug": "gtm-reporting/reference/domain-lists/llms.txt",
+  "source": "https://techdocs.akamai.com/gtm-reporting/reference/domain-lists/llms.txt.md",
+  "url": "https://techdocs.akamai.com/gtm-reporting/reference/domain-lists/llms.txt",
+  "title": "Domain lists",
+  "description": "",
+  "section": "GTM Reporting API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# GTM Reporting API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "GTM Reporting API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Domain lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Domain lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [Get a domain list](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-list.md): This operation retrieves a list of domains, along with a URL templated link to obtain a domain summary of associated properties and data centers for each.\n- [Get a domain summary](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-list-domain.md): This operation retrieves a list of property names, as well as Datacenter names and IDs for a given domain.\n- [List domain names for an account and contract type](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-names-for-account.md): Returns a list of GTM domain names accessible to the current user for the given account and contract type.\n- [List domain names](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-names.md): Returns a list of GTM domain names accessible to the current user.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Get a domain list: This operation retrieves a list of domains, along with a URL templated link to obtain a domain summary of associated properties and data centers for each.Get a domain summary: This operation retrieves a list of property names, as well as Datacenter names and IDs for a given domain.List domain names for an account and contract type: Returns a list of GTM domain names accessible to the current user for the given account and contract type.List domain names: Returns a list of GTM domain names accessible to the current user.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "slug": "property-mgr/reference/bulk-search-and-update/llms.txt",
+  "source": "https://techdocs.akamai.com/property-mgr/reference/bulk-search-and-update/llms.txt.md",
+  "url": "https://techdocs.akamai.com/property-mgr/reference/bulk-search-and-update/llms.txt",
+  "title": "Bulk search and update",
+  "description": "",
+  "section": "Property Manager",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Property Manager Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Property Manager Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Bulk search and update",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Bulk search and update",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        16
+      ],
+      "raw": "- [Bulk activate a set of properties](https://techdocs.akamai.com/property-mgr/reference/post-bulk-activations.md): Bulk activate a set of property versions. Alternately, perform a bulk [fallback](ref:property-activation-error-handling) to the previous activation within an hour of the previous bulk activation. Base the set of versions to activate on the results of a [bulk patch](ref:get-bulk-patch) operation, which you use in this operation's request. This operation launches an asynchronous process to update properties. To check its progress, run the [List bulk-activated properties](ref:get-bulk-activation) operation, whose link is available in the `Location` header or `bulkActivationLink` member of this operation's response. See [Bulk Search and Update](ref:bulk-search-and-update) for overall guidance on this feature.  If your account is enabled for mandatory domain validation, you need to prove ownership of the domains you set up as property hostnames, before activating the property. You can either pre-validate your domains by [generating validation challenges](ref:post-domain-ownership-challenges) or use the challenges you get while [adding](ref:patch-property-version-hostnames), [listing](ref:get-property-version-hostnames), or [updating](ref:put-property-version-hostnames) your property version hostnames. [Learn more](https://techdocs.akamai.com/domain-validation/docs/welcome).\n- [List bulk-activated properties](https://techdocs.akamai.com/property-mgr/reference/get-bulk-activation.md): List all activations that result from a [bulk activation request](ref:post-bulk-activations). Once the overall `bulkActivationStatus` is `COMPLETE`, check each activation's `activationStatus` to confirm it's `ACTIVATED`. See [Bulk Search and Update](ref:bulk-search-and-update) for overall guidance on this feature.\n- [Bulk version a set of properties](https://techdocs.akamai.com/property-mgr/reference/post-bulk-version.md): Create new versions of a set of properties based on any previous version. This operation launches an asynchronous process to increment versions. To check its progress, run the [List bulk-versioned properties](ref:get-bulk-version) operation, whose link is available in the `Location` header or `bulkCreateVersionLink` member of this operation's response. Run this operation only after [bulk searching](ref:post-bulk-search) a set of properties you want to change, to prepare new versions to bulk patch. See [Bulk Search and Update](ref:bulk-search-and-update) for guidance on this feature.\n- [List bulk-versioned properties](https://techdocs.akamai.com/property-mgr/reference/get-bulk-version.md): List all new property versions that result from a [bulk versioning request](ref:post-bulk-version). This operation polls the asynchronous process's status. After the `bulkCreateVersionsStatus` is `COMPLETE`, use the new version numbers along with search paths from a [bulk search](ref:post-bulk-search) operation to [bulk patch](ref:post-bulk-patch) them. See [Bulk Search and Update](ref:bulk-search-and-update) for guidance.\n- [Bulk patch a set of properties](https://techdocs.akamai.com/property-mgr/reference/post-bulk-patch.md): Apply a series of JSON Patch operations to modify a set of property versions. Form this set of `patches` based on the [JSONPath](http://goessner.net/articles/JsonPath/) locations from a [bulk search](ref:post-bulk-search) response. Specify a set of new property versions based on the results of a [bulk versioning](ref:post-bulk-version) operation. The request is a bulk patch object. This operation launches an asynchronous process to update rule trees. To check its progress, run the [List bulk-updated properties](ref:get-bulk-patch) operation, whose link is available in the `Location` header or `bulkPatchLink` member of this operation's response. See [Bulk Search and Update](ref:bulk-search-and-update) for overall guidance on this feature.\n- [List bulk-patched properties](https://techdocs.akamai.com/property-mgr/reference/get-bulk-patch.md): List all modified property versions that result from a [bulk patch](ref:post-bulk-patch) request. This operation polls the asynchronous process's status. Once the overall `bulkPatchStatus` is `COMPLETE`, you can feed all successfully updated property versions whose `status` is `UPDATED` into a subsequent request to [bulk activate](ref:post-bulk-activations) them. See [Bulk Search and Update](ref:bulk-search-and-update) for overall guidance on this feature.\n- [Bulk search a set of properties or includes](https://techdocs.akamai.com/property-mgr/reference/post-bulk-search.md): POST a bulk search object to search across all active property or include versions. Specify a [JSONPath](http://goessner.net/articles/JsonPath/) expression to match their rule trees. This operation launches an asynchronous process to gather search results. To check its progress, run the [List bulk search results](ref:get-bulk-search) operation, whose link is available in the `Location` header or the `bulkSearchLink` member of this operation's response. After gathering completed results, you can create new property versions, bulk patch the rule trees, then activate them. See [Bulk Search and Update](ref:bulk-search-and-update) for guidance on this feature. Run [Synchronously bulk search a set of properties](ref:post-bulk-searchsynchronus) as an alternative to get completed search results directly. To perform simpler searches for an include's name or property's name or hostnames to which it applies, run the [Search properties and includes](ref:post-search-find-by-value) operation instead.\n- [Synchronously bulk search a set of properties or includes](https://techdocs.akamai.com/property-mgr/reference/post-bulk-search-synch.md): Provides an alternative to the asynchronous [Bulk search a set of properties or includes](ref:post-bulk-search) operation. It yields completed bulk search results directly, but with possibly high latency, making it more appropriate to target for small-batch searches. POST a bulk search object to search across all active property or include versions, specifying a [JSONPath](http://goessner.net/articles/JsonPath/) expression to match their rule trees. After gathering results, you can create new property versions, bulk patch the rule trees, then activate them. See [Bulk Search and Update](ref:bulk-search-and-update) for guidance on this feature. To perform simpler searches for an include's name or property's name or hostnames to which it applies, run the [Search properties and includes](ref:post-search-find-by-value) operation instead.\n- [List bulk search results](https://techdocs.akamai.com/property-mgr/reference/get-bulk-search.md): List all property or include versions that result from a [bulk search request](ref:post-bulk-search). Run this operation to poll the asynchronous process's status. Once the `searchTargetStatus` is `COMPLETE`, you can feed the `results` into a [bulk versioning](ref:post-bulk-version) operation. Also use the JSON path `matchLocations` to run a [bulk patch](ref:post-bulk-patch) operation over the rule trees. See [Bulk Search and Update](ref:bulk-search-and-update) for guidance.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Bulk activate a set of properties: Bulk activate a set of property versions. Alternately, perform a bulk fallback to the previous activation within an hour of the previous bulk activation. Base the set of versions to activate on the results of a bulk patch operation, which you use in this operation's request. This operation launches an asynchronous process to update properties. To check its progress, run the List bulk-activated properties operation, whose link is available in the Location header or bulkActivationLink member of this operation's response. See Bulk Search and Update for overall guidance on this feature.  If your account is enabled for mandatory domain validation, you need to prove ownership of the domains you set up as property hostnames, before activating the property. You can either pre-validate your domains by generating validation challenges or use the challenges you get while adding, listing, or updating your property version hostnames. Learn more.List bulk-activated properties: List all activations that result from a bulk activation request. Once the overall bulkActivationStatus is COMPLETE, check each activation's activationStatus to confirm it's ACTIVATED. See Bulk Search and Update for overall guidance on this feature.Bulk version a set of properties: Create new versions of a set of properties based on any previous version. This operation launches an asynchronous process to increment versions. To check its progress, run the List bulk-versioned properties operation, whose link is available in the Location header or bulkCreateVersionLink member of this operation's response. Run this operation only after bulk searching a set of properties you want to change, to prepare new versions to bulk patch. See Bulk Search and Update for guidance on this feature.List bulk-versioned properties: List all new property versions that result from a bulk versioning request. This operation polls the asynchronous process's status. After the bulkCreateVersionsStatus is COMPLETE, use the new version numbers along with search paths from a bulk search operation to bulk patch them. See Bulk Search and Update for guidance.Bulk patch a set of properties: Apply a series of JSON Patch operations to modify a set of property versions. Form this set of patches based on the JSONPath locations from a bulk search response. Specify a set of new property versions based on the results of a bulk versioning operation. The request is a bulk patch object. This operation launches an asynchronous process to update rule trees. To check its progress, run the List bulk-updated properties operation, whose link is available in the Location header or bulkPatchLink member of this operation's response. See Bulk Search and Update for overall guidance on this feature.List bulk-patched properties: List all modified property versions that result from a bulk patch request. This operation polls the asynchronous process's status. Once the overall bulkPatchStatus is COMPLETE, you can feed all successfully updated property versions whose status is UPDATED into a subsequent request to bulk activate them. See Bulk Search and Update for overall guidance on this feature.Bulk search a set of properties or includes: POST a bulk search object to search across all active property or include versions. Specify a JSONPath expression to match their rule trees. This operation launches an asynchronous process to gather search results. To check its progress, run the List bulk search results operation, whose link is available in the Location header or the bulkSearchLink member of this operation's response. After gathering completed results, you can create new property versions, bulk patch the rule trees, then activate them. See Bulk Search and Update for guidance on this feature. Run Synchronously bulk search a set of properties as an alternative to get completed search results directly. To perform simpler searches for an include's name or property's name or hostnames to which it applies, run the Search properties and includes operation instead.Synchronously bulk search a set of properties or includes: Provides an alternative to the asynchronous Bulk search a set of properties or includes operation. It yields completed bulk search results directly, but with possibly high latency, making it more appropriate to target for small-batch searches. POST a bulk search object to search across all active property or include versions, specifying a JSONPath expression to match their rule trees. After gathering results, you can create new property versions, bulk patch the rule trees, then activate them. See Bulk Search and Update for guidance on this feature. To perform simpler searches for an include's name or property's name or hostnames to which it applies, run the Search properties and includes operation instead.List bulk search results: List all property or include versions that result from a bulk search request. Run this operation to poll the asynchronous process's status. Once the searchTargetStatus is COMPLETE, you can feed the results into a bulk versioning operation. Also use the JSON path matchLocations to run a bulk patch operation over the rule trees. See Bulk Search and Update for guidance.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:property-activation-error-handling",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-bulk-patch",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-bulk-activation",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-domain-ownership-challenges",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:patch-property-version-hostnames",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-property-version-hostnames",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-property-version-hostnames",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-activations",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-bulk-version",
+          "line": 10
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-search",
+          "line": 10
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 10
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-version",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-search",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-patch",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-search",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-version",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-bulk-patch",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-patch",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-activations",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-bulk-search",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-searchsynchronus",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-search-find-by-value",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-search",
+          "line": 15
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 15
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-search-find-by-value",
+          "line": 15
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-search",
+          "line": 16
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-version",
+          "line": 16
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-bulk-patch",
+          "line": 16
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:bulk-search-and-update",
+          "line": 16
+        }
+      ]
+    }
+  ]
+}

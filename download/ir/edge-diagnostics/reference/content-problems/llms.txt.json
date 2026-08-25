@@ -1,0 +1,132 @@
+{
+  "slug": "edge-diagnostics/reference/content-problems/llms.txt",
+  "source": "https://techdocs.akamai.com/edge-diagnostics/reference/content-problems/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edge-diagnostics/reference/content-problems/llms.txt",
+  "title": "Content problems",
+  "description": "",
+  "section": "Edge Diagnostics",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Edge Diagnostics Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Edge Diagnostics Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Content problems",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Content problems",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        9
+      ],
+      "raw": "- [Run the Content problems scenario](https://techdocs.akamai.com/edge-diagnostics/reference/post-content-problems.md): Launches an [asynchronous](ref:asynchronous-processes) request to simultaneously run [Launch a GREP request](ref:post-grep) and [Request content with cURL](ref:post-curl) operations for a URL. It may help you diagnose issues with slow download and high response time. Successful operations return fetched GREP and cURL data.\n- [Get the Content problems scenario response](https://techdocs.akamai.com/edge-diagnostics/reference/get-content-problems.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Run the content problems scenario](ref:post-content-problems) request. Operations with the `SUCCESS` status include fetched GREP and cURL data.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Run the Content problems scenario: Launches an asynchronous request to simultaneously run Launch a GREP request and Request content with cURL operations for a URL. It may help you diagnose issues with slow download and high response time. Successful operations return fetched GREP and cURL data.Get the Content problems scenario response: Returns the status of the asynchronous Run the content problems scenario request. Operations with the SUCCESS status include fetched GREP and cURL data.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:asynchronous-processes",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-grep",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-curl",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:asynchronous-processes",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-content-problems",
+          "line": 9
+        }
+      ]
+    }
+  ]
+}

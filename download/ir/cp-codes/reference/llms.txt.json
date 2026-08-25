@@ -1,0 +1,197 @@
+{
+  "slug": "cp-codes/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/cp-codes/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/cp-codes/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "CP Codes and Reporting Groups Tool",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 4,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# CP Codes and Reporting Groups Tool Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "CP Codes and Reporting Groups Tool Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's CP Codes and Reporting Groups tool lets you create, edit, view, and delete reporting groups. You can get access to detailed information about CP codes, edit their parameters, and group them for billing purposes.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's CP Codes and Reporting Groups tool lets you create, edit, view, and delete reporting groups. You can get access to detailed information about CP codes, edit their parameters, and group them for billing purposes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/cp-codes/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/cp-codes/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        29
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/cp-codes/reference/api/llms.txt): full category index\n- [CP Codes and Reporting Groups API](https://techdocs.akamai.com/cp-codes/reference/api.md)\n- [API summary](https://techdocs.akamai.com/cp-codes/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/cp-codes/reference/api-get-started.md)\n- [Concepts](https://techdocs.akamai.com/cp-codes/reference/api-concepts.md)\n- [Rate and resource limiting](https://techdocs.akamai.com/cp-codes/reference/rate-and-resource-limiting.md)\n- [ID prefixes](https://techdocs.akamai.com/cp-codes/reference/id-prefixes.md)\n- [Errors](https://techdocs.akamai.com/cp-codes/reference/api-errors.md)\n- [400](https://techdocs.akamai.com/cp-codes/reference/400.md)\n- [401](https://techdocs.akamai.com/cp-codes/reference/401.md)\n- [403](https://techdocs.akamai.com/cp-codes/reference/403.md)\n- [404](https://techdocs.akamai.com/cp-codes/reference/404.md)\n- [405](https://techdocs.akamai.com/cp-codes/reference/405.md)\n- [408](https://techdocs.akamai.com/cp-codes/reference/408.md)\n- [410](https://techdocs.akamai.com/cp-codes/reference/410.md)\n- [411](https://techdocs.akamai.com/cp-codes/reference/411.md)\n- [413](https://techdocs.akamai.com/cp-codes/reference/413.md)\n- [415](https://techdocs.akamai.com/cp-codes/reference/415.md)\n- [500](https://techdocs.akamai.com/cp-codes/reference/500.md)\n- [502](https://techdocs.akamai.com/cp-codes/reference/502.md)\n- [503](https://techdocs.akamai.com/cp-codes/reference/503.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexCP Codes and Reporting Groups APIAPI summaryGet startedConceptsRate and resource limitingID prefixesErrors400401403404405408410411413415500502503",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "## API Reference: CP Codes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: CP Codes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        33,
+        37
+      ],
+      "raw": "- [CP Codes index](https://techdocs.akamai.com/cp-codes/reference/cp-codes/llms.txt): full category index\n- [List CP codes](https://techdocs.akamai.com/cp-codes/reference/get-cpcodes.md): Lists detailed information about CP codes available within your account and contract.\n- [Get a CP code](https://techdocs.akamai.com/cp-codes/reference/get-cpcode.md): Get detailed information about a specific CP code. The details include the CP code type, name, time zone, as well as the account, contracts, and products it's assigned to. This operation also lists the access control group the CP code belongs to.\n- [Update a CP code](https://techdocs.akamai.com/cp-codes/reference/put-cpcode.md): Modifies a specific CP code. After running the [GET a CP code](ref:get-cpcode) operation, use the response to build a request body. You can only modify a CP code's name, time zone, and purgeable member.\n- [Get a water-mark limit](https://techdocs.akamai.com/cp-codes/reference/get-cpcodes-watermark-limits.md): Get a watermark limit for CP codes for the account associated within a specific contract. For more details, see [Rate and resource limiting](ref:rate-and-resource-limiting).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "CP Codes index: full category indexList CP codes: Lists detailed information about CP codes available within your account and contract.Get a CP code: Get detailed information about a specific CP code. The details include the CP code type, name, time zone, as well as the account, contracts, and products it's assigned to. This operation also lists the access control group the CP code belongs to.Update a CP code: Modifies a specific CP code. After running the GET a CP code operation, use the response to build a request body. You can only modify a CP code's name, time zone, and purgeable member.Get a water-mark limit: Get a watermark limit for CP codes for the account associated within a specific contract. For more details, see Rate and resource limiting.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:get-cpcode",
+          "line": 36
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:rate-and-resource-limiting",
+          "line": 37
+        }
+      ]
+    },
+    {
+      "i": 7,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## API Reference: Reporting Groups",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Reporting Groups",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        41,
+        48
+      ],
+      "raw": "- [Reporting Groups index](https://techdocs.akamai.com/cp-codes/reference/reporting-groups/llms.txt): full category index\n- [Create a reporting group](https://techdocs.akamai.com/cp-codes/reference/post-reporting-groups.md): Creates a reporting group. Make sure the reporting group's name is unique within an account. The `location` header in the response provides a relative path to the created reporting group.\n- [List reporting groups](https://techdocs.akamai.com/cp-codes/reference/get-reporting-groups.md): Lists detailed information about reporting groups available for your account and contract.\n- [Get a reporting group](https://techdocs.akamai.com/cp-codes/reference/get-reporting-group.md): Get detailed information about a specific reporting group. The details include the reporting group name and the access control group that it belongs to. This operations also lists the contracts and CP codes assigned to the reporting group.\n- [Update a reporting group](https://techdocs.akamai.com/cp-codes/reference/put-reporting-group.md): Modifies a specific reporting group. You should only modify a reporting group's name and assigned CP codes.\n- [Delete a reporting group](https://techdocs.akamai.com/cp-codes/reference/delete-reporting-group.md): Deletes a specific reporting group.\n- [Get a water-mark limit for reporting groups](https://techdocs.akamai.com/cp-codes/reference/get-reporting-groups-watermark-limits.md): Get a watermark limit for CP reporting groups for the account associated within a specific contract. For more details, see [Rate and resource limiting](ref:rate-and-resource-limiting).\n- [List products within a reporting group](https://techdocs.akamai.com/cp-codes/reference/get-reporting-group-products.md): Lists products and services assigned to a specific reporting group.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Reporting Groups index: full category indexCreate a reporting group: Creates a reporting group. Make sure the reporting group's name is unique within an account. The location header in the response provides a relative path to the created reporting group.List reporting groups: Lists detailed information about reporting groups available for your account and contract.Get a reporting group: Get detailed information about a specific reporting group. The details include the reporting group name and the access control group that it belongs to. This operations also lists the contracts and CP codes assigned to the reporting group.Update a reporting group: Modifies a specific reporting group. You should only modify a reporting group's name and assigned CP codes.Delete a reporting group: Deletes a specific reporting group.Get a water-mark limit for reporting groups: Get a watermark limit for CP reporting groups for the account associated within a specific contract. For more details, see Rate and resource limiting.List products within a reporting group: Lists products and services assigned to a specific reporting group.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:rate-and-resource-limiting",
+          "line": 47
+        }
+      ]
+    }
+  ]
+}

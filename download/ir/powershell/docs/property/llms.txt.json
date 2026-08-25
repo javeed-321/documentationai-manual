@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/property/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/property/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/property/llms.txt",
+  "title": "Property",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Property",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Property",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        95
+      ],
+      "raw": "- [Properties](https://techdocs.akamai.com/powershell/docs/properties.md)\n- [Rules](https://techdocs.akamai.com/powershell/docs/rules.md)\n- [Includes](https://techdocs.akamai.com/powershell/docs/includes.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/property-index.md)\n- [Bucket hostname](https://techdocs.akamai.com/powershell/docs/add-buckethostname.md): Add-BucketHostname\n- [Include rule](https://techdocs.akamai.com/powershell/docs/add-propertyincluderule.md): Add-PropertyIncludeRule\n- [Property hostname](https://techdocs.akamai.com/powershell/docs/add-propertyhostname.md): Add-PropertyHostname\n- [Property rule](https://techdocs.akamai.com/powershell/docs/add-propertyrule.md): Add-PropertyRule\n- [Bucket hostname](https://techdocs.akamai.com/powershell/docs/compare-buckethostname.md): Compare-BucketHostname\n- [Property](https://techdocs.akamai.com/powershell/docs/copy-property.md): Copy-Property\n- [Include](https://techdocs.akamai.com/powershell/docs/copy-propertyinclude.md): Copy-PropertyInclude\n- [Property](https://techdocs.akamai.com/powershell/docs/find-property.md): Find-Property\n- [Account ID](https://techdocs.akamai.com/powershell/docs/get-accountid.md): Get-AccountID\n- [Bucket activation](https://techdocs.akamai.com/powershell/docs/get-bucketactivation.md): Get-BucketActivation\n- [Bucket hostname](https://techdocs.akamai.com/powershell/docs/get-buckethostname.md): Get-BucketHostname\n- [Bulk activated property](https://techdocs.akamai.com/powershell/docs/get-bulkactivatedproperty.md): Get-BulkActivatedProperty\n- [Bulk-patched property](https://techdocs.akamai.com/powershell/docs/get-bulkpatchedproperty.md): Get-BulkPatchedProperty\n- [Bulk search result](https://techdocs.akamai.com/powershell/docs/get-bulksearchresult.md): Get-BulkSearchResult\n- [Bulk-versioned property](https://techdocs.akamai.com/powershell/docs/get-bulkversionedproperty.md): Get-BulkVersionedProperty\n- [Custom behavior](https://techdocs.akamai.com/powershell/docs/get-custombehavior.md): Get-CustomBehavior\n- [Custom override](https://techdocs.akamai.com/powershell/docs/get-customoverride.md): Get-CustomOverride\n- [CP code](https://techdocs.akamai.com/powershell/docs/get-propertycpcode.md): Get-PropertyCPCode\n- [Domain ownership challenge](https://techdocs.akamai.com/powershell/docs/get-propertydomainownershipchallenge.md): Get-PropertyDomainOwnershipChallenge\n- [Edge hostname](https://techdocs.akamai.com/powershell/docs/get-propertyedgehostname.md): Get-PropertyEdgeHostname\n- [Group](https://techdocs.akamai.com/powershell/docs/get-group.md): Get-Group\n- [Hostname audit history](https://techdocs.akamai.com/powershell/docs/get-hostnameaudithistory.md): Get-HostnameAuditHistory\n- [Include](https://techdocs.akamai.com/powershell/docs/get-propertyinclude.md): Get-PropertyInclude\n- [Include activation](https://techdocs.akamai.com/powershell/docs/get-propertyincludeactivation.md): Get-PropertyIncludeActivation\n- [Include behaviors](https://techdocs.akamai.com/powershell/docs/get-propertyincludebehaviors.md): Get-PropertyIncludeBehaviors\n- [Include criteria](https://techdocs.akamai.com/powershell/docs/get-propertyincludecriteria.md): Get-PropertyIncludeCriteria\n- [Include parent](https://techdocs.akamai.com/powershell/docs/get-propertyincludeparent.md): Get-PropertyIncludeParent\n- [Include rules](https://techdocs.akamai.com/powershell/docs/get-propertyincluderules.md): Get-PropertyIncludeRules\n- [Include rules digest](https://techdocs.akamai.com/powershell/docs/get-propertyincluderulesdigest.md): Get-PropertyIncludeRulesDigest\n- [Include version](https://techdocs.akamai.com/powershell/docs/get-propertyincludeversion.md): Get-PropertyIncludeVersion\n- [Product](https://techdocs.akamai.com/powershell/docs/get-product.md): Get-Product\n- [Property](https://techdocs.akamai.com/powershell/docs/get-property.md): Get-Property\n- [Property activation](https://techdocs.akamai.com/powershell/docs/get-propertyactivation.md): Get-PropertyActivation\n- [Property behaviors](https://techdocs.akamai.com/powershell/docs/get-propertybehaviors.md): Get-PropertyBehaviors\n- [Property build](https://techdocs.akamai.com/powershell/docs/get-propertybuild.md): Get-PropertyBuild\n- [Property certificate challenge](https://techdocs.akamai.com/powershell/docs/get-propertycertificatechallenge.md): Get-PropertyCertificateChallenge\n- [Property client settings](https://techdocs.akamai.com/powershell/docs/get-propertyclientsettings.md): Get-PropertyClientSettings\n- [Property contract](https://techdocs.akamai.com/powershell/docs/get-propertycontract.md): Get-PropertyContract\n- [Property criteria](https://techdocs.akamai.com/powershell/docs/get-propertycriteria.md): Get-PropertyCriteria\n- [Property hostname](https://techdocs.akamai.com/powershell/docs/get-propertyhostname.md): Get-PropertyHostname\n- [Product use cases](https://techdocs.akamai.com/powershell/docs/get-productusecases.md): Get-ProductUseCases\n- [Property request schema](https://techdocs.akamai.com/powershell/docs/get-propertyrequestschema.md): Get-PropertyRequestSchema\n- [Property rules](https://techdocs.akamai.com/powershell/docs/get-propertyrules.md): Get-PropertyRules\n- [Property rules digest](https://techdocs.akamai.com/powershell/docs/get-propertyrulesdigest.md): Get-PropertyRulesDigest\n- [Property version](https://techdocs.akamai.com/powershell/docs/get-propertyversion.md): Get-PropertyVersion\n- [Property version's includes](https://techdocs.akamai.com/powershell/docs/get-propertyversioninclude.md): Get-PropertyVersionInclude\n- [Rule format](https://techdocs.akamai.com/powershell/docs/get-ruleformat.md): Get-RuleFormat\n- [Rule format schema](https://techdocs.akamai.com/powershell/docs/get-ruleformatschema.md): Get-RuleFormatSchema\n- [Top-level groups](https://techdocs.akamai.com/powershell/docs/get-toplevelgroup.md): Get-TopLevelGroup\n- [Property rules](https://techdocs.akamai.com/powershell/docs/merge-propertyrules.md): Merge-PropertyRules\n- [Bulk activation](https://techdocs.akamai.com/powershell/docs/new-bulkactivation.md): New-BulkActivation\n- [Bulk patch](https://techdocs.akamai.com/powershell/docs/new-bulkpatch.md): New-BulkPatch\n- [Bulk search](https://techdocs.akamai.com/powershell/docs/new-bulksearch.md): New-BulkSearch\n- [Bulk version](https://techdocs.akamai.com/powershell/docs/new-bulkversion.md): New-BulkVersion\n- [CP code](https://techdocs.akamai.com/powershell/docs/new-cpcode.md): New-CPCode\n- [Edge hostname](https://techdocs.akamai.com/powershell/docs/new-edgehostname.md): New-EdgeHostname\n- [Include](https://techdocs.akamai.com/powershell/docs/new-propertyinclude.md): New-PropertyInclude\n- [Include activation](https://techdocs.akamai.com/powershell/docs/new-propertyincludeactivation.md): New-PropertyIncludeActivation\n- [Include deactivation](https://techdocs.akamai.com/powershell/docs/new-propertyincludedeactivation.md): New-PropertyIncludeDeactivation\n- [Include version](https://techdocs.akamai.com/powershell/docs/new-propertyincludeversion.md): New-PropertyIncludeVersion\n- [Property](https://techdocs.akamai.com/powershell/docs/new-property.md): New-Property\n- [Property activation](https://techdocs.akamai.com/powershell/docs/new-propertyactivation.md): New-PropertyActivation\n- [Property deactivation](https://techdocs.akamai.com/powershell/docs/new-propertydeactivation.md): New-PropertyDeactivation\n- [Property version](https://techdocs.akamai.com/powershell/docs/new-propertyversion.md): New-PropertyVersion\n- [Bucket hostname](https://techdocs.akamai.com/powershell/docs/remove-buckethostname.md): Remove-BucketHostname\n- [Include](https://techdocs.akamai.com/powershell/docs/remove-propertyinclude.md): Remove-PropertyInclude\n- [Include rule](https://techdocs.akamai.com/powershell/docs/remove-propertyincluderule.md): Remove-PropertyIncludeRule\n- [Property](https://techdocs.akamai.com/powershell/docs/remove-property.md): Remove-Property\n- [Property hostname](https://techdocs.akamai.com/powershell/docs/remove-propertyhostname.md): Remove-PropertyHostname\n- [Property rule](https://techdocs.akamai.com/powershell/docs/remove-propertyrule.md): Remove-PropertyRule\n- [Domain validation](https://techdocs.akamai.com/powershell/docs/resume-propertydomainvalidation.md): Resume-PropertyDomainValidation\n- [Client settings](https://techdocs.akamai.com/powershell/docs/set-propertyclientsettings.md): Set-PropertyClientSettings\n- [Include rules](https://techdocs.akamai.com/powershell/docs/set-propertyincluderules.md): Set-PropertyIncludeRules\n- [Property hostname](https://techdocs.akamai.com/powershell/docs/set-propertyhostname.md): Set-PropertyHostname\n- [Property rules](https://techdocs.akamai.com/powershell/docs/set-propertyrules.md): Set-PropertyRules\n- [Include](https://techdocs.akamai.com/powershell/docs/test-propertyinclude.md): Test-PropertyInclude\n- [Include rule](https://techdocs.akamai.com/powershell/docs/test-propertyincluderule.md)\n- [Property rule](https://techdocs.akamai.com/powershell/docs/test-propertyrule.md): Test-PropertyRule\n- [Bucket activation](https://techdocs.akamai.com/powershell/docs/undo-bucketactivation.md): Undo-BucketActivation\n- [Include activation](https://techdocs.akamai.com/powershell/docs/undo-propertyincludeactivation.md): Undo-PropertyIncludeActivation\n- [Property activation](https://techdocs.akamai.com/powershell/docs/undo-propertyactivation.md): Undo-PropertyActivation\n- [Domain validation](https://techdocs.akamai.com/powershell/docs/update-propertydomainvalidation.md): Update-PropertyDomainValidation\n- [Include rule](https://techdocs.akamai.com/powershell/docs/update-propertyincluderule.md): Update-PropertyIncludeRule\n- [Property rule](https://techdocs.akamai.com/powershell/docs/update-propertyrule.md): Update-PropertyRule",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "PropertiesRulesIncludesFunction indexBucket hostname: Add-BucketHostnameInclude rule: Add-PropertyIncludeRuleProperty hostname: Add-PropertyHostnameProperty rule: Add-PropertyRuleBucket hostname: Compare-BucketHostnameProperty: Copy-PropertyInclude: Copy-PropertyIncludeProperty: Find-PropertyAccount ID: Get-AccountIDBucket activation: Get-BucketActivationBucket hostname: Get-BucketHostnameBulk activated property: Get-BulkActivatedPropertyBulk-patched property: Get-BulkPatchedPropertyBulk search result: Get-BulkSearchResultBulk-versioned property: Get-BulkVersionedPropertyCustom behavior: Get-CustomBehaviorCustom override: Get-CustomOverrideCP code: Get-PropertyCPCodeDomain ownership challenge: Get-PropertyDomainOwnershipChallengeEdge hostname: Get-PropertyEdgeHostnameGroup: Get-GroupHostname audit history: Get-HostnameAuditHistoryInclude: Get-PropertyIncludeInclude activation: Get-PropertyIncludeActivationInclude behaviors: Get-PropertyIncludeBehaviorsInclude criteria: Get-PropertyIncludeCriteriaInclude parent: Get-PropertyIncludeParentInclude rules: Get-PropertyIncludeRulesInclude rules digest: Get-PropertyIncludeRulesDigestInclude version: Get-PropertyIncludeVersionProduct: Get-ProductProperty: Get-PropertyProperty activation: Get-PropertyActivationProperty behaviors: Get-PropertyBehaviorsProperty build: Get-PropertyBuildProperty certificate challenge: Get-PropertyCertificateChallengeProperty client settings: Get-PropertyClientSettingsProperty contract: Get-PropertyContractProperty criteria: Get-PropertyCriteriaProperty hostname: Get-PropertyHostnameProduct use cases: Get-ProductUseCasesProperty request schema: Get-PropertyRequestSchemaProperty rules: Get-PropertyRulesProperty rules digest: Get-PropertyRulesDigestProperty version: Get-PropertyVersionProperty version's includes: Get-PropertyVersionIncludeRule format: Get-RuleFormatRule format schema: Get-RuleFormatSchemaTop-level groups: Get-TopLevelGroupProperty rules: Merge-PropertyRulesBulk activation: New-BulkActivationBulk patch: New-BulkPatchBulk search: New-BulkSearchBulk version: New-BulkVersionCP code: New-CPCodeEdge hostname: New-EdgeHostnameInclude: New-PropertyIncludeInclude activation: New-PropertyIncludeActivationInclude deactivation: New-PropertyIncludeDeactivationInclude version: New-PropertyIncludeVersionProperty: New-PropertyProperty activation: New-PropertyActivationProperty deactivation: New-PropertyDeactivationProperty version: New-PropertyVersionBucket hostname: Remove-BucketHostnameInclude: Remove-PropertyIncludeInclude rule: Remove-PropertyIncludeRuleProperty: Remove-PropertyProperty hostname: Remove-PropertyHostnameProperty rule: Remove-PropertyRuleDomain validation: Resume-PropertyDomainValidationClient settings: Set-PropertyClientSettingsInclude rules: Set-PropertyIncludeRulesProperty hostname: Set-PropertyHostnameProperty rules: Set-PropertyRulesInclude: Test-PropertyIncludeInclude ruleProperty rule: Test-PropertyRuleBucket activation: Undo-BucketActivationInclude activation: Undo-PropertyIncludeActivationProperty activation: Undo-PropertyActivationDomain validation: Update-PropertyDomainValidationInclude rule: Update-PropertyIncludeRuleProperty rule: Update-PropertyRule",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

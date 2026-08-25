@@ -1,0 +1,122 @@
+{
+  "slug": "property-mgr/reference/custom-behaviors-and-overrides/llms.txt",
+  "source": "https://techdocs.akamai.com/property-mgr/reference/custom-behaviors-and-overrides/llms.txt.md",
+  "url": "https://techdocs.akamai.com/property-mgr/reference/custom-behaviors-and-overrides/llms.txt",
+  "title": "Custom behaviors and overrides",
+  "description": "",
+  "section": "Property Manager",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Property Manager Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Property Manager Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Custom behaviors and overrides",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Custom behaviors and overrides",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [List custom behaviors](https://techdocs.akamai.com/property-mgr/reference/get-custom-behaviors.md): Lists the set of custom XML metadata behaviors configured for you by Akamai representatives. Referencing the relevant `behaviorId` from a [`customBehavior`](ref:latest-custom-behavior) within the rule tree injects the custom XML within the rest of the rule tree's metadata XML. See [Custom behaviors and overrides](ref:custom-behaviors-and-overrides) for guidance on custom overrides.\n- [Get a custom behavior](https://techdocs.akamai.com/property-mgr/reference/get-custom-behavior.md): Get information for a single custom behavior. Use this operation if you want to examine the custom behavior's XML metadata source.\n- [List custom overrides](https://techdocs.akamai.com/property-mgr/reference/get-custom-overrides.md): Lists the set of custom XML metadata overrides configured for you by Akamai representatives. Referencing the relevant `overrideId` from a `customOverride` object makes the custom XML append to the rest of the metadata XML defined by the rule tree, typically to restore state. See [Custom behaviors and overrides](ref:custom-behaviors-and-overrides) for guidance on custom overrides.\n- [Get a custom override](https://techdocs.akamai.com/property-mgr/reference/get-custom-override.md): Get information for a single custom override. Use this operation if you want to examine the override's XML metadata.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List custom behaviors: Lists the set of custom XML metadata behaviors configured for you by Akamai representatives. Referencing the relevant behaviorId from a customBehavior within the rule tree injects the custom XML within the rest of the rule tree's metadata XML. See Custom behaviors and overrides for guidance on custom overrides.Get a custom behavior: Get information for a single custom behavior. Use this operation if you want to examine the custom behavior's XML metadata source.List custom overrides: Lists the set of custom XML metadata overrides configured for you by Akamai representatives. Referencing the relevant overrideId from a customOverride object makes the custom XML append to the rest of the metadata XML defined by the rule tree, typically to restore state. See Custom behaviors and overrides for guidance on custom overrides.Get a custom override: Get information for a single custom override. Use this operation if you want to examine the override's XML metadata.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:latest-custom-behavior",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:custom-behaviors-and-overrides",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:custom-behaviors-and-overrides",
+          "line": 10
+        }
+      ]
+    }
+  ]
+}

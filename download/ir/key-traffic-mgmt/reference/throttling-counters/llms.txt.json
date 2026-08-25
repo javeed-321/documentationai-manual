@@ -1,0 +1,137 @@
+{
+  "slug": "key-traffic-mgmt/reference/throttling-counters/llms.txt",
+  "source": "https://techdocs.akamai.com/key-traffic-mgmt/reference/throttling-counters/llms.txt.md",
+  "url": "https://techdocs.akamai.com/key-traffic-mgmt/reference/throttling-counters/llms.txt",
+  "title": "Throttling counters",
+  "description": "",
+  "section": "API Keys and Traffic Management",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# API Keys and Traffic Management Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Keys and Traffic Management Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/key-traffic-mgmt/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/key-traffic-mgmt/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Throttling counters",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Throttling counters",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        15
+      ],
+      "raw": "- [Create a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-counter.md): Creates a new throttling counter under the selected contract and group.\n- [List throttling counters](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counters.md): Returns all existing throttling counters available for the current contract and group.\n- [Get a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter.md): Returns information about a throttling counter.\n- [Edit a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-counter.md): Updates information about a throttling counter.\n- [Delete a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/delete-counter.md): Removes a throttling counter.\n- [List counter endpoints](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-endpoints.md): Returns information about all endpoints assigned to the contract and group where you created the throttling counter. The [API Endpoints API](https://techdocs.akamai.com/api-definitions/reference/api) manages the format of the response data. Search the response data for the relevant `ACL_ENTRY` members such as API endpoint identifiers, resource identifiers, or HTTP methods, to use when running the [Create a throttling counter](ref:post-counter) or [Edit a throttling counter](ref:put-counter) operation.\n- [List counter key collections](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-key-collections.md): Returns information about all key collections assigned to the contract and group where you created the throttling counter. Search the response data for the relevant `KEY COLLECTION` identifiers to use when running the [Create a throttling counter](ref:post-counter) or [Edit a throttling counter](ref:put-counter) operation.\n- [List counter keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-keys.md): This lists all API keys assigned to the contract and group where you created the throttling counter. Search the response data for the relevant `KEY` identifier members to use when running the [Create a throttling counter](ref:post-counter) or [Edit a throttling counter](ref:put-counter) operation.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a throttling counter: Creates a new throttling counter under the selected contract and group.List throttling counters: Returns all existing throttling counters available for the current contract and group.Get a throttling counter: Returns information about a throttling counter.Edit a throttling counter: Updates information about a throttling counter.Delete a throttling counter: Removes a throttling counter.List counter endpoints: Returns information about all endpoints assigned to the contract and group where you created the throttling counter. The API Endpoints API manages the format of the response data. Search the response data for the relevant ACL_ENTRY members such as API endpoint identifiers, resource identifiers, or HTTP methods, to use when running the Create a throttling counter or Edit a throttling counter operation.List counter key collections: Returns information about all key collections assigned to the contract and group where you created the throttling counter. Search the response data for the relevant KEY COLLECTION identifiers to use when running the Create a throttling counter or Edit a throttling counter operation.List counter keys: This lists all API keys assigned to the contract and group where you created the throttling counter. Search the response data for the relevant KEY identifier members to use when running the Create a throttling counter or Edit a throttling counter operation.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-counter",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-counter",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-counter",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-counter",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-counter",
+          "line": 15
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-counter",
+          "line": 15
+        }
+      ]
+    }
+  ]
+}

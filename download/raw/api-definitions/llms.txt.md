@@ -1,0 +1,35 @@
+# API Definitions Documentation
+
+> Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/api-definitions/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/api-definitions/docs/welcome/llms.txt)
+- [Define and register your APIs](https://techdocs.akamai.com/api-definitions/docs/define-and-register-your-apis/llms.txt)
+- [API Discovery operation](https://techdocs.akamai.com/api-definitions/docs/api-discovery-operation/llms.txt)
+- [API Gateway setup and operation](https://techdocs.akamai.com/api-definitions/docs/api-gateway-setup-and-operation/llms.txt)
+- [API keys and traffic management](https://techdocs.akamai.com/api-definitions/docs/api-keys-and-traffic-management/llms.txt)
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/api-definitions/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/api-definitions/reference/api/llms.txt)
+- [Contracts and groups](https://techdocs.akamai.com/api-definitions/reference/contracts-and-groups/llms.txt)
+- [Categories](https://techdocs.akamai.com/api-definitions/reference/categories/llms.txt)
+- [API endpoints](https://techdocs.akamai.com/api-definitions/reference/api-endpoints/llms.txt)
+- [API delivery settings](https://techdocs.akamai.com/api-definitions/reference/api-delivery-settings/llms.txt)
+- [Multistep groups](https://techdocs.akamai.com/api-definitions/reference/multistep-groups/llms.txt)
+- [Resources and operations](https://techdocs.akamai.com/api-definitions/reference/resources-and-operations/llms.txt)
+
+## Recipes
+
+- [Recipes index](https://techdocs.akamai.com/api-definitions/recipes/llms.txt): full section index
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/api-definitions/changelog/llms.txt): full section index

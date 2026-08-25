@@ -1,0 +1,883 @@
+{
+  "slug": "terraform/docs/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/llms.txt",
+  "title": "Guides index",
+  "description": "full section index",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 23,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 22
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Get Started",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Get Started",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        16
+      ],
+      "raw": "- [Get Started index](https://techdocs.akamai.com/terraform/docs/get-started/llms.txt): full category index\n- [Breaking changes](https://techdocs.akamai.com/terraform/docs/breaking-changes.md): v10.0\n- [Overview](https://techdocs.akamai.com/terraform/docs/overview.md)\n- [Alternative authentication](https://techdocs.akamai.com/terraform/docs/gs-authentication.md)\n- [Environment variables](https://techdocs.akamai.com/terraform/docs/environment-variables.md)\n- [Base IDs](https://techdocs.akamai.com/terraform/docs/common-identifiers.md)\n- [Import and export assets](https://techdocs.akamai.com/terraform/docs/import-and-export-assets.md)\n- [Request limits](https://techdocs.akamai.com/terraform/docs/request-limits.md): Preventing 429s",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Get Started index: full category indexBreaking changes: v10.0OverviewAlternative authenticationEnvironment variablesBase IDsImport and export assetsRequest limits: Preventing 429s",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        18,
+        18
+      ],
+      "raw": "## Guides: Identity and Access Management",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Identity and Access Management",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        20,
+        53
+      ],
+      "raw": "- [Identity and Access Management index](https://techdocs.akamai.com/terraform/docs/identity-and-access-management/llms.txt): full category index\n- [Create identities and control access](https://techdocs.akamai.com/terraform/docs/set-up-iam.md)\n- [Accessible groups](https://techdocs.akamai.com/terraform/docs/iam-ds-access-grps.md): akamai_iam_accessible_groups\n- [Account switch keys](https://techdocs.akamai.com/terraform/docs/iam-ds-asks.md): akamai_iam_account_switch_keys\n- [Allowed APIs](https://techdocs.akamai.com/terraform/docs/iam-ds-allowed-apis.md): akamai_iam_allowed_apis\n- [API client](https://techdocs.akamai.com/terraform/docs/iam-ds-api-client.md): akamai_iam_api_client\n- [API clients](https://techdocs.akamai.com/terraform/docs/iam-ds-api-clients.md): akamai_iam_api_clients\n- [Authorized users](https://techdocs.akamai.com/terraform/docs/iam-ds-auth-users.md): akamai_iam_authorized_user\n- [Blocked properties](https://techdocs.akamai.com/terraform/docs/iam-ds-blocked-props.md): akamai_iam_blocked_properties\n- [CIDR block](https://techdocs.akamai.com/terraform/docs/iam-ds-cidr-block.md): akamai_iam_cidr_block\n- [CIDR blocks](https://techdocs.akamai.com/terraform/docs/iam-ds-cidr-blocks.md): akamai_iam_cidr_blocks\n- [Contact types](https://techdocs.akamai.com/terraform/docs/iam-ds-contact-types.md): akamai_iam_contact_types\n- [Countries](https://techdocs.akamai.com/terraform/docs/iam-ds-countries.md): akamai_iam_countries\n- [Grantable roles](https://techdocs.akamai.com/terraform/docs/iam-ds-grantable-roles.md): akamai_iam_grantable_roles\n- [Group](https://techdocs.akamai.com/terraform/docs/iam-ds-group.md): akamai_iam_group\n- [Groups](https://techdocs.akamai.com/terraform/docs/iam-ds-groups.md): akamai_iam_groups\n- [Password policy](https://techdocs.akamai.com/terraform/docs/iam-ds-password-policy.md): akamai_iam_password_policy\n- [Property users](https://techdocs.akamai.com/terraform/docs/property-users.md): akamai_iam_property_users\n- [Role](https://techdocs.akamai.com/terraform/docs/iam-ds-role.md): akamai_iam_role\n- [Roles](https://techdocs.akamai.com/terraform/docs/iam-ds-roles.md): akamai_iam_roles\n- [States](https://techdocs.akamai.com/terraform/docs/iam-ds-states.md): akamai_iam_states\n- [Supported languages](https://techdocs.akamai.com/terraform/docs/iam-ds-supported-languages.md): akamai_iam_supported_langs\n- [Time zones](https://techdocs.akamai.com/terraform/docs/iam-ds-timezones.md): akamai_iam_timezones\n- [Timeout policies](https://techdocs.akamai.com/terraform/docs/iam-ds-timeout-policies.md): akamai_iam_timeout_policies\n- [User](https://techdocs.akamai.com/terraform/docs/iam-ds-user.md): akamai_iam_user\n- [Users](https://techdocs.akamai.com/terraform/docs/iam-ds-users.md): akamai_iam_users\n- [Users affected by moving group](https://techdocs.akamai.com/terraform/docs/iam-ds-users-affected-by-moving-group.md): akamai_iam_users_affected_by_moving_group\n- [API client](https://techdocs.akamai.com/terraform/docs/iam-rc-api-client.md): akamai_iam_api_client\n- [Blocked user properties](https://techdocs.akamai.com/terraform/docs/iam-rc-blocked-user-properties.md): akamai_iam_blocked_user_properties\n- [CIDR block](https://techdocs.akamai.com/terraform/docs/iam-rc-cidr-block.md): akamai_iam_cidr_block\n- [Group](https://techdocs.akamai.com/terraform/docs/iam-rc-group.md): akamai_iam_group\n- [IP allowlist](https://techdocs.akamai.com/terraform/docs/iam-rc-ip-allowlist.md): akamai_iam_ip_allowlist\n- [Role](https://techdocs.akamai.com/terraform/docs/iam-rc-role.md): akamai_iam_role\n- [User](https://techdocs.akamai.com/terraform/docs/iam-rc-user.md): akamai_iam_user",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Identity and Access Management index: full category indexCreate identities and control accessAccessible groups: akamai_iam_accessible_groupsAccount switch keys: akamai_iam_account_switch_keysAllowed APIs: akamai_iam_allowed_apisAPI client: akamai_iam_api_clientAPI clients: akamai_iam_api_clientsAuthorized users: akamai_iam_authorized_userBlocked properties: akamai_iam_blocked_propertiesCIDR block: akamai_iam_cidr_blockCIDR blocks: akamai_iam_cidr_blocksContact types: akamai_iam_contact_typesCountries: akamai_iam_countriesGrantable roles: akamai_iam_grantable_rolesGroup: akamai_iam_groupGroups: akamai_iam_groupsPassword policy: akamai_iam_password_policyProperty users: akamai_iam_property_usersRole: akamai_iam_roleRoles: akamai_iam_rolesStates: akamai_iam_statesSupported languages: akamai_iam_supported_langsTime zones: akamai_iam_timezonesTimeout policies: akamai_iam_timeout_policiesUser: akamai_iam_userUsers: akamai_iam_usersUsers affected by moving group: akamai_iam_users_affected_by_moving_groupAPI client: akamai_iam_api_clientBlocked user properties: akamai_iam_blocked_user_propertiesCIDR block: akamai_iam_cidr_blockGroup: akamai_iam_groupIP allowlist: akamai_iam_ip_allowlistRole: akamai_iam_roleUser: akamai_iam_user",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "## Guides: Property",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Property",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        57,
+        353
+      ],
+      "raw": "- [Property index](https://techdocs.akamai.com/terraform/docs/property/llms.txt): full category index\n- [Provision properties](https://techdocs.akamai.com/terraform/docs/set-up-property-provisioning.md)\n- [Validate domains](https://techdocs.akamai.com/terraform/docs/validate-domains.md)\n- [Rules](https://techdocs.akamai.com/terraform/docs/rules.md)\n- [Includes](https://techdocs.akamai.com/terraform/docs/set-up-includes.md)\n- [Rule format changes](https://techdocs.akamai.com/terraform/docs/rule-format-changes.md)\n- [Behaviors and criteria](https://techdocs.akamai.com/terraform/docs/behaviors-criteria.md): v2025-10-16\n- [ad_​scaler_​circuit_​breaker](https://techdocs.akamai.com/terraform/docs/ad-scaler-circuit-breaker.md)\n- [adaptive_​acceleration](https://techdocs.akamai.com/terraform/docs/adaptive-acceleration.md)\n- [advanced](https://techdocs.akamai.com/terraform/docs/advanced.md)\n- [aggregated_​reporting](https://techdocs.akamai.com/terraform/docs/aggregated-reporting.md)\n- [akamaizer](https://techdocs.akamai.com/terraform/docs/akamaizer.md)\n- [akamaizer_​tag](https://techdocs.akamai.com/terraform/docs/akamaizer-tag.md)\n- [all_​http_​in_​cache_​hierarchy](https://techdocs.akamai.com/terraform/docs/all-http-in-cache-hierarchy.md)\n- [allow_​cloudlets_​origins](https://techdocs.akamai.com/terraform/docs/allow-cloudlets-origins.md)\n- [allow_​delete](https://techdocs.akamai.com/terraform/docs/allow-delete.md)\n- [allow_​https_​cache_​key_​sharing](https://techdocs.akamai.com/terraform/docs/allow-httpscache-key-sharing.md)\n- [allow_​https_​downgrade](https://techdocs.akamai.com/terraform/docs/allow-httpsdowngrade.md)\n- [allow_​options](https://techdocs.akamai.com/terraform/docs/allow-options.md)\n- [allow_​patch](https://techdocs.akamai.com/terraform/docs/allow-patch.md)\n- [allow_​post](https://techdocs.akamai.com/terraform/docs/allow-post.md)\n- [allow_​put](https://techdocs.akamai.com/terraform/docs/allow-put.md)\n- [allow_​transfer_​encoding](https://techdocs.akamai.com/terraform/docs/allow-transfer-encoding.md)\n- [alt_​svc_​header](https://techdocs.akamai.com/terraform/docs/alt-svc-header.md)\n- [api_​prioritization](https://techdocs.akamai.com/terraform/docs/api-prioritization.md)\n- [application_​load_​balancer](https://techdocs.akamai.com/terraform/docs/application-load-balancer.md)\n- [audience_​segmentation](https://techdocs.akamai.com/terraform/docs/audience-segmentation.md)\n- [auto_​domain_​validation](https://techdocs.akamai.com/terraform/docs/auto-domain-validation.md)\n- [base_​directory](https://techdocs.akamai.com/terraform/docs/base-directory.md)\n- [boss_​beaconing](https://techdocs.akamai.com/terraform/docs/boss-beaconing.md)\n- [breadcrumbs](https://techdocs.akamai.com/terraform/docs/breadcrumbs.md)\n- [break_​connection](https://techdocs.akamai.com/terraform/docs/break-connection.md)\n- [brotli](https://techdocs.akamai.com/terraform/docs/brotli.md)\n- [cache_​error](https://techdocs.akamai.com/terraform/docs/cache-error.md)\n- [cache_​id](https://techdocs.akamai.com/terraform/docs/cache-id.md)\n- [cache_​key_​ignore_​case](https://techdocs.akamai.com/terraform/docs/cache-key-ignore-case.md)\n- [cache_​key_​query_​params](https://techdocs.akamai.com/terraform/docs/cache-key-query-params.md)\n- [cache_​key_​rewrite](https://techdocs.akamai.com/terraform/docs/cache-key-rewrite.md)\n- [cache_​post](https://techdocs.akamai.com/terraform/docs/cache-post.md)\n- [cache_​redirect](https://techdocs.akamai.com/terraform/docs/cache-redirect.md)\n- [cache_​tag](https://techdocs.akamai.com/terraform/docs/cache-tag.md)\n- [cache_​tag_​visible](https://techdocs.akamai.com/terraform/docs/cache-tag-visible.md)\n- [caching](https://techdocs.akamai.com/terraform/docs/caching.md)\n- [central_​authorization](https://techdocs.akamai.com/terraform/docs/central-authorization.md)\n- [chase_​redirects](https://techdocs.akamai.com/terraform/docs/chase-redirects.md)\n- [client_​certificate_​auth](https://techdocs.akamai.com/terraform/docs/client-certificate-auth.md)\n- [client_​characteristics](https://techdocs.akamai.com/terraform/docs/client-characteristics.md)\n- [cloud_​interconnects](https://techdocs.akamai.com/terraform/docs/cloud-interconnects.md)\n- [cloud_​wrapper](https://techdocs.akamai.com/terraform/docs/cloud-wrapper.md)\n- [cloud_​wrapper_​advanced](https://techdocs.akamai.com/terraform/docs/cloud-wrapper-advanced.md)\n- [common_​media_​client_​data](https://techdocs.akamai.com/terraform/docs/common-media-client-data.md)\n- [construct_​response](https://techdocs.akamai.com/terraform/docs/construct-response.md)\n- [content_​characteristics](https://techdocs.akamai.com/terraform/docs/content-characteristics.md)\n- [content_​characteristics_​amd](https://techdocs.akamai.com/terraform/docs/content-characteristics-amd.md)\n- [content_​characteristics_​dd](https://techdocs.akamai.com/terraform/docs/content-characteristics-dd.md)\n- [content_​characteristics_​wsd_​large_​file](https://techdocs.akamai.com/terraform/docs/content-characteristics-wsd-large-file.md)\n- [content_​characteristics_​wsd_​live](https://techdocs.akamai.com/terraform/docs/content-characteristics-wsd-live.md)\n- [content_​characteristics_​wsd_​vod](https://techdocs.akamai.com/terraform/docs/content-characteristics-wsd-vod.md)\n- [content_​targeting_​protection](https://techdocs.akamai.com/terraform/docs/content-targeting-protection.md)\n- [cors_​support](https://techdocs.akamai.com/terraform/docs/cors-support.md)\n- [cp_​code](https://techdocs.akamai.com/terraform/docs/cp-code.md)\n- [custom_​behavior](https://techdocs.akamai.com/terraform/docs/custom-behavior.md)\n- [datastream](https://techdocs.akamai.com/terraform/docs/datastream.md)\n- [delivery_​receipt](https://techdocs.akamai.com/terraform/docs/delivery-receipt.md)\n- [deny_​access](https://techdocs.akamai.com/terraform/docs/deny-access.md)\n- [deny_​direct_​failover_​access](https://techdocs.akamai.com/terraform/docs/deny-direct-failover-access.md)\n- [device_​characteristic_​cache_​id](https://techdocs.akamai.com/terraform/docs/device-characteristic-cache-id.md)\n- [device_​characteristic_​header](https://techdocs.akamai.com/terraform/docs/device-characteristic-header.md)\n- [dns_​async_​refresh](https://techdocs.akamai.com/terraform/docs/dns-async-refresh.md)\n- [dns_​prefresh](https://techdocs.akamai.com/terraform/docs/dns-prefresh.md)\n- [downgrade_​protocol](https://techdocs.akamai.com/terraform/docs/downgrade-protocol.md)\n- [download_​complete_​marker](https://techdocs.akamai.com/terraform/docs/download-complete-marker.md)\n- [download_​notification](https://techdocs.akamai.com/terraform/docs/download-notification.md)\n- [downstream_​cache](https://techdocs.akamai.com/terraform/docs/downstream-cache.md)\n- [dynamic_​throughtput_​optimization](https://techdocs.akamai.com/terraform/docs/dynamic-throughtput-optimization.md)\n- [dynamic_​throughtput_​optimization_​override](https://techdocs.akamai.com/terraform/docs/dynamic-throughtput-optimization-override.md)\n- [dynamic_​web_​content](https://techdocs.akamai.com/terraform/docs/dynamic-web-content.md)\n- [early_​data](https://techdocs.akamai.com/terraform/docs/early-data.md)\n- [early_data_advanced](https://techdocs.akamai.com/terraform/docs/early-data-advanced.md)\n- [early_​hints](https://techdocs.akamai.com/terraform/docs/early-hints.md)\n- [ecms_​bulk_​upload](https://techdocs.akamai.com/terraform/docs/ecms-bulk-upload.md)\n- [ecms_​database](https://techdocs.akamai.com/terraform/docs/ecms-database.md)\n- [ecms_​dataset](https://techdocs.akamai.com/terraform/docs/ecms-dataset.md)\n- [ecms_​object_​key](https://techdocs.akamai.com/terraform/docs/ecms-object-key.md)\n- [edge_​connect](https://techdocs.akamai.com/terraform/docs/edge-connect.md)\n- [edge_​load_​balancing_​advanced](https://techdocs.akamai.com/terraform/docs/edge-load-balancing-advanced.md)\n- [edge_​load_​balancing_​data_​center](https://techdocs.akamai.com/terraform/docs/edge-load-balancing-data-center.md)\n- [edge_​load_​balancing_​origin](https://techdocs.akamai.com/terraform/docs/edge-load-balancing-origin.md)\n- [edge_​origin_​authorization](https://techdocs.akamai.com/terraform/docs/edge-origin-authorization.md)\n- [edge_​redirector](https://techdocs.akamai.com/terraform/docs/edge-redirector.md)\n- [edge_​scape](https://techdocs.akamai.com/terraform/docs/edge-scape.md)\n- [edge_​side_​includes](https://techdocs.akamai.com/terraform/docs/edge-side-includes.md)\n- [edge_​worker](https://techdocs.akamai.com/terraform/docs/edgeworker.md)\n- [enforce_​mtls_​settings](https://techdocs.akamai.com/terraform/docs/enforce-mtls-settings.md)\n- [enhanced_​akamai_​protocol](https://techdocs.akamai.com/terraform/docs/enhanced-akamai-protocol.md)\n- [enhanced_​debug](https://techdocs.akamai.com/terraform/docs/enhanced-debug.md)\n- [enhanced_​proxy_​detection](https://techdocs.akamai.com/terraform/docs/enhanced-proxy-detection.md)\n- [fail_​action](https://techdocs.akamai.com/terraform/docs/fail-action.md)\n- [failover_​bot_​manager_​feature_​compatibility](https://techdocs.akamai.com/terraform/docs/failover-bot-manager-feature-compatibility.md)\n- [fips](https://techdocs.akamai.com/terraform/docs/fips.md)\n- [first_​party_​marketing](https://techdocs.akamai.com/terraform/docs/first-party-marketing.md)\n- [first_​party_​marketing_​plus](https://techdocs.akamai.com/terraform/docs/first-party-marketing-plus.md)\n- [forward_​rewrite](https://techdocs.akamai.com/terraform/docs/forward-rewrite.md)\n- [g_rpc](https://techdocs.akamai.com/terraform/docs/g-rpc.md)\n- [g2oheader](https://techdocs.akamai.com/terraform/docs/g2oheader.md)\n- [global_​request_​number](https://techdocs.akamai.com/terraform/docs/global-request-number.md)\n- [google_tag_gateway](https://techdocs.akamai.com/terraform/docs/google-tag-gateway.md)\n- [graphql_​caching](https://techdocs.akamai.com/terraform/docs/graphql-caching.md)\n- [gzip_​response](https://techdocs.akamai.com/terraform/docs/gzip-response.md)\n- [hd_​data_​advanced](https://techdocs.akamai.com/terraform/docs/hd-data-advanced.md)\n- [health_​detection](https://techdocs.akamai.com/terraform/docs/health-detection.md)\n- [hsaf_​eip_​binding](https://techdocs.akamai.com/terraform/docs/hsaf-eip-binding.md)\n- [http2](https://techdocs.akamai.com/terraform/docs/http2.md)\n- [http3](https://techdocs.akamai.com/terraform/docs/http3.md)\n- [http_​strict_​transport_​security](https://techdocs.akamai.com/terraform/docs/http-strict-transport-security.md)\n- [http_​to_​https_​upgrade](https://techdocs.akamai.com/terraform/docs/http-to-https-upgrade.md)\n- [im_​override](https://techdocs.akamai.com/terraform/docs/im-override.md)\n- [image_​manager](https://techdocs.akamai.com/terraform/docs/image-manager.md)\n- [image_​manager_​video](https://techdocs.akamai.com/terraform/docs/image-manager-video.md)\n- [instant](https://techdocs.akamai.com/terraform/docs/instant.md)\n- [instant_​config](https://techdocs.akamai.com/terraform/docs/instant-config.md)\n- [large_​file_​optimization](https://techdocs.akamai.com/terraform/docs/large-file-optimization.md)\n- [large_​file_​optimization_​advanced](https://techdocs.akamai.com/terraform/docs/large-file-optimization-advanced.md)\n- [limit_​bit_​rate](https://techdocs.akamai.com/terraform/docs/limit-bit-rate.md)\n- [localhost_loopback_protection](https://techdocs.akamai.com/terraform/docs/localhost-loopback-protection.md)\n- [log_​custom](https://techdocs.akamai.com/terraform/docs/log-custom.md)\n- [m_​pulse](https://techdocs.akamai.com/terraform/docs/m-pulse.md)\n- [manifest_​personalization](https://techdocs.akamai.com/terraform/docs/manifest-personalization.md)\n- [manifest_​rerouting](https://techdocs.akamai.com/terraform/docs/manifest-rerouting.md)\n- [manual_​server_​push](https://techdocs.akamai.com/terraform/docs/manual-server-push.md)\n- [media_​acceleration](https://techdocs.akamai.com/terraform/docs/media-acceleration.md)\n- [media_​acceleration_​quic_​optout](https://techdocs.akamai.com/terraform/docs/media-acceleration-quic-optout.md)\n- [media_​client](https://techdocs.akamai.com/terraform/docs/media-client.md)\n- [media_​file_​retrieval_​optimization](https://techdocs.akamai.com/terraform/docs/media-file-retrieval-optimization.md)\n- [media_​origin_​failover](https://techdocs.akamai.com/terraform/docs/media-origin-failover.md)\n- [metadata_​caching](https://techdocs.akamai.com/terraform/docs/metadata-caching.md)\n- [mobile_​sdk_​performance](https://techdocs.akamai.com/terraform/docs/mobile-sdk-performance.md)\n- [modify_​incoming_​request_​header](https://techdocs.akamai.com/terraform/docs/modify-incoming-request-header.md)\n- [modify_​incoming_​response_​header](https://techdocs.akamai.com/terraform/docs/modify-incoming-response-header.md)\n- [modify_​outgoing_​request_​header](https://techdocs.akamai.com/terraform/docs/modify-outgoing-request-header.md)\n- [modify_​outgoing_​response_​header](https://techdocs.akamai.com/terraform/docs/modify-outgoing-response-header.md)\n- [modify_​via_​header](https://techdocs.akamai.com/terraform/docs/modify-via-header.md)\n- [mtls_​origin_​keystore](https://techdocs.akamai.com/terraform/docs/mtls-origin-keystore.md)\n- [optimize_text_streaming](https://techdocs.akamai.com/terraform/docs/optimize-text-streaming.md)\n- [origin](https://techdocs.akamai.com/terraform/docs/origin.md)\n- [origin_​characteristics](https://techdocs.akamai.com/terraform/docs/origin-characteristics.md)\n- [origin_​characteristics_​wsd](https://techdocs.akamai.com/terraform/docs/origin-characteristics-wsd.md)\n- [origin_​failure_​recovery_​method](https://techdocs.akamai.com/terraform/docs/origin-failure-recovery-method.md)\n- [origin_​failure_​recovery_​policy](https://techdocs.akamai.com/terraform/docs/origin-failure-recovery-policy.md)\n- [origin_​ip_​acl](https://techdocs.akamai.com/terraform/docs/origin-ip-acl.md)\n- [permissions_​policy](https://techdocs.akamai.com/terraform/docs/permissions-policy.md)\n- [persistent_​client_​connection](https://techdocs.akamai.com/terraform/docs/persistent-client-connection.md)\n- [persistent_​connection](https://techdocs.akamai.com/terraform/docs/persistent-connection.md)\n- [personally_​identifiable_​information](https://techdocs.akamai.com/terraform/docs/personally-identifiable-information.md)\n- [phased_​release](https://techdocs.akamai.com/terraform/docs/phased-release.md)\n- [pqc_client_to_edge](https://techdocs.akamai.com/terraform/docs/pqc-client-to-edge.md)\n- [pqc_origin](https://techdocs.akamai.com/terraform/docs/pqc-origin.md)\n- [preconnect](https://techdocs.akamai.com/terraform/docs/preconnect.md)\n- [predictive_​content_​delivery](https://techdocs.akamai.com/terraform/docs/predictive-content-delivery.md)\n- [predictive_​prefetching](https://techdocs.akamai.com/terraform/docs/predictive-prefetching.md)\n- [prefetch](https://techdocs.akamai.com/terraform/docs/prefetch.md)\n- [prefetchable](https://techdocs.akamai.com/terraform/docs/prefetchable.md)\n- [prefresh_​cache](https://techdocs.akamai.com/terraform/docs/prefresh-cache.md)\n- [quic_​beta](https://techdocs.akamai.com/terraform/docs/quic-beta.md)\n- [random_​seek](https://techdocs.akamai.com/terraform/docs/random-seek.md)\n- [rapid](https://techdocs.akamai.com/terraform/docs/rapid.md)\n- [read_​timeout](https://techdocs.akamai.com/terraform/docs/read-timeout.md)\n- [real_​time_​reporting](https://techdocs.akamai.com/terraform/docs/real-time-reporting.md)\n- [real_​user_​monitoring](https://techdocs.akamai.com/terraform/docs/real-user-monitoring.md)\n- [redirect](https://techdocs.akamai.com/terraform/docs/redirect.md)\n- [redirectplus](https://techdocs.akamai.com/terraform/docs/redirectplus.md)\n- [referer_​checking](https://techdocs.akamai.com/terraform/docs/referer-checking.md)\n- [remove_​query_​parameter](https://techdocs.akamai.com/terraform/docs/remove-query-parameter.md)\n- [remove_​vary](https://techdocs.akamai.com/terraform/docs/remove-vary.md)\n- [report](https://techdocs.akamai.com/terraform/docs/report.md)\n- [request_​client_​hints](https://techdocs.akamai.com/terraform/docs/request-client-hints.md)\n- [request_​control](https://techdocs.akamai.com/terraform/docs/request-control.md)\n- [request_​type_​marker](https://techdocs.akamai.com/terraform/docs/request-type-marker.md)\n- [resource_​optimizer](https://techdocs.akamai.com/terraform/docs/resource-optimizer.md)\n- [resource_​optimizer_​extended_​compatibility](https://techdocs.akamai.com/terraform/docs/resource-optimizer-extended-compatibility.md)\n- [response_​code](https://techdocs.akamai.com/terraform/docs/response-code.md)\n- [response_​cookie](https://techdocs.akamai.com/terraform/docs/response-cookie.md)\n- [restrict_​object_​caching](https://techdocs.akamai.com/terraform/docs/restrict-object-caching.md)\n- [return_​cache_​status](https://techdocs.akamai.com/terraform/docs/return-cache-status.md)\n- [rewrite_​url](https://techdocs.akamai.com/terraform/docs/rewrite-url.md)\n- [rum_​custom](https://techdocs.akamai.com/terraform/docs/rum-custom.md)\n- [saas_​definitions](https://techdocs.akamai.com/terraform/docs/saas-definitions.md)\n- [sales_​force_​commerce_​cloud_​client](https://techdocs.akamai.com/terraform/docs/sales-force-commerce-cloud-client.md)\n- [sales_​force_​commerce_​cloud_​provider](https://techdocs.akamai.com/terraform/docs/sales-force-commerce-cloud-provider.md)\n- [sales_​force_​commerce_​cloud_​provider_​host_​header](https://techdocs.akamai.com/terraform/docs/sales-force-commerce-cloud-provider-host-header.md)\n- [save_​post_​dca_​processing](https://techdocs.akamai.com/terraform/docs/save-post-dca-processing.md)\n- [schedule_​invalidation](https://techdocs.akamai.com/terraform/docs/schedule-invalidation.md)\n- [script_​management](https://techdocs.akamai.com/terraform/docs/script-management.md)\n- [segmented_​content_​protection](https://techdocs.akamai.com/terraform/docs/segmented-content-protection.md)\n- [segmented_​media_​optimization](https://techdocs.akamai.com/terraform/docs/segmented-media-optimization.md)\n- [segmented_​media_​streaming_​prefetch](https://techdocs.akamai.com/terraform/docs/segmented-media-streaming-prefetch.md)\n- [set_​variable](https://techdocs.akamai.com/terraform/docs/set-variable.md)\n- [simulate_​error_​code](https://techdocs.akamai.com/terraform/docs/simulate-error-code.md)\n- [site_​shield](https://techdocs.akamai.com/terraform/docs/site-shield.md)\n- [standard_​tls_​migration](https://techdocs.akamai.com/terraform/docs/standard-tlsmigration.md)\n- [standard_​tls_​migration_​override](https://techdocs.akamai.com/terraform/docs/standard-tlsmigration-override.md)\n- [strict_​header_​parsing](https://techdocs.akamai.com/terraform/docs/strict-header-parsing.md)\n- [sub_​customer](https://techdocs.akamai.com/terraform/docs/sub-customer.md)\n- [sure_​route](https://techdocs.akamai.com/terraform/docs/sure-route.md)\n- [tcp_​optimization](https://techdocs.akamai.com/terraform/docs/tcp-optimization.md)\n- [tea_​leaf](https://techdocs.akamai.com/terraform/docs/tea-leaf.md)\n- [tiered_​distribution](https://techdocs.akamai.com/terraform/docs/tiered-distribution.md)\n- [tiered_​distribution_​advanced](https://techdocs.akamai.com/terraform/docs/tiered-distribution-advanced.md)\n- [tiered_​distribution_​customization](https://techdocs.akamai.com/terraform/docs/tiered-distribution-customization.md)\n- [timeout](https://techdocs.akamai.com/terraform/docs/timeout.md)\n- [uid_​configuration](https://techdocs.akamai.com/terraform/docs/uid-configuration.md)\n- [validate_​entity_​tag](https://techdocs.akamai.com/terraform/docs/validate-entity-tag.md)\n- [verify_​json_​web_​token](https://techdocs.akamai.com/terraform/docs/verify-json-web-token.md)\n- [verify_​token_​authorization](https://techdocs.akamai.com/terraform/docs/verify-token-authorization.md)\n- [visitor_​prioritization](https://techdocs.akamai.com/terraform/docs/visitor-prioritization.md)\n- [visitor_prioritization_queue_it](https://techdocs.akamai.com/terraform/docs/visitor-prioritization-queue-it.md)\n- [watermarking](https://techdocs.akamai.com/terraform/docs/watermarking.md)\n- [web_​application_​firewall](https://techdocs.akamai.com/terraform/docs/web-application-firewall.md)\n- [web_​sockets](https://techdocs.akamai.com/terraform/docs/web-sockets.md)\n- [webdav](https://techdocs.akamai.com/terraform/docs/webdav.md)\n- [advanced_​im_​match](https://techdocs.akamai.com/terraform/docs/advanced-im-match.md)\n- [bucket](https://techdocs.akamai.com/terraform/docs/bucket.md)\n- [cacheability](https://techdocs.akamai.com/terraform/docs/cacheability.md)\n- [china_​cdn_​region](https://techdocs.akamai.com/terraform/docs/china-cdn-region.md)\n- [client_​certificate](https://techdocs.akamai.com/terraform/docs/client-certificate.md)\n- [client_​ip](https://techdocs.akamai.com/terraform/docs/client-ip.md)\n- [client_​ip_​version](https://techdocs.akamai.com/terraform/docs/client-ip-version.md)\n- [cloudlets_​origin](https://techdocs.akamai.com/terraform/docs/cloudlets-origin.md)\n- [content_​delivery_​network](https://techdocs.akamai.com/terraform/docs/content-delivery-network.md)\n- [content_​type](https://techdocs.akamai.com/terraform/docs/content-type.md)\n- [debug_​mode](https://techdocs.akamai.com/terraform/docs/debug-mode.md)\n- [device_​characteristic](https://techdocs.akamai.com/terraform/docs/device-characteristic.md)\n- [edge_​workers_​failure](https://techdocs.akamai.com/terraform/docs/edge-workers-failure.md)\n- [file_​extension](https://techdocs.akamai.com/terraform/docs/file-extension.md)\n- [filename](https://techdocs.akamai.com/terraform/docs/filename.md)\n- [hostname](https://techdocs.akamai.com/terraform/docs/hostname.md)\n- [match_​advanced](https://techdocs.akamai.com/terraform/docs/match-advanced.md)\n- [match_​cp_​code](https://techdocs.akamai.com/terraform/docs/match-cp-code.md)\n- [match_​response_​code](https://techdocs.akamai.com/terraform/docs/match-response-code.md)\n- [match_​variable](https://techdocs.akamai.com/terraform/docs/match-variable.md)\n- [metadata_​stage](https://techdocs.akamai.com/terraform/docs/metadata-stage.md)\n- [origin_​timeout](https://techdocs.akamai.com/terraform/docs/origin-timeout.md)\n- [path](https://techdocs.akamai.com/terraform/docs/path.md)\n- [query_​string_​parameter](https://techdocs.akamai.com/terraform/docs/query-string-parameter.md)\n- [random](https://techdocs.akamai.com/terraform/docs/random.md)\n- [recovery_​config](https://techdocs.akamai.com/terraform/docs/recovery-config.md)\n- [regular_​expression](https://techdocs.akamai.com/terraform/docs/regular-expression.md)\n- [request_​cookie](https://techdocs.akamai.com/terraform/docs/request-cookie.md)\n- [request_​header](https://techdocs.akamai.com/terraform/docs/request-header.md)\n- [request_​method](https://techdocs.akamai.com/terraform/docs/request-method.md)\n- [request_​protocol](https://techdocs.akamai.com/terraform/docs/request-protocol.md)\n- [request_​type](https://techdocs.akamai.com/terraform/docs/request-type.md)\n- [response_​header](https://techdocs.akamai.com/terraform/docs/response-header.md)\n- [server_​location](https://techdocs.akamai.com/terraform/docs/server-location.md)\n- [time](https://techdocs.akamai.com/terraform/docs/time.md)\n- [token_​authorization](https://techdocs.akamai.com/terraform/docs/token-authorization.md)\n- [user_​agent](https://techdocs.akamai.com/terraform/docs/user-agent.md)\n- [user_​location](https://techdocs.akamai.com/terraform/docs/user-location.md)\n- [user_​network](https://techdocs.akamai.com/terraform/docs/user-network.md)\n- [variable_​error](https://techdocs.akamai.com/terraform/docs/variable-error.md)\n- [Account hostnames](https://techdocs.akamai.com/terraform/docs/pm-ds-account-hostnames.md): akamai_property_account_hostnames\n- [CP code](https://techdocs.akamai.com/terraform/docs/pm-ds-cp-code.md): akamai_cp_code\n- [CP codes](https://techdocs.akamai.com/terraform/docs/pm-ds-cp-codes.md): akamai_cp_codes\n- [Edge hostname](https://techdocs.akamai.com/terraform/docs/pm-ds-edge-hostname.md): akamai_edge_hostname\n- [Edge hostnames](https://techdocs.akamai.com/terraform/docs/pm-ds-edge-hostnames.md): akamai_edge_hostnames\n- [Domain](https://techdocs.akamai.com/terraform/docs/pm-ds-domain.md): akamai_property_domainownership_domain\n- [Domains](https://techdocs.akamai.com/terraform/docs/pm-ds-domains.md): akamai_property_domainownership_domains\n- [Hostname activation](https://techdocs.akamai.com/terraform/docs/pm-ds-hostname-activation.md): akamai_property_hostname_activation\n- [Hostname activations](https://techdocs.akamai.com/terraform/docs/pm-ds-hostname-activations.md): akamai_property_hostname_activations\n- [Hostname audit history](https://techdocs.akamai.com/terraform/docs/pm-ds-hostname-audit-history.md): akamai_property_hostname_audit_history\n- [Hostnames](https://techdocs.akamai.com/terraform/docs/pm-ds-hostnames.md): akamai_property_hostnames\n- [Hostnames diff](https://techdocs.akamai.com/terraform/docs/pm-ds-hostnames-diff.md): akamai_property_hostnames_diff\n- [Include](https://techdocs.akamai.com/terraform/docs/pm-ds-include.md): akamai_property_include\n- [Include activation](https://techdocs.akamai.com/terraform/docs/pm-ds-include-activation.md): akamai_property_include_activation\n- [Include parents](https://techdocs.akamai.com/terraform/docs/pm-ds-include-parents.md): akamai_property_include_parents\n- [Include rules](https://techdocs.akamai.com/terraform/docs/pm-ds-include-rules.md): akamai_property_include_rules\n- [Includes](https://techdocs.akamai.com/terraform/docs/pm-ds-includes.md): akamai_property_includes\n- [Products](https://techdocs.akamai.com/terraform/docs/pm-ds-products.md): akamai_property_products\n- [Properties](https://techdocs.akamai.com/terraform/docs/pm-ds-properties.md): akamai_properties\n- [Property](https://techdocs.akamai.com/terraform/docs/pm-ds-property.md): akamai_property\n- [Property activation](https://techdocs.akamai.com/terraform/docs/pm-ds-property-activation.md): akamai_property_activation\n- [Search](https://techdocs.akamai.com/terraform/docs/pm-ds-search.md): akamai_properties_search\n- [Search domains](https://techdocs.akamai.com/terraform/docs/pm-ds-search-domains.md): akamai_property_domainownership_search_domains\n- [Rule formats](https://techdocs.akamai.com/terraform/docs/pm-ds-rule-formats.md): akamai_property_rule_formats\n- [Rules](https://techdocs.akamai.com/terraform/docs/pm-ds-property-rules.md): akamai_property_rules\n- [Rules builder](https://techdocs.akamai.com/terraform/docs/pm-ds-rules-builder.md): akamai_property_rules_builder\n- [Rules template](https://techdocs.akamai.com/terraform/docs/pm-ds-rules-template.md): akamai_property_rules_template\n- [Activation](https://techdocs.akamai.com/terraform/docs/pm-rc-activation.md): akamai_property_activation\n- [CP code](https://techdocs.akamai.com/terraform/docs/pm-rc-cp-code.md): akamai_cp_code\n- [Domains](https://techdocs.akamai.com/terraform/docs/pm-rc-domains.md): akamai_property_domainownership_domains\n- [Domain validation](https://techdocs.akamai.com/terraform/docs/pm-rc-domain-validation.md): akamai_property_domainownership_validation\n- [Edge hostname](https://techdocs.akamai.com/terraform/docs/pm-rc-edge-hostname.md): akamai_edge_hostname\n- [Hostname bucket](https://techdocs.akamai.com/terraform/docs/pm-rc-hostname-bucket.md): akamai_property_hostname_bucket\n- [Include](https://techdocs.akamai.com/terraform/docs/pm-rc-include.md): akamai_property_include\n- [Include activation](https://techdocs.akamai.com/terraform/docs/pm-rc-include-activation.md): akamai_property_include_activation\n- [Late domain validation](https://techdocs.akamai.com/terraform/docs/pm-rc-domain-late-validation.md): akamai_property_domainownership_late_validation\n- [Property](https://techdocs.akamai.com/terraform/docs/pm-rc-property.md): akamai_property",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Property index: full category indexProvision propertiesValidate domainsRulesIncludesRule format changesBehaviors and criteria: v2025-10-16ad_​scaler_​circuit_​breakeradaptive_​accelerationadvancedaggregated_​reportingakamaizerakamaizer_​tagall_​http_​in_​cache_​hierarchyallow_​cloudlets_​originsallow_​deleteallow_​https_​cache_​key_​sharingallow_​https_​downgradeallow_​optionsallow_​patchallow_​postallow_​putallow_​transfer_​encodingalt_​svc_​headerapi_​prioritizationapplication_​load_​balanceraudience_​segmentationauto_​domain_​validationbase_​directoryboss_​beaconingbreadcrumbsbreak_​connectionbrotlicache_​errorcache_​idcache_​key_​ignore_​casecache_​key_​query_​paramscache_​key_​rewritecache_​postcache_​redirectcache_​tagcache_​tag_​visiblecachingcentral_​authorizationchase_​redirectsclient_​certificate_​authclient_​characteristicscloud_​interconnectscloud_​wrappercloud_​wrapper_​advancedcommon_​media_​client_​dataconstruct_​responsecontent_​characteristicscontent_​characteristics_​amdcontent_​characteristics_​ddcontent_​characteristics_​wsd_​large_​filecontent_​characteristics_​wsd_​livecontent_​characteristics_​wsd_​vodcontent_​targeting_​protectioncors_​supportcp_​codecustom_​behaviordatastreamdelivery_​receiptdeny_​accessdeny_​direct_​failover_​accessdevice_​characteristic_​cache_​iddevice_​characteristic_​headerdns_​async_​refreshdns_​prefreshdowngrade_​protocoldownload_​complete_​markerdownload_​notificationdownstream_​cachedynamic_​throughtput_​optimizationdynamic_​throughtput_​optimization_​overridedynamic_​web_​contentearly_​dataearly_data_advancedearly_​hintsecms_​bulk_​uploadecms_​databaseecms_​datasetecms_​object_​keyedge_​connectedge_​load_​balancing_​advancededge_​load_​balancing_​data_​centeredge_​load_​balancing_​originedge_​origin_​authorizationedge_​redirectoredge_​scapeedge_​side_​includesedge_​workerenforce_​mtls_​settingsenhanced_​akamai_​protocolenhanced_​debugenhanced_​proxy_​detectionfail_​actionfailover_​bot_​manager_​feature_​compatibilityfipsfirst_​party_​marketingfirst_​party_​marketing_​plusforward_​rewriteg_rpcg2oheaderglobal_​request_​numbergoogle_tag_gatewaygraphql_​cachinggzip_​responsehd_​data_​advancedhealth_​detectionhsaf_​eip_​bindinghttp2http3http_​strict_​transport_​securityhttp_​to_​https_​upgradeim_​overrideimage_​managerimage_​manager_​videoinstantinstant_​configlarge_​file_​optimizationlarge_​file_​optimization_​advancedlimit_​bit_​ratelocalhost_loopback_protectionlog_​customm_​pulsemanifest_​personalizationmanifest_​reroutingmanual_​server_​pushmedia_​accelerationmedia_​acceleration_​quic_​optoutmedia_​clientmedia_​file_​retrieval_​optimizationmedia_​origin_​failovermetadata_​cachingmobile_​sdk_​performancemodify_​incoming_​request_​headermodify_​incoming_​response_​headermodify_​outgoing_​request_​headermodify_​outgoing_​response_​headermodify_​via_​headermtls_​origin_​keystoreoptimize_text_streamingoriginorigin_​characteristicsorigin_​characteristics_​wsdorigin_​failure_​recovery_​methodorigin_​failure_​recovery_​policyorigin_​ip_​aclpermissions_​policypersistent_​client_​connectionpersistent_​connectionpersonally_​identifiable_​informationphased_​releasepqc_client_to_edgepqc_originpreconnectpredictive_​content_​deliverypredictive_​prefetchingprefetchprefetchableprefresh_​cachequic_​betarandom_​seekrapidread_​timeoutreal_​time_​reportingreal_​user_​monitoringredirectredirectplusreferer_​checkingremove_​query_​parameterremove_​varyreportrequest_​client_​hintsrequest_​controlrequest_​type_​markerresource_​optimizerresource_​optimizer_​extended_​compatibilityresponse_​coderesponse_​cookierestrict_​object_​cachingreturn_​cache_​statusrewrite_​urlrum_​customsaas_​definitionssales_​force_​commerce_​cloud_​clientsales_​force_​commerce_​cloud_​providersales_​force_​commerce_​cloud_​provider_​host_​headersave_​post_​dca_​processingschedule_​invalidationscript_​managementsegmented_​content_​protectionsegmented_​media_​optimizationsegmented_​media_​streaming_​prefetchset_​variablesimulate_​error_​codesite_​shieldstandard_​tls_​migrationstandard_​tls_​migration_​overridestrict_​header_​parsingsub_​customersure_​routetcp_​optimizationtea_​leaftiered_​distributiontiered_​distribution_​advancedtiered_​distribution_​customizationtimeoutuid_​configurationvalidate_​entity_​tagverify_​json_​web_​tokenverify_​token_​authorizationvisitor_​prioritizationvisitor_prioritization_queue_itwatermarkingweb_​application_​firewallweb_​socketswebdavadvanced_​im_​matchbucketcacheabilitychina_​cdn_​regionclient_​certificateclient_​ipclient_​ip_​versioncloudlets_​origincontent_​delivery_​networkcontent_​typedebug_​modedevice_​characteristicedge_​workers_​failurefile_​extensionfilenamehostnamematch_​advancedmatch_​cp_​codematch_​response_​codematch_​variablemetadata_​stageorigin_​timeoutpathquery_​string_​parameterrandomrecovery_​configregular_​expressionrequest_​cookierequest_​headerrequest_​methodrequest_​protocolrequest_​typeresponse_​headerserver_​locationtimetoken_​authorizationuser_​agentuser_​locationuser_​networkvariable_​errorAccount hostnames: akamai_property_account_hostnamesCP code: akamai_cp_codeCP codes: akamai_cp_codesEdge hostname: akamai_edge_hostnameEdge hostnames: akamai_edge_hostnamesDomain: akamai_property_domainownership_domainDomains: akamai_property_domainownership_domainsHostname activation: akamai_property_hostname_activationHostname activations: akamai_property_hostname_activationsHostname audit history: akamai_property_hostname_audit_historyHostnames: akamai_property_hostnamesHostnames diff: akamai_property_hostnames_diffInclude: akamai_property_includeInclude activation: akamai_property_include_activationInclude parents: akamai_property_include_parentsInclude rules: akamai_property_include_rulesIncludes: akamai_property_includesProducts: akamai_property_productsProperties: akamai_propertiesProperty: akamai_propertyProperty activation: akamai_property_activationSearch: akamai_properties_searchSearch domains: akamai_property_domainownership_search_domainsRule formats: akamai_property_rule_formatsRules: akamai_property_rulesRules builder: akamai_property_rules_builderRules template: akamai_property_rules_templateActivation: akamai_property_activationCP code: akamai_cp_codeDomains: akamai_property_domainownership_domainsDomain validation: akamai_property_domainownership_validationEdge hostname: akamai_edge_hostnameHostname bucket: akamai_property_hostname_bucketInclude: akamai_property_includeInclude activation: akamai_property_include_activationLate domain validation: akamai_property_domainownership_late_validationProperty: akamai_property",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        355,
+        355
+      ],
+      "raw": "## Guides: Reporting Groups",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Reporting Groups",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        357,
+        363
+      ],
+      "raw": "- [Reporting Groups index](https://techdocs.akamai.com/terraform/docs/reporting-groups/llms.txt): full category index\n- [Manage reporting groups](https://techdocs.akamai.com/terraform/docs/manage-reporting-groups.md)\n- [CP code](https://techdocs.akamai.com/terraform/docs/rg-ds-cp-code.md): akamai_reportinggroups_cp_code\n- [CP codes](https://techdocs.akamai.com/terraform/docs/rg-ds-cp-codes.md): akamai_reportinggroups_cp_codes\n- [Reporting group](https://techdocs.akamai.com/terraform/docs/rg-ds-reporting-group.md): akamai_reportinggroups_group\n- [Reporting groups](https://techdocs.akamai.com/terraform/docs/rg-ds-reporting-groups.md): akamai_reportinggroups_groups\n- [Reporting group](https://techdocs.akamai.com/terraform/docs/rg-rc-reporting-group.md): akamai_reportinggroups_group",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Reporting Groups index: full category indexManage reporting groupsCP code: akamai_reportinggroups_cp_codeCP codes: akamai_reportinggroups_cp_codesReporting group: akamai_reportinggroups_groupReporting groups: akamai_reportinggroups_groupsReporting group: akamai_reportinggroups_group",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        365,
+        365
+      ],
+      "raw": "## Guides: Application Security",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Application Security",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        367,
+        487
+      ],
+      "raw": "- [Application Security index](https://techdocs.akamai.com/terraform/docs/application-security/llms.txt): full category index\n- [Configure AppSec](https://techdocs.akamai.com/terraform/docs/configure-appsec.md)\n- [Match targets](https://techdocs.akamai.com/terraform/docs/match-target-options.md)\n- [Rate policy](https://techdocs.akamai.com/terraform/docs/rate-policy-options.md)\n- [Attack group migration](https://techdocs.akamai.com/terraform/docs/attack-group-migration.md)\n- [AAP selected hostnames](https://techdocs.akamai.com/terraform/docs/as-ds-aap-selected-hostnames.md): akamai_appsec_aap_selected_hostnames\n- [API endpoints](https://techdocs.akamai.com/terraform/docs/as-ds-api-endpoints.md): akamai_appsec_api_endpoints\n- [API request constraints](https://techdocs.akamai.com/terraform/docs/as-ds-api-request-constraints.md): akamai_appsec_api_request_constraints\n- [ASE penalty box settings](https://techdocs.akamai.com/terraform/docs/as-ds-ase-penalty-box-settings.md): akamai_appsec_advanced_settings_ase_penalty_box\n- [Attack groups](https://techdocs.akamai.com/terraform/docs/as-ds-attack-groups.md): akamai_appsec_attack_groups\n- [Attack payload logging](https://techdocs.akamai.com/terraform/docs/as-ds-attack-payload-logging.md): akamai_appsec_advanced_settings_attack_payload_logging\n- [Bypass network lists](https://techdocs.akamai.com/terraform/docs/as-ds-bypass-network-lists.md): akamai_appsec_bypass_network_lists\n- [Configuration](https://techdocs.akamai.com/terraform/docs/as-ds-configuration.md): akamai_appsec_configuration\n- [Configuration version](https://techdocs.akamai.com/terraform/docs/as-ds-configuration-version.md): akamai_appsec_configuration_version\n- [Contracts groups](https://techdocs.akamai.com/terraform/docs/as-ds-contracts-groups.md): akamai_appsec_contracts_groups\n- [Custom deny](https://techdocs.akamai.com/terraform/docs/as-ds-custom-deny.md): akamai_appsec_custom_deny\n- [Custom rule actions](https://techdocs.akamai.com/terraform/docs/as-ds-custom-rule-actions.md): akamai_appsec_custom_rule_actions\n- [Custom rules](https://techdocs.akamai.com/terraform/docs/as-ds-custom-rules.md): akamai_appsec_custom_rules\n- [Eval group](https://techdocs.akamai.com/terraform/docs/as-ds-eval-group.md): akamai_appsec_eval_group\n- [Eval penalty box](https://techdocs.akamai.com/terraform/docs/as-ds-eval-penalty.md): akamai_appsec_eval_penalty_box\n- [Eval penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-ds-eval-penalty-box-conditions.md): akamai_appsec_eval_penalty_box_conditions\n- [Eval rules](https://techdocs.akamai.com/terraform/docs/as-ds-eval-rules.md): akamai_appsec_eval_rules\n- [Evasive path match](https://techdocs.akamai.com/terraform/docs/as-ds-evasive-path-match.md): akamai_appsec_advanced_settings_evasive_path_match\n- [Failover hostnames](https://techdocs.akamai.com/terraform/docs/as-ds-failover-hostnames.md): akamai_appsec_failover_hostnames\n- [Hostname coverage](https://techdocs.akamai.com/terraform/docs/as-ds-hostname-coverage.md): akamai_appsec_hostname_coverage\n- [Hostname coverage match targets](https://techdocs.akamai.com/terraform/docs/as-ds-hostname-coverage-match-targets.md): akamai_appsec_hostname_coverage_match_targets\n- [Hostname coverage overlapping](https://techdocs.akamai.com/terraform/docs/as-ds-hostname-coverage-overlapping.md): akamai_appsec_hostname_coverage_overlapping\n- [IP geo](https://techdocs.akamai.com/terraform/docs/as-ds-ip-geo.md): akamai_appsec_ip_geo\n- [JA4 fingerprint](https://techdocs.akamai.com/terraform/docs/as-ds-ja4-fingerprint.md)\n- [Malware content types](https://techdocs.akamai.com/terraform/docs/as-ds-malware-content-types.md): akamai_appsec_malware_content_types\n- [Malware policies](https://techdocs.akamai.com/terraform/docs/as-ds-malware-policies.md): akamai_appsec_malware_policies\n- [Malware policy actions](https://techdocs.akamai.com/terraform/docs/as-ds-malware-policy-actions.md): akamai_appsec_malware_policy_actions\n- [Match targets](https://techdocs.akamai.com/terraform/docs/as-ds-match-targets.md): akamai_appsec_match_targets\n- [Penalty box](https://techdocs.akamai.com/terraform/docs/as-ds-penalty-box.md): akamai_appsec_penalty_box\n- [Penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-ds-penalty-box-conditions.md): akamai_appsec_penalty_box_conditions\n- [PII learning](https://techdocs.akamai.com/terraform/docs/as-ds-pii-learning.md): akamai_appsec_advanced_setttings_pii_learning\n- [Policy actions](https://techdocs.akamai.com/terraform/docs/as-ds-policy-actions.md): akamai_appsec_rate_policy_actions\n- [Pragma header](https://techdocs.akamai.com/terraform/docs/as-ds-pragma-header.md): akamai_appsec_advanced_settings_pragma_header\n- [Prefetch](https://techdocs.akamai.com/terraform/docs/as-ds-prefetch.md): akamai_appsec_advanced_settings_prefetch\n- [Rapid rules](https://techdocs.akamai.com/terraform/docs/as-ds-rapid-rules.md): akamai_appsec_rapid_rules\n- [Rate policies](https://techdocs.akamai.com/terraform/docs/as-ds-rate-policies.md): akamai_appsec_rate_policies\n- [Reputation profile actions](https://techdocs.akamai.com/terraform/docs/as-ds-reputation-profile-actions.md): akamai_appsec_reputation_profile_actions\n- [Reputation profile analysis](https://techdocs.akamai.com/terraform/docs/as-ds-reputation-profile-analysis.md): akamai_appsec_reputation_profile_analysis\n- [Reputation profiles](https://techdocs.akamai.com/terraform/docs/as-ds-reputation-profiles.md): akamai_appsec_reputation_profiles\n- [Request body settings](https://techdocs.akamai.com/terraform/docs/as-ds-request-body-settings.md): akamai_appsec_advanced_settings_request_body\n- [Rule upgrade details](https://techdocs.akamai.com/terraform/docs/as-ds-rule-upgrade-details.md): akamai_appsec_rule_upgrade_details\n- [Rules](https://techdocs.akamai.com/terraform/docs/as-ds-rules.md): akamai_appsec_rules\n- [Security policy](https://techdocs.akamai.com/terraform/docs/as-ds-security-policy.md): akamai_appsec_security_policy\n- [Security policy protections](https://techdocs.akamai.com/terraform/docs/as-ds-security-policy-protections.md): akamai_appsec_security_policy_protections\n- [Selectable hostnames](https://techdocs.akamai.com/terraform/docs/as-ds-selectable-hostnames.md): akamai_appsec_selectable_hostnames\n- [Siem definitions](https://techdocs.akamai.com/terraform/docs/as-ds-siem-definitions.md): akamai_appsec_siem_definitions\n- [Siem settings](https://techdocs.akamai.com/terraform/docs/as-ds-siem-settings.md): akamai_appsec_siem_settings\n- [Slow POST](https://techdocs.akamai.com/terraform/docs/as-ds-slow-post.md): akamai_appsec_slow_post\n- [Threat intel](https://techdocs.akamai.com/terraform/docs/as-ds-threat-intel.md): akamai_appsec_threat_intel\n- [Tuning recommendations](https://techdocs.akamai.com/terraform/docs/as-ds-tuning-recommendations.md): akamai_appsec_tuning_recommendations\n- [Version notes](https://techdocs.akamai.com/terraform/docs/as-ds-version-notes.md): akamai_appsec_version_notes\n- [WAF mode](https://techdocs.akamai.com/terraform/docs/as-ds-waf-mode.md): akamai_appsec_waf_mode\n- [WAF rule set](https://techdocs.akamai.com/terraform/docs/as-ds-waf-rule-set.md): akamai_appsec_waf_ruleset\n- [URL protection policy](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policy.md): akamai_appsec_url_protection_policy\n- [URL protection policies](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policies.md): akamai_appsec_url_protection_policies\n- [URL protection policy actions](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policy-actions.md): akamai_appsec_url_protection_policy_actions\n- [URL protection policies actions](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policies-actions.md): akamai_appsec_url_protection_policies_actions\n- [AAP selected hostnames](https://techdocs.akamai.com/terraform/docs/as-rc-aap-selected-hostnames.md): akamai_appsec_aap_selected_hostnames\n- [Activations](https://techdocs.akamai.com/terraform/docs/as-rc-activations.md): akamai_appsec_activations\n- [Advanced logging](https://techdocs.akamai.com/terraform/docs/as-rc-advanced-logging.md): akamai_appsec_advanced_settings_logging\n- [API constraints protection](https://techdocs.akamai.com/terraform/docs/as-rc-api-constraints-protection.md): akamai_appsec_api_constraints_protection\n- [API request constraints](https://techdocs.akamai.com/terraform/docs/as-rc-api-request-constraints.md): appsec_api_request_constraints\n- [ASE penalty box settings](https://techdocs.akamai.com/terraform/docs/as-rc-ase-penalty-box-settings.md): akamai_appsec_advanced_settings_ase_penalty_box\n- [Attack group](https://techdocs.akamai.com/terraform/docs/as-rc-attack-group.md): akamai_appsec_attack_group\n- [Attack payload logging](https://techdocs.akamai.com/terraform/docs/as-rc-attack-payload-logging.md): akamai_appsec_advanced_settings_attack_payload_logging\n- [Bypass network lists](https://techdocs.akamai.com/terraform/docs/as-rc-bypass-network-lists.md): akamai_appsec_bypass_network_lists\n- [Configuration](https://techdocs.akamai.com/terraform/docs/as-rc-configuration.md): akamai_appsec_configuration\n- [Configuration rename](https://techdocs.akamai.com/terraform/docs/as-rc-configuration-rename.md): akamai_appsec_configuration_rename\n- [Custom deny](https://techdocs.akamai.com/terraform/docs/as-rc-custom-deny.md): akamai_appsec_custom_deny\n- [Custom rule](https://techdocs.akamai.com/terraform/docs/as-rc-custom-rule.md): akamai_appsec_custom_rule\n- [Custom rule action](https://techdocs.akamai.com/terraform/docs/as-rc-custom-rule-action.md): akamai_appsec_custom_rule_action\n- [Eval](https://techdocs.akamai.com/terraform/docs/as-rc-eval.md): akamai_appsec_eval\n- [Eval group](https://techdocs.akamai.com/terraform/docs/as-rc-eval-group.md): akamai_appsec_eval_group\n- [Eval penalty box](https://techdocs.akamai.com/terraform/docs/as-rc-eval-penalty-box.md): akamai_appsec_eval_penalty_box\n- [Eval penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-rc-eval-penalty-box-conditions.md): akamai_appsec_eval_penalty_box_conditions\n- [Eval rule](https://techdocs.akamai.com/terraform/docs/as-rc-eval-rule.md): akamai_appsec_eval_rule\n- [Evasive path match](https://techdocs.akamai.com/terraform/docs/as-rc-evasive-path-match.md): akamai_appsec_advanced_settings_evasive_path_match\n- [IP Geo](https://techdocs.akamai.com/terraform/docs/as-rc-ip-geo.md): akamai_appsec_ip_geo\n- [IP Geo protection](https://techdocs.akamai.com/terraform/docs/as-rc-ip-geo-protection.md): akamai_appsec_ip_geo_protection\n- [JA4 fingerprint](https://techdocs.akamai.com/terraform/docs/as-rc-ja4-fingerprint.md): akamai_appsec_advanced_settings_ja4_fingerprint\n- [Match target sequence](https://techdocs.akamai.com/terraform/docs/as-rc-match-target-sequence.md): akamai_appsec_match_target_sequence\n- [Malware policy](https://techdocs.akamai.com/terraform/docs/as-rc-malware-policy.md): akamai_appsec_malware_policy\n- [Malware policy action](https://techdocs.akamai.com/terraform/docs/as-rc-malware-policy-action.md): akamai_appsec_malware_policy_action\n- [Malware policy actions](https://techdocs.akamai.com/terraform/docs/as-rc-malware-policy-actions.md): akamai_appsec_malware_policy_actions\n- [Malware protection](https://techdocs.akamai.com/terraform/docs/as-rc-malware-protection.md): akamai_appsec_malware_protection\n- [Match target](https://techdocs.akamai.com/terraform/docs/as-rc-match-target.md): akamai_appsec_match_target\n- [Penalty box](https://techdocs.akamai.com/terraform/docs/as-rc-penalty-box.md): akamai_appsec_penalty_box\n- [Penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-rc-penalty-box-conditions.md): akamai_appsec_penalty_box_conditions\n- [PII learning](https://techdocs.akamai.com/terraform/docs/as-rc-pii-learning.md): akamai_appsec_advanced_settings_pii_learning\n- [Policy rename](https://techdocs.akamai.com/terraform/docs/as-rc-policy-rename.md): akamai_appsec_security_policy_rename\n- [Pragma header](https://techdocs.akamai.com/terraform/docs/as-rc-pragma-header.md): akamai_appsec_advanced_settings_pragma_header\n- [Prefetch](https://techdocs.akamai.com/terraform/docs/as-rc-prefetch.md): akamai_appsec_advanced_settings_prefetch\n- [Rapid rules](https://techdocs.akamai.com/terraform/docs/as-rc-rapid-rules.md): akamai_appsec_rapid_rules\n- [Rate policy](https://techdocs.akamai.com/terraform/docs/as-rc-rate-policy.md): akamai_appsec_rate_policy\n- [Rate policy action](https://techdocs.akamai.com/terraform/docs/as-rc-rate-policy-action.md): akamai_appsec_rate_policy_action\n- [Rate protection](https://techdocs.akamai.com/terraform/docs/as-rc-rate-protection.md): akamai_appsec_rate_protection\n- [Reputation profile](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-profile.md): akamai_appsec_reputation_profile\n- [Reputation profile action](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-profile-action.md): akamai_appsec_reputation_profile_action\n- [Reputation profile analysis](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-analysis.md): akamai_appsec_reputation_analysis\n- [Reputation protection](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-protection.md): akamai_appsec_reputation_protection\n- [Request body settings](https://techdocs.akamai.com/terraform/docs/request-body-settings.md): akamai_appsec_advanced_settings_request_body\n- [Rule](https://techdocs.akamai.com/terraform/docs/as-rc-rule.md): akamai_appsec_rule\n- [Rule upgrade](https://techdocs.akamai.com/terraform/docs/as-rc-rule-upgrade.md): akamai_appsec_rule_upgrade\n- [Security policy](https://techdocs.akamai.com/terraform/docs/as-rc-security-policy.md): akamai_appsec_security_policy\n- [Security policy default protections](https://techdocs.akamai.com/terraform/docs/as-rc-security-policy-default-protections.md): akamai_appsec_security_policy_default_protections\n- [Security policy protections](https://techdocs.akamai.com/terraform/docs/as-rc-security-policy-protections.md): akamai_appsec_security_policy_protections\n- [SIEM settings](https://techdocs.akamai.com/terraform/docs/as-rc-siem-settings.md): akamai_appsec_siem_settings\n- [Slow POST](https://techdocs.akamai.com/terraform/docs/as-rc-slow-post.md): akamai_appsec_slow_post\n- [Slow POST protection](https://techdocs.akamai.com/terraform/docs/as-rc-slow-post-protection.md): akamai_appsec_slowpost_protection\n- [Threat intel](https://techdocs.akamai.com/terraform/docs/as-rc-threat-intel.md): akamai_appsec_threat_intel\n- [Version notes](https://techdocs.akamai.com/terraform/docs/as-rc-version-notes.md): akamai_appsec_version_notes\n- [WAF mode](https://techdocs.akamai.com/terraform/docs/as-rc-waf-mode.md): akamai_appsec_waf_mode\n- [WAF protections](https://techdocs.akamai.com/terraform/docs/as-rc-waf-protections.md): akamai_appsec_waf_protection\n- [WAF rule set](https://techdocs.akamai.com/terraform/docs/as-rc-waf-rule-set.md): akamai_appsec_waf_ruleset\n- [URL protection action](https://techdocs.akamai.com/terraform/docs/as-rc-url-protection-action.md): akamai_appsec_url_protection_action\n- [URL protection policy](https://techdocs.akamai.com/terraform/docs/as-rc-url-protection-policy.md): akamai_appsec_url_protection_policy",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Application Security index: full category indexConfigure AppSecMatch targetsRate policyAttack group migrationAAP selected hostnames: akamai_appsec_aap_selected_hostnamesAPI endpoints: akamai_appsec_api_endpointsAPI request constraints: akamai_appsec_api_request_constraintsASE penalty box settings: akamai_appsec_advanced_settings_ase_penalty_boxAttack groups: akamai_appsec_attack_groupsAttack payload logging: akamai_appsec_advanced_settings_attack_payload_loggingBypass network lists: akamai_appsec_bypass_network_listsConfiguration: akamai_appsec_configurationConfiguration version: akamai_appsec_configuration_versionContracts groups: akamai_appsec_contracts_groupsCustom deny: akamai_appsec_custom_denyCustom rule actions: akamai_appsec_custom_rule_actionsCustom rules: akamai_appsec_custom_rulesEval group: akamai_appsec_eval_groupEval penalty box: akamai_appsec_eval_penalty_boxEval penalty box conditions: akamai_appsec_eval_penalty_box_conditionsEval rules: akamai_appsec_eval_rulesEvasive path match: akamai_appsec_advanced_settings_evasive_path_matchFailover hostnames: akamai_appsec_failover_hostnamesHostname coverage: akamai_appsec_hostname_coverageHostname coverage match targets: akamai_appsec_hostname_coverage_match_targetsHostname coverage overlapping: akamai_appsec_hostname_coverage_overlappingIP geo: akamai_appsec_ip_geoJA4 fingerprintMalware content types: akamai_appsec_malware_content_typesMalware policies: akamai_appsec_malware_policiesMalware policy actions: akamai_appsec_malware_policy_actionsMatch targets: akamai_appsec_match_targetsPenalty box: akamai_appsec_penalty_boxPenalty box conditions: akamai_appsec_penalty_box_conditionsPII learning: akamai_appsec_advanced_setttings_pii_learningPolicy actions: akamai_appsec_rate_policy_actionsPragma header: akamai_appsec_advanced_settings_pragma_headerPrefetch: akamai_appsec_advanced_settings_prefetchRapid rules: akamai_appsec_rapid_rulesRate policies: akamai_appsec_rate_policiesReputation profile actions: akamai_appsec_reputation_profile_actionsReputation profile analysis: akamai_appsec_reputation_profile_analysisReputation profiles: akamai_appsec_reputation_profilesRequest body settings: akamai_appsec_advanced_settings_request_bodyRule upgrade details: akamai_appsec_rule_upgrade_detailsRules: akamai_appsec_rulesSecurity policy: akamai_appsec_security_policySecurity policy protections: akamai_appsec_security_policy_protectionsSelectable hostnames: akamai_appsec_selectable_hostnamesSiem definitions: akamai_appsec_siem_definitionsSiem settings: akamai_appsec_siem_settingsSlow POST: akamai_appsec_slow_postThreat intel: akamai_appsec_threat_intelTuning recommendations: akamai_appsec_tuning_recommendationsVersion notes: akamai_appsec_version_notesWAF mode: akamai_appsec_waf_modeWAF rule set: akamai_appsec_waf_rulesetURL protection policy: akamai_appsec_url_protection_policyURL protection policies: akamai_appsec_url_protection_policiesURL protection policy actions: akamai_appsec_url_protection_policy_actionsURL protection policies actions: akamai_appsec_url_protection_policies_actionsAAP selected hostnames: akamai_appsec_aap_selected_hostnamesActivations: akamai_appsec_activationsAdvanced logging: akamai_appsec_advanced_settings_loggingAPI constraints protection: akamai_appsec_api_constraints_protectionAPI request constraints: appsec_api_request_constraintsASE penalty box settings: akamai_appsec_advanced_settings_ase_penalty_boxAttack group: akamai_appsec_attack_groupAttack payload logging: akamai_appsec_advanced_settings_attack_payload_loggingBypass network lists: akamai_appsec_bypass_network_listsConfiguration: akamai_appsec_configurationConfiguration rename: akamai_appsec_configuration_renameCustom deny: akamai_appsec_custom_denyCustom rule: akamai_appsec_custom_ruleCustom rule action: akamai_appsec_custom_rule_actionEval: akamai_appsec_evalEval group: akamai_appsec_eval_groupEval penalty box: akamai_appsec_eval_penalty_boxEval penalty box conditions: akamai_appsec_eval_penalty_box_conditionsEval rule: akamai_appsec_eval_ruleEvasive path match: akamai_appsec_advanced_settings_evasive_path_matchIP Geo: akamai_appsec_ip_geoIP Geo protection: akamai_appsec_ip_geo_protectionJA4 fingerprint: akamai_appsec_advanced_settings_ja4_fingerprintMatch target sequence: akamai_appsec_match_target_sequenceMalware policy: akamai_appsec_malware_policyMalware policy action: akamai_appsec_malware_policy_actionMalware policy actions: akamai_appsec_malware_policy_actionsMalware protection: akamai_appsec_malware_protectionMatch target: akamai_appsec_match_targetPenalty box: akamai_appsec_penalty_boxPenalty box conditions: akamai_appsec_penalty_box_conditionsPII learning: akamai_appsec_advanced_settings_pii_learningPolicy rename: akamai_appsec_security_policy_renamePragma header: akamai_appsec_advanced_settings_pragma_headerPrefetch: akamai_appsec_advanced_settings_prefetchRapid rules: akamai_appsec_rapid_rulesRate policy: akamai_appsec_rate_policyRate policy action: akamai_appsec_rate_policy_actionRate protection: akamai_appsec_rate_protectionReputation profile: akamai_appsec_reputation_profileReputation profile action: akamai_appsec_reputation_profile_actionReputation profile analysis: akamai_appsec_reputation_analysisReputation protection: akamai_appsec_reputation_protectionRequest body settings: akamai_appsec_advanced_settings_request_bodyRule: akamai_appsec_ruleRule upgrade: akamai_appsec_rule_upgradeSecurity policy: akamai_appsec_security_policySecurity policy default protections: akamai_appsec_security_policy_default_protectionsSecurity policy protections: akamai_appsec_security_policy_protectionsSIEM settings: akamai_appsec_siem_settingsSlow POST: akamai_appsec_slow_postSlow POST protection: akamai_appsec_slowpost_protectionThreat intel: akamai_appsec_threat_intelVersion notes: akamai_appsec_version_notesWAF mode: akamai_appsec_waf_modeWAF protections: akamai_appsec_waf_protectionWAF rule set: akamai_appsec_waf_rulesetURL protection action: akamai_appsec_url_protection_actionURL protection policy: akamai_appsec_url_protection_policy",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        489,
+        489
+      ],
+      "raw": "## Guides: API Definitions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: API Definitions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        491,
+        498
+      ],
+      "raw": "- [API Definitions index](https://techdocs.akamai.com/terraform/docs/api-definitions/llms.txt): full category index\n- [Register an API](https://techdocs.akamai.com/terraform/docs/set-up-apidefinitions.md)\n- [OpenAPI](https://techdocs.akamai.com/terraform/docs/apidef-ds-openapi.md)\n- [API](https://techdocs.akamai.com/terraform/docs/apidef-ds-api.md)\n- [Resource operations](https://techdocs.akamai.com/terraform/docs/apidef-ds-resource-operations.md)\n- [Activation](https://techdocs.akamai.com/terraform/docs/apidef-rc-activation.md)\n- [API](https://techdocs.akamai.com/terraform/docs/apidef-rc-api.md)\n- [Resource operations](https://techdocs.akamai.com/terraform/docs/apidef-rc-resource-operations.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API Definitions index: full category indexRegister an APIOpenAPIAPIResource operationsActivationAPIResource operations",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        500,
+        500
+      ],
+      "raw": "## Guides: Bot Manager",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Bot Manager",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        502,
+        557
+      ],
+      "raw": "- [Bot Manager index](https://techdocs.akamai.com/terraform/docs/bot-manager/llms.txt): full category index\n- [Define bot responses](https://techdocs.akamai.com/terraform/docs/set-up-botman.md)\n- [Protect your webpages from scrapers](https://techdocs.akamai.com/terraform/docs/protect-your-webpages-from-scrapers.md)\n- [Bot category](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-category.md): akamai_botman_akamai_bot_category\n- [Bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-category-action.md): akamai_botman_akamai_bot_category_action\n- [Bot category exception](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-category-exception.md): akamai_botman_bot_category_exception\n- [Bot endpoint coverage report](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-endpoint-coverage-report.md): akamai_botman_bot_endpoint_coverage_report\n- [Bot management settings](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-management-settings.md): akamai_botman_bot_management_settings\n- [Bot sequence](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category-item-sequence.md): akamai_botman_custom_bot_category_item_sequence\n- [Challenge action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-challenge-action.md): akamai_botman_challenge_action\n- [Challenge injection rules](https://techdocs.akamai.com/terraform/docs/bmgr-ds-challenge-injection-rules.md): akamai_botman_challenge_injection_rules\n- [Client-side security](https://techdocs.akamai.com/terraform/docs/bmgr-ds-client-side-security.md): akamai_botman_client_side_security\n- [Conditional action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-conditional-action.md): akamai_botman_conditional_action\n- [Content protection JavaScript injection rule](https://techdocs.akamai.com/terraform/docs/cpr-ds-javascript-injection-rule.md): akamai_botman_content_protection_javascript_injection_rule\n- [Content protection rule](https://techdocs.akamai.com/terraform/docs/cpr-ds-rule.md): akamai_botman_content_protection_rule\n- [Content protection rule sequence](https://techdocs.akamai.com/terraform/docs/cpr-ds-rule-sequence.md): akamai_botman_content_protection_rule_sequence\n- [Custom-bot category](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category.md): akamai_botman_custom_bot_category\n- [Custom-bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category-action.md): akamai_botman_custom_bot_category_action\n- [Custom-bot category sequence](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category-sequence.md): akamai_botman_custom_bot_category_sequence\n- [Custom-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-defined-bot.md): akamai_botman_custom_defined_bot\n- [Custom client](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-client.md): akamai_botman_custom_client\n- [Custom client sequence](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-client-sequence.md): akamai_botman_custom_client_sequence\n- [Custom deny action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-deny-action.md): akamai_botman_custom_deny_action\n- [Defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-ds-defined-bot.md): akamai_botman_akamai_defined_bo\n- [Detection](https://techdocs.akamai.com/terraform/docs/bmgr-ds-detection.md): akamai_botman_bot_detection\n- [Detection action](https://techdocs.akamai.com/terraform/docs/dbmgr-ds-etection-action.md): akamai_botman_bot_detection_action\n- [JavaScript injection](https://techdocs.akamai.com/terraform/docs/bmgr-ds-javascript-injection.md): akamai_botman_javascript_injection\n- [Recategorized Akamai-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-ds-recategorized-akamai-defined-bot.md): akamai_botman_recategorized_akamai_defined_bot\n- [Response action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-response-action.md): akamai_botman_response_action\n- [Serve alternate action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-alternative-action.md): akamai_botman_serve_alternate_action\n- [Transactional endpoint](https://techdocs.akamai.com/terraform/docs/bmgr-ds-transactional-endpoint.md): akamai_botman_transactional_endpoint\n- [Transactional endpoint protection](https://techdocs.akamai.com/terraform/docs/bmgr-ds-transactional-endpoint-protection.md): akamai_botman_transactional_endpoint_protection\n- [Bot detection action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-detection-action.md): akamai_botman_bot_detection_action\n- [Bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-category-action.md): akamai_botman_akamai_bot_category_action\n- [Bot category exception](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-category-exception.md): akamai_botman_bot_category_exception\n- [Bot management settings](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-management-settings.md): akamai_botman_bot_management_settings\n- [Bot sequence](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category-item-sequence.md): akamai_botman_custom_bot_category_item_sequence\n- [Challenge action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-challenge-action.md): akamai_botman_challenge_action\n- [Challenge injection rules](https://techdocs.akamai.com/terraform/docs/bmgr-rc-challenge-injection-rules.md): akamai_botman_challenge_injection_rules\n- [Conditional action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-conditional-action.md): akamai_botman_conditional_action\n- [Content protection JavaScript injection rule](https://techdocs.akamai.com/terraform/docs/cpr-rc-javascript-injection-rule.md): akamai_botman_content_protection_javascript_injection_rule\n- [Content protection rule](https://techdocs.akamai.com/terraform/docs/cpr-rc-rule.md): akamai_botman_content_protection_rule\n- [Content protection rule sequence](https://techdocs.akamai.com/terraform/docs/cpr-rc-rule-sequence.md): akamai_botman_content_protection_rule_sequence\n- [Client-side security](https://techdocs.akamai.com/terraform/docs/bmgr-rc-client-side-security.md): akamai_botman_client_side_security\n- [Custom-bot category](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category.md): akamai_botman_custom_bot_category\n- [Custom-bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category-action.md): akamai_botman_custom_bot_category_action\n- [Custom-bot category sequence](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category-sequence.md): akamai_botman_custom_bot_category_sequence\n- [Custom client](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-client.md): akamai_botman_custom_client\n- [Custom client sequence](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-client-sequence.md): akamai_botman_custom_client_sequence\n- [Custom-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-defined-bot.md): akamai_botman_custom_defined_bot\n- [Custom deny action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-deny-action.md): akamai_botman_custom_deny_action\n- [JavaScript injection](https://techdocs.akamai.com/terraform/docs/bmgr-rc-javascript-injection.md): akamai_botman_javascript_injection\n- [Recategorized Akamai-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-rc-recategorized-akamai-defined-bot.md): akamai_botman_recategorized_akamai_defined_bot\n- [Serve alternate action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-serve-alternate-action.md): akamai_botman_serve_alternate_action\n- [Transactional endpoint](https://techdocs.akamai.com/terraform/docs/bmgr-rc-transactional-endpoint.md): akamai_botman_transactional_endpoint\n- [Transactional endpoint protection](https://techdocs.akamai.com/terraform/docs/bmgr-rc-transactional-endpoint-protection.md): akamai_botman_transactional_endpoint_protection",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Bot Manager index: full category indexDefine bot responsesProtect your webpages from scrapersBot category: akamai_botman_akamai_bot_categoryBot category action: akamai_botman_akamai_bot_category_actionBot category exception: akamai_botman_bot_category_exceptionBot endpoint coverage report: akamai_botman_bot_endpoint_coverage_reportBot management settings: akamai_botman_bot_management_settingsBot sequence: akamai_botman_custom_bot_category_item_sequenceChallenge action: akamai_botman_challenge_actionChallenge injection rules: akamai_botman_challenge_injection_rulesClient-side security: akamai_botman_client_side_securityConditional action: akamai_botman_conditional_actionContent protection JavaScript injection rule: akamai_botman_content_protection_javascript_injection_ruleContent protection rule: akamai_botman_content_protection_ruleContent protection rule sequence: akamai_botman_content_protection_rule_sequenceCustom-bot category: akamai_botman_custom_bot_categoryCustom-bot category action: akamai_botman_custom_bot_category_actionCustom-bot category sequence: akamai_botman_custom_bot_category_sequenceCustom-defined bot: akamai_botman_custom_defined_botCustom client: akamai_botman_custom_clientCustom client sequence: akamai_botman_custom_client_sequenceCustom deny action: akamai_botman_custom_deny_actionDefined bot: akamai_botman_akamai_defined_boDetection: akamai_botman_bot_detectionDetection action: akamai_botman_bot_detection_actionJavaScript injection: akamai_botman_javascript_injectionRecategorized Akamai-defined bot: akamai_botman_recategorized_akamai_defined_botResponse action: akamai_botman_response_actionServe alternate action: akamai_botman_serve_alternate_actionTransactional endpoint: akamai_botman_transactional_endpointTransactional endpoint protection: akamai_botman_transactional_endpoint_protectionBot detection action: akamai_botman_bot_detection_actionBot category action: akamai_botman_akamai_bot_category_actionBot category exception: akamai_botman_bot_category_exceptionBot management settings: akamai_botman_bot_management_settingsBot sequence: akamai_botman_custom_bot_category_item_sequenceChallenge action: akamai_botman_challenge_actionChallenge injection rules: akamai_botman_challenge_injection_rulesConditional action: akamai_botman_conditional_actionContent protection JavaScript injection rule: akamai_botman_content_protection_javascript_injection_ruleContent protection rule: akamai_botman_content_protection_ruleContent protection rule sequence: akamai_botman_content_protection_rule_sequenceClient-side security: akamai_botman_client_side_securityCustom-bot category: akamai_botman_custom_bot_categoryCustom-bot category action: akamai_botman_custom_bot_category_actionCustom-bot category sequence: akamai_botman_custom_bot_category_sequenceCustom client: akamai_botman_custom_clientCustom client sequence: akamai_botman_custom_client_sequenceCustom-defined bot: akamai_botman_custom_defined_botCustom deny action: akamai_botman_custom_deny_actionJavaScript injection: akamai_botman_javascript_injectionRecategorized Akamai-defined bot: akamai_botman_recategorized_akamai_defined_botServe alternate action: akamai_botman_serve_alternate_actionTransactional endpoint: akamai_botman_transactional_endpointTransactional endpoint protection: akamai_botman_transactional_endpoint_protection",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        559,
+        559
+      ],
+      "raw": "## Guides: Client Lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Client Lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        561,
+        566
+      ],
+      "raw": "- [Client Lists index](https://techdocs.akamai.com/terraform/docs/client-lists/llms.txt): full category index\n- [Configure client lists](https://techdocs.akamai.com/terraform/docs/set-up-client-lists.md)\n- [Client list](https://techdocs.akamai.com/terraform/docs/cl-ds-client-list.md): akamai_clientlist_list\n- [Client lists](https://techdocs.akamai.com/terraform/docs/cl-ds-client-lists.md): akamai_clientlist_lists\n- [Client list](https://techdocs.akamai.com/terraform/docs/cl-rc-client-list.md): akamai_clientlist_list\n- [Activation](https://techdocs.akamai.com/terraform/docs/cl-rc-activation.md): akamai_clientlist_activation",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Client Lists index: full category indexConfigure client listsClient list: akamai_clientlist_listClient lists: akamai_clientlist_listsClient list: akamai_clientlist_listActivation: akamai_clientlist_activation",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        568,
+        568
+      ],
+      "raw": "## Guides: Network Lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Network Lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        570,
+        576
+      ],
+      "raw": "- [Network Lists index](https://techdocs.akamai.com/terraform/docs/network-lists/llms.txt): full category index\n- [Configure network lists](https://techdocs.akamai.com/terraform/docs/set-up-network-lists.md)\n- [Network lists](https://techdocs.akamai.com/terraform/docs/nl-ds-network-lists.md): akamai_networklist_network_lists\n- [Activations](https://techdocs.akamai.com/terraform/docs/nl-rc-activations.md): akamai_networklist_activations\n- [Description](https://techdocs.akamai.com/terraform/docs/nl-rc-description.md): akamai_networklist_description\n- [Network List](https://techdocs.akamai.com/terraform/docs/nl-rc-network-list.md): akamai_networklist_network_list\n- [Subscription](https://techdocs.akamai.com/terraform/docs/nl-rc-subscription.md): akamai_networklist_subscription",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Network Lists index: full category indexConfigure network listsNetwork lists: akamai_networklist_network_listsActivations: akamai_networklist_activationsDescription: akamai_networklist_descriptionNetwork List: akamai_networklist_network_listSubscription: akamai_networklist_subscription",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        578,
+        578
+      ],
+      "raw": "## Guides: Account Protector",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Account Protector",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        580,
+        589
+      ],
+      "raw": "- [Account Protector index](https://techdocs.akamai.com/terraform/docs/account-protector/llms.txt): full category index\n- [Manage user behavior](https://techdocs.akamai.com/terraform/docs/set-up-apr.md)\n- [General settings](https://techdocs.akamai.com/terraform/docs/apr-ds-general-settings.md): akamai_apr_general_settings\n- [Protected operations](https://techdocs.akamai.com/terraform/docs/apr-ds-protected-operations.md): akamai_apr_protected_operations\n- [User allow list](https://techdocs.akamai.com/terraform/docs/apr-ds-user-allow-list.md): akamai_apr_user_allow_list\n- [User risk response strategy](https://techdocs.akamai.com/terraform/docs/apr-ds-user-risk-response-strategy.md): akamai_apr_user_risk_response_strategy\n- [General settings](https://techdocs.akamai.com/terraform/docs/apr-rc-general-settings.md): akamai_apr_general_settings\n- [Protected operations](https://techdocs.akamai.com/terraform/docs/apr-rc-protected-operations.md): akamai_apr_protected_operations\n- [User allow list](https://techdocs.akamai.com/terraform/docs/apr-rc-user-allow-list.md): akamai_apr_user_allow_lis\n- [User risk response strategy](https://techdocs.akamai.com/terraform/docs/apr-rc-user-risk-response-strategy.md): akamai_apr_user_risk_response_strategy",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Account Protector index: full category indexManage user behaviorGeneral settings: akamai_apr_general_settingsProtected operations: akamai_apr_protected_operationsUser allow list: akamai_apr_user_allow_listUser risk response strategy: akamai_apr_user_risk_response_strategyGeneral settings: akamai_apr_general_settingsProtected operations: akamai_apr_protected_operationsUser allow list: akamai_apr_user_allow_lisUser risk response strategy: akamai_apr_user_risk_response_strategy",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        591,
+        591
+      ],
+      "raw": "## Guides: Edge DNS",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Edge DNS",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        593,
+        599
+      ],
+      "raw": "- [Edge DNS index](https://techdocs.akamai.com/terraform/docs/edge-dns/llms.txt): full category index\n- [Configure DNS zones](https://techdocs.akamai.com/terraform/docs/set-up-edgedns.md)\n- [Authorities set](https://techdocs.akamai.com/terraform/docs/dns-authorities.md): akamai_authorities_set\n- [DNS record set](https://techdocs.akamai.com/terraform/docs/dns-record-set.md): akamai_dns_record_set\n- [DNSSEC record status](https://techdocs.akamai.com/terraform/docs/dns-dnssec-status.md): akamai_zone_dnssec_status\n- [DNS record](https://techdocs.akamai.com/terraform/docs/dns-record.md): akamai_dns_record\n- [DNS zone](https://techdocs.akamai.com/terraform/docs/dns-zone.md): akamai_dns_zone",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Edge DNS index: full category indexConfigure DNS zonesAuthorities set: akamai_authorities_setDNS record set: akamai_dns_record_setDNSSEC record status: akamai_zone_dnssec_statusDNS record: akamai_dns_recordDNS zone: akamai_dns_zone",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        601,
+        601
+      ],
+      "raw": "## Guides: Certificates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Certificates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        603,
+        613
+      ],
+      "raw": "- [Certificates index](https://techdocs.akamai.com/terraform/docs/certificates/llms.txt): full category index\n- [Provision certificates](https://techdocs.akamai.com/terraform/docs/cps-integration-guide.md)\n- [Certificate Signing Request](https://techdocs.akamai.com/terraform/docs/cps-ds-certificate-signing-request.md): akamai_cps_csr\n- [Deployments](https://techdocs.akamai.com/terraform/docs/cps-ds-deployments.md): akamai_cps_deployments\n- [Enrollment](https://techdocs.akamai.com/terraform/docs/cps-ds-enrollment.md): akamai_cps_enrollment\n- [Enrollments](https://techdocs.akamai.com/terraform/docs/cps-ds-enrollments.md): akamai_cps_enrollments\n- [Warnings](https://techdocs.akamai.com/terraform/docs/cps-ds-warnings.md): akamai_cps_warnings\n- [3rd-party enrollment](https://techdocs.akamai.com/terraform/docs/cps-rc-3rd-party-enrollment.md): akamai_cps_third_party_enrollment\n- [DV enrollment](https://techdocs.akamai.com/terraform/docs/cps-rc-dv-enrollment.md): akamai_cps_dv_enrollment\n- [DV validation](https://techdocs.akamai.com/terraform/docs/cps-rc-dv-validation.md): akamai_cps_dv_validation\n- [Upload certificate](https://techdocs.akamai.com/terraform/docs/cps-rc-upload-certificate.md): akamai_cps_upload_certificate",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Certificates index: full category indexProvision certificatesCertificate Signing Request: akamai_cps_csrDeployments: akamai_cps_deploymentsEnrollment: akamai_cps_enrollmentEnrollments: akamai_cps_enrollmentsWarnings: akamai_cps_warnings3rd-party enrollment: akamai_cps_third_party_enrollmentDV enrollment: akamai_cps_dv_enrollmentDV validation: akamai_cps_dv_validationUpload certificate: akamai_cps_upload_certificate",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        615,
+        615
+      ],
+      "raw": "## Guides: Image and Video Manager",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Image and Video Manager",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        617,
+        624
+      ],
+      "raw": "- [Image and Video Manager index](https://techdocs.akamai.com/terraform/docs/image-and-video-manager/llms.txt): full category index\n- [Add and maintain policy rules](https://techdocs.akamai.com/terraform/docs/set-up-ivm.md)\n- [Transform images](https://techdocs.akamai.com/terraform/docs/transform-images.md)\n- [Policy image](https://techdocs.akamai.com/terraform/docs/ivm-ds-policy-image.md): akamai_imaging_policy_image\n- [Policy video](https://techdocs.akamai.com/terraform/docs/ivm-ds-policy-video.md): akamai_imaging_policy_video\n- [Policy image](https://techdocs.akamai.com/terraform/docs/ivm-rc-policy-image.md): akamai_imaging_policy_image\n- [Policy set](https://techdocs.akamai.com/terraform/docs/ivm-rc-policy-set.md): akamai_imaging_policy_set\n- [Policy video](https://techdocs.akamai.com/terraform/docs/ivm-rc-policy-video.md): akamai_imaging_policy_video",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Image and Video Manager index: full category indexAdd and maintain policy rulesTransform imagesPolicy image: akamai_imaging_policy_imagePolicy video: akamai_imaging_policy_videoPolicy image: akamai_imaging_policy_imagePolicy set: akamai_imaging_policy_setPolicy video: akamai_imaging_policy_video",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        626,
+        626
+      ],
+      "raw": "## Guides: Global Traffic Management",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Global Traffic Management",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        628,
+        647
+      ],
+      "raw": "- [Global Traffic Management index](https://techdocs.akamai.com/terraform/docs/global-traffic-management/llms.txt): full category index\n- [Create domain configurations](https://techdocs.akamai.com/terraform/docs/set-up-gtm.md)\n- [AS map](https://techdocs.akamai.com/terraform/docs/gtm-ds-asmap.md): akamai_gtm_asmap\n- [CIDR map](https://techdocs.akamai.com/terraform/docs/gtm-ds-cidr-map.md): akamai_gtm_cidrmap\n- [Default datacenter](https://techdocs.akamai.com/terraform/docs/gtm-ds-default-datacenter.md): akamai_gtm_default_datacenter\n- [Datacenter](https://techdocs.akamai.com/terraform/docs/datacenter.md): akamai_gtm_datacenter\n- [Datacenters](https://techdocs.akamai.com/terraform/docs/datacenters.md): akamai_gtm_datacenters\n- [Domain](https://techdocs.akamai.com/terraform/docs/gtm-ds-domain.md)\n- [Domains](https://techdocs.akamai.com/terraform/docs/gtm-ds-domains.md): akamai_gtm_domains\n- [Geo map](https://techdocs.akamai.com/terraform/docs/gtm-ds-geomap.md): akamai_gtm_geomap\n- [Geo maps](https://techdocs.akamai.com/terraform/docs/gtm-ds-geomaps.md): akamai_gtm_geomaps\n- [Resource](https://techdocs.akamai.com/terraform/docs/gtm-ds-resource.md): akamai_gtm_resource\n- [Resources](https://techdocs.akamai.com/terraform/docs/gtm-ds-resources.md): akamai_gtm_resources\n- [AS map](https://techdocs.akamai.com/terraform/docs/gtm-rc-asmap.md): akamai_gtm_asmap\n- [CIDR map](https://techdocs.akamai.com/terraform/docs/gtm-rc-cidrmap.md): akamai_gtm_cidrmap\n- [Datacenter](https://techdocs.akamai.com/terraform/docs/gtm-rc-datacenter.md): akamai_gtm_datacenter\n- [Domain](https://techdocs.akamai.com/terraform/docs/gtm-rc-domain.md): akamai_gtm_domain\n- [Geo map](https://techdocs.akamai.com/terraform/docs/gtm-rc-geomap.md): akamai_gtm_geomap\n- [Property](https://techdocs.akamai.com/terraform/docs/gtm-rc-property.md): akamai_gtm_property\n- [Resource](https://techdocs.akamai.com/terraform/docs/gtm-rc-resource.md): akamai_gtm_resource",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Global Traffic Management index: full category indexCreate domain configurationsAS map: akamai_gtm_asmapCIDR map: akamai_gtm_cidrmapDefault datacenter: akamai_gtm_default_datacenterDatacenter: akamai_gtm_datacenterDatacenters: akamai_gtm_datacentersDomainDomains: akamai_gtm_domainsGeo map: akamai_gtm_geomapGeo maps: akamai_gtm_geomapsResource: akamai_gtm_resourceResources: akamai_gtm_resourcesAS map: akamai_gtm_asmapCIDR map: akamai_gtm_cidrmapDatacenter: akamai_gtm_datacenterDomain: akamai_gtm_domainGeo map: akamai_gtm_geomapProperty: akamai_gtm_propertyResource: akamai_gtm_resource",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        649,
+        649
+      ],
+      "raw": "## Guides: Cloud Wrapper",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Cloud Wrapper",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        651,
+        660
+      ],
+      "raw": "- [Cloud Wrapper index](https://techdocs.akamai.com/terraform/docs/cloud-wrapper/llms.txt): full category index\n- [Add custom cache layer](https://techdocs.akamai.com/terraform/docs/set-up-cloud-wrapper.md)\n- [Capacities](https://techdocs.akamai.com/terraform/docs/cw-ds-capacities.md): akamai_cloudwrapper_capacities\n- [Configuration](https://techdocs.akamai.com/terraform/docs/cw-ds-configuration.md): akamai_cloudwrapper_configuration\n- [Configurations](https://techdocs.akamai.com/terraform/docs/cw-ds-configurations.md): akamai_cloudwrapper_configurations\n- [Location](https://techdocs.akamai.com/terraform/docs/cw-ds-location.md): akamai_cloudwrapper_location\n- [Locations](https://techdocs.akamai.com/terraform/docs/cw-ds-locations.md): akamai_cloudwrapper_locations\n- [Properties](https://techdocs.akamai.com/terraform/docs/cw-ds-properties.md): akamai_cloudwrapper_properties\n- [Configuration](https://techdocs.akamai.com/terraform/docs/cw-rc-configuration.md): akamai_cloudwrapper_configuration\n- [Activation](https://techdocs.akamai.com/terraform/docs/cw-rc-activation.md): akamai_cloudwrapper_activation",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cloud Wrapper index: full category indexAdd custom cache layerCapacities: akamai_cloudwrapper_capacitiesConfiguration: akamai_cloudwrapper_configurationConfigurations: akamai_cloudwrapper_configurationsLocation: akamai_cloudwrapper_locationLocations: akamai_cloudwrapper_locationsProperties: akamai_cloudwrapper_propertiesConfiguration: akamai_cloudwrapper_configurationActivation: akamai_cloudwrapper_activation",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        662,
+        662
+      ],
+      "raw": "## Guides: Cloudlets",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Cloudlets",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        664,
+        681
+      ],
+      "raw": "- [Cloudlets index](https://techdocs.akamai.com/terraform/docs/cloudlets/llms.txt): full category index\n- [Set up Cloudlets policies](https://techdocs.akamai.com/terraform/docs/set-up-cloudlets.md): Create, configure, and activate Cloudlets\n- [API prioritization match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-api-prioritization-match-rule.md): akamai_cloudlets_api_prioritization_match_rule\n- [Application load balancer](https://techdocs.akamai.com/terraform/docs/cl-ds-application-load-balancer.md): akamai_cloudlets_application_load_balancer\n- [Audience segmentation match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-audience-segmentation-match-rule.md): akamai_cloudlets_audience_segmentation_match_rule\n- [Edge redirector match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-edge-redirector-match-rule.md): akamai_cloudlets_edge_redirector_match_rule\n- [Forward rewrite match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-forward-rewrite-match-rule.md): akamai_cloudlets_forward_rewrite_match_rule\n- [Load balancer match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-load-balancer-match-rule.md): akamai_cloudlets_application_load_balancer_match_rule\n- [Phased release match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-phased-release-match-rule.md): akamai_cloudlets_phased_release_match_rule\n- [Policy](https://techdocs.akamai.com/terraform/docs/cl-ds-policy.md): akamai_cloudlets_policy\n- [Policy activation](https://techdocs.akamai.com/terraform/docs/cl-ds-policy-activation.md): akamai_cloudlets_policy_activation\n- [Request control match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-request-control-match-rule.md): akamai_cloudlets_request_control_match_rule\n- [Shared policy](https://techdocs.akamai.com/terraform/docs/cl-ds-shared-policy.md): akamai_cloudlets_shared_policy\n- [Visitor prioritization match rule](https://techdocs.akamai.com/terraform/docs/cl-ds-visitor-prioritization-match-rule.md): akamai_cloudlets_visitor_prioritization_match_rule\n- [Application load balancer](https://techdocs.akamai.com/terraform/docs/cs-rc-app-load-balancer.md): akamai_cloudlets_application_load_balancer\n- [Application load balancer activation](https://techdocs.akamai.com/terraform/docs/cs-rc-application-load-balancer-activation.md): akamai_cloudlets_application_load_balancer_activation\n- [Policy activation](https://techdocs.akamai.com/terraform/docs/cs-rc-policy-activation.md): akamai_cloudlets_policy_activation\n- [Policy](https://techdocs.akamai.com/terraform/docs/cs-rc-policy.md): akamai_cloudlets_policy",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cloudlets index: full category indexSet up Cloudlets policies: Create, configure, and activate CloudletsAPI prioritization match rule: akamai_cloudlets_api_prioritization_match_ruleApplication load balancer: akamai_cloudlets_application_load_balancerAudience segmentation match rule: akamai_cloudlets_audience_segmentation_match_ruleEdge redirector match rule: akamai_cloudlets_edge_redirector_match_ruleForward rewrite match rule: akamai_cloudlets_forward_rewrite_match_ruleLoad balancer match rule: akamai_cloudlets_application_load_balancer_match_rulePhased release match rule: akamai_cloudlets_phased_release_match_rulePolicy: akamai_cloudlets_policyPolicy activation: akamai_cloudlets_policy_activationRequest control match rule: akamai_cloudlets_request_control_match_ruleShared policy: akamai_cloudlets_shared_policyVisitor prioritization match rule: akamai_cloudlets_visitor_prioritization_match_ruleApplication load balancer: akamai_cloudlets_application_load_balancerApplication load balancer activation: akamai_cloudlets_application_load_balancer_activationPolicy activation: akamai_cloudlets_policy_activationPolicy: akamai_cloudlets_policy",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        683,
+        683
+      ],
+      "raw": "## Guides: EdgeWorkers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: EdgeWorkers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        685,
+        696
+      ],
+      "raw": "- [EdgeWorkers index](https://techdocs.akamai.com/terraform/docs/edgeworkers/llms.txt): full category index\n- [Enable EdgeWorkers functions](https://techdocs.akamai.com/terraform/docs/set-up-edgeworkers.md)\n- [Activation](https://techdocs.akamai.com/terraform/docs/ew-ds-activation.md): akamai_edgeworker_activation\n- [EdgeWorker](https://techdocs.akamai.com/terraform/docs/ew-ds-edgeworker.md): akamai_edgeworker\n- [EdgeKV group items](https://techdocs.akamai.com/terraform/docs/edgekv-group-items.md): akamai_edgekv_group_items\n- [EdgeKV groups](https://techdocs.akamai.com/terraform/docs/edgekv-ds-groups.md): akamai_edgekv_groups\n- [Property rules](https://techdocs.akamai.com/terraform/docs/ew-ds-property-rules.md): akamai_edgeworkers_property_rules\n- [Resource tier](https://techdocs.akamai.com/terraform/docs/ew-ds-resource-tier.md): akamai_edgeworkers_resource_tier\n- [Activation](https://techdocs.akamai.com/terraform/docs/ew-rc-activation.md): akamai_edgeworkers_activation\n- [EdgeKV](https://techdocs.akamai.com/terraform/docs/ew-rc-edgekv.md): akamai_edgekv\n- [EdgeKV group items](https://techdocs.akamai.com/terraform/docs/edgekv-rc-group-items.md): akamai_edgekv_group_items\n- [EdgeWorkers](https://techdocs.akamai.com/terraform/docs/ew-rc-edgeworkers.md): akamai_edgeworker",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "EdgeWorkers index: full category indexEnable EdgeWorkers functionsActivation: akamai_edgeworker_activationEdgeWorker: akamai_edgeworkerEdgeKV group items: akamai_edgekv_group_itemsEdgeKV groups: akamai_edgekv_groupsProperty rules: akamai_edgeworkers_property_rulesResource tier: akamai_edgeworkers_resource_tierActivation: akamai_edgeworkers_activationEdgeKV: akamai_edgekvEdgeKV group items: akamai_edgekv_group_itemsEdgeWorkers: akamai_edgeworker",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        698,
+        698
+      ],
+      "raw": "## Guides: DataStream",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: DataStream",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        700,
+        707
+      ],
+      "raw": "- [DataStream index](https://techdocs.akamai.com/terraform/docs/datastream/llms.txt): full category index\n- [Create data streams](https://techdocs.akamai.com/terraform/docs/set-up-datastream.md)\n- [DataStream migration](https://techdocs.akamai.com/terraform/docs/datastream-migration.md)\n- [Activation history](https://techdocs.akamai.com/terraform/docs/ds-activation-history.md): akamai_datastream_activation_history\n- [AppSec configurations](https://techdocs.akamai.com/terraform/docs/ds-ds-appsec-configurations.md): akamai_datastream_appsec_configs\n- [Data set fields](https://techdocs.akamai.com/terraform/docs/ds-dataset-fields.md): akamai_datastream_dataset_fields\n- [Data streams](https://techdocs.akamai.com/terraform/docs/ds-datastreams.md): akamai_datastreams\n- [Data stream](https://techdocs.akamai.com/terraform/docs/rc-datastream.md): akamai_datastream",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DataStream index: full category indexCreate data streamsDataStream migrationActivation history: akamai_datastream_activation_historyAppSec configurations: akamai_datastream_appsec_configsData set fields: akamai_datastream_dataset_fieldsData streams: akamai_datastreamsData stream: akamai_datastream",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        709,
+        709
+      ],
+      "raw": "## Guides: Cloud Access Manager",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Cloud Access Manager",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        711,
+        717
+      ],
+      "raw": "- [Cloud Access Manager index](https://techdocs.akamai.com/terraform/docs/cloud-access-manager/llms.txt): full category index\n- [Manage cloud origin access](https://techdocs.akamai.com/terraform/docs/set-up-cam.md): Cloud Access Manager\n- [Access key](https://techdocs.akamai.com/terraform/docs/cam-ds-access-key.md): akamai_cloudaccess_key\n- [Access keys](https://techdocs.akamai.com/terraform/docs/cam-ds-access-keys.md): akamai_cloudaccess_keys\n- [Access key versions](https://techdocs.akamai.com/terraform/docs/ds-cam-ak-versions.md): akamai_cloudaccess_key_versions\n- [Access key properties](https://techdocs.akamai.com/terraform/docs/ds-cam-ak-properties.md): akamai_cloudaccess_key_properties\n- [Access key](https://techdocs.akamai.com/terraform/docs/cam-rc-access-key.md): akamai_cloudaccess_key",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cloud Access Manager index: full category indexManage cloud origin access: Cloud Access ManagerAccess key: akamai_cloudaccess_keyAccess keys: akamai_cloudaccess_keysAccess key versions: akamai_cloudaccess_key_versionsAccess key properties: akamai_cloudaccess_key_propertiesAccess key: akamai_cloudaccess_key",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        719,
+        719
+      ],
+      "raw": "## Guides: Mutual TLS Origin Keystore",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Mutual TLS Origin Keystore",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        721,
+        728
+      ],
+      "raw": "- [Mutual TLS Origin Keystore index](https://techdocs.akamai.com/terraform/docs/mutual-tls-origin-keystore/llms.txt): full category index\n- [Manage client certificates](https://techdocs.akamai.com/terraform/docs/manage-client-certificates.md)\n- [Account CA certificates](https://techdocs.akamai.com/terraform/docs/moks-ds-account-ca-certificates.md): akamai_mtlskeystore_account_ca_certificates\n- [Client certificate](https://techdocs.akamai.com/terraform/docs/moks-ds-client-certificate.md): akamai_mtlskeystore_client_certificate\n- [Client certificates](https://techdocs.akamai.com/terraform/docs/moks-ds-client-certificates.md): akamai_mtlskeystore_client_certificates\n- [Akamai client certificate](https://techdocs.akamai.com/terraform/docs/moks-rc-akamai-client-certificate.md): akamai_mtlskeystore_client_certificate_akamai\n- [Third-party client certificate](https://techdocs.akamai.com/terraform/docs/moks-rc-third-party-client-certificate.md): akamai_mtlskeystore_client_certificate_third_party\n- [Upload client certificate](https://techdocs.akamai.com/terraform/docs/moks-rc-upload-client-certificate.md): akamai_mtlskeystore_client_certificate_upload",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Mutual TLS Origin Keystore index: full category indexManage client certificatesAccount CA certificates: akamai_mtlskeystore_account_ca_certificatesClient certificate: akamai_mtlskeystore_client_certificateClient certificates: akamai_mtlskeystore_client_certificatesAkamai client certificate: akamai_mtlskeystore_client_certificate_akamaiThird-party client certificate: akamai_mtlskeystore_client_certificate_third_partyUpload client certificate: akamai_mtlskeystore_client_certificate_upload",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        730,
+        730
+      ],
+      "raw": "## Guides: Mutual TLS Edge Truststore",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Mutual TLS Edge Truststore",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        732,
+        743
+      ],
+      "raw": "- [Mutual TLS Edge Truststore index](https://techdocs.akamai.com/terraform/docs/mutual-tls-edge-truststore/llms.txt): full category index\n- [Manage certificate authority sets](https://techdocs.akamai.com/terraform/docs/manage-ca-sets.md)\n- [CA set](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set.md): akamai_mtlstruststore_ca_set\n- [CA sets](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-sets.md): akamai_mtlstruststore_ca_sets\n- [CA set activation](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set-activation.md): akamai_mtlstruststore_ca_set_activation\n- [CA set activations](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set-activations.md): akamai_mtlstruststore_ca_set_activations\n- [CA set activities](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set-activities.md): akamai_mtlstruststore_ca_set_activities\n- [CA set associations](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set-associations.md): akamai_mtlstruststore_ca_set_associations\n- [CA set certificates](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set-certificates.md): akamai_mtlstruststore_ca_set_certificates\n- [CA set versions](https://techdocs.akamai.com/terraform/docs/mets-ds-ca-set-versions.md): akamai_mtlstruststore_ca_set_versions\n- [CA set](https://techdocs.akamai.com/terraform/docs/mets-rc-ca-set.md): akamai_mtlstruststore_ca_set\n- [CA set activation](https://techdocs.akamai.com/terraform/docs/mets-rc-ca-set-activation.md): akamai_mtlstruststore_ca_set_activation",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Mutual TLS Edge Truststore index: full category indexManage certificate authority setsCA set: akamai_mtlstruststore_ca_setCA sets: akamai_mtlstruststore_ca_setsCA set activation: akamai_mtlstruststore_ca_set_activationCA set activations: akamai_mtlstruststore_ca_set_activationsCA set activities: akamai_mtlstruststore_ca_set_activitiesCA set associations: akamai_mtlstruststore_ca_set_associationsCA set certificates: akamai_mtlstruststore_ca_set_certificatesCA set versions: akamai_mtlstruststore_ca_set_versionsCA set: akamai_mtlstruststore_ca_setCA set activation: akamai_mtlstruststore_ca_set_activation",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        745,
+        745
+      ],
+      "raw": "## Guides: Archive",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Archive",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        747,
+        748
+      ],
+      "raw": "- [Archive index](https://techdocs.akamai.com/terraform/docs/archive/llms.txt): full category index\n- [Outdated versions](https://techdocs.akamai.com/terraform/docs/outdated-versions.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Archive index: full category indexOutdated versions",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

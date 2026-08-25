@@ -1,0 +1,73 @@
+# API Keys and Traffic Management Documentation
+
+> Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/key-traffic-mgmt/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/key-traffic-mgmt/reference/api/llms.txt): full category index
+- [API Keys and Traffic Management API](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-keys-and-traffic-management-api.md)
+- [API summary](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-started.md)
+- [API concepts](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-concepts.md)
+- [Throttle API traffic](https://techdocs.akamai.com/key-traffic-mgmt/reference/throttle-api-traffic.md)
+- [Control API access and usage](https://techdocs.akamai.com/key-traffic-mgmt/reference/control-api-access-and-usage.md)
+- [API workflow](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-workflow.md)
+- [Errors](https://techdocs.akamai.com/key-traffic-mgmt/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/key-traffic-mgmt/reference/400.md)
+- [401](https://techdocs.akamai.com/key-traffic-mgmt/reference/401.md)
+- [403](https://techdocs.akamai.com/key-traffic-mgmt/reference/403.md)
+- [404](https://techdocs.akamai.com/key-traffic-mgmt/reference/404.md)
+- [405](https://techdocs.akamai.com/key-traffic-mgmt/reference/405.md)
+- [500](https://techdocs.akamai.com/key-traffic-mgmt/reference/500.md)
+
+## API Reference: Key collections
+
+- [Key collections index](https://techdocs.akamai.com/key-traffic-mgmt/reference/key-collections/llms.txt): full category index
+- [Create a key collection](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-collection.md): Creates an empty collection under the selected contract and group.
+- [List key collections](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-collections.md): Returns information about all collections available for the current contract and group.
+- [Get a key collection](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-collection.md): Returns information about a collection.
+- [Edit a key collection](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-collection.md): Updates a collection.
+- [Delete a key collection](https://techdocs.akamai.com/key-traffic-mgmt/reference/delete-collection.md): Deletes a collection and any keys the collection includes that aren't assigned to other collections.
+- [Get an ACL](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-collection-acl-entries.md): Returns the access control list of a collection.
+- [Edit an ACL](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-collection-acl-entries.md): Updates the access control list of a collection by adding or removing endpoint, resource, and HTTP method information from the ACL.
+- [List collection endpoints](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-collection-endpoints.md): Lists all endpoints assigned to the contract and group where you created the collection. The [API Endpoints API](https://techdocs.akamai.com/api-gateway/reference/api) manages this operation's response data format.
+- [Import keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-collection-import-keys.md): Imports keys from a CSV, XML, or JSON file to a collection. When making a request to import keys, embed the data structure that defines the contents of the import file in a JSON object. See the [examples of the files](doc:key-op#import-keys).
+- [Returns collection keys in JSON, XML or CSV format](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-export-collection-keys.md): Returns information about all collection keys in the JSON, XML or CSV format.
+- [Get quota settings](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-collection-quota-config.md): Returns information about the quota settings in a collection.
+- [Edit quota settings](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-collection-quota-config.md): Updates the quota settings in a collection.
+- [Reset collection key quota](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-collections-quota-reset.md): Resets the quota limit for selected keys in this particular collection.
+
+## API Reference: Throttling counters
+
+- [Throttling counters index](https://techdocs.akamai.com/key-traffic-mgmt/reference/throttling-counters/llms.txt): full category index
+- [Create a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-counter.md): Creates a new throttling counter under the selected contract and group.
+- [List throttling counters](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counters.md): Returns all existing throttling counters available for the current contract and group.
+- [Get a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter.md): Returns information about a throttling counter.
+- [Edit a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-counter.md): Updates information about a throttling counter.
+- [Delete a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/delete-counter.md): Removes a throttling counter.
+- [List counter endpoints](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-endpoints.md): Returns information about all endpoints assigned to the contract and group where you created the throttling counter. The [API Endpoints API](https://techdocs.akamai.com/api-definitions/reference/api) manages the format of the response data. Search the response data for the relevant `ACL_ENTRY` members such as API endpoint identifiers, resource identifiers, or HTTP methods, to use when running the [Create a throttling counter](ref:post-counter) or [Edit a throttling counter](ref:put-counter) operation.
+- [List counter key collections](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-key-collections.md): Returns information about all key collections assigned to the contract and group where you created the throttling counter. Search the response data for the relevant `KEY COLLECTION` identifiers to use when running the [Create a throttling counter](ref:post-counter) or [Edit a throttling counter](ref:put-counter) operation.
+- [List counter keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-keys.md): This lists all API keys assigned to the contract and group where you created the throttling counter. Search the response data for the relevant `KEY` identifier members to use when running the [Create a throttling counter](ref:post-counter) or [Edit a throttling counter](ref:put-counter) operation.
+
+## API Reference: Keys
+
+- [Keys index](https://techdocs.akamai.com/key-traffic-mgmt/reference/keys/llms.txt): full category index
+- [Create keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys.md): Creates a collection of keys with unassigned values. To generate keys with assigned values, use the [Generate keys](ref:post-keys-generate) operation.
+- [List keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-keys.md): Returns keys included in a collection based on the specified criteria.
+- [Assign keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-assign.md): Assigns keys to collections.
+- [Export keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-export-keys.md): Returns information about all available keys in the JSON, XML, or CSV format.
+- [Generate keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-generate.md): Creates a collection of keys with assigned values. To create keys and assign your own values, use the [Create keys](ref:post-keys) operation.
+- [Move keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-move.md): "Moves keys from one collection to another, either an existing one or a new one. If you specify a `destinationCollectionId` in the request, the operation moves the keys to the existing collection. \n"
+- [Restore revoked keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-restore.md): Restores previously revoked keys in a collection. This operation is only available in the 120 days following the revocation.
+- [Revoke keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-revoke.md): Revokes keys in a collection and marks them as revoked. You can restore the revoked keys within the next 120 days, after which they're deleted.
+- [Unassign keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-unassign.md): Unassigns keys from collections.
+- [Get a key](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-key.md): Returns information about a key.
+- [Edit a key](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-key.md): Updates information about a key.
+- [Reset key quota](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-keys-quota-reset.md): Resets the quota limit for selected keys.
+
+## API Reference: Tags
+
+- [Tags index](https://techdocs.akamai.com/key-traffic-mgmt/reference/tags/llms.txt): full category index
+- [List tags](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-tags.md): Returns all existing tags. You can add new tags when creating new keys. See either the [Create keys](ref:post-keys) or [Generate keys](ref:post-keys-generate) operation.

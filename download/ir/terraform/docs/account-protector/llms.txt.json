@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/account-protector/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/account-protector/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/account-protector/llms.txt",
+  "title": "Account Protector",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Account Protector",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Account Protector",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        16
+      ],
+      "raw": "- [Manage user behavior](https://techdocs.akamai.com/terraform/docs/set-up-apr.md)\n- [General settings](https://techdocs.akamai.com/terraform/docs/apr-ds-general-settings.md): akamai_apr_general_settings\n- [Protected operations](https://techdocs.akamai.com/terraform/docs/apr-ds-protected-operations.md): akamai_apr_protected_operations\n- [User allow list](https://techdocs.akamai.com/terraform/docs/apr-ds-user-allow-list.md): akamai_apr_user_allow_list\n- [User risk response strategy](https://techdocs.akamai.com/terraform/docs/apr-ds-user-risk-response-strategy.md): akamai_apr_user_risk_response_strategy\n- [General settings](https://techdocs.akamai.com/terraform/docs/apr-rc-general-settings.md): akamai_apr_general_settings\n- [Protected operations](https://techdocs.akamai.com/terraform/docs/apr-rc-protected-operations.md): akamai_apr_protected_operations\n- [User allow list](https://techdocs.akamai.com/terraform/docs/apr-rc-user-allow-list.md): akamai_apr_user_allow_lis\n- [User risk response strategy](https://techdocs.akamai.com/terraform/docs/apr-rc-user-risk-response-strategy.md): akamai_apr_user_risk_response_strategy",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Manage user behaviorGeneral settings: akamai_apr_general_settingsProtected operations: akamai_apr_protected_operationsUser allow list: akamai_apr_user_allow_listUser risk response strategy: akamai_apr_user_risk_response_strategyGeneral settings: akamai_apr_general_settingsProtected operations: akamai_apr_protected_operationsUser allow list: akamai_apr_user_allow_lisUser risk response strategy: akamai_apr_user_risk_response_strategy",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

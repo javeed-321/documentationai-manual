@@ -1,0 +1,106 @@
+{
+  "slug": "msl5-harmonic/reference/api/llms.txt",
+  "source": "https://techdocs.akamai.com/msl5-harmonic/reference/api/llms.txt.md",
+  "url": "https://techdocs.akamai.com/msl5-harmonic/reference/api/llms.txt",
+  "title": "API",
+  "description": "",
+  "section": "MSL5 Powered by Harmonic",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# MSL5 Powered by Harmonic Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "MSL5 Powered by Harmonic Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Documentation for MSL5 Powered by Harmonic",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Documentation for MSL5 Powered by Harmonic",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/msl5-harmonic/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/msl5-harmonic/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        27
+      ],
+      "raw": "- [MSL5 API](https://techdocs.akamai.com/msl5-harmonic/reference/api.md)\n- [API summary](https://techdocs.akamai.com/msl5-harmonic/reference/api-summary.md)\n- [Get started with MSL5 API](https://techdocs.akamai.com/msl5-harmonic/reference/get-started.md)\n- [API concepts](https://techdocs.akamai.com/msl5-harmonic/reference/api-concepts.md)\n- [API workflow](https://techdocs.akamai.com/msl5-harmonic/reference/api-workflow.md)\n- [Content Purge API workflow](https://techdocs.akamai.com/msl5-harmonic/reference/content-purge-api-workflow.md)\n- [API performance](https://techdocs.akamai.com/msl5-harmonic/reference/api-performance.md)\n- [Errors](https://techdocs.akamai.com/msl5-harmonic/reference/errors.md)\n- [HTTP status codes](https://techdocs.akamai.com/msl5-harmonic/reference/http-status-codes.md)\n- [200](https://techdocs.akamai.com/msl5-harmonic/reference/204-copy.md): Operation was successful\n- [201](https://techdocs.akamai.com/msl5-harmonic/reference/201.md): Resource created\n- [202](https://techdocs.akamai.com/msl5-harmonic/reference/202.md): The resource was successfully accepted\n- [204](https://techdocs.akamai.com/msl5-harmonic/reference/204.md): Successful deletion\n- [400](https://techdocs.akamai.com/msl5-harmonic/reference/400.md): Bad Request\n- [401](https://techdocs.akamai.com/msl5-harmonic/reference/401.md): Unauthorized request\n- [403](https://techdocs.akamai.com/msl5-harmonic/reference/403.md): Access is forbidden\n- [404](https://techdocs.akamai.com/msl5-harmonic/reference/404.md): Resource not found\n- [409](https://techdocs.akamai.com/msl5-harmonic/reference/409.md): There is a conflict in the resource (for instance in an attempt to delete an entity that is still active).\n- [412](https://techdocs.akamai.com/msl5-harmonic/reference/412.md): Precondition failed.\n- [500](https://techdocs.akamai.com/msl5-harmonic/reference/500.md): Internal server error.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "MSL5 APIAPI summaryGet started with MSL5 APIAPI conceptsAPI workflowContent Purge API workflowAPI performanceErrorsHTTP status codes200: Operation was successful201: Resource created202: The resource was successfully accepted204: Successful deletion400: Bad Request401: Unauthorized request403: Access is forbidden404: Resource not found409: There is a conflict in the resource (for instance in an attempt to delete an entity that is still active).412: Precondition failed.500: Internal server error.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

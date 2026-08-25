@@ -1,0 +1,15 @@
+/*
+ * Brand palette, read from https://techdocs.akamai.com/adaptive-media-delivery/docs/welcome-adaptive-media-deliv.
+ *
+ * Variables only — no rules — so including this file cannot change the theme.
+ * The theme itself comes from `colors` in documentation.json.
+ */
+:root {
+  --rm-brand: #017ac6;
+  --rm-brand-light: #017ac6;
+  --rm-brand-dark: #0187da;
+}
+
+[data-theme="dark"] {
+  --rm-brand: #0187da;
+}

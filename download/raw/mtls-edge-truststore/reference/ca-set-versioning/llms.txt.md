@@ -1,0 +1,18 @@
+# Mutual TLS Edge Truststore (Limited Availability) Documentation
+
+> Mutual TLS Edge Truststore is a self-service application that supports the creation, management, and activation of certificate authority certificate sets (CA sets) needed to establish mutual authentication (mTLS) sessions between the client and the Akamai edge.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-edge-truststore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: CA set versioning
+- [Create a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-ca-set-version.md): Create a new CA set version in the CA set specified by `caSetId`. When creating a new version, the API compares the certificates and SHA-1 provided in the request with the existing versions in the CA set. If another version exists with fingerprints for the same certificates, a 422 response provides a link to the version. If the `allowInsecureSha1` option differs between the versions with the same certificates, they're still considered the same CA set version. This prevents creating duplicate CA set versions.
+- [List versions](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-ca-set-versions.md): Versions of the CA set specified by `caSetId`.
+- [Get a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-ca-set-version.md): Get the CA set version details.
+- [Update a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/put-ca-set-version.md): Update all the certificates for the version, or the `allowInsecureSha1` that controls what type of certificates to allow.
+- [Activate a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-activate-ca-set-version.md): Activate the certificates for the version on the specified network.
+- [Get version activations](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-version-deployment-request-details.md): Get details of an activation or deactivation request by set ID and version number.
+- [Get an activation](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-deployment-request-details.md): Get details of an activation or deactivation request specified by `activationId`.
+- [List certificates](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-ca-set-version-certificates.md): List certificates for the specified version.
+- [Clone a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-clone-ca-set-version.md): Clone a version of the CA set from the CA set specified by `version`. Note that the clone may reflect expired certificates from the original.
+- [Deactivate a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-deactivate-ca-set-version.md): Deactivate the certificates for the version on the specified network.
+- [Delete a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/delete-ca-set-version.md): Marks the CA set version (`versionNumber`) in a specified CA set (`caSetId`) for future deletion without removing it from the system.  When you [Create a version](ref:post-ca-set-version), the new CA set version takes the subsequent `versionNumber` irregardless of earlier versions scheduled for deletion.

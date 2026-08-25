@@ -1,0 +1,106 @@
+{
+  "slug": "ivm/docs/configuration/llms.txt",
+  "source": "https://techdocs.akamai.com/ivm/docs/configuration/llms.txt.md",
+  "url": "https://techdocs.akamai.com/ivm/docs/configuration/llms.txt",
+  "title": "Configuration",
+  "description": "",
+  "section": "Image and Video Manager",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Image and Video Manager Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Image and Video Manager Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> With more people using mobile devices and more ways to deliver content, dealing with your images and videos can be challenging. Akamai's Image and Video Manager gives you the control you need to expertly manage them and fully engage your web visitors.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "With more people using mobile devices and more ways to deliver content, dealing with your images and videos can be challenging. Akamai's Image and Video Manager gives you the control you need to expertly manage them and fully engage your web visitors.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/ivm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/ivm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Configuration",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Configuration",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        56
+      ],
+      "raw": "- [Configuration workflow](https://techdocs.akamai.com/ivm/docs/configuration-workflow.md)\n- [Connect your images and videos](https://techdocs.akamai.com/ivm/docs/connect-images-videos.md)\n- [Add an Image and Video Manager rule](https://techdocs.akamai.com/ivm/docs/add-ivm-rule.md)\n- [Add the Image and Video Manager (Images) behavior](https://techdocs.akamai.com/ivm/docs/add-image-behavior.md)\n- [Add the Image and Video Manager (Videos) behavior](https://techdocs.akamai.com/ivm/docs/add-video-behavior.md)\n- [Add the Set Parameter behavior](https://techdocs.akamai.com/ivm/docs/add-set-param-behavior.md)\n- [Improve image selection using Client Hints](https://techdocs.akamai.com/ivm/docs/image-selection-using-client-hints.md)\n- [Control user access with granular permissions](https://techdocs.akamai.com/ivm/docs/granular-user-permissions.md)\n- [Create and edit a policy set](https://techdocs.akamai.com/ivm/docs/create-edit-policy-set.md)\n- [Create and edit policies](https://techdocs.akamai.com/ivm/docs/create-edit-policies.md)\n- [Test your policy on staging](https://techdocs.akamai.com/ivm/docs/test-on-staging.md)\n- [Go live on production](https://techdocs.akamai.com/ivm/docs/go-live-on-production.md)\n- [Create perceptual quality previews](https://techdocs.akamai.com/ivm/docs/perceptual-quality-preview.md)\n- [Optimize your images](https://techdocs.akamai.com/ivm/docs/optimize-images.md)\n- [Optimize your videos](https://techdocs.akamai.com/ivm/docs/optimize-videos.md)\n- [Add image transformations and conditions](https://techdocs.akamai.com/ivm/docs/add-img-transformations.md)\n- [Apply your policies](https://techdocs.akamai.com/ivm/docs/apply-policy.md)\n- [Append](https://techdocs.akamai.com/ivm/docs/append.md)\n- [Aspect Crop](https://techdocs.akamai.com/ivm/docs/aspect-crop.md)\n- [Background Color](https://techdocs.akamai.com/ivm/docs/background-color.md)\n- [Blur](https://techdocs.akamai.com/ivm/docs/blur.md)\n- [Chroma Key](https://techdocs.akamai.com/ivm/docs/chroma-key.md)\n- [Composite](https://techdocs.akamai.com/ivm/docs/composite.md)\n- [Contrast](https://techdocs.akamai.com/ivm/docs/contrast.md)\n- [Crop](https://techdocs.akamai.com/ivm/docs/crop.md)\n- [Face Crop](https://techdocs.akamai.com/ivm/docs/face-crop.md)\n- [Feature Crop](https://techdocs.akamai.com/ivm/docs/feature-crop.md)\n- [Fit and Fill](https://techdocs.akamai.com/ivm/docs/fit-fill.md)\n- [Goop](https://techdocs.akamai.com/ivm/docs/goop.md)\n- [Grayscale](https://techdocs.akamai.com/ivm/docs/grayscale.md)\n- [Hue/Saturation/Lightness](https://techdocs.akamai.com/ivm/docs/hue-saturation-lightness.md)\n- [Hue/Saturation/Value](https://techdocs.akamai.com/ivm/docs/hue-saturation-value.md)\n- [If Dimension](https://techdocs.akamai.com/ivm/docs/if-dimension.md)\n- [If Orientation](https://techdocs.akamai.com/ivm/docs/if-orientation.md)\n- [IMQuery](https://techdocs.akamai.com/ivm/docs/imquery.md)\n- [Max Colors](https://techdocs.akamai.com/ivm/docs/max-colors.md)\n- [Mirror](https://techdocs.akamai.com/ivm/docs/mirror.md)\n- [Mono Hue](https://techdocs.akamai.com/ivm/docs/mono-hue.md)\n- [Opacity](https://techdocs.akamai.com/ivm/docs/opacity.md)\n- [Region of Interest Crop](https://techdocs.akamai.com/ivm/docs/region-of-interest.md)\n- [Relative Crop](https://techdocs.akamai.com/ivm/docs/relative-crop.md)\n- [Remove Color](https://techdocs.akamai.com/ivm/docs/remove-color.md)\n- [Resize](https://techdocs.akamai.com/ivm/docs/resize.md)\n- [Rotate](https://techdocs.akamai.com/ivm/docs/rotate.md)\n- [Scale](https://techdocs.akamai.com/ivm/docs/scale.md)\n- [Shear](https://techdocs.akamai.com/ivm/docs/shear.md)\n- [Smart Crop](https://techdocs.akamai.com/ivm/docs/smart-crop.md)\n- [Trim](https://techdocs.akamai.com/ivm/docs/trim.md)\n- [Unsharp Mask](https://techdocs.akamai.com/ivm/docs/unsharp-mask.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Configuration workflowConnect your images and videosAdd an Image and Video Manager ruleAdd the Image and Video Manager (Images) behaviorAdd the Image and Video Manager (Videos) behaviorAdd the Set Parameter behaviorImprove image selection using Client HintsControl user access with granular permissionsCreate and edit a policy setCreate and edit policiesTest your policy on stagingGo live on productionCreate perceptual quality previewsOptimize your imagesOptimize your videosAdd image transformations and conditionsApply your policiesAppendAspect CropBackground ColorBlurChroma KeyCompositeContrastCropFace CropFeature CropFit and FillGoopGrayscaleHue/Saturation/LightnessHue/Saturation/ValueIf DimensionIf OrientationIMQueryMax ColorsMirrorMono HueOpacityRegion of Interest CropRelative CropRemove ColorResizeRotateScaleShearSmart CropTrimUnsharp Mask",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

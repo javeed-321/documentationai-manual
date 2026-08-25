@@ -1,0 +1,43 @@
+# EdgeWorkers Documentation
+
+> Use Akamai's EdgeWorkers service to execute JavaScript functions at the edge and create customized web experiences based on geolocation, device characteristics, and more.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/edgeworkers/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/edgeworkers/docs/welcome/llms.txt)
+- [Prerequisites](https://techdocs.akamai.com/edgeworkers/docs/prerequisites/llms.txt)
+- [Get started](https://techdocs.akamai.com/edgeworkers/docs/get-started/llms.txt)
+- [Administration](https://techdocs.akamai.com/edgeworkers/docs/administration/llms.txt)
+- [Development](https://techdocs.akamai.com/edgeworkers/docs/development/llms.txt)
+- [JavaScript API reference](https://techdocs.akamai.com/edgeworkers/docs/javascript-api-reference/llms.txt)
+- [Technical resources](https://techdocs.akamai.com/edgeworkers/docs/technical-resources/llms.txt)
+- [Debug](https://techdocs.akamai.com/edgeworkers/docs/debug/llms.txt)
+- [Monitor](https://techdocs.akamai.com/edgeworkers/docs/monitor/llms.txt)
+- [Limitations](https://techdocs.akamai.com/edgeworkers/docs/limitations/llms.txt)
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/edgeworkers/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/edgeworkers/reference/api/llms.txt)
+- [Groups](https://techdocs.akamai.com/edgeworkers/reference/groups/llms.txt)
+- [Resource tiers](https://techdocs.akamai.com/edgeworkers/reference/resource-tiers/llms.txt)
+- [EdgeWorker IDs](https://techdocs.akamai.com/edgeworkers/reference/edgeworker-ids/llms.txt)
+- [Validations](https://techdocs.akamai.com/edgeworkers/reference/validations/llms.txt)
+- [Contracts](https://techdocs.akamai.com/edgeworkers/reference/contracts/llms.txt)
+- [Reports](https://techdocs.akamai.com/edgeworkers/reference/reports/llms.txt)
+- [Secure Token](https://techdocs.akamai.com/edgeworkers/reference/secure-token/llms.txt)
+- [EdgeWorkers customer log delivery](https://techdocs.akamai.com/edgeworkers/reference/edgeworkers-customer-log-delivery/llms.txt)
+- [Limits](https://techdocs.akamai.com/edgeworkers/reference/limits/llms.txt)
+
+## Recipes
+
+- [Recipes index](https://techdocs.akamai.com/edgeworkers/recipes/llms.txt): full section index
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edgeworkers/changelog/llms.txt): full section index

@@ -1,0 +1,32 @@
+---
+title: "Prepare your environment"
+---
+
+Before you can set up your Adaptive Media Delivery property to deliver content there are some things you need to do.
+
+# Prepare your edge certificate
+
+This certificate protects the first stage of the [request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow)—the request from an end user (client) that's received by ​Akamai​ edge servers. In some cases, you may need to create this certificate before you create your property.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/property-manager/img/user-to-edge-server-v1.png"/>
+</div>
+
+This process isn't unique to Adaptive Media Delivery. Have a look at the [Property Manager user docs](https://techdocs.akamai.com/property-mgr/docs/prepare-your-edge-certificates) for full details.
+
+# Prepare your origin server
+
+An origin server is a physical location that houses your deliverable content. This accounts for the second stage of the [request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow)—the request from edge servers to your origin to get your deliverable content. Before you can add your origin server to your request flow, you need to set some things up for your origin, collect key information about your origin, and decide how you want ​​Akamai​ to interact with it.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/property-manager/img/edge-server-to-origin-v1.png"/>
+</div>
+
+This process isn't exclusive to Adaptive Media Delivery, either. Full details on the setup of your origin can be found in the [Property Manager docs](https://techdocs.akamai.com/property-mgr/docs/prepare-your-origin-server), too.
+
+# Sibling pages
+
+- [Delivery concepts and terms](https://techdocs.akamai.com/adaptive-media-delivery/docs/key-concepts-and-terms.md)
+- [Review supported media formats](https://techdocs.akamai.com/adaptive-media-delivery/docs/supported-media-formats.md)
+- [Get your unique information](https://techdocs.akamai.com/adaptive-media-delivery/docs/get-environ-info.md)
+- [Understand the request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow.md)

@@ -1,0 +1,30 @@
+# PowerShell Documentation
+
+> Make calls to many of our API with a consistent interface using our PowerShell module.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Common
+- [Function index](https://techdocs.akamai.com/powershell/docs/common-index.md)
+- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/clear-edgegridcredentials.md)
+- [Akamai data cache](https://techdocs.akamai.com/powershell/docs/clear-akamaidatacache.md): Clear-AkamaiDataCache
+- [Akamai options](https://techdocs.akamai.com/powershell/docs/clear-akamaioptions.md): Clear-AkamaiOptions
+- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/export-edgegridcredentials.md): Export-EdgegridCredentials
+- [Netstorage credentials](https://techdocs.akamai.com/powershell/docs/export-netstoragecredentials.md): Export-NetstorageCredentials
+- [Edgegrid credentials](https://techdocs.akamai.com/powershell/docs/get-edgegridcredentials.md): Get-EdgegridCredentials
+- [Akamai options](https://techdocs.akamai.com/powershell/docs/get-akamaioptions.md): Get-AkamaiOptions
+- [Auth grants](https://techdocs.akamai.com/powershell/docs/get-authgrants.md): Get-AuthGrants
+- [Netstorage Credentials](https://techdocs.akamai.com/powershell/docs/get-netstoragecredentials.md): Get-NetstorageCredentials
+- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/import-edgegridcredentials.md): Import-EdgegridCredentials
+- [Netstorage credentials](https://techdocs.akamai.com/powershell/docs/import-netstoragecredentials.md): Import-NetstorageCredentials
+- [Akamai NSAPI request](https://techdocs.akamai.com/powershell/docs/invoke-akamainsapirequest.md): Invoke-AkamaiNSAPIRequest
+- [Akamai REST method](https://techdocs.akamai.com/powershell/docs/invoke-akamairestmethod.md): Invoke-AkamaiRestMethod
+- [Netstorage request](https://techdocs.akamai.com/powershell/docs/invoke-netstoragerequest.md)
+- [Akamai request](https://techdocs.akamai.com/powershell/docs/invoke-akamairequest.md): Invoke-AkamaiRequest
+- [Akamai data cache](https://techdocs.akamai.com/powershell/docs/new-akamaidatacache.md): New-AkamaiDataCache
+- [Akamai options](https://techdocs.akamai.com/powershell/docs/new-akamaioptions.md): New-AkamaiOptions
+- [EdgeGrid auth token](https://techdocs.akamai.com/powershell/docs/new-edgeauthtoken.md): New-EdgeAuthToken
+- [Akamai data cache](https://techdocs.akamai.com/powershell/docs/set-akamaidatacache.md): Set-AkamaiDataCache
+- [Akamai options](https://techdocs.akamai.com/powershell/docs/set-akamaioptions.md): Set-AkamaiOptions
+- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/test-edgegridcredentials.md): Test-EdgegridCredentials
+- [OpenAPI](https://techdocs.akamai.com/powershell/docs/test-openapi.md): Test-OpenAPI

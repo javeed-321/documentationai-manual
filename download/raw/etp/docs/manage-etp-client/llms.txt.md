@@ -1,0 +1,43 @@
+# Secure Internet Access Enterprise Documentation
+
+> Secure Internet Access Enterprise (SIA) leverages real-time Akamai Cloud Security Intelligence and Akamai’s proven, globally distributed, recursive DNS platform to identify and block targeted threats such as malware, ransomware, DNS data exfiltration, and phishing. Akamai’s cloud portal lets security teams centrally manage and enforce unified security and acceptable use policies for all employees in minutes.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/etp/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Manage ETP Client
+- [About ETP Client](https://techdocs.akamai.com/etp/docs/about-etp-client.md)
+- [ETP Client for DNS only](https://techdocs.akamai.com/etp/docs/etpclient-dns-only.md)
+- [ETP Client for web traffic](https://techdocs.akamai.com/etp/docs/etpclient-web-traffic.md)
+- [DNS over TLS](https://techdocs.akamai.com/etp/docs/dns-over-tls.md)
+- [ETP Client configuration settings](https://techdocs.akamai.com/etp/docs/etpclient-config-settings.md)
+- [ETP Client version number convention](https://techdocs.akamai.com/etp/docs/etpclient-versions.md)
+- [ETP Client version support](https://techdocs.akamai.com/etp/docs/etpclient-version-support.md)
+- [Prepare for ETP Client setup](https://techdocs.akamai.com/etp/docs/prepare-etpclient-setup.md)
+- [Desktop client](https://techdocs.akamai.com/etp/docs/desktop-client.md)
+- [Set up ETP desktop client](https://techdocs.akamai.com/etp/docs/setup-desktop-client.md)
+- [Supported desktop operating systems](https://techdocs.akamai.com/etp/docs/supported-desktop-os.md)
+- [Download and approval statuses](https://techdocs.akamai.com/etp/docs/client-download-statuses.md)
+- [ETP Client statuses on desktop computers and machines](https://techdocs.akamai.com/etp/docs/etpclient-on-desktop.md)
+- [Automatic software upgrades and security patches](https://techdocs.akamai.com/etp/docs/upgrades-patches.md)
+- [Enable transparent traffic interception](https://techdocs.akamai.com/etp/docs/transparent-traffic-interception.md)
+- [Configure Mozilla Firefox to use system proxy settings](https://techdocs.akamai.com/etp/docs/configure-firefox-proxy.md)
+- [Allow ETP Client connections on Microsoft Edge](https://techdocs.akamai.com/etp/docs/client-connections-edge.md)
+- [Disable DNS over HTTPS on enterprise browsers](https://techdocs.akamai.com/etp/docs/disable-doh-browsers.md)
+- [Enable walled garden](https://techdocs.akamai.com/etp/docs/enable-walled-garden.md)
+- [Undo ETP Client approval](https://techdocs.akamai.com/etp/docs/undo-client-approval.md)
+- [Uninstall ETP Client](https://techdocs.akamai.com/etp/docs/uninstall-etp-client.md)
+- [Software rollback](https://techdocs.akamai.com/etp/docs/etpclient-software-rollback.md)
+- [Enable or disable ETP Client](https://techdocs.akamai.com/etp/docs/enable-disable-client.md)
+- [Web Proxy Auto-Discovery (WPAD) on Windows](https://techdocs.akamai.com/etp/docs/wpad-windows.md)
+- [Mobile client](https://techdocs.akamai.com/etp/docs/etp-mobile-client.md)
+- [Distribute the mobile client with Google Workspace Endpoint Management](https://techdocs.akamai.com/etp/docs/google-endpoint-mgmt.md)
+- [Distribute the mobile client with Microsoft Intune](https://techdocs.akamai.com/etp/docs/distribute-microsoft-intune.md)
+- [Distribute the mobile client with Workspace ONE UEM](https://techdocs.akamai.com/etp/docs/distribute-workspace-one.md)
+- [Distribute the mobile client with MobileIron](https://techdocs.akamai.com/etp/docs/distribute-mobileiron.md)
+- [Bring your own device (BYOD) support](https://techdocs.akamai.com/etp/docs/byod-support.md)
+- [Set up Bring Your Own Device (BYOD)](https://techdocs.akamai.com/etp/docs/set-up-byod.md)
+- [ETP Client activation](https://techdocs.akamai.com/etp/docs/client-activation.md)
+- [ETP Client reports](https://techdocs.akamai.com/etp/docs/etpclient-reports.md)
+- [Disable ETP Client](https://techdocs.akamai.com/etp/docs/disable-etp-client.md)
+- [Handle lost devices](https://techdocs.akamai.com/etp/docs/lost-devices.md)
+- [View the entitlement code](https://techdocs.akamai.com/etp/docs/view-entitlement-code.md)

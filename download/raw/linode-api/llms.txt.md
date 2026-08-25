@@ -1,0 +1,42 @@
+# Linode API Documentation
+
+> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/linode-api/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/linode-api/reference/api/llms.txt)
+- [Administration](https://techdocs.akamai.com/linode-api/reference/administration/llms.txt)
+- [Beta programs](https://techdocs.akamai.com/linode-api/reference/beta-programs/llms.txt)
+- [Databases](https://techdocs.akamai.com/linode-api/reference/databases/llms.txt)
+- [Domains](https://techdocs.akamai.com/linode-api/reference/domains/llms.txt)
+- [Identity and access](https://techdocs.akamai.com/linode-api/reference/identity-and-access/llms.txt)
+- [Images](https://techdocs.akamai.com/linode-api/reference/images/llms.txt)
+- [Linode instances](https://techdocs.akamai.com/linode-api/reference/linode-instances/llms.txt)
+- [Linode Kubernetes Engine (LKE)](https://techdocs.akamai.com/linode-api/reference/linode-kubernetes-engine-lke/llms.txt)
+- [Linode StackScripts](https://techdocs.akamai.com/linode-api/reference/linode-stackscripts/llms.txt)
+- [Longview](https://techdocs.akamai.com/linode-api/reference/longview/llms.txt)
+- [Maintenance](https://techdocs.akamai.com/linode-api/reference/maintenance/llms.txt)
+- [Managed](https://techdocs.akamai.com/linode-api/reference/managed/llms.txt)
+- [Marketplace](https://techdocs.akamai.com/linode-api/reference/marketplace/llms.txt)
+- [Monitor](https://techdocs.akamai.com/linode-api/reference/monitor/llms.txt)
+- [Network transfer prices](https://techdocs.akamai.com/linode-api/reference/network-transfer-prices/llms.txt)
+- [Networking](https://techdocs.akamai.com/linode-api/reference/networking/llms.txt)
+- [NodeBalancers](https://techdocs.akamai.com/linode-api/reference/nodebalancers/llms.txt)
+- [Object Storage](https://techdocs.akamai.com/linode-api/reference/object-storage/llms.txt)
+- [Placement groups](https://techdocs.akamai.com/linode-api/reference/placement-groups/llms.txt)
+- [Profile](https://techdocs.akamai.com/linode-api/reference/profile/llms.txt)
+- [Regions](https://techdocs.akamai.com/linode-api/reference/regions/llms.txt)
+- [Resource locking](https://techdocs.akamai.com/linode-api/reference/resource-locking/llms.txt)
+- [Support](https://techdocs.akamai.com/linode-api/reference/support/llms.txt)
+- [Tags](https://techdocs.akamai.com/linode-api/reference/tags/llms.txt)
+- [Volumes](https://techdocs.akamai.com/linode-api/reference/volumes/llms.txt)
+- [VPCs](https://techdocs.akamai.com/linode-api/reference/vpcs/llms.txt)
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/linode-api/changelog/llms.txt): full section index

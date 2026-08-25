@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/identity-access-management/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/identity-access-management/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/identity-access-management/llms.txt",
+  "title": "Identity & Access Management",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Identity & Access Management",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Identity & Access Management",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        83
+      ],
+      "raw": "- [Control access](https://techdocs.akamai.com/powershell/docs/identity-access.md)\n- [User](https://techdocs.akamai.com/powershell/docs/iam-user.md)\n- [Admin](https://techdocs.akamai.com/powershell/docs/iam-admin.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/iam-index.md)\n- [Property users](https://techdocs.akamai.com/powershell/docs/block-iampropertyusers.md): Block-IAMPropertyUsers\n- [API credential](https://techdocs.akamai.com/powershell/docs/disable-iamapicredential.md): Disable-IAMAPICredential\n- [IP allowlist](https://techdocs.akamai.com/powershell/docs/disable-iamipallowlist.md): Disable-IAMIPAllowList\n- [IP allowlist](https://techdocs.akamai.com/powershell/docs/enable-iamipallowlist.md): Enable-IAMIPAllowList\n- [Accessible groups](https://techdocs.akamai.com/powershell/docs/get-iamaccessiblegroups.md): Get-IAMAccessibleGroups\n- [Account switch key](https://techdocs.akamai.com/powershell/docs/get-accountswitchkey.md): Get-AccountSwitchKey\n- [Admin contact types](https://techdocs.akamai.com/powershell/docs/get-iamadmincontacttypes.md): Get-IAMAdminContactTypes\n- [Admin countries](https://techdocs.akamai.com/powershell/docs/get-iamadmincountries.md): Get-IAMAdminCountries\n- [Admin languages](https://techdocs.akamai.com/powershell/docs/get-iamadminlanguages.md): Get-IAMAdminLanguages\n- [Admin password policy](https://techdocs.akamai.com/powershell/docs/get-iamadminpasswordpolicy.md): Get-IAMAdminPasswordPolicy\n- [Admin products](https://techdocs.akamai.com/powershell/docs/get-iamadminproducts.md): Get-IAMAdminProducts\n- [Admin states](https://techdocs.akamai.com/powershell/docs/get-iamadminstates.md): Get-IAMAdminStates\n- [Admin timeout policy](https://techdocs.akamai.com/powershell/docs/get-iamadmintimeoutpolicy.md): Get-IAMAdminTimeoutPolicy\n- [Admin time zones](https://techdocs.akamai.com/powershell/docs/get-iamadmintimezones.md): Get-IAMAdminTimeZones\n- [Allowed APIs](https://techdocs.akamai.com/powershell/docs/get-iamallowedapis.md): Get-IAMAllowedAPIs\n- [Allowed CP codes](https://techdocs.akamai.com/powershell/docs/get-iamallowedcpcodes.md): Get-IAMAllowedCPCodes\n- [API client](https://techdocs.akamai.com/powershell/docs/get-iamapiclient.md): Get-IAMAPIClient\n- [API credential](https://techdocs.akamai.com/powershell/docs/get-iamapicredential.md): Get-IAMAPICredential\n- [Authorized users](https://techdocs.akamai.com/powershell/docs/get-iamauthorizedusers.md): Get-IAMAuthorizedUsers\n- [Blocked properties](https://techdocs.akamai.com/powershell/docs/get-iamuserblockedproperties.md): Get-IAMUserBlockedProperties\n- [CIDR block](https://techdocs.akamai.com/powershell/docs/get-iamcidrblock.md): Get-IAMCIDRBlock\n- [Grantable roles](https://techdocs.akamai.com/powershell/docs/get-iamgrantablerole.md): Get-IAMGrantableRole\n- [Group](https://techdocs.akamai.com/powershell/docs/get-iamgroup.md): Get-IAMGroup\n- [IP allowlist status](https://techdocs.akamai.com/powershell/docs/get-iamipallowliststatus.md): Get-IAMIPAllowListStatus\n- [Property](https://techdocs.akamai.com/powershell/docs/get-iamproperty.md): Get-IAMProperty\n- [Property resources](https://techdocs.akamai.com/powershell/docs/get-iampropertyresources.md): Get-IAMPropertyResources\n- [Property users](https://techdocs.akamai.com/powershell/docs/get-iampropertyusers.md): Get-IAMPropertyUsers\n- [Role](https://techdocs.akamai.com/powershell/docs/get-iamrole.md): Get-IAMRole\n- [User](https://techdocs.akamai.com/powershell/docs/get-iamuser.md): Get-IAMUser\n- [Users affected by moving group](https://techdocs.akamai.com/powershell/docs/get-iamgroupmoveaffectedusers.md): Get-IAMGroupMoveAffectedUsers\n- [User contact types](https://techdocs.akamai.com/powershell/docs/get-iamusercontacttypes.md): Get-IAMUserContactTypes\n- [User countries](https://techdocs.akamai.com/powershell/docs/get-iamusercountries.md): Get-IAMUserCountries\n- [User languages](https://techdocs.akamai.com/powershell/docs/get-iamuserlanguages.md): Get-IAMUserLanguages\n- [User password policy](https://techdocs.akamai.com/powershell/docs/get-iamuserpasswordpolicy.md): Get-IAMUserPasswordPolicy\n- [User products](https://techdocs.akamai.com/powershell/docs/get-iamuserproducts.md): Get-IAMUserProducts\n- [User profile](https://techdocs.akamai.com/powershell/docs/get-iamuserprofile.md): Get-IAMUserProfile\n- [User states](https://techdocs.akamai.com/powershell/docs/get-iamuserstates.md): Get-IAMUserStates\n- [User timeout policy](https://techdocs.akamai.com/powershell/docs/get-iamusertimeoutpolicy.md): Get-IAMUserTimeoutPolicy\n- [User time zones](https://techdocs.akamai.com/powershell/docs/get-iamusertimezones.md): Get-IAMUserTimeZones\n- [API client](https://techdocs.akamai.com/powershell/docs/lock-iamapiclient.md): Lock-IAMAPIClient\n- [User](https://techdocs.akamai.com/powershell/docs/lock-iamuser.md): Lock-IAMUser\n- [Group](https://techdocs.akamai.com/powershell/docs/move-iamgroup.md): Move-IAMGroup\n- [Property](https://techdocs.akamai.com/powershell/docs/move-iamproperty.md): Move-IAMProperty\n- [API client](https://techdocs.akamai.com/powershell/docs/new-iamapiclient.md): New-IAMAPIClient\n- [API credential](https://techdocs.akamai.com/powershell/docs/new-iamapicredential.md): New-IAMAPICredential\n- [CIDR block](https://techdocs.akamai.com/powershell/docs/new-iamcidrblock.md): New-IAMCIDRBlock\n- [Group](https://techdocs.akamai.com/powershell/docs/new-iamgroup.md): New-IAMGroup\n- [Role](https://techdocs.akamai.com/powershell/docs/new-iamrole.md): New-IAMRole\n- [User](https://techdocs.akamai.com/powershell/docs/new-iamuser.md): New-IAMUser\n- [API client](https://techdocs.akamai.com/powershell/docs/remove-iamapiclient.md): Remove-IAMAPIClient\n- [API credential](https://techdocs.akamai.com/powershell/docs/remove-iamapicredential.md): Remove-IAMAPICredential\n- [CIDR block](https://techdocs.akamai.com/powershell/docs/remove-iamcidrblock.md): Remove-IAMCIDRBlock\n- [Group](https://techdocs.akamai.com/powershell/docs/remove-iamgroup.md): Remove-IAMGroup\n- [Role](https://techdocs.akamai.com/powershell/docs/remove-iamrole.md): Remove-IAMRole\n- [User](https://techdocs.akamai.com/powershell/docs/remove-iamuser.md): Remove-IAMUser\n- [Multi-factor authentication](https://techdocs.akamai.com/powershell/docs/reset-iamusermfa.md): Reset-IAMUserMFA\n- [User password](https://techdocs.akamai.com/powershell/docs/reset-iamuserpassword.md): Reset-IAMUserPassword\n- [API client](https://techdocs.akamai.com/powershell/docs/set-iamapiclient.md): Set-IAMAPIClient\n- [API credential](https://techdocs.akamai.com/powershell/docs/set-iamapicredential.md): Set-IAMAPICredential\n- [Blocked properties](https://techdocs.akamai.com/powershell/docs/set-iamuserblockedproperties.md): Set-IAMUserBlockedProperties\n- [CIDR block](https://techdocs.akamai.com/powershell/docs/set-iamcidrblock.md): Set-IAMCIDRBlock\n- [Group](https://techdocs.akamai.com/powershell/docs/set-iamgroup.md): Set-IAMGroup\n- [Group & role assignments](https://techdocs.akamai.com/powershell/docs/set-iamusergroupandrole.md): Set-IAMUserGroupAndRole\n- [Multi-factor authentication](https://techdocs.akamai.com/powershell/docs/set-iamusermfa.md): Set-IAMUserMFA\n- [Role](https://techdocs.akamai.com/powershell/docs/set-iamrole.md): Set-IAMRole\n- [User](https://techdocs.akamai.com/powershell/docs/set-iamuser.md): Set-IAMUser\n- [User notifications](https://techdocs.akamai.com/powershell/docs/set-iamusernotifications.md): Set-IAMUserNotifications\n- [User password](https://techdocs.akamai.com/powershell/docs/set-iamuserpassword.md): Set-IAMUserPassword\n- [User profile](https://techdocs.akamai.com/powershell/docs/set-iamuserprofile.md): Set-IAMUserProfile\n- [CIDR block](https://techdocs.akamai.com/powershell/docs/test-iamcidrblock.md): Test-IAMCIDRBlock\n- [API client](https://techdocs.akamai.com/powershell/docs/unlock-iamapiclient.md): Unlock-IAMAPIClient\n- [User](https://techdocs.akamai.com/powershell/docs/unlock-iamuser.md): Unlock-IAMUser",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Control accessUserAdminFunction indexProperty users: Block-IAMPropertyUsersAPI credential: Disable-IAMAPICredentialIP allowlist: Disable-IAMIPAllowListIP allowlist: Enable-IAMIPAllowListAccessible groups: Get-IAMAccessibleGroupsAccount switch key: Get-AccountSwitchKeyAdmin contact types: Get-IAMAdminContactTypesAdmin countries: Get-IAMAdminCountriesAdmin languages: Get-IAMAdminLanguagesAdmin password policy: Get-IAMAdminPasswordPolicyAdmin products: Get-IAMAdminProductsAdmin states: Get-IAMAdminStatesAdmin timeout policy: Get-IAMAdminTimeoutPolicyAdmin time zones: Get-IAMAdminTimeZonesAllowed APIs: Get-IAMAllowedAPIsAllowed CP codes: Get-IAMAllowedCPCodesAPI client: Get-IAMAPIClientAPI credential: Get-IAMAPICredentialAuthorized users: Get-IAMAuthorizedUsersBlocked properties: Get-IAMUserBlockedPropertiesCIDR block: Get-IAMCIDRBlockGrantable roles: Get-IAMGrantableRoleGroup: Get-IAMGroupIP allowlist status: Get-IAMIPAllowListStatusProperty: Get-IAMPropertyProperty resources: Get-IAMPropertyResourcesProperty users: Get-IAMPropertyUsersRole: Get-IAMRoleUser: Get-IAMUserUsers affected by moving group: Get-IAMGroupMoveAffectedUsersUser contact types: Get-IAMUserContactTypesUser countries: Get-IAMUserCountriesUser languages: Get-IAMUserLanguagesUser password policy: Get-IAMUserPasswordPolicyUser products: Get-IAMUserProductsUser profile: Get-IAMUserProfileUser states: Get-IAMUserStatesUser timeout policy: Get-IAMUserTimeoutPolicyUser time zones: Get-IAMUserTimeZonesAPI client: Lock-IAMAPIClientUser: Lock-IAMUserGroup: Move-IAMGroupProperty: Move-IAMPropertyAPI client: New-IAMAPIClientAPI credential: New-IAMAPICredentialCIDR block: New-IAMCIDRBlockGroup: New-IAMGroupRole: New-IAMRoleUser: New-IAMUserAPI client: Remove-IAMAPIClientAPI credential: Remove-IAMAPICredentialCIDR block: Remove-IAMCIDRBlockGroup: Remove-IAMGroupRole: Remove-IAMRoleUser: Remove-IAMUserMulti-factor authentication: Reset-IAMUserMFAUser password: Reset-IAMUserPasswordAPI client: Set-IAMAPIClientAPI credential: Set-IAMAPICredentialBlocked properties: Set-IAMUserBlockedPropertiesCIDR block: Set-IAMCIDRBlockGroup: Set-IAMGroupGroup & role assignments: Set-IAMUserGroupAndRoleMulti-factor authentication: Set-IAMUserMFARole: Set-IAMRoleUser: Set-IAMUserUser notifications: Set-IAMUserNotificationsUser password: Set-IAMUserPasswordUser profile: Set-IAMUserProfileCIDR block: Test-IAMCIDRBlockAPI client: Unlock-IAMAPIClientUser: Unlock-IAMUser",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

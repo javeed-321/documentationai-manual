@@ -1,0 +1,54 @@
+---
+title: "Define property hostnames"
+---
+
+You use this content panel to create your property hostname associations. These associations play a key role in getting your streaming media out to ​Akamai​ edge servers, for access to requests from your end users.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/prop-hostnames-v1.jpg" width="600" height="212"/>
+</div>
+
+# Understand the property hostname association
+
+Essentially, you use the hostname for your streaming media to create an "edge hostname" that's used to get your Adaptive Media Delivery property to determine how to deliver your streaming media.
+
+- **The hostname**. During the property hostname process, you include this to verify that a request belongs to you as our customer, as well as determine which Property Manager configuration ("property") to use for delivery settings. This is typically the full hostname or domain name that end users target to access your media, without the `https://`. For example, `www.sportsvideos.baseball.hof-induction.mp4`, `sailing.clipperships.m4v`, and `my.travel.videos.com` are examples of hostnames you could use. This is also referred to as the "vanity hostname."
+
+- **The edge hostname**. Property Manager automatically creates an edge hostname, using the hostname you provide. An edge hostname uses the "​Akamai​ Intelligent Platform" to map requests for your media to ​Akamai​ edge servers. For example, if you provided the hostname `my.travel.videos.com` for your site, Property Manager creates the edge hostname, `my.travel.videos.com.akamaized.net`.
+
+Later, when you're ready to go live, you change the DNS record for your hostname to "CNAME" to the edge hostname to acknowledge this association. End-user requests to your hostname are redirected to the edge hostname. These resolve to ​Akamai​ edge servers that read from your Adaptive Media Delivery property to determine how to deliver your media. The actual delivery is based on rules and behaviors you establish in your Adaptive Media Delivery property.
+
+Edge hostnames work behind the scenes and are not visible in the URLs of content served to end users.
+
+## Your content is cached on edge servers
+
+You can set various [caching rules and behaviors](https://techdocs.akamai.com/property-mgr/docs/caching-2) in your Adaptive Media Delivery property, and some are automatically applied as best practices. When a request for your media content goes through your edge hostname and it's processed by your property, that content is held in cache on the ​Akamai​ edge network. This reduces the need to access your origin and can also speed up delivery to other customers, that also make requests to the same edge hostname.
+
+# Set up secure authentication
+
+If you haven't already, you need to [set up a certificate](https://techdocs.akamai.com/adaptive-media-delivery/docs/prepare-your-environment) if you want to deliver your media content via HTTPS.
+
+<Callout kind="success">
+  **Consider using mTLS**
+
+  To offer more security for this connection, consider setting up your authentication using mutual transport layer security (mTLS). It requires that both the client and edge network server authenticate using a secure certificate. See its [tutorial](https://techdocs.akamai.com/adaptive-media-delivery/docs/protect-connections-with-mtls) for complete details.
+</Callout>
+
+# Set up a secure property hostname
+
+You use Property Manager for this, and the process is predominantly the same regardless of product. To maintain consistent instructions, it's covered in the Property Manager [documentation](https://techdocs.akamai.com/property-mgr/docs/serve-content-over-https).
+
+<Callout kind="info">
+  **Non-secure property hostnames**
+
+  As a best practice and to meet industry standards, you should use secure authentication. But, Property Manager also offers multiple ways to [create non-secure (HTTP) property hostnames](https://techdocs.akamai.com/property-mgr/docs/serve-content-over-http), too.
+</Callout>
+
+# Sibling pages
+
+- [Create a new AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/create-new-prop.md)
+- [Define property variables (optional)](https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-vars-optal.md)
+- [Define property configuration settings](https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-config-settings.md)
+- [Finalize your AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/finalize-amd-prop.md)
+- [Test your AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/test-amd-prop.md)
+- [Go live with AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/go-live.md)

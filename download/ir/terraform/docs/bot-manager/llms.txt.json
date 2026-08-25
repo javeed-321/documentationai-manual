@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/bot-manager/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/bot-manager/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/bot-manager/llms.txt",
+  "title": "Bot Manager",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Bot Manager",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Bot Manager",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        62
+      ],
+      "raw": "- [Define bot responses](https://techdocs.akamai.com/terraform/docs/set-up-botman.md)\n- [Protect your webpages from scrapers](https://techdocs.akamai.com/terraform/docs/protect-your-webpages-from-scrapers.md)\n- [Bot category](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-category.md): akamai_botman_akamai_bot_category\n- [Bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-category-action.md): akamai_botman_akamai_bot_category_action\n- [Bot category exception](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-category-exception.md): akamai_botman_bot_category_exception\n- [Bot endpoint coverage report](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-endpoint-coverage-report.md): akamai_botman_bot_endpoint_coverage_report\n- [Bot management settings](https://techdocs.akamai.com/terraform/docs/bmgr-ds-bot-management-settings.md): akamai_botman_bot_management_settings\n- [Bot sequence](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category-item-sequence.md): akamai_botman_custom_bot_category_item_sequence\n- [Challenge action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-challenge-action.md): akamai_botman_challenge_action\n- [Challenge injection rules](https://techdocs.akamai.com/terraform/docs/bmgr-ds-challenge-injection-rules.md): akamai_botman_challenge_injection_rules\n- [Client-side security](https://techdocs.akamai.com/terraform/docs/bmgr-ds-client-side-security.md): akamai_botman_client_side_security\n- [Conditional action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-conditional-action.md): akamai_botman_conditional_action\n- [Content protection JavaScript injection rule](https://techdocs.akamai.com/terraform/docs/cpr-ds-javascript-injection-rule.md): akamai_botman_content_protection_javascript_injection_rule\n- [Content protection rule](https://techdocs.akamai.com/terraform/docs/cpr-ds-rule.md): akamai_botman_content_protection_rule\n- [Content protection rule sequence](https://techdocs.akamai.com/terraform/docs/cpr-ds-rule-sequence.md): akamai_botman_content_protection_rule_sequence\n- [Custom-bot category](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category.md): akamai_botman_custom_bot_category\n- [Custom-bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category-action.md): akamai_botman_custom_bot_category_action\n- [Custom-bot category sequence](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-bot-category-sequence.md): akamai_botman_custom_bot_category_sequence\n- [Custom-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-defined-bot.md): akamai_botman_custom_defined_bot\n- [Custom client](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-client.md): akamai_botman_custom_client\n- [Custom client sequence](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-client-sequence.md): akamai_botman_custom_client_sequence\n- [Custom deny action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-custom-deny-action.md): akamai_botman_custom_deny_action\n- [Defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-ds-defined-bot.md): akamai_botman_akamai_defined_bo\n- [Detection](https://techdocs.akamai.com/terraform/docs/bmgr-ds-detection.md): akamai_botman_bot_detection\n- [Detection action](https://techdocs.akamai.com/terraform/docs/dbmgr-ds-etection-action.md): akamai_botman_bot_detection_action\n- [JavaScript injection](https://techdocs.akamai.com/terraform/docs/bmgr-ds-javascript-injection.md): akamai_botman_javascript_injection\n- [Recategorized Akamai-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-ds-recategorized-akamai-defined-bot.md): akamai_botman_recategorized_akamai_defined_bot\n- [Response action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-response-action.md): akamai_botman_response_action\n- [Serve alternate action](https://techdocs.akamai.com/terraform/docs/bmgr-ds-alternative-action.md): akamai_botman_serve_alternate_action\n- [Transactional endpoint](https://techdocs.akamai.com/terraform/docs/bmgr-ds-transactional-endpoint.md): akamai_botman_transactional_endpoint\n- [Transactional endpoint protection](https://techdocs.akamai.com/terraform/docs/bmgr-ds-transactional-endpoint-protection.md): akamai_botman_transactional_endpoint_protection\n- [Bot detection action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-detection-action.md): akamai_botman_bot_detection_action\n- [Bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-category-action.md): akamai_botman_akamai_bot_category_action\n- [Bot category exception](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-category-exception.md): akamai_botman_bot_category_exception\n- [Bot management settings](https://techdocs.akamai.com/terraform/docs/bmgr-rc-bot-management-settings.md): akamai_botman_bot_management_settings\n- [Bot sequence](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category-item-sequence.md): akamai_botman_custom_bot_category_item_sequence\n- [Challenge action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-challenge-action.md): akamai_botman_challenge_action\n- [Challenge injection rules](https://techdocs.akamai.com/terraform/docs/bmgr-rc-challenge-injection-rules.md): akamai_botman_challenge_injection_rules\n- [Conditional action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-conditional-action.md): akamai_botman_conditional_action\n- [Content protection JavaScript injection rule](https://techdocs.akamai.com/terraform/docs/cpr-rc-javascript-injection-rule.md): akamai_botman_content_protection_javascript_injection_rule\n- [Content protection rule](https://techdocs.akamai.com/terraform/docs/cpr-rc-rule.md): akamai_botman_content_protection_rule\n- [Content protection rule sequence](https://techdocs.akamai.com/terraform/docs/cpr-rc-rule-sequence.md): akamai_botman_content_protection_rule_sequence\n- [Client-side security](https://techdocs.akamai.com/terraform/docs/bmgr-rc-client-side-security.md): akamai_botman_client_side_security\n- [Custom-bot category](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category.md): akamai_botman_custom_bot_category\n- [Custom-bot category action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category-action.md): akamai_botman_custom_bot_category_action\n- [Custom-bot category sequence](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-bot-category-sequence.md): akamai_botman_custom_bot_category_sequence\n- [Custom client](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-client.md): akamai_botman_custom_client\n- [Custom client sequence](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-client-sequence.md): akamai_botman_custom_client_sequence\n- [Custom-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-defined-bot.md): akamai_botman_custom_defined_bot\n- [Custom deny action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-custom-deny-action.md): akamai_botman_custom_deny_action\n- [JavaScript injection](https://techdocs.akamai.com/terraform/docs/bmgr-rc-javascript-injection.md): akamai_botman_javascript_injection\n- [Recategorized Akamai-defined bot](https://techdocs.akamai.com/terraform/docs/bmgr-rc-recategorized-akamai-defined-bot.md): akamai_botman_recategorized_akamai_defined_bot\n- [Serve alternate action](https://techdocs.akamai.com/terraform/docs/bmgr-rc-serve-alternate-action.md): akamai_botman_serve_alternate_action\n- [Transactional endpoint](https://techdocs.akamai.com/terraform/docs/bmgr-rc-transactional-endpoint.md): akamai_botman_transactional_endpoint\n- [Transactional endpoint protection](https://techdocs.akamai.com/terraform/docs/bmgr-rc-transactional-endpoint-protection.md): akamai_botman_transactional_endpoint_protection",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Define bot responsesProtect your webpages from scrapersBot category: akamai_botman_akamai_bot_categoryBot category action: akamai_botman_akamai_bot_category_actionBot category exception: akamai_botman_bot_category_exceptionBot endpoint coverage report: akamai_botman_bot_endpoint_coverage_reportBot management settings: akamai_botman_bot_management_settingsBot sequence: akamai_botman_custom_bot_category_item_sequenceChallenge action: akamai_botman_challenge_actionChallenge injection rules: akamai_botman_challenge_injection_rulesClient-side security: akamai_botman_client_side_securityConditional action: akamai_botman_conditional_actionContent protection JavaScript injection rule: akamai_botman_content_protection_javascript_injection_ruleContent protection rule: akamai_botman_content_protection_ruleContent protection rule sequence: akamai_botman_content_protection_rule_sequenceCustom-bot category: akamai_botman_custom_bot_categoryCustom-bot category action: akamai_botman_custom_bot_category_actionCustom-bot category sequence: akamai_botman_custom_bot_category_sequenceCustom-defined bot: akamai_botman_custom_defined_botCustom client: akamai_botman_custom_clientCustom client sequence: akamai_botman_custom_client_sequenceCustom deny action: akamai_botman_custom_deny_actionDefined bot: akamai_botman_akamai_defined_boDetection: akamai_botman_bot_detectionDetection action: akamai_botman_bot_detection_actionJavaScript injection: akamai_botman_javascript_injectionRecategorized Akamai-defined bot: akamai_botman_recategorized_akamai_defined_botResponse action: akamai_botman_response_actionServe alternate action: akamai_botman_serve_alternate_actionTransactional endpoint: akamai_botman_transactional_endpointTransactional endpoint protection: akamai_botman_transactional_endpoint_protectionBot detection action: akamai_botman_bot_detection_actionBot category action: akamai_botman_akamai_bot_category_actionBot category exception: akamai_botman_bot_category_exceptionBot management settings: akamai_botman_bot_management_settingsBot sequence: akamai_botman_custom_bot_category_item_sequenceChallenge action: akamai_botman_challenge_actionChallenge injection rules: akamai_botman_challenge_injection_rulesConditional action: akamai_botman_conditional_actionContent protection JavaScript injection rule: akamai_botman_content_protection_javascript_injection_ruleContent protection rule: akamai_botman_content_protection_ruleContent protection rule sequence: akamai_botman_content_protection_rule_sequenceClient-side security: akamai_botman_client_side_securityCustom-bot category: akamai_botman_custom_bot_categoryCustom-bot category action: akamai_botman_custom_bot_category_actionCustom-bot category sequence: akamai_botman_custom_bot_category_sequenceCustom client: akamai_botman_custom_clientCustom client sequence: akamai_botman_custom_client_sequenceCustom-defined bot: akamai_botman_custom_defined_botCustom deny action: akamai_botman_custom_deny_actionJavaScript injection: akamai_botman_javascript_injectionRecategorized Akamai-defined bot: akamai_botman_recategorized_akamai_defined_botServe alternate action: akamai_botman_serve_alternate_actionTransactional endpoint: akamai_botman_transactional_endpointTransactional endpoint protection: akamai_botman_transactional_endpoint_protection",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

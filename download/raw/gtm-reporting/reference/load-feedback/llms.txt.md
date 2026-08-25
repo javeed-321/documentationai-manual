@@ -1,0 +1,10 @@
+# GTM Reporting API Documentation
+
+> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Load feedback
+- [Report load feedback](https://techdocs.akamai.com/gtm-reporting/reference/get-load-feedback.md): This report shows the historical values of a given Resource across all data centers and the given time period. A resource is anything that can constrain the load sent to a data center. Examples of typical resources include bandwidth, CPU load average, database queries per second, or disk operations per second.
+- [Get most recent load feedback data](https://techdocs.akamai.com/gtm-reporting/reference/get-most-recent-load-data.md): Returns the most recent load feedback values reported by each data center for the given domain. This provides a snapshot of the current load state across all data centers.
+- [Get a load feedback report window](https://techdocs.akamai.com/gtm-reporting/reference/get-load-feedback-window.md): Returns the date range of data available for load feedback reports. Use the returned `start` and `end` values as the bounds for queries to the load feedback report endpoint.

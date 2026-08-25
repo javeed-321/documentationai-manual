@@ -1,0 +1,11 @@
+# Test Center Documentation
+
+> Akamai's Test Center is a testing tool that checks the effect of configuration changes on your web property.  Use this tool as part of your testing protocol to increase your confidence in the safety and accuracy of your configuration changes.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/test-ctr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Test runs
+- [Submit a test run](https://techdocs.akamai.com/test-ctr/reference/post-test-runs.md): Submits a test run for functional testing. With one request you can run the test for a property version, test suite, and functional test case.
+- [List test runs](https://techdocs.akamai.com/test-ctr/reference/get-test-runs.md): Lists test runs submitted in your organization. The response is an array of objects, each keyed by `testRunId` with details and status of each test run.
+- [Get a test run](https://techdocs.akamai.com/test-ctr/reference/get-test-run.md): Returns details of a test run. Check [Functional testing results](doc:test-run-results#functional-testing-results) to learn how to analyze the results.
+- [Get test run's detailed results](https://techdocs.akamai.com/test-ctr/reference/get-test-run-raw-request-response.md): Gets a raw request and response for all URLs in a test run.

@@ -1,0 +1,10 @@
+# Cloudlets Documentation
+
+> Akamai's Cloudlets are value-added applications that complement Akamai’s core delivery solutions to solve specific business challenges. Cloudlets bring a site’s business logic closer to the end user by placing it on the edge of the content delivery platform.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloudlets/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Activations
+- [Activate a policy version](https://techdocs.akamai.com/cloudlets/reference/post-policy-activations.md): Asynchronously activates or deactivates the selected Cloudlet policy version on the staging or production networks. When a policy version becomes active on the network, the previously active version gets automatically deactivated. Activating a policy version returns the `id` of the activation, which you can store and use to run the [Get status for an activation](ref:get-policy-activation) operation to check the status value. You can activate a policy on each network only after any previous activations have completed, otherwise you get a 409 error.
+- [List policy activations](https://techdocs.akamai.com/cloudlets/reference/get-policy-activations.md): Returns the complete activation history for the selected policy.
+- [Get status for an activation](https://techdocs.akamai.com/cloudlets/reference/get-policy-activation.md): Returns the status of an activation. See [Activation status](ref:activation-status).

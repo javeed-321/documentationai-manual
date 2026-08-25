@@ -1,0 +1,106 @@
+{
+  "slug": "netstorage/reference/upload-accounts/llms.txt",
+  "source": "https://techdocs.akamai.com/netstorage/reference/upload-accounts/llms.txt.md",
+  "url": "https://techdocs.akamai.com/netstorage/reference/upload-accounts/llms.txt",
+  "title": "Upload accounts",
+  "description": "",
+  "section": "NetStorage",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# NetStorage Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "NetStorage Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Upload accounts",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Upload accounts",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        32
+      ],
+      "raw": "- [List upload accounts](https://techdocs.akamai.com/netstorage/reference/get-upload-accounts.md): Get a list of upload accounts for all storage groups in your NetStorage instance.\n- [Create a new upload account](https://techdocs.akamai.com/netstorage/reference/post-upload-accounts.md): Create an upload account for a storage group.\n- [Get an upload account](https://techdocs.akamai.com/netstorage/reference/get-upload-account.md): Get a specific upload account based on its unique ID value.\n- [Edit an upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account.md): Update an upload account based on its `uploadAccountId`.\n- [Disable an upload account](https://techdocs.akamai.com/netstorage/reference/post-upload-account-disable.md): Disable an upload account based on its `uploadAccountId`.\n- [Enable an upload account](https://techdocs.akamai.com/netstorage/reference/post-upload-account-enable.md): Enable an upload account based on its `uploadAccountId`.\n- [Add keys to an FTP upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-ftp.md): Add keys to an FTP upload account based on its `uploadAccountId`.\n- [Enable an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ftp-identity.md): Enable an upload account's FTP Keys based on its `uploadAccountId` and FTP `identity`.\n- [Update an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-ftp-identity.md): Save an upload account's FTP keys based on its `uploadAccountId` and FTP `identity`.\n- [Delete an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-ftp-identity.md): Delete an upload account's FTP keys based on its `uploadAccountId` and FTP `identity`.\n- [Disable an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ftp-identity-disable.md): Disable an upload account's FTP keys based on its `uploadAccountId` and FTP `identity`.\n- [Extend your FTP password](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ftp-identity-extend.md): Extend your FTP password for an additional 120 days.\n- [Save an upload account's rsync keys](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-rsync.md): Save an upload account's rsync keys based on its unique uploadAccountId.\n- [Delete all rsync keys for an upload account](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-rsync.md): Delete all rsync keys assigned to an upload account.\n- [Delete a specific rsync key](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-rsync-identity.md): Delete an upload account's rsync keys based on its `uploadAccountId` and rsync `identity`.\n- [Disable an upload account's rsync keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-rsync-identity-disable.md): Disable an upload account's rsync keys based on its `uploadAccountId` and rsync `identity`.\n- [Enable an upload account's rsync keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-rsync-identity-enable.md): Enable an upload account's rsync keys based on its `uploadAccountId` and rsync `identity`.\n- [Add SSH keys to an upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-ssh.md): Add SSH keys to an upload account based on its `uploadAccountId`.\n- [Delete an upload account's SSH keys](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-ssh-identity.md): Delete an upload account's SSH keys based on its `uploadAccountId` and SSH `identity`.\n- [Disable an upload account's SSH keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ssh-identity-disable.md): Disable an upload account's SSH keys based on its `uploadAccountId` and SSH `identity`.\n- [Enable an upload account's SSH keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ssh-identity-enable.md): Enable an upload account's SSH keys based on its `uploadAccountId` and SSH `identity`.\n- [Add G2O keys to an upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-g2o.md): Add G2O keys upload account based on its `uploadAccountId`.\n- [Delete an upload account's G2O keys](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-g2o-identity.md): Delete an upload account's G2O keys based on its `uploadAccountId` and G2O `identity`.\n- [Disable an upload account's G2O keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-g2o-identity-disable.md): Disable an upload account's G2O keys based on its `uploadAccountId` and G2O `identity`.\n- [Enable an upload account's G2O keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-g2o-identity-enable.md): Enable an upload account's G2O keys based on its `uploadAccountId` and G2O `identity`.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List upload accounts: Get a list of upload accounts for all storage groups in your NetStorage instance.Create a new upload account: Create an upload account for a storage group.Get an upload account: Get a specific upload account based on its unique ID value.Edit an upload account: Update an upload account based on its uploadAccountId.Disable an upload account: Disable an upload account based on its uploadAccountId.Enable an upload account: Enable an upload account based on its uploadAccountId.Add keys to an FTP upload account: Add keys to an FTP upload account based on its uploadAccountId.Enable an upload account's FTP keys: Enable an upload account's FTP Keys based on its uploadAccountId and FTP identity.Update an upload account's FTP keys: Save an upload account's FTP keys based on its uploadAccountId and FTP identity.Delete an upload account's FTP keys: Delete an upload account's FTP keys based on its uploadAccountId and FTP identity.Disable an upload account's FTP keys: Disable an upload account's FTP keys based on its uploadAccountId and FTP identity.Extend your FTP password: Extend your FTP password for an additional 120 days.Save an upload account's rsync keys: Save an upload account's rsync keys based on its unique uploadAccountId.Delete all rsync keys for an upload account: Delete all rsync keys assigned to an upload account.Delete a specific rsync key: Delete an upload account's rsync keys based on its uploadAccountId and rsync identity.Disable an upload account's rsync keys: Disable an upload account's rsync keys based on its uploadAccountId and rsync identity.Enable an upload account's rsync keys: Enable an upload account's rsync keys based on its uploadAccountId and rsync identity.Add SSH keys to an upload account: Add SSH keys to an upload account based on its uploadAccountId.Delete an upload account's SSH keys: Delete an upload account's SSH keys based on its uploadAccountId and SSH identity.Disable an upload account's SSH keys: Disable an upload account's SSH keys based on its uploadAccountId and SSH identity.Enable an upload account's SSH keys: Enable an upload account's SSH keys based on its uploadAccountId and SSH identity.Add G2O keys to an upload account: Add G2O keys upload account based on its uploadAccountId.Delete an upload account's G2O keys: Delete an upload account's G2O keys based on its uploadAccountId and G2O identity.Disable an upload account's G2O keys: Disable an upload account's G2O keys based on its uploadAccountId and G2O identity.Enable an upload account's G2O keys: Enable an upload account's G2O keys based on its uploadAccountId and G2O identity.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

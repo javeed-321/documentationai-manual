@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/test-center/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/test-center/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/test-center/llms.txt",
+  "title": "Test Center",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Test Center",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Test Center",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        34
+      ],
+      "raw": "- [Manage tests](https://techdocs.akamai.com/powershell/docs/manage-tests.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/test-center-index.md)\n- [Test case](https://techdocs.akamai.com/powershell/docs/get-testcase.md): Get-TestCase\n- [Test catalog template](https://techdocs.akamai.com/powershell/docs/get-testcatalogtemplate.md): Get-TestCatalogTemplate\n- [Test condition](https://techdocs.akamai.com/powershell/docs/get-testcondition.md): Get-TestCondition\n- [Test request](https://techdocs.akamai.com/powershell/docs/get-testrequest.md): Get-TestRequest\n- [Test run](https://techdocs.akamai.com/powershell/docs/get-testrun.md): Get-TestRun\n- [Test run results](https://techdocs.akamai.com/powershell/docs/get-testrunresults.md): Get-TestRunResults\n- [Test suite](https://techdocs.akamai.com/powershell/docs/get-testsuite.md): Get-TestSuite\n- [Test variable](https://techdocs.akamai.com/powershell/docs/get-testvariable.md): Get-TestVariable\n- [Test suite](https://techdocs.akamai.com/powershell/docs/initialize-testsuite.md): Initialize-TestSuite\n- [Test case](https://techdocs.akamai.com/powershell/docs/new-testcase.md): New-TestCase\n- [Test suite](https://techdocs.akamai.com/powershell/docs/new-testsuite.md): New-TestSuite\n- [Test variable](https://techdocs.akamai.com/powershell/docs/new-testvariable.md): New-TestVariable\n- [Test case](https://techdocs.akamai.com/powershell/docs/remove-testcase.md): Remove-TestCase\n- [Test suite](https://techdocs.akamai.com/powershell/docs/remove-testsuite.md): Remove-TestSuite\n- [Test variable](https://techdocs.akamai.com/powershell/docs/remove-testvariable.md): Remove-TestVariable\n- [Test case](https://techdocs.akamai.com/powershell/docs/restore-testcase.md): Restore-TestCase\n- [Test suite](https://techdocs.akamai.com/powershell/docs/restore-testsuite.md): Restore-TestSuite\n- [Test case](https://techdocs.akamai.com/powershell/docs/set-testcase.md): Set-TestCase\n- [Test case order](https://techdocs.akamai.com/powershell/docs/set-testcaseorder.md): Set-TestCaseOrder\n- [Test suite](https://techdocs.akamai.com/powershell/docs/set-testsuite.md): Set-TestSuite\n- [Test variable](https://techdocs.akamai.com/powershell/docs/set-testvariable.md): Set-TestVariable\n- [Property version test](https://techdocs.akamai.com/powershell/docs/start-propertyversiontest.md): Start-PropertyVersionTest\n- [Test](https://techdocs.akamai.com/powershell/docs/start-test.md): Start-Test\n- [Test suite](https://techdocs.akamai.com/powershell/docs/start-testsuite.md): Start-TestSuite\n- [Test](https://techdocs.akamai.com/powershell/docs/test-testfunction.md): Test-TestFunction",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Manage testsFunction indexTest case: Get-TestCaseTest catalog template: Get-TestCatalogTemplateTest condition: Get-TestConditionTest request: Get-TestRequestTest run: Get-TestRunTest run results: Get-TestRunResultsTest suite: Get-TestSuiteTest variable: Get-TestVariableTest suite: Initialize-TestSuiteTest case: New-TestCaseTest suite: New-TestSuiteTest variable: New-TestVariableTest case: Remove-TestCaseTest suite: Remove-TestSuiteTest variable: Remove-TestVariableTest case: Restore-TestCaseTest suite: Restore-TestSuiteTest case: Set-TestCaseTest case order: Set-TestCaseOrderTest suite: Set-TestSuiteTest variable: Set-TestVariableProperty version test: Start-PropertyVersionTestTest: Start-TestTest suite: Start-TestSuiteTest: Test-TestFunction",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

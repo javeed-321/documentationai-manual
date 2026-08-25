@@ -1,0 +1,12 @@
+# Aura Documentation
+
+> Aura Licensed CDN (LCDN) is a highly-scalable, multi-purpose CDN for network operators. With Aura LCDN you can deliver high-quality, low-latency viewing experiences for both live and on-demand video content. The Aura Licensed Multicast Solution (LMS) is an extension of the Aura LCDN that uses IP Multicast technology to deliver the same Adaptive Bitrate (ABR) video content to multiple viewers simultaneously, similar to traditional broadcast methodology.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/aura/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/aura/docs/welcome/llms.txt)

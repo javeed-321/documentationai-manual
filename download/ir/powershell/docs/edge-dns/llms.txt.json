@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/edge-dns/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/edge-dns/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/edge-dns/llms.txt",
+  "title": "Edge DNS",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Edge DNS",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Edge DNS",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        87
+      ],
+      "raw": "- [Function index](https://techdocs.akamai.com/powershell/docs/edns-index.md)\n- [Proxy zone manual filter name](https://techdocs.akamai.com/powershell/docs/add-ednsproxyzonemanualfiltername.md): Add-EDNSProxyZoneManualFilterName\n- [Zone versions](https://techdocs.akamai.com/powershell/docs/compare-ednszoneversion.md): Compare-EDNSZoneVersion\n- [Proxy zone](https://techdocs.akamai.com/powershell/docs/convert-ednsproxyzone.md): Convert-EDNSProxyZone\n- [Zone to alias](https://techdocs.akamai.com/powershell/docs/convert-ednszonetoalias.md): Convert-EDNSZoneToAlias\n- [Zone to primary](https://techdocs.akamai.com/powershell/docs/convert-ednszonetoprimary.md): Convert-EDNSZoneToPrimary\n- [Zone to secondary](https://techdocs.akamai.com/powershell/docs/convert-ednszonetosecondary.md): Convert-EDNSZoneToSecondary\n- [Change list](https://techdocs.akamai.com/powershell/docs/find-ednschangelist.md): Find-EDNSChangeList\n- [Authoritative name servers](https://techdocs.akamai.com/powershell/docs/get-ednsauthority.md): Get-EDNSAuthority\n- [Bulk zone create results](https://techdocs.akamai.com/powershell/docs/get-ednszonebulkcreateresult.md): Get-EDNSZoneBulkCreateResult\n- [Bulk zone create request status](https://techdocs.akamai.com/powershell/docs/get-ednszonebulkcreatestatus.md): Get-EDNSZoneBulkCreateStatus\n- [Bulk zone delete request results](https://techdocs.akamai.com/powershell/docs/get-ednszonebulkdeleteresult.md): Get-EDNSZoneBulkDeleteResult\n- [Bulk zone delete request status](https://techdocs.akamai.com/powershell/docs/get-ednszonebulkdeletestatus.md): Get-EDNSZoneBulkDeleteStatus\n- [Change list](https://techdocs.akamai.com/powershell/docs/get-ednschangelist.md): Get-EDNSChangeList\n- [Change list diff](https://techdocs.akamai.com/powershell/docs/get-ednschangelistdiff.md): Get-EDNSChangeListDiff\n- [Change list settings](https://techdocs.akamai.com/powershell/docs/get-ednschangelistsettings.md): Get-EdnsChangeListSettings\n- [Contract](https://techdocs.akamai.com/powershell/docs/get-ednszonecontract.md): Get-EdnsZoneContract\n- [Contracts](https://techdocs.akamai.com/powershell/docs/get-ednscontracts.md): Get-EdnsContracts\n- [Convert result](https://techdocs.akamai.com/powershell/docs/get-ednsconvertresult.md)\n- [Convert status](https://techdocs.akamai.com/powershell/docs/get-ednsconvertstatus.md)\n- [DNSSEC algorithms](https://techdocs.akamai.com/powershell/docs/get-ednsdnssecalgorithms.md): Get-EdnsDNSSECAlgorithms\n- [DNSSEC status](https://techdocs.akamai.com/powershell/docs/get-ednszonednssecstatus.md): Get-EdnsZoneDNSSECStatus\n- [Edge hostnames](https://techdocs.akamai.com/powershell/docs/get-ednsedgehostnames.md): Get-EdnsEdgeHostnames\n- [Groups](https://techdocs.akamai.com/powershell/docs/get-ednsgroups.md): Get-EdnsGroups\n- [Master zone file](https://techdocs.akamai.com/powershell/docs/get-ednsmasterfile.md): Get-EdnsMasterFile\n- [Proxy](https://techdocs.akamai.com/powershell/docs/get-ednsproxy.md): Get-EDNSProxy\n- [Proxy health check](https://techdocs.akamai.com/powershell/docs/get-ednsproxyhealthcheckrecordtypes.md): Get-EDNSProxyHealthcheckRecordTypes\n- [Proxy zone](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzone.md): Get-EDNSProxyZone\n- [Proxy zone create result](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonecreateresult.md): Get-EDNSProxyZoneCreateResult\n- [Proxy zone create status](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonecreatestatus.md): Get-EDNSProxyZoneCreateStatus\n- [Proxy zone delete result](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonedeleteresult.md): Get-EDNSProxyZoneDeleteResult\n- [Proxy zone delete status](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonedeletestatus.md): Get-EDNSProxyZoneDeleteStatus\n- [Proxy zone manual filter report](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonemanualfilterreport.md): Get-EDNSProxyZoneManualFilterReport\n- [Proxy zone TSIG key](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonetsigkey.md): Get-EDNSProxyZoneTSIGKey\n- [Proxy zone TSIG key use](https://techdocs.akamai.com/powershell/docs/get-ednsproxyzonetsigkeyusedby.md): Get-EDNSProxyZoneTSIGKeyUsedBy\n- [Record set names for change list](https://techdocs.akamai.com/powershell/docs/get-ednschangelistrecordsetnames.md): Get-EdnsChangeListRecordSetNames\n- [Record set types](https://techdocs.akamai.com/powershell/docs/get-ednsrecordsettypes.md): Get-EdnsRecordSetTypes\n- [Record set types for name and change list](https://techdocs.akamai.com/powershell/docs/get-ednschangelistrecordsettypes.md): Get-EdnsChangeListRecordSetTypes\n- [Record sets](https://techdocs.akamai.com/powershell/docs/get-ednsrecordset.md): Get-EdnsRecordSet\n- [Record sets for change list](https://techdocs.akamai.com/powershell/docs/get-ednschangelistrecordset.md): Get-EdnsChangeListRecordSet\n- [Secondary SOA](https://techdocs.akamai.com/powershell/docs/get-ednssecondarysoa.md): Get-EDNSSecondarySOA\n- [TSIG key algorithms](https://techdocs.akamai.com/powershell/docs/get-ednstsigalgorithms.md): Get-EdnsTSIGAlgorithms\n- [TSIG key contract](https://techdocs.akamai.com/powershell/docs/get-ednstsigkeycontract.md): Get-EDNSTSIGKeyContract\n- [TSIG keys](https://techdocs.akamai.com/powershell/docs/get-ednstsigkey.md): Get-EdnsTSIGKey\n- [Users of zone's TSIG key](https://techdocs.akamai.com/powershell/docs/get-ednstsigkeyusedby.md): Get-EdnsTSIGKeyUsedBy\n- [Zone](https://techdocs.akamai.com/powershell/docs/get-ednszone.md): Get-EdnsZone\n- [Zone's aliases](https://techdocs.akamai.com/powershell/docs/get-ednszonealias.md): Get-EdnsZoneAlias\n- [Zone DNS key](https://techdocs.akamai.com/powershell/docs/get-ednszonednskey.md): Get-EDNSZoneDNSKey\n- [Zone transfer status](https://techdocs.akamai.com/powershell/docs/get-ednszonetransferstatus.md): Get-EdnsZoneTransferStatus\n- [Zone version](https://techdocs.akamai.com/powershell/docs/get-ednszoneversion.md): Get-EdnsZoneVersion\n- [Zone version master file](https://techdocs.akamai.com/powershell/docs/get-ednszoneversionmasterfile.md)\n- [Zone version record set](https://techdocs.akamai.com/powershell/docs/get-ednszoneversionrecordset.md): Get-EdnsZoneVersionRecordSet\n- [Bulk zone create request](https://techdocs.akamai.com/powershell/docs/new-ednszonebulkcreate.md): New-EdnsZoneBulkCreate\n- [Bulk zone delete request](https://techdocs.akamai.com/powershell/docs/new-ednszonebulkdelete.md): New-EdnsZoneBulkDelete\n- [Change list](https://techdocs.akamai.com/powershell/docs/new-ednschangelist.md): New-EdnsChangeList\n- [Proxy](https://techdocs.akamai.com/powershell/docs/new-ednsproxy.md): New-EDNSProxy\n- [Proxy zone](https://techdocs.akamai.com/powershell/docs/new-ednsproxyzone.md): New-EDNSProxyZone\n- [Record set](https://techdocs.akamai.com/powershell/docs/new-ednsrecordset.md): New-EdnsRecordSet\n- [Zone](https://techdocs.akamai.com/powershell/docs/new-ednszone.md): New-EdnsZone\n- [Change list](https://techdocs.akamai.com/powershell/docs/remove-ednschangelist.md): Remove-EdnsChangeList\n- [Proxy zone](https://techdocs.akamai.com/powershell/docs/remove-ednsproxyzone.md): Remove-EDNSProxyZone\n- [Proxy zone apex alias](https://techdocs.akamai.com/powershell/docs/remove-ednsproxyzoneapexalias.md): Remove-EDNSProxyZoneApexAlias\n- [Proxy zone manual filter name](https://techdocs.akamai.com/powershell/docs/remove-ednsproxyzonemanualfiltername.md): Remove-EDNSProxyZoneManualFilterName\n- [Proxy zone TSIG key](https://techdocs.akamai.com/powershell/docs/remove-ednsproxyzonetsigkey.md): Remove-EDNSProxyZoneTSIGKey\n- [Record set](https://techdocs.akamai.com/powershell/docs/remove-ednsrecordset.md): Remove-EdnsRecordSet\n- [TSIG key](https://techdocs.akamai.com/powershell/docs/remove-ednstsigkey.md): Remove-EdnsTSIGKey\n- [Zone](https://techdocs.akamai.com/powershell/docs/remove-ednszone.md): Remove-EDNSZone\n- [Zone version](https://techdocs.akamai.com/powershell/docs/restore-ednszoneversion.md): Restore-EdnsZoneVersion\n- [Change list settings](https://techdocs.akamai.com/powershell/docs/set-ednschangelistsettings.md): Set-EdnsChangeListSettings\n- [Master zone file](https://techdocs.akamai.com/powershell/docs/set-ednsmasterfile.md): Set-EdnsMasterFile\n- [Master zone file upload to change list](https://techdocs.akamai.com/powershell/docs/set-ednschangelistmasterfile.md): Set-EdnsChangeListMasterFile\n- [Proxy](https://techdocs.akamai.com/powershell/docs/set-ednsproxy.md): Set-EDNSProxy\n- [Proxy zone apex alias](https://techdocs.akamai.com/powershell/docs/set-ednsproxyzoneapexalias.md): Set-EDNSProxyZoneApexAlias\n- [Proxy zone manual filter names](https://techdocs.akamai.com/powershell/docs/set-ednsproxyzonemanualfilternames.md): Set-EDNSProxyZoneManualFilterNames\n- [Proxy zone TSIG key](https://techdocs.akamai.com/powershell/docs/set-ednsproxyzonetsigkey.md): Set-EDNSProxyZoneTSIGKey\n- [Record set](https://techdocs.akamai.com/powershell/docs/set-ednsrecordset.md): Set-EdnsRecordSet\n- [Record set for change list](https://techdocs.akamai.com/powershell/docs/set-ednschangelistrecordset.md): Set-EdnsChangeListRecordSet\n- [TSIG key](https://techdocs.akamai.com/powershell/docs/set-ednstsigkey.md): Set-EdnsTSIGKey\n- [Zone](https://techdocs.akamai.com/powershell/docs/set-ednszone.md): Set-EdnsZone\n- [Change list](https://techdocs.akamai.com/powershell/docs/submit-ednschangelist.md): Submit-EdnsChangeList",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Function indexProxy zone manual filter name: Add-EDNSProxyZoneManualFilterNameZone versions: Compare-EDNSZoneVersionProxy zone: Convert-EDNSProxyZoneZone to alias: Convert-EDNSZoneToAliasZone to primary: Convert-EDNSZoneToPrimaryZone to secondary: Convert-EDNSZoneToSecondaryChange list: Find-EDNSChangeListAuthoritative name servers: Get-EDNSAuthorityBulk zone create results: Get-EDNSZoneBulkCreateResultBulk zone create request status: Get-EDNSZoneBulkCreateStatusBulk zone delete request results: Get-EDNSZoneBulkDeleteResultBulk zone delete request status: Get-EDNSZoneBulkDeleteStatusChange list: Get-EDNSChangeListChange list diff: Get-EDNSChangeListDiffChange list settings: Get-EdnsChangeListSettingsContract: Get-EdnsZoneContractContracts: Get-EdnsContractsConvert resultConvert statusDNSSEC algorithms: Get-EdnsDNSSECAlgorithmsDNSSEC status: Get-EdnsZoneDNSSECStatusEdge hostnames: Get-EdnsEdgeHostnamesGroups: Get-EdnsGroupsMaster zone file: Get-EdnsMasterFileProxy: Get-EDNSProxyProxy health check: Get-EDNSProxyHealthcheckRecordTypesProxy zone: Get-EDNSProxyZoneProxy zone create result: Get-EDNSProxyZoneCreateResultProxy zone create status: Get-EDNSProxyZoneCreateStatusProxy zone delete result: Get-EDNSProxyZoneDeleteResultProxy zone delete status: Get-EDNSProxyZoneDeleteStatusProxy zone manual filter report: Get-EDNSProxyZoneManualFilterReportProxy zone TSIG key: Get-EDNSProxyZoneTSIGKeyProxy zone TSIG key use: Get-EDNSProxyZoneTSIGKeyUsedByRecord set names for change list: Get-EdnsChangeListRecordSetNamesRecord set types: Get-EdnsRecordSetTypesRecord set types for name and change list: Get-EdnsChangeListRecordSetTypesRecord sets: Get-EdnsRecordSetRecord sets for change list: Get-EdnsChangeListRecordSetSecondary SOA: Get-EDNSSecondarySOATSIG key algorithms: Get-EdnsTSIGAlgorithmsTSIG key contract: Get-EDNSTSIGKeyContractTSIG keys: Get-EdnsTSIGKeyUsers of zone's TSIG key: Get-EdnsTSIGKeyUsedByZone: Get-EdnsZoneZone's aliases: Get-EdnsZoneAliasZone DNS key: Get-EDNSZoneDNSKeyZone transfer status: Get-EdnsZoneTransferStatusZone version: Get-EdnsZoneVersionZone version master fileZone version record set: Get-EdnsZoneVersionRecordSetBulk zone create request: New-EdnsZoneBulkCreateBulk zone delete request: New-EdnsZoneBulkDeleteChange list: New-EdnsChangeListProxy: New-EDNSProxyProxy zone: New-EDNSProxyZoneRecord set: New-EdnsRecordSetZone: New-EdnsZoneChange list: Remove-EdnsChangeListProxy zone: Remove-EDNSProxyZoneProxy zone apex alias: Remove-EDNSProxyZoneApexAliasProxy zone manual filter name: Remove-EDNSProxyZoneManualFilterNameProxy zone TSIG key: Remove-EDNSProxyZoneTSIGKeyRecord set: Remove-EdnsRecordSetTSIG key: Remove-EdnsTSIGKeyZone: Remove-EDNSZoneZone version: Restore-EdnsZoneVersionChange list settings: Set-EdnsChangeListSettingsMaster zone file: Set-EdnsMasterFileMaster zone file upload to change list: Set-EdnsChangeListMasterFileProxy: Set-EDNSProxyProxy zone apex alias: Set-EDNSProxyZoneApexAliasProxy zone manual filter names: Set-EDNSProxyZoneManualFilterNamesProxy zone TSIG key: Set-EDNSProxyZoneTSIGKeyRecord set: Set-EdnsRecordSetRecord set for change list: Set-EdnsChangeListRecordSetTSIG key: Set-EdnsTSIGKeyZone: Set-EdnsZoneChange list: Submit-EdnsChangeList",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

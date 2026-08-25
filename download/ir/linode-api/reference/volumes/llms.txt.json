@@ -1,0 +1,142 @@
+{
+  "slug": "linode-api/reference/volumes/llms.txt",
+  "source": "https://techdocs.akamai.com/linode-api/reference/volumes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/linode-api/reference/volumes/llms.txt",
+  "title": "Volumes",
+  "description": "",
+  "section": "Linode API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Linode API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Linode API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Volumes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Volumes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        17
+      ],
+      "raw": "- [Create a volume](https://techdocs.akamai.com/linode-api/reference/post-volume.md): Creates a [Block Storage](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-block-storage) volume on your account. Creating a new volume accrues additional charges on your account.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `create_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write`   **CLI**  ```shell linode-cli volumes create \\   --label my-volume \\   --size 20 \\   --linode_id 12346 \\   --no-defaults ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List volumes](https://techdocs.akamai.com/linode-api/reference/get-volumes.md): Returns a paginated list of the Block Storage volumes that you have permission to view.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `view_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_only`   **CLI**  ```shell linode-cli volumes list ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a volume](https://techdocs.akamai.com/linode-api/reference/get-volume.md): Get information about a specific Block Storage volume.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `view_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_only`   **CLI**  ```shell linode-cli volumes view 12345 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Update a volume](https://techdocs.akamai.com/linode-api/reference/put-volume.md): Update a specific Block Storage volume.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `update_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write`   **CLI**  ```shell linode-cli volumes update 12345 \\   --label my_volume ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Delete a volume](https://techdocs.akamai.com/linode-api/reference/delete-volume.md): Delete a Block Storage volume. Some conditions apply when deleting a volume:  - Deleting a volume can't be undone.  - Deleting stops billing for the volume. You'll be billed for the time the volume was active during the current billing period.  - You can't delete a volume that's attached to a Linode currently being [migrated](ref:post-migrate-linode-instance). You need to wait for the migration to complete.  - You can't delete a volume that has a `cannot_delete` or `cannot_delete_with_subresources` [resource lock](ref:post-resource-lock) set for it.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `delete_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write`   **CLI**  ```shell linode-cli volumes delete 12345 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Attach a volume](https://techdocs.akamai.com/linode-api/reference/post-attach-volume.md): Attach a Block Storage volume to an existing Linode.  > 📘 > > - The volume and its target Linode need to exist in the same `region`. You can run the [List volumes](ref:get-volumes) and [List Linodes](ref:get-linode-instances) operations and review the `region` for each. > > - There's a maximum number of volumes that can be attached to a single Linode configuration. This number varies, based on the Linode's plan, with higher plan types supporting more volumes. The maximum follows a formula of the Linode plan's `total_ram / 1024`, with a minimum of 8 and a total maximum of 64 volumes. Rescue configurations support a maximum of 8.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `attach_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write, linodes:read_write`   **CLI**  ```shell linode-cli volumes attach 12345 \\   --linode_id 12346 \\   --config_id 23456 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Clone a volume](https://techdocs.akamai.com/linode-api/reference/post-clone-volume.md): Target an existing Block Storage volume to create a new one. The resulting volume will be the same size and include the same data. A new volume will incur a charge on your account.  > 📘 > > Only a volume with a `status` of `active` can be cloned. Run the [List volumes](ref:get-volumes) operation to view the `status` of each of your volumes.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `clone_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write`   **CLI**  ```shell linode-cli volumes clone 12345 \\   --label my-volume ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Detach a volume](https://techdocs.akamai.com/linode-api/reference/post-detach-volume.md): Detach a Block Storage volume from a Linode. When you [delete](ref:delete-linode-instance) a Linode, any volumes attached to it are automatically detached.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `detach_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write, linodes:read_write`   **CLI**  ```shell linode-cli volumes detach 12345 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Resize a volume](https://techdocs.akamai.com/linode-api/reference/post-resize-volume.md): Increase the size of an existing Block Storage volume on your account.  > 📘 > > - You can't decrease the size of an existing volume. > > - Only a volume with a `status` of `active` can be resized. Run the [List volumes](ref:get-volumes) operation to view the `status` of each of your volumes.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs a role with these permissions assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Permissions: `resize_volume` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `volumes:read_write`   **CLI**  ```shell linode-cli volumes resize 12345 \\   --size 30 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List volume types](https://techdocs.akamai.com/linode-api/reference/get-volume-types.md): Returns Block Storage volume types and prices, including any region-specific rates.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. This operation is internet-facing. No permissions are required.   **CLI**  ```shell linode-cli volumes types ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a volume: Creates a Block Storage volume on your account. Creating a new volume accrues additional charges on your account.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: create_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write   CLI  shell linode-cli volumes create \\   --label my-volume \\   --size 20 \\   --linode_id 12346 \\   --no-defaults   Learn moreList volumes: Returns a paginated list of the Block Storage volumes that you have permission to view.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: view_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_only   CLI  shell linode-cli volumes list   Learn moreGet a volume: Get information about a specific Block Storage volume.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: view_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_only   CLI  shell linode-cli volumes view 12345   Learn moreUpdate a volume: Update a specific Block Storage volume.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: update_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write   CLI  shell linode-cli volumes update 12345 \\   --label my_volume   Learn moreDelete a volume: Delete a Block Storage volume. Some conditions apply when deleting a volume:  - Deleting a volume can't be undone.  - Deleting stops billing for the volume. You'll be billed for the time the volume was active during the current billing period.  - You can't delete a volume that's attached to a Linode currently being migrated. You need to wait for the migration to complete.  - You can't delete a volume that has a cannot_delete or cannot_delete_with_subresources resource lock set for it.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: delete_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write   CLI  shell linode-cli volumes delete 12345   Learn moreAttach a volume: Attach a Block Storage volume to an existing Linode.  > 📘 > > - The volume and its target Linode need to exist in the same region. You can run the List volumes and List Linodes operations and review the region for each. > > - There's a maximum number of volumes that can be attached to a single Linode configuration. This number varies, based on the Linode's plan, with higher plan types supporting more volumes. The maximum follows a formula of the Linode plan's total_ram / 1024, with a minimum of 8 and a total maximum of 64 volumes. Rescue configurations support a maximum of 8.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: attach_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write, linodes:read_write   CLI  shell linode-cli volumes attach 12345 \\   --linode_id 12346 \\   --config_id 23456   Learn moreClone a volume: Target an existing Block Storage volume to create a new one. The resulting volume will be the same size and include the same data. A new volume will incur a charge on your account.  > 📘 > > Only a volume with a status of active can be cloned. Run the List volumes operation to view the status of each of your volumes.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: clone_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write   CLI  shell linode-cli volumes clone 12345 \\   --label my-volume   Learn moreDetach a volume: Detach a Block Storage volume from a Linode. When you delete a Linode, any volumes attached to it are automatically detached.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: detach_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write, linodes:read_write   CLI  shell linode-cli volumes detach 12345   Learn moreResize a volume: Increase the size of an existing Block Storage volume on your account.  > 📘 > > - You can't decrease the size of an existing volume. > > - Only a volume with a status of active can be resized. Run the List volumes operation to view the status of each of your volumes.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs a role with these permissions assigned. Learn more.   - Permissions: resize_volume - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: volumes:read_write   CLI  shell linode-cli volumes resize 12345 \\   --size 30   Learn moreList volume types: Returns Block Storage volume types and prices, including any region-specific rates.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. This operation is internet-facing. No permissions are required.   CLI  shell linode-cli volumes types   Learn more",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-migrate-linode-instance",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-resource-lock",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-volumes",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-linode-instances",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-volumes",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:delete-linode-instance",
+          "line": 15
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-volumes",
+          "line": 16
+        }
+      ]
+    }
+  ]
+}

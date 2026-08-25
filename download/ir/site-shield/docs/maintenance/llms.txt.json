@@ -1,0 +1,106 @@
+{
+  "slug": "site-shield/docs/maintenance/llms.txt",
+  "source": "https://techdocs.akamai.com/site-shield/docs/maintenance/llms.txt.md",
+  "url": "https://techdocs.akamai.com/site-shield/docs/maintenance/llms.txt",
+  "title": "Maintenance",
+  "description": "",
+  "section": "Site Shield",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Site Shield Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Site Shield Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Site Shield provides an additional layer of defense for critical websites and web applications. Site Shield cloaks websites from the public Internet, effectively removing them from Internet-accessible IP address space. This helps prevent attackers from directly targeting the application origin and forces traffic to go through the Akamai Intelligent Platform, where attacks can be detected and mitigated.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Site Shield provides an additional layer of defense for critical websites and web applications. Site Shield cloaks websites from the public Internet, effectively removing them from Internet-accessible IP address space. This helps prevent attackers from directly targeting the application origin and forces traffic to go through the Akamai Intelligent Platform, where attacks can be detected and mitigated.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/site-shield/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/site-shield/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Maintenance",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Maintenance",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        20
+      ],
+      "raw": "- [Maintenance expectations](https://techdocs.akamai.com/site-shield/docs/maintenance.md)\n- [Firewall updates and address change acknowledgment](https://techdocs.akamai.com/site-shield/docs/updating-your-firewall-and-acknowledging-address-changes.md)\n- [Site Shield map information updates](https://techdocs.akamai.com/site-shield/docs/editing-a-site-shield-map-information.md)\n- [Test Site Shield Map CIDRs](https://techdocs.akamai.com/site-shield/docs/test-cidrs.md)\n- [Create a test profile](https://techdocs.akamai.com/site-shield/docs/create-a-test-profile.md)\n- [Bulk import of origin details](https://techdocs.akamai.com/site-shield/docs/bulk-import-of-origin-details.md)\n- [Run a test](https://techdocs.akamai.com/site-shield/docs/run-a-test.md)\n- [Review test results](https://techdocs.akamai.com/site-shield/docs/interpret-test-results.md)\n- [Allow staging IP addresses through your firewall](https://techdocs.akamai.com/site-shield/docs/allow-staging-ip-addresses-through-your-firewall.md)\n- [Site Shield Stable CIDRs overview](https://techdocs.akamai.com/site-shield/docs/site-shield-stable-cidrs-overview.md)\n- [Enable Site Shield Stable CIDRs](https://techdocs.akamai.com/site-shield/docs/enable-site-shield-stable-cidrs.md)\n- [Stay in Original mode](https://techdocs.akamai.com/site-shield/docs/stay-in-original-mode.md)\n- [Stable CIDRs rollback](https://techdocs.akamai.com/site-shield/docs/stable-cidrs-rollback.md): After you update your Site Shield map to Stable CIDRs, you can roll back to your previous set of CIDRs within a 7-day period.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Maintenance expectationsFirewall updates and address change acknowledgmentSite Shield map information updatesTest Site Shield Map CIDRsCreate a test profileBulk import of origin detailsRun a testReview test resultsAllow staging IP addresses through your firewallSite Shield Stable CIDRs overviewEnable Site Shield Stable CIDRsStay in Original modeStable CIDRs rollback: After you update your Site Shield map to Stable CIDRs, you can roll back to your previous set of CIDRs within a 7-day period.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

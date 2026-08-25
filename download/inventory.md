@@ -1,6 +1,6 @@
-# Component inventory — https://modulr.readme.io
+# Component inventory — https://techdocs.akamai.com
 
-371 pages · 4742 blocks · 17 distinct constructs · 20 pages needed the lenient parser
+1000 pages · 6824 blocks · 17 distinct constructs · 16 pages needed the lenient parser
 
 Page list from `llms.txt`.
 
@@ -8,80 +8,68 @@ Page list from `llms.txt`.
 
 | Construct | Syntax | Uses | Pages | Documentation.AI | Status | Note |
 | --- | --- | ---: | ---: | --- | --- | --- |
-| `paragraph` | markdown | 1926 | 349 | plain markdown | direct |  |
-| `heading` | markdown | 1263 | 371 | plain markdown | direct |  |
-| `boilerplate` | markdown | 371 | 371 | plain markdown | drop | ReadMe's injected llms.txt preamble |
-| `code` | markdown | 345 | 254 | plain markdown | direct |  |
-| `list` | markdown | 248 | 109 | plain markdown | transform | normalise `*`/`+` markers to `-` |
-| `Callout` | jsx | 194 | 86 | `<Callout>` | direct | theme/icon -> kind; drop the emoji, Documentation.AI draws its own |
-| `Image` | jsx | 106 | 46 | `<Image>` | transform | keep src/alt (+ width/height when real); drop align, border, className, and width="smart" |
-| `Table` | markdown | 104 | 59 | plain markdown | direct | GFM table; watch for an empty `| |` header row |
-| `br` | html | 93 | 44 | plain markdown | drop | <br /> is not needed — blocks are spaced by the parser |
-| `thematicBreak` | markdown | 52 | 12 | plain markdown | direct |  |
-| `CodeTabs` | markdown | 17 | 11 | `<CodeGroup>` | transform | tab name goes on BOTH the fence and tabs={["a","b"]} |
-| `blockquote` | markdown | 8 | 5 | plain markdown | direct |  |
-| `html` | html | 6 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
-| `Accordion` | jsx | 5 | 1 | `<Expandable>` | transform | wrap sibling runs in <ExpandableGroup>; default-open="false" |
+| `heading` | markdown | 2757 | 1000 | plain markdown | direct |  |
+| `list` | markdown | 1750 | 1000 | plain markdown | transform | normalise `*`/`+` markers to `-` |
+| `blockquote` | markdown | 982 | 982 | plain markdown | direct |  |
+| `boilerplate` | markdown | 917 | 917 | plain markdown | drop | ReadMe's injected llms.txt preamble |
+| `paragraph` | markdown | 307 | 101 | plain markdown | direct |  |
+| `td` | html | 43 | 2 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `div` | html | 22 | 12 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `tr` | html | 18 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `Callout` | markdown | 11 | 9 | `<Callout>` | direct | theme/icon -> kind; drop the emoji, Documentation.AI draws its own |
+| `table` | html | 3 | 2 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `code` | markdown | 2 | 1 | plain markdown | direct |  |
+| `caption` | html | 2 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `colgroup` | html | 2 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `col` | html | 2 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `thead` | html | 2 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
+| `th` | html | 2 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
 | `tbody` | html | 2 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
-| `thead` | html | 1 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
-| `ol` | html | 1 | 1 | plain markdown | manual | raw HTML — check it against the Documentation.AI components |
 
 ## No direct equivalent — decide before converting
 
-- `html` (6× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. recipes/hmac-authentication#5, recipes/hmac-authentication#8, recipes/hmac-authentication#11
-- `tbody` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. docs/managing-direct-debit-indemnity-claims-ddic#31, docs/managing-direct-debit-indemnity-claims-ddic#33
-- `thead` (1× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. docs/managing-direct-debit-indemnity-claims-ddic#30
-- `ol` (1× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. reference/editcustomer#3
+- `td` (43× on 2 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/cache-key-query-param-amd#17, adaptive-media-delivery/docs/cache-key-query-param-amd#19, adaptive-media-delivery/docs/cache-key-query-param-amd#21
+- `div` (22× on 12 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/best-practices-use-case-based-prov#9, adaptive-media-delivery/docs/best-practices-use-case-based-prov#14, adaptive-media-delivery/docs/cache-key-query-param-amd#7
+- `tr` (18× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#36, adaptive-media-delivery/docs/content-charac-amd#39, adaptive-media-delivery/docs/content-charac-amd#42
+- `table` (3× on 2 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/cache-key-query-param-amd#15, adaptive-media-delivery/docs/content-charac-amd#28, adaptive-media-delivery/docs/content-charac-amd#108
+- `caption` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#29, adaptive-media-delivery/docs/content-charac-amd#30
+- `colgroup` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#31, adaptive-media-delivery/docs/content-charac-amd#34
+- `col` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#32, adaptive-media-delivery/docs/content-charac-amd#33
+- `thead` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#35, adaptive-media-delivery/docs/content-charac-amd#40
+- `th` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#37, adaptive-media-delivery/docs/content-charac-amd#38
+- `tbody` (2× on 1 pages) — raw HTML — check it against the Documentation.AI components. e.g. adaptive-media-delivery/docs/content-charac-amd#41, adaptive-media-delivery/docs/content-charac-amd#107
 
 ## Not carried over
 
-- `boilerplate` (371×) — ReadMe's injected llms.txt preamble
-- `br` (93×) — <br /> is not needed — blocks are spaced by the parser
+- `boilerplate` (917×) — ReadMe's injected llms.txt preamble
 
 ## Inline syntax
 
 | Kind | Uses | Pages | Examples |
 | --- | ---: | ---: | --- |
-| absoluteInternalLink | 442 | 121 | `https://modulr.readme.io/docs/mobile-app` `https://modulr.readme.io/docs/api-integration-overview` `https://modulr.readme.io/docs/outbound-payments` `https://modulr.readme.io/docs/card-reports` `https://modulr.readme.io/docs/card-report-notifications` |
-| breakTag | 132 | 46 | `<br />` `<br />` `<br />` `<br />` `<br />` |
-| handlebars | 96 | 4 | `{{ textAlign: "left" }}` `{{ textAlign: "left" }}` `{{ textAlign: "left" }}` `{{ textAlign: "left" }}` `{{ textAlign: "left" }}` |
-| markdownImage | 52 | 26 | `https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png` `https://files.readme.io/952a47c84345fdab6da48e1a7a45dee334dd1bbb3aef8c0fbfbd2a29b82b5cdf-image.png` `https://files.readme.io/18aa3775103e380d03ea6a52f08bc593eace703e3f3327cdab012904ced6ac8e-image.png` `https://files.readme.io/8949a3d7ba53d82ed0f37ab56470e13fe30fabfe92714bef6762ecb435a979c5-image.png` `https://files.readme.io/3e898bcb9f90b80fd370bde715e20ce25bf28d1c96d00a34af0784b2fd76cc0e-image.png` |
-| anchorJsx | 13 | 2 | `https://modulr.readme.io/reference/createapplication` `https://modulr.readme.io/reference/createapplicationassociate` `https://modulr.readme.io/reference/updateknowyourcustomerbyapplicationid` `https://modulr.readme.io/reference/updatepersonalinformationforassociate_1` `https://modulr.readme.io/reference/updatetaxresidenciesforassociate_1` |
-| refLink | 3 | 1 | `ref:suspendcard` `ref:unsuspendcard` `ref:expireauthorisation` |
-
-## Flagged for repair
-
-| Issue | Occurrences | Examples |
-| --- | ---: | --- |
-| no alt text — Documentation.AI pages need one | 97 | changelog/modconnect-annual-round-up#3, changelog/modconnect-annual-round-up#18, changelog/modconnect-april-2024#3 |
-| reassembled from several raw-HTML chunks — this page needed the lenient parser | 28 | changelog/modconnect-july-2024#2, changelog/modconnect-june-2023#2, changelog/modconnect-quarterly-round-up#2 |
-| className="border" is redundant with border={true} | 5 | changelog/modconnect-june-2023#17, changelog/modconnect-june-2023#20, docs/apis-to-aid-with-reconciliation#11 |
-| `curl` is not a highlighter language — use bash | 1 | docs/getting-started-with-virtual-cards#13 |
-| width="smart" is a legacy RDMD value — drop it | 1 | docs/setting-up-mandates#7 |
-| unclosed <br> is invalid MDX | 1 | reference/createcollectionschedule#6 |
+| refLink | 1684 | 138 | `ref:post-revocation-list-ids` `ref:post-unrevoke-revocation-list-ids` `ref:post-revocation-list-ids` `ref:post-unrevoke-revocation-list-ids` `ref:get-active-alert-firings` |
+| docLink | 82 | 26 | `doc:get-policy-rules` `doc:put-policy-rapid-rule-action` `doc:put-policy-rapid-rule-action` `doc:put-policy-rapid-rule-action` `doc:post-subscribe` |
+| variable | 2 | 2 | `LB` `LB` |
+| escapedAngle | 1 | 1 | `\<Media Format>` |
 
 ## Pages that failed the strict MDX parse
 
 These use ReadMe's lenient MDXish dialect. They are fully blocked out, but the syntax needs
 repairing before Documentation.AI will compile them.
 
-- changelog/modconnect-july-2024
-- changelog/modconnect-july-2025
-- changelog/modconnect-june-2023
-- changelog/modconnect-quarterly-round-up
-- changelog/modconnect-quarterly-round-up-2024
-- changelog/modconnect-september-2024
-- changelog/your-modulr-product-update-may-2026
-- docs/api-base-urls
-- docs/build-with-ai-mcp
-- docs/card-transaction-lifecycle
-- docs/gaining-use-of-the-api
-- docs/implementation-notes
-- docs/inbound-payments-via-swift
-- docs/managing-direct-debit-indemnity-claims-ddic
-- docs/outbound-payments
-- docs/provisioning-journey-1
-- docs/starting-collections
-- docs/third-party-providers-access
-- recipes/hmac-authentication
-- reference/editcustomer
+- adaptive-media-delivery/docs/best-practices-use-case-based-prov
+- adaptive-media-delivery/docs/cache-key-query-param-amd
+- adaptive-media-delivery/docs/client-charac-amd
+- adaptive-media-delivery/docs/content-charac-amd
+- adaptive-media-delivery/docs/content-provider-code-amd
+- adaptive-media-delivery/docs/create-new-prop
+- adaptive-media-delivery/docs/define-prop-hn
+- adaptive-media-delivery/docs/origin-charac-amd
+- adaptive-media-delivery/docs/origin-server-amd
+- adaptive-media-delivery/docs/prepare-your-environment
+- adaptive-media-delivery/docs/segmented-media-deliv-mode-amd
+- adaptive-media-delivery/docs/understand-the-request-flow
+- adaptive-media-delivery/docs/welcome-adaptive-media-deliv
+- linode-api/reference/identity-and-access/llms.txt
+- linode-api/reference/llms.txt
+- linode-api/reference/placement-groups/llms.txt

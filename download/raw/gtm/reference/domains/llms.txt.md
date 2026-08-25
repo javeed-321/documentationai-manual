@@ -1,0 +1,18 @@
+# Global Traffic Management Documentation
+
+> Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Domains
+- [Create a domain](https://techdocs.akamai.com/gtm/reference/post-domain.md): Creates a new GTM domain.
+- [List domains](https://techdocs.akamai.com/gtm/reference/get-domains.md): Returns a list of GTM domain summaries under your contract.
+- [Get a domain](https://techdocs.akamai.com/gtm/reference/get-domain.md): Returns information for a specific GTM domain.
+- [Update a domain](https://techdocs.akamai.com/gtm/reference/put-domain.md): Updates a specific GTM domain.
+- [List domain history](https://techdocs.akamai.com/gtm/reference/get-domain-history.md): Returns a list of each change made to the domain.
+- [Get domain authorities](https://techdocs.akamai.com/gtm/reference/get-domain-authorities.md): Returns authorities for a specific GTM domain if it is a custom domain and not hosted on config-gtm.
+- [Submit a bulk domain delete request](https://techdocs.akamai.com/gtm/reference/post-domain-delete-requests.md): Submits an asynchronous request to delete one or more GTM domains. Poll the returned `requestId` using the status endpoint to track progress.
+- [Get delete request status](https://techdocs.akamai.com/gtm/reference/get-domain-delete-request.md): Returns the current status of a bulk domain delete request, including how many domains have been successfully deleted, failed, and whether processing is complete.
+- [Get delete request result](https://techdocs.akamai.com/gtm/reference/get-domain-delete-request-result.md): Returns the final result of a completed bulk domain delete request, listing which domains were successfully deleted and which failed. Only available once `isComplete` is `true` in the status endpoint.
+- [Get domain features](https://techdocs.akamai.com/gtm/reference/get-domain-features.md): Returns the contract features available for a specific GTM domain, including the set of supported property types and security features such as DNSSEC.
+- [Get a domain summary](https://techdocs.akamai.com/gtm/reference/get-domain-summary.md): Returns summary information for a specific GTM domain, including its activation state, last modification details, and DNSSEC configuration.

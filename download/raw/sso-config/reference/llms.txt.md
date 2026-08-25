@@ -1,0 +1,29 @@
+# Single Sign-On Configuration API Documentation
+
+> Akamai's Single Sign-On Configuration API lets you manage SSO with SAML certificates.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/sso-config/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/sso-config/reference/api/llms.txt): full category index
+- [Single Sign-On Configuration API](https://techdocs.akamai.com/sso-config/reference/api.md)
+- [API summary](https://techdocs.akamai.com/sso-config/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/sso-config/reference/get-started.md)
+- [Errors](https://techdocs.akamai.com/sso-config/reference/errors.md)
+- [400](https://techdocs.akamai.com/sso-config/reference/400.md)
+- [401](https://techdocs.akamai.com/sso-config/reference/401.md)
+- [403](https://techdocs.akamai.com/sso-config/reference/403.md)
+- [404](https://techdocs.akamai.com/sso-config/reference/404.md)
+- [405](https://techdocs.akamai.com/sso-config/reference/405.md)
+- [406](https://techdocs.akamai.com/sso-config/reference/406.md)
+- [415](https://techdocs.akamai.com/sso-config/reference/415.md)
+- [500](https://techdocs.akamai.com/sso-config/reference/500.md)
+- [503](https://techdocs.akamai.com/sso-config/reference/503.md)
+
+## API Reference: Manage certificates
+
+- [Manage certificates index](https://techdocs.akamai.com/sso-config/reference/manage-certificates/llms.txt): full category index
+- [Add a certificate](https://techdocs.akamai.com/sso-config/reference/post-certificate.md): This operation adds the `certificate` to the IdP.
+- [List certificates](https://techdocs.akamai.com/sso-config/reference/get-certificates.md): This operation lists the certificates from the IdP.
+- [Remove a certificate](https://techdocs.akamai.com/sso-config/reference/delete-certificate.md): This operation deletes the `certificate` from your account's IdP.

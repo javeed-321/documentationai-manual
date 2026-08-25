@@ -1,0 +1,222 @@
+{
+  "slug": "test-ctr/reference/functional-testing/llms.txt",
+  "source": "https://techdocs.akamai.com/test-ctr/reference/functional-testing/llms.txt.md",
+  "url": "https://techdocs.akamai.com/test-ctr/reference/functional-testing/llms.txt",
+  "title": "Functional testing",
+  "description": "",
+  "section": "Test Center",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Test Center Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Test Center Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Test Center is a testing tool that checks the effect of configuration changes on your web property.  Use this tool as part of your testing protocol to increase your confidence in the safety and accuracy of your configuration changes.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Test Center is a testing tool that checks the effect of configuration changes on your web property.  Use this tool as part of your testing protocol to increase your confidence in the safety and accuracy of your configuration changes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/test-ctr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/test-ctr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Functional testing",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Functional testing",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        29
+      ],
+      "raw": "- [Create a test suite](https://techdocs.akamai.com/test-ctr/reference/post-test-suites.md): Creates an empty test suite. To add objects to the newly created test suite, run the [Add test cases to a test suite](ref:post-test-cases) and [Add variables to a test suite](ref:post-variables) operations.\n- [List test suites](https://techdocs.akamai.com/test-ctr/reference/get-test-suites.md): Lists test suites created in your organization. The list can also include deleted test suites you can restore. The response contains an array of objects, each keyed by `testSuiteId`. You can use these IDs to [Get a test suite with child objects](ref:get-test-suites-with-child-objects).\n- [Generate a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/post-auto-generate-test-suite.md): Generates a default test suite with test cases and variables for a specific property version and a URL. Based on property settings and its behaviors and the URL, Test Center generates a default test suite object with test cases and variables. You can modify the generated test suite and add it to Test Center using the [Create a test suite with child objects](ref:post-test-suites-with-child-objects) operation.\n- [Create a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/post-test-suites-with-child-objects.md): Creates a test suite with test cases and variables. You can use the [Generate a test suite with child objects](ref:post-auto-generate-test-suite) operation to create a default test suite for a property version and then import it with this operation. The operation responds with a [partial-success 207 response](ref:partial-success-responses). Once you create the test suite, you can continue adding more objects to it with the [Add test cases to a test suite](ref:post-test-cases) and [Add variables to a test suite](ref:post-variables) operations.\n- [Get a test suite](https://techdocs.akamai.com/test-ctr/reference/get-test-suite.md): Returns basic data about a test suite. To check test cases and variables included in the test suite, run the [Get a test suite with child objects](ref:get-test-suites-with-child-objects) operation.\n- [Update a test suite](https://techdocs.akamai.com/test-ctr/reference/put-test-suite.md): Updates basic settings of a test suite. To edit test cases and variables, run the [Update a test suite with child objects](ref:put-test-suites-with-child-objects) operation.\n- [Delete a test suite](https://techdocs.akamai.com/test-ctr/reference/delete-test-suite.md): Deletes a test suite and included child objects: test cases and variables. You can [restore](ref:post-test-suite-restore) test suites with child objects within 30 days of deleting them.\n- [Restore a test suite](https://techdocs.akamai.com/test-ctr/reference/post-test-suite-restore.md): Restores a deleted test suite and included child objects. You can run this operation within 30 days of deleting the test suite.\n- [Get a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/get-test-suites-with-child-objects.md): Exports a test suite with test cases and variables.\n- [Update a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/put-test-suites-with-child-objects.md): Updates a test suite and included test cases and variables.\n- [Add variables to a test suite](https://techdocs.akamai.com/test-ctr/reference/post-variables.md): Adds new variables to a test suite. You can use variables in a test request's URL or request headers and in condition expression, as a substitute of placeholders. To learn more, see [Variables](ref:variables-overview). The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [List variables](https://techdocs.akamai.com/test-ctr/reference/get-variables.md): Lists variables created in a test suite.\n- [Update variables](https://techdocs.akamai.com/test-ctr/reference/put-variables.md): Updates variables in a test suite. The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [Delete variables](https://techdocs.akamai.com/test-ctr/reference/post-remove-variables.md): Deletes unused variables from a test suite. The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [Get a variable](https://techdocs.akamai.com/test-ctr/reference/get-variable.md): Returns details of a variable used in a test suite.\n- [Add test cases to a test suite](https://techdocs.akamai.com/test-ctr/reference/post-test-cases.md): Adds a list of new functional test cases to a test suite. Each test case consists of a test request, client profile, and condition. If you want to use variables within a condition or test request's URL or request header, [create the needed variables](ref:post-variables) first. The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [List test cases](https://techdocs.akamai.com/test-ctr/reference/get-test-cases.md): Lists functional test cases included in a test suite. The list can also include deleted test cases that you can restore. The response is an array of objects, each keyed by `testCaseId`.\n- [Update test cases](https://techdocs.akamai.com/test-ctr/reference/put-test-cases.md): Updates functional test cases in a test suite. The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [Reorder test cases in a test suite](https://techdocs.akamai.com/test-ctr/reference/put-order-test-case.md): Reorders functional test cases in a test suite. The order of test cases applies when running a test for stateful test suites. You need to provide target order for all test cases included in a test suite. To check the current order of test cases, run the [Get a test suite with child objects](ref:get-test-suites-with-child-objects) operation.\n- [Remove test cases](https://techdocs.akamai.com/test-ctr/reference/post-remove-test-case.md): Removes functional test cases with specific identifiers from a test suite. To get the identifiers, run the [List test cases](ref:get-test-cases) operation. The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [Restore test cases](https://techdocs.akamai.com/test-ctr/reference/post-test-cases-restore.md): Restores functional test cases into a test suite. To get the `testCaseId` of the test case you want to restore, run the [List test cases](ref:get-test-cases) operation with `includeRecentlyDeleted` set to `true`. The operation responds with a [partial-success 207 response](ref:partial-success-responses).\n- [Get a test case](https://techdocs.akamai.com/test-ctr/reference/get-test-case.md): Returns details of a functional test case.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a test suite: Creates an empty test suite. To add objects to the newly created test suite, run the Add test cases to a test suite and Add variables to a test suite operations.List test suites: Lists test suites created in your organization. The list can also include deleted test suites you can restore. The response contains an array of objects, each keyed by testSuiteId. You can use these IDs to Get a test suite with child objects.Generate a test suite with child objects: Generates a default test suite with test cases and variables for a specific property version and a URL. Based on property settings and its behaviors and the URL, Test Center generates a default test suite object with test cases and variables. You can modify the generated test suite and add it to Test Center using the Create a test suite with child objects operation.Create a test suite with child objects: Creates a test suite with test cases and variables. You can use the Generate a test suite with child objects operation to create a default test suite for a property version and then import it with this operation. The operation responds with a partial-success 207 response. Once you create the test suite, you can continue adding more objects to it with the Add test cases to a test suite and Add variables to a test suite operations.Get a test suite: Returns basic data about a test suite. To check test cases and variables included in the test suite, run the Get a test suite with child objects operation.Update a test suite: Updates basic settings of a test suite. To edit test cases and variables, run the Update a test suite with child objects operation.Delete a test suite: Deletes a test suite and included child objects: test cases and variables. You can restore test suites with child objects within 30 days of deleting them.Restore a test suite: Restores a deleted test suite and included child objects. You can run this operation within 30 days of deleting the test suite.Get a test suite with child objects: Exports a test suite with test cases and variables.Update a test suite with child objects: Updates a test suite and included test cases and variables.Add variables to a test suite: Adds new variables to a test suite. You can use variables in a test request's URL or request headers and in condition expression, as a substitute of placeholders. To learn more, see Variables. The operation responds with a partial-success 207 response.List variables: Lists variables created in a test suite.Update variables: Updates variables in a test suite. The operation responds with a partial-success 207 response.Delete variables: Deletes unused variables from a test suite. The operation responds with a partial-success 207 response.Get a variable: Returns details of a variable used in a test suite.Add test cases to a test suite: Adds a list of new functional test cases to a test suite. Each test case consists of a test request, client profile, and condition. If you want to use variables within a condition or test request's URL or request header, create the needed variables first. The operation responds with a partial-success 207 response.List test cases: Lists functional test cases included in a test suite. The list can also include deleted test cases that you can restore. The response is an array of objects, each keyed by testCaseId.Update test cases: Updates functional test cases in a test suite. The operation responds with a partial-success 207 response.Reorder test cases in a test suite: Reorders functional test cases in a test suite. The order of test cases applies when running a test for stateful test suites. You need to provide target order for all test cases included in a test suite. To check the current order of test cases, run the Get a test suite with child objects operation.Remove test cases: Removes functional test cases with specific identifiers from a test suite. To get the identifiers, run the List test cases operation. The operation responds with a partial-success 207 response.Restore test cases: Restores functional test cases into a test suite. To get the testCaseId of the test case you want to restore, run the List test cases operation with includeRecentlyDeleted set to true. The operation responds with a partial-success 207 response.Get a test case: Returns details of a functional test case.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-test-cases",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-variables",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-test-suites-with-child-objects",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-test-suites-with-child-objects",
+          "line": 10
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-auto-generate-test-suite",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-test-cases",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-variables",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-test-suites-with-child-objects",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-test-suites-with-child-objects",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-test-suite-restore",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:variables-overview",
+          "line": 18
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 18
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 20
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 21
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-variables",
+          "line": 23
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 23
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 25
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-test-suites-with-child-objects",
+          "line": 26
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-test-cases",
+          "line": 27
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 27
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-test-cases",
+          "line": 28
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:partial-success-responses",
+          "line": 28
+        }
+      ]
+    }
+  ]
+}

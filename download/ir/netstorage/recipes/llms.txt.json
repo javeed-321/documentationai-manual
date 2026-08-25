@@ -1,0 +1,106 @@
+{
+  "slug": "netstorage/recipes/llms.txt",
+  "source": "https://techdocs.akamai.com/netstorage/recipes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/netstorage/recipes/llms.txt",
+  "title": "Recipes index",
+  "description": "full section index",
+  "section": "NetStorage",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# NetStorage Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "NetStorage Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Recipes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recipes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        23
+      ],
+      "raw": "- [Create a NetStorage CP code](https://techdocs.akamai.com/netstorage/recipes/create-a-netstorage-cp-code.md)\n- [Create a \"serve from zip\" compatible archive](https://techdocs.akamai.com/netstorage/recipes/create-a-serve-from-zip-compatible-archive.md)\n- [Create a storage group](https://techdocs.akamai.com/netstorage/recipes/create-a-storage-group.md)\n- [Create an upload account](https://techdocs.akamai.com/netstorage/recipes/create-an-upload-account.md)\n- [Example OpenSSH CMShell connection](https://techdocs.akamai.com/netstorage/recipes/example-openssh-cmshell-connection.md)\n- [Example OpenSSH SFTP connection](https://techdocs.akamai.com/netstorage/recipes/example-openssh-sftp-connection.md)\n- [Get a storage group](https://techdocs.akamai.com/netstorage/recipes/get-a-storage-group.md)\n- [Get an upload account](https://techdocs.akamai.com/netstorage/recipes/get-an-upload-account.md)\n- [List replication zones](https://techdocs.akamai.com/netstorage/recipes/list-replication-zones.md)\n- [List storage groups](https://techdocs.akamai.com/netstorage/recipes/list-storage-groups.md)\n- [List unused NetStorage CP codes](https://techdocs.akamai.com/netstorage/recipes/list-unused-netstorage-cp-codes.md)\n- [List upload accounts](https://techdocs.akamai.com/netstorage/recipes/list-upload-accounts.md)\n- [List used NetStorage CP codes](https://techdocs.akamai.com/netstorage/recipes/list-used-netstorage-cp-codes.md)\n- [Update a storage group](https://techdocs.akamai.com/netstorage/recipes/update-a-storage-group.md)\n- [Update an upload account](https://techdocs.akamai.com/netstorage/recipes/update-an-upload-account.md)\n- [Upload a single file with SFTP](https://techdocs.akamai.com/netstorage/recipes/upload-a-single-file-with-sftp.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a NetStorage CP codeCreate a \"serve from zip\" compatible archiveCreate a storage groupCreate an upload accountExample OpenSSH CMShell connectionExample OpenSSH SFTP connectionGet a storage groupGet an upload accountList replication zonesList storage groupsList unused NetStorage CP codesList upload accountsList used NetStorage CP codesUpdate a storage groupUpdate an upload accountUpload a single file with SFTP",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

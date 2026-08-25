@@ -1,0 +1,29 @@
+# Mutual TLS Edge Truststore (Limited Availability) Documentation
+
+> Mutual TLS Edge Truststore is a self-service application that supports the creation, management, and activation of certificate authority certificate sets (CA sets) needed to establish mutual authentication (mTLS) sessions between the client and the Akamai edge.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-edge-truststore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+- [mTLS Edge Truststore API v2](https://techdocs.akamai.com/mtls-edge-truststore/reference/api.md)
+- [API summary](https://techdocs.akamai.com/mtls-edge-truststore/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/mtls-edge-truststore/reference/api-get-started.md)
+- [API concepts](https://techdocs.akamai.com/mtls-edge-truststore/reference/api-concepts.md)
+- [Rate and resource limiting](https://techdocs.akamai.com/mtls-edge-truststore/reference/rate-resource-limit.md)
+- [API Hypermedia](https://techdocs.akamai.com/mtls-edge-truststore/reference/api-hypermedia.md)
+- [Object versioning](https://techdocs.akamai.com/mtls-edge-truststore/reference/object-versioning.md)
+- [Enumeration values](https://techdocs.akamai.com/mtls-edge-truststore/reference/enumeration-values.md)
+- [API workflow](https://techdocs.akamai.com/mtls-edge-truststore/reference/api-workflow.md)
+- [Errors](https://techdocs.akamai.com/mtls-edge-truststore/reference/errors.md)
+- [400](https://techdocs.akamai.com/mtls-edge-truststore/reference/400.md)
+- [401](https://techdocs.akamai.com/mtls-edge-truststore/reference/401.md)
+- [403](https://techdocs.akamai.com/mtls-edge-truststore/reference/403.md)
+- [404](https://techdocs.akamai.com/mtls-edge-truststore/reference/404.md)
+- [405](https://techdocs.akamai.com/mtls-edge-truststore/reference/405.md)
+- [406](https://techdocs.akamai.com/mtls-edge-truststore/reference/406.md)
+- [409](https://techdocs.akamai.com/mtls-edge-truststore/reference/409.md)
+- [415](https://techdocs.akamai.com/mtls-edge-truststore/reference/415.md)
+- [422](https://techdocs.akamai.com/mtls-edge-truststore/reference/422.md)
+- [429](https://techdocs.akamai.com/mtls-edge-truststore/reference/429.md)
+- [500](https://techdocs.akamai.com/mtls-edge-truststore/reference/500.md)
+- [503](https://techdocs.akamai.com/mtls-edge-truststore/reference/503.md)

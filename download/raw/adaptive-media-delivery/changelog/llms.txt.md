@@ -1,0 +1,17 @@
+# Adaptive Media Delivery Documentation
+
+> Delivers streaming video and a quality viewing experience anywhere by adapting real-time to available bandwidth. To meet consumer expectations in a hyperconnected world, content providers need a high-performance streaming media delivery solution like Akamai’s Adaptive Media Delivery. Optimized for Adaptive Bitrate (ABR) streaming, it provides a high-quality viewing experience across the broad variety of network types, fixed or mobile, at varying connection speeds. Because it’s built on the Akamai Intelligent Platform, Adaptive Media Delivery provides superior scalability, reliability, and availability.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Oct 8, 2024 – Update to Origin IP ACL support](https://techdocs.akamai.com/adaptive-media-delivery/changelog/oct-8-2024-update-to-origin-ip-acl-support.md)
+- [Sep 30, 2024 – New Enhanced Debug and Early Data behaviors](https://techdocs.akamai.com/adaptive-media-delivery/changelog/sep-30-2024-new-enhanced-debug-and-early-data-behaviors.md)
+- [Jan 11, 2024 – Client Hints support](https://techdocs.akamai.com/adaptive-media-delivery/changelog/jan-11-2024-client-hints-support.md)
+- [Dec 18, 2023 — Support for mTLS](https://techdocs.akamai.com/adaptive-media-delivery/changelog/dec-18-2023-support-for-mtls.md)
+- [Nov 16, 2023 – CMCD segment prefetching](https://techdocs.akamai.com/adaptive-media-delivery/changelog/nov-16-2023-cmcd-segment-prefetching.md)
+- [Nov 7, 2023 – Origin IP ACL](https://techdocs.akamai.com/adaptive-media-delivery/changelog/nov-7-2023-origin-ip-acl.md)
+- [Oct 31, 2023 — Changes to reporting](https://techdocs.akamai.com/adaptive-media-delivery/changelog/oct-31-2023-changes-to-reporting.md)
+- [Sep 21, 2023 — "Cookie-less" token auth for DASH](https://techdocs.akamai.com/adaptive-media-delivery/changelog/sep-21-2023-cookie-less-token-auth-support-for-dash.md)
+- [May 26, 2023 — Media Encryption for DASH](https://techdocs.akamai.com/adaptive-media-delivery/changelog/may-26-2023-media-encryption-support-for-dash.md)
+- [May 15, 2023 — Support for HTTP/3](https://techdocs.akamai.com/adaptive-media-delivery/changelog/support-for-http3.md)

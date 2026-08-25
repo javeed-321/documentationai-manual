@@ -1,0 +1,587 @@
+{
+  "slug": "etp-reporting/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/etp-reporting/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/etp-reporting/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "SIA Reporting API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 15,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 14
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# SIA Reporting API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "SIA Reporting API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> The Secure Internet Access (SIA) Reporting API lets you access and analyze reports for security events, acceptable user policy events, and DNS activity totals. You can also view Indicator of Compromise (IOC) data to further analyze blacklisted entries. The API allows you flexible access to the same reporting features as in Akamai Control Center, using your own tools.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "The Secure Internet Access (SIA) Reporting API lets you access and analyze reports for security events, acceptable user policy events, and DNS activity totals. You can also view Indicator of Compromise (IOC) data to further analyze blacklisted entries. The API allows you flexible access to the same reporting features as in Akamai Control Center, using your own tools.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/etp-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/etp-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        23
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/etp-reporting/reference/api/llms.txt): full category index\n- [Secure Internet Access Enterprise Reporting API v3](https://techdocs.akamai.com/etp-reporting/reference/api.md)\n- [API summary](https://techdocs.akamai.com/etp-reporting/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/etp-reporting/reference/get-started.md)\n- [API concepts](https://techdocs.akamai.com/etp-reporting/reference/api-concepts.md)\n- [Timestamp formats](https://techdocs.akamai.com/etp-reporting/reference/timestamp-formats.md)\n- [Report scheduling](https://techdocs.akamai.com/etp-reporting/reference/report-scheduling.md)\n- [Rate Limiting](https://techdocs.akamai.com/etp-reporting/reference/rate-limiting.md)\n- [Filters object](https://techdocs.akamai.com/etp-reporting/reference/filters.md)\n- [Errors](https://techdocs.akamai.com/etp-reporting/reference/errors.md)\n- [304](https://techdocs.akamai.com/etp-reporting/reference/304.md)\n- [400](https://techdocs.akamai.com/etp-reporting/reference/400.md)\n- [403](https://techdocs.akamai.com/etp-reporting/reference/403.md)\n- [404](https://techdocs.akamai.com/etp-reporting/reference/404.md)\n- [Filter Onramp types](https://techdocs.akamai.com/etp-reporting/reference/onramp-types.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexSecure Internet Access Enterprise Reporting API v3API summaryGet startedAPI conceptsTimestamp formatsReport schedulingRate LimitingFilters objectErrors304400403404Filter Onramp types",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "## API Reference: Threat event reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Threat event reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        27,
+        30
+      ],
+      "raw": "- [Threat event reports index](https://techdocs.akamai.com/etp-reporting/reference/threat-event-reports/llms.txt): full category index\n- [Report threat event totals](https://techdocs.akamai.com/etp-reporting/reference/get-threat-events.md): Lists the count of threat events, grouped by the chosen query aggregation.\n- [Report threat event details](https://techdocs.akamai.com/etp-reporting/reference/post-threat-event-details.md): Provides all threat events records with detailed information.\n- [Report threat event time series](https://techdocs.akamai.com/etp-reporting/reference/get-threat-event-time-series.md): Lists threat event totals, aggregated by hour.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Threat event reports index: full category indexReport threat event totals: Lists the count of threat events, grouped by the chosen query aggregation.Report threat event details: Provides all threat events records with detailed information.Report threat event time series: Lists threat event totals, aggregated by hour.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## API Reference: AUP event reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: AUP event reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        34,
+        37
+      ],
+      "raw": "- [AUP event reports index](https://techdocs.akamai.com/etp-reporting/reference/aup-event-reports/llms.txt): full category index\n- [Report AUP event totals](https://techdocs.akamai.com/etp-reporting/reference/get-aup-events.md): Lists total counts for AUP events, aggregated for the given time period.\n- [Report AUP event details](https://techdocs.akamai.com/etp-reporting/reference/post-events-details.md): Provides all threat events record details for a given time period.\n- [Report AUP event time series](https://techdocs.akamai.com/etp-reporting/reference/get-events-time-series.md): Lists total counts for AUP events, aggregated by hour.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "AUP event reports index: full category indexReport AUP event totals: Lists total counts for AUP events, aggregated for the given time period.Report AUP event details: Provides all threat events record details for a given time period.Report AUP event time series: Lists total counts for AUP events, aggregated by hour.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## API Reference: DNS activity reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: DNS activity reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        41,
+        44
+      ],
+      "raw": "- [DNS activity reports index](https://techdocs.akamai.com/etp-reporting/reference/dns-activity-reports/llms.txt): full category index\n- [Report DNS activity totals](https://techdocs.akamai.com/etp-reporting/reference/get-dns-activities.md): Lists the count of DNS activities aggregated for the given time period.\n- [Report DNS activity event details](https://techdocs.akamai.com/etp-reporting/reference/post-dns-activities-details.md): Lists raw DNS events for a given time period. This operation Lists the first 500 configurable results.\n- [Report DNS activity time series](https://techdocs.akamai.com/etp-reporting/reference/get-dns-activities-time-series.md): Lists the count of DNS activities, aggregated by hour.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DNS activity reports index: full category indexReport DNS activity totals: Lists the count of DNS activities aggregated for the given time period.Report DNS activity event details: Lists raw DNS events for a given time period. This operation Lists the first 500 configurable results.Report DNS activity time series: Lists the count of DNS activities, aggregated by hour.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "## API Reference: Security Connector event reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Security Connector event reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        48,
+        51
+      ],
+      "raw": "- [Security Connector event reports index](https://techdocs.akamai.com/etp-reporting/reference/security-connector-event-reports/llms.txt): full category index\n- [Report security connector event totals](https://techdocs.akamai.com/etp-reporting/reference/get-sinkhole-events.md): Lists the count of Security Connector events, grouped by the chosen query aggregation.\n- [Report security connector event details](https://techdocs.akamai.com/etp-reporting/reference/post-sinkhole-event-details.md): Lists Security Connector events for a given time period.\n- [Report security connector event time series](https://techdocs.akamai.com/etp-reporting/reference/get-sinkhole-events-time-series.md): Lists Security Connector event totals, aggregated by hour.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Security Connector event reports index: full category indexReport security connector event totals: Lists the count of Security Connector events, grouped by the chosen query aggregation.Report security connector event details: Lists Security Connector events for a given time period.Report security connector event time series: Lists Security Connector event totals, aggregated by hour.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "## API Reference: IDP systems reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: IDP systems reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        55,
+        56
+      ],
+      "raw": "- [IDP systems reports index](https://techdocs.akamai.com/etp-reporting/reference/idp-systems-reports/llms.txt): full category index\n- [Report IDP access log details](https://techdocs.akamai.com/etp-reporting/reference/post-access-logs-details.md): Lists the IDP access logs for a configuration for a given time period.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "IDP systems reports index: full category indexReport IDP access log details: Lists the IDP access logs for a configuration for a given time period.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "## API Reference: Indicators of Compromise (IOC) reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Indicators of Compromise (IOC) reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        60,
+        74
+      ],
+      "raw": "- [Indicators of Compromise (IOC) reports index](https://techdocs.akamai.com/etp-reporting/reference/indicators-of-compromise-ioc-reports/llms.txt): full category index\n- [Get IOC time series report](https://techdocs.akamai.com/etp-reporting/reference/get-time-series.md): Lists the DNS activities of a configuration for a given domain or IP, aggregated by day. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.\n- [Get IOC change report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-changes.md): Lists historical change information for a given record and record type. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.\n- [Get IOC AVC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-avc.md): Lists the AVC details for a given domain or IP.\n- [Get IOC CIDR details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-cidr.md): Lists the CIDR details for a given domain or IP.\n- [Get IOC domain tree report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-domain-tree.md): Lists the blocklisted domains and IPs matching a given record. Returns an empty list if no domains match.\n- [Get IOC time series report](https://techdocs.akamai.com/etp-reporting/reference/get-time-series-1.md): Lists the DNS activities of a configuration for a given domain or IP, aggregated by day. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.\n- [Get IOC change report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-changes-1.md): Lists historical change information for a given record and record type. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.\n- [Get IOC AVC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-avc-1.md): Lists the AVC details for a given domain or IP.\n- [Get IOC CIDR details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-cidr-1.md): Lists the CIDR details for a given domain or IP.\n- [Get IOC domain tree report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-domain-tree-1.md): Lists the blocklisted domains and IPs matching a given record. Returns an empty list if no domains match.\n- [Get IOC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details.md): Lists the IOC details for a given domain or IP.\n- [Get IOC AUP detail report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-aup.md): Lists the AUP details for a given domain or IP.\n- [Get IOC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-1.md): Lists the IOC details for a given domain or IP.\n- [Get IOC AUP detail report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-aup-1.md): Lists the AUP details for a given domain or IP.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Indicators of Compromise (IOC) reports index: full category indexGet IOC time series report: Lists the DNS activities of a configuration for a given domain or IP, aggregated by day. Omit startTimeSec and endTimeSec from the request URL to return all available historical information.Get IOC change report: Lists historical change information for a given record and record type. Omit startTimeSec and endTimeSec from the request URL to return all available historical information.Get IOC AVC details report: Lists the AVC details for a given domain or IP.Get IOC CIDR details report: Lists the CIDR details for a given domain or IP.Get IOC domain tree report: Lists the blocklisted domains and IPs matching a given record. Returns an empty list if no domains match.Get IOC time series report: Lists the DNS activities of a configuration for a given domain or IP, aggregated by day. Omit startTimeSec and endTimeSec from the request URL to return all available historical information.Get IOC change report: Lists historical change information for a given record and record type. Omit startTimeSec and endTimeSec from the request URL to return all available historical information.Get IOC AVC details report: Lists the AVC details for a given domain or IP.Get IOC CIDR details report: Lists the CIDR details for a given domain or IP.Get IOC domain tree report: Lists the blocklisted domains and IPs matching a given record. Returns an empty list if no domains match.Get IOC details report: Lists the IOC details for a given domain or IP.Get IOC AUP detail report: Lists the AUP details for a given domain or IP.Get IOC details report: Lists the IOC details for a given domain or IP.Get IOC AUP detail report: Lists the AUP details for a given domain or IP.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        76,
+        76
+      ],
+      "raw": "## API Reference: DeepScan event reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: DeepScan event reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        78,
+        79
+      ],
+      "raw": "- [DeepScan event reports index](https://techdocs.akamai.com/etp-reporting/reference/deepscan-event-reports/llms.txt): full category index\n- [Get deepscan details report](https://techdocs.akamai.com/etp-reporting/reference/get-scan-reports.md): Deepscan results for a configuration's offline network for a given time period. Use the path obtained from `/threat-events`.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DeepScan event reports index: full category indexGet deepscan details report: Deepscan results for a configuration's offline network for a given time period. Use the path obtained from /threat-events.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "## API Reference: Threat metadata report",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Threat metadata report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        83,
+        84
+      ],
+      "raw": "- [Threat metadata report index](https://techdocs.akamai.com/etp-reporting/reference/threat-metadata-report/llms.txt): full category index\n- [Get threat metadata report](https://techdocs.akamai.com/etp-reporting/reference/get-threat-metadata.md): Returns the threat metadata.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Threat metadata report index: full category indexGet threat metadata report: Returns the threat metadata.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        86,
+        86
+      ],
+      "raw": "## API Reference: Feedback reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Feedback reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        88,
+        90
+      ],
+      "raw": "- [Feedback reports index](https://techdocs.akamai.com/etp-reporting/reference/feedback-reports/llms.txt): full category index\n- [Report a threat](https://techdocs.akamai.com/etp-reporting/reference/post-feedback-details.md): Reports the threat for a domain.\n- [Get feedback event detail report](https://techdocs.akamai.com/etp-reporting/reference/get-feedbacks-details.md): Returns feedback information about a domain based on the feedback type.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Feedback reports index: full category indexReport a threat: Reports the threat for a domain.Get feedback event detail report: Returns feedback information about a domain based on the feedback type.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        92,
+        92
+      ],
+      "raw": "## API Reference: Report schedules",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Report schedules",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        94,
+        101
+      ],
+      "raw": "- [Report schedules index](https://techdocs.akamai.com/etp-reporting/reference/report-schedules/llms.txt): full category index\n- [Create a report schedule](https://techdocs.akamai.com/etp-reporting/reference/post-config-schedule.md): Creates a new report schedule for a given SIA configuration.\n- [List report schedules](https://techdocs.akamai.com/etp-reporting/reference/get-config-schedules.md): Lists all configured report schedules for a given SIA configuration.\n- [Get a report schedule](https://techdocs.akamai.com/etp-reporting/reference/get-config-schedule.md): Lists the configuration of a specified report schedule.\n- [Update a report schedule](https://techdocs.akamai.com/etp-reporting/reference/put-config-schedule.md): Updates the configuration of a specified report schedule.\n- [Remove a report schedule](https://techdocs.akamai.com/etp-reporting/reference/delete-config-schedule.md): Removes the configuration of a specified report schedule.\n- [Disable a report schedule](https://techdocs.akamai.com/etp-reporting/reference/post-config-schedule-disable.md): Disables the configuration of a specified report schedule.\n- [Enable a report schedule](https://techdocs.akamai.com/etp-reporting/reference/post-config-schedule-enable.md): Enables the configuration of a specified report schedule.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Report schedules index: full category indexCreate a report schedule: Creates a new report schedule for a given SIA configuration.List report schedules: Lists all configured report schedules for a given SIA configuration.Get a report schedule: Lists the configuration of a specified report schedule.Update a report schedule: Updates the configuration of a specified report schedule.Remove a report schedule: Removes the configuration of a specified report schedule.Disable a report schedule: Disables the configuration of a specified report schedule.Enable a report schedule: Enables the configuration of a specified report schedule.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        103,
+        103
+      ],
+      "raw": "## API Reference: Network traffic connections reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Network traffic connections reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        105,
+        108
+      ],
+      "raw": "- [Network traffic connections reports index](https://techdocs.akamai.com/etp-reporting/reference/network-traffic-connections-reports/llms.txt): full category index\n- [Report network traffic connections totals](https://techdocs.akamai.com/etp-reporting/reference/get-network-traffic-connections.md): Lists the count of network traffic connections totals, grouped by query parameters.\n- [Report network traffic connections details](https://techdocs.akamai.com/etp-reporting/reference/post-network-traffic-connections-details.md): Lists network traffic connections for a given time period.\n- [Report network traffic connections time series](https://techdocs.akamai.com/etp-reporting/reference/get-connections-time-series.md): Lists network traffic connections totals, aggregated by hour.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Network traffic connections reports index: full category indexReport network traffic connections totals: Lists the count of network traffic connections totals, grouped by query parameters.Report network traffic connections details: Lists network traffic connections for a given time period.Report network traffic connections time series: Lists network traffic connections totals, aggregated by hour.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        110,
+        110
+      ],
+      "raw": "## API Reference: Proxy traffic transactions reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Proxy traffic transactions reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        112,
+        115
+      ],
+      "raw": "- [Proxy traffic transactions reports index](https://techdocs.akamai.com/etp-reporting/reference/proxy-traffic-transactions-reports/llms.txt): full category index\n- [Report proxy traffic transactions totals](https://techdocs.akamai.com/etp-reporting/reference/get-proxy-traffic-transactions.md): Lists the count of proxy traffic transaction totals, grouped by the chosen query aggregation..\n- [Report proxy network traffic transaction details](https://techdocs.akamai.com/etp-reporting/reference/post-traffic-transaction-details.md): Lists proxy network traffic connections for a given time period.\n- [Report proxy traffic transactions time series](https://techdocs.akamai.com/etp-reporting/reference/get-traffic-transactions-time-series.md): Lists proxy traffic transaction totals, aggregated by hour.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Proxy traffic transactions reports index: full category indexReport proxy traffic transactions totals: Lists the count of proxy traffic transaction totals, grouped by the chosen query aggregation..Report proxy network traffic transaction details: Lists proxy network traffic connections for a given time period.Report proxy traffic transactions time series: Lists proxy traffic transaction totals, aggregated by hour.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        117,
+        117
+      ],
+      "raw": "## API Reference: Threat intelligence",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Threat intelligence",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        119,
+        120
+      ],
+      "raw": "- [Threat intelligence index](https://techdocs.akamai.com/etp-reporting/reference/threat-intelligence/llms.txt): full category index\n- [Get latest domain threat intelligence](https://techdocs.akamai.com/etp-reporting/reference/get-threat-intel.md): Checks for new threat intelligence dataset. If new data is available, returns a short-lived pre-signed URL.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Threat intelligence index: full category indexGet latest domain threat intelligence: Checks for new threat intelligence dataset. If new data is available, returns a short-lived pre-signed URL.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

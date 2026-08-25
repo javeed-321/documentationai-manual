@@ -1,0 +1,47 @@
+# PowerShell Documentation
+
+> Make calls to many of our API with a consistent interface using our PowerShell module.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/powershell/docs/llms.txt): full section index
+- [Get started](https://techdocs.akamai.com/powershell/docs/get-started/llms.txt)
+- [API Definitions](https://techdocs.akamai.com/powershell/docs/api-definitions/llms.txt)
+- [API Key Manager](https://techdocs.akamai.com/powershell/docs/api-key-manager/llms.txt)
+- [AppSec](https://techdocs.akamai.com/powershell/docs/appsec/llms.txt)
+- [China CDN](https://techdocs.akamai.com/powershell/docs/china-cdn/llms.txt)
+- [Certificates](https://techdocs.akamai.com/powershell/docs/certificates/llms.txt)
+- [Client Lists](https://techdocs.akamai.com/powershell/docs/client-lists/llms.txt)
+- [Cloud Access Manager](https://techdocs.akamai.com/powershell/docs/cloud-access-manager/llms.txt)
+- [Cloud Wrapper](https://techdocs.akamai.com/powershell/docs/cloud-wrapper/llms.txt)
+- [Cloudlets](https://techdocs.akamai.com/powershell/docs/cloudlets/llms.txt)
+- [Common](https://techdocs.akamai.com/powershell/docs/common/llms.txt)
+- [Contracts](https://techdocs.akamai.com/powershell/docs/contracts/llms.txt)
+- [CP Codes](https://techdocs.akamai.com/powershell/docs/cp-codes/llms.txt)
+- [Datastream](https://techdocs.akamai.com/powershell/docs/datastream/llms.txt)
+- [Domain Ownership](https://techdocs.akamai.com/powershell/docs/domain-ownership/llms.txt)
+- [Edge Diagnostics](https://techdocs.akamai.com/powershell/docs/edge-diagnostics/llms.txt)
+- [Edge DNS](https://techdocs.akamai.com/powershell/docs/edge-dns/llms.txt)
+- [Edge Hostnames](https://techdocs.akamai.com/powershell/docs/edge-hostnames/llms.txt)
+- [EdgeKV](https://techdocs.akamai.com/powershell/docs/edgekv/llms.txt)
+- [EdgeWorkers](https://techdocs.akamai.com/powershell/docs/edgeworkers/llms.txt)
+- [Firewall Rules Notification](https://techdocs.akamai.com/powershell/docs/firewall-rules-notification/llms.txt)
+- [Global Traffic Management](https://techdocs.akamai.com/powershell/docs/global-traffic-management/llms.txt)
+- [Identity & Access Management](https://techdocs.akamai.com/powershell/docs/identity-access-management/llms.txt)
+- [Image & Video Manager](https://techdocs.akamai.com/powershell/docs/image-video-manager/llms.txt)
+- [Media Services Live](https://techdocs.akamai.com/powershell/docs/media-services-live/llms.txt)
+- [Mutual TLS Edge Truststore](https://techdocs.akamai.com/powershell/docs/mutual-tls-edge-truststore/llms.txt)
+- [Mutual TLS Origin Keystore](https://techdocs.akamai.com/powershell/docs/mutual-tls-origin-keystore/llms.txt)
+- [NetStorage](https://techdocs.akamai.com/powershell/docs/netstorage/llms.txt)
+- [Network Lists](https://techdocs.akamai.com/powershell/docs/network-lists/llms.txt)
+- [Property](https://techdocs.akamai.com/powershell/docs/property/llms.txt)
+- [Purge](https://techdocs.akamai.com/powershell/docs/purge/llms.txt)
+- [Reporting](https://techdocs.akamai.com/powershell/docs/reporting/llms.txt)
+- [SIEM](https://techdocs.akamai.com/powershell/docs/siem/llms.txt)
+- [Site Shield](https://techdocs.akamai.com/powershell/docs/site-shield/llms.txt)
+- [SLA](https://techdocs.akamai.com/powershell/docs/sla/llms.txt)
+- [Test Center](https://techdocs.akamai.com/powershell/docs/test-center/llms.txt)

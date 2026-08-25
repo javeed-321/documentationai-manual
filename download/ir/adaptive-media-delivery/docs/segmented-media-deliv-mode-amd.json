@@ -1,0 +1,484 @@
+{
+  "slug": "adaptive-media-delivery/docs/segmented-media-deliv-mode-amd",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd",
+  "title": "Segmented Media Delivery Mode",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-03-01T18:58:13.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `c` (U+0063) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
+  "components": {
+    "boilerplate": 1,
+    "heading": 8,
+    "paragraph": 7,
+    "list": 6,
+    "div": 3,
+    "Callout": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Segmented Media Delivery Mode",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Segmented Media Delivery Mode",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Set the delivery mode for your content to optimize the property to deliver for that specific mode: **On Demand** or **Live**.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Set the delivery mode for your content to optimize the property to deliver for that specific mode: On Demand or Live.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# Select the Mode",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Select the Mode",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "Set the appropriate delivery Mode:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Set the appropriate delivery Mode:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        17
+      ],
+      "raw": "* **On Demand**. This adjusts the Time-to-Live (TTL) of the manifests if no specific caching rules are defined. Also, ​Akamai​ automatically applies [best practices and use case-based provisioning](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov) to optimize the delivery of content.\n\n* **Live**. This also adjusts the TTL of the manifests if no specific caching rules are defined. With live media, it assigns a very short TTL to the stream manifest file so that updates to it are retrieved in a timely manner. The best practices and use case-based provisioning that are applied for On Demand media aren't applied for Live mode. Use the additional options that are revealed to fine-tune delivery.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "On Demand. This adjusts the Time-to-Live (TTL) of the manifests if no specific caching rules are defined. Also, ​Akamai​ automatically applies best practices and use case-based provisioning to optimize the delivery of content.Live. This also adjusts the TTL of the manifests if no specific caching rules are defined. With live media, it assigns a very short TTL to the stream manifest file so that updates to it are retrieved in a timely manner. The best practices and use case-based provisioning that are applied for On Demand media aren't applied for Live mode. Use the additional options that are revealed to fine-tune delivery.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "# Enable ULL Streaming for \"Live\" Mode",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Enable ULL Streaming for \"Live\" Mode",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "If you've selected **Live** as the Mode, you can add support for low latency streaming for both DASH and HLS format live streams. Low latency streaming reduces latency and decreases the overall transfer time of your live streams. Configuration for low latency support varies, based on your live stream format:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you've selected Live as the Mode, you can add support for low latency streaming for both DASH and HLS format live streams. Low latency streaming reduces latency and decreases the overall transfer time of your live streams. Configuration for low latency support varies, based on your live stream format:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        25
+      ],
+      "raw": "* [DASH live streams](https://techdocs.akamai.com/adaptive-media-delivery/docs/dash-and-msl-origin). We recommend that you use Media Services Live (MSL), and set it as your origin in your AMD property.\n\n* [HLS live streams](https://techdocs.akamai.com/adaptive-media-delivery/docs/hls-and-third-party-origin). You need to incorporate a third-party origin.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DASH live streams. We recommend that you use Media Services Live (MSL), and set it as your origin in your AMD property.HLS live streams. You need to incorporate a third-party origin.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        29
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/adaptive-media-delivery/img/amd-seg-del-mode-enable-v2.png\" />\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "# Show Advanced Options for \"Live\" Mode",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Show Advanced Options for \"Live\" Mode",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "If you've selected **Live** as the Mode, the Show Advanced Option slider can be set to \"**Yes**\" to reveal additional options. These are used when configuring Media Services Live as your origin with AMD.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you've selected Live as the Mode, the Show Advanced Option slider can be set to \"Yes\" to reveal additional options. These are used when configuring Media Services Live as your origin with AMD.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        35,
+        37
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/adaptive-media-delivery/img/amd-seg-media-behavior-live-v2.png\" />\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## Live Type",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Live Type",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        41,
+        41
+      ],
+      "raw": "Select from two modes:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Select from two modes:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        43,
+        45
+      ],
+      "raw": "* **Linear**. Once you activate your Adaptive Media Delivery property in production ([Go live](https://techdocs.akamai.com/adaptive-media-delivery/docs/go-live)), the TTL optimization will be applied to requests for your live streams, with no specific end date.\n\n* **Event**. This tells your AMD property to anticipate requests for your live stream during a specific range of time. During this time, the optimization discussed above is applied to requests for live streams. Times are represented in GMT, so be sure to take your required timezone into consideration.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Linear. Once you activate your Adaptive Media Delivery property in production (Go live), the TTL optimization will be applied to requests for your live streams, with no specific end date.Event. This tells your AMD property to anticipate requests for your live stream during a specific range of time. During this time, the optimization discussed above is applied to requests for live streams. Times are represented in GMT, so be sure to take your required timezone into consideration.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "## Segment Access Time Mode (and Segment Access Time)",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Segment Access Time Mode (and Segment Access Time)",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        49,
+        49
+      ],
+      "raw": "Select from these options:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Select from these options:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        51,
+        53
+      ],
+      "raw": "* **Configurable**. Select this if you want to apply a time to live (TTL) for your segments for requesting clients. Use the **Segment Access Time** to set this duration. This can potentially optimize delivery, because AMD won't need to read the manifest to get the segment access time.\n\n* **Unknown**. Select this if you don't know of a specific availability time, or if there isn't one. Your AMD  property will look to your manifest to determine a segment access time, if applicable.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Configurable. Select this if you want to apply a time to live (TTL) for your segments for requesting clients. Use the Segment Access Time to set this duration. This can potentially optimize delivery, because AMD won't need to read the manifest to get the segment access time.Unknown. Select this if you don't know of a specific availability time, or if there isn't one. Your AMD  property will look to your manifest to determine a segment access time, if applicable.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        55,
+        55
+      ],
+      "raw": "<div><p></p></div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        57,
+        59
+      ],
+      "raw": "> 🚧\n>\n> This also applies to DVR access to your live segments. If you set too low of a TTL, this can overwhelm your origin with DVR access requests for your segments. Consider an adequate amount of time customers may need to access your content for DVR viewing.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "🚧"
+      },
+      "text": "This also applies to DVR access to your live segments. If you set too low of a TTL, this can overwhelm your origin with DVR access requests for your segments. Consider an adequate amount of time customers may need to access your content for DVR viewing.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "alert"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        61,
+        61
+      ],
+      "raw": "# Media Delivery Type Mapping Solution and Mixed Mode Configuration",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Media Delivery Type Mapping Solution and Mixed Mode Configuration",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        63,
+        63
+      ],
+      "raw": "If you're adding either of these services to your AMD property configuration, the following apply:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you're adding either of these services to your AMD property configuration, the following apply:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        65,
+        67
+      ],
+      "raw": "* **Media Delivery Type Mapping Solution**. During the creation of your property hostname to edge hostname association, if you've set the Media Delivery Type setting to either **Live** or **On Demand**, you need to match that setting here. The complete setup is discussed in [Media Delivery Type & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-use-case-based-edge-mapping).\n\n* **Mixed Mode Configuration for AMD**. This lets you include use case-based behaviors like Segmented Media Delivery Mode in rules outside the Default Rule, in order to optimize delivery for unique requests using specific match criteria. If you're including this behavior in multiple rules, ensure that it's set to match the applicable delivery mode for each rule. See [Mixed Mode & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/use-mixed-mode-amd) for more details.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Media Delivery Type Mapping Solution. During the creation of your property hostname to edge hostname association, if you've set the Media Delivery Type setting to either Live or On Demand, you need to match that setting here. The complete setup is discussed in Media Delivery Type & AMD.Mixed Mode Configuration for AMD. This lets you include use case-based behaviors like Segmented Media Delivery Mode in rules outside the Default Rule, in order to optimize delivery for unique requests using specific match criteria. If you're including this behavior in multiple rules, ensure that it's set to match the applicable delivery mode for each rule. See Mixed Mode & AMD for more details.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 24,
+      "lines": [
+        69,
+        69
+      ],
+      "raw": "# Sibling pages",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sibling pages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        71,
+        82
+      ],
+      "raw": "* [Default optimizations](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov.md)\n* [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)\n* [Content Provider Code](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-provider-code-amd.md)\n* [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)\n* [Content Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd.md)\n* [Client Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md)\n* [Cache Key Query Parameters](https://techdocs.akamai.com/adaptive-media-delivery/docs/cache-key-query-param-amd.md)\n* [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)\n* [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)\n* [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)\n* [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)\n* [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Default optimizationsOrigin ServerContent Provider CodeOrigin CharacteristicsContent CharacteristicsClient CharacteristicsCache Key Query ParametersTiered DistributionRecommended behaviors in the Default RuleOptional behaviors in the Default RuleThe Default CORS Policy RuleAdd optional rules",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

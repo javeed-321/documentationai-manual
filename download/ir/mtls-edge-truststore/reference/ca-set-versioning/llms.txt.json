@@ -1,0 +1,112 @@
+{
+  "slug": "mtls-edge-truststore/reference/ca-set-versioning/llms.txt",
+  "source": "https://techdocs.akamai.com/mtls-edge-truststore/reference/ca-set-versioning/llms.txt.md",
+  "url": "https://techdocs.akamai.com/mtls-edge-truststore/reference/ca-set-versioning/llms.txt",
+  "title": "CA set versioning",
+  "description": "",
+  "section": "Mutual TLS Edge Truststore (Limited Availability)",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Mutual TLS Edge Truststore (Limited Availability) Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Mutual TLS Edge Truststore (Limited Availability) Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Mutual TLS Edge Truststore is a self-service application that supports the creation, management, and activation of certificate authority certificate sets (CA sets) needed to establish mutual authentication (mTLS) sessions between the client and the Akamai edge.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Mutual TLS Edge Truststore is a self-service application that supports the creation, management, and activation of certificate authority certificate sets (CA sets) needed to establish mutual authentication (mTLS) sessions between the client and the Akamai edge.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-edge-truststore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-edge-truststore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: CA set versioning",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: CA set versioning",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        18
+      ],
+      "raw": "- [Create a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-ca-set-version.md): Create a new CA set version in the CA set specified by `caSetId`. When creating a new version, the API compares the certificates and SHA-1 provided in the request with the existing versions in the CA set. If another version exists with fingerprints for the same certificates, a 422 response provides a link to the version. If the `allowInsecureSha1` option differs between the versions with the same certificates, they're still considered the same CA set version. This prevents creating duplicate CA set versions.\n- [List versions](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-ca-set-versions.md): Versions of the CA set specified by `caSetId`.\n- [Get a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-ca-set-version.md): Get the CA set version details.\n- [Update a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/put-ca-set-version.md): Update all the certificates for the version, or the `allowInsecureSha1` that controls what type of certificates to allow.\n- [Activate a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-activate-ca-set-version.md): Activate the certificates for the version on the specified network.\n- [Get version activations](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-version-deployment-request-details.md): Get details of an activation or deactivation request by set ID and version number.\n- [Get an activation](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-deployment-request-details.md): Get details of an activation or deactivation request specified by `activationId`.\n- [List certificates](https://techdocs.akamai.com/mtls-edge-truststore/reference/get-ca-set-version-certificates.md): List certificates for the specified version.\n- [Clone a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-clone-ca-set-version.md): Clone a version of the CA set from the CA set specified by `version`. Note that the clone may reflect expired certificates from the original.\n- [Deactivate a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/post-deactivate-ca-set-version.md): Deactivate the certificates for the version on the specified network.\n- [Delete a version](https://techdocs.akamai.com/mtls-edge-truststore/reference/delete-ca-set-version.md): Marks the CA set version (`versionNumber`) in a specified CA set (`caSetId`) for future deletion without removing it from the system.  When you [Create a version](ref:post-ca-set-version), the new CA set version takes the subsequent `versionNumber` irregardless of earlier versions scheduled for deletion.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a version: Create a new CA set version in the CA set specified by caSetId. When creating a new version, the API compares the certificates and SHA-1 provided in the request with the existing versions in the CA set. If another version exists with fingerprints for the same certificates, a 422 response provides a link to the version. If the allowInsecureSha1 option differs between the versions with the same certificates, they're still considered the same CA set version. This prevents creating duplicate CA set versions.List versions: Versions of the CA set specified by caSetId.Get a version: Get the CA set version details.Update a version: Update all the certificates for the version, or the allowInsecureSha1 that controls what type of certificates to allow.Activate a version: Activate the certificates for the version on the specified network.Get version activations: Get details of an activation or deactivation request by set ID and version number.Get an activation: Get details of an activation or deactivation request specified by activationId.List certificates: List certificates for the specified version.Clone a version: Clone a version of the CA set from the CA set specified by version. Note that the clone may reflect expired certificates from the original.Deactivate a version: Deactivate the certificates for the version on the specified network.Delete a version: Marks the CA set version (versionNumber) in a specified CA set (caSetId) for future deletion without removing it from the system.  When you Create a version, the new CA set version takes the subsequent versionNumber irregardless of earlier versions scheduled for deletion.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-ca-set-version",
+          "line": 18
+        }
+      ]
+    }
+  ]
+}

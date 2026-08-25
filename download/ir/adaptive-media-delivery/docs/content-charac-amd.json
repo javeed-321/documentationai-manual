@@ -1,0 +1,2006 @@
+{
+  "slug": "adaptive-media-delivery/docs/content-charac-amd",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd",
+  "title": "Content Characteristics",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-03-01T18:58:15.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `c` (U+0063) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
+  "components": {
+    "boilerplate": 1,
+    "heading": 10,
+    "paragraph": 26,
+    "div": 1,
+    "list": 16,
+    "Callout": 1,
+    "table": 2,
+    "caption": 2,
+    "colgroup": 2,
+    "col": 2,
+    "thead": 2,
+    "tr": 18,
+    "th": 2,
+    "tbody": 2,
+    "td": 27
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Content Characteristics",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Content Characteristics",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This behavior lets you define specific information about your content to optimize its delivery.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This behavior lets you define specific information about your content to optimize its delivery.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        13
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/adaptive-media-delivery/img/amd-cont-char-settings-v2.png\" />\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "# Catalog Size",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Catalog Size",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Use this to set the overall volume of objects to be delivered through this property.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Use this to set the overall volume of objects to be delivered through this property.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        23
+      ],
+      "raw": "* **Small**. Select this if your content is less than 100G.\n* **Medium**. Select this if your content ranges from 100G to 1TB.\n* **Large**. Select this if your content ranges from 1TB to 100TB.\n* **Extra Large**. Select this if your content is greater than 100TB.\n* **Unknown** (Default). Select this if you don't know the volume. AMD will still try to optimize delivery based on the request.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Small. Select this if your content is less than 100G.Medium. Select this if your content ranges from 100G to 1TB.Large. Select this if your content ranges from 1TB to 100TB.Extra Large. Select this if your content is greater than 100TB.Unknown (Default). Select this if you don't know the volume. AMD will still try to optimize delivery based on the request.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "# Content Type",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Content Type",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "If you're delivering a specific type of content with this property, you can select it here to help optimize delivery.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you're delivering a specific type of content with this property, you can select it here to help optimize delivery.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        29,
+        33
+      ],
+      "raw": "* **Standard Definition**. This is typically 480i/p or 720p.\n* **High Definition**. This is typically 1080i or 1080p.\n* **Ultra High Definition (4K)**\n* **Other**. Select this if your use case isn't available for selection, or it is a combination of the available selections.\n* **Unknown** This is the default. Leave it set to this if you're unsure of the specific content type. AMD will still try to optimize delivery based on the request.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Standard Definition. This is typically 480i/p or 720p.High Definition. This is typically 1080i or 1080p.Ultra High Definition (4K)Other. Select this if your use case isn't available for selection, or it is a combination of the available selections.Unknown This is the default. Leave it set to this if you're unsure of the specific content type. AMD will still try to optimize delivery based on the request.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "# Popularity Distribution",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Popularity Distribution",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        37,
+        37
+      ],
+      "raw": "Select how often the content is requested:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Select how often the content is requested:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        39,
+        42
+      ],
+      "raw": "* **Long Tail**. This applies if most of the traffic volume consists of a small number of requests for content that has a relatively long life.\n* **Popular**. This applies if most of the traffic volume consists of a large number of requests for content that has a relatively short life.\n* **Other**. Select this if your use case isn't available for selection, or it is a combination of the available selections.\n* **Unknown**. This is the default. Select this if you're not sure of the popularity level for the content to be delivered by this property. AMD will still try to optimize delivery based on the request.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Long Tail. This applies if most of the traffic volume consists of a small number of requests for content that has a relatively long life.Popular. This applies if most of the traffic volume consists of a large number of requests for content that has a relatively short life.Other. Select this if your use case isn't available for selection, or it is a combination of the available selections.Unknown. This is the default. Select this if you're not sure of the popularity level for the content to be delivered by this property. AMD will still try to optimize delivery based on the request.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        44,
+        44
+      ],
+      "raw": "# Origin Object Size",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Origin Object Size",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "Use this to set a range for the size of the objects delivered through this property:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Use this to set a range for the size of the objects delivered through this property:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        48,
+        52
+      ],
+      "raw": "* **Less than 1MB**. Partial object caching *is not* applied.\n* **1-10MB**. Partial object caching *is not* applied.\n* **10-100MB**. Partial object caching is automatically enabled with this setting.\n* **Greater than 100 MB**. Partial object caching is automatically enabled with this setting.\n* **Unknown**. Select this if you're unsure of the specific object size, or you don't have a fixed size for target content. Partial object caching is automatically enabled with this setting for objects greater than 10 MB in size.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Less than 1MB. Partial object caching is not applied.1-10MB. Partial object caching is not applied.10-100MB. Partial object caching is automatically enabled with this setting.Greater than 100 MB. Partial object caching is automatically enabled with this setting.Unknown. Select this if you're unsure of the specific object size, or you don't have a fixed size for target content. Partial object caching is automatically enabled with this setting for objects greater than 10 MB in size.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "## Partial object caching",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Partial object caching",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "Partial object caching is part of our large file optimization support. It increases origin server offload by caching in chunks, instead of as a single, composite object. Partial object caching is required for the delivery of \"large files\"—those in excess of 10 MB in size. It's automatically enabled if you select any of these as your **Origin Object Size**:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Partial object caching is part of our large file optimization support. It increases origin server offload by caching in chunks, instead of as a single, composite object. Partial object caching is required for the delivery of \"large files\"—those in excess of 10 MB in size. It's automatically enabled if you select any of these as your Origin Object Size:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        58,
+        60
+      ],
+      "raw": "* **10-100 MB**.\n* **Greater than 100 MB**.\n* **Unknown**. Partial object caching is applied for an object that is greater than 10 MB in size, if the object falls into what you've selected for **Content Type**. For example, if you've selected \"High Definition\" as your Content Type, partial object caching is enabled if a file of that type is requested that's over 10MB in size.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "10-100 MB.Greater than 100 MB.Unknown. Partial object caching is applied for an object that is greater than 10 MB in size, if the object falls into what you've selected for Content Type. For example, if you've selected \"High Definition\" as your Content Type, partial object caching is enabled if a file of that type is requested that's over 10MB in size.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "If you set Origin Object Size to **Less than 1MB** or **1-10MB**, partial object caching is not enabled. If a request is made through this configuration for a larger file, a 403 error is returned.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you set Origin Object Size to Less than 1MB or 1-10MB, partial object caching is not enabled. If a request is made through this configuration for a larger file, a 403 error is returned.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        64,
+        64
+      ],
+      "raw": "If you specify a large file setting, but your origin never actually serves files in that size range, the ​Akamai​ platform makes additional requests to the origin. This can impact overall performance and access. This happens because the edge server requests the first byte of each object to determine if the minimum object size criteria has been met—at least 10MB. Once that check fails, the server simply re-requests the entire object from the origin.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "If you specify a large file setting, but your origin never actually serves files in that size range, the ​Akamai​ platform makes additional requests to the origin. This can impact overall performance and access. This happens because the edge server requests the first byte of each object to determine if the minimum object size criteria has been met—at least 10MB. Once that check fails, the server simply re-requests the entire object from the origin.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 21,
+      "lines": [
+        66,
+        66
+      ],
+      "raw": "We recommend that you verify the size of your delivery objects on your origin, and select the appropriate size to ensure that partial object caching is enabled or disabled, as necessary.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "We recommend that you verify the size of your delivery objects on your origin, and select the appropriate size to ensure that partial object caching is enabled or disabled, as necessary.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 22,
+      "lines": [
+        68,
+        70
+      ],
+      "raw": "> 👍 You may want partial object caching for on demand video, but not for live\n>\n> Typically, on-demand format video files require a large file setting and partial object caching because these tend to be larger, composite files. Live video, which tends to be distributed as smaller, individual segments doesn't require partial object caching, so the smaller file settings should be selected as the **Origin Object Size**. This may not apply to all environments, which is why we recommend that you verify your media file size requirements.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "👍"
+      },
+      "text": "You may want partial object caching for on demand video, but not for liveTypically, on-demand format video files require a large file setting and partial object caching because these tend to be larger, composite files. Live video, which tends to be distributed as smaller, individual segments doesn't require partial object caching, so the smaller file settings should be selected as the Origin Object Size. This may not apply to all environments, which is why we recommend that you verify your media file size requirements.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "success"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 23,
+      "lines": [
+        72,
+        72
+      ],
+      "raw": "# Enable \\<Media Format>",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Enable <Media Format>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": [
+        {
+          "kind": "escapedAngle",
+          "value": "\\<Media Format>",
+          "line": 72
+        }
+      ]
+    },
+    {
+      "i": 24,
+      "lines": [
+        74,
+        74
+      ],
+      "raw": "You can select from multiple switch buttons, for the various media formats supported for use—**Enable HLS** (HTTP Live Streaming for iOS), **Enable HDS** (HTTP Dynamic Streaming for Adobe Flash), **Enable DASH** (Dynamic Adaptive Streaming over HTTP) and **Enable Smooth** (for Microsoft Smooth Streaming). Set the switch to **Yes** for each format to be supported by this property. Additional options for each format include the following:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can select from multiple switch buttons, for the various media formats supported for use—Enable HLS (HTTP Live Streaming for iOS), Enable HDS (HTTP Dynamic Streaming for Adobe Flash), Enable DASH (Dynamic Adaptive Streaming over HTTP) and Enable Smooth (for Microsoft Smooth Streaming). Set the switch to Yes for each format to be supported by this property. Additional options for each format include the following:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 25,
+      "lines": [
+        76,
+        77
+      ],
+      "raw": "* **Fragment/Segment Duration**. Select the desired fragment or segment duration for the selected media format.\n* **Origin Object Size**. Use this to set a range for the size of media objects delivered through this property—Less than 1MB, 1-10MB, 10-100MB, or Unknown (This is the default, and should be left as the selected setting if you are not sure of the size of objects to be delivered).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Fragment/Segment Duration. Select the desired fragment or segment duration for the selected media format.Origin Object Size. Use this to set a range for the size of media objects delivered through this property—Less than 1MB, 1-10MB, 10-100MB, or Unknown (This is the default, and should be left as the selected setting if you are not sure of the size of objects to be delivered).",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 26,
+      "lines": [
+        79,
+        79
+      ],
+      "raw": "# Best practices settings applied by default",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Best practices settings applied by default",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 27,
+      "lines": [
+        81,
+        81
+      ],
+      "raw": "​Akamai​ automatically applies various best practices settings to coincide with the Content Characteristics behavior in your property configuration. You don't need to manually define these via individual behaviors, because ​Akamai​ presets them for optimal performance.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "​Akamai​ automatically applies various best practices settings to coincide with the Content Characteristics behavior in your property configuration. You don't need to manually define these via individual behaviors, because ​Akamai​ presets them for optimal performance.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 28,
+      "lines": [
+        83,
+        83
+      ],
+      "raw": "<table>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "table",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 29,
+      "lines": [
+        85,
+        85
+      ],
+      "raw": "<caption>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "caption",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 30,
+      "lines": [
+        87,
+        87
+      ],
+      "raw": "</caption>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "caption",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 31,
+      "lines": [
+        89,
+        89
+      ],
+      "raw": "<colgroup>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "colgroup",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 32,
+      "lines": [
+        91,
+        91
+      ],
+      "raw": "<col>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "col",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 33,
+      "lines": [
+        93,
+        93
+      ],
+      "raw": "<col>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "col",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 34,
+      "lines": [
+        95,
+        95
+      ],
+      "raw": "</colgroup>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "colgroup",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 35,
+      "lines": [
+        97,
+        97
+      ],
+      "raw": "<thead>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "thead",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 36,
+      "lines": [
+        99,
+        99
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 37,
+      "lines": [
+        101,
+        101
+      ],
+      "raw": "<th>Feature</th>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "th",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 38,
+      "lines": [
+        103,
+        103
+      ],
+      "raw": "<th>Setting applied</th>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "th",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 39,
+      "lines": [
+        105,
+        105
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 40,
+      "lines": [
+        107,
+        107
+      ],
+      "raw": "</thead>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "thead",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 41,
+      "lines": [
+        109,
+        109
+      ],
+      "raw": "<tbody>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tbody",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 42,
+      "lines": [
+        111,
+        111
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 43,
+      "lines": [
+        113,
+        113
+      ],
+      "raw": "<td><strong>Optimized For</strong> </td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 44,
+      "lines": [
+        115,
+        115
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 45,
+      "lines": [
+        117,
+        117
+      ],
+      "raw": "AMD is optimized for streaming video on demand (VoD) using these media formats:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AMD is optimized for streaming video on demand (VoD) using these media formats:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 46,
+      "lines": [
+        119,
+        123
+      ],
+      "raw": "- **CMAF**\n- **DASH**\n- **HDS**\n- **HLS**\n- **Smooth**",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "CMAFDASHHDSHLSSmooth",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 47,
+      "lines": [
+        125,
+        125
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 48,
+      "lines": [
+        127,
+        127
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 49,
+      "lines": [
+        129,
+        129
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 50,
+      "lines": [
+        131,
+        131
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 51,
+      "lines": [
+        133,
+        133
+      ],
+      "raw": "<strong>Streaming Format Identification</strong>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "<strong>Streaming Format Identification</strong>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 52,
+      "lines": [
+        135,
+        135
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 53,
+      "lines": [
+        137,
+        137
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 54,
+      "lines": [
+        139,
+        139
+      ],
+      "raw": "Your property supports various formats. AMD applies best practices settings for each, when you select them in this behavior. They're also used to generate logging and reporting information.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Your property supports various formats. AMD applies best practices settings for each, when you select them in this behavior. They're also used to generate logging and reporting information.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 55,
+      "lines": [
+        141,
+        159
+      ],
+      "raw": "- <strong>DASH</strong>:\n\n  - <strong>Manifest</strong>. mpd\n  - <strong>Segments</strong>. dash, divx, ismv, m4s, m4v, mp4, mp4v, sidx, webm, mp4a, m4a, isma\n\n- <strong>HDS</strong>:\n\n  - <strong>Manifest</strong>. f4m, f4x, drmmeta, and bootstrap\n  - <strong>Fragments</strong>. f4f and Seg-Frag URL structure\n\n- <strong>HLS</strong>:\n\n  - <strong>Manifest</strong>. m3u8, m3u, m3ub, and key\n  - <strong>Segments</strong>. ts, aac, and mp4\n\n- <strong>Smooth</strong>:\n\n  - <strong>Manifest</strong>. /manifest/\n  - <strong>Fragments</strong>. /QualityLevels/Fragments/",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "<strong>DASH</strong>:<strong>Manifest</strong>. mpd<strong>Segments</strong>. dash, divx, ismv, m4s, m4v, mp4, mp4v, sidx, webm, mp4a, m4a, isma<strong>HDS</strong>:<strong>Manifest</strong>. f4m, f4x, drmmeta, and bootstrap<strong>Fragments</strong>. f4f and Seg-Frag URL structure<strong>HLS</strong>:<strong>Manifest</strong>. m3u8, m3u, m3ub, and key<strong>Segments</strong>. ts, aac, and mp4<strong>Smooth</strong>:<strong>Manifest</strong>. /manifest/<strong>Fragments</strong>. /QualityLevels/Fragments/",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 56,
+      "lines": [
+        161,
+        161
+      ],
+      "raw": "The following points also apply:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following points also apply:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 57,
+      "lines": [
+        163,
+        167
+      ],
+      "raw": "- **CMAF is supported for use with _live_ media in your AMD property**. You can set it up to distribute live media via our Media Services Live (MSL) product. You need to first package your HLS, DASH, or both as CMAF. Then, you need to set up a Media Services Live stream and select the **CMAF (HLS & DASH)** Input Format. Finally, you'd select **DASH**, **HLS**, or **Both** here in this behavior. For full details on this workflow, see the <a href=\"https://techdocs.akamai.com/msl/docs/setup-media-services-live-origin\">Media Services Live user docs</a>. \n\n- **With CMAF, logging and reporting information is displayed as the specific format of the request manifest**. So, it'll be either HLS or DASH.\n\n- **Did you enable both DASH and HLS in this behavior**? If you did, AMD identifies the file format as DASH.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "CMAF is supported for use with live media in your AMD property. You can set it up to distribute live media via our Media Services Live (MSL) product. You need to first package your HLS, DASH, or both as CMAF. Then, you need to set up a Media Services Live stream and select the CMAF (HLS & DASH) Input Format. Finally, you'd select DASH, HLS, or Both here in this behavior. For full details on this workflow, see the <a href=\"https://techdocs.akamai.com/msl/docs/setup-media-services-live-origin\">Media Services Live user docs</a>.With CMAF, logging and reporting information is displayed as the specific format of the request manifest. So, it'll be either HLS or DASH.Did you enable both DASH and HLS in this behavior? If you did, AMD identifies the file format as DASH.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 58,
+      "lines": [
+        169,
+        169
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 59,
+      "lines": [
+        171,
+        171
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 60,
+      "lines": [
+        173,
+        173
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 61,
+      "lines": [
+        175,
+        175
+      ],
+      "raw": "<td><strong>Segment Durations</strong> </td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 62,
+      "lines": [
+        177,
+        177
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 63,
+      "lines": [
+        179,
+        179
+      ],
+      "raw": "The property automatically applies these segment durations when you select the applicable media format. This is also used for logging and reporting data.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The property automatically applies these segment durations when you select the applicable media format. This is also used for logging and reporting data.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 64,
+      "lines": [
+        181,
+        184
+      ],
+      "raw": "- **DASH**. The segment duration is set to six (6) seconds\n- **HDS**. The segment duration is set to six (6) seconds\n- **HLS**. The segment duration  is set to 10 seconds\n- **Smooth**. The segment duration is set to two (2) seconds",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DASH. The segment duration is set to six (6) secondsHDS. The segment duration is set to six (6) secondsHLS. The segment duration  is set to 10 secondsSmooth. The segment duration is set to two (2) seconds",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 65,
+      "lines": [
+        186,
+        186
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 66,
+      "lines": [
+        188,
+        188
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 67,
+      "lines": [
+        190,
+        190
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 68,
+      "lines": [
+        192,
+        192
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 69,
+      "lines": [
+        194,
+        194
+      ],
+      "raw": "<strong>Basic HTTP Settings</strong> </td>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "<strong>Basic HTTP Settings</strong> </td>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 70,
+      "lines": [
+        196,
+        196
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 71,
+      "lines": [
+        198,
+        198
+      ],
+      "raw": "These basic HTTP-specific settings are applied:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "These basic HTTP-specific settings are applied:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 72,
+      "lines": [
+        200,
+        202
+      ],
+      "raw": "- HTTP version 1.1\n- Transfer / Chunked encoding between Edge and client\n- Allow GET/HEAD Methods",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "HTTP version 1.1Transfer / Chunked encoding between Edge and clientAllow GET/HEAD Methods",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 73,
+      "lines": [
+        204,
+        204
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 74,
+      "lines": [
+        206,
+        206
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 75,
+      "lines": [
+        208,
+        208
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 76,
+      "lines": [
+        210,
+        210
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 77,
+      "lines": [
+        212,
+        212
+      ],
+      "raw": "<strong>Cross Origin Resource Sharing (CORS)</strong>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "<strong>Cross Origin Resource Sharing (CORS)</strong>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 78,
+      "lines": [
+        214,
+        214
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 79,
+      "lines": [
+        216,
+        216
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 80,
+      "lines": [
+        218,
+        218
+      ],
+      "raw": "The following CORS headers are included with the following values:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The following CORS headers are included with the following values:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 81,
+      "lines": [
+        220,
+        225
+      ],
+      "raw": "- <strong>Access-Control-Allow-Origin = \\*</strong> \n- <strong>Access-Control-Allow-Credentials = true</strong>\n- <strong>Access-Control-Allow-Methods = GET, OPTIONS, POST</strong>\n- <strong>Access-Control-Allow-Headers = origin,range,hdntl,hdnts</strong>\n- <strong>Access-Control-Expose-Headers = Server,range,hdntl,hdnts</strong>\n- <strong>Access-Control-Max-Age = 86400</strong>",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "<strong>Access-Control-Allow-Origin = *</strong><strong>Access-Control-Allow-Credentials = true</strong><strong>Access-Control-Allow-Methods = GET, OPTIONS, POST</strong><strong>Access-Control-Allow-Headers = origin,range,hdntl,hdnts</strong><strong>Access-Control-Expose-Headers = Server,range,hdntl,hdnts</strong><strong>Access-Control-Max-Age = 86400</strong>",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 82,
+      "lines": [
+        227,
+        227
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 83,
+      "lines": [
+        229,
+        229
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 84,
+      "lines": [
+        231,
+        231
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 85,
+      "lines": [
+        233,
+        233
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 86,
+      "lines": [
+        235,
+        235
+      ],
+      "raw": "<strong>GZIP Content Compression</strong>",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "<strong>GZIP Content Compression</strong>",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 87,
+      "lines": [
+        237,
+        237
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 88,
+      "lines": [
+        239,
+        239
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 89,
+      "lines": [
+        241,
+        241
+      ],
+      "raw": "The GZIP compression-related settings are automatically applied:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "The GZIP compression-related settings are automatically applied:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 90,
+      "lines": [
+        243,
+        244
+      ],
+      "raw": "- **Automatically enabled for origin to edge**. This only applies if the `Accept-Encoding header` is sent in the request to the origin.\n- **Automatically enabled for edge to client**. This only applies if the `Accept-Encoding` header is received from the client.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Automatically enabled for origin to edge. This only applies if the Accept-Encoding header is sent in the request to the origin.Automatically enabled for edge to client. This only applies if the Accept-Encoding header is received from the client.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 91,
+      "lines": [
+        246,
+        246
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 92,
+      "lines": [
+        248,
+        248
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 93,
+      "lines": [
+        250,
+        250
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 94,
+      "lines": [
+        252,
+        252
+      ],
+      "raw": "<td><strong>Caching</strong> </td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 95,
+      "lines": [
+        254,
+        254
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 96,
+      "lines": [
+        256,
+        256
+      ],
+      "raw": "These caching-related settings are applied:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "These caching-related settings are applied:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 97,
+      "lines": [
+        258,
+        264
+      ],
+      "raw": "- <strong>The Remove VARY header is sent from origin</strong>. This enables content caching.\n- <strong>Positive caching policy for response codes</strong>. 200, 203, 300, 301, 302 and 410\n- <strong>Positive Caching Time to Live (TTL)</strong>. 365 days\n- <strong>Negative caching for response codes</strong>. 204, 305, 404, and 405\n- <strong>Negative caching TTL</strong>:\n  - <strong>NetStorage as your origin</strong>. 30 seconds\n  - <strong>All other origins</strong>. One (1) second",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "<strong>The Remove VARY header is sent from origin</strong>. This enables content caching.<strong>Positive caching policy for response codes</strong>. 200, 203, 300, 301, 302 and 410<strong>Positive Caching Time to Live (TTL)</strong>. 365 days<strong>Negative caching for response codes</strong>. 204, 305, 404, and 405<strong>Negative caching TTL</strong>:<strong>NetStorage as your origin</strong>. 30 seconds<strong>All other origins</strong>. One (1) second",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 98,
+      "lines": [
+        266,
+        266
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 99,
+      "lines": [
+        268,
+        268
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 100,
+      "lines": [
+        270,
+        270
+      ],
+      "raw": "<tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 101,
+      "lines": [
+        272,
+        272
+      ],
+      "raw": "<td><strong>Content Type</strong> </td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 102,
+      "lines": [
+        274,
+        274
+      ],
+      "raw": "<td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 103,
+      "lines": [
+        276,
+        276
+      ],
+      "raw": "Based on the selected media format file type, the `Content Type` header is formatted to include this information:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Based on the selected media format file type, the Content Type header is formatted to include this information:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 104,
+      "lines": [
+        278,
+        289
+      ],
+      "raw": "- **m3u8, m3u, or m3ub**. `Content Type: \"application/x-mpegURL\"`\n- **ts**. `Content Type: \"video/MP2T\"`\n- **webvtt or vtt**. `Content Type: \"text/vtt\"`\n- **f4m, f4f, or f4x**. `Content Type: \"video/f4m\"`\n- **mpd**. `Content Type: \"application/dash+xml\"`\n- **dash, divx, mp4, mp4v, m4s, or m4v**. `Content Type: \"video/mp4\"`\n- **web**. `Content Type: \"video/webm\"`\n- **mp4a or m4a**. `Content Type: \"audio/mp4\"`\n- **isma**. `Content Type: \"audio/mp4\"`\n- **ismv**. `Content Type: \"video/mp4\"`\n- **aac**. `Content Type: \"audio/aac\"`\n- **sidx or init**. _No content type is added._",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "m3u8, m3u, or m3ub. Content Type: \"application/x-mpegURL\"ts. Content Type: \"video/MP2T\"webvtt or vtt. Content Type: \"text/vtt\"f4m, f4f, or f4x. Content Type: \"video/f4m\"mpd. Content Type: \"application/dash+xml\"dash, divx, mp4, mp4v, m4s, or m4v. Content Type: \"video/mp4\"web. Content Type: \"video/webm\"mp4a or m4a. Content Type: \"audio/mp4\"isma. Content Type: \"audio/mp4\"ismv. Content Type: \"video/mp4\"aac. Content Type: \"audio/aac\"sidx or init. No content type is added.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 105,
+      "lines": [
+        291,
+        291
+      ],
+      "raw": "</td>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "td",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 106,
+      "lines": [
+        293,
+        293
+      ],
+      "raw": "</tr>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tr",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 107,
+      "lines": [
+        295,
+        295
+      ],
+      "raw": "</tbody>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "tbody",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 108,
+      "lines": [
+        297,
+        297
+      ],
+      "raw": "</table>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "table",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 109,
+      "lines": [
+        299,
+        299
+      ],
+      "raw": "# Content characteristics and mixed mode configuration",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Content characteristics and mixed mode configuration",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 110,
+      "lines": [
+        301,
+        301
+      ],
+      "raw": "This is a \"use case-based\" behavior that's automatically included in the Default Rule and used to optimize delivery. You need to apply settings for this behavior in the Default Rule. However, with Mixed Mode Configuration for AMD (MMC), you can also include it in another rule and apply different match criteria to have separate requests use different content characteristics optimizations.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is a \"use case-based\" behavior that's automatically included in the Default Rule and used to optimize delivery. You need to apply settings for this behavior in the Default Rule. However, with Mixed Mode Configuration for AMD (MMC), you can also include it in another rule and apply different match criteria to have separate requests use different content characteristics optimizations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 111,
+      "lines": [
+        303,
+        303
+      ],
+      "raw": "For more details, see [Mixed Mode & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/use-mixed-mode-amd).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "For more details, see Mixed Mode & AMD.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 112,
+      "lines": [
+        305,
+        305
+      ],
+      "raw": "# Sibling pages",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sibling pages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 113,
+      "lines": [
+        307,
+        318
+      ],
+      "raw": "* [Default optimizations](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov.md)\n* [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)\n* [Content Provider Code](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-provider-code-amd.md)\n* [Segmented Media Delivery Mode](https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md)\n* [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)\n* [Client Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md)\n* [Cache Key Query Parameters](https://techdocs.akamai.com/adaptive-media-delivery/docs/cache-key-query-param-amd.md)\n* [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)\n* [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)\n* [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)\n* [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)\n* [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Default optimizationsOrigin ServerContent Provider CodeSegmented Media Delivery ModeOrigin CharacteristicsClient CharacteristicsCache Key Query ParametersTiered DistributionRecommended behaviors in the Default RuleOptional behaviors in the Default RuleThe Default CORS Policy RuleAdd optional rules",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "slug": "adaptive-media-delivery/docs/client-charac-amd",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd",
+  "title": "Client Characteristics",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-03-01T18:58:15.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `c` (U+0063) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 3,
+    "div": 1,
+    "Callout": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Client Characteristics",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Client Characteristics",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "This behavior incorporates use case-based provisioning to optimize delivery to requesting clients.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This behavior incorporates use case-based provisioning to optimize delivery to requesting clients.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        13
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/adaptive-media-delivery/img/amd-client-char-v2.png\" width=\"500\" />\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        15,
+        15
+      ],
+      "raw": "# Client Location",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Client Location",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        17,
+        17
+      ],
+      "raw": "Select a location that is *geographically closest* to the clients accessing content through this property configuration, to optimize the delivery. If you set a region that is closer to your clients, delivery is typically faster.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Select a location that is geographically closest to the clients accessing content through this property configuration, to optimize the delivery. If you set a region that is closer to your clients, delivery is typically faster.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        21
+      ],
+      "raw": "> 📘\n>\n> If you're unsure, leave this set to **Unknown**. If you select an inappropriate geographic region, it could negatively affect delivery.",
+      "kind": "callout",
+      "syntax": "markdown",
+      "component": "Callout",
+      "attrs": {
+        "icon": "📘"
+      },
+      "text": "If you're unsure, leave this set to Unknown. If you select an inappropriate geographic region, it could negatively affect delivery.",
+      "target": {
+        "component": "Callout",
+        "status": "direct",
+        "note": "theme/icon -> kind; drop the emoji, Documentation.AI draws its own",
+        "attrs": {
+          "kind": "info"
+        }
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "# About mixed-mode configuration",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "About mixed-mode configuration",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "This is a \"use case-based\" behavior that's used to optimize delivery. You need to keep this behavior in the Default Rule and apply settings. But, with mixed mode configuration for AMD, you can also include it in a child rule and apply different match criteria to have separate requests use different client characteristics optimizations. For more details, see [Mixed Mode & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/use-mixed-mode-amd).",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This is a \"use case-based\" behavior that's used to optimize delivery. You need to keep this behavior in the Default Rule and apply settings. But, with mixed mode configuration for AMD, you can also include it in a child rule and apply different match criteria to have separate requests use different client characteristics optimizations. For more details, see Mixed Mode & AMD.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "# Sibling pages",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sibling pages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        29,
+        40
+      ],
+      "raw": "* [Default optimizations](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov.md)\n* [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)\n* [Content Provider Code](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-provider-code-amd.md)\n* [Segmented Media Delivery Mode](https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md)\n* [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)\n* [Content Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd.md)\n* [Cache Key Query Parameters](https://techdocs.akamai.com/adaptive-media-delivery/docs/cache-key-query-param-amd.md)\n* [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)\n* [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)\n* [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)\n* [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)\n* [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Default optimizationsOrigin ServerContent Provider CodeSegmented Media Delivery ModeOrigin CharacteristicsContent CharacteristicsCache Key Query ParametersTiered DistributionRecommended behaviors in the Default RuleOptional behaviors in the Default RuleThe Default CORS Policy RuleAdd optional rules",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

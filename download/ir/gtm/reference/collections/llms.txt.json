@@ -1,0 +1,106 @@
+{
+  "slug": "gtm/reference/collections/llms.txt",
+  "source": "https://techdocs.akamai.com/gtm/reference/collections/llms.txt.md",
+  "url": "https://techdocs.akamai.com/gtm/reference/collections/llms.txt",
+  "title": "Collections",
+  "description": "",
+  "section": "Global Traffic Management",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Global Traffic Management Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Global Traffic Management Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Collections",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Collections",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [List Akamai cloud regions](https://techdocs.akamai.com/gtm/reference/get-akamai-cloud-regions.md): This operation returns a list of available Akamai cloud regions. Use these regions when creating a data center with a `cloudProvider` of `akamai-cloud`. Each region includes geographic metadata such as city, country, latitude, and longitude that you can use to populate data center fields.\n- [List datacenter IDs](https://techdocs.akamai.com/gtm/reference/get-datacenter-ids.md): Returns a paginated list of valid datacenter IDs available for use as virtual datacenters.\n- [List supported geo codes](https://techdocs.akamai.com/gtm/reference/get-supported-geo-codes.md): Returns the full hierarchy of supported geographic codes — continents, countries, and states or provinces — that you can use when configuring geographic maps.\n- [List DNS record set types](https://techdocs.akamai.com/gtm/reference/get-recordset-types.md): Returns the DNS record types supported for GTM properties, optionally filtered by domain.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List Akamai cloud regions: This operation returns a list of available Akamai cloud regions. Use these regions when creating a data center with a cloudProvider of akamai-cloud. Each region includes geographic metadata such as city, country, latitude, and longitude that you can use to populate data center fields.List datacenter IDs: Returns a paginated list of valid datacenter IDs available for use as virtual datacenters.List supported geo codes: Returns the full hierarchy of supported geographic codes — continents, countries, and states or provinces — that you can use when configuring geographic maps.List DNS record set types: Returns the DNS record types supported for GTM properties, optionally filtered by domain.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

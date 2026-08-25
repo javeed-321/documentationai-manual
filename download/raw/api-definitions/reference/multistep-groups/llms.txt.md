@@ -1,0 +1,12 @@
+# API Definitions Documentation
+
+> Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/api-definitions/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Multistep groups
+- [Create a multistep group](https://techdocs.akamai.com/api-definitions/reference/post-multistep-group-details.md): Create a multistep group with a chosen name. To add operations and create a multistep flow, you need to [list](ref:get-resources-and-operations) resource operations, and then [get](ref:get-resource-operation) and [update](ref:put-resource-operation) each applicable operation to assign it a `multistepGroupId`.
+- [List multistep group details](https://techdocs.akamai.com/api-definitions/reference/get-multistep-group-details.md): Get the multistep group's name. To find out which operations are a part of this multistep group,[list](ref:get-resources-and-operations) resource operations and check their `multistepGroupId`.
+- [Get a multistep group](https://techdocs.akamai.com/api-definitions/reference/get-multistep-groups.md): Get the multistep group's name. To find out which operations are a part of this multistep group, [list](ref:get-resources-and-operations) resource operations and check their 'multistepGroupId'.
+- [Update a multistep group](https://techdocs.akamai.com/api-definitions/reference/put-multistep-groups.md): Change the multistep group's name. To assign an operation to a multistep group, modify its 'multistepGroupId' value. You can only add any given operation to a single group.
+- [Delete a multistep group](https://techdocs.akamai.com/api-definitions/reference/delete-multistep-groups.md): Remove a specific multistep group. This also deletes all operations in this group.

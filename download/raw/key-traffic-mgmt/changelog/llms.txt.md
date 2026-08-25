@@ -1,0 +1,11 @@
+# API Keys and Traffic Management Documentation
+
+> Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/key-traffic-mgmt/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [May 5, 2025 — API Keys and Traffic Management v1 decommissioned](https://techdocs.akamai.com/key-traffic-mgmt/changelog/may-5-2025-api-keys-and-traffic-management-v1-decommissioned.md)
+- [Dec 4, 2024 — Alert threshold improvements](https://techdocs.akamai.com/key-traffic-mgmt/changelog/dec-4-2024-alert-threshold-improvements.md)
+- [Jan 31, 2024 — New API Keys and Traffic Management version](https://techdocs.akamai.com/key-traffic-mgmt/changelog/jan-26-2024-new-api-keys-and-traffic-management-version.md)
+- [Dec 2, 2021 — New API Keys and Traffic Management API documentation experience](https://techdocs.akamai.com/key-traffic-mgmt/changelog/dec-2021-new-api-keys-and-traffic-management-api-documentation-experience.md)

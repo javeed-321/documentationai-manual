@@ -1,0 +1,183 @@
+{
+  "slug": "linode-api/reference/placement-groups/llms.txt",
+  "source": "https://techdocs.akamai.com/linode-api/reference/placement-groups/llms.txt.md",
+  "url": "https://techdocs.akamai.com/linode-api/reference/placement-groups/llms.txt",
+  "title": "Placement groups",
+  "description": "",
+  "section": "Linode API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Linode API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Linode API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Placement groups",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Placement groups",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        14
+      ],
+      "raw": "- [Create a placement group](https://techdocs.akamai.com/linode-api/reference/post-placement-group.md): Creates a placement group on your account. Placement groups disperse your Linodes across physical machines (hosts) in one of our compute regions. Depending on your workload requirements, you may need your Linodes to follow specific strategies:  - __Grouped-together model__. You may want them placed close together to reduce latency between Linodes that are used for an application or workload. Affinity placement groups follow this model.  - __Spread-apart model__. You may want to disperse them across several hosts to support high availability, for example when required for failover. Anti-affinity placement groups follow this model.  To run this operation, your user needs the `add_linodes` [grant](ref:get-user-grants). Talk to your local account administrator about grant management for your user.  > 👍 There's a tutorial > > We offer an example API [workflow](ref:create-a-placement-group) you can follow to create a placement group and add Linodes to it.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `linodes:read_write`   **CLI**  ```shell linode-cli placement group-create \\   --label PG_Miami_failover \\   --region us-mia \\   --placement_group_type \"anti_affinity:local\" \\   --placement_group_policy strict ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List placement groups](https://techdocs.akamai.com/linode-api/reference/get-placement-groups.md): Returns a paginated list of placement groups you have permission to view.  > 📘 > > Your user needs at least `read-only` [permission](ref:get-user-grants) to all Linodes included in a placement group to view it. Placement groups that contain Linodes that you don't have this permission for are left out of the response. If all placement groups contain Linodes that lack this permission, the API returns a 403 error. Talk to your local account administrator about managing permissions.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `placement:read_only`   **CLI**  ```shell linode-cli placement groups-list ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a placement group](https://techdocs.akamai.com/linode-api/reference/get-placement-group.md): View a specific placement group by ID.  > 📘 > > Your user needs at least `read-only` [permission](ref:get-user-grants) to all Linodes included in a placement group to view it. If you don't have this access and call this operation, the API returns a 403 error. Talk to your local account administrator about managing permissions.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `linodes:read_only`   **CLI**  ```shell linode-cli placement group-view 528 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Update a placement group](https://techdocs.akamai.com/linode-api/reference/put-placement-group.md): Change the `label` for a specific placement group. This is the only value you can update. However, you can [add](ref:post-group-add-linode) more Linodes or [remove](ref:post-group-unassign) existing ones.  > 📘 > > To update a placement group, your [user grants](ref:get-user-grants) need to include `read_write` permission to all of the Linodes in the group. Talk to your local account administrator about grant management for your user.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `linodes:read_write`   **CLI**  ```shell linode-cli placement group-update 528 \\   --label PG_Miami_failover_update ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Delete a placement group](https://techdocs.akamai.com/linode-api/reference/delete-placement-group.md): Deletes a placement group you have permission to `read_write`.  - Deleting a placement group can't be undone.  - All Linodes need to be [removed](ref:post-group-unassign) before you can delete a placement group.  - If your placement group is non-compliant, you can't delete it. You need to wait for our help to bring it [compliant](https://www.linode.com/docs/products/compute/compute-instances/guides/placement-groups/#non-compliance-precedence).  <<LB>>  > 📘 > > To run this operation, your user needs the `add_linodes` [grant](ref:get-user-grants). Talk to your local account administrator about grant management for your user.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `linodes:read_write`   **CLI**  ```shell linode-cli placement group-delete 528 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Assign a placement group](https://techdocs.akamai.com/linode-api/reference/post-group-add-linode.md): Add a Linode to your placement group. Check out our [example API workflow](ref:create-a-placement-group) to create a placement group and add Linodes.  > 📘 > > Your user needs the `add_linodes` [grant](ref:get-user-grants) and `read-write` [permission](ref:get-user-grants) to the Linodes you want to add to the group. Talk to your local account administrator about grant and permissions management.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `linodes:read_write`   **CLI**  ```shell linode-cli placement assign-linode 528 \\   --linodes 123 456 \\   --non-compliant true ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Unassign a placement group](https://techdocs.akamai.com/linode-api/reference/post-group-unassign.md): Remove a Linode from your placement group.  > 📘 > > To run this operation, your user needs the `add_linodes` [grant](ref:get-user-grants) and `read-write` [permission](ref:get-user-grants) to the Linodes you want to remove from the group. Talk to your local account administrator about grant and permissions management.   **Permissions and scopes**  To call this operation, you need permissions, based on the model you're using:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).      - Scopes:   `linodes:read_write`   **CLI**  ```shell linode-cli placement unassign-linode 528 \\   --linode 123 456 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a placement group: Creates a placement group on your account. Placement groups disperse your Linodes across physical machines (hosts) in one of our compute regions. Depending on your workload requirements, you may need your Linodes to follow specific strategies:  - Grouped-together model. You may want them placed close together to reduce latency between Linodes that are used for an application or workload. Affinity placement groups follow this model.  - Spread-apart model. You may want to disperse them across several hosts to support high availability, for example when required for failover. Anti-affinity placement groups follow this model.  To run this operation, your user needs the add_linodes grant. Talk to your local account administrator about grant management for your user.  > 👍 There's a tutorial > > We offer an example API workflow you can follow to create a placement group and add Linodes to it.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   linodes:read_write   CLI  shell linode-cli placement group-create \\   --label PG_Miami_failover \\   --region us-mia \\   --placement_group_type \"anti_affinity:local\" \\   --placement_group_policy strict   Learn moreList placement groups: Returns a paginated list of placement groups you have permission to view.  > 📘 > > Your user needs at least read-only permission to all Linodes included in a placement group to view it. Placement groups that contain Linodes that you don't have this permission for are left out of the response. If all placement groups contain Linodes that lack this permission, the API returns a 403 error. Talk to your local account administrator about managing permissions.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   placement:read_only   CLI  shell linode-cli placement groups-list   Learn moreGet a placement group: View a specific placement group by ID.  > 📘 > > Your user needs at least read-only permission to all Linodes included in a placement group to view it. If you don't have this access and call this operation, the API returns a 403 error. Talk to your local account administrator about managing permissions.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   linodes:read_only   CLI  shell linode-cli placement group-view 528   Learn moreUpdate a placement group: Change the label for a specific placement group. This is the only value you can update. However, you can add more Linodes or remove existing ones.  > 📘 > > To update a placement group, your user grants need to include read_write permission to all of the Linodes in the group. Talk to your local account administrator about grant management for your user.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   linodes:read_write   CLI  shell linode-cli placement group-update 528 \\   --label PG_Miami_failover_update   Learn moreDelete a placement group: Deletes a placement group you have permission to read_write.  - Deleting a placement group can't be undone.  - All Linodes need to be removed before you can delete a placement group.  - If your placement group is non-compliant, you can't delete it. You need to wait for our help to bring it compliant.  <<LB>>  > 📘 > > To run this operation, your user needs the add_linodes grant. Talk to your local account administrator about grant management for your user.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   linodes:read_write   CLI  shell linode-cli placement group-delete 528   Learn moreAssign a placement group: Add a Linode to your placement group. Check out our example API workflow to create a placement group and add Linodes.  > 📘 > > Your user needs the add_linodes grant and read-write permission to the Linodes you want to add to the group. Talk to your local account administrator about grant and permissions management.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   linodes:read_write   CLI  shell linode-cli placement assign-linode 528 \\   --linodes 123 456 \\   --non-compliant true   Learn moreUnassign a placement group: Remove a Linode from your placement group.  > 📘 > > To run this operation, your user needs the add_linodes grant and read-write permission to the Linodes you want to remove from the group. Talk to your local account administrator about grant and permissions management.   Permissions and scopes  To call this operation, you need permissions, based on the model you're using:  - OAuth scopes. Your user needs these scopes assigned. Learn more.      - Scopes:   linodes:read_write   CLI  shell linode-cli placement unassign-linode 528 \\   --linode 123 456   Learn more",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "variable",
+          "value": "LB",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:create-a-placement-group",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 10
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-group-add-linode",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-group-unassign",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-group-unassign",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 12
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:create-a-placement-group",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 14
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-user-grants",
+          "line": 14
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+# Terraform Documentation
+
+> Use Infrastructure as Code to manage and provision your Akamai configurations.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Application Security
+- [Configure AppSec](https://techdocs.akamai.com/terraform/docs/configure-appsec.md)
+- [Match targets](https://techdocs.akamai.com/terraform/docs/match-target-options.md)
+- [Rate policy](https://techdocs.akamai.com/terraform/docs/rate-policy-options.md)
+- [Attack group migration](https://techdocs.akamai.com/terraform/docs/attack-group-migration.md)
+- [AAP selected hostnames](https://techdocs.akamai.com/terraform/docs/as-ds-aap-selected-hostnames.md): akamai_appsec_aap_selected_hostnames
+- [API endpoints](https://techdocs.akamai.com/terraform/docs/as-ds-api-endpoints.md): akamai_appsec_api_endpoints
+- [API request constraints](https://techdocs.akamai.com/terraform/docs/as-ds-api-request-constraints.md): akamai_appsec_api_request_constraints
+- [ASE penalty box settings](https://techdocs.akamai.com/terraform/docs/as-ds-ase-penalty-box-settings.md): akamai_appsec_advanced_settings_ase_penalty_box
+- [Attack groups](https://techdocs.akamai.com/terraform/docs/as-ds-attack-groups.md): akamai_appsec_attack_groups
+- [Attack payload logging](https://techdocs.akamai.com/terraform/docs/as-ds-attack-payload-logging.md): akamai_appsec_advanced_settings_attack_payload_logging
+- [Bypass network lists](https://techdocs.akamai.com/terraform/docs/as-ds-bypass-network-lists.md): akamai_appsec_bypass_network_lists
+- [Configuration](https://techdocs.akamai.com/terraform/docs/as-ds-configuration.md): akamai_appsec_configuration
+- [Configuration version](https://techdocs.akamai.com/terraform/docs/as-ds-configuration-version.md): akamai_appsec_configuration_version
+- [Contracts groups](https://techdocs.akamai.com/terraform/docs/as-ds-contracts-groups.md): akamai_appsec_contracts_groups
+- [Custom deny](https://techdocs.akamai.com/terraform/docs/as-ds-custom-deny.md): akamai_appsec_custom_deny
+- [Custom rule actions](https://techdocs.akamai.com/terraform/docs/as-ds-custom-rule-actions.md): akamai_appsec_custom_rule_actions
+- [Custom rules](https://techdocs.akamai.com/terraform/docs/as-ds-custom-rules.md): akamai_appsec_custom_rules
+- [Eval group](https://techdocs.akamai.com/terraform/docs/as-ds-eval-group.md): akamai_appsec_eval_group
+- [Eval penalty box](https://techdocs.akamai.com/terraform/docs/as-ds-eval-penalty.md): akamai_appsec_eval_penalty_box
+- [Eval penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-ds-eval-penalty-box-conditions.md): akamai_appsec_eval_penalty_box_conditions
+- [Eval rules](https://techdocs.akamai.com/terraform/docs/as-ds-eval-rules.md): akamai_appsec_eval_rules
+- [Evasive path match](https://techdocs.akamai.com/terraform/docs/as-ds-evasive-path-match.md): akamai_appsec_advanced_settings_evasive_path_match
+- [Failover hostnames](https://techdocs.akamai.com/terraform/docs/as-ds-failover-hostnames.md): akamai_appsec_failover_hostnames
+- [Hostname coverage](https://techdocs.akamai.com/terraform/docs/as-ds-hostname-coverage.md): akamai_appsec_hostname_coverage
+- [Hostname coverage match targets](https://techdocs.akamai.com/terraform/docs/as-ds-hostname-coverage-match-targets.md): akamai_appsec_hostname_coverage_match_targets
+- [Hostname coverage overlapping](https://techdocs.akamai.com/terraform/docs/as-ds-hostname-coverage-overlapping.md): akamai_appsec_hostname_coverage_overlapping
+- [IP geo](https://techdocs.akamai.com/terraform/docs/as-ds-ip-geo.md): akamai_appsec_ip_geo
+- [JA4 fingerprint](https://techdocs.akamai.com/terraform/docs/as-ds-ja4-fingerprint.md)
+- [Malware content types](https://techdocs.akamai.com/terraform/docs/as-ds-malware-content-types.md): akamai_appsec_malware_content_types
+- [Malware policies](https://techdocs.akamai.com/terraform/docs/as-ds-malware-policies.md): akamai_appsec_malware_policies
+- [Malware policy actions](https://techdocs.akamai.com/terraform/docs/as-ds-malware-policy-actions.md): akamai_appsec_malware_policy_actions
+- [Match targets](https://techdocs.akamai.com/terraform/docs/as-ds-match-targets.md): akamai_appsec_match_targets
+- [Penalty box](https://techdocs.akamai.com/terraform/docs/as-ds-penalty-box.md): akamai_appsec_penalty_box
+- [Penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-ds-penalty-box-conditions.md): akamai_appsec_penalty_box_conditions
+- [PII learning](https://techdocs.akamai.com/terraform/docs/as-ds-pii-learning.md): akamai_appsec_advanced_setttings_pii_learning
+- [Policy actions](https://techdocs.akamai.com/terraform/docs/as-ds-policy-actions.md): akamai_appsec_rate_policy_actions
+- [Pragma header](https://techdocs.akamai.com/terraform/docs/as-ds-pragma-header.md): akamai_appsec_advanced_settings_pragma_header
+- [Prefetch](https://techdocs.akamai.com/terraform/docs/as-ds-prefetch.md): akamai_appsec_advanced_settings_prefetch
+- [Rapid rules](https://techdocs.akamai.com/terraform/docs/as-ds-rapid-rules.md): akamai_appsec_rapid_rules
+- [Rate policies](https://techdocs.akamai.com/terraform/docs/as-ds-rate-policies.md): akamai_appsec_rate_policies
+- [Reputation profile actions](https://techdocs.akamai.com/terraform/docs/as-ds-reputation-profile-actions.md): akamai_appsec_reputation_profile_actions
+- [Reputation profile analysis](https://techdocs.akamai.com/terraform/docs/as-ds-reputation-profile-analysis.md): akamai_appsec_reputation_profile_analysis
+- [Reputation profiles](https://techdocs.akamai.com/terraform/docs/as-ds-reputation-profiles.md): akamai_appsec_reputation_profiles
+- [Request body settings](https://techdocs.akamai.com/terraform/docs/as-ds-request-body-settings.md): akamai_appsec_advanced_settings_request_body
+- [Rule upgrade details](https://techdocs.akamai.com/terraform/docs/as-ds-rule-upgrade-details.md): akamai_appsec_rule_upgrade_details
+- [Rules](https://techdocs.akamai.com/terraform/docs/as-ds-rules.md): akamai_appsec_rules
+- [Security policy](https://techdocs.akamai.com/terraform/docs/as-ds-security-policy.md): akamai_appsec_security_policy
+- [Security policy protections](https://techdocs.akamai.com/terraform/docs/as-ds-security-policy-protections.md): akamai_appsec_security_policy_protections
+- [Selectable hostnames](https://techdocs.akamai.com/terraform/docs/as-ds-selectable-hostnames.md): akamai_appsec_selectable_hostnames
+- [Siem definitions](https://techdocs.akamai.com/terraform/docs/as-ds-siem-definitions.md): akamai_appsec_siem_definitions
+- [Siem settings](https://techdocs.akamai.com/terraform/docs/as-ds-siem-settings.md): akamai_appsec_siem_settings
+- [Slow POST](https://techdocs.akamai.com/terraform/docs/as-ds-slow-post.md): akamai_appsec_slow_post
+- [Threat intel](https://techdocs.akamai.com/terraform/docs/as-ds-threat-intel.md): akamai_appsec_threat_intel
+- [Tuning recommendations](https://techdocs.akamai.com/terraform/docs/as-ds-tuning-recommendations.md): akamai_appsec_tuning_recommendations
+- [Version notes](https://techdocs.akamai.com/terraform/docs/as-ds-version-notes.md): akamai_appsec_version_notes
+- [WAF mode](https://techdocs.akamai.com/terraform/docs/as-ds-waf-mode.md): akamai_appsec_waf_mode
+- [WAF rule set](https://techdocs.akamai.com/terraform/docs/as-ds-waf-rule-set.md): akamai_appsec_waf_ruleset
+- [URL protection policy](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policy.md): akamai_appsec_url_protection_policy
+- [URL protection policies](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policies.md): akamai_appsec_url_protection_policies
+- [URL protection policy actions](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policy-actions.md): akamai_appsec_url_protection_policy_actions
+- [URL protection policies actions](https://techdocs.akamai.com/terraform/docs/as-ds-url-protection-policies-actions.md): akamai_appsec_url_protection_policies_actions
+- [AAP selected hostnames](https://techdocs.akamai.com/terraform/docs/as-rc-aap-selected-hostnames.md): akamai_appsec_aap_selected_hostnames
+- [Activations](https://techdocs.akamai.com/terraform/docs/as-rc-activations.md): akamai_appsec_activations
+- [Advanced logging](https://techdocs.akamai.com/terraform/docs/as-rc-advanced-logging.md): akamai_appsec_advanced_settings_logging
+- [API constraints protection](https://techdocs.akamai.com/terraform/docs/as-rc-api-constraints-protection.md): akamai_appsec_api_constraints_protection
+- [API request constraints](https://techdocs.akamai.com/terraform/docs/as-rc-api-request-constraints.md): appsec_api_request_constraints
+- [ASE penalty box settings](https://techdocs.akamai.com/terraform/docs/as-rc-ase-penalty-box-settings.md): akamai_appsec_advanced_settings_ase_penalty_box
+- [Attack group](https://techdocs.akamai.com/terraform/docs/as-rc-attack-group.md): akamai_appsec_attack_group
+- [Attack payload logging](https://techdocs.akamai.com/terraform/docs/as-rc-attack-payload-logging.md): akamai_appsec_advanced_settings_attack_payload_logging
+- [Bypass network lists](https://techdocs.akamai.com/terraform/docs/as-rc-bypass-network-lists.md): akamai_appsec_bypass_network_lists
+- [Configuration](https://techdocs.akamai.com/terraform/docs/as-rc-configuration.md): akamai_appsec_configuration
+- [Configuration rename](https://techdocs.akamai.com/terraform/docs/as-rc-configuration-rename.md): akamai_appsec_configuration_rename
+- [Custom deny](https://techdocs.akamai.com/terraform/docs/as-rc-custom-deny.md): akamai_appsec_custom_deny
+- [Custom rule](https://techdocs.akamai.com/terraform/docs/as-rc-custom-rule.md): akamai_appsec_custom_rule
+- [Custom rule action](https://techdocs.akamai.com/terraform/docs/as-rc-custom-rule-action.md): akamai_appsec_custom_rule_action
+- [Eval](https://techdocs.akamai.com/terraform/docs/as-rc-eval.md): akamai_appsec_eval
+- [Eval group](https://techdocs.akamai.com/terraform/docs/as-rc-eval-group.md): akamai_appsec_eval_group
+- [Eval penalty box](https://techdocs.akamai.com/terraform/docs/as-rc-eval-penalty-box.md): akamai_appsec_eval_penalty_box
+- [Eval penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-rc-eval-penalty-box-conditions.md): akamai_appsec_eval_penalty_box_conditions
+- [Eval rule](https://techdocs.akamai.com/terraform/docs/as-rc-eval-rule.md): akamai_appsec_eval_rule
+- [Evasive path match](https://techdocs.akamai.com/terraform/docs/as-rc-evasive-path-match.md): akamai_appsec_advanced_settings_evasive_path_match
+- [IP Geo](https://techdocs.akamai.com/terraform/docs/as-rc-ip-geo.md): akamai_appsec_ip_geo
+- [IP Geo protection](https://techdocs.akamai.com/terraform/docs/as-rc-ip-geo-protection.md): akamai_appsec_ip_geo_protection
+- [JA4 fingerprint](https://techdocs.akamai.com/terraform/docs/as-rc-ja4-fingerprint.md): akamai_appsec_advanced_settings_ja4_fingerprint
+- [Match target sequence](https://techdocs.akamai.com/terraform/docs/as-rc-match-target-sequence.md): akamai_appsec_match_target_sequence
+- [Malware policy](https://techdocs.akamai.com/terraform/docs/as-rc-malware-policy.md): akamai_appsec_malware_policy
+- [Malware policy action](https://techdocs.akamai.com/terraform/docs/as-rc-malware-policy-action.md): akamai_appsec_malware_policy_action
+- [Malware policy actions](https://techdocs.akamai.com/terraform/docs/as-rc-malware-policy-actions.md): akamai_appsec_malware_policy_actions
+- [Malware protection](https://techdocs.akamai.com/terraform/docs/as-rc-malware-protection.md): akamai_appsec_malware_protection
+- [Match target](https://techdocs.akamai.com/terraform/docs/as-rc-match-target.md): akamai_appsec_match_target
+- [Penalty box](https://techdocs.akamai.com/terraform/docs/as-rc-penalty-box.md): akamai_appsec_penalty_box
+- [Penalty box conditions](https://techdocs.akamai.com/terraform/docs/as-rc-penalty-box-conditions.md): akamai_appsec_penalty_box_conditions
+- [PII learning](https://techdocs.akamai.com/terraform/docs/as-rc-pii-learning.md): akamai_appsec_advanced_settings_pii_learning
+- [Policy rename](https://techdocs.akamai.com/terraform/docs/as-rc-policy-rename.md): akamai_appsec_security_policy_rename
+- [Pragma header](https://techdocs.akamai.com/terraform/docs/as-rc-pragma-header.md): akamai_appsec_advanced_settings_pragma_header
+- [Prefetch](https://techdocs.akamai.com/terraform/docs/as-rc-prefetch.md): akamai_appsec_advanced_settings_prefetch
+- [Rapid rules](https://techdocs.akamai.com/terraform/docs/as-rc-rapid-rules.md): akamai_appsec_rapid_rules
+- [Rate policy](https://techdocs.akamai.com/terraform/docs/as-rc-rate-policy.md): akamai_appsec_rate_policy
+- [Rate policy action](https://techdocs.akamai.com/terraform/docs/as-rc-rate-policy-action.md): akamai_appsec_rate_policy_action
+- [Rate protection](https://techdocs.akamai.com/terraform/docs/as-rc-rate-protection.md): akamai_appsec_rate_protection
+- [Reputation profile](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-profile.md): akamai_appsec_reputation_profile
+- [Reputation profile action](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-profile-action.md): akamai_appsec_reputation_profile_action
+- [Reputation profile analysis](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-analysis.md): akamai_appsec_reputation_analysis
+- [Reputation protection](https://techdocs.akamai.com/terraform/docs/as-rc-reputation-protection.md): akamai_appsec_reputation_protection
+- [Request body settings](https://techdocs.akamai.com/terraform/docs/request-body-settings.md): akamai_appsec_advanced_settings_request_body
+- [Rule](https://techdocs.akamai.com/terraform/docs/as-rc-rule.md): akamai_appsec_rule
+- [Rule upgrade](https://techdocs.akamai.com/terraform/docs/as-rc-rule-upgrade.md): akamai_appsec_rule_upgrade
+- [Security policy](https://techdocs.akamai.com/terraform/docs/as-rc-security-policy.md): akamai_appsec_security_policy
+- [Security policy default protections](https://techdocs.akamai.com/terraform/docs/as-rc-security-policy-default-protections.md): akamai_appsec_security_policy_default_protections
+- [Security policy protections](https://techdocs.akamai.com/terraform/docs/as-rc-security-policy-protections.md): akamai_appsec_security_policy_protections
+- [SIEM settings](https://techdocs.akamai.com/terraform/docs/as-rc-siem-settings.md): akamai_appsec_siem_settings
+- [Slow POST](https://techdocs.akamai.com/terraform/docs/as-rc-slow-post.md): akamai_appsec_slow_post
+- [Slow POST protection](https://techdocs.akamai.com/terraform/docs/as-rc-slow-post-protection.md): akamai_appsec_slowpost_protection
+- [Threat intel](https://techdocs.akamai.com/terraform/docs/as-rc-threat-intel.md): akamai_appsec_threat_intel
+- [Version notes](https://techdocs.akamai.com/terraform/docs/as-rc-version-notes.md): akamai_appsec_version_notes
+- [WAF mode](https://techdocs.akamai.com/terraform/docs/as-rc-waf-mode.md): akamai_appsec_waf_mode
+- [WAF protections](https://techdocs.akamai.com/terraform/docs/as-rc-waf-protections.md): akamai_appsec_waf_protection
+- [WAF rule set](https://techdocs.akamai.com/terraform/docs/as-rc-waf-rule-set.md): akamai_appsec_waf_ruleset
+- [URL protection action](https://techdocs.akamai.com/terraform/docs/as-rc-url-protection-action.md): akamai_appsec_url_protection_action
+- [URL protection policy](https://techdocs.akamai.com/terraform/docs/as-rc-url-protection-policy.md): akamai_appsec_url_protection_policy

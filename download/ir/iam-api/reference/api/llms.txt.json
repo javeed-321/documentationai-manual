@@ -1,0 +1,106 @@
+{
+  "slug": "iam-api/reference/api/llms.txt",
+  "source": "https://techdocs.akamai.com/iam-api/reference/api/llms.txt.md",
+  "url": "https://techdocs.akamai.com/iam-api/reference/api/llms.txt",
+  "title": "API",
+  "description": "",
+  "section": "Identity and Access Management API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Identity and Access Management API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Identity and Access Management API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/iam-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/iam-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        22
+      ],
+      "raw": "- [Identity and Access Management API v3](https://techdocs.akamai.com/iam-api/reference/api.md)\n- [API summary](https://techdocs.akamai.com/iam-api/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/iam-api/reference/get-started.md)\n- [Identity and Access Management concepts](https://techdocs.akamai.com/iam-api/reference/api-concepts.md)\n- [Rotate credentials](https://techdocs.akamai.com/iam-api/reference/rotate-credentials.md)\n- [Rate limits](https://techdocs.akamai.com/iam-api/reference/rate-limits.md)\n- [Manage access to properties and includes](https://techdocs.akamai.com/iam-api/reference/manage-access-to-properties-and-includes.md)\n- [Identity and Access Management migration](https://techdocs.akamai.com/iam-api/reference/iam-api-migration.md)\n- [Errors](https://techdocs.akamai.com/iam-api/reference/api-errors.md)\n- [400](https://techdocs.akamai.com/iam-api/reference/400.md)\n- [401](https://techdocs.akamai.com/iam-api/reference/401.md)\n- [403](https://techdocs.akamai.com/iam-api/reference/403.md)\n- [404](https://techdocs.akamai.com/iam-api/reference/404.md)\n- [405](https://techdocs.akamai.com/iam-api/reference/405.md)\n- [415](https://techdocs.akamai.com/iam-api/reference/415.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Identity and Access Management API v3API summaryGet startedIdentity and Access Management conceptsRotate credentialsRate limitsManage access to properties and includesIdentity and Access Management migrationErrors400401403404405415",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

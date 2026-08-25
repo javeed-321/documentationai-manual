@@ -1,0 +1,86 @@
+---
+updatedAt: 2026-03-01T18:58:11.000Z
+---
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Default optimizations
+
+Every AMD property automatically includes a set of best practices behaviors in the Default Rule that have been optimized for best performance. There are also mandatory behaviors that let you take advantage of use case-based provisioning to optimize delivery.
+
+# Behaviors set in the background
+
+As a best practice, these behaviors are automatically applied *in the background* of the Default Rule to optimize delivery. You don't see them as an actual behavior in a new AMD property.
+
+* **Allow All Methods on Parent Servers**
+* **Cache HTTP Error Response**
+* **Cache HTTP Redirects**
+* **Caching**
+* **CORS**
+* **LDS (Log Request Details)**
+* **Large File Optimization**
+* **Remove Vary Header** (Set to "On")
+* **Tiered Distribution**
+
+So, you don't need to add these individual behaviors and configure them for best results. There are a few points to consider with these behaviors:
+
+* **These behaviors can be overridden as an optional behavior**. You can [optionally add](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule) them to the Default Rule as separate behaviors to have them *override* these best practices settings. If you add one of these behaviors, you'll see a warning message. This is informational only.
+
+* **Some Best Practices behaviors are internal only**. Some behaviors are specific to core platform features for AMD or other operations, and you won't see them in the Property Manager catalog. *They're enabled by default to improve delivery performance*. If you need to provide custom settings, you may be able to apply them in an advanced rule. Talk to your account representative for details.
+
+* **Advanced rules override Best Practices**. If your account representative internally adds a behavior in an advanced rule that conflicts with an established best practice, the advanced rule settings override the best practices settings.
+
+# The mandatory behaviors
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-cont-char-v2.png" width="600" />
+</div>
+
+Every new AMD configuration includes these behaviors in the Default Rule:
+
+* **Origin Characteristics**
+* **Content Characteristics**
+* **Client Characteristics**
+* **Segmented Media Delivery Mode**
+
+These let you provide information about your specific use case for the AMD property, and allow you to apply optimizations, based on how the configuration is used. For example:
+
+* If you're using a custom origin for your content, you can provide your specific **Origin Location** use case information. Then, AMD creates an appropriate **Tiered Distribution** hierarchy to improve offload.
+* You can provide specific **Segment Duration** use case information for your media. AMD then assigns the appropriate caching settings to improve offload, while maintaining smooth playback.
+
+<div><p></p></div>
+
+> 📘
+>
+> If you're unsure of what to enter, leave these fields set to **Unknown**. ​Akamai​ won't apply specific use case-based provisioning, but will still try to optimize delivery.
+
+## Customization is available
+
+We recommend that you configure the mandatory behaviors to meet your specific use case, and let ​Akamai​ optimize the network for your AMD property. However, if you want to deploy custom settings, then the behaviors you (or your account representative) add take precedence over the settings used by use case-based provisioning.
+
+For example, if you manually add the **Tiered Distribution** behavior to your Default Rule, what you've set there will take precedence over the use case-based optimizations that are automatically included when you define your specific **Origin Location** in the **Origin Characteristics** behavior.
+
+# Use case-based edge maps & mixed mode configuration
+
+Using these behaviors in the Default Rule to apply use case-based provisioning applies their optimizations to *all requests* managed by this AMD property. This is because the Default Rule applies to all requests, and by default, these behaviors are only available for use in the Default Rule.
+
+However, what if you want to apply different optimizations settings for different requests?  We also offer additional functionality to support this:
+
+* **Mixed Mode Configuration for AMD**. This lets you add these use case-based behaviors in other rules *outside* of the Default Rule. This way, you can set unique match criteria for a request and apply different optimizations for those requests. This is fully discussed in [Mixed Mode & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/use-mixed-mode-amd).
+
+* **Use case-based edge mapping**. This lets you specify the delivery mode of content—live vs. on demand—when setting up a property hostname to edge hostname association in your AMD property. By selecting a mode, requests that resolve to the edge hostname are routed to the best ​Akamai​ edge map in order to optimize delivery. Details are discussed in [Use Case-based Edge Mapping & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-use-case-based-edge-mapping).
+
+# Sibling pages
+
+* [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)
+* [Content Provider Code](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-provider-code-amd.md)
+* [Segmented Media Delivery Mode](https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md)
+* [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)
+* [Content Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd.md)
+* [Client Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md)
+* [Cache Key Query Parameters](https://techdocs.akamai.com/adaptive-media-delivery/docs/cache-key-query-param-amd.md)
+* [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)
+* [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)
+* [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)
+* [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)
+* [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)

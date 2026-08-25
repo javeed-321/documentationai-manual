@@ -1,0 +1,21 @@
+# SIA Reporting API Documentation
+
+> The Secure Internet Access (SIA) Reporting API lets you access and analyze reports for security events, acceptable user policy events, and DNS activity totals. You can also view Indicator of Compromise (IOC) data to further analyze blacklisted entries. The API allows you flexible access to the same reporting features as in Akamai Control Center, using your own tools.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/etp-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Indicators of Compromise (IOC) reports
+- [Get IOC time series report](https://techdocs.akamai.com/etp-reporting/reference/get-time-series.md): Lists the DNS activities of a configuration for a given domain or IP, aggregated by day. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.
+- [Get IOC change report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-changes.md): Lists historical change information for a given record and record type. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.
+- [Get IOC AVC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-avc.md): Lists the AVC details for a given domain or IP.
+- [Get IOC CIDR details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-cidr.md): Lists the CIDR details for a given domain or IP.
+- [Get IOC domain tree report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-domain-tree.md): Lists the blocklisted domains and IPs matching a given record. Returns an empty list if no domains match.
+- [Get IOC time series report](https://techdocs.akamai.com/etp-reporting/reference/get-time-series-1.md): Lists the DNS activities of a configuration for a given domain or IP, aggregated by day. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.
+- [Get IOC change report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-changes-1.md): Lists historical change information for a given record and record type. Omit `startTimeSec` and `endTimeSec` from the request URL to return all available historical information.
+- [Get IOC AVC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-avc-1.md): Lists the AVC details for a given domain or IP.
+- [Get IOC CIDR details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-cidr-1.md): Lists the CIDR details for a given domain or IP.
+- [Get IOC domain tree report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-domain-tree-1.md): Lists the blocklisted domains and IPs matching a given record. Returns an empty list if no domains match.
+- [Get IOC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details.md): Lists the IOC details for a given domain or IP.
+- [Get IOC AUP detail report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-aup.md): Lists the AUP details for a given domain or IP.
+- [Get IOC details report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-1.md): Lists the IOC details for a given domain or IP.
+- [Get IOC AUP detail report](https://techdocs.akamai.com/etp-reporting/reference/get-ioc-details-aup-1.md): Lists the AUP details for a given domain or IP.

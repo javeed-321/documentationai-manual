@@ -1,0 +1,11 @@
+# GTM Reporting API Documentation
+
+> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Liveness tests
+- [Report liveness per property](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-property.md): This operation returns a collection of reports containing logs of individual liveness tests which have failed. Liveness Tests are run periodically by Web Agents installed in customer data centers. Liveness scores are used by GTM to decide whether a data center is alive or not.  Liveness tests which fail in succession (tests that run from the same testing agent to the same origin server, which fail with the same error code) are grouped together and represented with a duration. This duration value is in seconds and can sustain for up to 86400 seconds (one day). If it crosses that boundary, GTM logs it as a new failure at the beginning of the next day (00:00 UTC), with the duration reset to that point.
+- [List liveness test errors](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-error-codes.md): This operation lists all the possible liveness test error codes (as displayed on the Liveness Test Failures report) and a description of each error.
+- [Get a Liveness Test error](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-error-code.md): This operation returns an error description for the given Liveness Test error ID.
+- [Get a liveness test report window](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-window.md): Returns the date range of data available for liveness test reports. Use the returned `start` and `end` values as the bounds for queries to the liveness test report endpoint.

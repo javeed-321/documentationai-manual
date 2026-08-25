@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/cp-codes/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/cp-codes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/cp-codes/llms.txt",
+  "title": "CP Codes",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: CP Codes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: CP Codes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        18
+      ],
+      "raw": "- [Manage site traffic](https://techdocs.akamai.com/powershell/docs/cp-codes.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/cp-codes-index.md)\n- [CP code](https://techdocs.akamai.com/powershell/docs/get-cpcode.md): Get-CPCode\n- [Products](https://techdocs.akamai.com/powershell/docs/get-cpreportinggroupproducts.md): Get-CPReportingGroupProducts\n- [Reporting group](https://techdocs.akamai.com/powershell/docs/get-cpreportinggroup.md): Get-CPReportingGroup\n- [Watermark limit for CP codes](https://techdocs.akamai.com/powershell/docs/get-cpcodewatermarklimit.md): Get-CPCodeWatermarkLimit\n- [Watermark limit for reporting groups](https://techdocs.akamai.com/powershell/docs/get-cpreportinggroupwatermarklimit.md): Get-CPReportingGroupWatermarkLimit\n- [Reporting group](https://techdocs.akamai.com/powershell/docs/new-cpreportinggroup.md): New-CPReportingGroup\n- [Reporting group](https://techdocs.akamai.com/powershell/docs/remove-cpreportinggroup.md): Remove-CPReportingGroup\n- [CP code](https://techdocs.akamai.com/powershell/docs/set-cpcode.md): Set-CPCode\n- [Reporting group](https://techdocs.akamai.com/powershell/docs/set-cpreportinggroup.md): Set-CPReportingGroup",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Manage site trafficFunction indexCP code: Get-CPCodeProducts: Get-CPReportingGroupProductsReporting group: Get-CPReportingGroupWatermark limit for CP codes: Get-CPCodeWatermarkLimitWatermark limit for reporting groups: Get-CPReportingGroupWatermarkLimitReporting group: New-CPReportingGroupReporting group: Remove-CPReportingGroupCP code: Set-CPCodeReporting group: Set-CPReportingGroup",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

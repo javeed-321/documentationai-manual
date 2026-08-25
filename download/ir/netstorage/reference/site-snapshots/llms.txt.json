@@ -1,0 +1,106 @@
+{
+  "slug": "netstorage/reference/site-snapshots/llms.txt",
+  "source": "https://techdocs.akamai.com/netstorage/reference/site-snapshots/llms.txt.md",
+  "url": "https://techdocs.akamai.com/netstorage/reference/site-snapshots/llms.txt",
+  "title": "Site snapshots",
+  "description": "",
+  "section": "NetStorage",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# NetStorage Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "NetStorage Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Site snapshots",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Site snapshots",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [List all site snapshots](https://techdocs.akamai.com/netstorage/reference/get-snapshots.md): Get a list of all site snapshots.\n- [Create a site snapshot](https://techdocs.akamai.com/netstorage/reference/post-snapshots.md): Use this operation to create a new site snapshot configuration.\n- [Create an immediate site snapshot](https://techdocs.akamai.com/netstorage/reference/post-snapshots-schedule-now.md): Create an immediate snapshot for a `snapshotId` and `snapshotName` you provide.\n- [Delete a site snapshot](https://techdocs.akamai.com/netstorage/reference/delete-snapshot.md): Use this operation to delete a specific site snapshot configuration using its `snapshotId`.\n- [Get a site snapshot schedule](https://techdocs.akamai.com/netstorage/reference/get-snapshot.md): Get the site snapshot schedule for a `snapshotId`.\n- [Update a site snapshot schedule](https://techdocs.akamai.com/netstorage/reference/put-snapshot.md): Update a site snapshot schedule for a `snapshotId`.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List all site snapshots: Get a list of all site snapshots.Create a site snapshot: Use this operation to create a new site snapshot configuration.Create an immediate site snapshot: Create an immediate snapshot for a snapshotId and snapshotName you provide.Delete a site snapshot: Use this operation to delete a specific site snapshot configuration using its snapshotId.Get a site snapshot schedule: Get the site snapshot schedule for a snapshotId.Update a site snapshot schedule: Update a site snapshot schedule for a snapshotId.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

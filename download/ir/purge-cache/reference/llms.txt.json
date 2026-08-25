@@ -1,0 +1,244 @@
+{
+  "slug": "purge-cache/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/purge-cache/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/purge-cache/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "Purge Cache",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 5,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Purge Cache Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Purge Cache Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/purge-cache/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/purge-cache/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        30
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/purge-cache/reference/api/llms.txt): full category index\n- [Fast Purge API v3](https://techdocs.akamai.com/purge-cache/reference/api.md)\n- [API summary](https://techdocs.akamai.com/purge-cache/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/purge-cache/reference/api-get-started.md)\n- [Rate limiting](https://techdocs.akamai.com/purge-cache/reference/rate-limiting.md)\n- [Rate limit response examples](https://techdocs.akamai.com/purge-cache/reference/rate-limit-response-examples.md)\n- [Errors](https://techdocs.akamai.com/purge-cache/reference/api-errors.md)\n- [400](https://techdocs.akamai.com/purge-cache/reference/400.md)\n- [401](https://techdocs.akamai.com/purge-cache/reference/401.md)\n- [403](https://techdocs.akamai.com/purge-cache/reference/403.md)\n- [404](https://techdocs.akamai.com/purge-cache/reference/404.md)\n- [405](https://techdocs.akamai.com/purge-cache/reference/405.md)\n- [408](https://techdocs.akamai.com/purge-cache/reference/408.md)\n- [410](https://techdocs.akamai.com/purge-cache/reference/410.md)\n- [411](https://techdocs.akamai.com/purge-cache/reference/411.md)\n- [413](https://techdocs.akamai.com/purge-cache/reference/413.md)\n- [415](https://techdocs.akamai.com/purge-cache/reference/415.md)\n- [429](https://techdocs.akamai.com/purge-cache/reference/429.md)\n- [500](https://techdocs.akamai.com/purge-cache/reference/500.md)\n- [503](https://techdocs.akamai.com/purge-cache/reference/503.md)\n- [504](https://techdocs.akamai.com/purge-cache/reference/504.md)\n- [507](https://techdocs.akamai.com/purge-cache/reference/507.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexFast Purge API v3API summaryGet startedRate limitingRate limit response examplesErrors400401403404405408410411413415429500503504507",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## API Reference: Invalidations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Invalidations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        34,
+        37
+      ],
+      "raw": "- [Invalidations index](https://techdocs.akamai.com/purge-cache/reference/invalidations/llms.txt): full category index\n- [Invalidate by CP code](https://techdocs.akamai.com/purge-cache/reference/post-invalidate-cpcode.md): Invalidates content on the selected CP code for the selected `network`. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.\n- [Invalidate by cache tag](https://techdocs.akamai.com/purge-cache/reference/post-invalidate-tag.md): Invalidates content on the selected set of cache tags for the selected `network`. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.\n- [Invalidate by URL or ARL](https://techdocs.akamai.com/purge-cache/reference/post-invalidate-url.md): Invalidates content on the selected URL or ARL for the selected `network`. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable. URLs and ARLs can be submitted in the same request.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Invalidations index: full category indexInvalidate by CP code: Invalidates content on the selected CP code for the selected network. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.Invalidate by cache tag: Invalidates content on the selected set of cache tags for the selected network. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.Invalidate by URL or ARL: Invalidates content on the selected URL or ARL for the selected network. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable. URLs and ARLs can be submitted in the same request.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        39,
+        39
+      ],
+      "raw": "## API Reference: Deletions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Deletions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        41,
+        44
+      ],
+      "raw": "- [Deletions index](https://techdocs.akamai.com/purge-cache/reference/deletions/llms.txt): full category index\n- [Delete by cache tag](https://techdocs.akamai.com/purge-cache/reference/post-delete-tag.md): Deletes content on the selected set of cache tags for the selected `network`. In most cases, you should [invalidate](ref:post-invalidate-tag) rather than delete content. Invalidation keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.\n- [Delete by URL or ARL](https://techdocs.akamai.com/purge-cache/reference/post-delete-url.md): Deletes content on the selected URL or ARL  for the selected `network`.  URLs and ARLs can be submitted in the same request. In most cases, you should [invalidate](ref:post-invalidate-url) rather than delete content. Invalidation keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.\n- [Delete by CP code](https://techdocs.akamai.com/purge-cache/reference/post-delete-cpcode.md): Deletes content on the selected CP code for the selected `network`. In most cases, you should [invalidate](ref:post-invalidate-cpcode) rather than delete content. Invalidation keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Deletions index: full category indexDelete by cache tag: Deletes content on the selected set of cache tags for the selected network. In most cases, you should invalidate rather than delete content. Invalidation keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.Delete by URL or ARL: Deletes content on the selected URL or ARL  for the selected network.  URLs and ARLs can be submitted in the same request. In most cases, you should invalidate rather than delete content. Invalidation keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.Delete by CP code: Deletes content on the selected CP code for the selected network. In most cases, you should invalidate rather than delete content. Invalidation keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-invalidate-tag",
+          "line": 42
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-invalidate-url",
+          "line": 43
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-invalidate-cpcode",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        46,
+        46
+      ],
+      "raw": "## API Reference: Rate limit status",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Rate limit status",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        48,
+        49
+      ],
+      "raw": "- [Rate limit status index](https://techdocs.akamai.com/purge-cache/reference/rate-limit-status/llms.txt): full category index\n- [Check rate and object limit statuses](https://techdocs.akamai.com/purge-cache/reference/post-rate-limit-status.md): The Fast Purge API uses a token bucket model for [rate limiting](ref:rate-limiting) to protect itself from inadvertent or malicious overuse. For each Akamai account, there's a rate limit shared by all object types (CP codes, cache tags, and URL/ARLs), and three separate resource limits for each object type. Each purge request uses one rate limit token from the requests bucket. Each purge object in a request takes up a token from the resource bucket. This operation fetches information on the remaining number of requests and objects for a specific account. You can use these details to monitor the request consumption or throttle requests to prevent exceeding the limits, which results in the [429](ref:429) error.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Rate limit status index: full category indexCheck rate and object limit statuses: The Fast Purge API uses a token bucket model for rate limiting to protect itself from inadvertent or malicious overuse. For each Akamai account, there's a rate limit shared by all object types (CP codes, cache tags, and URL/ARLs), and three separate resource limits for each object type. Each purge request uses one rate limit token from the requests bucket. Each purge object in a request takes up a token from the resource bucket. This operation fetches information on the remaining number of requests and objects for a specific account. You can use these details to monitor the request consumption or throttle requests to prevent exceeding the limits, which results in the 429 error.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:rate-limiting",
+          "line": 49
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:429",
+          "line": 49
+        }
+      ]
+    }
+  ]
+}

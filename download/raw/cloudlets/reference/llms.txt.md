@@ -1,0 +1,64 @@
+# Cloudlets Documentation
+
+> Akamai's Cloudlets are value-added applications that complement Akamai’s core delivery solutions to solve specific business challenges. Cloudlets bring a site’s business logic closer to the end user by placing it on the edge of the content delivery platform.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloudlets/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/cloudlets/reference/api/llms.txt): full category index
+- [Cloudlets API v3](https://techdocs.akamai.com/cloudlets/reference/api.md)
+- [API summary](https://techdocs.akamai.com/cloudlets/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/cloudlets/reference/get-started.md)
+- [Concepts](https://techdocs.akamai.com/cloudlets/reference/api-concepts.md)
+- [About group IDs](https://techdocs.akamai.com/cloudlets/reference/about-group-ids.md)
+- [API workflow](https://techdocs.akamai.com/cloudlets/reference/api-workflow.md)
+- [Activation status](https://techdocs.akamai.com/cloudlets/reference/activation-status.md)
+- [Match rules](https://techdocs.akamai.com/cloudlets/reference/match-rules.md)
+- [Match properties](https://techdocs.akamai.com/cloudlets/reference/match-properties.md)
+- [Rate limits](https://techdocs.akamai.com/cloudlets/reference/rate-limiting.md)
+- [Hypermedia](https://techdocs.akamai.com/cloudlets/reference/hypermedia.md)
+- [Errors](https://techdocs.akamai.com/cloudlets/reference/errors.md)
+- [400](https://techdocs.akamai.com/cloudlets/reference/400.md)
+- [401](https://techdocs.akamai.com/cloudlets/reference/401.md)
+- [403](https://techdocs.akamai.com/cloudlets/reference/403.md)
+- [404](https://techdocs.akamai.com/cloudlets/reference/404.md)
+- [409](https://techdocs.akamai.com/cloudlets/reference/409.md)
+- [429](https://techdocs.akamai.com/cloudlets/reference/429.md)
+- [500](https://techdocs.akamai.com/cloudlets/reference/500.md)
+
+## API Reference: Cloudlets
+
+- [Cloudlets index](https://techdocs.akamai.com/cloudlets/reference/cloudlets/llms.txt): full category index
+- [List Cloudlets](https://techdocs.akamai.com/cloudlets/reference/get-cloudlets.md): Returns details for Cloudlets that you can [create a shared policy](ref:post-policy) for, including a Cloudlet name and Cloudlet type.
+
+## API Reference: Activations
+
+- [Activations index](https://techdocs.akamai.com/cloudlets/reference/activations/llms.txt): full category index
+- [Activate a policy version](https://techdocs.akamai.com/cloudlets/reference/post-policy-activations.md): Asynchronously activates or deactivates the selected Cloudlet policy version on the staging or production networks. When a policy version becomes active on the network, the previously active version gets automatically deactivated. Activating a policy version returns the `id` of the activation, which you can store and use to run the [Get status for an activation](ref:get-policy-activation) operation to check the status value. You can activate a policy on each network only after any previous activations have completed, otherwise you get a 409 error.
+- [List policy activations](https://techdocs.akamai.com/cloudlets/reference/get-policy-activations.md): Returns the complete activation history for the selected policy.
+- [Get status for an activation](https://techdocs.akamai.com/cloudlets/reference/get-policy-activation.md): Returns the status of an activation. See [Activation status](ref:activation-status).
+
+## API Reference: Policies
+
+- [Policies index](https://techdocs.akamai.com/cloudlets/reference/policies/llms.txt): full category index
+- [List shared policies](https://techdocs.akamai.com/cloudlets/reference/get-policies.md): Returns shared policies that are available within your group.
+- [Create a policy](https://techdocs.akamai.com/cloudlets/reference/post-policy.md): Creates a shared policy for a specific Cloudlet type. Currently, you can create a shared policy for the API Prioritization, Edge Redirector, Forward Rewrite, Request Control, Phased Release, and Audience Segmentation Cloudlets. You can then add match rules by [creating a policy version](ref:post-policy-version). If a policy already exists with the same policy name, you receive a 409 status response that contains data for the existing policy.
+- [Remove a policy](https://techdocs.akamai.com/cloudlets/reference/delete-policy.md): Deletes an existing Cloudlets policy. If you don't have the `policyId`, run the [List shared policies](ref:get-policies) operation and store the relevant `id` value. You can't delete a policy if any of its versions is active or being activated on the staging or production networks.
+- [Get a policy](https://techdocs.akamai.com/cloudlets/reference/get-policy.md): Returns information about a shared policy, including its activation status on the staging and production networks. If you don't already have the `policyId`, run the [List shared policies](ref:get-policies) operation and store the relevant `id` value.
+- [Update a policy](https://techdocs.akamai.com/cloudlets/reference/put-policy.md): Updates an existing policy. If you don't already have the `policyId`, run the [list shared policies](ref:get-policies) operation and store the relevant `id` value.
+- [Clone a policy as a shared policy](https://techdocs.akamai.com/cloudlets/reference/post-policy-clone.md): Clones the staging, production, and last modified versions of a non-shared (API v2) or shared policy into a new shared policy. You can also specify any additional versions that you want to clone into the new shared policy. The policy ID is required. If you don't already have the policy ID, use [List shared policies](ref:get-policies) or [List policies](https://techdocs.akamai.com/cloudlets/v2/reference/get-policies) and note the `id` or `policyId` value. When cloning a non-shared policy to a shared policy, a group ID (`groupId`) is required. Policies created using API v2 don't require a `groupId`, so the non-shared policy that you're cloning might not have this data field. If the policy you're cloning doesn’t have a `groupId`, assign one while performing this operation. To check if the non-shared policy has a `groupId`, see [List policies](https://techdocs.akamai.com/cloudlets/v2/reference/get-policies).
+
+## API Reference: Active properties
+
+- [Active properties index](https://techdocs.akamai.com/cloudlets/reference/active-properties/llms.txt): full category index
+- [Get active properties](https://techdocs.akamai.com/cloudlets/reference/get-policy-properties.md): Returns all active properties that are assigned to the policy.
+
+## API Reference: Policy versions
+
+- [Policy versions index](https://techdocs.akamai.com/cloudlets/reference/policy-versions/llms.txt): full category index
+- [Create a policy version](https://techdocs.akamai.com/cloudlets/reference/post-policy-version.md): Creates a policy version, including match rules for a Cloudlet that you're using. If you don't already have the `policyId`, run the [List shared policies](ref:get-policies) operation and store the relevant `id` value.
+- [List policy versions](https://techdocs.akamai.com/cloudlets/reference/get-policy-versions.md): Returns information about all versions of a shared policy.
+- [Get a policy version](https://techdocs.akamai.com/cloudlets/reference/get-policy-version.md): Returns information about a shared policy version, including match rules for a Cloudlet that you're using and whether its locked for changes.
+- [Update a policy version](https://techdocs.akamai.com/cloudlets/reference/put-policy-version.md): Updates the description and match rules for a policy version.
+- [Remove a policy version](https://techdocs.akamai.com/cloudlets/reference/delete-policy-version.md): Deletes a version of a shared policy. You can't delete a policy if it's active on the staging or production network. When you remove a policy version, version numbers aren't reallocated. For example, a policy has 15 versions, and you delete versions 14 and 15. The next version created would be 16, not 14.

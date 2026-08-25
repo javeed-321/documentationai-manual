@@ -1,0 +1,21 @@
+---
+title: "Record sets"
+---
+
+# Edge DNS Documentation
+
+> Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.
+
+## API Reference: Record sets
+
+- [List record set names for a zone](https://techdocs.akamai.com/edge-dns/reference/get-zone-names.md): Retrieves record set names for a zone.
+- [Upload a master zone file](https://techdocs.akamai.com/edge-dns/reference/post-zones-zone-zone-file.md): Upload new record set data for this zone in master zone file format. Replaces any existing record sets. This operation applies to primary zones and secondary zones. See [RFC 1035](http://tools.ietf.org/html/rfc1035) section 5 and [RFC 1034](http://tools.ietf.org/html/rfc1034) section 3.6.1 for more information.  Zone files can contain only US-ASCII characters 0–127. Where allowed, you can encode high-order ASCII characters, 128+, with a backslash plus a three-digit decimal number representing the byte value. For example, `\233` instead of `&eacute;`.  `AKAMAICDN` and `AKAMAITLC` records can't be represented in this format. Uploading a zone file doesn't affect these records.
+- [Get a master zone file](https://techdocs.akamai.com/edge-dns/reference/get-zones-zone-zone-file.md): Download this zone's record set data in master zone file format. Use the recipe below to get the master zone file. This operation applies to primary zones and secondary zones. See [RFC 1035](http://tools.ietf.org/html/rfc1035) section 5 and [RFC 1034](http://tools.ietf.org/html/rfc1034) section 3.6.1 for more information.  `AKAMAICDN` and `AKAMAITLC` records can't be represented in this format, so they're displayed as comment lines.
+- [List record set types for name and zone](https://techdocs.akamai.com/edge-dns/reference/get-zone-name-types.md): Lists all _existing_ record set types for this name. The types are available at [List record types](/reference/get-record-set-types). If the name doesn't exist within the zone, an empty list is returned.
+- [Create a record set](https://techdocs.akamai.com/edge-dns/reference/post-zones-zone-names-name-types-type.md): Creates a new Record set with the specified name and type.
+- [Get a record set](https://techdocs.akamai.com/edge-dns/reference/get-zone-name-type.md): Retrieves a single record set for the zone, record name, and record type specified in the URL.
+- [Replace a record set](https://techdocs.akamai.com/edge-dns/reference/put-zones-zone-names-name-types-type.md): Replaces an existing Record set with the request body. The `name` and `type` need to match the existing record.
+- [Delete a record set](https://techdocs.akamai.com/edge-dns/reference/delete-zone-name-type.md): Removes an existing record set.
+- [Create record sets](https://techdocs.akamai.com/edge-dns/reference/post-zones-zone-recordsets.md): Creates multiple new record sets on this Zone. If any record set fails to create, for example, because a record set with that name and type already exists, the entire operation fails.
+- [Get a zone's record sets](https://techdocs.akamai.com/edge-dns/reference/get-zones-zone-recordsets.md): Lists all record sets for this Zone. It works only for `PRIMARY` and `SECONDARY` zones. This operation is [paginated](/reference/use-pagination).
+- [Replace record sets](https://techdocs.akamai.com/edge-dns/reference/put-zones-zone-recordsets.md): Replaces all record sets that currently exist with the list provided.

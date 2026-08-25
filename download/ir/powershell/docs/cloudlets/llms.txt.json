@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/cloudlets/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/cloudlets/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/cloudlets/llms.txt",
+  "title": "Cloudlets",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Cloudlets",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Cloudlets",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        42
+      ],
+      "raw": "- [Set up cloudlet policies](https://techdocs.akamai.com/powershell/docs/cloudlets.md)\n- [Policies](https://techdocs.akamai.com/powershell/docs/policies.md)\n- [Load balancer](https://techdocs.akamai.com/powershell/docs/load-balancer-configurations.md)\n- [Origin server](https://techdocs.akamai.com/powershell/docs/origin-server.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/cloudlets-index.md)\n- [Policy](https://techdocs.akamai.com/powershell/docs/copy-cloudletpolicy.md): Copy-CloudletPolicy\n- [Active properties](https://techdocs.akamai.com/powershell/docs/get-cloudletpolicyproperty.md): Get-CloudletPolicyProperty\n- [Associated properties](https://techdocs.akamai.com/powershell/docs/get-cloudletproperty.md): Get-CloudletProperty\n- [Cloudlet](https://techdocs.akamai.com/powershell/docs/get-cloudlet.md): Get-Cloudlet\n- [Group](https://techdocs.akamai.com/powershell/docs/get-cloudletgroup.md): Get-CloudletGroup\n- [Load balancer](https://techdocs.akamai.com/powershell/docs/get-cloudletloadbalancer.md): Get-CloudletLoadBalancer\n- [Load balancer activation](https://techdocs.akamai.com/powershell/docs/get-cloudletloadbalanceractivation.md): Get-CloudletLoadBalancerActivation\n- [Load balancer version](https://techdocs.akamai.com/powershell/docs/get-cloudletloadbalancerversion.md): Get-CloudletLoadBalancerVersion\n- [Policy](https://techdocs.akamai.com/powershell/docs/get-cloudletpolicy.md): Get-CloudletPolicy\n- [Policy activation](https://techdocs.akamai.com/powershell/docs/get-cloudletpolicyactivation.md): Get-CloudletPolicyActivation\n- [Policy CSV](https://techdocs.akamai.com/powershell/docs/get-cloudletpolicycsv.md): Get-CloudletPolicyCSV\n- [Policy version](https://techdocs.akamai.com/powershell/docs/get-cloudletpolicyversion.md): Get-CloudletPolicyVersion\n- [Policy version rule](https://techdocs.akamai.com/powershell/docs/get-cloudletpolicyversionrule.md): Get-CloudletPolicyVersionRule\n- [Schema](https://techdocs.akamai.com/powershell/docs/get-cloudletschema.md): Get-CloudletSchema\n- [Load balancer](https://techdocs.akamai.com/powershell/docs/new-cloudletloadbalancer.md): New-CloudletLoadBalancer\n- [Load balancer activation](https://techdocs.akamai.com/powershell/docs/new-cloudletloadbalanceractivation.md): New-CloudletLoadBalancerActivation\n- [Load balancer version](https://techdocs.akamai.com/powershell/docs/new-cloudletloadbalancerversion.md): New-CloudletLoadBalancerVersion\n- [Policy](https://techdocs.akamai.com/powershell/docs/new-cloudletpolicy.md): New-CloudletPolicy\n- [Policy version](https://techdocs.akamai.com/powershell/docs/new-cloudletpolicyversion.md): New-CloudletPolicyVersion\n- [Policy activation](https://techdocs.akamai.com/powershell/docs/new-cloudletpolicyactivation.md): New-CloudletPolicyActivation\n- [Policy version deactivation](https://techdocs.akamai.com/powershell/docs/new-cloudletpolicydeactivation.md): New-CloudletPolicyDeactivation\n- [Policy version rule](https://techdocs.akamai.com/powershell/docs/new-cloudletpolicyversionrule.md): New-CloudletPolicyVersionRule\n- [Load balancer](https://techdocs.akamai.com/powershell/docs/remove-cloudletloadbalancer.md)\n- [Policy](https://techdocs.akamai.com/powershell/docs/remove-cloudletpolicy.md): Remove-CloudletPolicy\n- [Policy version](https://techdocs.akamai.com/powershell/docs/remove-cloudletpolicyversion.md): Remove-CloudletPolicyVersion\n- [Load balancer](https://techdocs.akamai.com/powershell/docs/set-cloudletloadbalancer.md): Set-CloudletLoadBalancer\n- [Load balancer version](https://techdocs.akamai.com/powershell/docs/set-cloudletloadbalancerversion.md): Set-CloudletLoadBalancerVersion\n- [Policy](https://techdocs.akamai.com/powershell/docs/set-cloudletpolicy.md): Set-CloudletPolicy\n- [Policy version](https://techdocs.akamai.com/powershell/docs/set-cloudletpolicyversion.md): Set-CloudletPolicyVersion\n- [Policy version rule](https://techdocs.akamai.com/powershell/docs/set-cloudletpolicyversionrule.md): Set-CloudletPolicyVersionRule",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Set up cloudlet policiesPoliciesLoad balancerOrigin serverFunction indexPolicy: Copy-CloudletPolicyActive properties: Get-CloudletPolicyPropertyAssociated properties: Get-CloudletPropertyCloudlet: Get-CloudletGroup: Get-CloudletGroupLoad balancer: Get-CloudletLoadBalancerLoad balancer activation: Get-CloudletLoadBalancerActivationLoad balancer version: Get-CloudletLoadBalancerVersionPolicy: Get-CloudletPolicyPolicy activation: Get-CloudletPolicyActivationPolicy CSV: Get-CloudletPolicyCSVPolicy version: Get-CloudletPolicyVersionPolicy version rule: Get-CloudletPolicyVersionRuleSchema: Get-CloudletSchemaLoad balancer: New-CloudletLoadBalancerLoad balancer activation: New-CloudletLoadBalancerActivationLoad balancer version: New-CloudletLoadBalancerVersionPolicy: New-CloudletPolicyPolicy version: New-CloudletPolicyVersionPolicy activation: New-CloudletPolicyActivationPolicy version deactivation: New-CloudletPolicyDeactivationPolicy version rule: New-CloudletPolicyVersionRuleLoad balancerPolicy: Remove-CloudletPolicyPolicy version: Remove-CloudletPolicyVersionLoad balancer: Set-CloudletLoadBalancerLoad balancer version: Set-CloudletLoadBalancerVersionPolicy: Set-CloudletPolicyPolicy version: Set-CloudletPolicyVersionPolicy version rule: Set-CloudletPolicyVersionRule",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

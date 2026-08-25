@@ -1,0 +1,25 @@
+# Secure Internet Access Enterprise Documentation
+
+> Secure Internet Access Enterprise (SIA) leverages real-time Akamai Cloud Security Intelligence and Akamai’s proven, globally distributed, recursive DNS platform to identify and block targeted threats such as malware, ransomware, DNS data exfiltration, and phishing. Akamai’s cloud portal lets security teams centrally manage and enforce unified security and acceptable use policies for all employees in minutes.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/etp/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/etp/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/etp/docs/get-started/llms.txt)
+- [Manage SIA](https://techdocs.akamai.com/etp/docs/manage-sia/llms.txt)
+- [Manage SIA Proxy](https://techdocs.akamai.com/etp/docs/manage-sia-proxy/llms.txt)
+- [Manage ETP Client](https://techdocs.akamai.com/etp/docs/manage-etp-client/llms.txt)
+- [Manage Security Connector](https://techdocs.akamai.com/etp/docs/manage-security-connector/llms.txt)
+- [Analyze reports](https://techdocs.akamai.com/etp/docs/analyze-reports/llms.txt)
+- [Enterprise Threat Intelligence](https://techdocs.akamai.com/etp/docs/enterprise-threat-intelligence/llms.txt)
+- [Developer tools](https://techdocs.akamai.com/etp/docs/developer-tools/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/etp/docs/troubleshoot/llms.txt)
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/etp/changelog/llms.txt): full section index

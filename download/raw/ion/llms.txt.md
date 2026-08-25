@@ -1,0 +1,28 @@
+# Ion Documentation
+
+> No matter how users choose to connect, Akamai Ion offers them a seamless experience across different device types and network conditions. Akamai continuously monitors real users, automatically applies best practice performance optimizations, and adapts experiences as content, user behavior, and network conditions change. Ion combines the scalability of Akamai’s global content delivery platform with fast dynamic content acceleration. Ion also leverages Akamai cellular optimizations that lower both latency and user engagement disruptions.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/ion/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/ion/docs/welcome/llms.txt)
+- [Before you begin](https://techdocs.akamai.com/ion/docs/before-you-begin/llms.txt)
+- [Guided configuration](https://techdocs.akamai.com/ion/docs/guided-configuration/llms.txt)
+- [Custom configuration](https://techdocs.akamai.com/ion/docs/custom-configuration/llms.txt)
+- [Tutorials](https://techdocs.akamai.com/ion/docs/tutorials/llms.txt)
+- [Optional features](https://techdocs.akamai.com/ion/docs/optional-features/llms.txt)
+- [Resources](https://techdocs.akamai.com/ion/docs/resources/llms.txt)
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/ion/reference/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/ion/reference/welcome/llms.txt)
+- [API TUTORIALS](https://techdocs.akamai.com/ion/reference/api-tutorials/llms.txt)
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/ion/changelog/llms.txt): full section index

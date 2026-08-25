@@ -1,0 +1,221 @@
+# PowerShell Documentation
+
+> Make calls to many of our API with a consistent interface using our PowerShell module.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: AppSec
+- [Function index](https://techdocs.akamai.com/powershell/docs/appsec-index.md)
+- [Policy selected hostnames](https://techdocs.akamai.com/powershell/docs/add-appsecpolicyselectedhostnames.md): Add-AppSecPolicySelectedHostnames
+- [Configuration selected hostnames](https://techdocs.akamai.com/powershell/docs/add-appsecselectedhostnames.md): Add-AppSecSelectedHostnames
+- [Configuration versions](https://techdocs.akamai.com/powershell/docs/compare-appsecconfigurationversions.md): Compare-AppSecConfigurationVersions
+- [Policy rapid rules](https://techdocs.akamai.com/powershell/docs/disable-appsecpolicyrapidrules-1.md): Disable-AppSecPolicyRapidRules
+- [Policy rapid rules](https://techdocs.akamai.com/powershell/docs/enable-appsecpolicyrapidrules-1.md): Enable-AppSecPolicyRapidRules
+- [Configuration version](https://techdocs.akamai.com/powershell/docs/export-appsecconfiguration.md): Export-AppSecConfiguration
+- [Behavioral DDoS](https://techdocs.akamai.com/powershell/docs/get-appsecpolicybehavioralddos.md): Get-AppSecPolicyBehavioralDDOS
+- [Activation history](https://techdocs.akamai.com/powershell/docs/get-appsecactivationhistory.md): Get-AppSecActivationHistory
+- [Activation request status](https://techdocs.akamai.com/powershell/docs/get-appsecactivationrequeststatus.md): Get-AppSecActivationRequestStatus
+- [Activation status](https://techdocs.akamai.com/powershell/docs/get-appsecactivationstatus.md): Get-AppSecActivationStatus
+- [Attack payload](https://techdocs.akamai.com/powershell/docs/get-appsecattackpayload-1.md): Get-AppSecAttackPayload
+- [Available hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecavailablehostnames.md): Get-AppSecAvailableHostnames
+- [Behavioral DDoS](https://techdocs.akamai.com/powershell/docs/get-appsecbehavioralddos-1.md)
+- [Configuration](https://techdocs.akamai.com/powershell/docs/get-appsecconfiguration.md): Get-AppSecConfiguration
+- [Configuration attack payload logging](https://techdocs.akamai.com/powershell/docs/get-appsecattackpayloadsettings.md): Get-AppSecAttackPayloadSettings
+- [Configuration bypass network lists](https://techdocs.akamai.com/powershell/docs/get-appsecbypassnetworklists.md): Get-AppSecBypassNetworkLists
+- [Configuration evaluation hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecevaluationhostnames.md): Get-AppSecEvaluationHostnames
+- [Configuration evasive path match](https://techdocs.akamai.com/powershell/docs/get-appsecevasivepathmatch.md): Get-AppSecEvasivePathMatch
+- [Configuration version](https://techdocs.akamai.com/powershell/docs/get-appsecconfigurationversion.md): Get-AppSecConfigurationVersion
+- [Configuration version notes](https://techdocs.akamai.com/powershell/docs/get-appsecversionnotes.md): Get-AppSecVersionNotes
+- [Configuration HTTP header logs](https://techdocs.akamai.com/powershell/docs/get-appseclogging.md): Get-AppSecLogging
+- [Configuration Pragma settings](https://techdocs.akamai.com/powershell/docs/get-appsecpragmasettings.md): Get-AppSecPragmaSettings
+- [Configuration request body settings](https://techdocs.akamai.com/powershell/docs/get-appsecrequestsizelimit.md): Get-AppSecRequestSizeLimit
+- [Configuration selected hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecselectedhostnames.md): Get-AppSecSelectedHostnames
+- [Contracts & groups](https://techdocs.akamai.com/powershell/docs/get-appseccontractsandgroups.md): Get-AppSecContractsAndGroups
+- [Cookie settings](https://techdocs.akamai.com/powershell/docs/get-appseccookiesettings-1.md): Get-AppSecCookieSettings
+- [Custom deny action](https://techdocs.akamai.com/powershell/docs/get-appseccustomdenyaction.md): Get-AppSecCustomDenyAction
+- [Custom rule](https://techdocs.akamai.com/powershell/docs/get-appseccustomrule.md): Get-AppSecCustomRule
+- [Custom rule actions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicycustomrules.md): Get-AppSecPolicyCustomRules
+- [Custom rule usage](https://techdocs.akamai.com/powershell/docs/get-appseccustomruleusage-1.md): Get-AppSecCustomRuleUsage
+- [CVE](https://techdocs.akamai.com/powershell/docs/get-appseccve-1.md): Get-AppSecCVE
+- [CVE coverage](https://techdocs.akamai.com/powershell/docs/get-appseccvecoverage-1.md): Get-AppSecCVECoverage
+- [CVE subscription](https://techdocs.akamai.com/powershell/docs/get-appseccvesubscription-1.md): Get-AppSecCVESubscription
+- [Discovered API](https://techdocs.akamai.com/powershell/docs/get-appsecdiscoveredapi.md): Get-AppSecDiscoveredAPI
+- [Discovered API endpoints](https://techdocs.akamai.com/powershell/docs/get-appsecdiscoveredapiendpoints.md): Get-AppSecDiscoveredAPIEndpoints
+- [Export](https://techdocs.akamai.com/powershell/docs/get-appsecexport-1.md): Get-AppSecExport
+- [Export status](https://techdocs.akamai.com/powershell/docs/get-appsecexportstatus-1.md): Get-AppSecExportStatus
+- [Failover hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecfailoverhostnames.md): Get-AppSecFailoverHostnames
+- [Hostname coverage](https://techdocs.akamai.com/powershell/docs/get-appsechostnamecoverage.md): Get-AppSecHostnameCoverage
+- [Hostname coverage match targets](https://techdocs.akamai.com/powershell/docs/get-appsechostnamematchtargets.md): Get-AppSecHostnameMatchTargets
+- [Hostname overlaps](https://techdocs.akamai.com/powershell/docs/get-appsechostnameoverlap.md): Get-AppSecHostnameOverlap
+- [Malware policy](https://techdocs.akamai.com/powershell/docs/get-appsecmalwarepolicy.md): Get-AppSecMalwarePolicy
+- [Malware policy actions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicymalwarepolicy.md): Get-AppSecPolicyMalwarePolicy
+- [Malware policy content type](https://techdocs.akamai.com/powershell/docs/get-appsecmalwarepolicycontenttype.md): Get-AppSecMalwarePolicyContentType
+- [Match target](https://techdocs.akamai.com/powershell/docs/get-appsecmatchtarget.md): Get-AppSecMatchTarget
+- [Onboarding](https://techdocs.akamai.com/powershell/docs/get-appseconboarding.md): Get-AppSecOnboarding
+- [Onboarding activation](https://techdocs.akamai.com/powershell/docs/get-appseconboardingactivation-1.md): Get-AppSecOnboardingActivation
+- [Onboarding certificate validation](https://techdocs.akamai.com/powershell/docs/get-appseconboardingcertificatevalidation-1.md): Get-AppSecOnboardingCertificateValidation
+- [Onboarding CNAME record](https://techdocs.akamai.com/powershell/docs/get-appseconboardingcnamerecord.md): Get-AppSecOnboardingCNAMERecord
+- [Onboarding origin validation](https://techdocs.akamai.com/powershell/docs/get-appseconboardingoriginvalidation.md): Get-AppSecOnboardingOriginValidation
+- [Onboarding settings](https://techdocs.akamai.com/powershell/docs/get-appseconboardingsettings.md): Get-AppSecOnboardingSettings
+- [PII learning](https://techdocs.akamai.com/powershell/docs/get-appsecpiisettings.md): Get-AppSecPIISettings
+- [Policy](https://techdocs.akamai.com/powershell/docs/get-appsecpolicy.md): Get-AppSecPolicy
+- [Policy adaptive intelligence](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyadaptiveintelligence.md): Get-AppSecPolicyAdaptiveIntelligence
+- [Policy API request constraints](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyapirequestconstraints.md): Get-AppSecPolicyAPIRequestConstraints
+- [Policy API endpoints](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyapiendpoints.md): Get-AppSecPolicyAPIEndpoints
+- [Policy attack group action](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyattackgroup.md): Get-AppSecPolicyAttackGroup
+- [Policy attack group exceptions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyattackgroupexceptions.md): Get-AppSecPolicyAttackGroupExceptions
+- [Policy attack group tuning recommendations](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyattackgrouprecommendations.md): Get-AppSecPolicyAttackGroupRecommendations
+- [Policy attack payload logging](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyattackpayload.md): Get-AppSecPolicyAttackPayload
+- [Policy bypass network lists](https://techdocs.akamai.com/powershell/docs/get-appsecpolicybypassnetworklists.md): Get-AppSecPolicyBypassNetworkLists
+- [Policy CPC](https://techdocs.akamai.com/powershell/docs/get-appsecpolicycpc.md): Get-AppSecPolicyCPC
+- [Policy custom rule](https://techdocs.akamai.com/powershell/docs/get-appsecpolicycustomrule.md): Get-AppSecPolicyCustomRule
+- [Policy evaluation attack group action](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationattackgroup.md): Get-AppSecPolicyEvaluationAttackGroup
+- [Policy evaluation attack group exceptions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationattackgroupexceptions.md): Get-AppSecPolicyEvaluationAttackGroupExceptions
+- [Policy evaluation hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationhostnames.md): Get-AppSecPolicyEvaluationHostnames
+- [Policy evaluation penalty box](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationpenaltybox.md): Get-AppSecPolicyEvaluationPenaltyBox
+- [Policy evaluation penalty box condition](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationpenaltyboxcondition.md): Get-AppSecPolicyEvaluationPenaltyBoxCondition
+- [Policy evaluation rule action](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationrule.md): Get-AppSecPolicyEvaluationRule
+- [Policy evaluation rule exceptions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevaluationruleexceptions.md): Get-AppSecPolicyEvaluationRuleExceptions
+- [Policy evasive path match](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyevasivepathmatch.md): Get-AppSecPolicyEvasivePathMatch
+- [Policy IP/Geo Firewall settings](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyipgeofirewall.md): Get-AppSecPolicyIPGeoFirewall
+- [Policy HTTP header logs](https://techdocs.akamai.com/powershell/docs/get-appsecpolicylogging.md): Get-AppSecPolicyLogging
+- [Policy mode](https://techdocs.akamai.com/powershell/docs/get-appsecpolicymode.md): Get-AppSecPolicyMode
+- [Policy penalty box](https://techdocs.akamai.com/powershell/docs/get-appsecpolicypenaltybox.md): Get-AppSecPolicyPenaltyBox
+- [Policy Pragma settings](https://techdocs.akamai.com/powershell/docs/get-appsecpolicypragmasettings.md): Get-AppSecPolicyPragmaSettings
+- [Policy protections](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyprotections.md): Get-AppSecPolicyProtections
+- [Policy rapid rule](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrapidrule.md): Get-AppSecPolicyRapidRule
+- [Policy rapid rule condition](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrapidrulecondition.md): Get-AppSecPolicyRapidRuleCondition
+- [Policy rapid rule default action](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrapidruledefaultaction.md): Get-AppSecPolicyRapidRuleDefaultAction
+- [Policy rapid rule lock](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrapidrulelock.md): Get-AppSecPolicyRapidRuleLock
+- [Policy rapid rules status](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrapidrulesstatus.md): Get-AppSecPolicyRapidRulesStatus
+- [Policy request body settings](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrequestsizelimit.md): Get-AppSecPolicyRequestSizeLimit
+- [Policy selected hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyselectedhostnames.md): Get-AppSecPolicySelectedHostnames
+- [Policy tuning recommendations](https://techdocs.akamai.com/powershell/docs/get-appsecpolicytuningrecommendations.md): Get-AppSecPolicyTuningRecommendations
+- [Prefetch requests](https://techdocs.akamai.com/powershell/docs/get-appsecprefetch.md): Get-AppSecPrefetch
+- [Rate policy](https://techdocs.akamai.com/powershell/docs/get-appsecratepolicy.md): Get-AppSecRatePolicy
+- [Rate policy actions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyratepolicy.md): Get-AppSecPolicyRatePolicy
+- [Reputation analysis](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyreputationanalysis.md): Get-AppSecPolicyReputationAnalysis
+- [Reputation profile](https://techdocs.akamai.com/powershell/docs/get-appsecreputationprofile.md): Get-AppSecReputationProfile
+- [Reputation profile action](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyreputationprofile.md): Get-AppSecPolicyReputationProfile
+- [URL protection policy](https://techdocs.akamai.com/powershell/docs/get-appsecurlprotectionpolicy.md): Get-AppSecURLProtectionPolicy
+- [URL protection policy actions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyurlprotectionpolicy.md): Get-AppSecPolicyURLProtectionPolicy
+- [Selectable hostnames](https://techdocs.akamai.com/powershell/docs/get-appsecselectablehostnames.md): Get-AppSecSelectableHostnames
+- [SIEM settings](https://techdocs.akamai.com/powershell/docs/get-appsecsiemsettings.md): Get-AppSecSiemSettings
+- [SIEM versions](https://techdocs.akamai.com/powershell/docs/get-appsecsiemversions.md): Get-AppSecSiemVersions
+- [Slow POST protection](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyslowpost.md): Get-AppSecPolicySlowPost
+- [Subscribers](https://techdocs.akamai.com/powershell/docs/get-appsecsubscribers.md): Get-AppSecSubscribers
+- [WAF rule action](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrule.md): Get-AppSecPolicyRule
+- [WAF rule exceptions](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyruleexceptions.md): Get-AppSecPolicyRuleExceptions
+- [WAF rule tuning recommendations](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyrulerecommendations.md): Get-AppSecPolicyRuleRecommendations
+- [WAF rule upgrade details](https://techdocs.akamai.com/powershell/docs/get-appsecpolicyupgradedetails.md): Get-AppSecPolicyUpgradeDetails
+- [Discovered API](https://techdocs.akamai.com/powershell/docs/hide-appsecdiscoveredapi.md): Hide-AppSecDiscoveredAPI
+- [Policy rapid rule](https://techdocs.akamai.com/powershell/docs/lock-appsecpolicyrapidrule.md): Lock-AppSecPolicyRapidRule
+- [Behavioral DDoS](https://techdocs.akamai.com/powershell/docs/new-appsecbehavioralddos.md): New-AppSecBehavioralDDOS
+- [Activations](https://techdocs.akamai.com/powershell/docs/new-appsecactivation.md): New-AppSecActivation
+- [Configuration](https://techdocs.akamai.com/powershell/docs/new-appsecconfiguration.md): New-AppSecConfiguration
+- [Configuration version](https://techdocs.akamai.com/powershell/docs/new-appsecconfigurationversion.md): New-AppSecConfigurationVersion
+- [Custom deny action](https://techdocs.akamai.com/powershell/docs/new-appseccustomdenyaction.md): New-AppSecCustomDenyAction
+- [Custom rule](https://techdocs.akamai.com/powershell/docs/new-appseccustomrule.md): New-AppSecCustomRule
+- [CVE subscription](https://techdocs.akamai.com/powershell/docs/new-appseccvesubscription.md): New-AppSecCVESubscription
+- [Discovered API endpoint](https://techdocs.akamai.com/powershell/docs/new-appsecdiscoveredapiendpoint.md): New-AppSecDiscoveredAPIEndpoint
+- [Malware policy](https://techdocs.akamai.com/powershell/docs/new-appsecmalwarepolicy.md): New-AppSecMalwarePolicy
+- [Match target](https://techdocs.akamai.com/powershell/docs/new-appsecmatchtarget.md): New-AppSecMatchTarget
+- [Onboarding](https://techdocs.akamai.com/powershell/docs/new-appseconboarding.md): New-AppSecOnboarding
+- [Onboarding activation](https://techdocs.akamai.com/powershell/docs/new-appseconboardingactivation.md): New-AppSecOnboardingActivation
+- [Policy](https://techdocs.akamai.com/powershell/docs/new-appsecpolicy.md): New-AppSecPolicy
+- [Rate policy](https://techdocs.akamai.com/powershell/docs/new-appsecratepolicy.md): New-AppSecRatePolicy
+- [Reputation profile](https://techdocs.akamai.com/powershell/docs/new-appsecreputationprofile.md): New-AppSecReputationProfile
+- [Subscriptions](https://techdocs.akamai.com/powershell/docs/new-appsecsubscription.md): New-AppSecSubscription
+- [URL protection policy](https://techdocs.akamai.com/powershell/docs/new-appsecurlprotectionpolicy.md): New-AppSecURLProtectionPolicy
+- [Configuration evaluation hostnames](https://techdocs.akamai.com/powershell/docs/protect-appsecevaluationhostnames.md): Protect-AppSecEvaluationHostnames
+- [Policy evaluation hostnames](https://techdocs.akamai.com/powershell/docs/protect-appsecpolicyevaluationhostnames.md): Protect-AppSecPolicyEvaluationHostnames
+- [Behavioral DDoS](https://techdocs.akamai.com/powershell/docs/remove-appsecbehavioralddos.md): Remove-AppSecBehavioralDDOS
+- [Configuration](https://techdocs.akamai.com/powershell/docs/remove-appsecconfiguration.md): Remove-AppSecConfiguration
+- [Configuration version](https://techdocs.akamai.com/powershell/docs/remove-appsecconfigurationversion.md): Remove-AppSecConfigurationVersion
+- [Configuration selected hostnames](https://techdocs.akamai.com/powershell/docs/remove-appsecselectedhostnames.md): Remove-AppSecSelectedHostnames
+- [Custom deny action](https://techdocs.akamai.com/powershell/docs/remove-appseccustomdenyaction.md): Remove-AppSecCustomDenyAction
+- [Custom rule](https://techdocs.akamai.com/powershell/docs/remove-appseccustomrule.md): Remove-AppSecCustomRule
+- [CVE subscription](https://techdocs.akamai.com/powershell/docs/remove-appseccvesubscription.md): Remove-AppSecCVESubscription
+- [Malware policy](https://techdocs.akamai.com/powershell/docs/remove-appsecmalwarepolicy.md): Remove-AppSecMalwarePolicy
+- [Match target](https://techdocs.akamai.com/powershell/docs/remove-appsecmatchtarget.md): Remove-AppSecMatchTarget
+- [Onboarding](https://techdocs.akamai.com/powershell/docs/remove-appseconboarding.md): Remove-AppSecOnboarding
+- [Policy](https://techdocs.akamai.com/powershell/docs/remove-appsecpolicy.md): Remove-AppSecPolicy
+- [Policy selected hostnames](https://techdocs.akamai.com/powershell/docs/remove-appsecpolicyselectedhostnames.md): Remove-AppSecPolicySelectedHostnames
+- [Rate policy](https://techdocs.akamai.com/powershell/docs/remove-appsecratepolicy.md): Remove-AppSecRatePolicy
+- [Reputation profile](https://techdocs.akamai.com/powershell/docs/remove-appsecreputationprofile.md): Remove-AppSecReputationProfile
+- [Subscriptions](https://techdocs.akamai.com/powershell/docs/remove-appsecsubscription.md): Remove-AppSecSubscription
+- [URL protection policy](https://techdocs.akamai.com/powershell/docs/remove-appsecurlprotectionpolicy.md): Remove-AppSecURLProtectionPolicy
+- [Configuration](https://techdocs.akamai.com/powershell/docs/rename-appsecconfiguration.md): Rename-AppSecConfiguration
+- [Attack payload](https://techdocs.akamai.com/powershell/docs/set-appsecattackpayload.md): Set-AppSecAttackPayload
+- [Behavioral DDoS](https://techdocs.akamai.com/powershell/docs/set-appsecbehavioralddos.md): Set-AppSecBehavioralDDOS
+- [Configuration attack payload logging](https://techdocs.akamai.com/powershell/docs/set-appsecattackpayloadsettings.md): Set-AppSecAttackPayloadSettings
+- [Configuration bypass network lists](https://techdocs.akamai.com/powershell/docs/set-appsecbypassnetworklists.md): Set-AppSecBypassNetworkLists
+- [Configuration evaluation hostnames](https://techdocs.akamai.com/powershell/docs/set-appsecevaluationhostnames.md): Set-AppSecEvaluationHostnames
+- [Configuration evasive path match](https://techdocs.akamai.com/powershell/docs/set-appsecevasivepathmatch.md): Set-AppSecEvasivePathMatch
+- [Configuration HTTP header logs](https://techdocs.akamai.com/powershell/docs/set-appseclogging.md): Set-AppSecLogging
+- [Configuration Pragma settings](https://techdocs.akamai.com/powershell/docs/set-appsecpragmasettings.md): Set-AppSecPragmaSettings
+- [Configuration selected hostnames](https://techdocs.akamai.com/powershell/docs/set-appsecselectedhostnames.md): Set-AppSecSelectedHostnames
+- [Configuration request body settings](https://techdocs.akamai.com/powershell/docs/set-appsecrequestsizelimit.md): Set-AppSecRequestSizeLimit
+- [Configuration version notes](https://techdocs.akamai.com/powershell/docs/set-appsecversionnotes.md): Set-AppSecVersionNotes
+- [Cookie settings](https://techdocs.akamai.com/powershell/docs/set-appseccookiesettings.md): Set-AppSecCookieSettings
+- [Custom deny action](https://techdocs.akamai.com/powershell/docs/set-appseccustomdenyaction.md): Set-AppSecCustomDenyAction
+- [Custom rule](https://techdocs.akamai.com/powershell/docs/set-appseccustomrule.md): Set-AppSecCustomRule
+- [Evaluation rate policy](https://techdocs.akamai.com/powershell/docs/set-appsecevaluationratepolicy.md): Set-AppSecEvaluationRatePolicy
+- [JA4 fingerprint](https://techdocs.akamai.com/powershell/docs/set-appsecja4fingerprint.md): Set-AppSecJA4Fingerprint
+- [Malware policy](https://techdocs.akamai.com/powershell/docs/set-appsecmalwarepolicy.md): Set-AppSecMalwarePolicy
+- [Match target](https://techdocs.akamai.com/powershell/docs/set-appsecmatchtarget.md): Set-AppSecMatchTarget
+- [Match target order](https://techdocs.akamai.com/powershell/docs/set-appsecmatchtargetorder.md): Set-AppSecMatchTargetOrder
+- [PII learning](https://techdocs.akamai.com/powershell/docs/set-appsecpiisettings.md): Set-AppSecPIISettings
+- [Onboarding origin validation](https://techdocs.akamai.com/powershell/docs/submit-appseconboardingoriginvalidation.md): Submit-AppSecOnboardingOriginValidation
+- [Onboarding settings](https://techdocs.akamai.com/powershell/docs/set-appseconboardingsettings.md): Set-AppSecOnboardingSettings
+- [Policy](https://techdocs.akamai.com/powershell/docs/set-appsecpolicy.md): Set-AppSecPolicy
+- [Policy adaptive intelligence](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyadaptiveintelligence.md): Set-AppSecPolicyAdaptiveIntelligence
+- [Policy API request constraints](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyapirequestconstraints.md): Set-AppSecPolicyAPIRequestConstraints
+- [Policy attack group action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyattackgroup.md): Set-AppSecPolicyAttackGroup
+- [Policy attack group exceptions](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyattackgroupexceptions.md): Set-AppSecPolicyAttackGroupExceptions
+- [Policy attack payload logging](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyattackpayload.md): Set-AppSecPolicyAttackPayload
+- [Policy behavioral DDoS](https://techdocs.akamai.com/powershell/docs/set-appsecpolicybehavioralddos.md): Set-AppSecPolicyBehavioralDDOS
+- [Policy bypass network lists](https://techdocs.akamai.com/powershell/docs/set-appsecpolicybypassnetworklists.md): Set-AppSecPolicyBypassNetworkLists
+- [Policy CPC](https://techdocs.akamai.com/powershell/docs/set-appsecpolicycpc.md): Set-AppSecPolicyCPC
+- [Policy custom rule action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicycustomrule.md): Set-AppSecPolicyCustomRule
+- [Policy evaluation attack group action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationattackgroup.md): Set-AppSecPolicyEvaluationAttackGroup
+- [Policy evaluation attack group exceptions](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationattackgroupexceptions.md): Set-AppSecPolicyEvaluationAttackGroupExceptions
+- [Policy evaluation hostnames](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationhostnames.md): Set-AppSecPolicyEvaluationHostnames
+- [Policy evaluation mode](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationmode.md): Set-AppSecPolicyEvaluationMode
+- [Policy evaluation penalty box](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationpenaltybox.md): Set-AppSecPolicyEvaluationPenaltyBox
+- [Policy evaluation penalty box condition](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationpenaltyboxcondition.md): Set-AppSecPolicyEvaluationPenaltyBoxCondition
+- [Policy evaluation rule action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationrule.md): Set-AppSecPolicyEvaluationRule
+- [Policy evaluation rule exceptions](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevaluationruleexceptions.md): Set-AppSecPolicyEvaluationRuleExceptions
+- [Policy evasive path match](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyevasivepathmatch.md): Set-AppSecPolicyEvasivePathMatch
+- [Policy IP/Geo Firewall settings](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyipgeofirewall.md): Set-AppSecPolicyIPGeoFirewall
+- [Policy HTTP header logs](https://techdocs.akamai.com/powershell/docs/set-appsecpolicylogging.md): Set-AppSecPolicyLogging
+- [Policy malware policy action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicymalwarepolicy.md): Set-AppSecPolicyMalwarePolicy
+- [Policy mode](https://techdocs.akamai.com/powershell/docs/set-appsecpolicymode.md): Set-AppSecPolicyMode
+- [Policy penalty box](https://techdocs.akamai.com/powershell/docs/set-appsecpolicypenaltybox.md): Set-AppSecPolicyPenaltyBox
+- [Policy penalty box condition](https://techdocs.akamai.com/powershell/docs/set-appsecpolicypenaltyboxcondition.md): Set-AppSecPolicyPenaltyBoxCondition
+- [Policy Pragma settings](https://techdocs.akamai.com/powershell/docs/set-appsecpolicypragmasettings.md): Set-AppSecPolicyPragmaSettings
+- [Policy protections](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyprotections.md): Set-AppSecPolicyProtections
+- [Policy rapid rule](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyrapidrule.md): Set-AppSecPolicyRapidRule
+- [Policy rapid rule condition](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyrapidrulecondition.md): Set-AppSecPolicyRapidRuleCondition
+- [Policy rapid rule default action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyrapidruledefaultaction.md): Set-AppSecPolicyRapidRuleDefaultAction
+- [Policy rate policy actions](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyratepolicy.md): Set-AppSecPolicyRatePolicy
+- [Policy reputation profile action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyreputationprofile.md): Set-AppSecPolicyReputationProfile
+- [Policy request body settings](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyrequestsizelimit.md): Set-AppSecPolicyRequestSizeLimit
+- [Policy selected hostnames](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyselectedhostnames.md): Set-AppSecPolicySelectedHostnames
+- [Policy tuning recommendations](https://techdocs.akamai.com/powershell/docs/set-appsecpolicytuningrecommendations.md): Set-AppSecPolicyTuningRecommendations
+- [Prefetch requests](https://techdocs.akamai.com/powershell/docs/set-appsecprefetch.md): Set-AppSecPrefetch
+- [Rate policy](https://techdocs.akamai.com/powershell/docs/set-appsecratepolicy.md): Set-AppSecRatePolicy
+- [Reputation analysis](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyreputationanalysis.md): Set-AppSecPolicyReputationAnalysis
+- [Reputation profile](https://techdocs.akamai.com/powershell/docs/set-appsecreputationprofile.md): Set-AppSecReputationProfile
+- [SIEM settings](https://techdocs.akamai.com/powershell/docs/set-appsecsiemsettings.md): Set-AppSecSiemSettings
+- [Slow POST protection](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyslowpost.md): Set-AppSecPolicySlowPost
+- [WAF policy rule action](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyrule.md): Set-AppSecPolicyRule
+- [WAF rule exceptions](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyruleexceptions.md): Set-AppSecPolicyRuleExceptions
+- [URL protection policy](https://techdocs.akamai.com/powershell/docs/set-appsecurlprotectionpolicy.md): Set-AppSecURLProtectionPolicy
+- [URL protection policy actions](https://techdocs.akamai.com/powershell/docs/set-appsecpolicyurlprotectionpolicy.md): Set-AppSecPolicyURLProtectionPolicy
+- [Discovered API](https://techdocs.akamai.com/powershell/docs/show-appsecdiscoveredapi.md): Show-AppSecDiscoveredAPI
+- [Onboarding origin validation](https://techdocs.akamai.com/powershell/docs/skip-appseconboardingoriginvalidation.md): Skip-AppSecOnboardingOriginValidation
+- [Onboarding CNAME record](https://techdocs.akamai.com/powershell/docs/submit-appseconboardingcnamerecord.md): Submit-AppSecOnboardingCNAMERecord
+- [Onboarding certificate validation](https://techdocs.akamai.com/powershell/docs/submit-appseconboardingcertificatevalidation.md): Submit-AppSecOnboardingCertificateValidation
+- [Policy rapid rule](https://techdocs.akamai.com/powershell/docs/unlock-appsecpolicyrapidrule.md): Unlock-AppSecPolicyRapidRule
+- [KRS rule set](https://techdocs.akamai.com/powershell/docs/update-appseckrsruleset.md): Update-AppSecKRSRuleSet

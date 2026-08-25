@@ -1,0 +1,106 @@
+{
+  "slug": "app-platform/docs/labs/llms.txt",
+  "source": "https://techdocs.akamai.com/app-platform/docs/labs/llms.txt.md",
+  "url": "https://techdocs.akamai.com/app-platform/docs/labs/llms.txt",
+  "title": "Labs",
+  "description": "",
+  "section": "App Platform for LKE",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# App Platform for LKE Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "App Platform for LKE Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> App Platform is a Kubernetes service that combines developer-centric and operations-centric tooling along with automation and a self-service portal. This streamlines the application life cycle when using Kubernetes, from development to delivery to the management of containerized application workloads.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "App Platform is a Kubernetes service that combines developer-centric and operations-centric tooling along with automation and a self-service portal. This streamlines the application life cycle when using Kubernetes, from development to delivery to the management of containerized application workloads.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/app-platform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/app-platform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Labs",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Labs",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        35
+      ],
+      "raw": "- [Getting started with labs](https://techdocs.akamai.com/app-platform/docs/labs-overview.md)\n- [Create code repositories and images](https://techdocs.akamai.com/app-platform/docs/create-code-repositories-and-images.md)\n- [Create code repositories](https://techdocs.akamai.com/app-platform/docs/create-repos.md)\n- [Register code repositories](https://techdocs.akamai.com/app-platform/docs/register-repos.md)\n- [Create container images](https://techdocs.akamai.com/app-platform/docs/create-images.md)\n- [Trigger builds](https://techdocs.akamai.com/app-platform/docs/trigger-builds.md)\n- [Push images to Harbor](https://techdocs.akamai.com/app-platform/docs/push-images.md)\n- [Create workloads](https://techdocs.akamai.com/app-platform/docs/create-workloads-with-argocd.md)\n- [Create Secrets](https://techdocs.akamai.com/app-platform/docs/create-secrets.md)\n- [Use the Catalog](https://techdocs.akamai.com/app-platform/docs/use-catalog.md)\n- [Create workloads](https://techdocs.akamai.com/app-platform/docs/create-workloads.md)\n- [Configure auto image updater](https://techdocs.akamai.com/app-platform/docs/auto-image-update.md)\n- [Create a PostgreSQL database](https://techdocs.akamai.com/app-platform/docs/create-postgresql-db.md)\n- [Publicly expose workloads](https://techdocs.akamai.com/app-platform/docs/expose-services.md)\n- [Secure workloads](https://techdocs.akamai.com/app-platform/docs/secure-workloads.md)\n- [Scan your images for vulnerabilities](https://techdocs.akamai.com/app-platform/docs/scan-images.md)\n- [Scan your running containers for vulnerabilities](https://techdocs.akamai.com/app-platform/docs/scan-containers.md)\n- [Monitor and debug workloads](https://techdocs.akamai.com/app-platform/docs/monitor-and-debug-workloads.md)\n- [View container logs](https://techdocs.akamai.com/app-platform/docs/view-logs.md)\n- [View container metrics](https://techdocs.akamai.com/app-platform/docs/view-metrics.md)\n- [Using custom metrics](https://techdocs.akamai.com/app-platform/docs/custom-metrics.md)\n- [Monitoring service availability](https://techdocs.akamai.com/app-platform/docs/monitor-services.md)\n- [Advanced labs](https://techdocs.akamai.com/app-platform/docs/advanced-labs.md)\n- [Create network policies](https://techdocs.akamai.com/app-platform/docs/create-netpols.md)\n- [Canary deployment](https://techdocs.akamai.com/app-platform/docs/canary-deployment.md)\n- [Create a RabbitMQ cluster](https://techdocs.akamai.com/app-platform/docs/create-rabbitmq-cluster.md)\n- [Use a Git client with Gitea](https://techdocs.akamai.com/app-platform/docs/using-git-client.md)\n- [Configuring a CNAME](https://techdocs.akamai.com/app-platform/docs/configure-cname.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Getting started with labsCreate code repositories and imagesCreate code repositoriesRegister code repositoriesCreate container imagesTrigger buildsPush images to HarborCreate workloadsCreate SecretsUse the CatalogCreate workloadsConfigure auto image updaterCreate a PostgreSQL databasePublicly expose workloadsSecure workloadsScan your images for vulnerabilitiesScan your running containers for vulnerabilitiesMonitor and debug workloadsView container logsView container metricsUsing custom metricsMonitoring service availabilityAdvanced labsCreate network policiesCanary deploymentCreate a RabbitMQ clusterUse a Git client with GiteaConfiguring a CNAME",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

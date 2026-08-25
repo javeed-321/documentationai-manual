@@ -1,0 +1,106 @@
+{
+  "slug": "etp-config/reference/policies/llms.txt",
+  "source": "https://techdocs.akamai.com/etp-config/reference/policies/llms.txt.md",
+  "url": "https://techdocs.akamai.com/etp-config/reference/policies/llms.txt",
+  "title": "Policies",
+  "description": "",
+  "section": "SIA Configuration API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# SIA Configuration API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "SIA Configuration API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Secure Internet Access (SIA) Configuration API offers a programmatic interface to manage policy settings to protect against enterprise security and acceptable user policy related events. A distributed configuration encapsulates all the rules for how to process DNS requests for your enterprise.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Secure Internet Access (SIA) Configuration API offers a programmatic interface to manage policy settings to protect against enterprise security and acceptable user policy related events. A distributed configuration encapsulates all the rules for how to process DNS requests for your enterprise.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/etp-config/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/etp-config/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Policies",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Policies",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        15
+      ],
+      "raw": "- [Create a policy](https://techdocs.akamai.com/etp-config/reference/post-policy.md): Creates a new policy.\n- [List policies](https://techdocs.akamai.com/etp-config/reference/get-policies.md): Returns all policies.\n- [Get a policy](https://techdocs.akamai.com/etp-config/reference/get-policy.md): Returns the details of a policy.\n- [Update a policy](https://techdocs.akamai.com/etp-config/reference/put-policy.md): Modifies the specified policy.\n- [Remove a policy](https://techdocs.akamai.com/etp-config/reference/delete-policy.md): Deletes the specified policy.\n- [Get policy metadata](https://techdocs.akamai.com/etp-config/reference/get-policy-metadata.md): Returns the policy metadata details.\n- [List built-in responses](https://techdocs.akamai.com/etp-config/reference/get-responses.md): Returns all available Akamai built-in responses.\n- [List security category predefined configurations](https://techdocs.akamai.com/etp-config/reference/get-security-categories.md): Returns all available predefined security categories.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a policy: Creates a new policy.List policies: Returns all policies.Get a policy: Returns the details of a policy.Update a policy: Modifies the specified policy.Remove a policy: Deletes the specified policy.Get policy metadata: Returns the policy metadata details.List built-in responses: Returns all available Akamai built-in responses.List security category predefined configurations: Returns all available predefined security categories.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

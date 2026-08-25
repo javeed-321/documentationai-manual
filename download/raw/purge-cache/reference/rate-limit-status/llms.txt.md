@@ -1,0 +1,8 @@
+# Purge Cache Documentation
+
+> Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/purge-cache/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Rate limit status
+- [Check rate and object limit statuses](https://techdocs.akamai.com/purge-cache/reference/post-rate-limit-status.md): The Fast Purge API uses a token bucket model for [rate limiting](ref:rate-limiting) to protect itself from inadvertent or malicious overuse. For each Akamai account, there's a rate limit shared by all object types (CP codes, cache tags, and URL/ARLs), and three separate resource limits for each object type. Each purge request uses one rate limit token from the requests bucket. Each purge object in a request takes up a token from the resource bucket. This operation fetches information on the remaining number of requests and objects for a specific account. You can use these details to monitor the request consumption or throttle requests to prevent exceeding the limits, which results in the [429](ref:429) error.

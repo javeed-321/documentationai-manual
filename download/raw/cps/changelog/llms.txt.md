@@ -1,0 +1,17 @@
+# Certificate Provisioning System Documentation
+
+> Akamai’s Certificate Provisioning System (CPS) allows you to self-provision and manage your Secure Sockets Layer (SSL) and Transport Layer Security (TLS) certificates. It supports all certificate options, including third party.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cps/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [June 24, 2025 — Akamai-managed OV and EV root certificate transition to DigiCert G5 roots](https://techdocs.akamai.com/cps/changelog/june-24-2025-ov-ev-root-cert-transition-digicert-g5.md)
+- [April 23, 2025 — CPS: Security and technology stack up upgrade](https://techdocs.akamai.com/cps/changelog/apr-23-2025-security-tech-stack-up-upgrade.md)
+- [Apr 2, 2025 – CPS: DigiCert root selection update](https://techdocs.akamai.com/cps/changelog/apr-2-2025-cps-digicert-root-selection-update.md)
+- [Mar 6, 2025 – CPS: Default certificate chain update](https://techdocs.akamai.com/cps/changelog/mar-6-2025-cps-update.md)
+- [Feb 11, 2025 – CPS update: New DigiCert root certificate options](https://techdocs.akamai.com/cps/changelog/feb-11-2025-cps-update-new-digicert-root-certificate-options.md)
+- [Jan 13, 2025 – CPS updates](https://techdocs.akamai.com/cps/changelog/jan-13-2025-cps-updates.md)
+- [Oct 9, 2024 – CPS update: Event Logger restored](https://techdocs.akamai.com/cps/changelog/oct-9-2024-cps-update-event-logger-restored.md)
+- [Sep 18, 2024 – CPS update](https://techdocs.akamai.com/cps/changelog/sep-18-2024-cps-update.md)
+- [Sep 5, 2024 – CPS update for creating certificates](https://techdocs.akamai.com/cps/changelog/sep-5-2024-cps-update-for-creating-certificates.md)
+- [Aug 21, 2024 – CPS certificate history retrieval update](https://techdocs.akamai.com/cps/changelog/aug-certificate-history-retrieval-update.md)

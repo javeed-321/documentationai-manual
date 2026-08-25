@@ -1,0 +1,106 @@
+{
+  "slug": "cloud-wrapper/reference/properties/llms.txt",
+  "source": "https://techdocs.akamai.com/cloud-wrapper/reference/properties/llms.txt.md",
+  "url": "https://techdocs.akamai.com/cloud-wrapper/reference/properties/llms.txt",
+  "title": "Properties",
+  "description": "",
+  "section": "Cloud Wrapper",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Cloud Wrapper Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Cloud Wrapper Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Cloud Wrapper optimizes connectivity between cloud infrastructures and the Akamai Intelligent Edge. It uses custom caching to reduce origin requests and the cost to distribute content from the cloud. If you have a high volume of end-user requests, Cloud Wrapper can help provide consistent, high-quality experiences.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Cloud Wrapper optimizes connectivity between cloud infrastructures and the Akamai Intelligent Edge. It uses custom caching to reduce origin requests and the cost to distribute content from the cloud. If you have a high volume of end-user requests, Cloud Wrapper can help provide consistent, high-quality experiences.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/cloud-wrapper/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/cloud-wrapper/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Properties",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Properties",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        9
+      ],
+      "raw": "- [List properties](https://techdocs.akamai.com/cloud-wrapper/reference/get-properties.md): View a list of properties for delivery products that are eligible to enable Cloud Wrapper.\n- [List origins](https://techdocs.akamai.com/cloud-wrapper/reference/get-origins.md): View a list of [origin](https://techdocs.akamai.com/property-mgr/reference/latest-origin) servers configured in eligible delivery properties. The API pulls response data from the property as it's shown in PAPI. At least one origin server entry is shown at the top-level for the `default` rule. If additional origin servers are set in child-level rules in the same property, they're revealed at a lower level.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List properties: View a list of properties for delivery products that are eligible to enable Cloud Wrapper.List origins: View a list of origin servers configured in eligible delivery properties. The API pulls response data from the property as it's shown in PAPI. At least one origin server entry is shown at the top-level for the default rule. If additional origin servers are set in child-level rules in the same property, they're revealed at a lower level.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# API Acceleration Documentation
+
+> Akamai's API Acceleration improves the performance, security, and scalability of your APIs.  API Acceleration has a specialized network of servers, metadata optimization, and mapping strategies designed to meet the unique requirements and challenges of delivering performant API and beacon traffic.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/api-acceleration/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Configure
+- [Configure API Acceleration](https://techdocs.akamai.com/api-acceleration/docs/config-api-accel.md)
+- [Set up SureRoute test object](https://techdocs.akamai.com/api-acceleration/docs/setup-sureroute-test-object.md)
+- [Identify origin server](https://techdocs.akamai.com/api-acceleration/docs/identify-origin-server.md)
+- [Create your API Acceleration property](https://techdocs.akamai.com/api-acceleration/docs/customize-rules-beh-settings.md)
+- [Test on staging](https://techdocs.akamai.com/api-acceleration/docs/test-stage.md)
+- [Go live](https://techdocs.akamai.com/api-acceleration/docs/go-live.md)
+- [Create alerts](https://techdocs.akamai.com/api-acceleration/docs/run-rpts-create-alerts.md)

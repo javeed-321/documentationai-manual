@@ -1,0 +1,10 @@
+# API Definitions Documentation
+
+> Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/api-definitions/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Contracts and groups
+- [List contracts and groups](https://techdocs.akamai.com/api-definitions/reference/get-contracts-groups.md): You provision each API endpoint within the context of your contract with Akamai and a Control Center portal group. The response objects encapsulate pairings of contract and group identifiers available within the scope of the user who provisioned the API token, as described in [Get started](ref:api-get-started).
+- [List hostnames](https://techdocs.akamai.com/api-definitions/reference/get-contract-group-hosts.md): Lists all hostnames through which API consumers can access an endpoint service under a given contract and group pairing. You can use Property Manager (or [PAPI](https://techdocs.akamai.com/property-mgr/reference/api)) to create new hostnames to make available to users.
+- [List hostnames with access control groups](https://techdocs.akamai.com/api-definitions/reference/get-contract-group-hosts-acgs.md): Lists all hostnames through which API consumers can access an endpoint service under a given contract and group pairing. Returns each hostname together with the access control group where the hostname is registered. You can use Property Manager (or [PAPI](https://techdocs.akamai.com/property-mgr/reference/api)) to create new hostnames to make available to users.

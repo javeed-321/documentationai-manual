@@ -1,0 +1,26 @@
+# EdgeWorkers Documentation
+
+> Use Akamai's EdgeWorkers service to execute JavaScript functions at the edge and create customized web experiences based on geolocation, device characteristics, and more.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edgeworkers/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Welcome
+- [Welcome to EdgeWorkers](https://techdocs.akamai.com/edgeworkers/docs/welcome-to-edgeworkers.md)
+- [EdgeWorkers event model](https://techdocs.akamai.com/edgeworkers/docs/event-handler-functions.md)
+- [Response orchestration](https://techdocs.akamai.com/edgeworkers/docs/response-orchestration.md)
+- [Administrator and developer roles](https://techdocs.akamai.com/edgeworkers/docs/administrator-and-developer-roles.md)
+- [Specifications](https://techdocs.akamai.com/edgeworkers/docs/specifications.md)
+- [Akamai Functions & EdgeWorkers comparison](https://techdocs.akamai.com/edgeworkers/docs/akamai-functions-edgeworkers-comparison.md)
+- [Use cases](https://techdocs.akamai.com/edgeworkers/docs/ew-functions-comparison-use-cases.md)
+- [Tutorials](https://techdocs.akamai.com/edgeworkers/docs/use-cases.md)
+- [Store locator](https://techdocs.akamai.com/edgeworkers/docs/store-locator.md): Learn how to execute store locator in a serverless function with EdgeWorkers
+- [Redirect pages based on location](https://techdocs.akamai.com/edgeworkers/docs/redirect-pages-based-on-location.md)
+- [Manifest and Playlist Manipulation](https://techdocs.akamai.com/edgeworkers/docs/manifest-and-playlist-personalization.md)
+- [Live program replacement](https://techdocs.akamai.com/edgeworkers/docs/live-program-replacement.md)
+- [Content insertion](https://techdocs.akamai.com/edgeworkers/docs/content-insertion.md)
+- [Response body processing](https://techdocs.akamai.com/edgeworkers/docs/process-response-bodies.md)
+- [Response content transformation](https://techdocs.akamai.com/edgeworkers/docs/transform-response-content.md)
+- [Dynamic Content Assembly using the html-rewriter](https://techdocs.akamai.com/edgeworkers/docs/html-rewriter-dynamic-content-assembly.md): Learn how to use the EdgeWorkers [html-rewriter](doc:htmlrewriter) to generate dynamic HTML content.
+- [Send analytic beacons without waiting for a response](https://techdocs.akamai.com/edgeworkers/docs/fire-and-forget.md): Fire and forget - Send beacons on each request, without waiting for a beacon collector response
+- [Use a Content Security Policy to cut latency, not security](https://techdocs.akamai.com/edgeworkers/docs/content-security-policy.md)
+- [Use npm package manager to import external modules](https://techdocs.akamai.com/edgeworkers/docs/import-external-module-npm-package-mgr.md): Unwrapping Packages - A guide to using external modules in EdgeWorkers

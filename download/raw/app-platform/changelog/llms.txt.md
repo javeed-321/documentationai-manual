@@ -1,0 +1,17 @@
+# App Platform for LKE Documentation
+
+> App Platform is a Kubernetes service that combines developer-centric and operations-centric tooling along with automation and a self-service portal. This streamlines the application life cycle when using Kubernetes, from development to delivery to the management of containerized application workloads.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/app-platform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Aug 18, 2026 — App Platform v6.2.0](https://techdocs.akamai.com/app-platform/changelog/v6-2-0.md)
+- [Jul 28, 2026 — App Platform v6.1.0](https://techdocs.akamai.com/app-platform/changelog/v6-1-0.md)
+- [Jul 1, 2026 — App Platform v6.0.0](https://techdocs.akamai.com/app-platform/changelog/v6-0-0.md)
+- [May 1, 2026 — App Platform v5.0.0](https://techdocs.akamai.com/app-platform/changelog/v5-0-0.md)
+- [Mar 23, 2026 — App Platform v4.15.1](https://techdocs.akamai.com/app-platform/changelog/v4-15-1.md)
+- [Feb 24, 2026 — App Platform v4.14.0](https://techdocs.akamai.com/app-platform/changelog/v4-14-0.md)
+- [Jan 19, 2026 — App Platform v4.13.0](https://techdocs.akamai.com/app-platform/changelog/v4-13-0.md)
+- [Oct 30, 2025 — App Platform v4.12.0](https://techdocs.akamai.com/app-platform/changelog/v4-12-0.md)
+- [Sep 22, 2025 — App Platform v4.11.0](https://techdocs.akamai.com/app-platform/changelog/v4-11-0.md)
+- [Aug 27, 2025 — App Platform v4.10.0](https://techdocs.akamai.com/app-platform/changelog/v4-10-0.md)

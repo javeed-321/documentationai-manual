@@ -1,0 +1,19 @@
+# Script Management Documentation
+
+> Akamai's Script Management is a suite of tools to help you minimize performance impacts from JavaScripts.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/script-management/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+- [Script Management API](https://techdocs.akamai.com/script-management/reference/api.md)
+- [API summary](https://techdocs.akamai.com/script-management/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/script-management/reference/get-started.md)
+- [Script Management concepts](https://techdocs.akamai.com/script-management/reference/script-mgmt-concepts.md)
+- [Rate limiting](https://techdocs.akamai.com/script-management/reference/rate-limiting.md)
+- [Errors](https://techdocs.akamai.com/script-management/reference/errors.md)
+- [400](https://techdocs.akamai.com/script-management/reference/400.md)
+- [401](https://techdocs.akamai.com/script-management/reference/401.md)
+- [403](https://techdocs.akamai.com/script-management/reference/403.md)
+- [404](https://techdocs.akamai.com/script-management/reference/404.md)
+- [409](https://techdocs.akamai.com/script-management/reference/409.md)
+- [500](https://techdocs.akamai.com/script-management/reference/500.md)

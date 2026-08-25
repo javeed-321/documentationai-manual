@@ -1,0 +1,106 @@
+{
+  "slug": "invoicing/recipes/llms.txt",
+  "source": "https://techdocs.akamai.com/invoicing/recipes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/invoicing/recipes/llms.txt",
+  "title": "Recipes index",
+  "description": "full section index",
+  "section": "Invoicing API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Invoicing API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Invoicing API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use the Akamai Invoicing API to develop your own tools to track invoice files, and keep others updated about their status.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use the Akamai Invoicing API to develop your own tools to track invoice files, and keep others updated about their status.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/invoicing/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/invoicing/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Recipes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recipes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        15
+      ],
+      "raw": "- [Create a notification](https://techdocs.akamai.com/invoicing/recipes/create-a-notification.md)\n- [Download a bill file](https://techdocs.akamai.com/invoicing/recipes/download-a-bill-file.md)\n- [Get a notification](https://techdocs.akamai.com/invoicing/recipes/get-a-notification-1.md)\n- [List account's bills](https://techdocs.akamai.com/invoicing/recipes/list-accounts-bills.md)\n- [List account's notifications](https://techdocs.akamai.com/invoicing/recipes/list-accounts-notifications.md)\n- [List contract's bills](https://techdocs.akamai.com/invoicing/recipes/list-contracts-bills.md)\n- [Modify a notification](https://techdocs.akamai.com/invoicing/recipes/modify-a-notification.md)\n- [Remove a notification](https://techdocs.akamai.com/invoicing/recipes/remove-a-notification.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a notificationDownload a bill fileGet a notificationList account's billsList account's notificationsList contract's billsModify a notificationRemove a notification",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

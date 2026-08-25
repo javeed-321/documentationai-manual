@@ -1,0 +1,23 @@
+# Global Traffic Management Documentation
+
+> Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Configure and manage
+- [Manage GTM service](https://techdocs.akamai.com/gtm/docs/manage-gtm-service.md)
+- [Workflow to configure the GTM system](https://techdocs.akamai.com/gtm/docs/config-gtm-system.md)
+- [Manage GTM domains](https://techdocs.akamai.com/gtm/docs/traffic-mgmt-domains.md)
+- [Manage properties](https://techdocs.akamai.com/gtm/docs/manage-properties.md)
+- [Add property](https://techdocs.akamai.com/gtm/docs/add-property.md)
+- [Manage ghost load feedback](https://techdocs.akamai.com/gtm/docs/manage-ghost-load-feedback.md)
+- [Manage maps](https://techdocs.akamai.com/gtm/docs/manage-maps.md)
+- [Add traffic targets to property](https://techdocs.akamai.com/gtm/docs/traffic-tgt.md)
+- [Manage data centers](https://techdocs.akamai.com/gtm/docs/managing-data-centers.md)
+- [Manage liveness tests](https://techdocs.akamai.com/gtm/docs/managing-liveness-tests.md)
+- [Manage static record sets](https://techdocs.akamai.com/gtm/docs/manage-static-record-sets.md)
+- [Manage resources](https://techdocs.akamai.com/gtm/docs/manage-resources.md)
+- [Manage SSL client certificates](https://techdocs.akamai.com/gtm/docs/manage-ssl-client-certs.md)
+- [Configure GTM cloud-based services](https://techdocs.akamai.com/gtm/docs/config-gtm-cloud-services.md)
+- [Review change list detail](https://techdocs.akamai.com/gtm/docs/review-change-list-detail.md)
+- [View traffic distribution targets](https://techdocs.akamai.com/gtm/docs/view-traffic-distribution.md)

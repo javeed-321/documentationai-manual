@@ -1,0 +1,112 @@
+{
+  "slug": "edge-diagnostics/reference/ipa-hostnames/llms.txt",
+  "source": "https://techdocs.akamai.com/edge-diagnostics/reference/ipa-hostnames/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edge-diagnostics/reference/ipa-hostnames/llms.txt",
+  "title": "IPA hostnames",
+  "description": "",
+  "section": "Edge Diagnostics",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Edge Diagnostics Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Edge Diagnostics Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: IPA hostnames",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: IPA hostnames",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        8
+      ],
+      "raw": "- [List IP acceleration hostnames](https://techdocs.akamai.com/edge-diagnostics/reference/get-ipa-hostnames.md): Lists IP acceleration (IPA) hostnames you have  access to and can [generate a diagnostic link](ref:post-user-diagnostic-data-groups) to collect  diagnostic data.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List IP acceleration hostnames: Lists IP acceleration (IPA) hostnames you have  access to and can generate a diagnostic link to collect  diagnostic data.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-user-diagnostic-data-groups",
+          "line": 8
+        }
+      ]
+    }
+  ]
+}

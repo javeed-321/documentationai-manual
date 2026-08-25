@@ -1,0 +1,106 @@
+{
+  "slug": "client-access-control/docs/welcome/llms.txt",
+  "source": "https://techdocs.akamai.com/client-access-control/docs/welcome/llms.txt.md",
+  "url": "https://techdocs.akamai.com/client-access-control/docs/welcome/llms.txt",
+  "title": "Welcome",
+  "description": "",
+  "section": "Client Access Control",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Client Access Control Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Client Access Control Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Manage access between your web assets and the edge servers on the Akamai network. With Client Access Control you can retrieve information about the CIDR blocks that currently connect your content to the Akamai network. When Akamai updates the CIDR blocks used for access, use Client Access Control to review the changes and send an acknowledgement to Akamai once you update your Access Control List.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Manage access between your web assets and the edge servers on the Akamai network. With Client Access Control you can retrieve information about the CIDR blocks that currently connect your content to the Akamai network. When Akamai updates the CIDR blocks used for access, use Client Access Control to review the changes and send an acknowledgement to Akamai once you update your Access Control List.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/client-access-control/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/client-access-control/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Welcome",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Welcome",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        10
+      ],
+      "raw": "- [Welcome to Client Access Control](https://techdocs.akamai.com/client-access-control/docs/about-client-access-control.md)\n- [Overview of the Client Access Control configuration](https://techdocs.akamai.com/client-access-control/docs/ov-client-access-control-config.md)\n- [About CIDR blocks](https://techdocs.akamai.com/client-access-control/docs/about-cidr-blocks.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Welcome to Client Access ControlOverview of the Client Access Control configurationAbout CIDR blocks",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+---
+title: "Groups"
+---
+
+# Identity and Access Management API Documentation
+
+> The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab
+
+## API Reference: Groups
+
+- [List groups](https://techdocs.akamai.com/iam-api/reference/get-groups.md): This operation lists all groups the administrator can manage for the current account and contract type or other managed accounts using the `accountSwitchKey` parameter. The account and contract type are determined by the access tokens in your API client.
+- [Create a new group](https://techdocs.akamai.com/iam-api/reference/post-group.md): This operation creates a new group within the specified parent group.
+- [Get a group](https://techdocs.akamai.com/iam-api/reference/get-group.md): This operation retrieves a group's details.
+- [Modify a group's name](https://techdocs.akamai.com/iam-api/reference/put-group.md): This operation changes a group's name.
+- [Delete a group](https://techdocs.akamai.com/iam-api/reference/delete-group.md): This operation deletes a group. You can't delete a group that contains subgroups, resources, or users with roles on that group. You need admin access to delete a group.
+- [Move a group](https://techdocs.akamai.com/iam-api/reference/post-groups-move.md): This operation moves a nested group under another group within the same parent hierarchy.
+- [List users affected by moving a group](https://techdocs.akamai.com/iam-api/reference/get-move-affected-users.md): This operation lists users who are affected when you move a group. Users may lose or gain access to resources depending on the roles and permissions inherited from the new parent group. Users with a `userType` of `lostAccess` lose their access to the source group. If the `userType` is `gainAccess`, they gain access to the resources in the source group. Users who have inherited access to a group lose access to that group if it moves out of its hierarchy that gives them those access rights. If the group moves to another parent group to which they have access, they still have access to the group you move. Likewise, when you move a group to a new location, users who inherit their access rights from the new parent group gain access to the resources in the group you move.

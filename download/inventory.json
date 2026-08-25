@@ -1,123 +1,173 @@
 {
-  "site": "https://modulr.readme.io",
+  "site": "https://techdocs.akamai.com",
   "generatedFrom": "llms.txt",
-  "pages": 371,
-  "blocks": 4742,
+  "pages": 1000,
+  "blocks": 6824,
   "parseFallbacks": [
-    "changelog/modconnect-july-2024",
-    "changelog/modconnect-july-2025",
-    "changelog/modconnect-june-2023",
-    "changelog/modconnect-quarterly-round-up",
-    "changelog/modconnect-quarterly-round-up-2024",
-    "changelog/modconnect-september-2024",
-    "changelog/your-modulr-product-update-may-2026",
-    "docs/api-base-urls",
-    "docs/build-with-ai-mcp",
-    "docs/card-transaction-lifecycle",
-    "docs/gaining-use-of-the-api",
-    "docs/implementation-notes",
-    "docs/inbound-payments-via-swift",
-    "docs/managing-direct-debit-indemnity-claims-ddic",
-    "docs/outbound-payments",
-    "docs/provisioning-journey-1",
-    "docs/starting-collections",
-    "docs/third-party-providers-access",
-    "recipes/hmac-authentication",
-    "reference/editcustomer"
+    "adaptive-media-delivery/docs/best-practices-use-case-based-prov",
+    "adaptive-media-delivery/docs/cache-key-query-param-amd",
+    "adaptive-media-delivery/docs/client-charac-amd",
+    "adaptive-media-delivery/docs/content-charac-amd",
+    "adaptive-media-delivery/docs/content-provider-code-amd",
+    "adaptive-media-delivery/docs/create-new-prop",
+    "adaptive-media-delivery/docs/define-prop-hn",
+    "adaptive-media-delivery/docs/origin-charac-amd",
+    "adaptive-media-delivery/docs/origin-server-amd",
+    "adaptive-media-delivery/docs/prepare-your-environment",
+    "adaptive-media-delivery/docs/segmented-media-deliv-mode-amd",
+    "adaptive-media-delivery/docs/understand-the-request-flow",
+    "adaptive-media-delivery/docs/welcome-adaptive-media-deliv",
+    "linode-api/reference/identity-and-access/llms.txt",
+    "linode-api/reference/llms.txt",
+    "linode-api/reference/placement-groups/llms.txt"
   ],
   "components": [
     {
-      "name": "paragraph",
-      "syntax": "markdown",
-      "count": 1926,
-      "pages": 349,
-      "target": {
-        "component": null,
-        "status": "direct"
-      },
-      "examples": [
-        "changelog/modconnect-annual-round-up#6",
-        "changelog/modconnect-annual-round-up#7",
-        "changelog/modconnect-annual-round-up#9",
-        "changelog/modconnect-annual-round-up#13",
-        "changelog/modconnect-annual-round-up#14"
-      ]
-    },
-    {
       "name": "heading",
       "syntax": "markdown",
-      "count": 1263,
-      "pages": 371,
+      "count": 2757,
+      "pages": 1000,
       "target": {
         "component": null,
         "status": "direct"
       },
       "examples": [
-        "changelog/modconnect-annual-round-up#1",
-        "changelog/modconnect-annual-round-up#2",
-        "changelog/modconnect-annual-round-up#4",
-        "changelog/modconnect-annual-round-up#5",
-        "changelog/modconnect-annual-round-up#8"
-      ]
-    },
-    {
-      "name": "boilerplate",
-      "syntax": "markdown",
-      "count": 371,
-      "pages": 371,
-      "target": {
-        "component": null,
-        "status": "drop",
-        "note": "ReadMe's injected llms.txt preamble"
-      },
-      "examples": [
-        "changelog/modconnect-annual-round-up#0",
-        "changelog/modconnect-april-2024#0",
-        "changelog/modconnect-april-2025#0",
-        "changelog/modconnect-august-2023#0",
-        "changelog/modconnect-august-2024#0"
-      ]
-    },
-    {
-      "name": "code",
-      "syntax": "markdown",
-      "count": 345,
-      "pages": 254,
-      "target": {
-        "component": null,
-        "status": "direct"
-      },
-      "examples": [
-        "docs/bacs-day-2-early-funding#12",
-        "docs/bacs-day-2-early-funding#14",
-        "docs/build-with-ai-mcp#15",
-        "docs/build-with-ai-mcp#18",
-        "docs/build-with-ai-mcp#22"
+        "adaptive-acceleration/changelog/llms.txt#0",
+        "adaptive-acceleration/changelog/llms.txt#3",
+        "adaptive-acceleration/docs/llms.txt#0",
+        "adaptive-acceleration/docs/llms.txt#3",
+        "adaptive-acceleration/docs/llms.txt#5"
       ]
     },
     {
       "name": "list",
       "syntax": "markdown",
-      "count": 248,
-      "pages": 109,
+      "count": 1750,
+      "pages": 1000,
       "target": {
         "component": null,
         "status": "transform",
         "note": "normalise `*`/`+` markers to `-`"
       },
       "examples": [
-        "changelog/modconnect-annual-round-up#3",
-        "changelog/modconnect-annual-round-up#10",
-        "changelog/modconnect-annual-round-up#15",
-        "changelog/modconnect-annual-round-up#26",
-        "changelog/modconnect-april-2024#3"
+        "adaptive-acceleration/changelog/llms.txt#4",
+        "adaptive-acceleration/docs/llms.txt#4",
+        "adaptive-acceleration/docs/llms.txt#6",
+        "adaptive-acceleration/docs/llms.txt#8",
+        "adaptive-acceleration/docs/manage-your-reports/llms.txt#4"
+      ]
+    },
+    {
+      "name": "blockquote",
+      "syntax": "markdown",
+      "count": 982,
+      "pages": 982,
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "examples": [
+        "adaptive-acceleration/changelog/llms.txt#1",
+        "adaptive-acceleration/docs/llms.txt#1",
+        "adaptive-acceleration/docs/manage-your-reports/llms.txt#1",
+        "adaptive-acceleration/docs/reporting/llms.txt#1",
+        "adaptive-acceleration/docs/welcome/llms.txt#1"
+      ]
+    },
+    {
+      "name": "boilerplate",
+      "syntax": "markdown",
+      "count": 917,
+      "pages": 917,
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "examples": [
+        "adaptive-acceleration/changelog/llms.txt#2",
+        "adaptive-acceleration/docs/llms.txt#2",
+        "adaptive-acceleration/docs/manage-your-reports/llms.txt#2",
+        "adaptive-acceleration/docs/reporting/llms.txt#2",
+        "adaptive-acceleration/docs/welcome/llms.txt#2"
+      ]
+    },
+    {
+      "name": "paragraph",
+      "syntax": "markdown",
+      "count": 307,
+      "pages": 101,
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "examples": [
+        "adaptive-acceleration/llms.txt#2",
+        "adaptive-acceleration/llms.txt#3",
+        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#2",
+        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#4",
+        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#6"
+      ]
+    },
+    {
+      "name": "td",
+      "syntax": "html",
+      "count": 43,
+      "pages": 2,
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "examples": [
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#17",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#19",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#21",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#23",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#25"
+      ]
+    },
+    {
+      "name": "div",
+      "syntax": "html",
+      "count": 22,
+      "pages": 12,
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "examples": [
+        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#9",
+        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#14",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#7",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#40",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#43"
+      ]
+    },
+    {
+      "name": "tr",
+      "syntax": "html",
+      "count": 18,
+      "pages": 1,
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "examples": [
+        "adaptive-media-delivery/docs/content-charac-amd#36",
+        "adaptive-media-delivery/docs/content-charac-amd#39",
+        "adaptive-media-delivery/docs/content-charac-amd#42",
+        "adaptive-media-delivery/docs/content-charac-amd#48",
+        "adaptive-media-delivery/docs/content-charac-amd#49"
       ]
     },
     {
       "name": "Callout",
-      "syntax": "jsx",
-      "count": 194,
-      "pages": 86,
+      "syntax": "markdown",
+      "count": 11,
+      "pages": 9,
       "target": {
         "component": "Callout",
         "status": "direct",
@@ -127,123 +177,47 @@
         }
       },
       "examples": [
-        "changelog/modconnect-annual-round-up#2",
-        "changelog/modconnect-april-2024#2",
-        "changelog/modconnect-april-2025#2",
-        "changelog/modconnect-august-2023#2",
-        "changelog/modconnect-august-2024#2"
+        "adaptive-media-delivery/docs/best-practices-use-case-based-prov#15",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#13",
+        "adaptive-media-delivery/docs/client-charac-amd#6",
+        "adaptive-media-delivery/docs/content-charac-amd#22",
+        "adaptive-media-delivery/docs/content-provider-code-amd#11"
       ]
     },
     {
-      "name": "Image",
-      "syntax": "jsx",
-      "count": 106,
-      "pages": 46,
-      "target": {
-        "component": "Image",
-        "status": "transform",
-        "note": "keep src/alt (+ width/height when real); drop align, border, className, and width=\"smart\""
-      },
-      "examples": [
-        "changelog/modconnect-annual-round-up#3",
-        "changelog/modconnect-annual-round-up#18",
-        "changelog/modconnect-april-2024#3",
-        "changelog/modconnect-april-2025#4",
-        "changelog/modconnect-april-2025#34"
-      ]
-    },
-    {
-      "name": "Table",
-      "syntax": "markdown",
-      "count": 104,
-      "pages": 59,
-      "target": {
-        "component": null,
-        "status": "direct",
-        "note": "GFM table; watch for an empty `| |` header row"
-      },
-      "examples": [
-        "docs/account#4",
-        "docs/account#9",
-        "docs/build-with-ai-mcp#49",
-        "docs/card-lifecycle#3",
-        "docs/card-transaction-lifecycle#15"
-      ]
-    },
-    {
-      "name": "br",
+      "name": "table",
       "syntax": "html",
-      "count": 93,
-      "pages": 44,
+      "count": 3,
+      "pages": 2,
       "target": {
         "component": null,
-        "status": "drop",
-        "note": "<br /> is not needed — blocks are spaced by the parser"
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
       },
       "examples": [
-        "changelog/modconnect-april-2025#3",
-        "changelog/modconnect-april-2025#41",
-        "changelog/modconnect-april-2025#54",
-        "changelog/modconnect-july-2025#3",
-        "changelog/modconnect-june-2025#81"
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#15",
+        "adaptive-media-delivery/docs/content-charac-amd#28",
+        "adaptive-media-delivery/docs/content-charac-amd#108"
       ]
     },
     {
-      "name": "thematicBreak",
+      "name": "code",
       "syntax": "markdown",
-      "count": 52,
-      "pages": 12,
+      "count": 2,
+      "pages": 1,
       "target": {
         "component": null,
         "status": "direct"
       },
       "examples": [
-        "docs/build-with-ai-mcp#5",
-        "docs/build-with-ai-mcp#12",
-        "docs/build-with-ai-mcp#36",
-        "docs/build-with-ai-mcp#44",
-        "docs/build-with-ai-mcp#51"
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#9",
+        "adaptive-media-delivery/docs/cache-key-query-param-amd#11"
       ]
     },
     {
-      "name": "CodeTabs",
-      "syntax": "markdown",
-      "count": 17,
-      "pages": 11,
-      "target": {
-        "component": "CodeGroup",
-        "status": "transform",
-        "note": "tab name goes on BOTH the fence and tabs={[\"a\",\"b\"]}"
-      },
-      "examples": [
-        "docs/create-a-vrp-consent#40",
-        "docs/creating-a-cvrp-consent#40",
-        "docs/customer#12",
-        "docs/outbound-payments-via-swift#13",
-        "docs/payer-name-verification-pnv#19"
-      ]
-    },
-    {
-      "name": "blockquote",
-      "syntax": "markdown",
-      "count": 8,
-      "pages": 5,
-      "target": {
-        "component": null,
-        "status": "direct"
-      },
-      "examples": [
-        "changelog/modconnect-september-2023#7",
-        "docs/build-with-ai-mcp#2",
-        "docs/build-with-ai-mcp#11",
-        "docs/customer-verification-integration-guide#6",
-        "docs/customer-verification-integration-guide#59"
-      ]
-    },
-    {
-      "name": "html",
+      "name": "caption",
       "syntax": "html",
-      "count": 6,
+      "count": 2,
       "pages": 1,
       "target": {
         "component": null,
@@ -251,29 +225,68 @@
         "note": "raw HTML — check it against the Documentation.AI components"
       },
       "examples": [
-        "recipes/hmac-authentication#5",
-        "recipes/hmac-authentication#8",
-        "recipes/hmac-authentication#11",
-        "recipes/hmac-authentication#14",
-        "recipes/hmac-authentication#17"
+        "adaptive-media-delivery/docs/content-charac-amd#29",
+        "adaptive-media-delivery/docs/content-charac-amd#30"
       ]
     },
     {
-      "name": "Accordion",
-      "syntax": "jsx",
-      "count": 5,
+      "name": "colgroup",
+      "syntax": "html",
+      "count": 2,
       "pages": 1,
       "target": {
-        "component": "Expandable",
-        "status": "transform",
-        "note": "wrap sibling runs in <ExpandableGroup>; default-open=\"false\""
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
       },
       "examples": [
-        "docs/inbound-payments-via-swift#15",
-        "docs/inbound-payments-via-swift#16",
-        "docs/inbound-payments-via-swift#17",
-        "docs/inbound-payments-via-swift#18",
-        "docs/inbound-payments-via-swift#19"
+        "adaptive-media-delivery/docs/content-charac-amd#31",
+        "adaptive-media-delivery/docs/content-charac-amd#34"
+      ]
+    },
+    {
+      "name": "col",
+      "syntax": "html",
+      "count": 2,
+      "pages": 1,
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "examples": [
+        "adaptive-media-delivery/docs/content-charac-amd#32",
+        "adaptive-media-delivery/docs/content-charac-amd#33"
+      ]
+    },
+    {
+      "name": "thead",
+      "syntax": "html",
+      "count": 2,
+      "pages": 1,
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "examples": [
+        "adaptive-media-delivery/docs/content-charac-amd#35",
+        "adaptive-media-delivery/docs/content-charac-amd#40"
+      ]
+    },
+    {
+      "name": "th",
+      "syntax": "html",
+      "count": 2,
+      "pages": 1,
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "examples": [
+        "adaptive-media-delivery/docs/content-charac-amd#37",
+        "adaptive-media-delivery/docs/content-charac-amd#38"
       ]
     },
     {
@@ -287,165 +300,53 @@
         "note": "raw HTML — check it against the Documentation.AI components"
       },
       "examples": [
-        "docs/managing-direct-debit-indemnity-claims-ddic#31",
-        "docs/managing-direct-debit-indemnity-claims-ddic#33"
-      ]
-    },
-    {
-      "name": "thead",
-      "syntax": "html",
-      "count": 1,
-      "pages": 1,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "docs/managing-direct-debit-indemnity-claims-ddic#30"
-      ]
-    },
-    {
-      "name": "ol",
-      "syntax": "html",
-      "count": 1,
-      "pages": 1,
-      "target": {
-        "component": null,
-        "status": "manual",
-        "note": "raw HTML — check it against the Documentation.AI components"
-      },
-      "examples": [
-        "reference/editcustomer#3"
+        "adaptive-media-delivery/docs/content-charac-amd#41",
+        "adaptive-media-delivery/docs/content-charac-amd#107"
       ]
     }
   ],
   "inline": [
     {
-      "kind": "absoluteInternalLink",
-      "count": 442,
-      "pages": 121,
+      "kind": "refLink",
+      "count": 1684,
+      "pages": 138,
       "examples": [
-        "https://modulr.readme.io/docs/mobile-app",
-        "https://modulr.readme.io/docs/api-integration-overview",
-        "https://modulr.readme.io/docs/outbound-payments",
-        "https://modulr.readme.io/docs/card-reports",
-        "https://modulr.readme.io/docs/card-report-notifications"
+        "ref:post-revocation-list-ids",
+        "ref:post-unrevoke-revocation-list-ids",
+        "ref:post-revocation-list-ids",
+        "ref:post-unrevoke-revocation-list-ids",
+        "ref:get-active-alert-firings"
       ]
     },
     {
-      "kind": "breakTag",
-      "count": 132,
-      "pages": 46,
-      "examples": [
-        "<br />",
-        "<br />",
-        "<br />",
-        "<br />",
-        "<br />"
-      ]
-    },
-    {
-      "kind": "handlebars",
-      "count": 96,
-      "pages": 4,
-      "examples": [
-        "{{ textAlign: \"left\" }}",
-        "{{ textAlign: \"left\" }}",
-        "{{ textAlign: \"left\" }}",
-        "{{ textAlign: \"left\" }}",
-        "{{ textAlign: \"left\" }}"
-      ]
-    },
-    {
-      "kind": "markdownImage",
-      "count": 52,
+      "kind": "docLink",
+      "count": 82,
       "pages": 26,
       "examples": [
-        "https://files.readme.io/27ccd4f0302cde6d7c04180920c038f44f71c684e5c387df4435993885a810e3-image.png",
-        "https://files.readme.io/952a47c84345fdab6da48e1a7a45dee334dd1bbb3aef8c0fbfbd2a29b82b5cdf-image.png",
-        "https://files.readme.io/18aa3775103e380d03ea6a52f08bc593eace703e3f3327cdab012904ced6ac8e-image.png",
-        "https://files.readme.io/8949a3d7ba53d82ed0f37ab56470e13fe30fabfe92714bef6762ecb435a979c5-image.png",
-        "https://files.readme.io/3e898bcb9f90b80fd370bde715e20ce25bf28d1c96d00a34af0784b2fd76cc0e-image.png"
+        "doc:get-policy-rules",
+        "doc:put-policy-rapid-rule-action",
+        "doc:put-policy-rapid-rule-action",
+        "doc:put-policy-rapid-rule-action",
+        "doc:post-subscribe"
       ]
     },
     {
-      "kind": "anchorJsx",
-      "count": 13,
+      "kind": "variable",
+      "count": 2,
       "pages": 2,
       "examples": [
-        "https://modulr.readme.io/reference/createapplication",
-        "https://modulr.readme.io/reference/createapplicationassociate",
-        "https://modulr.readme.io/reference/updateknowyourcustomerbyapplicationid",
-        "https://modulr.readme.io/reference/updatepersonalinformationforassociate_1",
-        "https://modulr.readme.io/reference/updatetaxresidenciesforassociate_1"
+        "LB",
+        "LB"
       ]
     },
     {
-      "kind": "refLink",
-      "count": 3,
+      "kind": "escapedAngle",
+      "count": 1,
       "pages": 1,
       "examples": [
-        "ref:suspendcard",
-        "ref:unsuspendcard",
-        "ref:expireauthorisation"
+        "\\<Media Format>"
       ]
     }
   ],
-  "notes": [
-    {
-      "note": "no alt text — Documentation.AI pages need one",
-      "count": 97,
-      "examples": [
-        "changelog/modconnect-annual-round-up#3",
-        "changelog/modconnect-annual-round-up#18",
-        "changelog/modconnect-april-2024#3",
-        "changelog/modconnect-april-2025#4",
-        "changelog/modconnect-april-2025#34"
-      ]
-    },
-    {
-      "note": "reassembled from several raw-HTML chunks — this page needed the lenient parser",
-      "count": 28,
-      "examples": [
-        "changelog/modconnect-july-2024#2",
-        "changelog/modconnect-june-2023#2",
-        "changelog/modconnect-quarterly-round-up#2",
-        "changelog/modconnect-quarterly-round-up-2024#2",
-        "changelog/modconnect-september-2024#2"
-      ]
-    },
-    {
-      "note": "className=\"border\" is redundant with border={true}",
-      "count": 5,
-      "examples": [
-        "changelog/modconnect-june-2023#17",
-        "changelog/modconnect-june-2023#20",
-        "docs/apis-to-aid-with-reconciliation#11",
-        "docs/types-of-businesses-1#6",
-        "docs/types-of-businesses-1#10"
-      ]
-    },
-    {
-      "note": "`curl` is not a highlighter language — use bash",
-      "count": 1,
-      "examples": [
-        "docs/getting-started-with-virtual-cards#13"
-      ]
-    },
-    {
-      "note": "width=\"smart\" is a legacy RDMD value — drop it",
-      "count": 1,
-      "examples": [
-        "docs/setting-up-mandates#7"
-      ]
-    },
-    {
-      "note": "unclosed <br> is invalid MDX",
-      "count": 1,
-      "examples": [
-        "reference/createcollectionschedule#6"
-      ]
-    }
-  ]
+  "notes": []
 }

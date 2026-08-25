@@ -1,0 +1,197 @@
+{
+  "slug": "adaptive-media-delivery/docs/supported-media-formats",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/supported-media-formats.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/supported-media-formats",
+  "title": "Review supported media formats",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-03-01T18:58:05.000Z"
+  },
+  "parseMode": "mdx",
+  "components": {
+    "boilerplate": 1,
+    "heading": 3,
+    "paragraph": 3,
+    "list": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Review supported media formats",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Review supported media formats",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Adaptive Media Delivery (AMD) reliably delivers prepared, pre-segmented HTTP-based live and on-demand streaming media.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Adaptive Media Delivery (AMD) reliably delivers prepared, pre-segmented HTTP-based live and on-demand streaming media.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "This includes support for the following formats:",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This includes support for the following formats:",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        21
+      ],
+      "raw": "* **HTTP Live Streaming (HLS)**. This is supported for iOS devices, browsers running HTML5, and more.\n\n* **HTTP Dynamic Streaming (HDS)**. This is supported for devices running the Adobe Flash and AIR runtimes.\n\n* **Microsoft Smooth Streaming (MSS)**. This is supported for devices running Microsoft Silverlight.\n\n* **Dynamic Adaptive Streaming over HTTP (MPEG-DASH)**\n\n* **Common Media Application Format (CMAF)**.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "HTTP Live Streaming (HLS). This is supported for iOS devices, browsers running HTML5, and more.HTTP Dynamic Streaming (HDS). This is supported for devices running the Adobe Flash and AIR runtimes.Microsoft Smooth Streaming (MSS). This is supported for devices running Microsoft Silverlight.Dynamic Adaptive Streaming over HTTP (MPEG-DASH)Common Media Application Format (CMAF).",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "AMD is both workflow and origin server storage agnostic. However, you can combine AMD with our complementary Media Services and NetStorage products for an efficient, high-quality streaming media solution.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AMD is both workflow and origin server storage agnostic. However, you can combine AMD with our complementary Media Services and NetStorage products for an efficient, high-quality streaming media solution.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "# Additional points regarding format support",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Additional points regarding format support",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        27,
+        31
+      ],
+      "raw": "* CMAF support requires that you package your media as CMAF and select HLS, DASH, or both when defining Content Characteristics in your AMD property.\n\n* Various behaviors may be limited to specific media formats, beyond what is listed above. When applicable, this is called out in the description of the behavior.\n\n* With the exception of integration of a Media Services Live origin within a AMD property, this guide is not generally intended for users of the Media Services Live or Media Services On Demand products.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "CMAF support requires that you package your media as CMAF and select HLS, DASH, or both when defining Content Characteristics in your AMD property.Various behaviors may be limited to specific media formats, beyond what is listed above. When applicable, this is called out in the description of the behavior.With the exception of integration of a Media Services Live origin within a AMD property, this guide is not generally intended for users of the Media Services Live or Media Services On Demand products.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "# Sibling pages",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sibling pages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        35,
+        38
+      ],
+      "raw": "* [Delivery concepts and terms](https://techdocs.akamai.com/adaptive-media-delivery/docs/key-concepts-and-terms.md)\n* [Get your unique information](https://techdocs.akamai.com/adaptive-media-delivery/docs/get-environ-info.md)\n* [Understand the request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow.md)\n* [Prepare your environment](https://techdocs.akamai.com/adaptive-media-delivery/docs/prepare-your-environment.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Delivery concepts and termsGet your unique informationUnderstand the request flowPrepare your environment",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

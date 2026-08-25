@@ -1,0 +1,11 @@
+# Akamai TechDocs Documentation
+
+> Find guides, APIs, Terraform, code examples, and more for Akamai products and services.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Pages
+
+- [Pages index](https://techdocs.akamai.com/home/page/llms.txt): full section index

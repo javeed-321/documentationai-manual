@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/client-lists/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/client-lists/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/client-lists/llms.txt",
+  "title": "Client Lists",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Client Lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Client Lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        12
+      ],
+      "raw": "- [Configure client lists](https://techdocs.akamai.com/terraform/docs/set-up-client-lists.md)\n- [Client list](https://techdocs.akamai.com/terraform/docs/cl-ds-client-list.md): akamai_clientlist_list\n- [Client lists](https://techdocs.akamai.com/terraform/docs/cl-ds-client-lists.md): akamai_clientlist_lists\n- [Client list](https://techdocs.akamai.com/terraform/docs/cl-rc-client-list.md): akamai_clientlist_list\n- [Activation](https://techdocs.akamai.com/terraform/docs/cl-rc-activation.md): akamai_clientlist_activation",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Configure client listsClient list: akamai_clientlist_listClient lists: akamai_clientlist_listsClient list: akamai_clientlist_listActivation: akamai_clientlist_activation",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

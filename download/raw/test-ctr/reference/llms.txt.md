@@ -1,0 +1,79 @@
+# Test Center Documentation
+
+> Akamai's Test Center is a testing tool that checks the effect of configuration changes on your web property.  Use this tool as part of your testing protocol to increase your confidence in the safety and accuracy of your configuration changes.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/test-ctr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/test-ctr/reference/api/llms.txt): full category index
+- [Test Center API v3](https://techdocs.akamai.com/test-ctr/reference/api.md)
+- [API summary](https://techdocs.akamai.com/test-ctr/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/test-ctr/reference/api-get-started.md)
+- [Test Center concepts](https://techdocs.akamai.com/test-ctr/reference/test-center-concepts.md)
+- [API workflow](https://techdocs.akamai.com/test-ctr/reference/api-workflow.md)
+- [Work on test suite and child objects simultaneously](https://techdocs.akamai.com/test-ctr/reference/work-on-test-suite-and-child-objects-simultaneously.md)
+- [Use Test Center with granular operations](https://techdocs.akamai.com/test-ctr/reference/use-test-center-with-granular-operations.md)
+- [Run a functional test](https://techdocs.akamai.com/test-ctr/reference/run-a-functional-test.md)
+- [Example: create a condition](https://techdocs.akamai.com/test-ctr/reference/example-create-condition.md)
+- [Resource limiting](https://techdocs.akamai.com/test-ctr/reference/resource-limiting.md)
+- [Variables](https://techdocs.akamai.com/test-ctr/reference/variables-overview.md)
+- [Partial success responses](https://techdocs.akamai.com/test-ctr/reference/partial-success-responses.md)
+- [Errors](https://techdocs.akamai.com/test-ctr/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/test-ctr/reference/400.md)
+- [403](https://techdocs.akamai.com/test-ctr/reference/403.md)
+- [404](https://techdocs.akamai.com/test-ctr/reference/404.md)
+- [405](https://techdocs.akamai.com/test-ctr/reference/405.md)
+- [415](https://techdocs.akamai.com/test-ctr/reference/415.md)
+- [429](https://techdocs.akamai.com/test-ctr/reference/429.md)
+- [500](https://techdocs.akamai.com/test-ctr/reference/500.md)
+
+## API Reference: Test runs
+
+- [Test runs index](https://techdocs.akamai.com/test-ctr/reference/test-runs/llms.txt): full category index
+- [Submit a test run](https://techdocs.akamai.com/test-ctr/reference/post-test-runs.md): Submits a test run for functional testing. With one request you can run the test for a property version, test suite, and functional test case.
+- [List test runs](https://techdocs.akamai.com/test-ctr/reference/get-test-runs.md): Lists test runs submitted in your organization. The response is an array of objects, each keyed by `testRunId` with details and status of each test run.
+- [Get a test run](https://techdocs.akamai.com/test-ctr/reference/get-test-run.md): Returns details of a test run. Check [Functional testing results](doc:test-run-results#functional-testing-results) to learn how to analyze the results.
+- [Get test run's detailed results](https://techdocs.akamai.com/test-ctr/reference/get-test-run-raw-request-response.md): Gets a raw request and response for all URLs in a test run.
+
+## API Reference: Functional testing
+
+- [Functional testing index](https://techdocs.akamai.com/test-ctr/reference/functional-testing/llms.txt): full category index
+- [Create a test suite](https://techdocs.akamai.com/test-ctr/reference/post-test-suites.md): Creates an empty test suite. To add objects to the newly created test suite, run the [Add test cases to a test suite](ref:post-test-cases) and [Add variables to a test suite](ref:post-variables) operations.
+- [List test suites](https://techdocs.akamai.com/test-ctr/reference/get-test-suites.md): Lists test suites created in your organization. The list can also include deleted test suites you can restore. The response contains an array of objects, each keyed by `testSuiteId`. You can use these IDs to [Get a test suite with child objects](ref:get-test-suites-with-child-objects).
+- [Generate a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/post-auto-generate-test-suite.md): Generates a default test suite with test cases and variables for a specific property version and a URL. Based on property settings and its behaviors and the URL, Test Center generates a default test suite object with test cases and variables. You can modify the generated test suite and add it to Test Center using the [Create a test suite with child objects](ref:post-test-suites-with-child-objects) operation.
+- [Create a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/post-test-suites-with-child-objects.md): Creates a test suite with test cases and variables. You can use the [Generate a test suite with child objects](ref:post-auto-generate-test-suite) operation to create a default test suite for a property version and then import it with this operation. The operation responds with a [partial-success 207 response](ref:partial-success-responses). Once you create the test suite, you can continue adding more objects to it with the [Add test cases to a test suite](ref:post-test-cases) and [Add variables to a test suite](ref:post-variables) operations.
+- [Get a test suite](https://techdocs.akamai.com/test-ctr/reference/get-test-suite.md): Returns basic data about a test suite. To check test cases and variables included in the test suite, run the [Get a test suite with child objects](ref:get-test-suites-with-child-objects) operation.
+- [Update a test suite](https://techdocs.akamai.com/test-ctr/reference/put-test-suite.md): Updates basic settings of a test suite. To edit test cases and variables, run the [Update a test suite with child objects](ref:put-test-suites-with-child-objects) operation.
+- [Delete a test suite](https://techdocs.akamai.com/test-ctr/reference/delete-test-suite.md): Deletes a test suite and included child objects: test cases and variables. You can [restore](ref:post-test-suite-restore) test suites with child objects within 30 days of deleting them.
+- [Restore a test suite](https://techdocs.akamai.com/test-ctr/reference/post-test-suite-restore.md): Restores a deleted test suite and included child objects. You can run this operation within 30 days of deleting the test suite.
+- [Get a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/get-test-suites-with-child-objects.md): Exports a test suite with test cases and variables.
+- [Update a test suite with child objects](https://techdocs.akamai.com/test-ctr/reference/put-test-suites-with-child-objects.md): Updates a test suite and included test cases and variables.
+- [Add variables to a test suite](https://techdocs.akamai.com/test-ctr/reference/post-variables.md): Adds new variables to a test suite. You can use variables in a test request's URL or request headers and in condition expression, as a substitute of placeholders. To learn more, see [Variables](ref:variables-overview). The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [List variables](https://techdocs.akamai.com/test-ctr/reference/get-variables.md): Lists variables created in a test suite.
+- [Update variables](https://techdocs.akamai.com/test-ctr/reference/put-variables.md): Updates variables in a test suite. The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [Delete variables](https://techdocs.akamai.com/test-ctr/reference/post-remove-variables.md): Deletes unused variables from a test suite. The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [Get a variable](https://techdocs.akamai.com/test-ctr/reference/get-variable.md): Returns details of a variable used in a test suite.
+- [Add test cases to a test suite](https://techdocs.akamai.com/test-ctr/reference/post-test-cases.md): Adds a list of new functional test cases to a test suite. Each test case consists of a test request, client profile, and condition. If you want to use variables within a condition or test request's URL or request header, [create the needed variables](ref:post-variables) first. The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [List test cases](https://techdocs.akamai.com/test-ctr/reference/get-test-cases.md): Lists functional test cases included in a test suite. The list can also include deleted test cases that you can restore. The response is an array of objects, each keyed by `testCaseId`.
+- [Update test cases](https://techdocs.akamai.com/test-ctr/reference/put-test-cases.md): Updates functional test cases in a test suite. The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [Reorder test cases in a test suite](https://techdocs.akamai.com/test-ctr/reference/put-order-test-case.md): Reorders functional test cases in a test suite. The order of test cases applies when running a test for stateful test suites. You need to provide target order for all test cases included in a test suite. To check the current order of test cases, run the [Get a test suite with child objects](ref:get-test-suites-with-child-objects) operation.
+- [Remove test cases](https://techdocs.akamai.com/test-ctr/reference/post-remove-test-case.md): Removes functional test cases with specific identifiers from a test suite. To get the identifiers, run the [List test cases](ref:get-test-cases) operation. The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [Restore test cases](https://techdocs.akamai.com/test-ctr/reference/post-test-cases-restore.md): Restores functional test cases into a test suite. To get the `testCaseId` of the test case you want to restore, run the [List test cases](ref:get-test-cases) operation with `includeRecentlyDeleted` set to `true`. The operation responds with a [partial-success 207 response](ref:partial-success-responses).
+- [Get a test case](https://techdocs.akamai.com/test-ctr/reference/get-test-case.md): Returns details of a functional test case.
+
+## API Reference: Test catalog template
+
+- [Test catalog template index](https://techdocs.akamai.com/test-ctr/reference/test-catalog-template/llms.txt): full category index
+- [Get the test catalog template](https://techdocs.akamai.com/test-ctr/reference/get-test-catalog-template.md): Returns the test catalog template used for creating conditions. To learn more, see [Test Center concepts](ref:test-center-concepts) and [Example: create a condition](ref:example-create-condition).
+- [List test conditions](https://techdocs.akamai.com/test-ctr/reference/get-test-conditions.md): Lists condition statements you can use for creating test cases.
+
+## API Reference: Test requests
+
+- [Test requests index](https://techdocs.akamai.com/test-ctr/reference/test-requests/llms.txt): full category index
+- [List test requests](https://techdocs.akamai.com/test-ctr/reference/get-test-requests.md): Lists test requests created in your organization.
+
+## API Reference: Functions
+
+- [Functions index](https://techdocs.akamai.com/test-ctr/reference/functions/llms.txt): full category index
+- [Check how functions work](https://techdocs.akamai.com/test-ctr/reference/post-try-it.md): Runs a created function on sample data to check whether it returns the expected value. A function is valid for use in a test case if the response's `results` value returns only one value. To learn more about functions and variables, see [Variables](ref:variables-overview).

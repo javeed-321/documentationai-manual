@@ -1,0 +1,106 @@
+{
+  "slug": "cps/recipes/llms.txt",
+  "source": "https://techdocs.akamai.com/cps/recipes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/cps/recipes/llms.txt",
+  "title": "Recipes index",
+  "description": "full section index",
+  "section": "Certificate Provisioning System",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Certificate Provisioning System Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Certificate Provisioning System Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai’s Certificate Provisioning System (CPS) allows you to self-provision and manage your Secure Sockets Layer (SSL) and Transport Layer Security (TLS) certificates. It supports all certificate options, including third party.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai’s Certificate Provisioning System (CPS) allows you to self-provision and manage your Secure Sockets Layer (SSL) and Transport Layer Security (TLS) certificates. It supports all certificate options, including third party.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/cps/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/cps/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Recipes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recipes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        22
+      ],
+      "raw": "- [Cancel a change](https://techdocs.akamai.com/cps/recipes/cancel-a-change.md)\n- [Create an enrollment](https://techdocs.akamai.com/cps/recipes/create-an-enrollment.md)\n- [Get a change](https://techdocs.akamai.com/cps/recipes/get-a-change.md)\n- [Get a deployment schedule](https://techdocs.akamai.com/cps/recipes/get-a-deployment-schedule.md)\n- [Get an enrollment](https://techdocs.akamai.com/cps/recipes/get-an-enrollment.md)\n- [Get certificate history](https://techdocs.akamai.com/cps/recipes/get-certificate-history.md)\n- [Get change status](https://techdocs.akamai.com/cps/recipes/get-change-status.md)\n- [Get production deployment](https://techdocs.akamai.com/cps/recipes/get-production-deployment.md)\n- [Get staging deployment](https://techdocs.akamai.com/cps/recipes/get-staging-deployment.md)\n- [List deployments](https://techdocs.akamai.com/cps/recipes/list-deployments.md)\n- [List enrollments](https://techdocs.akamai.com/cps/recipes/list-enrollments.md)\n- [Remove an enrollment](https://techdocs.akamai.com/cps/recipes/remove-an-enrollment.md)\n- [Update a change](https://techdocs.akamai.com/cps/recipes/update-a-change.md)\n- [Update a deployment schedule](https://techdocs.akamai.com/cps/recipes/update-a-deployment-schedule-1.md)\n- [Update an enrollment](https://techdocs.akamai.com/cps/recipes/update-an-enrollment.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Cancel a changeCreate an enrollmentGet a changeGet a deployment scheduleGet an enrollmentGet certificate historyGet change statusGet production deploymentGet staging deploymentList deploymentsList enrollmentsRemove an enrollmentUpdate a changeUpdate a deployment scheduleUpdate an enrollment",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

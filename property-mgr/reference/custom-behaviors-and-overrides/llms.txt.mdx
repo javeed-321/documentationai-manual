@@ -1,0 +1,14 @@
+---
+title: "Custom behaviors and overrides"
+---
+
+# Property Manager Documentation
+
+> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.
+
+## API Reference: Custom behaviors and overrides
+
+- [List custom behaviors](https://techdocs.akamai.com/property-mgr/reference/get-custom-behaviors.md): Lists the set of custom XML metadata behaviors configured for you by Akamai representatives. Referencing the relevant `behaviorId` from a [`customBehavior`](/reference/latest-custom-behavior) within the rule tree injects the custom XML within the rest of the rule tree's metadata XML. See [Custom behaviors and overrides](/reference/custom-behaviors-and-overrides) for guidance on custom overrides.
+- [Get a custom behavior](https://techdocs.akamai.com/property-mgr/reference/get-custom-behavior.md): Get information for a single custom behavior. Use this operation if you want to examine the custom behavior's XML metadata source.
+- [List custom overrides](https://techdocs.akamai.com/property-mgr/reference/get-custom-overrides.md): Lists the set of custom XML metadata overrides configured for you by Akamai representatives. Referencing the relevant `overrideId` from a `customOverride` object makes the custom XML append to the rest of the metadata XML defined by the rule tree, typically to restore state. See [Custom behaviors and overrides](/reference/custom-behaviors-and-overrides) for guidance on custom overrides.
+- [Get a custom override](https://techdocs.akamai.com/property-mgr/reference/get-custom-override.md): Get information for a single custom override. Use this operation if you want to examine the override's XML metadata.

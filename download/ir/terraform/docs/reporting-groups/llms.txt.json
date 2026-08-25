@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/reporting-groups/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/reporting-groups/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/reporting-groups/llms.txt",
+  "title": "Reporting Groups",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Reporting Groups",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Reporting Groups",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [Manage reporting groups](https://techdocs.akamai.com/terraform/docs/manage-reporting-groups.md)\n- [CP code](https://techdocs.akamai.com/terraform/docs/rg-ds-cp-code.md): akamai_reportinggroups_cp_code\n- [CP codes](https://techdocs.akamai.com/terraform/docs/rg-ds-cp-codes.md): akamai_reportinggroups_cp_codes\n- [Reporting group](https://techdocs.akamai.com/terraform/docs/rg-ds-reporting-group.md): akamai_reportinggroups_group\n- [Reporting groups](https://techdocs.akamai.com/terraform/docs/rg-ds-reporting-groups.md): akamai_reportinggroups_groups\n- [Reporting group](https://techdocs.akamai.com/terraform/docs/rg-rc-reporting-group.md): akamai_reportinggroups_group",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Manage reporting groupsCP code: akamai_reportinggroups_cp_codeCP codes: akamai_reportinggroups_cp_codesReporting group: akamai_reportinggroups_groupReporting groups: akamai_reportinggroups_groupsReporting group: akamai_reportinggroups_group",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Edge Diagnostics Documentation
+
+> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Metadata Tracer
+- [Launch a metadata tracing request](https://techdocs.akamai.com/edge-diagnostics/reference/post-mdt.md): Launches an [asynchronous](ref:asynchronous-processes) request to trace metadata for a URL configured in Property Manager. The metadata tracing works for the current property version active either on staging or production. To run the operation for a location, run the [List available locations for metadata tracing](ref:get-mdt-locations) operation first to get available values. If you don't provide a location ID or an edge server IP, then Edge Diagnostics runs the operation using a random location. The operation doesn't support requests for zone apex mapping (ZAM) and hostnames lacking a CNAME on the staging environment.
+- [List available edge server locations for metadata tracing](https://techdocs.akamai.com/edge-diagnostics/reference/get-mdt-locations.md): Lists active locations you can use to run the [Launch a metadata tracing request](ref:post-mdt) operation together with information about supported HTTP methods. The operation responds with a subset of edge servers returned by the [List available edge server locations](ref:get-edge-locations) operation.
+- [Check a metadata tracing request status](https://techdocs.akamai.com/edge-diagnostics/reference/get-mdt-request.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Launch a Metadata Tracer request](ref:post-mdt) operation. For operations with the `SUCCESS` status, the response includes the metadata details. For requests with the `Accept: text/html` request header, results are in static HTML format. To learn more about the results, check [How to read the results](ref:mdt-results).
+- [How to read the results](https://techdocs.akamai.com/edge-diagnostics/reference/mdt-results.md)

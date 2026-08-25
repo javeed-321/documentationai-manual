@@ -1,0 +1,106 @@
+{
+  "slug": "etp/docs/analyze-reports/llms.txt",
+  "source": "https://techdocs.akamai.com/etp/docs/analyze-reports/llms.txt.md",
+  "url": "https://techdocs.akamai.com/etp/docs/analyze-reports/llms.txt",
+  "title": "Analyze reports",
+  "description": "",
+  "section": "Secure Internet Access Enterprise",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Secure Internet Access Enterprise Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Secure Internet Access Enterprise Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Secure Internet Access Enterprise (SIA) leverages real-time Akamai Cloud Security Intelligence and Akamai’s proven, globally distributed, recursive DNS platform to identify and block targeted threats such as malware, ransomware, DNS data exfiltration, and phishing. Akamai’s cloud portal lets security teams centrally manage and enforce unified security and acceptable use policies for all employees in minutes.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Secure Internet Access Enterprise (SIA) leverages real-time Akamai Cloud Security Intelligence and Akamai’s proven, globally distributed, recursive DNS platform to identify and block targeted threats such as malware, ransomware, DNS data exfiltration, and phishing. Akamai’s cloud portal lets security teams centrally manage and enforce unified security and acceptable use policies for all employees in minutes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/etp/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/etp/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Analyze reports",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Analyze reports",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        38
+      ],
+      "raw": "- [Dashboard](https://techdocs.akamai.com/etp/docs/dashboard.md)\n- [Security Summary dashboard](https://techdocs.akamai.com/etp/docs/security-summary-dashboard.md)\n- [Manage the Security Summary dashboard](https://techdocs.akamai.com/etp/docs/manage-securitysummary-dashboard.md)\n- [Events](https://techdocs.akamai.com/etp/docs/events.md)\n- [Filter event data](https://techdocs.akamai.com/etp/docs/filter-event-data.md)\n- [Configure and apply a filter](https://techdocs.akamai.com/etp/docs/configure-apply-filter.md)\n- [Filter data based on date and time](https://techdocs.akamai.com/etp/docs/filter-data.md)\n- [Select a dimension](https://techdocs.akamai.com/etp/docs/select-a-dimension.md)\n- [Search for events](https://techdocs.akamai.com/etp/docs/search-for-events.md)\n- [View event details](https://techdocs.akamai.com/etp/docs/view-event-details.md)\n- [View domain details](https://techdocs.akamai.com/etp/docs/view-domain-details.md)\n- [View threat details](https://techdocs.akamai.com/etp/docs/view-threat-details.md)\n- [Add or remove data columns to events tables](https://techdocs.akamai.com/etp/docs/add-remove-datacolumns.md)\n- [Download a CSV file with event information](https://techdocs.akamai.com/etp/docs/download-event-information.md)\n- [Download CSV with aggregate data](https://techdocs.akamai.com/etp/docs/download-aggregate-data.md)\n- [Event dimensions](https://techdocs.akamai.com/etp/docs/event-dimensions.md)\n- [Threat event details](https://techdocs.akamai.com/etp/docs/threat-event-details.md)\n- [Access control event details](https://techdocs.akamai.com/etp/docs/ac-event-details.md)\n- [FWaaS event details](https://techdocs.akamai.com/etp/docs/fwaas-event-details.md)\n- [Activity](https://techdocs.akamai.com/etp/docs/activity.md)\n- [Summary of DNS activity](https://techdocs.akamai.com/etp/docs/summary-dns-activity.md)\n- [DNS activity](https://techdocs.akamai.com/etp/docs/dns-activity.md)\n- [Summary of Proxy activity](https://techdocs.akamai.com/etp/docs/summary-proxy-activity.md)\n- [Proxy activity](https://techdocs.akamai.com/etp/docs/proxy-activity.md)\n- [Network Traffic](https://techdocs.akamai.com/etp/docs/network-traffic.md)\n- [Security Connector activity](https://techdocs.akamai.com/etp/docs/security-connector-activity.md)\n- [Identity provider activity](https://techdocs.akamai.com/etp/docs/identity-provider-activity.md)\n- [IPsec tunnel activity](https://techdocs.akamai.com/etp/docs/ipsec-tunnel-activity.md)\n- [Indicator search](https://techdocs.akamai.com/etp/docs/indicator-search.md)\n- [Scheduled reports and notifications](https://techdocs.akamai.com/etp/docs/scheduled-reports.md)\n- [Transport data to your SIEM with Unified Log Streamer](https://techdocs.akamai.com/etp/docs/use-uls.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "DashboardSecurity Summary dashboardManage the Security Summary dashboardEventsFilter event dataConfigure and apply a filterFilter data based on date and timeSelect a dimensionSearch for eventsView event detailsView domain detailsView threat detailsAdd or remove data columns to events tablesDownload a CSV file with event informationDownload CSV with aggregate dataEvent dimensionsThreat event detailsAccess control event detailsFWaaS event detailsActivitySummary of DNS activityDNS activitySummary of Proxy activityProxy activityNetwork TrafficSecurity Connector activityIdentity provider activityIPsec tunnel activityIndicator searchScheduled reports and notificationsTransport data to your SIEM with Unified Log Streamer",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

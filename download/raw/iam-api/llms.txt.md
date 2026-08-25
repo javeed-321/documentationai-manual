@@ -1,0 +1,30 @@
+# Identity and Access Management API Documentation
+
+> The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/iam-api/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/iam-api/reference/api/llms.txt)
+- [Groups](https://techdocs.akamai.com/iam-api/reference/groups/llms.txt)
+- [Properties](https://techdocs.akamai.com/iam-api/reference/properties/llms.txt)
+- [Roles](https://techdocs.akamai.com/iam-api/reference/roles/llms.txt)
+- [Users, for administrators](https://techdocs.akamai.com/iam-api/reference/users-for-administrators/llms.txt)
+- [Your user profile](https://techdocs.akamai.com/iam-api/reference/your-user-profile/llms.txt)
+- [Common resources, for administrators](https://techdocs.akamai.com/iam-api/reference/common-resources-for-administrators/llms.txt)
+- [Common resources, for users](https://techdocs.akamai.com/iam-api/reference/common-resources-for-users/llms.txt)
+- [IP access control lists](https://techdocs.akamai.com/iam-api/reference/ip-access-control-lists/llms.txt)
+- [API clients administration](https://techdocs.akamai.com/iam-api/reference/api-clients-administration/llms.txt)
+- [API client credentials](https://techdocs.akamai.com/iam-api/reference/api-client-credentials/llms.txt)
+
+## Recipes
+
+- [Recipes index](https://techdocs.akamai.com/iam-api/recipes/llms.txt): full section index
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/iam-api/changelog/llms.txt): full section index

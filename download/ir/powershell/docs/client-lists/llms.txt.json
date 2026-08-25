@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/client-lists/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/client-lists/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/client-lists/llms.txt",
+  "title": "Client Lists",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Client Lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Client Lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        29
+      ],
+      "raw": "- [Configure client lists](https://techdocs.akamai.com/powershell/docs/configure-client-lists.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/cl-index.md)\n- [List item](https://techdocs.akamai.com/powershell/docs/add-clientlistitem.md): Add-ClientListItem\n- [Client list](https://techdocs.akamai.com/powershell/docs/get-clientlist.md): Get-ClientList\n- [Contracts & groups](https://techdocs.akamai.com/powershell/docs/get-clientlistcontractsgroups.md): Get-ClientListContractsGroups\n- [Activation](https://techdocs.akamai.com/powershell/docs/get-clientlistactivation.md): Get-ClientListActivation\n- [Activation status](https://techdocs.akamai.com/powershell/docs/get-clientlistactivationstatus.md): Get-ClientListActivationStatus\n- [List item](https://techdocs.akamai.com/powershell/docs/get-clientlistitem.md): Get-ClientListItem\n- [Snapshot](https://techdocs.akamai.com/powershell/docs/get-clientlistsnapshot.md): Get-ClientListSnapshot\n- [Tags](https://techdocs.akamai.com/powershell/docs/get-clientlisttag.md): Get-ClientListTag\n- [Usage data](https://techdocs.akamai.com/powershell/docs/get-clientlistusage.md): Get-ClientListUsage\n- [List item](https://techdocs.akamai.com/powershell/docs/import-clientlistitem.md)\n- [Activation](https://techdocs.akamai.com/powershell/docs/new-clientlistactivation.md): New-ClientListActivation\n- [Client list](https://techdocs.akamai.com/powershell/docs/new-clientlist.md): New-ClientList\n- [Deactivation](https://techdocs.akamai.com/powershell/docs/new-clientlistdeactivation.md): New-ClientListDeactivation\n- [Subscription](https://techdocs.akamai.com/powershell/docs/new-clientlistsubscription.md)\n- [Client list](https://techdocs.akamai.com/powershell/docs/remove-clientlist.md): Remove-ClientList\n- [Item](https://techdocs.akamai.com/powershell/docs/remove-clientlistitem.md)\n- [Subscription](https://techdocs.akamai.com/powershell/docs/remove-clientlistsubscription.md)\n- [Client list](https://techdocs.akamai.com/powershell/docs/set-clientlist.md): Set-ClientList\n- [List item](https://techdocs.akamai.com/powershell/docs/set-clientlistitem.md): Set-ClientListItem\n- [List items](https://techdocs.akamai.com/powershell/docs/test-clientlistitem.md): Test-ClientListItems",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Configure client listsFunction indexList item: Add-ClientListItemClient list: Get-ClientListContracts & groups: Get-ClientListContractsGroupsActivation: Get-ClientListActivationActivation status: Get-ClientListActivationStatusList item: Get-ClientListItemSnapshot: Get-ClientListSnapshotTags: Get-ClientListTagUsage data: Get-ClientListUsageList itemActivation: New-ClientListActivationClient list: New-ClientListDeactivation: New-ClientListDeactivationSubscriptionClient list: Remove-ClientListItemSubscriptionClient list: Set-ClientListList item: Set-ClientListItemList items: Test-ClientListItems",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

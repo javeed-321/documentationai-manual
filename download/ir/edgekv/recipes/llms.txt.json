@@ -1,0 +1,106 @@
+{
+  "slug": "edgekv/recipes/llms.txt",
+  "source": "https://techdocs.akamai.com/edgekv/recipes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edgekv/recipes/llms.txt",
+  "title": "Recipes index",
+  "description": "full section index",
+  "section": "EdgeKV",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# EdgeKV Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "EdgeKV Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's EdgeKV is a key-value store database at the edge. It enables you to build data-driven EdgeWorker applications that require fast, frequent reads and infrequent writes.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's EdgeKV is a key-value store database at the edge. It enables you to build data-driven EdgeWorker applications that require fast, frequent reads and infrequent writes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edgekv/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edgekv/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Recipes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recipes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        30
+      ],
+      "raw": "- [Create a namespace](https://techdocs.akamai.com/edgekv/recipes/create-a-namespace.md)\n- [Create an access token](https://techdocs.akamai.com/edgekv/recipes/create-an-access-token.md)\n- [Delete an item](https://techdocs.akamai.com/edgekv/recipes/delete-an-item.md)\n- [Download an access token](https://techdocs.akamai.com/edgekv/recipes/download-an-access-token.md)\n- [Download group data](https://techdocs.akamai.com/edgekv/recipes/download-group-data.md)\n- [Download namespace data](https://techdocs.akamai.com/edgekv/recipes/download-namespace-data.md)\n- [Get a permission group](https://techdocs.akamai.com/edgekv/recipes/get-a-permission-group.md)\n- [Get namespace details](https://techdocs.akamai.com/edgekv/recipes/get-namespace-details.md)\n- [Get namespace upload job details](https://techdocs.akamai.com/edgekv/recipes/get-namespace-upload-job-details.md)\n- [Get the EdgeKV initialization status](https://techdocs.akamai.com/edgekv/recipes/get-the-edgekv-initialization-status.md)\n- [Initialize EdgeKV](https://techdocs.akamai.com/edgekv/recipes/initialize-edgekv.md)\n- [List access tokens](https://techdocs.akamai.com/edgekv/recipes/list-access-tokens.md)\n- [List groups within a namespace](https://techdocs.akamai.com/edgekv/recipes/list-groups-within-a-namespace.md)\n- [List items within a group](https://techdocs.akamai.com/edgekv/recipes/list-items-within-a-group.md)\n- [List namespaces](https://techdocs.akamai.com/edgekv/recipes/list-namespaces.md)\n- [List permission groups](https://techdocs.akamai.com/edgekv/recipes/list-permission-groups.md)\n- [List upload jobs](https://techdocs.akamai.com/edgekv/recipes/list-upload-jobs.md)\n- [Read an item](https://techdocs.akamai.com/edgekv/recipes/read-an-item.md)\n- [Reauthorize a namespace](https://techdocs.akamai.com/edgekv/recipes/reauthorize-a-namespace.md)\n- [Revoke an access token](https://techdocs.akamai.com/edgekv/recipes/revoke-an-access-token.md)\n- [Update namespace details](https://techdocs.akamai.com/edgekv/recipes/update-namespace-details.md)\n- [Upload namespace data](https://techdocs.akamai.com/edgekv/recipes/upload-namespace-data.md)\n- [Write an item](https://techdocs.akamai.com/edgekv/recipes/write-an-item.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a namespaceCreate an access tokenDelete an itemDownload an access tokenDownload group dataDownload namespace dataGet a permission groupGet namespace detailsGet namespace upload job detailsGet the EdgeKV initialization statusInitialize EdgeKVList access tokensList groups within a namespaceList items within a groupList namespacesList permission groupsList upload jobsRead an itemReauthorize a namespaceRevoke an access tokenUpdate namespace detailsUpload namespace dataWrite an item",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

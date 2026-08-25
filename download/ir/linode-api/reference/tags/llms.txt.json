@@ -1,0 +1,112 @@
+{
+  "slug": "linode-api/reference/tags/llms.txt",
+  "source": "https://techdocs.akamai.com/linode-api/reference/tags/llms.txt.md",
+  "url": "https://techdocs.akamai.com/linode-api/reference/tags/llms.txt",
+  "title": "Tags",
+  "description": "",
+  "section": "Linode API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Linode API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Linode API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Tags",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Tags",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [Create a tag](https://techdocs.akamai.com/linode-api/reference/post-tag.md): Creates a new tag and lets you optionally add it to specific objects. Tags are labels you can attach to objects in your account. Use them to specify and group attributes of objects that are relevant to you. Currently, you can add a tag to your `linodes`, your `nodebalancers`, your `reserved_ipv4_addresses`, the `domains` for your Linodes, and the `volumes` on your Linodes.  > 📘 > > - This operation can only be accessed by account users with _unrestricted_ access. Talk to your local account administrator about access management. > > - If you don't add a tag to a supported object with this operation, you can use that object's update operation to later add the tag you created.   **Permissions and scopes**  To call this operation, you need the following:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `account:read_write`   **CLI**  ```shell linode-cli tags create \\   --label 'example tag' \\   --linodes 123 \\   --linodes 456 \\   --volumes 9082 \\   --volumes 10003 \\   --reserved_ipv4_addresses \"192.0.2.141\" ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List tags](https://techdocs.akamai.com/linode-api/reference/get-tags.md): Returns a paginated list of tags you've [created](ref:post-tag) on your account. This operation can only be accessed by account users with _unrestricted_ access. Talk to your local account administrator about access management.   **Permissions and scopes**  To call this operation, you need the following:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `account:read_only`   **CLI**  ```shell linode-cli tags list linode-cli tags ls ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List tagged objects](https://techdocs.akamai.com/linode-api/reference/get-tagged-objects.md): Returns a paginated list of all objects you've tagged with the specified tag. The response includes a mixed collection of all object types. This operation can only be accessed by account users with _unrestricted_ access. Talk to your local account administrator about access management.   **Permissions and scopes**  To call this operation, you need the following:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `account:read_only`\n- [Delete a tag](https://techdocs.akamai.com/linode-api/reference/delete-tag.md): Deletes the tag and removes it from all tagged objects and reserved IPs. This doesn't delete the objects or reserved IPs. This operation can only be accessed by account users with _unrestricted_ access. Talk to your local account administrator about access management.  > 📘 > > Tags without any related objects are periodically cleaned up by the system.   **Permissions and scopes**  To call this operation, you need the following:  - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `account:read_write`   **CLI**  ```shell linode-cli tags delete linode-cli tags rm ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a tag: Creates a new tag and lets you optionally add it to specific objects. Tags are labels you can attach to objects in your account. Use them to specify and group attributes of objects that are relevant to you. Currently, you can add a tag to your linodes, your nodebalancers, your reserved_ipv4_addresses, the domains for your Linodes, and the volumes on your Linodes.  > 📘 > > - This operation can only be accessed by account users with unrestricted access. Talk to your local account administrator about access management. > > - If you don't add a tag to a supported object with this operation, you can use that object's update operation to later add the tag you created.   Permissions and scopes  To call this operation, you need the following:  - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: account:read_write   CLI  shell linode-cli tags create \\   --label 'example tag' \\   --linodes 123 \\   --linodes 456 \\   --volumes 9082 \\   --volumes 10003 \\   --reserved_ipv4_addresses \"192.0.2.141\"   Learn moreList tags: Returns a paginated list of tags you've created on your account. This operation can only be accessed by account users with unrestricted access. Talk to your local account administrator about access management.   Permissions and scopes  To call this operation, you need the following:  - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: account:read_only   CLI  shell linode-cli tags list linode-cli tags ls   Learn moreList tagged objects: Returns a paginated list of all objects you've tagged with the specified tag. The response includes a mixed collection of all object types. This operation can only be accessed by account users with unrestricted access. Talk to your local account administrator about access management.   Permissions and scopes  To call this operation, you need the following:  - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: account:read_onlyDelete a tag: Deletes the tag and removes it from all tagged objects and reserved IPs. This doesn't delete the objects or reserved IPs. This operation can only be accessed by account users with unrestricted access. Talk to your local account administrator about access management.  > 📘 > > Tags without any related objects are periodically cleaned up by the system.   Permissions and scopes  To call this operation, you need the following:  - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: account:read_write   CLI  shell linode-cli tags delete linode-cli tags rm   Learn more",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-tag",
+          "line": 9
+        }
+      ]
+    }
+  ]
+}

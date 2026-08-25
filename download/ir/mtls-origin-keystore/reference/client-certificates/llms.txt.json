@@ -1,0 +1,106 @@
+{
+  "slug": "mtls-origin-keystore/reference/client-certificates/llms.txt",
+  "source": "https://techdocs.akamai.com/mtls-origin-keystore/reference/client-certificates/llms.txt.md",
+  "url": "https://techdocs.akamai.com/mtls-origin-keystore/reference/client-certificates/llms.txt",
+  "title": "Client certificates",
+  "description": "",
+  "section": "Mutual TLS Origin Keystore",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Mutual TLS Origin Keystore Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Mutual TLS Origin Keystore Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Mutual TLS Origin Keystore to manage client certificates for mTLS authentication between the Akamai edge server and the origin.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Mutual TLS Origin Keystore to manage client certificates for mTLS authentication between the Akamai edge server and the origin.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-origin-keystore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/mtls-origin-keystore/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Client certificates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Client certificates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [Create a client certificate](https://techdocs.akamai.com/mtls-origin-keystore/reference/post-client-cert.md): Create a client certificate with the provided name.\n- [List client certificates under the account](https://techdocs.akamai.com/mtls-origin-keystore/reference/get-client-certs.md): List client certificates under the account.\n- [Get a client certificate](https://techdocs.akamai.com/mtls-origin-keystore/reference/get-client-cert.md): Get details of a client certificate.\n- [Patch a client certificate](https://techdocs.akamai.com/mtls-origin-keystore/reference/patch-client-cert.md): Update the client certificate's name or notification emails.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a client certificate: Create a client certificate with the provided name.List client certificates under the account: List client certificates under the account.Get a client certificate: Get details of a client certificate.Patch a client certificate: Update the client certificate's name or notification emails.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+title: "Requests"
+---
+
+# Enhanced Content Control Utility API Documentation
+
+> The Enhanced Content Control Utility (ECCU) is one of several supported Akamai purge interfaces. Use ECCU to specify the set of files to refresh on the edge network. Specify directories, file extensions, certain types of HTTP request, or response properties to refine the set of content to refresh. For example, you can refresh specific parts of a library or the complete cache repository for many domains. The ECCU only invalidates content. It does not remove content from cache.
+
+## API Reference: Requests
+
+- [Create an ECCU request](https://techdocs.akamai.com/eccu/reference/post-request.md): Creates a new ECCU refresh request.
+- [List ECCU requests](https://techdocs.akamai.com/eccu/reference/get-requests.md): Returns a summary of submitted  ECCU refresh requests under your account. Use this to view the `status` of all refresh requests.
+- [Get an ECCU request](https://techdocs.akamai.com/eccu/reference/get-request.md): Returns a submitted refresh request. Run this operation if you want details on the request's `metadata`. Otherwise, you can run [List ECCU requests](/reference/get-requests) to check the `status` of all refresh requests.
+- [Remove an ECCU request](https://techdocs.akamai.com/eccu/reference/delete-request.md): Removes the refresh request from the  list of submitted requests only. This operation doesn't stop the refresh request from being processed.

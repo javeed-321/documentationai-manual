@@ -1,0 +1,18 @@
+# App Platform for LKE Documentation
+
+> App Platform is a Kubernetes service that combines developer-centric and operations-centric tooling along with automation and a self-service portal. This streamlines the application life cycle when using Kubernetes, from development to delivery to the management of containerized application workloads.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/app-platform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Team-level usage (for devs)
+- [Apps](https://techdocs.akamai.com/app-platform/docs/apps.md)
+- [Catalog](https://techdocs.akamai.com/app-platform/docs/team-catalog.md)
+- [Code repositories](https://techdocs.akamai.com/app-platform/docs/code-repositories.md)
+- [Container images](https://techdocs.akamai.com/app-platform/docs/team-container-images.md)
+- [Secrets](https://techdocs.akamai.com/app-platform/docs/team-secrets.md)
+- [Workloads](https://techdocs.akamai.com/app-platform/docs/team-workloads.md)
+- [Network policies](https://techdocs.akamai.com/app-platform/docs/team-network-policies.md)
+- [Services](https://techdocs.akamai.com/app-platform/docs/team-services.md)
+- [Security policies](https://techdocs.akamai.com/app-platform/docs/team-security-policies.md)
+- [Team Settings](https://techdocs.akamai.com/app-platform/docs/team-settings.md)
+- [Shell (TTY Console)](https://techdocs.akamai.com/app-platform/docs/shell-tty.md)

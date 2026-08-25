@@ -1,0 +1,106 @@
+{
+  "slug": "property-mgr/reference/api/llms.txt",
+  "source": "https://techdocs.akamai.com/property-mgr/reference/api/llms.txt.md",
+  "url": "https://techdocs.akamai.com/property-mgr/reference/api/llms.txt",
+  "title": "API",
+  "description": "",
+  "section": "Property Manager",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Property Manager Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Property Manager Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/property-mgr/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        47
+      ],
+      "raw": "- [Property Manager API](https://techdocs.akamai.com/property-mgr/reference/api.md)\n- [API summary](https://techdocs.akamai.com/property-mgr/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/property-mgr/reference/api-get-started.md)\n- [Onboard a property with a CPS-managed certificate](https://techdocs.akamai.com/property-mgr/reference/onboard-a-custom-cert-property.md)\n- [Onboard a property with a Default DV certificate](https://techdocs.akamai.com/property-mgr/reference/onboard-a-secure-by-default-property.md)\n- [Onboard a property with Default DV certificate and advanced domain validation in Multi-CDN scenario](https://techdocs.akamai.com/property-mgr/reference/add-hn-with-default-cert-advanced-methods-multi-cdn.md)\n- [Onboard a property with Default DV certificate and advanced domain validation for SaaS/PaaS/IaaS provider](https://techdocs.akamai.com/property-mgr/reference/add-hn-with-default-cert-advanced-methods-saas.md)\n- [Onboard a property with a CCM certificate](https://techdocs.akamai.com/property-mgr/reference/onboard-a-property-with-a-ccm-certificate.md)\n- [Clone a property](https://techdocs.akamai.com/property-mgr/reference/clone-a-property.md)\n- [Modify current property settings](https://techdocs.akamai.com/property-mgr/reference/modify-current-property-settings.md)\n- [Manage hostnames](https://techdocs.akamai.com/property-mgr/reference/modify-property-hostnames.md)\n- [Activate a property](https://techdocs.akamai.com/property-mgr/reference/activate-a-property.md)\n- [Add hostnames to the hostname bucket](https://techdocs.akamai.com/property-mgr/reference/add-hostnames-to-the-hostname-bucket.md)\n- [Split your configuration into microservices](https://techdocs.akamai.com/property-mgr/reference/split-your-configuration-into-microservices.md)\n- [Share common settings across properties](https://techdocs.akamai.com/property-mgr/reference/share-common-settings-across-properties.md)\n- [API versioning](https://techdocs.akamai.com/property-mgr/reference/api-versioning.md)\n- [Data conventions](https://techdocs.akamai.com/property-mgr/reference/data-conventions.md)\n- [ID prefixes](https://techdocs.akamai.com/property-mgr/reference/id-prefixes.md)\n- [Rate and resource limiting](https://techdocs.akamai.com/property-mgr/reference/rate-and-resource-limiting.md)\n- [Concurrency control](https://techdocs.akamai.com/property-mgr/reference/concurrency-control.md)\n- [Known issues](https://techdocs.akamai.com/property-mgr/reference/known-issues.md)\n- [Restart a Default DV certificate validation](https://techdocs.akamai.com/property-mgr/reference/re-launch-default-certificate-validation.md)\n- [Debug variables](https://techdocs.akamai.com/property-mgr/reference/debug-variables.md)\n- [Rule tree errors and warnings](https://techdocs.akamai.com/property-mgr/reference/rule-tree-errors-and-warnings.md)\n- [Validation errors](https://techdocs.akamai.com/property-mgr/reference/validation-errors.md)\n- [Activation error handling](https://techdocs.akamai.com/property-mgr/reference/property-activation-error-handling.md)\n- [Errors](https://techdocs.akamai.com/property-mgr/reference/api-errors.md)\n- [400](https://techdocs.akamai.com/property-mgr/reference/400.md)\n- [401](https://techdocs.akamai.com/property-mgr/reference/401.md)\n- [403](https://techdocs.akamai.com/property-mgr/reference/403.md)\n- [404](https://techdocs.akamai.com/property-mgr/reference/404.md)\n- [405](https://techdocs.akamai.com/property-mgr/reference/405.md)\n- [406](https://techdocs.akamai.com/property-mgr/reference/406.md)\n- [409](https://techdocs.akamai.com/property-mgr/reference/409.md)\n- [412](https://techdocs.akamai.com/property-mgr/reference/412.md)\n- [413](https://techdocs.akamai.com/property-mgr/reference/413.md)\n- [415](https://techdocs.akamai.com/property-mgr/reference/415.md)\n- [422](https://techdocs.akamai.com/property-mgr/reference/422.md)\n- [429](https://techdocs.akamai.com/property-mgr/reference/429.md)\n- [500](https://techdocs.akamai.com/property-mgr/reference/500.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Property Manager APIAPI summaryGet startedOnboard a property with a CPS-managed certificateOnboard a property with a Default DV certificateOnboard a property with Default DV certificate and advanced domain validation in Multi-CDN scenarioOnboard a property with Default DV certificate and advanced domain validation for SaaS/PaaS/IaaS providerOnboard a property with a CCM certificateClone a propertyModify current property settingsManage hostnamesActivate a propertyAdd hostnames to the hostname bucketSplit your configuration into microservicesShare common settings across propertiesAPI versioningData conventionsID prefixesRate and resource limitingConcurrency controlKnown issuesRestart a Default DV certificate validationDebug variablesRule tree errors and warningsValidation errorsActivation error handlingErrors400401403404405406409412413415422429500",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

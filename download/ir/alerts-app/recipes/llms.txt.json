@@ -1,0 +1,106 @@
+{
+  "slug": "alerts-app/recipes/llms.txt",
+  "source": "https://techdocs.akamai.com/alerts-app/recipes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/alerts-app/recipes/llms.txt",
+  "title": "Recipes index",
+  "description": "full section index",
+  "section": "Alerts",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Alerts Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Alerts Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Recipes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recipes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        25
+      ],
+      "raw": "- [Create a new alert](https://techdocs.akamai.com/alerts-app/recipes/create-a-new-alert.md)\n- [Create a new modeling suppressions](https://techdocs.akamai.com/alerts-app/recipes/create-a-new-modeling-suppressions.md)\n- [Get a template](https://techdocs.akamai.com/alerts-app/recipes/get-a-template.md)\n- [Get adaptive alert edit history](https://techdocs.akamai.com/alerts-app/recipes/get-adaptive-alert-edit-history.md)\n- [Get alert details](https://techdocs.akamai.com/alerts-app/recipes/get-alert-details.md)\n- [Get an alert](https://techdocs.akamai.com/alerts-app/recipes/get-an-alert-1.md)\n- [Get an alert summary](https://techdocs.akamai.com/alerts-app/recipes/get-an-alert-summary.md)\n- [Get definition schema](https://techdocs.akamai.com/alerts-app/recipes/get-definition-schema.md)\n- [List access control data](https://techdocs.akamai.com/alerts-app/recipes/list-access-control-data.md)\n- [List active alerts](https://techdocs.akamai.com/alerts-app/recipes/list-active-alerts.md)\n- [List alerts by definition](https://techdocs.akamai.com/alerts-app/recipes/list-alerts-by-definition.md)\n- [List alerts by fields](https://techdocs.akamai.com/alerts-app/recipes/list-alerts-by-fields.md)\n- [List fired alerts](https://techdocs.akamai.com/alerts-app/recipes/list-fired-alerts.md)\n- [List modeling suppressions](https://techdocs.akamai.com/alerts-app/recipes/list-modeling-suppressions.md)\n- [List sparklines](https://techdocs.akamai.com/alerts-app/recipes/list-sparklines.md)\n- [Remove an alert](https://techdocs.akamai.com/alerts-app/recipes/remove-an-alert-1.md)\n- [Unsuppress alert modeling](https://techdocs.akamai.com/alerts-app/recipes/unsuppress-alert-modeling.md)\n- [Update an alert](https://techdocs.akamai.com/alerts-app/recipes/update-an-alert-1.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a new alertCreate a new modeling suppressionsGet a templateGet adaptive alert edit historyGet alert detailsGet an alertGet an alert summaryGet definition schemaList access control dataList active alertsList alerts by definitionList alerts by fieldsList fired alertsList modeling suppressionsList sparklinesRemove an alertUnsuppress alert modelingUpdate an alert",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

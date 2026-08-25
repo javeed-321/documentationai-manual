@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/media-services-live/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/media-services-live/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/media-services-live/llms.txt",
+  "title": "Media Services Live",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Media Services Live",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Media Services Live",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        27
+      ],
+      "raw": "- [Function index](https://techdocs.akamai.com/powershell/docs/msl-index.md)\n- [CDNs](https://techdocs.akamai.com/powershell/docs/get-mslcdn.md): Get-MSLCDN\n- [Contracts](https://techdocs.akamai.com/powershell/docs/get-mslcontract.md): Get-MSLContract\n- [CP codes per origin](https://techdocs.akamai.com/powershell/docs/get-mslorigincpcode.md): Get-MSLOriginCPCode\n- [CP codes per type](https://techdocs.akamai.com/powershell/docs/get-mslcpcode.md): Get-MSLCPCode\n- [Migration](https://techdocs.akamai.com/powershell/docs/get-mslmigration.md): Get-MSLMigration\n- [Origin](https://techdocs.akamai.com/powershell/docs/get-mslorigin.md): Get-MSLOrigin\n- [Publishing locations](https://techdocs.akamai.com/powershell/docs/get-mslpublishinglocations.md): Get-MSLPublishingLocations\n- [Stream](https://techdocs.akamai.com/powershell/docs/get-mslstream.md): Get-MSLStream\n- [VOD origins](https://techdocs.akamai.com/powershell/docs/get-mslvodorigin.md): Get-MSLVODOrigin\n- [CP code](https://techdocs.akamai.com/powershell/docs/new-mslcpcode.md): New-MSLCPCode\n- [Key](https://techdocs.akamai.com/powershell/docs/new-mslkey.md): New-MSLKey\n- [Migration](https://techdocs.akamai.com/powershell/docs/new-mslmigration.md): New-MSLMigration\n- [Origin](https://techdocs.akamai.com/powershell/docs/new-mslorigin.md): New-MSLOrigin\n- [Stream](https://techdocs.akamai.com/powershell/docs/new-mslstream.md): New-MSLStream\n- [Origin](https://techdocs.akamai.com/powershell/docs/remove-mslorigin.md): Remove-MSLOrigin\n- [Stream](https://techdocs.akamai.com/powershell/docs/remove-mslstream.md): Remove-MSLStream\n- [Origin](https://techdocs.akamai.com/powershell/docs/set-mslorigin.md): Set-MSLOrigin\n- [Stream](https://techdocs.akamai.com/powershell/docs/set-mslstream.md): Set-MSLStream\n- [Migration](https://techdocs.akamai.com/powershell/docs/undo-mslmigration.md): Undo-MSLMigration",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Function indexCDNs: Get-MSLCDNContracts: Get-MSLContractCP codes per origin: Get-MSLOriginCPCodeCP codes per type: Get-MSLCPCodeMigration: Get-MSLMigrationOrigin: Get-MSLOriginPublishing locations: Get-MSLPublishingLocationsStream: Get-MSLStreamVOD origins: Get-MSLVODOriginCP code: New-MSLCPCodeKey: New-MSLKeyMigration: New-MSLMigrationOrigin: New-MSLOriginStream: New-MSLStreamOrigin: Remove-MSLOriginStream: Remove-MSLStreamOrigin: Set-MSLOriginStream: Set-MSLStreamMigration: Undo-MSLMigration",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

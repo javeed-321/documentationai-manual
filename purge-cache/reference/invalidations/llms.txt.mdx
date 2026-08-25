@@ -1,0 +1,13 @@
+---
+title: "Invalidations"
+---
+
+# Purge Cache Documentation
+
+> Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.
+
+## API Reference: Invalidations
+
+- [Invalidate by CP code](https://techdocs.akamai.com/purge-cache/reference/post-invalidate-cpcode.md): Invalidates content on the selected CP code for the selected `network`. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.
+- [Invalidate by cache tag](https://techdocs.akamai.com/purge-cache/reference/post-invalidate-tag.md): Invalidates content on the selected set of cache tags for the selected `network`. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable.
+- [Invalidate by URL or ARL](https://techdocs.akamai.com/purge-cache/reference/post-invalidate-url.md): Invalidates content on the selected URL or ARL for the selected `network`. You should consider invalidating content by default. This keeps each object in cache until the version on your origin server is newer. Deletion retrieves the object regardless, which can dramatically increase the load on your origin server and would prevent Akamai from serving the old content if your origin is unreachable. URLs and ARLs can be submitted in the same request.

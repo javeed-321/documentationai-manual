@@ -1,0 +1,16 @@
+---
+title: "Configurations"
+---
+
+# Cloud Wrapper Documentation
+
+> Akamai's Cloud Wrapper optimizes connectivity between cloud infrastructures and the Akamai Intelligent Edge. It uses custom caching to reduce origin requests and the cost to distribute content from the cloud. If you have a high volume of end-user requests, Cloud Wrapper can help provide consistent, high-quality experiences.
+
+## API Reference: Configurations
+
+- [Create a configuration](https://techdocs.akamai.com/cloud-wrapper/reference/post-configuration.md): Create a Cloud Wrapper configuration. > 📘 > > You first need to work with your account team to include Cloud Wrapper locations and capacity on your contract. Verify your capacity by viewing your [capacity inventory](/reference/get-capacity-inventory).
+- [List configurations](https://techdocs.akamai.com/cloud-wrapper/reference/get-configurations.md): List all of the Cloud Wrapper configurations on your contract.
+- [Activate a configuration](https://techdocs.akamai.com/cloud-wrapper/reference/post-configuration-activations.md): Activate a Cloud Wrapper configuration. It takes 3-4 hours for the configuration to complete. You can use the configuration's `configId` to run the [Get a configuration](/reference/get-configuration) operation and review its `status`. Once it's `ACTIVE`, [enable the Cloud Wrapper behavior](https://techdocs.akamai.com/cloud-wrapper/docs/add-a-cloud-wrapper-behavior#enable-the-cloud-wrapper-behavior) in your property.  To deactivate a configuration, [update it](/reference/put-configuration) and set the `activate` query string to `false`.
+- [Get a configuration](https://techdocs.akamai.com/cloud-wrapper/reference/get-configuration.md): View a specific Cloud Wrapper configuration.
+- [Update a configuration](https://techdocs.akamai.com/cloud-wrapper/reference/put-configuration.md): Update a saved or inactive configuration.
+- [Delete a configuration](https://techdocs.akamai.com/cloud-wrapper/reference/delete-configuration.md): Delete a specific Cloud Wrapper configuration. The delete can take up to three hours to complete. You can use the configuration's `configId` to run the [Get a configuration](/reference/get-configuration) operation to check the status. `DELETE_IN_PROGRESS` indicates the API accepted the request and it's processing the delete. A 404 response indicates the API has deleted the configuration.  > 🚧 Before you delete a configuration: > > Ensure that all the properties that use it have the [`cloudWrapper`](https://techdocs.akamai.com/property-mgr/reference/latest-cloud-wrapper) behavior disabled. Then [update](/reference/put-configuration) the configuration to deactivate it by setting the `activate` query string to `false`.

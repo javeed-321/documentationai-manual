@@ -1,0 +1,122 @@
+{
+  "slug": "edge-dns/reference/zone-versions/llms.txt",
+  "source": "https://techdocs.akamai.com/edge-dns/reference/zone-versions/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edge-dns/reference/zone-versions/llms.txt",
+  "title": "Zone versions",
+  "description": "",
+  "section": "Edge DNS",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Edge DNS Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Edge DNS Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-dns/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-dns/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Zone versions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Zone versions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [List a zone's versions](https://techdocs.akamai.com/edge-dns/reference/get-zone-versions.md): Shows the settings for current and prior versions of this Zone, in reverse chronological order of modification. Many versions in this list may look very similar because a new version is created every time the zone's settings or record sets are changed. This operation is [paginated](ref:use-pagination).\n- [Show zone version differences](https://techdocs.akamai.com/edge-dns/reference/get-zone-versions-diff.md): Displays the difference between any two versions of a zone, as specified in the query parameters.\n- [Get a zone version](https://techdocs.akamai.com/edge-dns/reference/get-zone-versions-uuid.md): Returns an image of the Zone from a previous version. Shows only zone settings, not record sets.\n- [Get a version's record sets](https://techdocs.akamai.com/edge-dns/reference/get-zone-versions-recordsets.md): Lists all record sets for this zone. It works only for `PRIMARY` and `SECONDARY` zones. This operation [paginates](ref:use-pagination).\n- [Reactivate a version](https://techdocs.akamai.com/edge-dns/reference/post-zones-zone-versions-uuid-recordsets-activate.md): Creates and activates a new version of the zone by copying the record sets from a prior version of this zone and reapplying them to the current version. The new version has a new, auto-incremented SOA serial number, and the zone's modification data is set to the current time and user. All other zone settings remain the same as the current version.\n- [Get a version's master zone file](https://techdocs.akamai.com/edge-dns/reference/get-zones-zone-versions-uuid-zone-file.md): Downloads the record sets from a prior zone version in [master zone file](ref:get-zone-versions-uuid) format. This applies to primary and secondary zones.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List a zone's versions: Shows the settings for current and prior versions of this Zone, in reverse chronological order of modification. Many versions in this list may look very similar because a new version is created every time the zone's settings or record sets are changed. This operation is paginated.Show zone version differences: Displays the difference between any two versions of a zone, as specified in the query parameters.Get a zone version: Returns an image of the Zone from a previous version. Shows only zone settings, not record sets.Get a version's record sets: Lists all record sets for this zone. It works only for PRIMARY and SECONDARY zones. This operation paginates.Reactivate a version: Creates and activates a new version of the zone by copying the record sets from a prior version of this zone and reapplying them to the current version. The new version has a new, auto-incremented SOA serial number, and the zone's modification data is set to the current time and user. All other zone settings remain the same as the current version.Get a version's master zone file: Downloads the record sets from a prior zone version in master zone file format. This applies to primary and secondary zones.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:use-pagination",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:use-pagination",
+          "line": 11
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-zone-versions-uuid",
+          "line": 13
+        }
+      ]
+    }
+  ]
+}

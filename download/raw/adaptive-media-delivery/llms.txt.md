@@ -1,0 +1,31 @@
+# Adaptive Media Delivery Documentation
+
+> Delivers streaming video and a quality viewing experience anywhere by adapting real-time to available bandwidth. To meet consumer expectations in a hyperconnected world, content providers need a high-performance streaming media delivery solution like Akamai’s Adaptive Media Delivery. Optimized for Adaptive Bitrate (ABR) streaming, it provides a high-quality viewing experience across the broad variety of network types, fixed or mobile, at varying connection speeds. Because it’s built on the Akamai Intelligent Platform, Adaptive Media Delivery provides superior scalability, reliability, and availability.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/adaptive-media-delivery/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/adaptive-media-delivery/docs/welcome/llms.txt)
+- [Before you begin](https://techdocs.akamai.com/adaptive-media-delivery/docs/before-you-begin/llms.txt)
+- [Configuration](https://techdocs.akamai.com/adaptive-media-delivery/docs/configuration/llms.txt)
+- [Optional features](https://techdocs.akamai.com/adaptive-media-delivery/docs/optional-features/llms.txt)
+- [Resources](https://techdocs.akamai.com/adaptive-media-delivery/docs/resources/llms.txt)
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/adaptive-media-delivery/reference/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/adaptive-media-delivery/reference/welcome/llms.txt)
+- [AMD's Access Revocation API](https://techdocs.akamai.com/adaptive-media-delivery/reference/amds-access-revocation-api/llms.txt)
+- [Access Revocation](https://techdocs.akamai.com/adaptive-media-delivery/reference/access-revocation/llms.txt)
+
+## Recipes
+
+- [Recipes index](https://techdocs.akamai.com/adaptive-media-delivery/recipes/llms.txt): full section index
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/adaptive-media-delivery/changelog/llms.txt): full section index

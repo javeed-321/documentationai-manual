@@ -1,0 +1,17 @@
+# Zero Trust Client Documentation
+
+> Zero Trust Client integrates data path protection, identity access, multi-factor authentication, application security, management visibility, and control for applications hosted in data centers and hybrid cloud environments. Using it, the management and control of remote access for employees, contractors, and partners becomes less complex and more secure. This robust tool delivers access to applications without allowing user access to the entire network. Applications are not accessed directly because they are hidden from the Internet and public exposure. A unique dual-cloud architecture closes all inbound firewall ports while providing authenticated end users with access to only their own special applications. Threat Protection offers a cloud-based, targeted threat protection solution that safeguards your organization from DNS and web-based threats, enforces authentication and acceptable use policies, and audits user Internet access. Segmentation lets you control access, implement security policies, and maintain segmentation throughout your entire environment.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/zero-trust-client/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Jun 18, 2026 — Akamai Zero Trust Client Mobile 3.3.1 for Android and ChromeOS](https://techdocs.akamai.com/zero-trust-client/changelog/jun-18-2026-akamai-zero-trust-client-mobile-331-for-android-and-chromeos.md)
+- [Jun 11, 2026 — Akamai Zero Trust Client 5.x and 6.x End of Support](https://techdocs.akamai.com/zero-trust-client/changelog/jun-11-2026-akamai-zero-trust-client-6x-end-of-support.md)
+- [June 10, 2026 — Akamai Zero Trust Client Mobile 3.3 for Android and ChromeOS](https://techdocs.akamai.com/zero-trust-client/changelog/june-10-2026-akamai-zero-trust-client-mobile-33-for-android.md)
+- [June 5, 2026 — Akamai Zero Trust Client Mobile 3.3 for iOS and iPadOS](https://techdocs.akamai.com/zero-trust-client/changelog/june-5-2026-akamai-zero-trust-client-mobile-33-for-ios-and-ipados.md)
+- [Apr 9, 2026 — Akamai Zero Trust Client 6.1.6 general availability](https://techdocs.akamai.com/zero-trust-client/changelog/apr-9-2026-akamai-zero-trust-client-616-general-availability.md)
+- [Mar 30, 2026 — Akamai Zero Trust Client Mobile 3.2.1 for iOS and iPadOS](https://techdocs.akamai.com/zero-trust-client/changelog/mar-30-2026-akamai-zero-trust-client-mobile-321-for-ios-and-ipados.md)
+- [Jan 29, 2026 — Akamai Zero Trust Client Mobile 3.2](https://techdocs.akamai.com/zero-trust-client/changelog/jan-29-2026-akamai-zero-trust-client-mobile-32.md)
+- [Dec 24, 2025 — Akamai Zero Trust Client Mobile 3.1.1 for iOS and iPadOS](https://techdocs.akamai.com/zero-trust-client/changelog/dec-24-2025-akamai-zero-trust-client-mobile-311-for-ios-and-ipados.md)
+- [Oct 20, 2025 — Akamai Zero Trust Client Mobile 3.1 for iOS and iPadOS](https://techdocs.akamai.com/zero-trust-client/changelog/oct-20-2025-akamai-zero-trust-client-mobile-31-for-ios-and-ipados.md)
+- [Oct 5, 2025 — Akamai Zero Trust Client Mobile 3.1 for Android](https://techdocs.akamai.com/zero-trust-client/changelog/oct-5-2025-akamai-zero-trust-client-mobile-31-for-android.md)

@@ -1,0 +1,17 @@
+# DataStream 2 Documentation
+
+> Akamai's DataStream provides real-time access to application activity data, including aggregated metrics on complete request-response cycles as well as origin response times. It helps simplify web application monitoring, and includes applications deployed to cloud hosting providers and applications that leverage third-party services.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/datastream2/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Jul 8, 2026 — Flexible property selection for streams](https://techdocs.akamai.com/datastream2/changelog/jul-8-2026-flexible-property-selection.md)
+- [Jun 8, 2026 — Security Logs (SIEM) support in DataStream](https://techdocs.akamai.com/datastream2/changelog/jun-8-2026-security-logs-siem-support-in-datastream.md)
+- [Jun 1, 2026 — DataStream 2 API v2 Decommissioning](https://techdocs.akamai.com/datastream2/changelog/jun-1-2026-datastream-2-api-v2-decommissioning.md)
+- [Apr 29, 2026 – Property Manager decoupling support](https://techdocs.akamai.com/datastream2/changelog/apr-29-2026-property-manager-decoupling-support.md)
+- [Mar 26, 2026 – Latency Profiles support](https://techdocs.akamai.com/datastream2/changelog/mar-26-2026-latency-profiles-and-high-completeness-log-support.md)
+- [Jan 7, 2026 – IP Access Lists support](https://techdocs.akamai.com/datastream2/changelog/jan-7-2026-ip-acl-support.md)
+- [Jul 22, 2025 – WebSocket logs enabled in DataStream](https://techdocs.akamai.com/datastream2/changelog/jul-22-2025-websocket-logs-enabled-in-datastream.md)
+- [May 5, 2025 – GeoDelivery data set fields support](https://techdocs.akamai.com/datastream2/changelog/may-5-2025-geodelivery-data-fields-support.md)
+- [Apr 21, 2025 – 'TLS early data' field support](https://techdocs.akamai.com/datastream2/changelog/apr-21-2025-tls-early-data-field-support.md)
+- [Feb 25, 2025 – 'Edge IP Binding status' data field support](https://techdocs.akamai.com/datastream2/changelog/feb-25-2025-edge-ip-binding-status-data-field-support.md)

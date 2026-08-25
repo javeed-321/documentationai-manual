@@ -1,0 +1,132 @@
+{
+  "slug": "iam-api/reference/your-user-profile/llms.txt",
+  "source": "https://techdocs.akamai.com/iam-api/reference/your-user-profile/llms.txt.md",
+  "url": "https://techdocs.akamai.com/iam-api/reference/your-user-profile/llms.txt",
+  "title": "Your user profile",
+  "description": "",
+  "section": "Identity and Access Management API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Identity and Access Management API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Identity and Access Management API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/iam-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/iam-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Your user profile",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Your user profile",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [View your profile](https://techdocs.akamai.com/iam-api/reference/get-user-profile.md): This operation gets your profile information. To make changes to your profile, run the [Edit your profile](ref:put-user-profile-info) operation.\n- [Edit your profile](https://techdocs.akamai.com/iam-api/reference/put-user-profile-info.md): This operation updates your basic profile information, such as your name or phone number. To edit detailed settings, run the [Update your notifications](ref:put-user-profile-notifications) or [Modify a user's group and role assignments](ref:put-ui-uiidentity-auth-grants) operations.\n- [Set multi-factor authentication for your user profile](https://techdocs.akamai.com/iam-api/reference/put-user-profile-additional-authentication.md): This operation sets multi-factor authentication to `TFA`, `MFA`, or `NONE`. You have five login attempts with MFA or 2FA before your account is locked. If your account is locked, use the [Reset multi-factor authentication for your user profile](ref:put-user-profile-reset-additional-authentication) operation to unlock it.\n- [Reset multi-factor authentication for your user profile](https://techdocs.akamai.com/iam-api/reference/put-user-profile-reset-additional-authentication.md): This operation resets your multi-factor authentication.\n- [Rotate your password](https://techdocs.akamai.com/iam-api/reference/post-profile-change-password.md): This operation changes your password. Include your old password and your new password in the request body. Before you create your new password, run the [View password policy](ref:get-common-password-policy) operation to ensure it adheres to your policy. If you include your existing password incorrectly and make too many login attempts, your account locks.\n- [Update your notifications](https://techdocs.akamai.com/iam-api/reference/put-user-profile-notifications.md): This operation subscribes to notifications emails for password expiration reminders, proactive maintenance emails, and upgrade notification emails.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "View your profile: This operation gets your profile information. To make changes to your profile, run the Edit your profile operation.Edit your profile: This operation updates your basic profile information, such as your name or phone number. To edit detailed settings, run the Update your notifications or Modify a user's group and role assignments operations.Set multi-factor authentication for your user profile: This operation sets multi-factor authentication to TFA, MFA, or NONE. You have five login attempts with MFA or 2FA before your account is locked. If your account is locked, use the Reset multi-factor authentication for your user profile operation to unlock it.Reset multi-factor authentication for your user profile: This operation resets your multi-factor authentication.Rotate your password: This operation changes your password. Include your old password and your new password in the request body. Before you create your new password, run the View password policy operation to ensure it adheres to your policy. If you include your existing password incorrectly and make too many login attempts, your account locks.Update your notifications: This operation subscribes to notifications emails for password expiration reminders, proactive maintenance emails, and upgrade notification emails.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:put-user-profile-info",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-user-profile-notifications",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-ui-uiidentity-auth-grants",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:put-user-profile-reset-additional-authentication",
+          "line": 10
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-common-password-policy",
+          "line": 12
+        }
+      ]
+    }
+  ]
+}

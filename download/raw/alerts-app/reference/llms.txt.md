@@ -1,0 +1,78 @@
+# Alerts Documentation
+
+> Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/alerts-app/reference/api/llms.txt): full category index
+- [Alerts API](https://techdocs.akamai.com/alerts-app/reference/api.md)
+- [API summary](https://techdocs.akamai.com/alerts-app/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/alerts-app/reference/api-get-started.md)
+- [API concepts](https://techdocs.akamai.com/alerts-app/reference/api-concepts.md)
+- [API workflows](https://techdocs.akamai.com/alerts-app/reference/workflows.md)
+- [API hypermedia](https://techdocs.akamai.com/alerts-app/reference/api-hypermedia.md)
+- [Rate limits](https://techdocs.akamai.com/alerts-app/reference/rate-limits.md)
+- [Errors](https://techdocs.akamai.com/alerts-app/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/alerts-app/reference/400.md)
+- [401](https://techdocs.akamai.com/alerts-app/reference/401.md)
+- [403](https://techdocs.akamai.com/alerts-app/reference/403.md)
+- [404](https://techdocs.akamai.com/alerts-app/reference/404.md)
+- [405](https://techdocs.akamai.com/alerts-app/reference/405.md)
+- [409](https://techdocs.akamai.com/alerts-app/reference/409.md)
+- [415](https://techdocs.akamai.com/alerts-app/reference/415.md)
+- [500](https://techdocs.akamai.com/alerts-app/reference/500.md)
+
+## API Reference: Access control data
+
+- [Access control data index](https://techdocs.akamai.com/alerts-app/reference/access-control-data/llms.txt): full category index
+- [List access control data](https://techdocs.akamai.com/alerts-app/reference/get-access-control-data.md): Lists items of relevant data available to you at runtime to apply to an alert definition. For example, when creating an alert about traffic levels for a set of CP codes, you can use this operation to list the set of CP codes to which you have access.
+
+## API Reference: Templates
+
+- [Templates index](https://techdocs.akamai.com/alerts-app/reference/templates/llms.txt): full category index
+- [List templates](https://techdocs.akamai.com/alerts-app/reference/get-templates.md): Lists templates for all supported alerts. Objects listed in the response provide only high-level information about each alert template, such as its `name` and whether its `origin` is `STATIC` or `ADAPTIVE`.  For a full definition that specifies all required `fields`, get a [specific template instance](ref:get-template).
+- [Get a template](https://techdocs.akamai.com/alerts-app/reference/get-template.md): Fetches a specific template. The response features a full set of `fields` on which to base a [new alert definition](ref:post-definition).
+
+## API Reference: Alert summaries
+
+- [Alert summaries index](https://techdocs.akamai.com/alerts-app/reference/alert-summaries/llms.txt): full category index
+- [List alert summaries](https://techdocs.akamai.com/alerts-app/reference/get-summaries.md): Lists only high-level metadata about each alert: its name, ID, and when it was last fired. This operation wraps data available from other operations to generate simple, accessible listings.
+- [Get an alert summary](https://techdocs.akamai.com/alerts-app/reference/get-summaries-definition.md): Get the summary of basic metadata for a single alert.
+- [Get alert details](https://techdocs.akamai.com/alerts-app/reference/get-summaries-definition-details.md): Get verbose details for a single alert, including its definition, firings, and sparklines report.
+
+## API Reference: Alert definitions
+
+- [Alert definitions index](https://techdocs.akamai.com/alerts-app/reference/alert-definitions/llms.txt): full category index
+- [Create a new alert](https://techdocs.akamai.com/alerts-app/reference/post-definition.md): Creates a new alert definition based on a template. The template's required `fields` represent criteria you may use to trigger an alert, but the new definition's `fields` specify the set of values that actually trigger the alert. After you create a new alert, it may take a couple of minutes before it has enough information before it can fire.
+- [List alerts](https://techdocs.akamai.com/alerts-app/reference/get-definitions.md): Lists alert instances that are configured to fire under certain conditions. Optionally filter alerts by relevant fields or their values.
+- [Get an alert](https://techdocs.akamai.com/alerts-app/reference/get-definition.md): Get a single alert instance that is configured to fire under certain conditions.
+- [Update an alert](https://techdocs.akamai.com/alerts-app/reference/put-definition.md): Modifies the criteria that determine when an alert fires.
+- [Remove an alert](https://techdocs.akamai.com/alerts-app/reference/delete-definition.md): Deletes an alert and stops it from firing. It can take a few minutes to propagate alert deactivation.
+- [List adaptive alert activity log](https://techdocs.akamai.com/alerts-app/reference/get-definition-alert-activities.md): Lists a history of an alert definition's _modifications_. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.
+- [List fired alerts](https://techdocs.akamai.com/alerts-app/reference/get-definition-alert-firings.md): Lists a history of an alert definition's _firings_. Firings for the last 30 days are arranged chronologically in the `data` array, with the most recent at the end.  This lists alerts that have a defined `endTime` to indicate they are no longer in progress. For others, run the [List active firings](ref:get-active-alert-firings) operation.
+- [Create a new modeling suppressions](https://techdocs.akamai.com/alerts-app/reference/post-definition-suppression.md): Creates a new time range for an adaptive alert definition that gets ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.
+- [List modeling suppressions](https://techdocs.akamai.com/alerts-app/reference/get-definition-suppressions.md): Lists all time ranges for an adaptive alert definition that are ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.
+- [Unsuppress alert modeling](https://techdocs.akamai.com/alerts-app/reference/delete-definition-suppression.md): Removes a suppression, and makes an adaptive alert definition reconsider a previously suppressed period of time when modeling your site's expected range of behavior. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert. Suppressions that are too old to affect alert firings are automatically removed, so there is no need to run this operation simply to trim them from the [list of modeling suppressions](ref:get-definition-suppressions).
+
+## API Reference: Alert firings
+
+- [Alert firings index](https://techdocs.akamai.com/alerts-app/reference/alert-firings/llms.txt): full category index
+- [List active alerts](https://techdocs.akamai.com/alerts-app/reference/get-active-alert-firings.md): Lists currently fired alerts.
+- [Count active alerts](https://techdocs.akamai.com/alerts-app/reference/get-active-alert-count.md): Get the number of active, currently fired alerts.
+
+## API Reference: Sparklines
+
+- [Sparklines index](https://techdocs.akamai.com/alerts-app/reference/sparklines/llms.txt): full category index
+- [List sparklines](https://techdocs.akamai.com/alerts-app/reference/get-sparklines.md): Lists _sparklines_, reports that plot anomalies that trigger firings over a time series. Each sparkline this operation lists corresponds to an alert definition. Specify more than one alert identifier to gather related data from different alerts for potential use in overlays, for example one sparkline to identify too much traffic, and another for too little traffic. Note that sparklines based on adaptive alerts provide observed data for both `anomalies` and the full range of `points`. Sparklines based on static alerts only provide observed data for `anomalies`, and the `points` simply define the range of the time series without any observed non-anomalous data.
+
+## API Reference: Schema
+
+- [Schema index](https://techdocs.akamai.com/alerts-app/reference/schema/llms.txt): full category index
+- [Get definition schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-definition-template.md): Gets the JSON schema that describes the contents of a specific type of alert, depending on the template used to create it. This is useful to validate the contents of a [new alert request](ref:post-definition) before POSTing it.
+- [Get details schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-details.md): Gets the JSON schema that describes the contents of a verbose set of alert details.
+- [Get firings schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-firings.md): Gets the JSON schema that describes the contents of an alert firing.
+- [Get summary schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-summaries.md): Gets the JSON schema that describes the contents of an alert summary.
+- [Get template schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-template.md): Gets the JSON schema that describes the contents of an alert template.
+- [Get template header schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-template-header.md): Template headers are the summaries that appear in template listings. This operation gets the JSON schema that describes their contents.

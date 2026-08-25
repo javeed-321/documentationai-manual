@@ -1,0 +1,106 @@
+{
+  "slug": "gtm/reference/properties/llms.txt",
+  "source": "https://techdocs.akamai.com/gtm/reference/properties/llms.txt.md",
+  "url": "https://techdocs.akamai.com/gtm/reference/properties/llms.txt",
+  "title": "Properties",
+  "description": "",
+  "section": "Global Traffic Management",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Global Traffic Management Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Global Traffic Management Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Properties",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Properties",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [List properties](https://techdocs.akamai.com/gtm/reference/get-properties.md): Returns a list of GTM properties.\n- [Get a property](https://techdocs.akamai.com/gtm/reference/get-property.md): Returns information for a specific GTM property.\n- [Create or update a property](https://techdocs.akamai.com/gtm/reference/put-property.md): Run this operation to create or update a GTM property.\n- [Remove a property](https://techdocs.akamai.com/gtm/reference/delete-property.md): Removes a specific GTM property.\n- [Replace all properties](https://techdocs.akamai.com/gtm/reference/put-properties.md): Replaces the complete set of properties on a domain with those specified in the request body.\n- [Add or update properties](https://techdocs.akamai.com/gtm/reference/patch-properties.md): Adds or updates properties on a domain without replacing the entire set. Properties not included in the request body are left unchanged.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List properties: Returns a list of GTM properties.Get a property: Returns information for a specific GTM property.Create or update a property: Run this operation to create or update a GTM property.Remove a property: Removes a specific GTM property.Replace all properties: Replaces the complete set of properties on a domain with those specified in the request body.Add or update properties: Adds or updates properties on a domain without replacing the entire set. Properties not included in the request body are left unchanged.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

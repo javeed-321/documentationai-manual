@@ -1,0 +1,18 @@
+---
+title: "Throttling counters"
+---
+
+# API Keys and Traffic Management Documentation
+
+> Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.
+
+## API Reference: Throttling counters
+
+- [Create a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/post-counter.md): Creates a new throttling counter under the selected contract and group.
+- [List throttling counters](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counters.md): Returns all existing throttling counters available for the current contract and group.
+- [Get a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter.md): Returns information about a throttling counter.
+- [Edit a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/put-counter.md): Updates information about a throttling counter.
+- [Delete a throttling counter](https://techdocs.akamai.com/key-traffic-mgmt/reference/delete-counter.md): Removes a throttling counter.
+- [List counter endpoints](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-endpoints.md): Returns information about all endpoints assigned to the contract and group where you created the throttling counter. The [API Endpoints API](https://techdocs.akamai.com/api-definitions/reference/api) manages the format of the response data. Search the response data for the relevant `ACL_ENTRY` members such as API endpoint identifiers, resource identifiers, or HTTP methods, to use when running the [Create a throttling counter](/reference/post-counter) or [Edit a throttling counter](/reference/put-counter) operation.
+- [List counter key collections](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-key-collections.md): Returns information about all key collections assigned to the contract and group where you created the throttling counter. Search the response data for the relevant `KEY COLLECTION` identifiers to use when running the [Create a throttling counter](/reference/post-counter) or [Edit a throttling counter](/reference/put-counter) operation.
+- [List counter keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/get-counter-keys.md): This lists all API keys assigned to the contract and group where you created the throttling counter. Search the response data for the relevant `KEY` identifier members to use when running the [Create a throttling counter](/reference/post-counter) or [Edit a throttling counter](/reference/put-counter) operation.

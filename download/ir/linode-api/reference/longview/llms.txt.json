@@ -1,0 +1,117 @@
+{
+  "slug": "linode-api/reference/longview/llms.txt",
+  "source": "https://techdocs.akamai.com/linode-api/reference/longview/llms.txt.md",
+  "url": "https://techdocs.akamai.com/linode-api/reference/longview/llms.txt",
+  "title": "Longview",
+  "description": "",
+  "section": "Linode API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Linode API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Linode API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Longview",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Longview",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        17
+      ],
+      "raw": "- [Create a Longview client](https://techdocs.akamai.com/linode-api/reference/post-longview-client.md): Creates a Longview Client.  This Client will not begin monitoring the status of your server until you configure the Longview Client application on your Linode using the returning `install_code` and `api_key`.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `account_longview_creator` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_write`   **CLI**  ```shell linode-cli longview create \\   --label client789 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List Longview clients](https://techdocs.akamai.com/linode-api/reference/get-longview-clients.md): Returns a paginated list of Longview Clients you have access to. Longview Client is used to monitor stats on your Linode with the help of the Longview Client application.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_viewer` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_only`   **CLI**  ```shell linode-cli longview list ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a Longview client](https://techdocs.akamai.com/linode-api/reference/get-longview-client.md): Returns a single Longview Client you can access.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_viewer` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_only`   **CLI**  ```shell linode-cli longview view 789 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Update a Longview client](https://techdocs.akamai.com/linode-api/reference/put-longview-client.md): Updates a Longview Client.  This cannot update how it monitors your server; use the Longview Client application on your Linode for monitoring configuration.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_admin` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_write`   **CLI**  ```shell linode-cli longview update 789 \\   --label client789 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Delete a Longview client](https://techdocs.akamai.com/linode-api/reference/delete-longview-client.md): Deletes a Longview Client from your Account.  __All information stored for this client will be lost.__  This _does not_ uninstall the Longview Client application for your Linode - you must do that manually.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_admin` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_write`   **CLI**  ```shell linode-cli longview delete 789 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a Longview plan](https://techdocs.akamai.com/linode-api/reference/get-longview-plan.md): Get the details of your current Longview plan. If your current plan is Longview Free, this operation returns an empty set `{}`.  To update your subscription plan, send a request to [Update a Longview plan](ref:put-longview-plan).   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_viewer` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_only`   **CLI**  ```shell linode-cli longview plan-view ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Update a Longview plan](https://techdocs.akamai.com/linode-api/reference/put-longview-plan.md): Update your Longview plan to that of the given subscription ID. If the updated plan is Longview Free, this operation returns an empty set `{}`.  You can send a request to the [List Longview subscriptions](ref:get-longview-subscriptions) operation to receive the details, including `id`'s, of each plan.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `account_longview_subscription_admin` - **OAuth scopes**. Your user needs these scopes assigned. [Learn more](https://techdocs.akamai.com/linode-api/reference/get-started#oauth).    - Scopes: `longview:read_write`   **CLI**  ```shell linode-cli longview plan-update --longview_subscription longview-10 ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List Longview subscriptions](https://techdocs.akamai.com/linode-api/reference/get-longview-subscriptions.md): Returns a paginated list of available Longview subscriptions.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_viewer`   **CLI**  ```shell linode-cli longview subscriptions-list ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a Longview subscription](https://techdocs.akamai.com/linode-api/reference/get-longview-subscription.md): Get a specific Longview subscription plan.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_admin`   **CLI**  ```shell linode-cli longview subscription-view ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List Longview types](https://techdocs.akamai.com/linode-api/reference/get-longview-types.md): Returns Longview types and prices, including any region-specific rates.   **Permissions and scopes**  To call this operation, you need the following:  - **Identity and access permissions**. Your user needs these roles assigned. [Learn more](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles).   - Roles: `longview_viewer`   **CLI**  ```shell linode-cli longview types ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a Longview client: Creates a Longview Client.  This Client will not begin monitoring the status of your server until you configure the Longview Client application on your Linode using the returning install_code and api_key.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: account_longview_creator - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_write   CLI  shell linode-cli longview create \\   --label client789   Learn moreList Longview clients: Returns a paginated list of Longview Clients you have access to. Longview Client is used to monitor stats on your Linode with the help of the Longview Client application.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_viewer - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_only   CLI  shell linode-cli longview list   Learn moreGet a Longview client: Returns a single Longview Client you can access.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_viewer - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_only   CLI  shell linode-cli longview view 789   Learn moreUpdate a Longview client: Updates a Longview Client.  This cannot update how it monitors your server; use the Longview Client application on your Linode for monitoring configuration.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_admin - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_write   CLI  shell linode-cli longview update 789 \\   --label client789   Learn moreDelete a Longview client: Deletes a Longview Client from your Account.  All information stored for this client will be lost.  This does not uninstall the Longview Client application for your Linode - you must do that manually.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_admin - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_write   CLI  shell linode-cli longview delete 789   Learn moreGet a Longview plan: Get the details of your current Longview plan. If your current plan is Longview Free, this operation returns an empty set {}.  To update your subscription plan, send a request to Update a Longview plan.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_viewer - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_only   CLI  shell linode-cli longview plan-view   Learn moreUpdate a Longview plan: Update your Longview plan to that of the given subscription ID. If the updated plan is Longview Free, this operation returns an empty set {}.  You can send a request to the List Longview subscriptions operation to receive the details, including id's, of each plan.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: account_longview_subscription_admin - OAuth scopes. Your user needs these scopes assigned. Learn more.    - Scopes: longview:read_write   CLI  shell linode-cli longview plan-update --longview_subscription longview-10   Learn moreList Longview subscriptions: Returns a paginated list of available Longview subscriptions.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_viewer   CLI  shell linode-cli longview subscriptions-list   Learn moreGet a Longview subscription: Get a specific Longview subscription plan.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_admin   CLI  shell linode-cli longview subscription-view   Learn moreList Longview types: Returns Longview types and prices, including any region-specific rates.   Permissions and scopes  To call this operation, you need the following:  - Identity and access permissions. Your user needs these roles assigned. Learn more.   - Roles: longview_viewer   CLI  shell linode-cli longview types   Learn more",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:put-longview-plan",
+          "line": 13
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-longview-subscriptions",
+          "line": 14
+        }
+      ]
+    }
+  ]
+}

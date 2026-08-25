@@ -1,0 +1,12 @@
+# Ion Documentation
+
+> No matter how users choose to connect, Akamai Ion offers them a seamless experience across different device types and network conditions. Akamai continuously monitors real users, automatically applies best practice performance optimizations, and adapts experiences as content, user behavior, and network conditions change. Ion combines the scalability of Akamai’s global content delivery platform with fast dynamic content acceleration. Ion also leverages Akamai cellular optimizations that lower both latency and user engagement disruptions.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/ion/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API TUTORIALS
+- [Before you begin](https://techdocs.akamai.com/ion/reference/before-you-begin.md)
+- [Create an Ion Property](https://techdocs.akamai.com/ion/reference/create-an-ion-property.md)
+- [Improve page load performance](https://techdocs.akamai.com/ion/reference/add-manage-adaptive-acceleration.md)
+- [Add A/B testing support](https://techdocs.akamai.com/ion/reference/enable-ab-testing.md)
+- [Reduce poor script performance](https://techdocs.akamai.com/ion/reference/add-script-management-support.md)

@@ -1,0 +1,393 @@
+{
+  "slug": "alerts-app/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/alerts-app/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/alerts-app/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "Alerts",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 9,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 8
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Alerts Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Alerts Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        25
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/alerts-app/reference/api/llms.txt): full category index\n- [Alerts API](https://techdocs.akamai.com/alerts-app/reference/api.md)\n- [API summary](https://techdocs.akamai.com/alerts-app/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/alerts-app/reference/api-get-started.md)\n- [API concepts](https://techdocs.akamai.com/alerts-app/reference/api-concepts.md)\n- [API workflows](https://techdocs.akamai.com/alerts-app/reference/workflows.md)\n- [API hypermedia](https://techdocs.akamai.com/alerts-app/reference/api-hypermedia.md)\n- [Rate limits](https://techdocs.akamai.com/alerts-app/reference/rate-limits.md)\n- [Errors](https://techdocs.akamai.com/alerts-app/reference/api-errors.md)\n- [400](https://techdocs.akamai.com/alerts-app/reference/400.md)\n- [401](https://techdocs.akamai.com/alerts-app/reference/401.md)\n- [403](https://techdocs.akamai.com/alerts-app/reference/403.md)\n- [404](https://techdocs.akamai.com/alerts-app/reference/404.md)\n- [405](https://techdocs.akamai.com/alerts-app/reference/405.md)\n- [409](https://techdocs.akamai.com/alerts-app/reference/409.md)\n- [415](https://techdocs.akamai.com/alerts-app/reference/415.md)\n- [500](https://techdocs.akamai.com/alerts-app/reference/500.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexAlerts APIAPI summaryGet startedAPI conceptsAPI workflowsAPI hypermediaRate limitsErrors400401403404405409415500",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        27,
+        27
+      ],
+      "raw": "## API Reference: Access control data",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Access control data",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        29,
+        30
+      ],
+      "raw": "- [Access control data index](https://techdocs.akamai.com/alerts-app/reference/access-control-data/llms.txt): full category index\n- [List access control data](https://techdocs.akamai.com/alerts-app/reference/get-access-control-data.md): Lists items of relevant data available to you at runtime to apply to an alert definition. For example, when creating an alert about traffic levels for a set of CP codes, you can use this operation to list the set of CP codes to which you have access.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Access control data index: full category indexList access control data: Lists items of relevant data available to you at runtime to apply to an alert definition. For example, when creating an alert about traffic levels for a set of CP codes, you can use this operation to list the set of CP codes to which you have access.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## API Reference: Templates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Templates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        34,
+        36
+      ],
+      "raw": "- [Templates index](https://techdocs.akamai.com/alerts-app/reference/templates/llms.txt): full category index\n- [List templates](https://techdocs.akamai.com/alerts-app/reference/get-templates.md): Lists templates for all supported alerts. Objects listed in the response provide only high-level information about each alert template, such as its `name` and whether its `origin` is `STATIC` or `ADAPTIVE`.  For a full definition that specifies all required `fields`, get a [specific template instance](ref:get-template).\n- [Get a template](https://techdocs.akamai.com/alerts-app/reference/get-template.md): Fetches a specific template. The response features a full set of `fields` on which to base a [new alert definition](ref:post-definition).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Templates index: full category indexList templates: Lists templates for all supported alerts. Objects listed in the response provide only high-level information about each alert template, such as its name and whether its origin is STATIC or ADAPTIVE.  For a full definition that specifies all required fields, get a specific template instance.Get a template: Fetches a specific template. The response features a full set of fields on which to base a new alert definition.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:get-template",
+          "line": 35
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-definition",
+          "line": 36
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        38,
+        38
+      ],
+      "raw": "## API Reference: Alert summaries",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Alert summaries",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        40,
+        43
+      ],
+      "raw": "- [Alert summaries index](https://techdocs.akamai.com/alerts-app/reference/alert-summaries/llms.txt): full category index\n- [List alert summaries](https://techdocs.akamai.com/alerts-app/reference/get-summaries.md): Lists only high-level metadata about each alert: its name, ID, and when it was last fired. This operation wraps data available from other operations to generate simple, accessible listings.\n- [Get an alert summary](https://techdocs.akamai.com/alerts-app/reference/get-summaries-definition.md): Get the summary of basic metadata for a single alert.\n- [Get alert details](https://techdocs.akamai.com/alerts-app/reference/get-summaries-definition-details.md): Get verbose details for a single alert, including its definition, firings, and sparklines report.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Alert summaries index: full category indexList alert summaries: Lists only high-level metadata about each alert: its name, ID, and when it was last fired. This operation wraps data available from other operations to generate simple, accessible listings.Get an alert summary: Get the summary of basic metadata for a single alert.Get alert details: Get verbose details for a single alert, including its definition, firings, and sparklines report.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "## API Reference: Alert definitions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Alert definitions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        47,
+        57
+      ],
+      "raw": "- [Alert definitions index](https://techdocs.akamai.com/alerts-app/reference/alert-definitions/llms.txt): full category index\n- [Create a new alert](https://techdocs.akamai.com/alerts-app/reference/post-definition.md): Creates a new alert definition based on a template. The template's required `fields` represent criteria you may use to trigger an alert, but the new definition's `fields` specify the set of values that actually trigger the alert. After you create a new alert, it may take a couple of minutes before it has enough information before it can fire.\n- [List alerts](https://techdocs.akamai.com/alerts-app/reference/get-definitions.md): Lists alert instances that are configured to fire under certain conditions. Optionally filter alerts by relevant fields or their values.\n- [Get an alert](https://techdocs.akamai.com/alerts-app/reference/get-definition.md): Get a single alert instance that is configured to fire under certain conditions.\n- [Update an alert](https://techdocs.akamai.com/alerts-app/reference/put-definition.md): Modifies the criteria that determine when an alert fires.\n- [Remove an alert](https://techdocs.akamai.com/alerts-app/reference/delete-definition.md): Deletes an alert and stops it from firing. It can take a few minutes to propagate alert deactivation.\n- [List adaptive alert activity log](https://techdocs.akamai.com/alerts-app/reference/get-definition-alert-activities.md): Lists a history of an alert definition's _modifications_. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.\n- [List fired alerts](https://techdocs.akamai.com/alerts-app/reference/get-definition-alert-firings.md): Lists a history of an alert definition's _firings_. Firings for the last 30 days are arranged chronologically in the `data` array, with the most recent at the end.  This lists alerts that have a defined `endTime` to indicate they are no longer in progress. For others, run the [List active firings](ref:get-active-alert-firings) operation.\n- [Create a new modeling suppressions](https://techdocs.akamai.com/alerts-app/reference/post-definition-suppression.md): Creates a new time range for an adaptive alert definition that gets ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.\n- [List modeling suppressions](https://techdocs.akamai.com/alerts-app/reference/get-definition-suppressions.md): Lists all time ranges for an adaptive alert definition that are ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.\n- [Unsuppress alert modeling](https://techdocs.akamai.com/alerts-app/reference/delete-definition-suppression.md): Removes a suppression, and makes an adaptive alert definition reconsider a previously suppressed period of time when modeling your site's expected range of behavior. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert. Suppressions that are too old to affect alert firings are automatically removed, so there is no need to run this operation simply to trim them from the [list of modeling suppressions](ref:get-definition-suppressions).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Alert definitions index: full category indexCreate a new alert: Creates a new alert definition based on a template. The template's required fields represent criteria you may use to trigger an alert, but the new definition's fields specify the set of values that actually trigger the alert. After you create a new alert, it may take a couple of minutes before it has enough information before it can fire.List alerts: Lists alert instances that are configured to fire under certain conditions. Optionally filter alerts by relevant fields or their values.Get an alert: Get a single alert instance that is configured to fire under certain conditions.Update an alert: Modifies the criteria that determine when an alert fires.Remove an alert: Deletes an alert and stops it from firing. It can take a few minutes to propagate alert deactivation.List adaptive alert activity log: Lists a history of an alert definition's modifications. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.List fired alerts: Lists a history of an alert definition's firings. Firings for the last 30 days are arranged chronologically in the data array, with the most recent at the end.  This lists alerts that have a defined endTime to indicate they are no longer in progress. For others, run the List active firings operation.Create a new modeling suppressions: Creates a new time range for an adaptive alert definition that gets ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.List modeling suppressions: Lists all time ranges for an adaptive alert definition that are ignored when dynamically modeling its expected range of traffic. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert.Unsuppress alert modeling: Removes a suppression, and makes an adaptive alert definition reconsider a previously suppressed period of time when modeling your site's expected range of behavior. This operation only applies to adaptive alerts, and responds with an error if applied to a static alert. Suppressions that are too old to affect alert firings are automatically removed, so there is no need to run this operation simply to trim them from the list of modeling suppressions.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:get-active-alert-firings",
+          "line": 54
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:get-definition-suppressions",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "lines": [
+        59,
+        59
+      ],
+      "raw": "## API Reference: Alert firings",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Alert firings",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        61,
+        63
+      ],
+      "raw": "- [Alert firings index](https://techdocs.akamai.com/alerts-app/reference/alert-firings/llms.txt): full category index\n- [List active alerts](https://techdocs.akamai.com/alerts-app/reference/get-active-alert-firings.md): Lists currently fired alerts.\n- [Count active alerts](https://techdocs.akamai.com/alerts-app/reference/get-active-alert-count.md): Get the number of active, currently fired alerts.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Alert firings index: full category indexList active alerts: Lists currently fired alerts.Count active alerts: Get the number of active, currently fired alerts.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        65,
+        65
+      ],
+      "raw": "## API Reference: Sparklines",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Sparklines",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        67,
+        68
+      ],
+      "raw": "- [Sparklines index](https://techdocs.akamai.com/alerts-app/reference/sparklines/llms.txt): full category index\n- [List sparklines](https://techdocs.akamai.com/alerts-app/reference/get-sparklines.md): Lists _sparklines_, reports that plot anomalies that trigger firings over a time series. Each sparkline this operation lists corresponds to an alert definition. Specify more than one alert identifier to gather related data from different alerts for potential use in overlays, for example one sparkline to identify too much traffic, and another for too little traffic. Note that sparklines based on adaptive alerts provide observed data for both `anomalies` and the full range of `points`. Sparklines based on static alerts only provide observed data for `anomalies`, and the `points` simply define the range of the time series without any observed non-anomalous data.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Sparklines index: full category indexList sparklines: Lists sparklines, reports that plot anomalies that trigger firings over a time series. Each sparkline this operation lists corresponds to an alert definition. Specify more than one alert identifier to gather related data from different alerts for potential use in overlays, for example one sparkline to identify too much traffic, and another for too little traffic. Note that sparklines based on adaptive alerts provide observed data for both anomalies and the full range of points. Sparklines based on static alerts only provide observed data for anomalies, and the points simply define the range of the time series without any observed non-anomalous data.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        70,
+        70
+      ],
+      "raw": "## API Reference: Schema",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Schema",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        72,
+        78
+      ],
+      "raw": "- [Schema index](https://techdocs.akamai.com/alerts-app/reference/schema/llms.txt): full category index\n- [Get definition schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-definition-template.md): Gets the JSON schema that describes the contents of a specific type of alert, depending on the template used to create it. This is useful to validate the contents of a [new alert request](ref:post-definition) before POSTing it.\n- [Get details schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-details.md): Gets the JSON schema that describes the contents of a verbose set of alert details.\n- [Get firings schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-firings.md): Gets the JSON schema that describes the contents of an alert firing.\n- [Get summary schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-summaries.md): Gets the JSON schema that describes the contents of an alert summary.\n- [Get template schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-template.md): Gets the JSON schema that describes the contents of an alert template.\n- [Get template header schema](https://techdocs.akamai.com/alerts-app/reference/get-schema-template-header.md): Template headers are the summaries that appear in template listings. This operation gets the JSON schema that describes their contents.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Schema index: full category indexGet definition schema: Gets the JSON schema that describes the contents of a specific type of alert, depending on the template used to create it. This is useful to validate the contents of a new alert request before POSTing it.Get details schema: Gets the JSON schema that describes the contents of a verbose set of alert details.Get firings schema: Gets the JSON schema that describes the contents of an alert firing.Get summary schema: Gets the JSON schema that describes the contents of an alert summary.Get template schema: Gets the JSON schema that describes the contents of an alert template.Get template header schema: Template headers are the summaries that appear in template listings. This operation gets the JSON schema that describes their contents.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-definition",
+          "line": 73
+        }
+      ]
+    }
+  ]
+}

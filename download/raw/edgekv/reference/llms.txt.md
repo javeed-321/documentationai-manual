@@ -1,0 +1,73 @@
+# EdgeKV Documentation
+
+> Akamai's EdgeKV is a key-value store database at the edge. It enables you to build data-driven EdgeWorker applications that require fast, frequent reads and infrequent writes.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edgekv/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/edgekv/reference/api/llms.txt): full category index
+- [EdgeKV API](https://techdocs.akamai.com/edgekv/reference/api.md)
+- [API summary](https://techdocs.akamai.com/edgekv/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/edgekv/reference/api-get-started.md)
+- [Errors](https://techdocs.akamai.com/edgekv/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/edgekv/reference/400.md)
+- [401](https://techdocs.akamai.com/edgekv/reference/401.md)
+- [403](https://techdocs.akamai.com/edgekv/reference/403.md)
+- [404](https://techdocs.akamai.com/edgekv/reference/404.md)
+- [405](https://techdocs.akamai.com/edgekv/reference/405.md)
+- [406](https://techdocs.akamai.com/edgekv/reference/406.md)
+- [409](https://techdocs.akamai.com/edgekv/reference/409.md)
+- [410](https://techdocs.akamai.com/edgekv/reference/410.md)
+- [413](https://techdocs.akamai.com/edgekv/reference/413.md)
+- [415](https://techdocs.akamai.com/edgekv/reference/415.md)
+- [422](https://techdocs.akamai.com/edgekv/reference/422.md)
+- [429](https://techdocs.akamai.com/edgekv/reference/429.md)
+- [500](https://techdocs.akamai.com/edgekv/reference/500.md)
+- [501](https://techdocs.akamai.com/edgekv/reference/501.md)
+- [504](https://techdocs.akamai.com/edgekv/reference/504.md)
+
+## API Reference: Initialize
+
+- [Initialize index](https://techdocs.akamai.com/edgekv/reference/initialize/llms.txt): full category index
+- [Get the EdgeKV initialization status](https://techdocs.akamai.com/edgekv/reference/get-initialize.md): View the EdgeKV initialization status.
+- [Initialize EdgeKV](https://techdocs.akamai.com/edgekv/reference/put-initialize.md): You only need to initialize EdgeKV once. This operation adds the `default` EdgeKV namespace to Akamai's `STAGING` and `PRODUCTION` networks. It also creates a new dedicated CP code for you to track your EdgeKV usage. You won't be able to use any of the EdgeKV API operations or your EdgeKV database until initialization completes. You should only use the `default` namespace for experimentation and testing purposes. When deploying your EdgeKV database in production, use a new namespace with a different name. You can also specify a `dataAccessPolicy` to run this operation. The `dataAccessPolicy` determines if you can create new namespaces only on Akamai’s Enhanced TLS network, or both the Enhanced TLS and Standard TLS networks. By default, all existing namespaces use only the Enhanced TLS network.
+
+## API Reference: Access tokens
+
+- [Access tokens index](https://techdocs.akamai.com/edgekv/reference/access-tokens/llms.txt): full category index
+- [Create an access token](https://techdocs.akamai.com/edgekv/reference/post-tokens.md): Generate an access token that allows an EdgeWorkers code bundle to access the specified namespace. Any new tokens that you create refresh automatically without expiring. You don't need to update tokens inside your `edgekv_tokens.js` file. Tokens created before the enhanced token workflow implementation will still expire. You need to replace these expired tokens in your code bundle. To learn more about access tokens, refer to the [EdgeKV guide](doc:generate-and-retrieve-edgekv-access-tokens).
+- [List access tokens](https://techdocs.akamai.com/edgekv/reference/get-tokens.md): View a list of EdgeKV access tokens.
+- [Download an access token](https://techdocs.akamai.com/edgekv/reference/get-token.md): Download a previously created EdgeKV access token. To get a token, you need to know the token `name`. Tokens created using the enhanced token workflow don't include the JWT value in the response. To learn more about access tokens, refer to the [EdgeKV guide](doc:generate-and-retrieve-edgekv-access-tokens).
+- [Revoke an access token](https://techdocs.akamai.com/edgekv/reference/delete-token.md): Once you revoke an access token, you can't undo it. You also need to update any deployed EdgeWorkers code bundles that use the old token with a new token, or requests to EdgeKV fail. Any requests from an EdgeWorkers code bundle using a revoked token cause a 401 error. To learn more about access tokens, refer to the [EdgeKV guide](doc:generate-and-retrieve-edgekv-access-tokens).
+- [Refresh an access token](https://techdocs.akamai.com/edgekv/reference/post-refresh-token.md): Refresh a previously created EdgeKV access token before scheduled automatic refresh.
+
+## API Reference: Authorization
+
+- [Authorization index](https://techdocs.akamai.com/edgekv/reference/authorization/llms.txt): full category index
+- [List permission groups](https://techdocs.akamai.com/edgekv/reference/get-groups.md): View a list of access groups and your associated permission capabilities, such as create a namespace or read data from a namespace.
+- [Get a permission group](https://techdocs.akamai.com/edgekv/reference/get-group.md): View details permissions available within the specified access group, such as create a namespace or read data from a namespace.
+- [Modify the default data access policy](https://techdocs.akamai.com/edgekv/reference/put-auth-database.md): Modify the default `dataAccessPolicy` setting that applies to new namespaces. The `restrictDataAccess` is `true` by default, and `allowNamespacePolicyOverride` is `false`.
+- [Reauthorize a namespace](https://techdocs.akamai.com/edgekv/reference/reauthorize-namespace.md): Assign an existing namespace to a different Akamai access group.
+
+## API Reference: Namespaces and data
+
+- [Namespaces and data index](https://techdocs.akamai.com/edgekv/reference/namespaces-and-data/llms.txt): full category index
+- [List items within a group](https://techdocs.akamai.com/edgekv/reference/get-group-items.md): View the details of an EdgeKV item (key-value pair) within a group. You need to specify the `namespace` and `group` the item belongs to. This operation returns up to 100 items by default or the number of items specified in the `maxItems`. If there are more than the default or requested items in the specified group, the operation returns a random set of the default or requested items. It can take ten seconds or longer to read an item that has been written to EdgeKV. The API may respond with a 404 error during that period. This is normal behavior for EdgeKV, which is an eventually consistent database.
+- [Read an item](https://techdocs.akamai.com/edgekv/reference/get-item.md): Read an EdgeKV item. You need to specify the `namespace` and `group` the item belongs to. It can take ten seconds or longer to read an item that has been recently written to EdgeKV. The API may return a 404 error during that period. This is normal behavior for EdgeKV, which is an eventually consistent database.
+- [Write an item](https://techdocs.akamai.com/edgekv/reference/put-item.md): Create or update an EdgeKV item (name-value). You need to specify the `namespace` and `group` the item belongs to. The target `namespace` must already exist before writing, while the `group` is automatically created for you if it doesn't exist yet.
+- [Delete an item](https://techdocs.akamai.com/edgekv/reference/delete-item.md): Mark an EdgeKV item for deletion. You need to specify the `namespace` and `group` the item belongs to. It can take ten seconds or longer for a deleted item to be removed from the database. If you attempt a read operation before the value has been updated globally, stale data may be returned until the update is complete. This is normal behavior for EdgeKV, which is an eventually consistent database.
+- [Create a namespace](https://techdocs.akamai.com/edgekv/reference/post-namespace.md): Creates a namespace on Akamai's `STAGING` or `PRODUCTION` network. You should create namespaces in both networks so that you can test your EdgeWorkers code on staging.
+- [List namespaces](https://techdocs.akamai.com/edgekv/reference/get-namespaces.md): View a list of all EdgeKV namespaces.
+- [Get namespace details](https://techdocs.akamai.com/edgekv/reference/get-namespace.md): View details for the specified namespace.
+- [Update namespace details](https://techdocs.akamai.com/edgekv/reference/put-namespace.md): You can update the retention period for any existing namespace other than the default namespace. It can take up to five minutes for a new retention policy to apply. The new retention period only applies to data added or updated in the namespace after this operation is complete. The retention period of existing data remains unchanged from the old retention period. Once you perform this operation you can't query the previously existing data. If you want to ensure that all data in the namespace has the same retention period you need to update the entire data set once the retention period has been updated.  To change the access group used to authorize permission to a namespace, see [Reauthorize a namespace](https://techdocs.akamai.com/edgekv/reference/reauthorize-namespace). If you try to run this operation to update the access group, you get a [400 error](https://techdocs.akamai.com/edgekv/reference/400).
+- [Delete namespace](https://techdocs.akamai.com/edgekv/reference/delete-namespace.md): Delete a namespace and all of its contents.
+- [List groups within a namespace](https://techdocs.akamai.com/edgekv/reference/get-namespace-groups.md): List group identifiers created when writing items to a namespace. You need to specify at least one of these group identifiers in the `groupId` parameter when writing items to a specific namespace. The group identifier is a logical container for a set of items stored inside a given namespace.
+- [Download namespace data](https://techdocs.akamai.com/edgekv/reference/get-namespace-download.md): Download all content stored within the namespace.
+- [Get namespace delete time](https://techdocs.akamai.com/edgekv/reference/get-scheduled-delete.md): View the scheduled time for a namespace delete.
+- [Reschedule a namespace delete](https://techdocs.akamai.com/edgekv/reference/put-scheduled-delete.md): Change the scheduled time of a namespace delete.
+- [Download group data](https://techdocs.akamai.com/edgekv/reference/get-group-download.md): Download all content stored within the group.
+- [Cancel a scheduled namespace delete](https://techdocs.akamai.com/edgekv/reference/delete-scheduled-delete.md): This deletes the scheduled time for a namespace delete, effectively canceling the deletion. You need to cancel a namespace delete at least five minutes before the scheduled deletion time. You can't cancel a namespace delete scheduled to occur in five minutes or less.
+- [Get namespace upload job details](https://techdocs.akamai.com/edgekv/reference/get-namespace-upload-job.md): View details about a specific namespace upload job.
+- [Upload namespace data](https://techdocs.akamai.com/edgekv/reference/post-namespace-upload.md): Upload CSV-formatted data into a namespace. The CSV syntax generally follows RFC 4180, but allows empty lines, which are ignored. Each line needs at least three comma-delimited fields: the `groupId`, `itemId`, and item content for the namespace. An optional fourth field defines the number of seconds the item is retained. If this field is absent, the namespace's `retentionInSeconds` applies.
+- [List upload jobs](https://techdocs.akamai.com/edgekv/reference/get-namespace-upload.md): View a list of all upload jobs for a namespace.

@@ -1,0 +1,41 @@
+# Prolexic IP Protect Configuration API Documentation
+
+> Akamai's Prolexic IP Protect API shields your site from DDoS attacks by diverting traffic and scrubbing network packets.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/ip-protect/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/ip-protect/reference/api/llms.txt): full category index
+- [Prolexic IP Protect Configuration API](https://techdocs.akamai.com/ip-protect/reference/api.md)
+- [API summary](https://techdocs.akamai.com/ip-protect/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/ip-protect/reference/get-started.md)
+- [API concepts](https://techdocs.akamai.com/ip-protect/reference/api-concepts.md)
+- [Rate limits](https://techdocs.akamai.com/ip-protect/reference/rate-limits.md)
+- [Errors](https://techdocs.akamai.com/ip-protect/reference/errors.md)
+- [400](https://techdocs.akamai.com/ip-protect/reference/400.md)
+- [401](https://techdocs.akamai.com/ip-protect/reference/401.md)
+- [403](https://techdocs.akamai.com/ip-protect/reference/403.md)
+- [404](https://techdocs.akamai.com/ip-protect/reference/404.md)
+- [405](https://techdocs.akamai.com/ip-protect/reference/405.md)
+- [500](https://techdocs.akamai.com/ip-protect/reference/500.md)
+- [501](https://techdocs.akamai.com/ip-protect/reference/501.md)
+- [502](https://techdocs.akamai.com/ip-protect/reference/503.md)
+- [503](https://techdocs.akamai.com/ip-protect/reference/503-1.md)
+
+## API Reference: Mapped IP addresses
+
+- [Mapped IP addresses index](https://techdocs.akamai.com/ip-protect/reference/mapped-ip-addresses/llms.txt): full category index
+- [List mapped IP addresses](https://techdocs.akamai.com/ip-protect/reference/get-mips.md): Returns IP address ranges for the Akamai Management IP  subnets. The Management IPs forward sanitized traffic from an Akamai scrubbing center to your network.
+
+## API Reference: Policy domains
+
+- [Policy domains index](https://techdocs.akamai.com/ip-protect/reference/policy-domains/llms.txt): full category index
+- [List policy domains](https://techdocs.akamai.com/ip-protect/reference/get-policy-domains.md): Policy domain summary information including domain configurations and subnets.
+- [Get a policy domain](https://techdocs.akamai.com/ip-protect/reference/get-policy-domains-pdname.md): Returns summary information for the specified policy domain. Use the `extended` parameter to return information about the number of virtual IP addresses available to, and configured for, the domain.
+- [List virtual IP addresses](https://techdocs.akamai.com/ip-protect/reference/post-policy-domains-vips.md): Returns information about the specified virtual IP addresses. Include the IDs of those virtual IP addresses in the `vipIds` array in the request body.
+- [Get health status](https://techdocs.akamai.com/ip-protect/reference/post-policy-domains-vips-health-stats.md): Returns the health status for the specified policy domains in UNIX epoch milliseconds. Akamai retains health statistics for seven days. \nList domain names in the `customers` array in the request body. You can also use `startTime` and `endTime` to define a health status time interval, beginning with the `startTime` and ending with the `endTime`. If you don't include `endTime` the time interval automatically extends to the current time.
+- [Get health status for a policy domain](https://techdocs.akamai.com/ip-protect/reference/get-policy-domains-pdname-vips-health-stats.md): Returns the health status for the specified policy domain. Health status measures the percentage of locations currently availavle for a back-end IP address. IP Protect calculates separate health status scores for each back-end address.
+- [Create a new configuration version](https://techdocs.akamai.com/ip-protect/reference/post-policy-domains-pdname-configs.md): Adds new virtual IP addresses (VIPs) and creates or deletes subnets as needed for the specified policy domain. /nThe request body also requires the previously deployed configuration. Include the previous configuration's `pdSubnet`, `vips`, `vipId`, `customerBackend`, `akamaiFrontend`, `ports`, `sourceIpProtocol`, `probeType`, and `probePort` values to avoid the previous configuration being removed. To find the previous configuration, run [List policy configurations](ref:get-policy-domains-pdname-configs).
+- [List policy configurations](https://techdocs.akamai.com/ip-protect/reference/get-policy-domains-pdname-configs.md): Returns configuration information for the specified policy domain. By default, this operation returns all the available configuration sets. Use the `latest` parameter to return only the most recent set of configuration values.
+- [Update domain to allocate subnets](https://techdocs.akamai.com/ip-protect/reference/put-policy-domains-pdname-pd-subnets-allocate.md): Adds virtual IP addresses to the specified policy domain. In the request body, use `addVips` to specify the number of virtual IP addresses you're adding, and use `allocateIpv6` to configure the IP addressing type for these addresses. Set `allocateIpv6` to `true` to use IPv6 addressing, and either omit `allocateIpv6` or set the value to `false` to use IPv4 addressing.

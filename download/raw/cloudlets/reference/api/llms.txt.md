@@ -1,0 +1,26 @@
+# Cloudlets Documentation
+
+> Akamai's Cloudlets are value-added applications that complement Akamai’s core delivery solutions to solve specific business challenges. Cloudlets bring a site’s business logic closer to the end user by placing it on the edge of the content delivery platform.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloudlets/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+- [Cloudlets API v3](https://techdocs.akamai.com/cloudlets/reference/api.md)
+- [API summary](https://techdocs.akamai.com/cloudlets/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/cloudlets/reference/get-started.md)
+- [Concepts](https://techdocs.akamai.com/cloudlets/reference/api-concepts.md)
+- [About group IDs](https://techdocs.akamai.com/cloudlets/reference/about-group-ids.md)
+- [API workflow](https://techdocs.akamai.com/cloudlets/reference/api-workflow.md)
+- [Activation status](https://techdocs.akamai.com/cloudlets/reference/activation-status.md)
+- [Match rules](https://techdocs.akamai.com/cloudlets/reference/match-rules.md)
+- [Match properties](https://techdocs.akamai.com/cloudlets/reference/match-properties.md)
+- [Rate limits](https://techdocs.akamai.com/cloudlets/reference/rate-limiting.md)
+- [Hypermedia](https://techdocs.akamai.com/cloudlets/reference/hypermedia.md)
+- [Errors](https://techdocs.akamai.com/cloudlets/reference/errors.md)
+- [400](https://techdocs.akamai.com/cloudlets/reference/400.md)
+- [401](https://techdocs.akamai.com/cloudlets/reference/401.md)
+- [403](https://techdocs.akamai.com/cloudlets/reference/403.md)
+- [404](https://techdocs.akamai.com/cloudlets/reference/404.md)
+- [409](https://techdocs.akamai.com/cloudlets/reference/409.md)
+- [429](https://techdocs.akamai.com/cloudlets/reference/429.md)
+- [500](https://techdocs.akamai.com/cloudlets/reference/500.md)

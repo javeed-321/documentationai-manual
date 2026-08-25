@@ -1,0 +1,318 @@
+---
+updatedAt: 2026-03-01T18:58:15.000Z
+---
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Content Characteristics
+
+This behavior lets you define specific information about your content to optimize its delivery.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-cont-char-settings-v2.png" />
+</div>
+
+# Catalog Size
+
+Use this to set the overall volume of objects to be delivered through this property.
+
+* **Small**. Select this if your content is less than 100G.
+* **Medium**. Select this if your content ranges from 100G to 1TB.
+* **Large**. Select this if your content ranges from 1TB to 100TB.
+* **Extra Large**. Select this if your content is greater than 100TB.
+* **Unknown** (Default). Select this if you don't know the volume. AMD will still try to optimize delivery based on the request.
+
+# Content Type
+
+If you're delivering a specific type of content with this property, you can select it here to help optimize delivery.
+
+* **Standard Definition**. This is typically 480i/p or 720p.
+* **High Definition**. This is typically 1080i or 1080p.
+* **Ultra High Definition (4K)**
+* **Other**. Select this if your use case isn't available for selection, or it is a combination of the available selections.
+* **Unknown** This is the default. Leave it set to this if you're unsure of the specific content type. AMD will still try to optimize delivery based on the request.
+
+# Popularity Distribution
+
+Select how often the content is requested:
+
+* **Long Tail**. This applies if most of the traffic volume consists of a small number of requests for content that has a relatively long life.
+* **Popular**. This applies if most of the traffic volume consists of a large number of requests for content that has a relatively short life.
+* **Other**. Select this if your use case isn't available for selection, or it is a combination of the available selections.
+* **Unknown**. This is the default. Select this if you're not sure of the popularity level for the content to be delivered by this property. AMD will still try to optimize delivery based on the request.
+
+# Origin Object Size
+
+Use this to set a range for the size of the objects delivered through this property:
+
+* **Less than 1MB**. Partial object caching *is not* applied.
+* **1-10MB**. Partial object caching *is not* applied.
+* **10-100MB**. Partial object caching is automatically enabled with this setting.
+* **Greater than 100 MB**. Partial object caching is automatically enabled with this setting.
+* **Unknown**. Select this if you're unsure of the specific object size, or you don't have a fixed size for target content. Partial object caching is automatically enabled with this setting for objects greater than 10 MB in size.
+
+## Partial object caching
+
+Partial object caching is part of our large file optimization support. It increases origin server offload by caching in chunks, instead of as a single, composite object. Partial object caching is required for the delivery of "large files"—those in excess of 10 MB in size. It's automatically enabled if you select any of these as your **Origin Object Size**:
+
+* **10-100 MB**.
+* **Greater than 100 MB**.
+* **Unknown**. Partial object caching is applied for an object that is greater than 10 MB in size, if the object falls into what you've selected for **Content Type**. For example, if you've selected "High Definition" as your Content Type, partial object caching is enabled if a file of that type is requested that's over 10MB in size.
+
+If you set Origin Object Size to **Less than 1MB** or **1-10MB**, partial object caching is not enabled. If a request is made through this configuration for a larger file, a 403 error is returned.
+
+If you specify a large file setting, but your origin never actually serves files in that size range, the ​Akamai​ platform makes additional requests to the origin. This can impact overall performance and access. This happens because the edge server requests the first byte of each object to determine if the minimum object size criteria has been met—at least 10MB. Once that check fails, the server simply re-requests the entire object from the origin.
+
+We recommend that you verify the size of your delivery objects on your origin, and select the appropriate size to ensure that partial object caching is enabled or disabled, as necessary.
+
+> 👍 You may want partial object caching for on demand video, but not for live
+>
+> Typically, on-demand format video files require a large file setting and partial object caching because these tend to be larger, composite files. Live video, which tends to be distributed as smaller, individual segments doesn't require partial object caching, so the smaller file settings should be selected as the **Origin Object Size**. This may not apply to all environments, which is why we recommend that you verify your media file size requirements.
+
+# Enable \<Media Format>
+
+You can select from multiple switch buttons, for the various media formats supported for use—**Enable HLS** (HTTP Live Streaming for iOS), **Enable HDS** (HTTP Dynamic Streaming for Adobe Flash), **Enable DASH** (Dynamic Adaptive Streaming over HTTP) and **Enable Smooth** (for Microsoft Smooth Streaming). Set the switch to **Yes** for each format to be supported by this property. Additional options for each format include the following:
+
+* **Fragment/Segment Duration**. Select the desired fragment or segment duration for the selected media format.
+* **Origin Object Size**. Use this to set a range for the size of media objects delivered through this property—Less than 1MB, 1-10MB, 10-100MB, or Unknown (This is the default, and should be left as the selected setting if you are not sure of the size of objects to be delivered).
+
+# Best practices settings applied by default
+
+​Akamai​ automatically applies various best practices settings to coincide with the Content Characteristics behavior in your property configuration. You don't need to manually define these via individual behaviors, because ​Akamai​ presets them for optimal performance.
+
+<table>
+
+<caption>
+
+</caption>
+
+<colgroup>
+
+<col>
+
+<col>
+
+</colgroup>
+
+<thead>
+
+<tr>
+
+<th>Feature</th>
+
+<th>Setting applied</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td><strong>Optimized For</strong> </td>
+
+<td>
+
+AMD is optimized for streaming video on demand (VoD) using these media formats:
+
+- **CMAF**
+- **DASH**
+- **HDS**
+- **HLS**
+- **Smooth**
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<strong>Streaming Format Identification</strong>
+
+</td>
+
+<td>
+
+Your property supports various formats. AMD applies best practices settings for each, when you select them in this behavior. They're also used to generate logging and reporting information.
+
+- <strong>DASH</strong>:
+
+  - <strong>Manifest</strong>. mpd
+  - <strong>Segments</strong>. dash, divx, ismv, m4s, m4v, mp4, mp4v, sidx, webm, mp4a, m4a, isma
+
+- <strong>HDS</strong>:
+
+  - <strong>Manifest</strong>. f4m, f4x, drmmeta, and bootstrap
+  - <strong>Fragments</strong>. f4f and Seg-Frag URL structure
+
+- <strong>HLS</strong>:
+
+  - <strong>Manifest</strong>. m3u8, m3u, m3ub, and key
+  - <strong>Segments</strong>. ts, aac, and mp4
+
+- <strong>Smooth</strong>:
+
+  - <strong>Manifest</strong>. /manifest/
+  - <strong>Fragments</strong>. /QualityLevels/Fragments/
+
+The following points also apply:
+
+- **CMAF is supported for use with _live_ media in your AMD property**. You can set it up to distribute live media via our Media Services Live (MSL) product. You need to first package your HLS, DASH, or both as CMAF. Then, you need to set up a Media Services Live stream and select the **CMAF (HLS & DASH)** Input Format. Finally, you'd select **DASH**, **HLS**, or **Both** here in this behavior. For full details on this workflow, see the <a href="https://techdocs.akamai.com/msl/docs/setup-media-services-live-origin">Media Services Live user docs</a>. 
+
+- **With CMAF, logging and reporting information is displayed as the specific format of the request manifest**. So, it'll be either HLS or DASH.
+
+- **Did you enable both DASH and HLS in this behavior**? If you did, AMD identifies the file format as DASH.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Segment Durations</strong> </td>
+
+<td>
+
+The property automatically applies these segment durations when you select the applicable media format. This is also used for logging and reporting data.
+
+- **DASH**. The segment duration is set to six (6) seconds
+- **HDS**. The segment duration is set to six (6) seconds
+- **HLS**. The segment duration  is set to 10 seconds
+- **Smooth**. The segment duration is set to two (2) seconds
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<strong>Basic HTTP Settings</strong> </td>
+
+<td>
+
+These basic HTTP-specific settings are applied:
+
+- HTTP version 1.1
+- Transfer / Chunked encoding between Edge and client
+- Allow GET/HEAD Methods
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<strong>Cross Origin Resource Sharing (CORS)</strong>
+
+</td>
+
+<td>
+
+The following CORS headers are included with the following values:
+
+- <strong>Access-Control-Allow-Origin = \*</strong> 
+- <strong>Access-Control-Allow-Credentials = true</strong>
+- <strong>Access-Control-Allow-Methods = GET, OPTIONS, POST</strong>
+- <strong>Access-Control-Allow-Headers = origin,range,hdntl,hdnts</strong>
+- <strong>Access-Control-Expose-Headers = Server,range,hdntl,hdnts</strong>
+- <strong>Access-Control-Max-Age = 86400</strong>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<strong>GZIP Content Compression</strong>
+
+</td>
+
+<td>
+
+The GZIP compression-related settings are automatically applied:
+
+- **Automatically enabled for origin to edge**. This only applies if the `Accept-Encoding header` is sent in the request to the origin.
+- **Automatically enabled for edge to client**. This only applies if the `Accept-Encoding` header is received from the client.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Caching</strong> </td>
+
+<td>
+
+These caching-related settings are applied:
+
+- <strong>The Remove VARY header is sent from origin</strong>. This enables content caching.
+- <strong>Positive caching policy for response codes</strong>. 200, 203, 300, 301, 302 and 410
+- <strong>Positive Caching Time to Live (TTL)</strong>. 365 days
+- <strong>Negative caching for response codes</strong>. 204, 305, 404, and 405
+- <strong>Negative caching TTL</strong>:
+  - <strong>NetStorage as your origin</strong>. 30 seconds
+  - <strong>All other origins</strong>. One (1) second
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Content Type</strong> </td>
+
+<td>
+
+Based on the selected media format file type, the `Content Type` header is formatted to include this information:
+
+- **m3u8, m3u, or m3ub**. `Content Type: "application/x-mpegURL"`
+- **ts**. `Content Type: "video/MP2T"`
+- **webvtt or vtt**. `Content Type: "text/vtt"`
+- **f4m, f4f, or f4x**. `Content Type: "video/f4m"`
+- **mpd**. `Content Type: "application/dash+xml"`
+- **dash, divx, mp4, mp4v, m4s, or m4v**. `Content Type: "video/mp4"`
+- **web**. `Content Type: "video/webm"`
+- **mp4a or m4a**. `Content Type: "audio/mp4"`
+- **isma**. `Content Type: "audio/mp4"`
+- **ismv**. `Content Type: "video/mp4"`
+- **aac**. `Content Type: "audio/aac"`
+- **sidx or init**. _No content type is added._
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+# Content characteristics and mixed mode configuration
+
+This is a "use case-based" behavior that's automatically included in the Default Rule and used to optimize delivery. You need to apply settings for this behavior in the Default Rule. However, with Mixed Mode Configuration for AMD (MMC), you can also include it in another rule and apply different match criteria to have separate requests use different content characteristics optimizations.
+
+For more details, see [Mixed Mode & AMD](https://techdocs.akamai.com/adaptive-media-delivery/docs/use-mixed-mode-amd).
+
+# Sibling pages
+
+* [Default optimizations](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov.md)
+* [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)
+* [Content Provider Code](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-provider-code-amd.md)
+* [Segmented Media Delivery Mode](https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md)
+* [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)
+* [Client Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md)
+* [Cache Key Query Parameters](https://techdocs.akamai.com/adaptive-media-delivery/docs/cache-key-query-param-amd.md)
+* [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)
+* [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)
+* [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)
+* [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)
+* [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)

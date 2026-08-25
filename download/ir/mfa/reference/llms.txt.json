@@ -1,0 +1,228 @@
+{
+  "slug": "mfa/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/mfa/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/mfa/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "Akamai MFA",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 5,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Akamai MFA Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Akamai MFA Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai MFA is a workforce MFA service that enables enterprises to provide additional security to the existing identity validation mechanisms for users’ authentication and access to cloud, on-premise, web-based, SaaS, and IaaS applications.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai MFA is a workforce MFA service that enables enterprises to provide additional security to the existing identity validation mechanisms for users’ authentication and access to cloud, on-premise, web-based, SaaS, and IaaS applications.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/mfa/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/mfa/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        19
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/mfa/reference/api/llms.txt): full category index\n- [Akamai MFA API](https://techdocs.akamai.com/mfa/reference/api.md)\n- [API summary](https://techdocs.akamai.com/mfa/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/mfa/reference/get-started.md)\n- [API concepts](https://techdocs.akamai.com/mfa/reference/mfa-concepts.md)\n- [Errors](https://techdocs.akamai.com/mfa/reference/errors.md)\n- [400](https://techdocs.akamai.com/mfa/reference/400.md)\n- [401](https://techdocs.akamai.com/mfa/reference/401.md)\n- [403](https://techdocs.akamai.com/mfa/reference/403.md)\n- [404](https://techdocs.akamai.com/mfa/reference/404.md)\n- [500](https://techdocs.akamai.com/mfa/reference/500.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexAkamai MFA APIAPI summaryGet startedAPI conceptsErrors400401403404500",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## API Reference: Email enrollments",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Email enrollments",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        23,
+        24
+      ],
+      "raw": "- [Email enrollments index](https://techdocs.akamai.com/mfa/reference/email-enrollments/llms.txt): full category index\n- [Send enrollment email](https://techdocs.akamai.com/mfa/reference/post-send-enrollment-email.md): Send enrollment email to a set of new users inviting them to Akamai MFA. This operation provides users with unique links to enroll and activate authentication devices in Akamai MFA.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Email enrollments index: full category indexSend enrollment email: Send enrollment email to a set of new users inviting them to Akamai MFA. This operation provides users with unique links to enroll and activate authentication devices in Akamai MFA.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        26,
+        26
+      ],
+      "raw": "## API Reference: Users",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Users",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        28,
+        43
+      ],
+      "raw": "- [Users index](https://techdocs.akamai.com/mfa/reference/users/llms.txt): full category index\n- [Add a user](https://techdocs.akamai.com/mfa/reference/post-user.md): Create a new user.\n- [List users](https://techdocs.akamai.com/mfa/reference/get-users.md): List user accounts configured in Akamai MFA, optionally filtered and paginated.\n- [Get a user](https://techdocs.akamai.com/mfa/reference/get-user.md): Get details about a specific user account, including the `userId`, `status`, and `username`. It also lists the `alias` information and `groups` that the user belongs to.\n- [Update a user](https://techdocs.akamai.com/mfa/reference/put-user.md): Modify a user's basic information. To add an alias or assign a group to a user, run the [Add an alias to a user](ref:post-alias-to-user) and [Assign groups](ref:post-assign-groups-to-user) operations.\n- [Delete a user](https://techdocs.akamai.com/mfa/reference/delete-user.md): Permanently delete a specific user account. You can delete any active user account from your Akamai MFA service. For manually added users, deleting means permanently removing the user accounts together with any enrolled authentication device. User accounts that still exist in the external source directory reappear after the next synchronization.\n- [Add an alias to a user](https://techdocs.akamai.com/mfa/reference/post-alias-to-user.md): Add an alternative username for a user.\n- [Delete an alias assigned to a user](https://techdocs.akamai.com/mfa/reference/delete-user-alias.md): Permanently delete a user's alias.\n- [Assign groups](https://techdocs.akamai.com/mfa/reference/post-assign-groups-to-user.md): Assign a set of groups to a user account. With this operation you can modify the users' group assignment when their role in the organization changes. After you modify the users' group membership, you can manage their access to different integrations at group level.\n- [Assign policies](https://techdocs.akamai.com/mfa/reference/post-assign-policies-to-user.md): Assign a set of policies to a user account. With this operation you can modify the users' access privileges when their role in the organization changes. After you modify the users' policy assignation, the users need to meet the requirements of a specific authentication policy before they can access a protected application.\n- [Create a bypass code](https://techdocs.akamai.com/mfa/reference/post-bypass-code.md): Generate a new bypass code for a specific user account.\n- [List bypass codes](https://techdocs.akamai.com/mfa/reference/get-bypass-codes.md): List all the bypass codes generated for a specific user account.\n- [List the user's devices](https://techdocs.akamai.com/mfa/reference/get-user-devices.md): List all the user's authentication devices.\n- [Assign a hardware token](https://techdocs.akamai.com/mfa/reference/post-assign-hardware-token.md): Assign a hardware token to a specific user account. To assign a hardware token, you need the token's serial number. You can also unassign and reassign a hardware token from one active user account to another. A hardware token assigned to a user account gets automatically unassigned when the account is deleted, and returns to the pool of available tokens that you can assign to another user.\n- [Disable a device](https://techdocs.akamai.com/mfa/reference/post-disable-user-device.md): Deactivate the user's authentication device.\n- [Enable a device](https://techdocs.akamai.com/mfa/reference/post-enable-user-device.md): Activate the user's authentication device.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Users index: full category indexAdd a user: Create a new user.List users: List user accounts configured in Akamai MFA, optionally filtered and paginated.Get a user: Get details about a specific user account, including the userId, status, and username. It also lists the alias information and groups that the user belongs to.Update a user: Modify a user's basic information. To add an alias or assign a group to a user, run the Add an alias to a user and Assign groups operations.Delete a user: Permanently delete a specific user account. You can delete any active user account from your Akamai MFA service. For manually added users, deleting means permanently removing the user accounts together with any enrolled authentication device. User accounts that still exist in the external source directory reappear after the next synchronization.Add an alias to a user: Add an alternative username for a user.Delete an alias assigned to a user: Permanently delete a user's alias.Assign groups: Assign a set of groups to a user account. With this operation you can modify the users' group assignment when their role in the organization changes. After you modify the users' group membership, you can manage their access to different integrations at group level.Assign policies: Assign a set of policies to a user account. With this operation you can modify the users' access privileges when their role in the organization changes. After you modify the users' policy assignation, the users need to meet the requirements of a specific authentication policy before they can access a protected application.Create a bypass code: Generate a new bypass code for a specific user account.List bypass codes: List all the bypass codes generated for a specific user account.List the user's devices: List all the user's authentication devices.Assign a hardware token: Assign a hardware token to a specific user account. To assign a hardware token, you need the token's serial number. You can also unassign and reassign a hardware token from one active user account to another. A hardware token assigned to a user account gets automatically unassigned when the account is deleted, and returns to the pool of available tokens that you can assign to another user.Disable a device: Deactivate the user's authentication device.Enable a device: Activate the user's authentication device.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:post-alias-to-user",
+          "line": 32
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-assign-groups-to-user",
+          "line": 32
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "## API Reference: Groups",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Groups",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        47,
+        53
+      ],
+      "raw": "- [Groups index](https://techdocs.akamai.com/mfa/reference/groups/llms.txt): full category index\n- [Add a group](https://techdocs.akamai.com/mfa/reference/post-group.md): Create a new group.\n- [List groups](https://techdocs.akamai.com/mfa/reference/get-groups.md): List groups configured in Akamai MFA, optionally filtered and paginated.\n- [Get a group](https://techdocs.akamai.com/mfa/reference/get-group.md): Retrieve a group's details.\n- [Delete a group](https://techdocs.akamai.com/mfa/reference/delete-group.md): Permanently delete a group.\n- [Add a user to a group](https://techdocs.akamai.com/mfa/reference/post-user-to-group.md): Add a user to a group.\n- [Remove a user from a group](https://techdocs.akamai.com/mfa/reference/delete-user-from-group.md): Remove a user from a group.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Groups index: full category indexAdd a group: Create a new group.List groups: List groups configured in Akamai MFA, optionally filtered and paginated.Get a group: Retrieve a group's details.Delete a group: Permanently delete a group.Add a user to a group: Add a user to a group.Remove a user from a group: Remove a user from a group.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

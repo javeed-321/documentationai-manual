@@ -1,0 +1,185 @@
+# EdgeWorkers Documentation
+
+> Use Akamai's EdgeWorkers service to execute JavaScript functions at the edge and create customized web experiences based on geolocation, device characteristics, and more.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edgeworkers/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Welcome
+
+- [Welcome index](https://techdocs.akamai.com/edgeworkers/docs/welcome/llms.txt): full category index
+- [Welcome to EdgeWorkers](https://techdocs.akamai.com/edgeworkers/docs/welcome-to-edgeworkers.md)
+- [EdgeWorkers event model](https://techdocs.akamai.com/edgeworkers/docs/event-handler-functions.md)
+- [Response orchestration](https://techdocs.akamai.com/edgeworkers/docs/response-orchestration.md)
+- [Administrator and developer roles](https://techdocs.akamai.com/edgeworkers/docs/administrator-and-developer-roles.md)
+- [Specifications](https://techdocs.akamai.com/edgeworkers/docs/specifications.md)
+- [Akamai Functions & EdgeWorkers comparison](https://techdocs.akamai.com/edgeworkers/docs/akamai-functions-edgeworkers-comparison.md)
+- [Use cases](https://techdocs.akamai.com/edgeworkers/docs/ew-functions-comparison-use-cases.md)
+- [Tutorials](https://techdocs.akamai.com/edgeworkers/docs/use-cases.md)
+- [Store locator](https://techdocs.akamai.com/edgeworkers/docs/store-locator.md): Learn how to execute store locator in a serverless function with EdgeWorkers
+- [Redirect pages based on location](https://techdocs.akamai.com/edgeworkers/docs/redirect-pages-based-on-location.md)
+- [Manifest and Playlist Manipulation](https://techdocs.akamai.com/edgeworkers/docs/manifest-and-playlist-personalization.md)
+- [Live program replacement](https://techdocs.akamai.com/edgeworkers/docs/live-program-replacement.md)
+- [Content insertion](https://techdocs.akamai.com/edgeworkers/docs/content-insertion.md)
+- [Response body processing](https://techdocs.akamai.com/edgeworkers/docs/process-response-bodies.md)
+- [Response content transformation](https://techdocs.akamai.com/edgeworkers/docs/transform-response-content.md)
+- [Dynamic Content Assembly using the html-rewriter](https://techdocs.akamai.com/edgeworkers/docs/html-rewriter-dynamic-content-assembly.md): Learn how to use the EdgeWorkers [html-rewriter](doc:htmlrewriter) to generate dynamic HTML content.
+- [Send analytic beacons without waiting for a response](https://techdocs.akamai.com/edgeworkers/docs/fire-and-forget.md): Fire and forget - Send beacons on each request, without waiting for a beacon collector response
+- [Use a Content Security Policy to cut latency, not security](https://techdocs.akamai.com/edgeworkers/docs/content-security-policy.md)
+- [Use npm package manager to import external modules](https://techdocs.akamai.com/edgeworkers/docs/import-external-module-npm-package-mgr.md): Unwrapping Packages - A guide to using external modules in EdgeWorkers
+
+## Guides: Prerequisites
+
+- [Prerequisites index](https://techdocs.akamai.com/edgeworkers/docs/prerequisites/llms.txt): full category index
+- [Add EdgeWorkers to your contract](https://techdocs.akamai.com/edgeworkers/docs/add-edgeworkers-to-contract.md)
+- [EdgeWorkers free trial](https://techdocs.akamai.com/edgeworkers/docs/edgeworkers-free-trial.md)
+- [Manage access to EdgeWorkers](https://techdocs.akamai.com/edgeworkers/docs/manage-access-to-edgeworkers.md)
+- [Select a resource tier](https://techdocs.akamai.com/edgeworkers/docs/select-a-resource-tier.md)
+- [How to change to a different EdgeWorkers tier](https://techdocs.akamai.com/edgeworkers/docs/change-resource-tier.md)
+
+## Guides: Get started
+
+- [Get started index](https://techdocs.akamai.com/edgeworkers/docs/get-started/llms.txt): full category index
+- [Hello World tutorials](https://techdocs.akamai.com/edgeworkers/docs/hello-world.md)
+- [EdgeWorkers Management application Hello World](https://techdocs.akamai.com/edgeworkers/docs/hello-world-edgeworkers-management-application.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id-1.md)
+- [Add the EdgeWorker behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworker-behavior-1.md)
+- [Create the Hello World code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-the-hello-world-code-bundle-1.md)
+- [Deploy Hello World](https://techdocs.akamai.com/edgeworkers/docs/deploy-hello-world-1.md)
+- [Test Hello World](https://techdocs.akamai.com/edgeworkers/docs/test-hello-world-1.md)
+- [API Hello World](https://techdocs.akamai.com/edgeworkers/docs/api-hello-world.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id-2.md)
+- [Add the EdgeWorkers behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworkers-behavior-2.md)
+- [Create the Hello World code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-the-hello-world-code-bundle-2.md)
+- [Deploy Hello World](https://techdocs.akamai.com/edgeworkers/docs/deploy-hello-world-2.md)
+- [Test Hello World](https://techdocs.akamai.com/edgeworkers/docs/test-hello-world-2.md)
+- [CLI Hello World](https://techdocs.akamai.com/edgeworkers/docs/cli-hello-world.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id-3.md)
+- [Add the EdgeWorkers behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworkers-behavior-3.md)
+- [Create the Hello World code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-the-hello-world-code-bundle-3.md)
+- [Deploy Hello World](https://techdocs.akamai.com/edgeworkers/docs/deploy-hello-world-3.md)
+- [Test Hello World](https://techdocs.akamai.com/edgeworkers/docs/test-hello-world-3.md)
+
+## Guides: Administration
+
+- [Administration index](https://techdocs.akamai.com/edgeworkers/docs/administration/llms.txt): full category index
+- [Set up the EdgeWorkers service](https://techdocs.akamai.com/edgeworkers/docs/set-up-the-edgeworkers-service.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id.md)
+- [Add the EdgeWorkers behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworkers-behavior.md)
+- [Manage EdgeWorkers](https://techdocs.akamai.com/edgeworkers/docs/manage-edgeworkers.md)
+- [Error handling](https://techdocs.akamai.com/edgeworkers/docs/error-handling.md)
+- [Enable Continue on error](https://techdocs.akamai.com/edgeworkers/docs/continue-on-error.md)
+- [Configure Site Failover](https://techdocs.akamai.com/edgeworkers/docs/configure-site-failover.md)
+- [Test Site Failover](https://techdocs.akamai.com/edgeworkers/docs/test-site-failove.md)
+- [EdgeWorkers CLI](https://techdocs.akamai.com/edgeworkers/docs/akamai-cli.md)
+- [Create a subWorker](https://techdocs.akamai.com/edgeworkers/docs/create-a-subworker.md)
+- [Fragment generation using subWorkers](https://techdocs.akamai.com/edgeworkers/docs/subworkers-tutorial.md)
+- [Flexible composition](https://techdocs.akamai.com/edgeworkers/docs/flexible-composition.md)
+- [Terminology](https://techdocs.akamai.com/edgeworkers/docs/terminology.md)
+- [Create a parent EdgeWorker](https://techdocs.akamai.com/edgeworkers/docs/create-a-parent-edgeworker.md)
+- [Add a child EdgeWorker to an existing parent](https://techdocs.akamai.com/edgeworkers/docs/add-child-edgeworkers.md)
+- [Review a dynamic reactivation](https://techdocs.akamai.com/edgeworkers/docs/dynamic-reactivation.md)
+- [Import a static revision](https://techdocs.akamai.com/edgeworkers/docs/review-a-static-activation.md)
+- [Pin a revision](https://techdocs.akamai.com/edgeworkers/docs/pin-a-revision.md)
+- [Debug](https://techdocs.akamai.com/edgeworkers/docs/debug-flexible-composition.md)
+
+## Guides: Development
+
+- [Development index](https://techdocs.akamai.com/edgeworkers/docs/development/llms.txt): full category index
+- [Write your JavaScript code](https://techdocs.akamai.com/edgeworkers/docs/write-your-javascript-code.md)
+- [JavaScript error handling](https://techdocs.akamai.com/edgeworkers/docs/javascript-error-handling.md)
+- [Create a code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-a-code-bundle.md)
+- [Code bundle format](https://techdocs.akamai.com/edgeworkers/docs/code-bundle-format.md)
+- [Import a JavaScript module](https://techdocs.akamai.com/edgeworkers/docs/import-a-javascript-module.md)
+- [Developer tools](https://techdocs.akamai.com/edgeworkers/docs/developer-tools.md)
+- [Code bundle editor](https://techdocs.akamai.com/edgeworkers/docs/code-bundle-editor.md)
+- [TypeScript](https://techdocs.akamai.com/edgeworkers/docs/typescript.md)
+- [Unit testing for EdgeWorkers](https://techdocs.akamai.com/edgeworkers/docs/unit-testing-for-edgeworkers.md)
+- [EdgeWorkers IDE extensions (VSCode and IntelliJ)](https://techdocs.akamai.com/edgeworkers/docs/ide-extensions.md)
+- [Sandbox](https://techdocs.akamai.com/edgeworkers/docs/sandbox.md)
+- [EdgeWorkers Code Profiler](https://techdocs.akamai.com/edgeworkers/docs/edgeworkers-code-profiler.md)
+- [Code profiler tutorial](https://techdocs.akamai.com/edgeworkers/docs/code-profiler-tutorial.md)
+- [Development environment tutorial](https://techdocs.akamai.com/edgeworkers/docs/dev-environment-tutorial.md)
+
+## Guides: JavaScript API reference
+
+- [JavaScript API reference index](https://techdocs.akamai.com/edgeworkers/docs/javascript-api-reference/llms.txt): full category index
+- [About the JavaScript API](https://techdocs.akamai.com/edgeworkers/docs/about-the-javascript-api.md)
+- [Request Object](https://techdocs.akamai.com/edgeworkers/docs/request-object.md)
+- [User Location Object](https://techdocs.akamai.com/edgeworkers/docs/user-location-object.md)
+- [Device Object](https://techdocs.akamai.com/edgeworkers/docs/device-object.md)
+- [CacheKey Object](https://techdocs.akamai.com/edgeworkers/docs/cachekey-object.md)
+- [BotScore Object](https://techdocs.akamai.com/edgeworkers/docs/botscore-object.md)
+- [Response Object](https://techdocs.akamai.com/edgeworkers/docs/response-object.md)
+- [Built-in modules](https://techdocs.akamai.com/edgeworkers/docs/built-in-modules.md)
+- [create-response](https://techdocs.akamai.com/edgeworkers/docs/create-response.md)
+- [streams](https://techdocs.akamai.com/edgeworkers/docs/streams.md)
+- [text-encode-transform](https://techdocs.akamai.com/edgeworkers/docs/text-encode-transform.md)
+- [http-request](https://techdocs.akamai.com/edgeworkers/docs/http-request.md)
+- [cookies](https://techdocs.akamai.com/edgeworkers/docs/cookies.md)
+- [url-search-params](https://techdocs.akamai.com/edgeworkers/docs/url-search-params.md)
+- [log](https://techdocs.akamai.com/edgeworkers/docs/log.md)
+- [encoding](https://techdocs.akamai.com/edgeworkers/docs/encoding.md)
+- [crypto](https://techdocs.akamai.com/edgeworkers/docs/crypto.md)
+- [html-rewriter](https://techdocs.akamai.com/edgeworkers/docs/htmlrewriter.md)
+- [External modules](https://techdocs.akamai.com/edgeworkers/docs/external-modules.md)
+- [HLS parser](https://techdocs.akamai.com/edgeworkers/docs/hls-parser.md)
+- [DASH parser](https://techdocs.akamai.com/edgeworkers/docs/dash-parser.md)
+- [jwt](https://techdocs.akamai.com/edgeworkers/docs/jwt.md)
+- [cwt](https://techdocs.akamai.com/edgeworkers/docs/cwt.md)
+- [watermarking](https://techdocs.akamai.com/edgeworkers/docs/watermarking.md)
+- [common access token](https://techdocs.akamai.com/edgeworkers/docs/cat.md)
+
+## Guides: Technical resources
+
+- [Technical resources index](https://techdocs.akamai.com/edgeworkers/docs/technical-resources/llms.txt): full category index
+- [Best practices](https://techdocs.akamai.com/edgeworkers/docs/best-practices.md)
+- [Performance](https://techdocs.akamai.com/edgeworkers/docs/best-practices-for-performance.md)
+- [Asynchronous processing](https://techdocs.akamai.com/edgeworkers/docs/best-practices-for-asynchronous-processing.md)
+- [FAQ](https://techdocs.akamai.com/edgeworkers/docs/faq-1.md)
+- [General questions](https://techdocs.akamai.com/edgeworkers/docs/faq.md)
+- [Prerequisites and limitations](https://techdocs.akamai.com/edgeworkers/docs/prerequisites-and-limitations.md)
+- [Technical](https://techdocs.akamai.com/edgeworkers/docs/technical.md)
+- [EdgeWorkers JavaScript code](https://techdocs.akamai.com/edgeworkers/docs/edgeworkers-javascript-code.md)
+- [Reporting and billing](https://techdocs.akamai.com/edgeworkers/docs/reporting-and-billing.md)
+- [Product interoperability](https://techdocs.akamai.com/edgeworkers/docs/product-interoperability.md)
+- [Troubleshooting](https://techdocs.akamai.com/edgeworkers/docs/troubleshooting.md)
+- [Content transformation](https://techdocs.akamai.com/edgeworkers/docs/content-transformation.md)
+
+## Guides: Debug
+
+- [Debug index](https://techdocs.akamai.com/edgeworkers/docs/debug/llms.txt): full category index
+- [About JavaScript troubleshooting](https://techdocs.akamai.com/edgeworkers/docs/about-javacript-troubleshooting.md)
+- [Standard debug headers](https://techdocs.akamai.com/edgeworkers/docs/enable-standard-debug-headers.md)
+- [Standard debug header details](https://techdocs.akamai.com/edgeworkers/docs/standard-debug-header-details.md)
+- [Enhanced debug headers](https://techdocs.akamai.com/edgeworkers/docs/enable-enhanced-debug-headers.md)
+- [Enhanced debug headers for responseProvider](https://techdocs.akamai.com/edgeworkers/docs/enable-enhanced-debug-headers-for-responseprovider.md)
+- [Enhanced debug header details](https://techdocs.akamai.com/edgeworkers/docs/enhanced-debug-header-details.md)
+- [Enhanced debug header details for HTTP sub-requests](https://techdocs.akamai.com/edgeworkers/docs/enhanced-debug-header-details-for-http-sub-requests.md)
+- [Enhanced debug header details for subWorkers](https://techdocs.akamai.com/edgeworkers/docs/enhanced-debug-header-details-for-http-subworkers.md)
+- [Error codes - EdgeWorkers Management Application](https://techdocs.akamai.com/edgeworkers/docs/error-codes.md)
+- [Common errors](https://techdocs.akamai.com/edgeworkers/docs/common-errors.md)
+
+## Guides: Monitor
+
+- [Monitor index](https://techdocs.akamai.com/edgeworkers/docs/monitor/llms.txt): full category index
+- [About monitoring](https://techdocs.akamai.com/edgeworkers/docs/about-monitoring.md)
+- [EdgeWorkers reports](https://techdocs.akamai.com/edgeworkers/docs/manage-report-data.md)
+- [Overview report](https://techdocs.akamai.com/edgeworkers/docs/overview-report.md)
+- [Execution status report](https://techdocs.akamai.com/edgeworkers/docs/execution-status-report.md)
+- [CPU time report](https://techdocs.akamai.com/edgeworkers/docs/execution-time-report.md)
+- [Wall time report](https://techdocs.akamai.com/edgeworkers/docs/wall-time-report.md)
+- [Memory usage report](https://techdocs.akamai.com/edgeworkers/docs/memory-usage-report.md)
+- [mPulse reports](https://techdocs.akamai.com/edgeworkers/docs/mpulse.md)
+- [JavaScript logging](https://techdocs.akamai.com/edgeworkers/docs/enable-javascript-logging.md)
+- [Use DataStream 2 to deliver JavaScript logs](https://techdocs.akamai.com/edgeworkers/docs/ds2-javascript-logging.md)
+- [JavaScript Logging details](https://techdocs.akamai.com/edgeworkers/docs/javascript-logging-details.md)
+- [DataStream 2 logs](https://techdocs.akamai.com/edgeworkers/docs/datastream-2-integration.md)
+- [DataStream 2 delivery log details](https://techdocs.akamai.com/edgeworkers/docs/datastream2-reports.md)
+- [Log Delivery Service](https://techdocs.akamai.com/edgeworkers/docs/enable-log-delivery-for-edgeworkers.md)
+
+## Guides: Limitations
+
+- [Limitations index](https://techdocs.akamai.com/edgeworkers/docs/limitations/llms.txt): full category index
+- [Product limits](https://techdocs.akamai.com/edgeworkers/docs/limitations.md)
+- [Resource tier limitations](https://techdocs.akamai.com/edgeworkers/docs/resource-tier-limitations.md)
+- [Known issues](https://techdocs.akamai.com/edgeworkers/docs/known-issues.md)

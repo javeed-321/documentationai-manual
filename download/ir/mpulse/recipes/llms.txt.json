@@ -1,0 +1,106 @@
+{
+  "slug": "mpulse/recipes/llms.txt",
+  "source": "https://techdocs.akamai.com/mpulse/recipes/llms.txt.md",
+  "url": "https://techdocs.akamai.com/mpulse/recipes/llms.txt",
+  "title": "Recipes index",
+  "description": "full section index",
+  "section": "mPulse",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# mPulse Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "mPulse Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> mPulse is ​Akamai​'s real user measurement solution that maps user behavior to business performance as it's happening. With mPulse you can collect detailed business and performance data directly from your users' browser or mobile application in real time, and then drill down for a closer look at the performance of all your resources across all of your page views to identify the root cause of latencies and lost revenue.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "mPulse is ​Akamai​'s real user measurement solution that maps user behavior to business performance as it's happening. With mPulse you can collect detailed business and performance data directly from your users' browser or mobile application in real time, and then drill down for a closer look at the performance of all your resources across all of your page views to identify the root cause of latencies and lost revenue.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/mpulse/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/mpulse/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Recipes",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Recipes",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        37
+      ],
+      "raw": "- [Clear an alert](https://techdocs.akamai.com/mpulse/recipes/clear-an-alert.md)\n- [Create an annotation](https://techdocs.akamai.com/mpulse/recipes/create-an-annotation.md)\n- [Create an object](https://techdocs.akamai.com/mpulse/recipes/create-an-object.md)\n- [Delete an annotation](https://techdocs.akamai.com/mpulse/recipes/delete-an-annotation.md)\n- [Delete an object](https://techdocs.akamai.com/mpulse/recipes/delete-an-object.md)\n- [Generate a token](https://techdocs.akamai.com/mpulse/recipes/generate-a-token.md)\n- [Get a beacon configuration](https://techdocs.akamai.com/mpulse/recipes/get-a-beacon-configuration.md)\n- [Get a histogram for timer](https://techdocs.akamai.com/mpulse/recipes/get-a-histogram-for-timer.md)\n- [Get a timer by minute](https://techdocs.akamai.com/mpulse/recipes/get-a-timer-by-minute.md)\n- [Get a timer summary](https://techdocs.akamai.com/mpulse/recipes/get-a-timer-summary.md)\n- [Get an annotation](https://techdocs.akamai.com/mpulse/recipes/get-an-annotation.md)\n- [Get an application error summary](https://techdocs.akamai.com/mpulse/recipes/get-an-application-error-summary.md)\n- [Get an object](https://techdocs.akamai.com/mpulse/recipes/get-an-object.md)\n- [Get dimension values](https://techdocs.akamai.com/mpulse/recipes/get-dimension-values.md)\n- [Get dimensions over time](https://techdocs.akamai.com/mpulse/recipes/get-dimensions-over-time.md)\n- [Get metrics by dimension](https://techdocs.akamai.com/mpulse/recipes/get-metrics-by-dimension.md)\n- [Get metrics per page load time](https://techdocs.akamai.com/mpulse/recipes/get-metrics-per-page-load-time.md)\n- [Get session per page load time](https://techdocs.akamai.com/mpulse/recipes/get-session-per-page-load-time.md)\n- [Get timer or metric values by geography](https://techdocs.akamai.com/mpulse/recipes/get-timer-or-metric-values-by-geography.md)\n- [Get timer values by A/B test](https://techdocs.akamai.com/mpulse/recipes/get-timer-values-by-ab-test.md)\n- [Get timer values by bandwidth](https://techdocs.akamai.com/mpulse/recipes/get-timer-values-by-bandwidth.md)\n- [Get timer values by browser](https://techdocs.akamai.com/mpulse/recipes/get-timer-values-by-browser.md)\n- [Get timer values by page group](https://techdocs.akamai.com/mpulse/recipes/get-timer-values-by-page-group.md)\n- [Get timers and metrics](https://techdocs.akamai.com/mpulse/recipes/get-timers-and-metrics.md)\n- [List annotations](https://techdocs.akamai.com/mpulse/recipes/list-annotations.md)\n- [List objects](https://techdocs.akamai.com/mpulse/recipes/list-objects.md)\n- [Send a beacon](https://techdocs.akamai.com/mpulse/recipes/send-a-beacon.md)\n- [Trigger an alert](https://techdocs.akamai.com/mpulse/recipes/trigger-an-alert.md)\n- [Update an annotation](https://techdocs.akamai.com/mpulse/recipes/update-an-annotation.md)\n- [Update an object](https://techdocs.akamai.com/mpulse/recipes/update-an-object.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Clear an alertCreate an annotationCreate an objectDelete an annotationDelete an objectGenerate a tokenGet a beacon configurationGet a histogram for timerGet a timer by minuteGet a timer summaryGet an annotationGet an application error summaryGet an objectGet dimension valuesGet dimensions over timeGet metrics by dimensionGet metrics per page load timeGet session per page load timeGet timer or metric values by geographyGet timer values by A/B testGet timer values by bandwidthGet timer values by browserGet timer values by page groupGet timers and metricsList annotationsList objectsSend a beaconTrigger an alertUpdate an annotationUpdate an object",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

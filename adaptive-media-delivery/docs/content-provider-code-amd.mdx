@@ -1,0 +1,58 @@
+---
+title: "Content Provider Code"
+---
+
+Here, you need to set up a unique ​Akamai​ content provider (CP) code that's used to track reporting and billing data for streaming media delivered through this Adaptive Media Delivery property.
+
+## Pick a CP code
+
+You should have been given at least one CP code when you provisioned AMD with your ​Akamai​ account team. Just click the **Content Provider Code** field and select it.
+
+You can also select an existing CP code to add traffic and reporting data from this property to it. Before you do this, consider the following points:
+
+- **Both billing and reporting for content delivered through a property are tracked through a CP code**. If you select an existing CP code that's already delivering AMD traffic, reporting and billing information for this property will be merged with that one. For better granularity in your tracking, we recommend that you set up a new CP code for a new AMD property.
+
+- **Log Delivery Service and CP codes**. You can optionally add the [Log Request Details](https://techdocs.akamai.com/property-mgr/docs/log-req-details) behavior to your AMD property to support ​Akamai​'s Log Delivery Service application. If you're already using this service with another property, you can't select a CP code that's actively collecting log information for another property that's already on the production network. However, you can select a CP code that's being used for LDS on a property that's still on the staging network.
+
+To help separate your data we recommend that you create and apply a new CP code.
+
+## Create a new CP code
+
+If you'd like, you can create a new CP code for use:
+
+1. Click **Create new\...** The Create a new CP Code window opens.
+
+<Callout kind="info">
+  Your contract is limited to a specific number of CP codes for use. If you don't have access to a new one, an error message is displayed. Reach out to your account team for help in getting access to more.
+</Callout>
+
+2. Enter a friendly name for the CP code. It defaults to what you've named your AMD property. With a name set, click **Create**.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-set-traffic-reporting-cpcode-v3.png" width="700"/>
+</div>
+
+The new CP code is added to the Content Provider Code field, along with a unique numeric value. This value is used to:
+
+- Review traffic report data via the [Reporting](https://techdocs.akamai.com/reporting/docs/welcome-rpt) tool in ​Akamai Control Center​—you can filter report output using this specific CP code.
+
+- Optionally add Log Delivery Service support, via the [Log Request Details](https://techdocs.akamai.com/property-mgr/docs/log-req-details) behavior.
+
+<div align=center>
+<img src="https://techdocs.akamai.com/adaptive-media-delivery/img/amd-note-traffic-reporting-cpcode-v3.png" />
+</div>
+
+# Sibling pages
+
+- [Default optimizations](https://techdocs.akamai.com/adaptive-media-delivery/docs/best-practices-use-case-based-prov.md)
+- [Origin Server](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-server-amd.md)
+- [Segmented Media Delivery Mode](https://techdocs.akamai.com/adaptive-media-delivery/docs/segmented-media-deliv-mode-amd.md)
+- [Origin Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-charac-amd.md)
+- [Content Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/content-charac-amd.md)
+- [Client Characteristics](https://techdocs.akamai.com/adaptive-media-delivery/docs/client-charac-amd.md)
+- [Cache Key Query Parameters](https://techdocs.akamai.com/adaptive-media-delivery/docs/cache-key-query-param-amd.md)
+- [Tiered Distribution](https://techdocs.akamai.com/adaptive-media-delivery/docs/tiered-dist-amd.md)
+- [Recommended behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/rcmd-behs-default-rule.md)
+- [Optional behaviors in the Default Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/optal-behs-default-rule.md)
+- [The Default CORS Policy Rule](https://techdocs.akamai.com/adaptive-media-delivery/docs/default-cors-policy-rule.md)
+- [Add optional rules](https://techdocs.akamai.com/adaptive-media-delivery/docs/add-optal-rules.md)

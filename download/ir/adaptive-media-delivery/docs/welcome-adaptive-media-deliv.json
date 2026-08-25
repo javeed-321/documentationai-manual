@@ -1,0 +1,334 @@
+{
+  "slug": "adaptive-media-delivery/docs/welcome-adaptive-media-deliv",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/welcome-adaptive-media-deliv.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/welcome-adaptive-media-deliv",
+  "title": "Welcome to Adaptive Media Delivery",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-05-19T20:26:06.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Could not parse expression with acorn",
+  "components": {
+    "boilerplate": 1,
+    "heading": 7,
+    "paragraph": 6,
+    "list": 4
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Welcome to Adaptive Media Delivery",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Welcome to Adaptive Media Delivery",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Adaptive Media Delivery (AMD) is optimized for adaptive bit rate streaming to provide a high-quality, secure viewing experience across a broad variety of network types—fixed or mobile—at varying connection speeds. Built on the ​Akamai​ Intelligent Platform™, AMD provides superior scalability, reliability, availability, and reach.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Adaptive Media Delivery (AMD) is optimized for adaptive bit rate streaming to provide a high-quality, secure viewing experience across a broad variety of network types—fixed or mobile—at varying connection speeds. Built on the ​Akamai​ Intelligent Platform™, AMD provides superior scalability, reliability, availability, and reach.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "AMD securely delivers prepared, pre-segmented HTTP-based live and on-demand streaming media.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AMD securely delivers prepared, pre-segmented HTTP-based live and on-demand streaming media.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        17
+      ],
+      "raw": "[block:html]\n{\n  \"html\": \"<div align=center>\\n<video width=\\\"600\\\" height=\\\"400\\\" controls>\\n  <source src=\\\"https://techdocs.akamai.com/adaptive-media-delivery/videos/amd-akamai-final-v1.mp4\\\" type=\\\"video/mp4\\\">\\n  <strong>Error</strong>: The video's URL was inaccessible.\\n</video>\\n</div>\"\n}\n[/block]",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "[block:html]\n{\n\"html\": \"<div align=center>\\n<video width=\"600\" height=\"400\" controls>\\n  <source src=\"https://techdocs.akamai.com/adaptive-media-delivery/videos/amd-akamai-final-v1.mp4\\\" type=\"video/mp4\">\\n  <strong>Error</strong>: The video's URL was inaccessible.\\n</video>\\n</div>\"\n}\n[/block]",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "# Before you begin",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Before you begin",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        21,
+        29
+      ],
+      "raw": "* [Familiarize yourself with key concepts and terms](https://techdocs.akamai.com/property-mgr/docs/key-concepts-terms)\n\n* [Review supported media formats](https://techdocs.akamai.com/adaptive-media-delivery/docs/supported-media-formats)\n\n* [Get your unique information](https://techdocs.akamai.com/adaptive-media-delivery/docs/get-environ-info)\n\n* [Understand the request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow)\n\n* [Prepare your environment](https://techdocs.akamai.com/adaptive-media-delivery/docs/prepare-your-environment)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Familiarize yourself with key concepts and termsReview supported media formatsGet your unique informationUnderstand the request flowPrepare your environment",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "# Set up AMD",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Set up AMD",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        33,
+        33
+      ],
+      "raw": "Follow these phases to get set up with a new AMD property.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Follow these phases to get set up with a new AMD property.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        35,
+        41
+      ],
+      "raw": "1. [Create a new AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/create-new-prop). Quickly create a new AMD property in Property Manager.\n\n2. [Define Property Hostnames](https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-hn). Associate the domain for your streaming media with an ​Akamai​ domain, so requests for it resolve to the ​Akamai​ edge network where your media is cached.\n\n3. [Define Property Configuration Settings](https://techdocs.akamai.com/adaptive-media-delivery/docs/define-prop-config-settings). Set up best practice delivery features to streamline and protect your content.\n\n4. [Finalize your AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/finalize-amd-prop). Do a few final things in and out of your Adaptive Media Delivery property to get ready to test it.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a new AMD property. Quickly create a new AMD property in Property Manager.Define Property Hostnames. Associate the domain for your streaming media with an ​Akamai​ domain, so requests for it resolve to the ​Akamai​ edge network where your media is cached.Define Property Configuration Settings. Set up best practice delivery features to streamline and protect your content.Finalize your AMD property. Do a few final things in and out of your Adaptive Media Delivery property to get ready to test it.",
+      "attrs": {
+        "ordered": "true"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "## Optional features and tutorials",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Optional features and tutorials",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "You can include several optional features and use case-specific workflows in your Adaptive Media Delivery property. See the ***Optional features*** section for detailed tutorials.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "You can include several optional features and use case-specific workflows in your Adaptive Media Delivery property. See the Optional features section for detailed tutorials.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        47,
+        47
+      ],
+      "raw": "# Test and go live",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Test and go live",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        49,
+        50
+      ],
+      "raw": "* [Test your AMD property](https://techdocs.akamai.com/adaptive-media-delivery/docs/test-amd-prop)\n* [Go \"live\" with your property](https://techdocs.akamai.com/adaptive-media-delivery/docs/go-live)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Test your AMD propertyGo \"live\" with your property",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        52,
+        52
+      ],
+      "raw": "# Developer tools",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Developer tools",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        54,
+        54
+      ],
+      "raw": "AMD works in conjunction with several APIs. See the [Adaptive Media Delivery APIs reference](https://techdocs.akamai.com/adaptive-media-delivery/reference/api) for details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "AMD works in conjunction with several APIs. See the Adaptive Media Delivery APIs reference for details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        56,
+        56
+      ],
+      "raw": "# What's new",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "What's new",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        58,
+        58
+      ],
+      "raw": "* [Release notes](https://techdocs.akamai.com/adaptive-media-delivery/changelog)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Release notes",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

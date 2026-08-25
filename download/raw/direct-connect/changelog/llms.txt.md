@@ -1,0 +1,12 @@
+# Akamai Direct Connect Documentation
+
+> Akamai's Direct Connect is a high performance network interconnection between your origin infrastructure and the Akamai Intelligent Edge Platform. Direct Connect lets you connect to the platform without using a third-party IP transit provider. It provides private connectivity between the platform and a router in your data center or colocation environment.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/direct-connect/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Jul 1, 2025 — Prolexic support](https://techdocs.akamai.com/direct-connect/changelog/jul-1-2025-prolexic-support-1.md)
+- [Nov 23, 2023 — New UI launched](https://techdocs.akamai.com/direct-connect/changelog/nov-23-2023-new-ui-launched.md)
+- [Jan 31, 2023 — API Acceleration support](https://techdocs.akamai.com/direct-connect/changelog/jan-31-2023-api-acceleration-support.md)
+- [Nov 11, 2022 — Akamai Direct Connect 1.1](https://techdocs.akamai.com/direct-connect/changelog/nov-11-2022-akamai-direct-connect-11.md)
+- [Jul 30, 2021 — New Direct Connect documentation experience](https://techdocs.akamai.com/direct-connect/changelog/jul-27-2021-new-direct-connect-documentation-experience.md)

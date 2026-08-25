@@ -1,0 +1,23 @@
+# PowerShell Documentation
+
+> Make calls to many of our API with a consistent interface using our PowerShell module.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Image & Video Manager
+- [Manage policy rules](https://techdocs.akamai.com/powershell/docs/add-and-maintain-policy-rules.md)
+- [Transform images](https://techdocs.akamai.com/powershell/docs/transform-images.md)
+- [Function index](https://techdocs.akamai.com/powershell/docs/ivm-index.md)
+- [Error details](https://techdocs.akamai.com/powershell/docs/get-ivmerrordetails.md): Get-IVMErrorDetails
+- [Image](https://techdocs.akamai.com/powershell/docs/get-ivmimage.md): Get-IVMImage
+- [Log details](https://techdocs.akamai.com/powershell/docs/get-ivmlogdetails.md): Get-IVMLogDetails
+- [Policy](https://techdocs.akamai.com/powershell/docs/get-ivmpolicy.md): Get-IVMPolicy
+- [Policy history](https://techdocs.akamai.com/powershell/docs/get-ivmpolicyhistory.md): Get-IVMPolicyHistory
+- [Policy set](https://techdocs.akamai.com/powershell/docs/get-ivmpolicyset.md): Get-IVMPolicySet
+- [Policy](https://techdocs.akamai.com/powershell/docs/new-ivmpolicy.md): New-IVMPolicy
+- [Policy set](https://techdocs.akamai.com/powershell/docs/new-ivmpolicyset.md): New-IVMPolicySet
+- [Policy](https://techdocs.akamai.com/powershell/docs/restore-ivmpolicy.md): Restore-IVMPolicy
+- [Policy](https://techdocs.akamai.com/powershell/docs/remove-ivmpolicy.md): Remove-IVMPolicy
+- [Policy set](https://techdocs.akamai.com/powershell/docs/remove-ivmpolicyset.md): Remove-IVMPolicySet
+- [Policy](https://techdocs.akamai.com/powershell/docs/set-ivmpolicy.md): Set-IVMPolicy
+- [Policy set](https://techdocs.akamai.com/powershell/docs/set-ivmpolicyset.md): Set-IVMPolicySet

@@ -1,0 +1,16 @@
+---
+title: "Your user profile"
+---
+
+# Identity and Access Management API Documentation
+
+> The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab
+
+## API Reference: Your user profile
+
+- [View your profile](https://techdocs.akamai.com/iam-api/reference/get-user-profile.md): This operation gets your profile information. To make changes to your profile, run the [Edit your profile](/reference/put-user-profile-info) operation.
+- [Edit your profile](https://techdocs.akamai.com/iam-api/reference/put-user-profile-info.md): This operation updates your basic profile information, such as your name or phone number. To edit detailed settings, run the [Update your notifications](/reference/put-user-profile-notifications) or [Modify a user's group and role assignments](/reference/put-ui-uiidentity-auth-grants) operations.
+- [Set multi-factor authentication for your user profile](https://techdocs.akamai.com/iam-api/reference/put-user-profile-additional-authentication.md): This operation sets multi-factor authentication to `TFA`, `MFA`, or `NONE`. You have five login attempts with MFA or 2FA before your account is locked. If your account is locked, use the [Reset multi-factor authentication for your user profile](/reference/put-user-profile-reset-additional-authentication) operation to unlock it.
+- [Reset multi-factor authentication for your user profile](https://techdocs.akamai.com/iam-api/reference/put-user-profile-reset-additional-authentication.md): This operation resets your multi-factor authentication.
+- [Rotate your password](https://techdocs.akamai.com/iam-api/reference/post-profile-change-password.md): This operation changes your password. Include your old password and your new password in the request body. Before you create your new password, run the [View password policy](/reference/get-common-password-policy) operation to ensure it adheres to your policy. If you include your existing password incorrectly and make too many login attempts, your account locks.
+- [Update your notifications](https://techdocs.akamai.com/iam-api/reference/put-user-profile-notifications.md): This operation subscribes to notifications emails for password expiration reminders, proactive maintenance emails, and upgrade notification emails.

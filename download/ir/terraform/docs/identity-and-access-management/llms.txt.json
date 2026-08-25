@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/identity-and-access-management/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/identity-and-access-management/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/identity-and-access-management/llms.txt",
+  "title": "Identity and Access Management",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Identity and Access Management",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Identity and Access Management",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        40
+      ],
+      "raw": "- [Create identities and control access](https://techdocs.akamai.com/terraform/docs/set-up-iam.md)\n- [Accessible groups](https://techdocs.akamai.com/terraform/docs/iam-ds-access-grps.md): akamai_iam_accessible_groups\n- [Account switch keys](https://techdocs.akamai.com/terraform/docs/iam-ds-asks.md): akamai_iam_account_switch_keys\n- [Allowed APIs](https://techdocs.akamai.com/terraform/docs/iam-ds-allowed-apis.md): akamai_iam_allowed_apis\n- [API client](https://techdocs.akamai.com/terraform/docs/iam-ds-api-client.md): akamai_iam_api_client\n- [API clients](https://techdocs.akamai.com/terraform/docs/iam-ds-api-clients.md): akamai_iam_api_clients\n- [Authorized users](https://techdocs.akamai.com/terraform/docs/iam-ds-auth-users.md): akamai_iam_authorized_user\n- [Blocked properties](https://techdocs.akamai.com/terraform/docs/iam-ds-blocked-props.md): akamai_iam_blocked_properties\n- [CIDR block](https://techdocs.akamai.com/terraform/docs/iam-ds-cidr-block.md): akamai_iam_cidr_block\n- [CIDR blocks](https://techdocs.akamai.com/terraform/docs/iam-ds-cidr-blocks.md): akamai_iam_cidr_blocks\n- [Contact types](https://techdocs.akamai.com/terraform/docs/iam-ds-contact-types.md): akamai_iam_contact_types\n- [Countries](https://techdocs.akamai.com/terraform/docs/iam-ds-countries.md): akamai_iam_countries\n- [Grantable roles](https://techdocs.akamai.com/terraform/docs/iam-ds-grantable-roles.md): akamai_iam_grantable_roles\n- [Group](https://techdocs.akamai.com/terraform/docs/iam-ds-group.md): akamai_iam_group\n- [Groups](https://techdocs.akamai.com/terraform/docs/iam-ds-groups.md): akamai_iam_groups\n- [Password policy](https://techdocs.akamai.com/terraform/docs/iam-ds-password-policy.md): akamai_iam_password_policy\n- [Property users](https://techdocs.akamai.com/terraform/docs/property-users.md): akamai_iam_property_users\n- [Role](https://techdocs.akamai.com/terraform/docs/iam-ds-role.md): akamai_iam_role\n- [Roles](https://techdocs.akamai.com/terraform/docs/iam-ds-roles.md): akamai_iam_roles\n- [States](https://techdocs.akamai.com/terraform/docs/iam-ds-states.md): akamai_iam_states\n- [Supported languages](https://techdocs.akamai.com/terraform/docs/iam-ds-supported-languages.md): akamai_iam_supported_langs\n- [Time zones](https://techdocs.akamai.com/terraform/docs/iam-ds-timezones.md): akamai_iam_timezones\n- [Timeout policies](https://techdocs.akamai.com/terraform/docs/iam-ds-timeout-policies.md): akamai_iam_timeout_policies\n- [User](https://techdocs.akamai.com/terraform/docs/iam-ds-user.md): akamai_iam_user\n- [Users](https://techdocs.akamai.com/terraform/docs/iam-ds-users.md): akamai_iam_users\n- [Users affected by moving group](https://techdocs.akamai.com/terraform/docs/iam-ds-users-affected-by-moving-group.md): akamai_iam_users_affected_by_moving_group\n- [API client](https://techdocs.akamai.com/terraform/docs/iam-rc-api-client.md): akamai_iam_api_client\n- [Blocked user properties](https://techdocs.akamai.com/terraform/docs/iam-rc-blocked-user-properties.md): akamai_iam_blocked_user_properties\n- [CIDR block](https://techdocs.akamai.com/terraform/docs/iam-rc-cidr-block.md): akamai_iam_cidr_block\n- [Group](https://techdocs.akamai.com/terraform/docs/iam-rc-group.md): akamai_iam_group\n- [IP allowlist](https://techdocs.akamai.com/terraform/docs/iam-rc-ip-allowlist.md): akamai_iam_ip_allowlist\n- [Role](https://techdocs.akamai.com/terraform/docs/iam-rc-role.md): akamai_iam_role\n- [User](https://techdocs.akamai.com/terraform/docs/iam-rc-user.md): akamai_iam_user",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create identities and control accessAccessible groups: akamai_iam_accessible_groupsAccount switch keys: akamai_iam_account_switch_keysAllowed APIs: akamai_iam_allowed_apisAPI client: akamai_iam_api_clientAPI clients: akamai_iam_api_clientsAuthorized users: akamai_iam_authorized_userBlocked properties: akamai_iam_blocked_propertiesCIDR block: akamai_iam_cidr_blockCIDR blocks: akamai_iam_cidr_blocksContact types: akamai_iam_contact_typesCountries: akamai_iam_countriesGrantable roles: akamai_iam_grantable_rolesGroup: akamai_iam_groupGroups: akamai_iam_groupsPassword policy: akamai_iam_password_policyProperty users: akamai_iam_property_usersRole: akamai_iam_roleRoles: akamai_iam_rolesStates: akamai_iam_statesSupported languages: akamai_iam_supported_langsTime zones: akamai_iam_timezonesTimeout policies: akamai_iam_timeout_policiesUser: akamai_iam_userUsers: akamai_iam_usersUsers affected by moving group: akamai_iam_users_affected_by_moving_groupAPI client: akamai_iam_api_clientBlocked user properties: akamai_iam_blocked_user_propertiesCIDR block: akamai_iam_cidr_blockGroup: akamai_iam_groupIP allowlist: akamai_iam_ip_allowlistRole: akamai_iam_roleUser: akamai_iam_user",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

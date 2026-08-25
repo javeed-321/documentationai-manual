@@ -1,0 +1,41 @@
+# Enterprise Application Access Documentation
+
+> Akamai’s Enterprise Center for Enterprise Application Access (EAA) integrates data path protection, identity access, multifactor authentication, application security, and management visibility and control for applications hosted in data centers and hybrid cloud environments. Using it, the management and control of remote access for employees, contractors, and partners becomes less complex and more secure. This robust tool delivers access to applications without allowing user access to the entire network. Applications are not accessed directly because they are hidden from the Internet and public exposure. A unique dual-cloud architecture closes all inbound firewall ports while providing authenticated end users with access to only their own special applications.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/eaa/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Create applications
+- [Applications](https://techdocs.akamai.com/eaa/docs/apps.md)
+- [Configure and deploy an access application](https://techdocs.akamai.com/eaa/docs/add-app-eaa.md)
+- [Set up CNAME redirect for an application](https://techdocs.akamai.com/eaa/docs/cname-redirect-app.md)
+- [Authorize access to applications](https://techdocs.akamai.com/eaa/docs/auth-access-apps.md)
+- [Access applications from EAA Login Portal](https://techdocs.akamai.com/eaa/docs/log-access-apps.md)
+- [Application config versioning and rollback](https://techdocs.akamai.com/eaa/docs/application-config-versioning-and-rollback.md)
+- [Single Host Access for access applications](https://techdocs.akamai.com/eaa/docs/single-host-access-for-access-applications.md)
+- [Application groups for rewrite rules](https://techdocs.akamai.com/eaa/docs/application-groups-for-rewrite-rules.md)
+- [Offload web application traffic from EAA Cloud](https://techdocs.akamai.com/eaa/docs/offload-web-application-traffic-from-eaa-cloud.md)
+- [Migrate Applications to new Cloud Zone](https://techdocs.akamai.com/eaa/docs/migrate-applications-to-new-cloud-zone.md)
+- [Configure application category](https://techdocs.akamai.com/eaa/docs/configure-application-category.md)
+- [Remote desktop protocol (RDP) applications](https://techdocs.akamai.com/eaa/docs/remote-desktop-protocol-apps.md)
+- [Create an RDP application](https://techdocs.akamai.com/eaa/docs/remote-desktop-rdp-app.md)
+- [Use microphone with RDP applications](https://techdocs.akamai.com/eaa/docs/use-microphone-with-rdp-applications.md)
+- [Configure RDP client display settings](https://techdocs.akamai.com/eaa/docs/rdp-client-display.md)
+- [Enable SSO login for RDP applications](https://techdocs.akamai.com/eaa/docs/single-sign-auto-login-rdp-apps.md)
+- [Store files in RDP portal](https://techdocs.akamai.com/eaa/docs/store-rdp.md)
+- [Modern RDP end-user experience](https://techdocs.akamai.com/eaa/docs/modern-rdp-end-user-experience.md)
+- [Remote Desktop User Preferences](https://techdocs.akamai.com/eaa/docs/remote-desktop-user-preferences.md)
+- [SSH applications](https://techdocs.akamai.com/eaa/docs/ssh-apps.md)
+- [Edge Transport based Tunnel Applications ](https://techdocs.akamai.com/eaa/docs/edge-transport-based-tunnel-applications.md)
+- [Using Direct Connect with Edge Transport-based Tunnel Applications (Beta)](https://techdocs.akamai.com/eaa/docs/using-direct-connect-with-edge-transport-based-tunnel-applications-beta.md)
+- [Hybrid Tunnel Applications ](https://techdocs.akamai.com/eaa/docs/hybrid-tunnel-application.md)
+- [Add access control rules](https://techdocs.akamai.com/eaa/docs/access-control-rules.md)
+- [Set up services for an application](https://techdocs.akamai.com/eaa/docs/setup-services-app.md)
+- [Set up advanced settings for an application](https://techdocs.akamai.com/eaa/docs/setup-advanced-settings-app.md)
+- [User-facing authentication mechanism for applications](https://techdocs.akamai.com/eaa/docs/user-facing-authentication-mechanism-for-applications.md)
+- [Configure TLS Cipher Suite for applications](https://techdocs.akamai.com/eaa/docs/config-tls-cipher-suite-apps.md)
+- [Server load balancing for applications](https://techdocs.akamai.com/eaa/docs/server-load-balancing-for-applications-and-connectors.md)
+- [Kerberos-constrained delegation](https://techdocs.akamai.com/eaa/docs/kerberos-constrained-delegation.md)
+- [Configure custom HTTP headers](https://techdocs.akamai.com/eaa/docs/custom-http-headers.md)
+- [EAA Bridging capability](https://techdocs.akamai.com/eaa/docs/eaa-bridging-capability.md)
+- [SAML to SAML Bridging](https://techdocs.akamai.com/eaa/docs/saml-to-saml-bridging.md)
+- [Clone Applications](https://techdocs.akamai.com/eaa/docs/clone-applications.md)

@@ -1,0 +1,26 @@
+# EdgeWorkers Documentation
+
+> Use Akamai's EdgeWorkers service to execute JavaScript functions at the edge and create customized web experiences based on geolocation, device characteristics, and more.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/edgeworkers/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Get started
+- [Hello World tutorials](https://techdocs.akamai.com/edgeworkers/docs/hello-world.md)
+- [EdgeWorkers Management application Hello World](https://techdocs.akamai.com/edgeworkers/docs/hello-world-edgeworkers-management-application.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id-1.md)
+- [Add the EdgeWorker behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworker-behavior-1.md)
+- [Create the Hello World code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-the-hello-world-code-bundle-1.md)
+- [Deploy Hello World](https://techdocs.akamai.com/edgeworkers/docs/deploy-hello-world-1.md)
+- [Test Hello World](https://techdocs.akamai.com/edgeworkers/docs/test-hello-world-1.md)
+- [API Hello World](https://techdocs.akamai.com/edgeworkers/docs/api-hello-world.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id-2.md)
+- [Add the EdgeWorkers behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworkers-behavior-2.md)
+- [Create the Hello World code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-the-hello-world-code-bundle-2.md)
+- [Deploy Hello World](https://techdocs.akamai.com/edgeworkers/docs/deploy-hello-world-2.md)
+- [Test Hello World](https://techdocs.akamai.com/edgeworkers/docs/test-hello-world-2.md)
+- [CLI Hello World](https://techdocs.akamai.com/edgeworkers/docs/cli-hello-world.md)
+- [Create an EdgeWorker ID](https://techdocs.akamai.com/edgeworkers/docs/create-an-edgeworker-id-3.md)
+- [Add the EdgeWorkers behavior](https://techdocs.akamai.com/edgeworkers/docs/add-the-edgeworkers-behavior-3.md)
+- [Create the Hello World code bundle](https://techdocs.akamai.com/edgeworkers/docs/create-the-hello-world-code-bundle-3.md)
+- [Deploy Hello World](https://techdocs.akamai.com/edgeworkers/docs/deploy-hello-world-3.md)
+- [Test Hello World](https://techdocs.akamai.com/edgeworkers/docs/test-hello-world-3.md)

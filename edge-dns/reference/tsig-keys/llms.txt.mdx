@@ -1,0 +1,18 @@
+---
+title: "TSIG keys"
+---
+
+# Edge DNS Documentation
+
+> Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.
+
+## API Reference: TSIG keys
+
+- [List TSIG keys](https://techdocs.akamai.com/edge-dns/reference/get-keys.md): Get the TSIG keys used by zones that you're allowed to manage.
+- [Update a TSIG key across zones](https://techdocs.akamai.com/edge-dns/reference/post-keys-bulk-update.md): This updates the key data for multiple zones at once. Keep in mind that this operation can only add zones to a TSIG key, not remove them. To safely remove the association between a zone and a TSIG key, update the zone to its new TSIG key or remove the key from the zone if you're sure it's no longer needed.
+- [List zones using TSIG key](https://techdocs.akamai.com/edge-dns/reference/post-keys-used-by.md): Returns zone names that use the given TSIG key and for which the current user has READ access. If the zones returned is empty, it's possible that the given key is in use by other zones but the current user doesn't have permission to view those zones.
+- [Zones to contract using TSIG key](https://techdocs.akamai.com/edge-dns/reference/post-keys-used-by-zone-contract-map.md): Zone names within a contract that use the given TSIG key for which the current user has READ access. If the list returned is empty, it's possible that the given key is in use by other zones but the current user doesn't have permission to view those zones.
+- [Get a zone's TSIG key](https://techdocs.akamai.com/edge-dns/reference/get-zones-zone-key.md): Retrieves the TSIG Key data for this zone. Includes a count of zones that use this key. Returns a 404 error if the zone doesn't have a TSIG key.
+- [Update a zone's TSIG key](https://techdocs.akamai.com/edge-dns/reference/put-zones-zone-key.md): Creates or replaces the current TSIG Key for this zone. If other zones use the same key, doesn't modify those zones.
+- [Delete a zone's TSIG key](https://techdocs.akamai.com/edge-dns/reference/delete-zones-zone-key.md): Removes the TSIG Key for this zone. This action doesn't affect any other zone, even if they share the same TSIG key as this zone. If the zone doesn't currently have a key, no actions are taken and no error is thrown.
+- [List users of a zone's TSIG key](https://techdocs.akamai.com/edge-dns/reference/get-zones-zone-key-used-by.md): Lists the Zones that use the same TSIG key as this zone.

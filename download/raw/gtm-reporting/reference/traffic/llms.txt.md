@@ -1,0 +1,11 @@
+# GTM Reporting API Documentation
+
+> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Traffic
+- [Report traffic per data center](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-datacenter.md): This report shows, for a given domain and data center, the DNS requests received in each five-minute period.  Requests are broken down by property.
+- [Report traffic per property](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-property.md): This report shows, for a given domain and property, the DNS requests received in each five-minute period.  Requests are broken down by data center.
+- [Get a datacenter traffic report window](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-datacenters-window.md): Returns the date range of data available for datacenter traffic reports. Use the returned `start` and `end` values as the bounds for queries to the datacenter traffic report endpoint.
+- [Get a property traffic report window](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-properties-window.md): Returns the date range of data available for property traffic reports. Use the returned `start` and `end` values as the bounds for queries to the property traffic report endpoint.

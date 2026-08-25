@@ -1,0 +1,12 @@
+# SIA Configuration API Documentation
+
+> Akamai's Secure Internet Access (SIA) Configuration API offers a programmatic interface to manage policy settings to protect against enterprise security and acceptable user policy related events. A distributed configuration encapsulates all the rules for how to process DNS requests for your enterprise.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/etp-config/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: Custom responses
+- [Create a custom response](https://techdocs.akamai.com/etp-config/reference/post-custom-response.md): Creates a new custom response.
+- [List custom responses](https://techdocs.akamai.com/etp-config/reference/get-custom-responses.md): Returns all custom responses.
+- [Get a custom response](https://techdocs.akamai.com/etp-config/reference/get-custom-response.md): Returns the details of a specific custom response.
+- [Update a custom response](https://techdocs.akamai.com/etp-config/reference/put-custom-response.md): Modifies a custom response's features.
+- [Delete a custom response](https://techdocs.akamai.com/etp-config/reference/delete-custom-response.md): Deletes a specific custom response.

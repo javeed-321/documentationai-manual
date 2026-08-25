@@ -1,0 +1,42 @@
+---
+title: "Shield NS53"
+---
+
+# Edge DNS Documentation
+
+> Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.
+
+## API Reference: Shield NS53
+
+- [Create a proxy](https://techdocs.akamai.com/edge-dns/reference/post-proxy.md): Creates a new proxy.
+- [List proxies](https://techdocs.akamai.com/edge-dns/reference/get-proxy.md): Get all proxies that the current user has access to manage.
+- [List valid proxy health check record set types](https://techdocs.akamai.com/edge-dns/reference/get-proxy-healthcheck-recordset-types.md): Lists the valid proxy health check record set types.
+- [Get a proxy](https://techdocs.akamai.com/edge-dns/reference/get-proxy-id.md): Get the proxy that the current user has access to manage.
+- [Update a proxy](https://techdocs.akamai.com/edge-dns/reference/put-proxy.md): Updates the proxy.
+- [Delete a proxy](https://techdocs.akamai.com/edge-dns/reference/delete-proxy.md): Delete the proxy as an asynchronous operation.  Your proxy will continue to show with a `DELETED` status and continue to count against your maximum proxy cap until permanently removed.
+- [List proxy zones](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones.md): Get all proxy zones that the current user has access to manage.
+- [List proxy zone keys](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zone-keys.md): Get all proxy zones keys that the current user has access to manage.
+- [Get a proxy zone by name](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-name.md): Get a proxy zone that the current user has access to manage by proxy zone name.
+- [Save the apex alias for a proxy zone](https://techdocs.akamai.com/edge-dns/reference/put-proxy-zone-apex-alias.md): Save the apex alias for a proxy zone.
+- [Delete apex alias for a proxy zone](https://techdocs.akamai.com/edge-dns/reference/delete-proxy-zone-apex-alias.md): Delete the apex alias for a proxy zone.
+- [Get a proxy zone TSIG key by name](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-name-key.md): Get a TSIG key for a proxy zone that the current user has access to manage by proxy zone name.
+- [Update a proxy zone TSIG key by name](https://techdocs.akamai.com/edge-dns/reference/put-proxy-zones-name-key.md): Update the proxy zone.
+- [Delete a proxy zone TSIG key by name](https://techdocs.akamai.com/edge-dns/reference/delete-proxy-zones-name-key.md): Delete a TSIG key for a proxy zone that the current user has access to manage by proxy zone name.
+- [List proxies for a TSIG key](https://techdocs.akamai.com/edge-dns/reference/get-proxies-key-used-by.md): List proxies that use a TSIG key.
+- [Get a manual filter report](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zone-manual-filter-report.md): Get manual filter report for a  proxy zone that the current user has access to manage.
+- [Manage manual filter names](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zone-manual-filter-names.md): Manage manual filter entries for a proxy zone that the current user has access to manage.
+- [Initialize manual filter names with a zone file](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zone-manual-filter-names-file.md): Initializes manual filter names for a proxy zone. Use [Manage manual filter names operation](/reference/post-proxy-zone-manual-filter-names) to update a proxy zone.
+- [Convert a proxy zone filter mode to all](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zone-manual-filter-mode-convert-all.md): Converts a proxy zone filter mode to all.
+- [Convert a proxy zone filter mode to automatic](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zone-manual-filter-mode-convert-automatic.md): Converts a proxy zone filter mode to automatic.
+- [Convert a proxy zone filter mode to manual](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zone-manual-filter-mode-convert-manual.md): Converts a proxy zone filter mode to manual.
+- [Convert a proxy zone filter mode to none](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zone-manual-filter-mode-convert-none.md): Converts a proxy zone filter mode to none.
+- [Run existing proxy health check](https://techdocs.akamai.com/edge-dns/reference/post-run-proxy-healthcheck.md): Runs the health check currently defined on the proxy.
+- [Run proposed proxy health check for origin name servers](https://techdocs.akamai.com/edge-dns/reference/post-run-proposed-proxy-healthcheck.md): Runs a proposed health check on the proxy.
+- [Submit a bulk proxy zone create request](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zones-create-requests.md): Submits a request to create one or more new Proxy Zones asynchronously. The request body contains a JSON array. Each object in the array contains the data necessary to create a proxy zone. All proxy zones are created on the same contract and group.  An offline task creates the new proxy zones. You can use the response's `requestId` to check the task's status and view its results once it completes.
+- [Get a bulk proxy zone create results for a proxy](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-create-requests-result.md): Retrieves the results of requests for a given proxy.
+- [Check bulk proxy zone create status](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-create-requests-requestid.md): Retrieves the current status of a running or completed request. The `requestId` was returned when the create request was initiated.
+- [Get a bulk proxy zone create result](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-create-requests-requestid-result.md): Retrieves the results from a completed request.
+- [Submit a bulk proxy zone delete request](https://techdocs.akamai.com/edge-dns/reference/post-proxy-zones-delete-requests.md): Submits a request to delete one or more proxy zones asynchronously. Each element in the response array is the name of a proxy zone to be deleted.  Before deleting a zone from the Edge DNS system, the API makes sure Akamai servers aren't receiving DNS requests for that proxy zone. It also checks that the proxy zone isn't currently delegated to Akamai's name servers.  An offline task deletes the proxy zones. The result of this operation is a `requestId`, which you can use to check the task's status and view its results once it completes.
+- [Get all bulk proxy zone delete results](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-delete-requests-result.md): Retrieves the results for all requests for a given proxy.
+- [Check bulk proxy zone delete status](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-delete-requests-requestid.md): Retrieves the current status of a running or completed request. The `requestId` was returned when the delete request was initiated.
+- [Get a bulk proxy zone delete result](https://techdocs.akamai.com/edge-dns/reference/get-proxy-zones-delete-requests-requestid-result.md): Retrieves the result from a completed request.

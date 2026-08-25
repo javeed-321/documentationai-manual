@@ -1,0 +1,328 @@
+{
+  "slug": "edgekv/docs/llms.txt",
+  "source": "https://techdocs.akamai.com/edgekv/docs/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edgekv/docs/llms.txt",
+  "title": "Guides index",
+  "description": "full section index",
+  "section": "EdgeKV",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 8,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 7
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# EdgeKV Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "EdgeKV Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's EdgeKV is a key-value store database at the edge. It enables you to build data-driven EdgeWorker applications that require fast, frequent reads and infrequent writes.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's EdgeKV is a key-value store database at the edge. It enables you to build data-driven EdgeWorker applications that require fast, frequent reads and infrequent writes.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edgekv/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edgekv/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Welcome",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Welcome",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        14
+      ],
+      "raw": "- [Welcome index](https://techdocs.akamai.com/edgekv/docs/welcome/llms.txt): full category index\n- [Welcome to EdgeKV](https://techdocs.akamai.com/edgekv/docs/welcome-to-edgekv.md)\n- [EdgeKV data model](https://techdocs.akamai.com/edgekv/docs/edgekv-data-model.md)\n- [Use Cases](https://techdocs.akamai.com/edgekv/docs/use-cases.md)\n- [Augment Image and Video Manager with edge compute](https://techdocs.akamai.com/edgekv/docs/augment-image-and-video-manager-with-edge-compute.md)\n- [Send a constructed response to a web page](https://techdocs.akamai.com/edgekv/docs/send-a-constructed-response-to-a-web-page.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Welcome index: full category indexWelcome to EdgeKVEdgeKV data modelUse CasesAugment Image and Video Manager with edge computeSend a constructed response to a web page",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        16,
+        16
+      ],
+      "raw": "## Guides: Prerequisites",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Prerequisites",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        18,
+        23
+      ],
+      "raw": "- [Prerequisites index](https://techdocs.akamai.com/edgekv/docs/prerequisites/llms.txt): full category index\n- [Add EdgeKV to your contract](https://techdocs.akamai.com/edgekv/docs/add-edgekv-to-your-contract.md)\n- [Manage access to EdgeKV](https://techdocs.akamai.com/edgekv/docs/manage-access-to-edgekv.md)\n- [Generate and retrieve EdgeKV access tokens](https://techdocs.akamai.com/edgekv/docs/generate-and-retrieve-edgekv-access-tokens.md)\n- [Use the API to generate and retrieve EdgeKV access tokens](https://techdocs.akamai.com/edgekv/docs/use-the-api-generate-and-retrieve-edgekv-access-tokens-1.md)\n- [Use the CLI to generate and manage access tokens](https://techdocs.akamai.com/edgekv/docs/use-the-cli-to-generate-and-manage-access-tokens.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Prerequisites index: full category indexAdd EdgeKV to your contractManage access to EdgeKVGenerate and retrieve EdgeKV access tokensUse the API to generate and retrieve EdgeKV access tokensUse the CLI to generate and manage access tokens",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "## Guides: Get started",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Get started",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        27,
+        41
+      ],
+      "raw": "- [Get started index](https://techdocs.akamai.com/edgekv/docs/get-started/llms.txt): full category index\n- [API Hello world](https://techdocs.akamai.com/edgekv/docs/api-hello-world.md)\n- [Create an EdgeWorkers function](https://techdocs.akamai.com/edgekv/docs/create-an-edgeworkers-function.md)\n- [Initialize the EdgeKV database](https://techdocs.akamai.com/edgekv/docs/initialize-the-edgekv-database-1.md)\n- [Download the helper library](https://techdocs.akamai.com/edgekv/docs/download-the-helper-library-1.md)\n- [Add data to your database](https://techdocs.akamai.com/edgekv/docs/add-data-to-your-database.md)\n- [Create a code bundle](https://techdocs.akamai.com/edgekv/docs/create-a-code-bundle-1.md)\n- [Activate your EdgeWorkers function](https://techdocs.akamai.com/edgekv/docs/activate-your-edgeworkers-function.md)\n- [CLI Hello world](https://techdocs.akamai.com/edgekv/docs/cli-hello-world.md)\n- [Create an EdgeWorkers function](https://techdocs.akamai.com/edgekv/docs/create-an-edgeworkers-function-1.md)\n- [Initialize the EdgeKV database](https://techdocs.akamai.com/edgekv/docs/initialize-the-edgekv-database-2.md)\n- [Download the helper library](https://techdocs.akamai.com/edgekv/docs/download-the-helper-library.md)\n- [Add data to your EdgeKV database](https://techdocs.akamai.com/edgekv/docs/add-data-to-your-edgekv-database-1.md)\n- [Create a code bundle](https://techdocs.akamai.com/edgekv/docs/create-a-code-bundle-2.md)\n- [Activate your EdgeWorkers function](https://techdocs.akamai.com/edgekv/docs/activate-your-edgeworkers-function-1.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Get started index: full category indexAPI Hello worldCreate an EdgeWorkers functionInitialize the EdgeKV databaseDownload the helper libraryAdd data to your databaseCreate a code bundleActivate your EdgeWorkers functionCLI Hello worldCreate an EdgeWorkers functionInitialize the EdgeKV databaseDownload the helper libraryAdd data to your EdgeKV databaseCreate a code bundleActivate your EdgeWorkers function",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        43,
+        43
+      ],
+      "raw": "## Guides: Technical resources",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Technical resources",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        45,
+        55
+      ],
+      "raw": "- [Technical resources index](https://techdocs.akamai.com/edgekv/docs/technical-resources/llms.txt): full category index\n- [Helper library](https://techdocs.akamai.com/edgekv/docs/library-helper-methods.md)\n- [Best practices](https://techdocs.akamai.com/edgekv/docs/best-practices.md)\n- [Data model design](https://techdocs.akamai.com/edgekv/docs/best-practices-for-data-model-design.md)\n- [Access tokens](https://techdocs.akamai.com/edgekv/docs/access-tokens-1.md)\n- [FAQ](https://techdocs.akamai.com/edgekv/docs/frequently-asked-questions.md)\n- [General questions](https://techdocs.akamai.com/edgekv/docs/general-questions.md)\n- [Access tokens](https://techdocs.akamai.com/edgekv/docs/access-tokens.md)\n- [Performance](https://techdocs.akamai.com/edgekv/docs/performance.md)\n- [Throughput](https://techdocs.akamai.com/edgekv/docs/throughput.md)\n- [Sandbox support for EdgeKV](https://techdocs.akamai.com/edgekv/docs/sandbox-support-edgekv.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Technical resources index: full category indexHelper libraryBest practicesData model designAccess tokensFAQGeneral questionsAccess tokensPerformanceThroughputSandbox support for EdgeKV",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        57,
+        57
+      ],
+      "raw": "## Guides: Administrative tools",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Administrative tools",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        59,
+        60
+      ],
+      "raw": "- [Administrative tools index](https://techdocs.akamai.com/edgekv/docs/administrative-tools/llms.txt): full category index\n- [Akamai CLI](https://techdocs.akamai.com/edgekv/docs/akamai-cli.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Administrative tools index: full category indexAkamai CLI",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        62,
+        62
+      ],
+      "raw": "## Guides: Debug and Monitor",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Debug and Monitor",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        64,
+        66
+      ],
+      "raw": "- [Debug and Monitor index](https://techdocs.akamai.com/edgekv/docs/debug-and-monitor/llms.txt): full category index\n- [Troubleshoot issues](https://techdocs.akamai.com/edgekv/docs/troubleshoot.md)\n- [View reports](https://techdocs.akamai.com/edgekv/docs/reporting.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Debug and Monitor index: full category indexTroubleshoot issuesView reports",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "## Guides: Limitations",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Limitations",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        70,
+        72
+      ],
+      "raw": "- [Limitations index](https://techdocs.akamai.com/edgekv/docs/limitations/llms.txt): full category index\n- [Product limits](https://techdocs.akamai.com/edgekv/docs/limits.md)\n- [Known issues](https://techdocs.akamai.com/edgekv/docs/known-issues.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Limitations index: full category indexProduct limitsKnown issues",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

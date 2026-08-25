@@ -1,0 +1,91 @@
+# NetStorage Documentation
+
+> NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/netstorage/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/netstorage/reference/api/llms.txt): full category index
+- [NetStorage Configuration API](https://techdocs.akamai.com/netstorage/reference/api.md)
+- [Get started](https://techdocs.akamai.com/netstorage/reference/get-started.md)
+- [Concepts](https://techdocs.akamai.com/netstorage/reference/api-concepts.md)
+- [Rate limiting](https://techdocs.akamai.com/netstorage/reference/rate-limiting.md)
+- [API hypermedia](https://techdocs.akamai.com/netstorage/reference/api-hypermedia.md)
+- [Enumerations](https://techdocs.akamai.com/netstorage/reference/enumerations.md)
+- [Errors](https://techdocs.akamai.com/netstorage/reference/errors.md)
+- [400](https://techdocs.akamai.com/netstorage/reference/400.md)
+- [401](https://techdocs.akamai.com/netstorage/reference/401.md)
+- [403](https://techdocs.akamai.com/netstorage/reference/403.md)
+- [429](https://techdocs.akamai.com/netstorage/reference/429.md)
+
+## API Reference: NetStorage CP codes
+
+- [NetStorage CP codes index](https://techdocs.akamai.com/netstorage/reference/netstorage-cp-codes/llms.txt): full category index
+- [Create a CP code](https://techdocs.akamai.com/netstorage/reference/post-cpcodes.md): This operation creates a CP code for use with NetStorage.
+- [List unused CP Codes](https://techdocs.akamai.com/netstorage/reference/get-cpcodes-unused.md): Get a list of CP codes that aren't assigned to a storage group.
+- [List CP codes in use](https://techdocs.akamai.com/netstorage/reference/get-cpcodes-used.md): Get a list of all CP codes that are assigned to a storage group.
+- [Delete an automatic purge routine](https://techdocs.akamai.com/netstorage/reference/delete-cpcode-age-deletions.md): Delete the automatic purge routine for a specific CP code.
+- [View the automatic purge routine](https://techdocs.akamai.com/netstorage/reference/get-cpcode-age-deletions.md): View the automatic purge routines for a `cpcodeId`. You can optionally include a URL-encoded `ageDeletionDirectoryPrefix` to filter an individual purge routine.
+- [Modify a purge routine](https://techdocs.akamai.com/netstorage/reference/put-cpcode-age-deletions.md): Make changes to an automatic purge routine for a specific CP code.
+
+## API Reference: Storage groups
+
+- [Storage groups index](https://techdocs.akamai.com/netstorage/reference/storage-groups/llms.txt): full category index
+- [Create a storage group](https://techdocs.akamai.com/netstorage/reference/post-storage-groups.md): This operation creates a new storage group to house your content.
+- [List storage groups](https://techdocs.akamai.com/netstorage/reference/get-storage-groups.md): Get a list of all of the storage groups in your NetStorage instance, optionally filtered by CP code or the storage group's categorized purpose.
+- [Get a storage group](https://techdocs.akamai.com/netstorage/reference/get-storage-group.md): Get a specific storage group based on its `storageGroupId`.
+- [Edit a storage group](https://techdocs.akamai.com/netstorage/reference/put-storage-group.md): Update storage group based on its unique ID value.
+
+## API Reference: Upload accounts
+
+- [Upload accounts index](https://techdocs.akamai.com/netstorage/reference/upload-accounts/llms.txt): full category index
+- [List upload accounts](https://techdocs.akamai.com/netstorage/reference/get-upload-accounts.md): Get a list of upload accounts for all storage groups in your NetStorage instance.
+- [Create a new upload account](https://techdocs.akamai.com/netstorage/reference/post-upload-accounts.md): Create an upload account for a storage group.
+- [Get an upload account](https://techdocs.akamai.com/netstorage/reference/get-upload-account.md): Get a specific upload account based on its unique ID value.
+- [Edit an upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account.md): Update an upload account based on its `uploadAccountId`.
+- [Disable an upload account](https://techdocs.akamai.com/netstorage/reference/post-upload-account-disable.md): Disable an upload account based on its `uploadAccountId`.
+- [Enable an upload account](https://techdocs.akamai.com/netstorage/reference/post-upload-account-enable.md): Enable an upload account based on its `uploadAccountId`.
+- [Add keys to an FTP upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-ftp.md): Add keys to an FTP upload account based on its `uploadAccountId`.
+- [Enable an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ftp-identity.md): Enable an upload account's FTP Keys based on its `uploadAccountId` and FTP `identity`.
+- [Update an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-ftp-identity.md): Save an upload account's FTP keys based on its `uploadAccountId` and FTP `identity`.
+- [Delete an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-ftp-identity.md): Delete an upload account's FTP keys based on its `uploadAccountId` and FTP `identity`.
+- [Disable an upload account's FTP keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ftp-identity-disable.md): Disable an upload account's FTP keys based on its `uploadAccountId` and FTP `identity`.
+- [Extend your FTP password](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ftp-identity-extend.md): Extend your FTP password for an additional 120 days.
+- [Save an upload account's rsync keys](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-rsync.md): Save an upload account's rsync keys based on its unique uploadAccountId.
+- [Delete all rsync keys for an upload account](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-rsync.md): Delete all rsync keys assigned to an upload account.
+- [Delete a specific rsync key](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-rsync-identity.md): Delete an upload account's rsync keys based on its `uploadAccountId` and rsync `identity`.
+- [Disable an upload account's rsync keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-rsync-identity-disable.md): Disable an upload account's rsync keys based on its `uploadAccountId` and rsync `identity`.
+- [Enable an upload account's rsync keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-rsync-identity-enable.md): Enable an upload account's rsync keys based on its `uploadAccountId` and rsync `identity`.
+- [Add SSH keys to an upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-ssh.md): Add SSH keys to an upload account based on its `uploadAccountId`.
+- [Delete an upload account's SSH keys](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-ssh-identity.md): Delete an upload account's SSH keys based on its `uploadAccountId` and SSH `identity`.
+- [Disable an upload account's SSH keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ssh-identity-disable.md): Disable an upload account's SSH keys based on its `uploadAccountId` and SSH `identity`.
+- [Enable an upload account's SSH keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-ssh-identity-enable.md): Enable an upload account's SSH keys based on its `uploadAccountId` and SSH `identity`.
+- [Add G2O keys to an upload account](https://techdocs.akamai.com/netstorage/reference/put-upload-account-keys-g2o.md): Add G2O keys upload account based on its `uploadAccountId`.
+- [Delete an upload account's G2O keys](https://techdocs.akamai.com/netstorage/reference/delete-upload-account-keys-g2o-identity.md): Delete an upload account's G2O keys based on its `uploadAccountId` and G2O `identity`.
+- [Disable an upload account's G2O keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-g2o-identity-disable.md): Disable an upload account's G2O keys based on its `uploadAccountId` and G2O `identity`.
+- [Enable an upload account's G2O keys](https://techdocs.akamai.com/netstorage/reference/post-upload-account-keys-g2o-identity-enable.md): Enable an upload account's G2O keys based on its `uploadAccountId` and G2O `identity`.
+
+## API Reference: Replication zones
+
+- [Replication zones index](https://techdocs.akamai.com/netstorage/reference/replication-zones/llms.txt): full category index
+- [List zones](https://techdocs.akamai.com/netstorage/reference/get-zones.md): Get a list of the geographic regions (*zones*) you can use to replicate your content.
+
+## API Reference: ACL rule sets
+
+- [ACL rule sets index](https://techdocs.akamai.com/netstorage/reference/acl-rule-sets/llms.txt): full category index
+- [List all rule sets](https://techdocs.akamai.com/netstorage/reference/get-rule-sets.md): Get a list of rule sets.
+- [Create a rule set](https://techdocs.akamai.com/netstorage/reference/post-rule-sets.md): Create a rule set.
+- [Delete a rule set](https://techdocs.akamai.com/netstorage/reference/delete-rule-set.md): Delete a specified rule set.
+- [Get a rule set](https://techdocs.akamai.com/netstorage/reference/get-rule-set.md): Get details for a specific rule set.
+- [Update a rule set](https://techdocs.akamai.com/netstorage/reference/put-rule-set.md): Update a specific rule set.
+
+## API Reference: Site snapshots
+
+- [Site snapshots index](https://techdocs.akamai.com/netstorage/reference/site-snapshots/llms.txt): full category index
+- [List all site snapshots](https://techdocs.akamai.com/netstorage/reference/get-snapshots.md): Get a list of all site snapshots.
+- [Create a site snapshot](https://techdocs.akamai.com/netstorage/reference/post-snapshots.md): Use this operation to create a new site snapshot configuration.
+- [Create an immediate site snapshot](https://techdocs.akamai.com/netstorage/reference/post-snapshots-schedule-now.md): Create an immediate snapshot for a `snapshotId` and `snapshotName` you provide.
+- [Delete a site snapshot](https://techdocs.akamai.com/netstorage/reference/delete-snapshot.md): Use this operation to delete a specific site snapshot configuration using its `snapshotId`.
+- [Get a site snapshot schedule](https://techdocs.akamai.com/netstorage/reference/get-snapshot.md): Get the site snapshot schedule for a `snapshotId`.
+- [Update a site snapshot schedule](https://techdocs.akamai.com/netstorage/reference/put-snapshot.md): Update a site snapshot schedule for a `snapshotId`.

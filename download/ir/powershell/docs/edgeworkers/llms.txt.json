@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/edgeworkers/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/edgeworkers/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/edgeworkers/llms.txt",
+  "title": "EdgeWorkers",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: EdgeWorkers",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: EdgeWorkers",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        41
+      ],
+      "raw": "- [Enable EdgeWorkers](https://techdocs.akamai.com/powershell/docs/edgeworkers.md)\n- [Function index](https://techdocs.akamai.com/powershell/docs/ew-index.md)\n- [Revisions](https://techdocs.akamai.com/powershell/docs/compare-edgeworkerrevision.md): Compare-EdgeworkerRevision\n- [EdgeWorker](https://techdocs.akamai.com/powershell/docs/copy-edgeworker.md): Copy-EdgeWorker\n- [Activation](https://techdocs.akamai.com/powershell/docs/get-edgeworkeractivation.md): Get-EdgeWorkerActivation\n- [Code bundle](https://techdocs.akamai.com/powershell/docs/get-edgeworkercodebundle.md): Get-EdgeWorkerCodeBundle\n- [Contracts](https://techdocs.akamai.com/powershell/docs/get-edgeworkercontract.md): Get-EdgeWorkerContract\n- [Deactivation](https://techdocs.akamai.com/powershell/docs/get-edgeworkerdeactivation.md): Get-EdgeWorkerDeactivation\n- [EdgeWorker](https://techdocs.akamai.com/powershell/docs/get-edgeworker.md): Get-EdgeWorker\n- [EdgeWorker version](https://techdocs.akamai.com/powershell/docs/get-edgeworkerversion.md): Get-EdgeWorkerVersion\n- [Limits](https://techdocs.akamai.com/powershell/docs/get-edgeworkerlimit.md): Get-EdgeWorkerLimit\n- [Logging override](https://techdocs.akamai.com/powershell/docs/get-edgeworkerloggingoverride.md): Get-EdgeWorkerLoggingOverride\n- [Permission group](https://techdocs.akamai.com/powershell/docs/get-edgeworkergroup.md): Get-EdgeWorkerGroup\n- [Properties](https://techdocs.akamai.com/powershell/docs/get-edgeworkerproperties.md): Get-EdgeWorkerProperties\n- [Report](https://techdocs.akamai.com/powershell/docs/get-edgeworkerreport.md): Get-EdgeWorkerReport\n- [Resource tiers](https://techdocs.akamai.com/powershell/docs/get-edgeworkerresourcetier.md): Get-EdgeWorkerResourceTier\n- [Revision](https://techdocs.akamai.com/powershell/docs/get-edgeworkerrevision.md): Get-EdgeworkerRevision\n- [Revision activation](https://techdocs.akamai.com/powershell/docs/get-edgeworkerrevisionactivation.md): Get-EdgeworkerRevisionActivation\n- [Revision BOM](https://techdocs.akamai.com/powershell/docs/get-edgeworkerrevisionbom.md): Get-EdgeworkerRevisionBom\n- [Revision code bundle](https://techdocs.akamai.com/powershell/docs/get-edgeworkerrevisioncodebundle.md): Get-EdgeworkerRevisionCodeBundle\n- [Activation](https://techdocs.akamai.com/powershell/docs/new-edgeworkeractivation.md): New-EdgeWorkerActivation\n- [Deactivation](https://techdocs.akamai.com/powershell/docs/new-edgeworkerdeactivation.md): New-EdgeWorkerDeactivation\n- [EdgeWorker](https://techdocs.akamai.com/powershell/docs/new-edgeworker.md): New-EdgeWorker\n- [EdgeWorker version](https://techdocs.akamai.com/powershell/docs/new-edgeworkerversion.md): New-EdgeWorkerVersion\n- [Revision activation](https://techdocs.akamai.com/powershell/docs/new-edgeworkerrevisionactivation.md): New-EdgeworkerRevisionActivation\n- [Secure token](https://techdocs.akamai.com/powershell/docs/new-edgeworkerauthtoken.md): New-EdgeWorkerAuthToken\n- [Logging override](https://techdocs.akamai.com/powershell/docs/new-edgeworkerloggingoverride.md): New-EdgeWorkerLoggingOverride\n- [Activation](https://techdocs.akamai.com/powershell/docs/remove-edgeworkeractivation.md): Remove-EdgeWorkerActivation\n- [EdgeWorker](https://techdocs.akamai.com/powershell/docs/remove-edgeworker.md): Remove-EdgeWorker\n- [EdgeWorker version](https://techdocs.akamai.com/powershell/docs/remove-edgeworkerversion.md): Remove-EdgeWorkerVersion\n- [EdgeWorker](https://techdocs.akamai.com/powershell/docs/set-edgeworker.md): Set-EdgeWorker\n- [Revision](https://techdocs.akamai.com/powershell/docs/set-edgeworkerrevision.md): Set-EdgeworkerRevision\n- [Code bundle](https://techdocs.akamai.com/powershell/docs/test-edgeworkercodebundle.md): Test-EdgeWorkerCodeBundle\n- [Activation](https://techdocs.akamai.com/powershell/docs/undo-edgeworkeractivation.md): Undo-EdgeWorkerActivation",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Enable EdgeWorkersFunction indexRevisions: Compare-EdgeworkerRevisionEdgeWorker: Copy-EdgeWorkerActivation: Get-EdgeWorkerActivationCode bundle: Get-EdgeWorkerCodeBundleContracts: Get-EdgeWorkerContractDeactivation: Get-EdgeWorkerDeactivationEdgeWorker: Get-EdgeWorkerEdgeWorker version: Get-EdgeWorkerVersionLimits: Get-EdgeWorkerLimitLogging override: Get-EdgeWorkerLoggingOverridePermission group: Get-EdgeWorkerGroupProperties: Get-EdgeWorkerPropertiesReport: Get-EdgeWorkerReportResource tiers: Get-EdgeWorkerResourceTierRevision: Get-EdgeworkerRevisionRevision activation: Get-EdgeworkerRevisionActivationRevision BOM: Get-EdgeworkerRevisionBomRevision code bundle: Get-EdgeworkerRevisionCodeBundleActivation: New-EdgeWorkerActivationDeactivation: New-EdgeWorkerDeactivationEdgeWorker: New-EdgeWorkerEdgeWorker version: New-EdgeWorkerVersionRevision activation: New-EdgeworkerRevisionActivationSecure token: New-EdgeWorkerAuthTokenLogging override: New-EdgeWorkerLoggingOverrideActivation: Remove-EdgeWorkerActivationEdgeWorker: Remove-EdgeWorkerEdgeWorker version: Remove-EdgeWorkerVersionEdgeWorker: Set-EdgeWorkerRevision: Set-EdgeworkerRevisionCode bundle: Test-EdgeWorkerCodeBundleActivation: Undo-EdgeWorkerActivation",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

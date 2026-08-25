@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/get-started/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/get-started/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/get-started/llms.txt",
+  "title": "Get Started",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Get Started",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Get Started",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        14
+      ],
+      "raw": "- [Breaking changes](https://techdocs.akamai.com/terraform/docs/breaking-changes.md): v10.0\n- [Overview](https://techdocs.akamai.com/terraform/docs/overview.md)\n- [Alternative authentication](https://techdocs.akamai.com/terraform/docs/gs-authentication.md)\n- [Environment variables](https://techdocs.akamai.com/terraform/docs/environment-variables.md)\n- [Base IDs](https://techdocs.akamai.com/terraform/docs/common-identifiers.md)\n- [Import and export assets](https://techdocs.akamai.com/terraform/docs/import-and-export-assets.md)\n- [Request limits](https://techdocs.akamai.com/terraform/docs/request-limits.md): Preventing 429s",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Breaking changes: v10.0OverviewAlternative authenticationEnvironment variablesBase IDsImport and export assetsRequest limits: Preventing 429s",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

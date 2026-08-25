@@ -1,0 +1,29 @@
+# Akamai Cloud Documentation
+
+> Use Akamai cloud computing (formerly Linode) to build, deploy, and scale your modern applications faster and easier on the Akamai Connected Cloud.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/cloud-computing/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Guides: Identity and Access
+- [Identity and Access in Akamai Cloud](https://techdocs.akamai.com/cloud-computing/docs/identity-and-access-cm.md)
+- [Migration from grants to Identity and Access](https://techdocs.akamai.com/cloud-computing/docs/migration-grants-identity-and-access.md)
+- [Grants vs RBAC model comparison: Linodes example](https://techdocs.akamai.com/cloud-computing/docs/cloud-iam-rbac-vs-grant-linodes.md)
+- [Manage user access](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-manage-access.md)
+- [Available roles](https://techdocs.akamai.com/cloud-computing/docs/identity-access-cm-available-roles.md)
+- [Single sign-on for Akamai Cloud](https://techdocs.akamai.com/cloud-computing/docs/single-sign-on-cm.md)
+- [Configure single sign-on ](https://techdocs.akamai.com/cloud-computing/docs/sso-cm-configuration.md)
+- [Enable single sign-on ](https://techdocs.akamai.com/cloud-computing/docs/enable-single-sign-on.md)
+- [Enforce single sign-on ](https://techdocs.akamai.com/cloud-computing/docs/enforce-single-sign-on.md)
+- [Test the IDP configuration ](https://techdocs.akamai.com/cloud-computing/docs/test-the-idp-configuration.md)
+- [Add SSO User Exceptions ](https://techdocs.akamai.com/cloud-computing/docs/add-emergency-access-accounts.md)
+- [Add SSO-required users](https://techdocs.akamai.com/cloud-computing/docs/add-sso-required-users.md)
+- [Configure IDP settings ](https://techdocs.akamai.com/cloud-computing/docs/manage-idp-settings.md)
+- [Create an identity provider (IDP) configuration ](https://techdocs.akamai.com/cloud-computing/docs/create-an-identity-provider-idp-configuration.md)
+- [Manage certificates ](https://techdocs.akamai.com/cloud-computing/docs/manage-certificates.md)
+- [Delete an identity provider (IDP) configuration ](https://techdocs.akamai.com/cloud-computing/docs/delete-an-identity-provider-idp-configuration.md)
+- [Delegation for parent and child accounts](https://techdocs.akamai.com/cloud-computing/docs/parent-child-iam.md)
+- [Partners](https://techdocs.akamai.com/cloud-computing/docs/parent-child-partner.md)
+- [End customers](https://techdocs.akamai.com/cloud-computing/docs/parent-child-end-customer.md)
+- [Migrated partners](https://techdocs.akamai.com/cloud-computing/docs/parent-child-migration-partner.md)
+- [Migrated end customers](https://techdocs.akamai.com/cloud-computing/docs/parent-child-migration-end-customer.md)
+- [Identity and Access audit logs](https://techdocs.akamai.com/cloud-computing/docs/iam-aclp.md)

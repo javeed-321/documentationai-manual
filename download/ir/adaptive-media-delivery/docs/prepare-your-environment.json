@@ -1,0 +1,242 @@
+{
+  "slug": "adaptive-media-delivery/docs/prepare-your-environment",
+  "source": "https://techdocs.akamai.com/adaptive-media-delivery/docs/prepare-your-environment.md",
+  "url": "https://techdocs.akamai.com/adaptive-media-delivery/docs/prepare-your-environment",
+  "title": "Prepare your environment",
+  "description": "",
+  "section": "",
+  "kind": "guide",
+  "frontmatter": {
+    "updatedAt": "2026-03-01T18:58:07.000Z"
+  },
+  "parseMode": "markdown",
+  "parseError": "Unexpected character `c` (U+0063) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
+  "components": {
+    "boilerplate": 1,
+    "heading": 4,
+    "paragraph": 5,
+    "div": 2,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "# Prepare your environment",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Prepare your environment",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        9,
+        9
+      ],
+      "raw": "Before you can set up your Adaptive Media Delivery property to deliver content there are some things you need to do.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "Before you can set up your Adaptive Media Delivery property to deliver content there are some things you need to do.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        11,
+        11
+      ],
+      "raw": "# Prepare your edge certificate",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Prepare your edge certificate",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        13,
+        13
+      ],
+      "raw": "This certificate protects the first stage of the [request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow)—the request from an end user (client) that's received by ​Akamai​ edge servers. In some cases, you may need to create this certificate before you create your property.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This certificate protects the first stage of the request flow—the request from an end user (client) that's received by ​Akamai​ edge servers. In some cases, you may need to create this certificate before you create your property.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        15,
+        17
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/property-manager/img/user-to-edge-server-v1.png\"/>\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        19,
+        19
+      ],
+      "raw": "This process isn't unique to Adaptive Media Delivery. Have a look at the [Property Manager user docs](https://techdocs.akamai.com/property-mgr/docs/prepare-your-edge-certificates) for full details.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This process isn't unique to Adaptive Media Delivery. Have a look at the Property Manager user docs for full details.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "# Prepare your origin server",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Prepare your origin server",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        23,
+        23
+      ],
+      "raw": "An origin server is a physical location that houses your deliverable content. This accounts for the second stage of the [request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow)—the request from edge servers to your origin to get your deliverable content. Before you can add your origin server to your request flow, you need to set some things up for your origin, collect key information about your origin, and decide how you want ​​Akamai​ to interact with it.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "An origin server is a physical location that houses your deliverable content. This accounts for the second stage of the request flow—the request from edge servers to your origin to get your deliverable content. Before you can add your origin server to your request flow, you need to set some things up for your origin, collect key information about your origin, and decide how you want ​​Akamai​ to interact with it.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        25,
+        27
+      ],
+      "raw": "<div align=center>\n<img src=\"https://techdocs.akamai.com/property-manager/img/edge-server-to-origin-v1.png\"/>\n</div>",
+      "kind": "html",
+      "syntax": "html",
+      "component": "div",
+      "target": {
+        "component": null,
+        "status": "manual",
+        "note": "raw HTML — check it against the Documentation.AI components"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "This process isn't exclusive to Adaptive Media Delivery, either. Full details on the setup of your origin can be found in the [Property Manager docs](https://techdocs.akamai.com/property-mgr/docs/prepare-your-origin-server), too.",
+      "kind": "paragraph",
+      "syntax": "markdown",
+      "text": "This process isn't exclusive to Adaptive Media Delivery, either. Full details on the setup of your origin can be found in the Property Manager docs, too.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        31,
+        31
+      ],
+      "raw": "# Sibling pages",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Sibling pages",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        33,
+        36
+      ],
+      "raw": "* [Delivery concepts and terms](https://techdocs.akamai.com/adaptive-media-delivery/docs/key-concepts-and-terms.md)\n* [Review supported media formats](https://techdocs.akamai.com/adaptive-media-delivery/docs/supported-media-formats.md)\n* [Get your unique information](https://techdocs.akamai.com/adaptive-media-delivery/docs/get-environ-info.md)\n* [Understand the request flow](https://techdocs.akamai.com/adaptive-media-delivery/docs/understand-the-request-flow.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Delivery concepts and termsReview supported media formatsGet your unique informationUnderstand the request flow",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

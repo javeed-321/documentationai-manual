@@ -1,0 +1,15 @@
+# Purge Cache Documentation
+
+> Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/purge-cache/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Changelog
+- [Jan 2, 2023 — Postman collection available](https://techdocs.akamai.com/purge-cache/changelog/jan-2-2023-postman-collection-available.md)
+- [Aug 31, 2021 — New Purge Cache documentation experience](https://techdocs.akamai.com/purge-cache/changelog/aug-27-2021-new-purge-cache-documentation-experience.md)
+- [Jan 30, 2019 — New Enhanced Content Control Utility User Interface](https://techdocs.akamai.com/purge-cache/changelog/new-eccu-ui.md)
+- [Aug 1, 2017 — Purge by Content Provider (CP) code Limited Availability release](https://techdocs.akamai.com/purge-cache/changelog/purge-by-cp-code-la.md)
+- [Jul 1, 2017 — Purge by Cache Tag available in Beta](https://techdocs.akamai.com/purge-cache/changelog/purge-by-cache-tag-beta.md)
+- [Jul 1, 2017 — Purge by Content Provider (CP) codes available in Beta](https://techdocs.akamai.com/purge-cache/changelog/purge-by-cp-codes-beta.md)
+- [May 1, 2017 — Fast Purge UI and CCU v3 API General Acceptance release](https://techdocs.akamai.com/purge-cache/changelog/fast-purge-ui-api-release.md)
+- [Sep 1, 2016 — The Fast Purge User Interface is now in Limited Availability in Control Center!](https://techdocs.akamai.com/purge-cache/changelog/fast-purge-la.md)

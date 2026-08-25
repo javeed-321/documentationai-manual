@@ -1,0 +1,106 @@
+{
+  "slug": "linode-api/reference/regions/llms.txt",
+  "source": "https://techdocs.akamai.com/linode-api/reference/regions/llms.txt.md",
+  "url": "https://techdocs.akamai.com/linode-api/reference/regions/llms.txt",
+  "title": "Regions",
+  "description": "",
+  "section": "Linode API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Linode API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Linode API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/linode-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Regions",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Regions",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        11
+      ],
+      "raw": "- [List regions](https://techdocs.akamai.com/linode-api/reference/get-regions.md): Lists the regions available for Linode services. Not all services are guaranteed to be available in all regions.   **CLI**  ```shell linode-cli regions list ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [List regions' availability](https://techdocs.akamai.com/linode-api/reference/get-regions-availability.md): Returns availability data for all regions.   **CLI**  ```shell linode-cli regions list-avail ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a region](https://techdocs.akamai.com/linode-api/reference/get-region.md): Returns a single Region.   **CLI**  ```shell linode-cli regions view us-east ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)\n- [Get a region's availability](https://techdocs.akamai.com/linode-api/reference/get-region-availability.md): Returns availability data for a single Region.   **CLI**  ```shell linode-cli regions view-avail us-east ```  [Learn more](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List regions: Lists the regions available for Linode services. Not all services are guaranteed to be available in all regions.   CLI  shell linode-cli regions list   Learn moreList regions' availability: Returns availability data for all regions.   CLI  shell linode-cli regions list-avail   Learn moreGet a region: Returns a single Region.   CLI  shell linode-cli regions view us-east   Learn moreGet a region's availability: Returns availability data for a single Region.   CLI  shell linode-cli regions view-avail us-east   Learn more",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

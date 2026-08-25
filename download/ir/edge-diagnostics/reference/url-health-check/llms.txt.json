@@ -1,0 +1,152 @@
+{
+  "slug": "edge-diagnostics/reference/url-health-check/llms.txt",
+  "source": "https://techdocs.akamai.com/edge-diagnostics/reference/url-health-check/llms.txt.md",
+  "url": "https://techdocs.akamai.com/edge-diagnostics/reference/url-health-check/llms.txt",
+  "title": "URL Health Check",
+  "description": "",
+  "section": "Edge Diagnostics",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Edge Diagnostics Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Edge Diagnostics Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/edge-diagnostics/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: URL Health Check",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: URL Health Check",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        9
+      ],
+      "raw": "- [Run the URL health check](https://techdocs.akamai.com/edge-diagnostics/reference/post-url-health-check.md): Launches an [asynchronous](ref:asynchronous-processes) request to simultaneously run [Launch a GREP request](ref:post-grep), [Get domain details with dig](ref:post-dig), [Request content with cURL](ref:post-curl), [Test network connectivity with MTR](ref:post-mtr) and [Translate an Akamaized URL](ref:post-translated-url) operations for a URL. Successful operations return fetched GREP, dig, cURL, and MTR data and [Akamaized URL (ARL)](doc:arl-syntax) details.\n- [Get a URL health check response](https://techdocs.akamai.com/edge-diagnostics/reference/get-url-health-check-requests.md): Returns the status of the [asynchronous](ref:asynchronous-processes) [Run the URL health check](ref:post-url-health-check) request. Operations with the `SUCCESS` status include also fetched GREP, dig, cURL, and MTR data.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Run the URL health check: Launches an asynchronous request to simultaneously run Launch a GREP request, Get domain details with dig, Request content with cURL, Test network connectivity with MTR and Translate an Akamaized URL operations for a URL. Successful operations return fetched GREP, dig, cURL, and MTR data and Akamaized URL (ARL) details.Get a URL health check response: Returns the status of the asynchronous Run the URL health check request. Operations with the SUCCESS status include also fetched GREP, dig, cURL, and MTR data.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "docLink",
+          "value": "doc:arl-syntax",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:asynchronous-processes",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-grep",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-dig",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-curl",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-mtr",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-translated-url",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:asynchronous-processes",
+          "line": 9
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-url-health-check",
+          "line": 9
+        }
+      ]
+    }
+  ]
+}

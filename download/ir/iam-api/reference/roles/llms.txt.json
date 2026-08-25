@@ -1,0 +1,117 @@
+{
+  "slug": "iam-api/reference/roles/llms.txt",
+  "source": "https://techdocs.akamai.com/iam-api/reference/roles/llms.txt.md",
+  "url": "https://techdocs.akamai.com/iam-api/reference/roles/llms.txt",
+  "title": "Roles",
+  "description": "",
+  "section": "Identity and Access Management API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Identity and Access Management API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Identity and Access Management API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/iam-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/iam-api/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Roles",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Roles",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        13
+      ],
+      "raw": "- [Create a role](https://techdocs.akamai.com/iam-api/reference/post-role.md): This operation creates a custom role, which is a combination of [grantable roles](ref:get-grantable-roles). The role that you create becomes available only for your current contract type. To learn more, see [Identity and Access Management concepts](ref:api-concepts).\n- [List roles](https://techdocs.akamai.com/iam-api/reference/get-roles.md): This operation lists roles for the current account and contract type or other accounts using the `accountSwitchKey` parameter. The account and contract type are determined by the access tokens in your API client.\n- [Get a role](https://techdocs.akamai.com/iam-api/reference/get-role.md): This operation retrieves a role's details.\n- [Edit a role](https://techdocs.akamai.com/iam-api/reference/put-role.md): This operation adds or removes a role's group role assignments, along with other data such as name and description. When you modify a role, those changes affect existing API clients. Review all API clients belonging to the user before modifying a role.\n- [Delete a role](https://techdocs.akamai.com/iam-api/reference/delete-role.md): This operation deletes a custom role. You can't delete a role if it's assigned to a user.\n- [List grantable roles](https://techdocs.akamai.com/iam-api/reference/get-grantable-roles.md): This operation lists the grantable roles you can include in a new custom role, or add to an existing custom role.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Create a role: This operation creates a custom role, which is a combination of grantable roles. The role that you create becomes available only for your current contract type. To learn more, see Identity and Access Management concepts.List roles: This operation lists roles for the current account and contract type or other accounts using the accountSwitchKey parameter. The account and contract type are determined by the access tokens in your API client.Get a role: This operation retrieves a role's details.Edit a role: This operation adds or removes a role's group role assignments, along with other data such as name and description. When you modify a role, those changes affect existing API clients. Review all API clients belonging to the user before modifying a role.Delete a role: This operation deletes a custom role. You can't delete a role if it's assigned to a user.List grantable roles: This operation lists the grantable roles you can include in a new custom role, or add to an existing custom role.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:get-grantable-roles",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:api-concepts",
+          "line": 8
+        }
+      ]
+    }
+  ]
+}

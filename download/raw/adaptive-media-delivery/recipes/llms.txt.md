@@ -1,0 +1,16 @@
+# Adaptive Media Delivery Documentation
+
+> Delivers streaming video and a quality viewing experience anywhere by adapting real-time to available bandwidth. To meet consumer expectations in a hyperconnected world, content providers need a high-performance streaming media delivery solution like Akamai’s Adaptive Media Delivery. Optimized for Adaptive Bitrate (ABR) streaming, it provides a high-quality viewing experience across the broad variety of network types, fixed or mobile, at varying connection speeds. Because it’s built on the Akamai Intelligent Platform, Adaptive Media Delivery provides superior scalability, reliability, and availability.
+
+Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-media-delivery/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+## Recipes
+- [Add a revocation list](https://techdocs.akamai.com/adaptive-media-delivery/recipes/add-a-revocation-list.md)
+- [Delete a revocation list](https://techdocs.akamai.com/adaptive-media-delivery/recipes/delete-a-revocation-list.md)
+- [Get an identifier](https://techdocs.akamai.com/adaptive-media-delivery/recipes/get-an-identifier.md)
+- [Get revocation list identifier count information](https://techdocs.akamai.com/adaptive-media-delivery/recipes/get-revocation-list-identifier-count-information.md)
+- [Get revocation lists](https://techdocs.akamai.com/adaptive-media-delivery/recipes/get-revocation-lists.md)
+- [List identifiers](https://techdocs.akamai.com/adaptive-media-delivery/recipes/list-identifiers.md)
+- [List revocation list ARL properties](https://techdocs.akamai.com/adaptive-media-delivery/recipes/list-revocation-list-arl-properties.md)
+- [Revoke tokens](https://techdocs.akamai.com/adaptive-media-delivery/recipes/revoke-tokens.md)
+- [Unrevoke tokens](https://techdocs.akamai.com/adaptive-media-delivery/recipes/unrevoke-tokens.md)

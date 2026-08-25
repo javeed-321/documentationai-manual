@@ -1,0 +1,106 @@
+{
+  "slug": "terraform/docs/certificates/llms.txt",
+  "source": "https://techdocs.akamai.com/terraform/docs/certificates/llms.txt.md",
+  "url": "https://techdocs.akamai.com/terraform/docs/certificates/llms.txt",
+  "title": "Certificates",
+  "description": "",
+  "section": "Terraform",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Terraform Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Terraform Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use Infrastructure as Code to manage and provision your Akamai configurations.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/terraform/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Certificates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Certificates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        17
+      ],
+      "raw": "- [Provision certificates](https://techdocs.akamai.com/terraform/docs/cps-integration-guide.md)\n- [Certificate Signing Request](https://techdocs.akamai.com/terraform/docs/cps-ds-certificate-signing-request.md): akamai_cps_csr\n- [Deployments](https://techdocs.akamai.com/terraform/docs/cps-ds-deployments.md): akamai_cps_deployments\n- [Enrollment](https://techdocs.akamai.com/terraform/docs/cps-ds-enrollment.md): akamai_cps_enrollment\n- [Enrollments](https://techdocs.akamai.com/terraform/docs/cps-ds-enrollments.md): akamai_cps_enrollments\n- [Warnings](https://techdocs.akamai.com/terraform/docs/cps-ds-warnings.md): akamai_cps_warnings\n- [3rd-party enrollment](https://techdocs.akamai.com/terraform/docs/cps-rc-3rd-party-enrollment.md): akamai_cps_third_party_enrollment\n- [DV enrollment](https://techdocs.akamai.com/terraform/docs/cps-rc-dv-enrollment.md): akamai_cps_dv_enrollment\n- [DV validation](https://techdocs.akamai.com/terraform/docs/cps-rc-dv-validation.md): akamai_cps_dv_validation\n- [Upload certificate](https://techdocs.akamai.com/terraform/docs/cps-rc-upload-certificate.md): akamai_cps_upload_certificate",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Provision certificatesCertificate Signing Request: akamai_cps_csrDeployments: akamai_cps_deploymentsEnrollment: akamai_cps_enrollmentEnrollments: akamai_cps_enrollmentsWarnings: akamai_cps_warnings3rd-party enrollment: akamai_cps_third_party_enrollmentDV enrollment: akamai_cps_dv_enrollmentDV validation: akamai_cps_dv_validationUpload certificate: akamai_cps_upload_certificate",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

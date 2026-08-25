@@ -1,0 +1,134 @@
+---
+title: "API Reference index"
+description: "full section index"
+---
+
+# Global Traffic Management Documentation
+
+> Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.
+
+## API Reference: API
+
+- [API index](https://techdocs.akamai.com/gtm/reference/api/llms.txt): full category index
+- [Global Traffic Management API](https://techdocs.akamai.com/gtm/reference/api.md)
+- [API summary](https://techdocs.akamai.com/gtm/reference/api-summary.md)
+- [Get started](https://techdocs.akamai.com/gtm/reference/get-started.md)
+- [API concepts](https://techdocs.akamai.com/gtm/reference/api-concepts.md)
+- [API workflow](https://techdocs.akamai.com/gtm/reference/api-workflow.md)
+- [Data conventions](https://techdocs.akamai.com/gtm/reference/data-conventions.md)
+- [Object versioning](https://techdocs.akamai.com/gtm/reference/api-versioning.md)
+- [Domain object](https://techdocs.akamai.com/gtm/reference/domain-object.md)
+- [Property object](https://techdocs.akamai.com/gtm/reference/property-object.md)
+- [Datacenter object](https://techdocs.akamai.com/gtm/reference/datacenter-object.md)
+- [API hypermedia](https://techdocs.akamai.com/gtm/reference/api-hypermedia.md)
+- [Errors](https://techdocs.akamai.com/gtm/reference/api-errors.md)
+- [400](https://techdocs.akamai.com/gtm/reference/400.md)
+- [401](https://techdocs.akamai.com/gtm/reference/401.md)
+- [403](https://techdocs.akamai.com/gtm/reference/403.md)
+- [404](https://techdocs.akamai.com/gtm/reference/404.md)
+- [405](https://techdocs.akamai.com/gtm/reference/405.md)
+- [406](https://techdocs.akamai.com/gtm/reference/406.md)
+- [409](https://techdocs.akamai.com/gtm/reference/409.md)
+- [415](https://techdocs.akamai.com/gtm/reference/415.md)
+- [500](https://techdocs.akamai.com/gtm/reference/500.md)
+- [Best practices interacting with GTM API](https://techdocs.akamai.com/gtm/reference/best-practices-interacting-with-gtm-api.md)
+
+## API Reference: GTM VERSIONED OBJECTS
+
+- [GTM VERSIONED OBJECTS index](https://techdocs.akamai.com/gtm/reference/gtm-versioned-objects/llms.txt): full category index
+- [Datacenter](https://techdocs.akamai.com/gtm/reference/datacenters-versions.md)
+- [Domain](https://techdocs.akamai.com/gtm/reference/domain-versions.md)
+- [Domain summary](https://techdocs.akamai.com/gtm/reference/domain-summary.md)
+- [Property](https://techdocs.akamai.com/gtm/reference/property.md)
+- [Liveness test](https://techdocs.akamai.com/gtm/reference/liveness-test.md)
+- [Traffic target](https://techdocs.akamai.com/gtm/reference/traffic-target.md)
+
+## API Reference: Identity
+
+- [Identity index](https://techdocs.akamai.com/gtm/reference/identity/llms.txt): full category index
+- [Get identity](https://techdocs.akamai.com/gtm/reference/get-identity.md): This operation returns information about the API client. Run this operation for details on the API client contract such as available load balancing `features` and `permissions` the client has on the domains tied to the contract.
+- [List contracts](https://techdocs.akamai.com/gtm/reference/get-identity-contracts.md): This operation returns a list of API client `contracts`. When you [Create a domain](/reference/post-domain), you may need a `contractId` under certain circumstances. Run this operation to view available values.
+- [List groups](https://techdocs.akamai.com/gtm/reference/get-identity-groups.md): This operation returns a list of API client `groups` and their parameters.  When you [Create a domain](/reference/post-domain), you may need a `groupId` under certain circumstances. Run this operation to view available values.
+
+## API Reference: Domains
+
+- [Domains index](https://techdocs.akamai.com/gtm/reference/domains/llms.txt): full category index
+- [Create a domain](https://techdocs.akamai.com/gtm/reference/post-domain.md): Creates a new GTM domain.
+- [List domains](https://techdocs.akamai.com/gtm/reference/get-domains.md): Returns a list of GTM domain summaries under your contract.
+- [Get a domain](https://techdocs.akamai.com/gtm/reference/get-domain.md): Returns information for a specific GTM domain.
+- [Update a domain](https://techdocs.akamai.com/gtm/reference/put-domain.md): Updates a specific GTM domain.
+- [List domain history](https://techdocs.akamai.com/gtm/reference/get-domain-history.md): Returns a list of each change made to the domain.
+- [Get domain authorities](https://techdocs.akamai.com/gtm/reference/get-domain-authorities.md): Returns authorities for a specific GTM domain if it is a custom domain and not hosted on config-gtm.
+- [Submit a bulk domain delete request](https://techdocs.akamai.com/gtm/reference/post-domain-delete-requests.md): Submits an asynchronous request to delete one or more GTM domains. Poll the returned `requestId` using the status endpoint to track progress.
+- [Get delete request status](https://techdocs.akamai.com/gtm/reference/get-domain-delete-request.md): Returns the current status of a bulk domain delete request, including how many domains have been successfully deleted, failed, and whether processing is complete.
+- [Get delete request result](https://techdocs.akamai.com/gtm/reference/get-domain-delete-request-result.md): Returns the final result of a completed bulk domain delete request, listing which domains were successfully deleted and which failed. Only available once `isComplete` is `true` in the status endpoint.
+- [Get domain features](https://techdocs.akamai.com/gtm/reference/get-domain-features.md): Returns the contract features available for a specific GTM domain, including the set of supported property types and security features such as DNSSEC.
+- [Get a domain summary](https://techdocs.akamai.com/gtm/reference/get-domain-summary.md): Returns summary information for a specific GTM domain, including its activation state, last modification details, and DNSSEC configuration.
+
+## API Reference: Resources
+
+- [Resources index](https://techdocs.akamai.com/gtm/reference/resources/llms.txt): full category index
+- [List resources](https://techdocs.akamai.com/gtm/reference/get-resources.md): Returns a list of resources created within the domain that constrain one or more properties in a data center.
+- [Get a resource](https://techdocs.akamai.com/gtm/reference/get-resource.md): Returns information for a specific resource.
+- [Create or update a resource](https://techdocs.akamai.com/gtm/reference/put-resource.md): Run this operation to create or update a resource.
+- [Remove a resource](https://techdocs.akamai.com/gtm/reference/delete-resource.md): Removes a specific resource.
+
+## API Reference: Properties
+
+- [Properties index](https://techdocs.akamai.com/gtm/reference/properties/llms.txt): full category index
+- [List properties](https://techdocs.akamai.com/gtm/reference/get-properties.md): Returns a list of GTM properties.
+- [Get a property](https://techdocs.akamai.com/gtm/reference/get-property.md): Returns information for a specific GTM property.
+- [Create or update a property](https://techdocs.akamai.com/gtm/reference/put-property.md): Run this operation to create or update a GTM property.
+- [Remove a property](https://techdocs.akamai.com/gtm/reference/delete-property.md): Removes a specific GTM property.
+- [Replace all properties](https://techdocs.akamai.com/gtm/reference/put-properties.md): Replaces the complete set of properties on a domain with those specified in the request body.
+- [Add or update properties](https://techdocs.akamai.com/gtm/reference/patch-properties.md): Adds or updates properties on a domain without replacing the entire set. Properties not included in the request body are left unchanged.
+
+## API Reference: CIDR maps
+
+- [CIDR maps index](https://techdocs.akamai.com/gtm/reference/cidr-maps/llms.txt): full category index
+- [List CIDR maps](https://techdocs.akamai.com/gtm/reference/get-cidr-maps.md): Returns a list of CIDR maps.
+- [Get a CIDR map](https://techdocs.akamai.com/gtm/reference/get-cidr-map.md): Returns information for a specific CIDR map.
+- [Create or update a CIDR map](https://techdocs.akamai.com/gtm/reference/put-cidr-map.md): Run this operation to create or update a CIDR map.
+- [Remove a CIDR map](https://techdocs.akamai.com/gtm/reference/delete-cidr-map.md): Removes a specific CIDR map.
+
+## API Reference: Autonomous system maps
+
+- [Autonomous system maps index](https://techdocs.akamai.com/gtm/reference/autonomous-system-maps/llms.txt): full category index
+- [List AS maps](https://techdocs.akamai.com/gtm/reference/get-as-maps.md): Returns a list of AS maps.
+- [Get an AS map](https://techdocs.akamai.com/gtm/reference/get-as-map.md): Returns information for a specific AS map.
+- [Create or update an AS map](https://techdocs.akamai.com/gtm/reference/put-as-map.md): Run this operation to create or update an AS map.
+- [Remove an AS map](https://techdocs.akamai.com/gtm/reference/delete-as-map.md): Removes a specific AS map.
+
+## API Reference: Geographic maps
+
+- [Geographic maps index](https://techdocs.akamai.com/gtm/reference/geographic-maps/llms.txt): full category index
+- [List geographic maps](https://techdocs.akamai.com/gtm/reference/get-geographic-maps.md): Returns a list of geographic maps.
+- [Get a geographic map](https://techdocs.akamai.com/gtm/reference/get-geographic-map.md): Returns information for a specific geographic map.
+- [Create or update a geographic map](https://techdocs.akamai.com/gtm/reference/put-geographic-map.md): Run this operation to create or update a geographic map.
+- [Remove a geographic map](https://techdocs.akamai.com/gtm/reference/delete-geographic-map.md): Removes a geographic map.
+
+## API Reference: Data centers
+
+- [Data centers index](https://techdocs.akamai.com/gtm/reference/data-centers/llms.txt): full category index
+- [Create a data center](https://techdocs.akamai.com/gtm/reference/post-datacenter.md): This operation creates a specific data center.
+- [List data centers](https://techdocs.akamai.com/gtm/reference/get-datacenters.md): This operation returns a list of data centers.
+- [Create an IPv4 data center for ip-version-selector](https://techdocs.akamai.com/gtm/reference/post-datacenter-for-ipv.md): This operation creates a data center which is solely reserved for use by properties of the IP Version Selector type `qtr`. The data center created by this resource  is assigned the `datacenterId` 5401, which is interpreted as the target for `A` record requests.
+- [Create an IPv6 data center for ip-version-selector](https://techdocs.akamai.com/gtm/reference/post-datacenter-for-ipv6.md): This operation creates a data center which is solely reserved for use by properties of type `qtr` (IP Version Selector). The data center created by this resource  is assigned the `datacenterId` 5402, which is interpreted as the target for `AAAA` record requests.
+- [Create a default data center](https://techdocs.akamai.com/gtm/reference/post-default-datacenter-for-maps.md): This operation creates a data center for use by the map-type properties CIDR, Geographic or AS mapping as the default data center.
+- [Get a data center](https://techdocs.akamai.com/gtm/reference/get-datacenter.md): This operation returns information for a specific data center.
+- [Update a data center](https://techdocs.akamai.com/gtm/reference/put-datacenter.md): This operation updates a specific data center.
+- [Remove a data center](https://techdocs.akamai.com/gtm/reference/delete-datacenter.md): Remove a data center: This operation removes a data center. You can only remove a data center when no properties or resources are assigned to it.
+
+## API Reference: Status
+
+- [Status index](https://techdocs.akamai.com/gtm/reference/status/llms.txt): full category index
+- [Get current status](https://techdocs.akamai.com/gtm/reference/get-status-current.md): This operation returns information about the current condition of the change in the domain's activation.
+- [Get status for a domain version](https://techdocs.akamai.com/gtm/reference/get-status.md): Returns the propagation status for a specific domain version, identified by its `changeId`.
+
+## API Reference: Collections
+
+- [Collections index](https://techdocs.akamai.com/gtm/reference/collections/llms.txt): full category index
+- [List Akamai cloud regions](https://techdocs.akamai.com/gtm/reference/get-akamai-cloud-regions.md): This operation returns a list of available Akamai cloud regions. Use these regions when creating a data center with a `cloudProvider` of `akamai-cloud`. Each region includes geographic metadata such as city, country, latitude, and longitude that you can use to populate data center fields.
+- [List datacenter IDs](https://techdocs.akamai.com/gtm/reference/get-datacenter-ids.md): Returns a paginated list of valid datacenter IDs available for use as virtual datacenters.
+- [List supported geo codes](https://techdocs.akamai.com/gtm/reference/get-supported-geo-codes.md): Returns the full hierarchy of supported geographic codes — continents, countries, and states or provinces — that you can use when configuring geographic maps.
+- [List DNS record set types](https://techdocs.akamai.com/gtm/reference/get-recordset-types.md): Returns the DNS record types supported for GTM properties, optionally filtered by domain.

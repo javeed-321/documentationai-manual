@@ -1,0 +1,402 @@
+{
+  "slug": "gtm-reporting/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/gtm-reporting/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/gtm-reporting/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "GTM Reporting API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 10,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 9
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# GTM Reporting API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "GTM Reporting API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/gtm-reporting/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        19
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/gtm-reporting/reference/api/llms.txt): full category index\n- [Global Traffic Management Reporting API](https://techdocs.akamai.com/gtm-reporting/reference/api.md)\n- [API summary](https://techdocs.akamai.com/gtm-reporting/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/gtm-reporting/reference/get-started.md)\n- [API concepts](https://techdocs.akamai.com/gtm-reporting/reference/api-concepts.md)\n- [Errors](https://techdocs.akamai.com/gtm-reporting/reference/errors.md)\n- [400](https://techdocs.akamai.com/gtm-reporting/reference/400.md)\n- [401](https://techdocs.akamai.com/gtm-reporting/reference/401.md)\n- [403](https://techdocs.akamai.com/gtm-reporting/reference/403.md)\n- [404](https://techdocs.akamai.com/gtm-reporting/reference/404.md)\n- [405](https://techdocs.akamai.com/gtm-reporting/reference/405.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexGlobal Traffic Management Reporting APIAPI summaryGet startedAPI conceptsErrors400401403404405",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        21,
+        21
+      ],
+      "raw": "## API Reference: Domain lists",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Domain lists",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        23,
+        27
+      ],
+      "raw": "- [Domain lists index](https://techdocs.akamai.com/gtm-reporting/reference/domain-lists/llms.txt): full category index\n- [Get a domain list](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-list.md): This operation retrieves a list of domains, along with a URL templated link to obtain a domain summary of associated properties and data centers for each.\n- [Get a domain summary](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-list-domain.md): This operation retrieves a list of property names, as well as Datacenter names and IDs for a given domain.\n- [List domain names for an account and contract type](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-names-for-account.md): Returns a list of GTM domain names accessible to the current user for the given account and contract type.\n- [List domain names](https://techdocs.akamai.com/gtm-reporting/reference/get-domain-names.md): Returns a list of GTM domain names accessible to the current user.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Domain lists index: full category indexGet a domain list: This operation retrieves a list of domains, along with a URL templated link to obtain a domain summary of associated properties and data centers for each.Get a domain summary: This operation retrieves a list of property names, as well as Datacenter names and IDs for a given domain.List domain names for an account and contract type: Returns a list of GTM domain names accessible to the current user for the given account and contract type.List domain names: Returns a list of GTM domain names accessible to the current user.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        29,
+        29
+      ],
+      "raw": "## API Reference: Demand",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Demand",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        31,
+        33
+      ],
+      "raw": "- [Demand index](https://techdocs.akamai.com/gtm-reporting/reference/demand/llms.txt): full category index\n- [Report directed demand for a property](https://techdocs.akamai.com/gtm-reporting/reference/get-demand-property.md): The requests generated by the client machines behind a client name-server represent demand. This API returns a collection of reports containing the provisioned demand percentage, along with actual demand percentage seen by GTM rounded off to nearest 5 min interval for each data center. This API returns no data for load feedback-based domains, as those domains do not have a configured per data center load.\n- [Get a directed demand report window](https://techdocs.akamai.com/gtm-reporting/reference/get-demand-window.md): Returns the date range of data available for directed demand reports. Use the returned `start` and `end` values as the bounds for queries to the directed demand report endpoint.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Demand index: full category indexReport directed demand for a property: The requests generated by the client machines behind a client name-server represent demand. This API returns a collection of reports containing the provisioned demand percentage, along with actual demand percentage seen by GTM rounded off to nearest 5 min interval for each data center. This API returns no data for load feedback-based domains, as those domains do not have a configured per data center load.Get a directed demand report window: Returns the date range of data available for directed demand reports. Use the returned start and end values as the bounds for queries to the directed demand report endpoint.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 9,
+      "lines": [
+        35,
+        35
+      ],
+      "raw": "## API Reference: IP availability",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: IP availability",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 10,
+      "lines": [
+        37,
+        38
+      ],
+      "raw": "- [IP availability index](https://techdocs.akamai.com/gtm-reporting/reference/ip-availability/llms.txt): full category index\n- [List IP availability per property](https://techdocs.akamai.com/gtm-reporting/reference/get-ip-availability-property.md): GTM combines scores (based on Liveness Tests) from all Web agents to calculate Server Scores and makes liveness decisions. A cutoff value is computed for each property from the median scores for all the servers in the property. Any property server with a score over the cutoff value is considered dead and it won't be handed out. The request should have either start and end time or mostRecent, and not both.  In the response, `handedOut` in JSON or `handOut` in CSV indicates whether the server was handed out and alive indicates whether GTM considered the server as alive or not.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "IP availability index: full category indexList IP availability per property: GTM combines scores (based on Liveness Tests) from all Web agents to calculate Server Scores and makes liveness decisions. A cutoff value is computed for each property from the median scores for all the servers in the property. Any property server with a score over the cutoff value is considered dead and it won't be handed out. The request should have either start and end time or mostRecent, and not both.  In the response, handedOut in JSON or handOut in CSV indicates whether the server was handed out and alive indicates whether GTM considered the server as alive or not.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 11,
+      "lines": [
+        40,
+        40
+      ],
+      "raw": "## API Reference: Latency",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Latency",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 12,
+      "lines": [
+        42,
+        43
+      ],
+      "raw": "- [Latency index](https://techdocs.akamai.com/gtm-reporting/reference/latency/llms.txt): full category index\n- [Report latency per data center](https://techdocs.akamai.com/gtm-reporting/reference/get-latency-datacenter.md): This operation returns a collection of reports representing latency and loss of ping data as reported by network agents in each Data Center for a property. Latency and Loss parameters follow bucket ranges schema (bucket ranges, delimited by a pipe: `|`).  Ping Loss ranges from `0%` to `100%`. So a schema of `5|10|15|20` would represent grouping of data from `0%` to `5%`, `5%` to `10%`, `10%` to `15%`, `15%` to `20%`, and `20%` to `100%` bucket ranges. The end of one bucket would be the beginning of the next bucket. Similarly `0|5|80` would represent `0%`, `0%` to `5%`, `5%` to `100%`, and `80%` to `100%` bucket ranges. A trailing pipe at the end of a bucket indicates that there is no _greater than the max_ bucket. That is, in the above example if loss schema were `0|5|80|` then it would mean `0%`, `0%` to `5%`, and `5%` to `80%`.  Latency is measured in milliseconds. Each bucket ranges from 0 ms to 1000 ms.  So, a schema of `5|10|300|1000` would mean `0ms` to `5ms`, `5ms` to `10ms`, `10ms` to `300ms`, `300ms` to `1000ms`, and `> 1000ms`.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Latency index: full category indexReport latency per data center: This operation returns a collection of reports representing latency and loss of ping data as reported by network agents in each Data Center for a property. Latency and Loss parameters follow bucket ranges schema (bucket ranges, delimited by a pipe: |).  Ping Loss ranges from 0% to 100%. So a schema of 5|10|15|20 would represent grouping of data from 0% to 5%, 5% to 10%, 10% to 15%, 15% to 20%, and 20% to 100% bucket ranges. The end of one bucket would be the beginning of the next bucket. Similarly 0|5|80 would represent 0%, 0% to 5%, 5% to 100%, and 80% to 100% bucket ranges. A trailing pipe at the end of a bucket indicates that there is no greater than the max bucket. That is, in the above example if loss schema were 0|5|80| then it would mean 0%, 0% to 5%, and 5% to 80%.  Latency is measured in milliseconds. Each bucket ranges from 0 ms to 1000 ms.  So, a schema of 5|10|300|1000 would mean 0ms to 5ms, 5ms to 10ms, 10ms to 300ms, 300ms to 1000ms, and > 1000ms.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 13,
+      "lines": [
+        45,
+        45
+      ],
+      "raw": "## API Reference: Liveness tests",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Liveness tests",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 14,
+      "lines": [
+        47,
+        51
+      ],
+      "raw": "- [Liveness tests index](https://techdocs.akamai.com/gtm-reporting/reference/liveness-tests/llms.txt): full category index\n- [Report liveness per property](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-property.md): This operation returns a collection of reports containing logs of individual liveness tests which have failed. Liveness Tests are run periodically by Web Agents installed in customer data centers. Liveness scores are used by GTM to decide whether a data center is alive or not.  Liveness tests which fail in succession (tests that run from the same testing agent to the same origin server, which fail with the same error code) are grouped together and represented with a duration. This duration value is in seconds and can sustain for up to 86400 seconds (one day). If it crosses that boundary, GTM logs it as a new failure at the beginning of the next day (00:00 UTC), with the duration reset to that point.\n- [List liveness test errors](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-error-codes.md): This operation lists all the possible liveness test error codes (as displayed on the Liveness Test Failures report) and a description of each error.\n- [Get a Liveness Test error](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-error-code.md): This operation returns an error description for the given Liveness Test error ID.\n- [Get a liveness test report window](https://techdocs.akamai.com/gtm-reporting/reference/get-liveness-tests-window.md): Returns the date range of data available for liveness test reports. Use the returned `start` and `end` values as the bounds for queries to the liveness test report endpoint.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Liveness tests index: full category indexReport liveness per property: This operation returns a collection of reports containing logs of individual liveness tests which have failed. Liveness Tests are run periodically by Web Agents installed in customer data centers. Liveness scores are used by GTM to decide whether a data center is alive or not.  Liveness tests which fail in succession (tests that run from the same testing agent to the same origin server, which fail with the same error code) are grouped together and represented with a duration. This duration value is in seconds and can sustain for up to 86400 seconds (one day). If it crosses that boundary, GTM logs it as a new failure at the beginning of the next day (00:00 UTC), with the duration reset to that point.List liveness test errors: This operation lists all the possible liveness test error codes (as displayed on the Liveness Test Failures report) and a description of each error.Get a Liveness Test error: This operation returns an error description for the given Liveness Test error ID.Get a liveness test report window: Returns the date range of data available for liveness test reports. Use the returned start and end values as the bounds for queries to the liveness test report endpoint.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 15,
+      "lines": [
+        53,
+        53
+      ],
+      "raw": "## API Reference: Load feedback",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Load feedback",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 16,
+      "lines": [
+        55,
+        58
+      ],
+      "raw": "- [Load feedback index](https://techdocs.akamai.com/gtm-reporting/reference/load-feedback/llms.txt): full category index\n- [Report load feedback](https://techdocs.akamai.com/gtm-reporting/reference/get-load-feedback.md): This report shows the historical values of a given Resource across all data centers and the given time period. A resource is anything that can constrain the load sent to a data center. Examples of typical resources include bandwidth, CPU load average, database queries per second, or disk operations per second.\n- [Get most recent load feedback data](https://techdocs.akamai.com/gtm-reporting/reference/get-most-recent-load-data.md): Returns the most recent load feedback values reported by each data center for the given domain. This provides a snapshot of the current load state across all data centers.\n- [Get a load feedback report window](https://techdocs.akamai.com/gtm-reporting/reference/get-load-feedback-window.md): Returns the date range of data available for load feedback reports. Use the returned `start` and `end` values as the bounds for queries to the load feedback report endpoint.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Load feedback index: full category indexReport load feedback: This report shows the historical values of a given Resource across all data centers and the given time period. A resource is anything that can constrain the load sent to a data center. Examples of typical resources include bandwidth, CPU load average, database queries per second, or disk operations per second.Get most recent load feedback data: Returns the most recent load feedback values reported by each data center for the given domain. This provides a snapshot of the current load state across all data centers.Get a load feedback report window: Returns the date range of data available for load feedback reports. Use the returned start and end values as the bounds for queries to the load feedback report endpoint.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 17,
+      "lines": [
+        60,
+        60
+      ],
+      "raw": "## API Reference: Traffic",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Traffic",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 18,
+      "lines": [
+        62,
+        66
+      ],
+      "raw": "- [Traffic index](https://techdocs.akamai.com/gtm-reporting/reference/traffic/llms.txt): full category index\n- [Report traffic per data center](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-datacenter.md): This report shows, for a given domain and data center, the DNS requests received in each five-minute period.  Requests are broken down by property.\n- [Report traffic per property](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-property.md): This report shows, for a given domain and property, the DNS requests received in each five-minute period.  Requests are broken down by data center.\n- [Get a datacenter traffic report window](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-datacenters-window.md): Returns the date range of data available for datacenter traffic reports. Use the returned `start` and `end` values as the bounds for queries to the datacenter traffic report endpoint.\n- [Get a property traffic report window](https://techdocs.akamai.com/gtm-reporting/reference/get-traffic-properties-window.md): Returns the date range of data available for property traffic reports. Use the returned `start` and `end` values as the bounds for queries to the property traffic report endpoint.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Traffic index: full category indexReport traffic per data center: This report shows, for a given domain and data center, the DNS requests received in each five-minute period.  Requests are broken down by property.Report traffic per property: This report shows, for a given domain and property, the DNS requests received in each five-minute period.  Requests are broken down by data center.Get a datacenter traffic report window: Returns the date range of data available for datacenter traffic reports. Use the returned start and end values as the bounds for queries to the datacenter traffic report endpoint.Get a property traffic report window: Returns the date range of data available for property traffic reports. Use the returned start and end values as the bounds for queries to the property traffic report endpoint.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 19,
+      "lines": [
+        68,
+        68
+      ],
+      "raw": "## API Reference: Diagnostics",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Diagnostics",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 20,
+      "lines": [
+        70,
+        75
+      ],
+      "raw": "- [Diagnostics index](https://techdocs.akamai.com/gtm-reporting/reference/diagnostics/llms.txt): full category index\n- [Report datacenter diagnostics](https://techdocs.akamai.com/gtm-reporting/reference/get-diagnostics-datacenter.md): Returns diagnostic data showing how traffic from autonomous systems and countries is being distributed across datacenters for the given domain and time period.\n- [Report IP diagnostics](https://techdocs.akamai.com/gtm-reporting/reference/get-diagnostics-ip.md): Returns diagnostic data showing the per-name server mapping decisions made by GTM for the given domain, property, IP address, and time period. Includes scoring details such as latency, ping scores, and which datacenter was selected.\n- [Report map diff diagnostics](https://techdocs.akamai.com/gtm-reporting/reference/get-diagnostics-mapdiff.md): Returns a diff of traffic distribution map snapshots for the given domain and time period, showing how AS and country-to-datacenter mappings changed between consecutive five-minute intervals.\n- [Report detailed map diff diagnostics for a data center and AS](https://techdocs.akamai.com/gtm-reporting/reference/get-diagnostics-mapdiff-datacenter-as.md): Returns detailed geo and ping score time series for the given domain, datacenter, and autonomous system over the specified time period.\n- [Report detailed map diff diagnostics for a data center and country](https://techdocs.akamai.com/gtm-reporting/reference/get-diagnostics-mapdiff-datacenter-country.md): Returns detailed geo and ping score time series for the given domain, datacenter, and country over the specified time period.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Diagnostics index: full category indexReport datacenter diagnostics: Returns diagnostic data showing how traffic from autonomous systems and countries is being distributed across datacenters for the given domain and time period.Report IP diagnostics: Returns diagnostic data showing the per-name server mapping decisions made by GTM for the given domain, property, IP address, and time period. Includes scoring details such as latency, ping scores, and which datacenter was selected.Report map diff diagnostics: Returns a diff of traffic distribution map snapshots for the given domain and time period, showing how AS and country-to-datacenter mappings changed between consecutive five-minute intervals.Report detailed map diff diagnostics for a data center and AS: Returns detailed geo and ping score time series for the given domain, datacenter, and autonomous system over the specified time period.Report detailed map diff diagnostics for a data center and country: Returns detailed geo and ping score time series for the given domain, datacenter, and country over the specified time period.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

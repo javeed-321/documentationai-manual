@@ -1,0 +1,106 @@
+{
+  "slug": "powershell/docs/common/llms.txt",
+  "source": "https://techdocs.akamai.com/powershell/docs/common/llms.txt.md",
+  "url": "https://techdocs.akamai.com/powershell/docs/common/llms.txt",
+  "title": "Common",
+  "description": "",
+  "section": "PowerShell",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# PowerShell Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "PowerShell Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Make calls to many of our API with a consistent interface using our PowerShell module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/powershell/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: Common",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: Common",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        30
+      ],
+      "raw": "- [Function index](https://techdocs.akamai.com/powershell/docs/common-index.md)\n- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/clear-edgegridcredentials.md)\n- [Akamai data cache](https://techdocs.akamai.com/powershell/docs/clear-akamaidatacache.md): Clear-AkamaiDataCache\n- [Akamai options](https://techdocs.akamai.com/powershell/docs/clear-akamaioptions.md): Clear-AkamaiOptions\n- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/export-edgegridcredentials.md): Export-EdgegridCredentials\n- [Netstorage credentials](https://techdocs.akamai.com/powershell/docs/export-netstoragecredentials.md): Export-NetstorageCredentials\n- [Edgegrid credentials](https://techdocs.akamai.com/powershell/docs/get-edgegridcredentials.md): Get-EdgegridCredentials\n- [Akamai options](https://techdocs.akamai.com/powershell/docs/get-akamaioptions.md): Get-AkamaiOptions\n- [Auth grants](https://techdocs.akamai.com/powershell/docs/get-authgrants.md): Get-AuthGrants\n- [Netstorage Credentials](https://techdocs.akamai.com/powershell/docs/get-netstoragecredentials.md): Get-NetstorageCredentials\n- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/import-edgegridcredentials.md): Import-EdgegridCredentials\n- [Netstorage credentials](https://techdocs.akamai.com/powershell/docs/import-netstoragecredentials.md): Import-NetstorageCredentials\n- [Akamai NSAPI request](https://techdocs.akamai.com/powershell/docs/invoke-akamainsapirequest.md): Invoke-AkamaiNSAPIRequest\n- [Akamai REST method](https://techdocs.akamai.com/powershell/docs/invoke-akamairestmethod.md): Invoke-AkamaiRestMethod\n- [Netstorage request](https://techdocs.akamai.com/powershell/docs/invoke-netstoragerequest.md)\n- [Akamai request](https://techdocs.akamai.com/powershell/docs/invoke-akamairequest.md): Invoke-AkamaiRequest\n- [Akamai data cache](https://techdocs.akamai.com/powershell/docs/new-akamaidatacache.md): New-AkamaiDataCache\n- [Akamai options](https://techdocs.akamai.com/powershell/docs/new-akamaioptions.md): New-AkamaiOptions\n- [EdgeGrid auth token](https://techdocs.akamai.com/powershell/docs/new-edgeauthtoken.md): New-EdgeAuthToken\n- [Akamai data cache](https://techdocs.akamai.com/powershell/docs/set-akamaidatacache.md): Set-AkamaiDataCache\n- [Akamai options](https://techdocs.akamai.com/powershell/docs/set-akamaioptions.md): Set-AkamaiOptions\n- [EdgeGrid credentials](https://techdocs.akamai.com/powershell/docs/test-edgegridcredentials.md): Test-EdgegridCredentials\n- [OpenAPI](https://techdocs.akamai.com/powershell/docs/test-openapi.md): Test-OpenAPI",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Function indexEdgeGrid credentialsAkamai data cache: Clear-AkamaiDataCacheAkamai options: Clear-AkamaiOptionsEdgeGrid credentials: Export-EdgegridCredentialsNetstorage credentials: Export-NetstorageCredentialsEdgegrid credentials: Get-EdgegridCredentialsAkamai options: Get-AkamaiOptionsAuth grants: Get-AuthGrantsNetstorage Credentials: Get-NetstorageCredentialsEdgeGrid credentials: Import-EdgegridCredentialsNetstorage credentials: Import-NetstorageCredentialsAkamai NSAPI request: Invoke-AkamaiNSAPIRequestAkamai REST method: Invoke-AkamaiRestMethodNetstorage requestAkamai request: Invoke-AkamaiRequestAkamai data cache: New-AkamaiDataCacheAkamai options: New-AkamaiOptionsEdgeGrid auth token: New-EdgeAuthTokenAkamai data cache: Set-AkamaiDataCacheAkamai options: Set-AkamaiOptionsEdgeGrid credentials: Test-EdgegridCredentialsOpenAPI: Test-OpenAPI",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

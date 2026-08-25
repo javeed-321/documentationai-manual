@@ -1,0 +1,31 @@
+# Cloud Access Manager Documentation
+
+> Akamai's Cloud Access Manager enables cloud origin authentication and allows you to securely store and manage your cloud origin credentials in the form of access keys.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each section below links to its own llms.txt, which indexes every page in that section. Category links narrow to a single category.
+
+## Guides
+
+- [Guides index](https://techdocs.akamai.com/cloud-access-mgr/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cloud-access-mgr/docs/welcome/llms.txt)
+- [Configuration](https://techdocs.akamai.com/cloud-access-mgr/docs/configuration/llms.txt)
+- [Management](https://techdocs.akamai.com/cloud-access-mgr/docs/management/llms.txt)
+
+## API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cloud-access-mgr/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cloud-access-mgr/reference/api/llms.txt)
+- [Access keys](https://techdocs.akamai.com/cloud-access-mgr/reference/access-keys/llms.txt)
+- [Property lookups](https://techdocs.akamai.com/cloud-access-mgr/reference/property-lookups/llms.txt)
+- [Access key version status requests](https://techdocs.akamai.com/cloud-access-mgr/reference/access-key-version-status-requests/llms.txt)
+- [Access key creation status requests](https://techdocs.akamai.com/cloud-access-mgr/reference/access-key-creation-status-requests/llms.txt)
+
+## Recipes
+
+- [Recipes index](https://techdocs.akamai.com/cloud-access-mgr/recipes/llms.txt): full section index
+
+## Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloud-access-mgr/changelog/llms.txt): full section index

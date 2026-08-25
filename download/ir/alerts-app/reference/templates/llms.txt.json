@@ -1,0 +1,117 @@
+{
+  "slug": "alerts-app/reference/templates/llms.txt",
+  "source": "https://techdocs.akamai.com/alerts-app/reference/templates/llms.txt.md",
+  "url": "https://techdocs.akamai.com/alerts-app/reference/templates/llms.txt",
+  "title": "Templates",
+  "description": "",
+  "section": "Alerts",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Alerts Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Alerts Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/alerts-app/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: Templates",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Templates",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        9
+      ],
+      "raw": "- [List templates](https://techdocs.akamai.com/alerts-app/reference/get-templates.md): Lists templates for all supported alerts. Objects listed in the response provide only high-level information about each alert template, such as its `name` and whether its `origin` is `STATIC` or `ADAPTIVE`.  For a full definition that specifies all required `fields`, get a [specific template instance](ref:get-template).\n- [Get a template](https://techdocs.akamai.com/alerts-app/reference/get-template.md): Fetches a specific template. The response features a full set of `fields` on which to base a [new alert definition](ref:post-definition).",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "List templates: Lists templates for all supported alerts. Objects listed in the response provide only high-level information about each alert template, such as its name and whether its origin is STATIC or ADAPTIVE.  For a full definition that specifies all required fields, get a specific template instance.Get a template: Fetches a specific template. The response features a full set of fields on which to base a new alert definition.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": [
+        {
+          "kind": "refLink",
+          "value": "ref:get-template",
+          "line": 8
+        },
+        {
+          "kind": "refLink",
+          "value": "ref:post-definition",
+          "line": 9
+        }
+      ]
+    }
+  ]
+}

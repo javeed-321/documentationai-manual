@@ -1,0 +1,180 @@
+{
+  "slug": "invoicing/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/invoicing/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/invoicing/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "Invoicing API",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 4,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 3
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Invoicing API Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Invoicing API Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Use the Akamai Invoicing API to develop your own tools to track invoice files, and keep others updated about their status.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Use the Akamai Invoicing API to develop your own tools to track invoice files, and keep others updated about their status.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/invoicing/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/invoicing/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        23
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/invoicing/reference/api/llms.txt): full category index\n- [Invoicing API v4](https://techdocs.akamai.com/invoicing/reference/api.md)\n- [API summary](https://techdocs.akamai.com/invoicing/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/invoicing/reference/get-started.md)\n- [API concepts](https://techdocs.akamai.com/invoicing/reference/api-concepts.md)\n- [API workflows](https://techdocs.akamai.com/invoicing/reference/workflows.md)\n- [Rate limits](https://techdocs.akamai.com/invoicing/reference/rate-limits.md)\n- [Errors](https://techdocs.akamai.com/invoicing/reference/errors.md)\n- [400](https://techdocs.akamai.com/invoicing/reference/400.md)\n- [401](https://techdocs.akamai.com/invoicing/reference/401.md)\n- [403](https://techdocs.akamai.com/invoicing/reference/403.md)\n- [404](https://techdocs.akamai.com/invoicing/reference/404.md)\n- [405](https://techdocs.akamai.com/invoicing/reference/405.md)\n- [429](https://techdocs.akamai.com/invoicing/reference/429.md)\n- [500](https://techdocs.akamai.com/invoicing/reference/500.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexInvoicing API v4API summaryGet startedAPI conceptsAPI workflowsRate limitsErrors400401403404405429500",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        25,
+        25
+      ],
+      "raw": "## API Reference: Invoices",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Invoices",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        27,
+        30
+      ],
+      "raw": "- [Invoices index](https://techdocs.akamai.com/invoicing/reference/invoices/llms.txt): full category index\n- [List bills for a contract](https://techdocs.akamai.com/invoicing/reference/get-contracts-invoices.md): Returns invoices, credit memos, and debit memos for the specified contract and the selected month.\n- [Download a bill file](https://techdocs.akamai.com/invoicing/reference/get-contract-invoice-download.md): Returns the content of the selected contract's invoice, credit memo, debit memo file, or usage data for Cloud Computing services. The downloadable file is available in the response body. The format of the file depends on the value of the `Accept` header. Available formats are `CSV`, `PDF`, and `JSON`.\n- [List bills for an account](https://techdocs.akamai.com/invoicing/reference/get-invoices.md): Returns invoices, credit memos, and debit memos for the current account and the selected month.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Invoices index: full category indexList bills for a contract: Returns invoices, credit memos, and debit memos for the specified contract and the selected month.Download a bill file: Returns the content of the selected contract's invoice, credit memo, debit memo file, or usage data for Cloud Computing services. The downloadable file is available in the response body. The format of the file depends on the value of the Accept header. Available formats are CSV, PDF, and JSON.List bills for an account: Returns invoices, credit memos, and debit memos for the current account and the selected month.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 7,
+      "lines": [
+        32,
+        32
+      ],
+      "raw": "## API Reference: Notifications",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Notifications",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 8,
+      "lines": [
+        34,
+        39
+      ],
+      "raw": "- [Notifications index](https://techdocs.akamai.com/invoicing/reference/notifications/llms.txt): full category index\n- [Create a notification](https://techdocs.akamai.com/invoicing/reference/post-notification.md): Creates a notification informing a set of users about new invoices, credit memos, or debit memos for a set of contracts. Each notification needs to specify a unique set of contracts. The request yields an error if the set of `contractId` values matches that of another notification.\n- [List notifications for an account](https://techdocs.akamai.com/invoicing/reference/get-notifications.md): Returns notifications for the current account. Notifications inform a set of users whenever there are changes to an invoice, credit memo, or debit memo.\n- [Get a notification](https://techdocs.akamai.com/invoicing/reference/get-notification.md): Accesses a specific notification, for example when making modifications to a specific notification.\n- [Modify a notification](https://techdocs.akamai.com/invoicing/reference/put-notification.md): Updates a notification. Any read-only members retained from a GET operation are ignored on subsequent PUTs.\n- [Remove a notification](https://techdocs.akamai.com/invoicing/reference/delete-notification.md): Deletes a notification.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Notifications index: full category indexCreate a notification: Creates a notification informing a set of users about new invoices, credit memos, or debit memos for a set of contracts. Each notification needs to specify a unique set of contracts. The request yields an error if the set of contractId values matches that of another notification.List notifications for an account: Returns notifications for the current account. Notifications inform a set of users whenever there are changes to an invoice, credit memo, or debit memo.Get a notification: Accesses a specific notification, for example when making modifications to a specific notification.Modify a notification: Updates a notification. Any read-only members retained from a GET operation are ignored on subsequent PUTs.Remove a notification: Deletes a notification.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

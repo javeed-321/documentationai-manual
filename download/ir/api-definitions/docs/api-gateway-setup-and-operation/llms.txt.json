@@ -1,0 +1,106 @@
+{
+  "slug": "api-definitions/docs/api-gateway-setup-and-operation/llms.txt",
+  "source": "https://techdocs.akamai.com/api-definitions/docs/api-gateway-setup-and-operation/llms.txt.md",
+  "url": "https://techdocs.akamai.com/api-definitions/docs/api-gateway-setup-and-operation/llms.txt",
+  "title": "API Gateway setup and operation",
+  "description": "",
+  "section": "API Definitions",
+  "kind": "api",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 2,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 1
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# API Definitions Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "API Definitions Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/api-definitions/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/api-definitions/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## Guides: API Gateway setup and operation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "Guides: API Gateway setup and operation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        8,
+        27
+      ],
+      "raw": "- [API Gateway overview](https://techdocs.akamai.com/api-definitions/docs/api-gateway-ov.md)\n- [Implement API Gateway](https://techdocs.akamai.com/api-definitions/docs/impl-api-gateway.md)\n- [Set up edge servers](https://techdocs.akamai.com/api-definitions/docs/set-up-edge-servers.md)\n- [Establish an SSL certificate in CPS](https://techdocs.akamai.com/api-definitions/docs/establish-ssl-cert-cert-prov-system.md)\n- [Add permissions to a user role](https://techdocs.akamai.com/api-definitions/docs/add-permissions-user-role.md)\n- [Create and configure a property](https://techdocs.akamai.com/api-definitions/docs/create-config-prop.md)\n- [Configure property hostname settings](https://techdocs.akamai.com/api-definitions/docs/config-props-hn-settings.md)\n- [Set up your API configuration for testing](https://techdocs.akamai.com/api-definitions/docs/setup-api-config-testing.md)\n- [Activate API Gateway on production](https://techdocs.akamai.com/api-definitions/docs/activate-api-gateway-prod.md)\n- [API versioning](https://techdocs.akamai.com/api-definitions/docs/api-versioning.md)\n- [API Gateway delivery settings](https://techdocs.akamai.com/api-definitions/docs/api-gateway-deliv-settings.md)\n- [JSON web token (JWT) validation](https://techdocs.akamai.com/api-definitions/docs/json-web-token-jwt-val.md)\n- [Cross-origin resource sharing (CORS)](https://techdocs.akamai.com/api-definitions/docs/cross-origin-resource-sharing-cors.md)\n- [Caching](https://techdocs.akamai.com/api-definitions/docs/caching.md)\n- [GraphQL caching](https://techdocs.akamai.com/api-definitions/docs/graphql-caching.md)\n- [GZIP compression](https://techdocs.akamai.com/api-definitions/docs/gzip-comp.md)\n- [Error response customization](https://techdocs.akamai.com/api-definitions/docs/err-response-custom.md)\n- [Request routing and forwarding](https://techdocs.akamai.com/api-definitions/docs/req-routing-forwarding.md)\n- [API Gateway reports](https://techdocs.akamai.com/api-definitions/docs/api-gateway-reports.md)\n- [API Gateway dashboard](https://techdocs.akamai.com/api-definitions/docs/api-gateway-dashboard.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API Gateway overviewImplement API GatewaySet up edge serversEstablish an SSL certificate in CPSAdd permissions to a user roleCreate and configure a propertyConfigure property hostname settingsSet up your API configuration for testingActivate API Gateway on productionAPI versioningAPI Gateway delivery settingsJSON web token (JWT) validationCross-origin resource sharing (CORS)CachingGraphQL cachingGZIP compressionError response customizationRequest routing and forwardingAPI Gateway reportsAPI Gateway dashboard",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}

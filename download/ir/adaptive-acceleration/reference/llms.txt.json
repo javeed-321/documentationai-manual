@@ -1,0 +1,143 @@
+{
+  "slug": "adaptive-acceleration/reference/llms.txt",
+  "source": "https://techdocs.akamai.com/adaptive-acceleration/reference/llms.txt.md",
+  "url": "https://techdocs.akamai.com/adaptive-acceleration/reference/llms.txt",
+  "title": "API Reference index",
+  "description": "full section index",
+  "section": "Adaptive Acceleration",
+  "kind": "guide",
+  "frontmatter": {},
+  "parseMode": "mdx",
+  "components": {
+    "heading": 3,
+    "blockquote": 1,
+    "boilerplate": 1,
+    "list": 2
+  },
+  "blocks": [
+    {
+      "i": 0,
+      "lines": [
+        1,
+        1
+      ],
+      "raw": "# Adaptive Acceleration Documentation",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 1,
+      "text": "Adaptive Acceleration Documentation",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 1,
+      "lines": [
+        3,
+        3
+      ],
+      "raw": "> Adaptive Acceleration syncs with ​Akamai​ real user monitoring to gather navigation and resource timing data and stores that data in a policy that's associated with your hostname. As requests for your hostname continue, policy data is gathered and reviewed to identify key resources.",
+      "kind": "blockquote",
+      "syntax": "markdown",
+      "text": "Adaptive Acceleration syncs with ​Akamai​ real user monitoring to gather navigation and resource timing data and stores that data in a policy that's associated with your hostname. As requests for your hostname continue, policy data is gathered and reviewed to identify key resources.",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 2,
+      "lines": [
+        5,
+        5
+      ],
+      "raw": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-acceleration/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "kind": "boilerplate",
+      "syntax": "markdown",
+      "text": "Fetch the complete documentation index at: https://techdocs.akamai.com/adaptive-acceleration/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.",
+      "target": {
+        "component": null,
+        "status": "drop",
+        "note": "ReadMe's injected llms.txt preamble"
+      },
+      "inline": []
+    },
+    {
+      "i": 3,
+      "lines": [
+        7,
+        7
+      ],
+      "raw": "## API Reference: API",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: API",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 4,
+      "lines": [
+        9,
+        20
+      ],
+      "raw": "- [API index](https://techdocs.akamai.com/adaptive-acceleration/reference/api/llms.txt): full category index\n- [Adaptive Acceleration API](https://techdocs.akamai.com/adaptive-acceleration/reference/api.md)\n- [API summary](https://techdocs.akamai.com/adaptive-acceleration/reference/api-summary.md)\n- [Get started](https://techdocs.akamai.com/adaptive-acceleration/reference/get-started.md)\n- [Rate limiting](https://techdocs.akamai.com/adaptive-acceleration/reference/rate-limiting.md)\n- [Errors](https://techdocs.akamai.com/adaptive-acceleration/reference/errors.md)\n- [401](https://techdocs.akamai.com/adaptive-acceleration/reference/401.md)\n- [403](https://techdocs.akamai.com/adaptive-acceleration/reference/403.md)\n- [404](https://techdocs.akamai.com/adaptive-acceleration/reference/404.md)\n- [405](https://techdocs.akamai.com/adaptive-acceleration/reference/405.md)\n- [406](https://techdocs.akamai.com/adaptive-acceleration/reference/406.md)\n- [503](https://techdocs.akamai.com/adaptive-acceleration/reference/503.md)",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "API index: full category indexAdaptive Acceleration APIAPI summaryGet startedRate limitingErrors401403404405406503",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    },
+    {
+      "i": 5,
+      "lines": [
+        22,
+        22
+      ],
+      "raw": "## API Reference: Adaptive Acceleration report",
+      "kind": "heading",
+      "syntax": "markdown",
+      "depth": 2,
+      "text": "API Reference: Adaptive Acceleration report",
+      "target": {
+        "component": null,
+        "status": "direct"
+      },
+      "inline": []
+    },
+    {
+      "i": 6,
+      "lines": [
+        24,
+        26
+      ],
+      "raw": "- [Adaptive Acceleration report index](https://techdocs.akamai.com/adaptive-acceleration/reference/adaptive-acceleration-report/llms.txt): full category index\n- [Get a property report](https://techdocs.akamai.com/adaptive-acceleration/reference/get-property.md): Gets the current Adaptive Acceleration report for a specific Ion property.\n- [Reset a property report](https://techdocs.akamai.com/adaptive-acceleration/reference/post-property-reset.md): Resets the report Adaptive Acceleration uses to define a server push and preconnect assets. Adaptive Acceleration reviews current real-user monitoring data to reestablish this report.",
+      "kind": "list",
+      "syntax": "markdown",
+      "text": "Adaptive Acceleration report index: full category indexGet a property report: Gets the current Adaptive Acceleration report for a specific Ion property.Reset a property report: Resets the report Adaptive Acceleration uses to define a server push and preconnect assets. Adaptive Acceleration reviews current real-user monitoring data to reestablish this report.",
+      "attrs": {
+        "ordered": "false"
+      },
+      "target": {
+        "component": null,
+        "status": "transform",
+        "note": "normalise `*`/`+` markers to `-`"
+      },
+      "inline": []
+    }
+  ]
+}
