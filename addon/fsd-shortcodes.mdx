@@ -1,0 +1,194 @@
+---
+title: Shortcodes & Calendar
+description: Embed trip fixed starting dates and a departure calendar widget anywhere on your site using copy-and-paste shortcodes with customizable display attributes.
+---
+
+## Display trip dates with two shortcodes on any page, post, or widget area.
+
+## Display All Fixed Starting Dates
+
+Use the shortcode ` [WTE_TRIPS_FIXED_STARTING_DATES] ` to show a complete calendar of all available trips, organized by months and years, so customers can browse departures and find available travel dates.
+
+<CodeGroup tabs="Shortcode">
+
+```text
+[WTE_TRIPS_FIXED_STARTING_DATES]
+```
+
+</CodeGroup>
+
+<Callout kind="info">
+
+A common setup is a dedicated **Upcoming Departures** page that lists every fixed starting date across all trips in one place.
+
+</Callout>
+
+## Trip Departure Calendar
+
+Use the shortcode ` [WPTravelEngine_Trip_Departure_Calendar] ` to display upcoming trip departure dates in the layout configured in your global settings, or override that layout with shortcode attributes.
+
+<CodeGroup tabs="Basic,Advanced">
+
+```text
+[WPTravelEngine_Trip_Departure_Calendar]
+```
+
+```text
+[WPTravelEngine_Trip_Departure_Calendar layout="list-one" display_contact_us="yes" display_available_seats="yes" display_only_booked_trips="yes" display_available_trips_only="yes" no_of_trips="24" exclude="6380,6783" include="6380,6783" default_year="20xx" default_month="all"]
+```
+
+</CodeGroup>
+
+### Calendar Shortcode Attributes
+
+<ParamField path="layout" param-type="string" required="false">
+Accepts `grid`, `list-one`, or `list-two`. Forces a specific layout for this page.
+</ParamField>
+
+<ParamField path="display_contact_us" param-type="string" required="false">
+Accepts `yes` or `no`. Set to `yes` to display the Contact Us button.
+</ParamField>
+
+<ParamField path="display_available_seats" param-type="string" required="false">
+Accepts `yes` or `no`. Set to `yes` to show Spots Left or Sold Out badges.
+</ParamField>
+
+<ParamField path="display_only_booked_trips" param-type="string" required="false">
+Accepts `yes` or `no`. Set to `yes` to show only trips with at least one confirmed booking.
+</ParamField>
+
+<ParamField path="display_available_trips_only" param-type="string" required="false">
+Accepts `yes` or `no`. Set to `yes` to hide fully booked trips.
+</ParamField>
+
+<ParamField path="no_of_trips" param-type="integer" required="false">
+Accepts any number from `3` to `48`. Controls how many trips load initially.
+</ParamField>
+
+<ParamField path="exclude" param-type="string" required="false">
+Accepts a comma-separated list of trip IDs to leave out, such as `6380,6783`.
+</ParamField>
+
+<ParamField path="include" param-type="string" required="false">
+Accepts a comma-separated list of trip IDs to display exclusively, such as `6380,6783`.
+</ParamField>
+
+<ParamField path="default_year" param-type="string" required="false">
+Use `20xx` for the current year, or a specific year such as `2027`.
+</ParamField>
+
+<ParamField path="default_month" param-type="string" required="false">
+Use `all` for all months, or a month number from `1` to `12`, such as `1` for January or `6` for June.
+</ParamField>
+
+<Callout kind="info">
+
+If you provide an attribute but leave its value empty, such as `no_of_trips=""`, the calendar falls back to the value set in global settings.
+
+</Callout>
+
+## Finding the Trip ID
+
+Find the trip ID from the Trips list in WordPress, then use it in the `include` or `exclude` shortcode attributes.
+
+<Steps>
+  <Step title="Open Trips in the WordPress dashboard">
+
+Go to **Trips** in your WordPress dashboard.
+
+  </Step>
+  <Step title="Hover over the trip title">
+
+Move your cursor over the trip you want to target.
+
+  </Step>
+  <Step title="Check the browser link preview">
+
+Look at the URL preview in the bottom-left corner of your browser.
+
+  </Step>
+  <Step title="Identify the trip ID">
+
+Find the part of the link that looks like `post=1234`. The number after `post=` is the trip ID.
+
+  </Step>
+  <Step title="Paste the ID into the shortcode">
+
+Copy the trip ID and add it to `include` or `exclude` as a comma-separated list with no spaces.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+You only need the trip ID when you want to use the `include` or `exclude` attributes.
+
+</Callout>
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Trip shows seats available, but users cannot book">
+
+Check whether the package seats plus the date seats are lower than the total set in General Settings. The system uses the smaller number as the booking limit.
+
+  </Expandable>
+
+  <Expandable title="Dates not showing on the trip page">
+
+Make sure the FSD section is enabled in global settings. Then confirm that the trip has active dates added.
+
+  </Expandable>
+
+  <Expandable title="Overbooking happens">
+
+Set **Total Traveller Seats** in General Settings so the plugin has a daily booking ceiling. Package seats and time slot seats should not exceed that daily cap.
+
+  </Expandable>
+
+  <Expandable title="Expired trips still visible">
+
+Set the **Trip Expiry Date** in the trip editor under **Date Settings**.
+
+  </Expandable>
+</ExpandableGroup>
+
+## FAQ
+
+<ExpandableGroup>
+  <Expandable title="Can I run a trip at multiple times in one day?">
+
+Yes. Add multiple time slots for the same date.
+
+  </Expandable>
+
+  <Expandable title="What happens when all seats are sold out?">
+
+The system automatically marks the trip as Sold Out.
+
+  </Expandable>
+
+  <Expandable title="How do repeating schedules stop?">
+
+Stop a repeating schedule with an end date or a repeat limit.
+
+  </Expandable>
+
+  <Expandable title="Can I list all trips with fixed dates on one page?">
+
+Yes. Use the shortcode ` [WTE_TRIPS_FIXED_STARTING_DATES] `.
+
+  </Expandable>
+
+  <Expandable title="What happens if I leave an attribute out of the Departure Calendar shortcode?">
+
+If you leave out an attribute or provide an empty value, the calendar falls back to the global settings value for that option.
+
+  </Expandable>
+
+  <Expandable title="How do I find a trip's ID for the include/exclude shortcode attributes?">
+
+Go to **WordPress Dashboard > Trips** and hover over the trip title. The link preview contains `post=1234`, and the number after `post=` is the trip ID.
+
+  </Expandable>
+</ExpandableGroup>

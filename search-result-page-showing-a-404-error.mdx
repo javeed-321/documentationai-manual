@@ -1,0 +1,34 @@
+---
+title: 'Fix: Search Result Page Showing a 404 Error'
+description: >-
+  Resolve a 404 error on the trip search result page by switching your WordPress
+  Permalink structure to Post name.
+type: guide
+---
+If your search result page returns a **404 error**, this is typically caused by the permalink structure set in WordPress.
+
+## Solution
+
+<Steps title-type="h3">
+  <Step title="Open your Permalink settings">
+    Go to **Settings → Permalinks** in your WordPress admin dashboard.
+  </Step>
+
+  <Step title="Switch to the Post name structure">
+    If your permalink structure is set to **Plain** or another option, switch it to **Post name**.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2023/03/permalinks-set-1024x518.png" width="1024" height="518" alt="WordPress Permalink settings page with the Post name option selected" />
+  </Step>
+
+  <Step title="Save your changes">
+    Click **Save Changes** at the bottom of the page.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  If **Post name** is already selected, click **Save Changes** anyway and check whether the issue persists. Re-saving the permalink structure regenerates your site's rewrite rules, which often resolves the error on its own.
+</Callout>
+
+## Still having trouble?
+
+Contact the [WP Travel Engine support team](https://wptravelengine.com/support-ticket/) for further assistance.

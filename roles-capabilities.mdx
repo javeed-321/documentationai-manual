@@ -1,0 +1,279 @@
+---
+title: Set Up User Roles and Permissions in WP Travel Engine
+description: >-
+  Decide exactly what each person on your team can view or manage inside WP
+  Travel Engine, from bookings and enquiries to trips, coupons, and settings, so
+  everyone has the right level of access.
+type: guide
+---
+## Introduction
+
+If more than one person works on your travel site, you do not want everyone to have the same access.
+
+For example, you might run a multi-day trekking company and hire someone to handle bookings. You want that person to see and manage bookings. You do not want them changing your trip prices or payment settings.
+
+Roles and Capabilities lets you decide exactly what each person can view or manage inside WP Travel Engine, area by area. Once you know where to look, setting this up is straightforward.
+
+## Key Features & Benefits
+
+Here is what this feature helps you do on a day-to-day tour business site.
+
+| Feature                              | Benefit                                                                                                                                  |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Role-based access control            | Give each team member exactly the access they need, from a quick look at bookings to full control, without ever sharing your admin login |
+| Separate view and manage permissions | Let someone check on enquiries or bookings without giving them the power to change or delete anything                                    |
+| Protected settings and reports       | Keep pricing rules, payment setup, and your Analytics Dashboard visible only to the people you choose                                    |
+| Works with roles you already use     | Apply these permissions to your existing WordPress roles, or create a new one just for your booking staff                                |
+| No impact on your own access         | Administrators and Editors keep full access automatically, so nothing changes for you when you turn this on                              |
+
+Once you know the main benefits, the next step is making sure you have what you need before you begin.
+
+## What You'll Need Before You Start
+
+<Callout kind="info" collapsed="false">
+  ### What you'll need before you start
+
+  - WP Travel Engine is installed, activated, and updated to the latest version.
+  - The free **Members** plugin is installed and activated.&#x20;
+</Callout>
+
+## Installing the Members Plugin
+
+WP Travel Engine does not have its own permissions screen. Instead, it adds its permissions into **Members**, a free WordPress plugin built for managing user roles. A role is a way to group people who should have the same permissions.
+
+Before you start clicking around, it helps to know where you are working. Your **WordPress dashboard** is the admin area of your WordPress site, where you manage everything. The **sidebar** is the left-hand menu in your WordPress dashboard.
+
+This step matters because WP Travel Engine only shows its permission settings inside the Members plugin. Once Members is installed, you will have a place to control who can access bookings, trips, enquiries, and more.
+
+<Steps>
+  <Step title="Open the plugin installer" title-type="p">
+    Go to your WordPress Dashboard. In the left-hand menu, click **Plugins**, then **Add New Plugin**.
+  </Step>
+
+  <Step title="Search for Members" title-type="p">
+    Use the search box to look for **Members** by MemberPress.
+  </Step>
+
+  <Step title="Install and activate the plugin" title-type="p">
+    Click **Install Now**. When the installation finishes, click **Activate**.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787207541317-yd0kldzacvq-role-capabilities-members-plugin.role-capabilities-members-plugin?fm=auto&auto=compress%2Cformat" width="729" height="622" alt="" />
+
+<Callout kind="alert" collapsed="false">
+  Make sure you install the plugin called [**Members**](https://wordpress.org/plugins/members/), by Blair Williams. Several plugins in the WordPress directory have similar names, so check the author before installing.
+</Callout>
+
+Now that Members is active, it is worth checking that WP Travel Engine is connected to it properly.
+
+## Verification
+
+This check confirms everything is connected the way it should. It only takes a minute.
+
+1. **Check for the Members menu:**
+   Go to your WordPress Dashboard and look at the left-hand menu. You should now see a new **Members** menu as its own item, separate from **Users**.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787210241812-8ho1pdt3y16-role-capabilities-members-tab-wpdashboard.role-capabilities-members-tab-wpdashboard?fm=auto&auto=compress%2Cformat" width="1890" height="730" alt="" />
+
+2. **Open a role and look for the WP Travel Engine tab:**
+   Click **Members** > **Roles**. Open any role. Then check for a **WP Travel Engine** tab alongside the other capability groups. It is marked with a small airplane icon.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787211936775-8b5spur8b64-role-capabilities-wp-travel-engine.role-capabilities-wp-travel-engine?fm=auto&auto=compress%2Cformat" width="1619" height="761" alt="" />
+
+<Callout kind="tip" collapsed="false">
+  If the **Members** menu does not appear, deactivate and reactivate the Members plugin from the **Plugins** screen.
+</Callout>
+
+If you can see both the **Members** menu and the **WP Travel Engine** tab, you are ready to set permissions.
+
+## Understanding WP Travel Engine's Permissions
+
+Once Members is active, WP Travel Engine groups permissions by the part of your travel business they control.
+
+| Area      | What "View" allows                             | What "Manage" allows              |
+| --------- | ---------------------------------------------- | --------------------------------- |
+| Trips     | See the trip list and open individual trips    | Create, edit, and delete trips    |
+| Bookings  | See the bookings list and open booking details | Create, edit, and delete bookings |
+| Enquiries | See customer enquiries                         | Respond to and manage enquiries   |
+| Customers | See customer records                           | Edit and manage customer records  |
+| Coupons   | See existing discount coupons                  | Create, edit, and delete coupons  |
+
+Three more permissions stand on their own, without a separate View and Manage split:
+
+- **Settings: Manage** access to WP Travel Engine's settings pages.
+- **Analytics: View** access to the Analytics Dashboard.
+- **Logs: View** access to the activity logs.
+
+If you hire someone to check the bookings list every morning and flag anything that needs attention, give them **View** access to **Bookings**. If you also want them to confirm or cancel bookings, give them **Manage** access instead.
+
+<Callout kind="info" collapsed="false">
+  Turning on **Manage** for an area automatically includes **View** for that same area. You do not need to tick both.
+</Callout>
+
+Now that you know what each permission controls, you can choose what a role should be allowed to do.
+
+## Setting Up Permissions for a Role
+
+This is the part where you decide exactly what each role can do. You can edit a role you already use or create a new one for a staff member such as a booking agent.
+
+<Steps>
+  <Step title="Open the Roles screen" title-type="p">
+    Go to your WordPress Dashboard and click **Members** > **Roles** in the left-hand menu.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787211758337-ham7j99r2jp-role-capabilities-members-roles-list.role-capabilities-members-roles-list?fm=auto&auto=compress%2Cformat" width="1859" height="662" alt="" />
+  </Step>
+
+  <Step title="Choose an existing role or create a new one" title-type="p">
+    To edit an existing role, click its name in the list. To create a new role, click **Add New Role** above the list.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787213910947-reliodiuf6q-role-capabilities-add-new-role.role-capabilities-add-new-role?fm=auto&auto=compress%2Cformat" width="1584" height="738" alt="" />
+  </Step>
+
+  <Step title="Name the new role if you are creating one" title-type="p">
+    If you are adding a new role, type a name into the **Role Name** field at the top of the screen. For example, you might use **Booking Agent**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787214052537-aus5fgvkb3-role-capabilities-new-role-name.role-capabilities-new-role-name?fm=auto&auto=compress%2Cformat" width="1610" height="713" alt="" />
+  </Step>
+
+  <Step title="Open the WP Travel Engine permissions" title-type="p">
+    The screen opens on the **General** tab by default. Scroll down the list of capability group tabs until you reach **WP Travel Engine**, then click it.
+  </Step>
+
+  <Step title="Choose what this role can access" title-type="p">
+    Tick the boxes for the areas this role should access. Choose **View** for read-only access. Choose **Manage** for full control of that area.
+  </Step>
+
+  <Step title="Save the role" title-type="p">
+    Scroll back up and confirm the role name is correct. Then scroll to the bottom of the screen and click **Add Role**. If you are editing an existing role, click **Update Role**.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787214414178-g220lo2kdn-role-capabilities-grant-user-roles.role-capabilities-grant-user-roles?fm=auto&auto=compress%2Cformat" width="1890" height="890" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  If you are setting up a **Booking Agent** role, a common setup is:
+
+  - Tick **Manage** next to **Bookings** and **Enquiries** so they can handle customer questions and booking changes.
+  - Tick **View** next to **Customers** so they can look up customer details but not edit them.
+  - Leave **Trips**, **Coupons**, **Settings**, **Analytics**, and **Logs** unchecked.
+
+  This works well for a trekking company, day tour operator, or group tour business where one staff member handles incoming bookings but should not change trip setup or pricing.
+</Callout>
+
+<Callout kind="tip" collapsed="false">
+  Changes take effect immediately. Ask the team member to refresh their dashboard, or log out and back in, to see the update.
+</Callout>
+
+Once the role is ready, the next step is to create a login for the person who will use it.
+
+## Creating a User and Assigning the Role
+
+Now that the role is ready, you can create a login for your staff member and assign that role to them.
+
+<Steps>
+  <Step title="Open the Add User screen" title-type="p">
+    Go to your WordPress Dashboard and click **Users** > **Add User**.
+  </Step>
+
+  <Step title="Enter the staff member's details" title-type="p">
+    Fill in their **Username**, **Email**, and the rest of their details as you normally would.
+  </Step>
+
+  <Step title="Choose the correct role" title-type="p">
+    Scroll down to the **Role** dropdown and select the role you created earlier, such as **Booking Agent**.
+  </Step>
+
+  <Step title="Create the user account" title-type="p">
+    Click **Add User** at the bottom of the screen.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787216148338-t618aq31eg-role-capabilities-add-user.role-capabilities-add-user?fm=auto&auto=compress%2Cformat" width="692" height="833" alt="" />
+
+Once the account is created, it helps to know what that staff member will see when they log in.
+
+## What the Booking Agent Sees on Their Dashboard
+
+When this account logs in, the dashboard looks much simpler than yours.
+
+In the left-hand menu, they will only see the **WP Travel Engine** menu with **Bookings** and its **Enquiries** and **Customers** submenus. They will not see **Trips**, **Coupons**, **Settings**, **Analytics**, or **Logs**.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787219218051-3463g3onbza-role-capabilities-user-dashboard1.role-capabilities-user-dashboard1?fm=auto&auto=compress%2Cformat" width="1911" height="419" alt="" />
+
+Inside **Bookings**, they can open the bookings list and manage individual bookings and enquiries because they have Manage access there. Because their **Customers** access is View only, they can look up customer details but they will not see options to edit or delete a customer record.
+
+That smaller menu is exactly what you want. It keeps your staff focused on their work and away from areas they do not need.
+
+## Good to Know
+
+<Callout kind="tip" collapsed="false">
+  **Administrators** and **Editors** already have full access automatically. Activating WP Travel Engine grants these two roles every permission by default, so your own access and your existing team's access will not change unless you deliberately remove something.
+</Callout>
+
+<Callout kind="tip" collapsed="false">
+  If a box is unchecked, that role will not get access to that area. This is true even if access was granted somewhere else for the same role. In other words, a denial always wins.
+</Callout>
+
+<Callout kind="tip" collapsed="false">
+  Related menu items appear automatically in the left-hand menu. **Enquiries**, **Customers**, **Coupons**, **Settings**, **Analytics**, and **Logs** sit under the **Bookings** menu in your WordPress dashboard. If you grant access to any of these without granting **Bookings** access directly, WP Travel Engine still shows the **Bookings** menu so that role can reach what they were given.
+</Callout>
+
+<Callout kind="tip" collapsed="false">
+  People with **View** access only for **Trips** or **Bookings** will not see the **Add New** button for that area. They can look through records, but they cannot create new ones.
+</Callout>
+
+If something does not look right, the fixes are usually quick.
+
+## Troubleshooting
+
+### The Members menu isn't showing up in my sidebar
+
+Deactivate and reactivate the Members plugin from the **Plugins** screen. Then check your sidebar again. If it still does not appear, make sure WP Travel Engine is active as well.
+
+### I can't find the WP Travel Engine tab when editing a role
+
+This tab only appears if both WP Travel Engine and the Members plugin are active. Check that both are turned on in your **Plugins** screen. If both are active and the tab is still missing, deactivate and reactivate **Members** to refresh the connection.
+
+### My staff member says their permissions haven't changed
+
+Ask them to log out of WordPress and log back in. Changes take effect right away, but sometimes the browser needs a fresh login to catch up.
+
+### My staff member can see things they shouldn't be able to
+
+Go back to **Members** > **Roles** and open the role. Double-check that the boxes for areas they should not access are unchecked. Remember that if a box is unchecked, that is a denial, and denials always win over any other setting.
+
+### My staff member can't see the Add New button for trips or bookings
+
+This happens when someone has **View** access only. View access lets them see the list and open records, but not create new ones. If they need to create trips or bookings, change their role to **Manage** access for that area.
+
+## Frequently Asked Questions
+
+### Do I really need the Members plugin?
+
+Yes. WP Travel Engine adds its permission settings into the Members plugin rather than building a separate screen. Members is free and works well, so it is the recommended way to manage who can access what.
+
+### Will any of this affect my own access as the site administrator?
+
+No. Administrators and Editors automatically get full access to everything in WP Travel Engine. Setting up roles for your staff does not change what you can see or do.
+
+### Can I give someone access to bookings but not trips?
+
+Yes. This is one of the most common setups. Tick the boxes for **Bookings** and leave **Trips** unchecked. They will be able to manage bookings without ever seeing your trip setup.
+
+### What happens if I give someone View access but not Manage access?
+
+They can see the list and open individual records, but they will not see the **Add New**, **Edit**, or **Delete** buttons. This works well for someone who only needs to check on things, such as a team member reviewing new enquiries for your day tours each morning.
+
+### Can I use a role that already exists in WordPress, like Editor or Author?
+
+Yes. You can edit any existing WordPress role and add WP Travel Engine permissions to it. You do not have to create a new one from scratch.
+
+### If I change someone's permissions later, do they need to do anything?
+
+No. Changes take effect immediately. But if they are logged in at the time, ask them to refresh their browser or log out and back in so they see the updated menu.
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at [**our support page**](https://wptravelengine.com/support-ticket/) and we'll get you sorted.
+</Callout>
+

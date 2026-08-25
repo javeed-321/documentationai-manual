@@ -1,0 +1,127 @@
+---
+title: Email Personalization Tags
+description: >-
+  Reference for the dynamic tags that insert booking, trip, and customer data
+  into WP Travel Engine email templates.
+type: reference
+---
+Email personalization tags automatically insert dynamic booking, trip, and customer information into your email templates. Instead of manually writing details like a customer's name or trip dates, you can drop in a tag — when the email sends, WP Travel Engine replaces it with the actual booking data.
+
+## Where can you use these tags?
+
+You can use email personalization tags inside any predefined or custom email template in WP Travel Engine.
+
+<Steps title-type="h3">
+  <Step title="Open the Notifications settings">
+    Go to **WP Travel Engine → Settings → Emails → Notifications**.
+  </Step>
+
+  <Step title="Open an email template">
+    Select the email template you want to edit.
+  </Step>
+
+  <Step title="Open the Personalization dropdown">
+    Inside the email editor, locate the **Personalization** dropdown.
+  </Step>
+
+  <Step title="Insert a tag">
+    Click the dropdown to view available tags and insert one into your email subject or content.
+  </Step>
+</Steps>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/02/image-4-scaled.png" width="1024" height="597" alt="Personalization dropdown inside the WP Travel Engine email editor" />
+
+For example, this content:
+
+```text
+Hi {customer_first_name},
+Thank you for booking {booked_trip_name}.
+Your trip starts on {trip_start_date}.
+```
+
+sends with the customer's real name and trip details filled in automatically.
+
+### Important guidelines
+
+<Callout kind="alert">
+  Tags must be written exactly as shown, including the curly brackets `{ }`. They're case-sensitive — don't add spaces inside the brackets or modify the tag name.
+</Callout>
+
+## Available email tags
+
+| Tag                           | Description                                                                                                 |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `{sitename}`                  | Your site name                                                                                              |
+| `{customer_first_name}`       | The customer's first name                                                                                   |
+| `{customer_full_name}`        | The customer's full name                                                                                    |
+| `{customer_last_name}`        | The customer's last name                                                                                    |
+| `{customer_email}`            | The customer's email address                                                                                |
+| `{ip_address}`                | The buyer's IP address                                                                                      |
+| `{site_admin_email}`          | The site admin email address                                                                                |
+| `{password_reset_link}`       | The link to reset the password                                                                              |
+| `{booked_trip_name}`          | The name of the trip booked                                                                                 |
+| `{booking_id}`                | The booking order ID                                                                                        |
+| `{payment_id}`                | The payment ID of the trip                                                                                  |
+| `{trip_url}`                  | The trip URL for each booked trip                                                                           |
+| `{trip_code}`                 | The trip code for each booked trip                                                                          |
+| `{billing_address}`           | The buyer's billing address                                                                                 |
+| `{city}`                      | The buyer's city                                                                                            |
+| `{country}`                   | The buyer's country                                                                                         |
+| `{booking_url}`               | The trip booking link                                                                                       |
+| `{tprice}`                    | The trip price                                                                                              |
+| `{traveler_data}`             | The traveler details: traveler details and emergency contact details                                        |
+| `{payment_method}`            | Payment method used to check out                                                                            |
+| `{trip_booking_details}`      | The trip booking and payment details                                                                        |
+| `{trip_booking_summary}`      | The trip booking summary                                                                                    |
+| `{trip_payment_details}`      | The trip payment details                                                                                    |
+| `{trip_booked_date}`          | The date and time when the trip was booked                                                                  |
+| `{trip_start_date}`           | The start date of the trip                                                                                  |
+| `{trip_end_date}`             | The end date of the trip                                                                                    |
+| `{no_of_travellers}`          | The total number of travelers                                                                               |
+| `{trip_total_price}`          | The total price of the trip                                                                                 |
+| `{trip_paid_amount}`          | The amount paid by the customer                                                                             |
+| `{trip_due_amount}`           | The due amount for the trip                                                                                 |
+| `{billing_details}`           | The billing details filled by the customer on the checkout page                                             |
+| `{traveller_details}`         | The traveler's details filled by the customer on the checkout page                                          |
+| `{emergency_details}`         | The emergency contact details filled by the customer on the checkout template                               |
+| `{additional_note}`           | The additional note filled by the customer on the checkout template                                         |
+| `{bank_details}`              | Your configured bank account details, included in the customer receipt email when Bank Transfer is selected |
+| `{check_payment_instruction}` | Instructions to make a check payment                                                                        |
+| `{trip_extra_fee}`            | The extra fee for the trip                                                                                  |
+
+## Newly introduced tags
+
+The following tags were introduced to improve the clarity and structure of booking emails. We recommend using these tags in new email templates:
+
+- `{trip_booking_details}`
+- `{trip_booking_summary}`
+- `{trip_payment_details}`
+- `{trip_booked_date}`
+- `{trip_start_date}`
+- `{trip_end_date}`
+- `{trip_total_price}`
+- `{trip_paid_amount}`
+- `{trip_due_amount}`
+- `{no_of_travellers}`
+
+## Deprecated tags and replacements
+
+<Callout kind="info">
+  Update older templates using the replacements below.
+</Callout>
+
+| Deprecated tag        | Replaced with            |
+| --------------------- | ------------------------ |
+| `{booking_details}`   | `{trip_booking_details}` |
+| `{name}`              | `{customer_first_name}`  |
+| `{fullname}`          | `{customer_full_name}`   |
+| `{user_email}`        | `{customer_email}`       |
+| `{tdate}`             | `{trip_start_date}`      |
+| `{date}`              | `{trip_booked_date}`     |
+| `{traveler}`          | `{no_of_travelers}`      |
+| `{no_of_travellers}`  | `{no_of_travelers}`      |
+| `{price}`             | `{trip_paid_amount}`     |
+| `{total_cost}`        | `{trip_total_price}`     |
+| `{due}`               | `{trip_due_amount}`      |
+| `{traveler_data}`     | `{traveler_details}`     |
+| `{traveller_details}` | `{traveler_details}`     |

@@ -1,0 +1,146 @@
+---
+title: PayPal Express Checkout Payment Gateway
+description: >-
+  Install and configure the PayPal Express Checkout Payment Gateway addon,
+  including Client ID and Secret setup, card payment options, and manual payment
+  capture.
+type: guide
+---
+## Overview
+
+The [PayPal Express Checkout Payment Gateway addon](https://wptravelengine.com/plugins/paypal-express-checkout-payment-gateway/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) lets you accept trip and tour payments through PayPal Express Checkout. It provides a faster, secure, seamless checkout experience for your customers while ensuring reliable payment processing for your travel bookings.
+
+This guide walks you through addon installation, setup, and initial configuration. This integration helps travelers pay for trips in real time while you enjoy a seamless, reliable transaction process.
+
+## Prerequisites
+
+Before you begin using PayPal Express with WP Travel Engine, make sure you have:
+
+- Installed and activated the WP Travel Engine plugin.
+- Purchased and installed the [PayPal Express Checkout Payment Gateway addon](https://wptravelengine.com/plugins/paypal-express-checkout-payment-gateway/).
+
+<Callout kind="info">
+  See [how to activate the Pro addon license key](https://docs.wptravelengine.com/article/activate-pro-addon-license-key/) for instructions on installing the addon and activating your license key.
+</Callout>
+
+## How to enable the PayPal Express Checkout Payment Gateway
+
+<Steps title-type="h3">
+  <Step title="Open your WordPress dashboard">
+    Go to your WordPress Dashboard.
+  </Step>
+
+  <Step title="Navigate to Payment settings">
+    Navigate to **WP Travel Engine > Settings > Payment > General**.
+  </Step>
+
+  <Step title="Enable PayPal Express">
+    Under the list of payment gateways, locate **Paypal Express** and check the box to enable it.
+  </Step>
+
+  <Step title="Save your changes">
+    Click **Save Settings** at the bottom of the page.
+  </Step>
+</Steps>
+
+<Callout kind="info">
+  You can enable PayPal Express alongside other payment options, such as Stripe or Bank Transfer, if you want to offer travelers multiple choices.
+</Callout>
+
+## Configuring the PayPal Express Checkout gateway
+
+Navigate to **WP Travel Engine > Settings > Payments > PayPal Express** to configure the main settings.
+
+<ParamField name="Client ID" param-type="string" required="true">
+  Your PayPal Express Client ID.
+</ParamField>
+
+<ParamField name="PayPal Secret" param-type="string" required="true">
+  Your PayPal Express Secret Key.
+</ParamField>
+
+<ParamField name="Show Card Payment Option" param-type="boolean" required="false">
+  Displays the **Pay with Card** button on the checkout page. When enabled, customers who choose PayPal Express Checkout as their payment method can also pay directly using a debit or credit card, where PayPal supports it.
+</ParamField>
+
+Click **Save Settings** once you've entered your credentials.
+
+## Manual payment capture (if automatic capture fails)
+
+In rare cases, a payment made through PayPal Express Checkout may not be automatically captured by your website, even though the traveler completed the payment on their end. When this happens, WP Travel Engine provides a **Capture Manually** option inside the booking dashboard so you can capture the payment yourself.
+
+### When does the Capture Manually button appear?
+
+The Capture Manually button appears when:
+
+- A traveler successfully completes payment through PayPal Express Checkout, but
+- The automatic payment capture doesn't complete successfully, and
+- The payment status remains **Pending** in the booking.
+
+This can happen due to temporary communication issues between your website and PayPal.
+
+### How to use it
+
+<Steps title-type="h4">
+  <Step title="Open Bookings">
+    Navigate to **WP Travel Engine → Bookings**.
+  </Step>
+
+  <Step title="Find the pending booking">
+    Open the booking where the payment status is Pending.
+  </Step>
+
+  <Step title="Open the Payment tab">
+    Go to the **Payment** tab.
+  </Step>
+
+  <Step title="Capture the payment">
+    Click **Capture Manually**. WP Travel Engine attempts to capture the payment from PayPal and updates the booking payment status accordingly.
+  </Step>
+</Steps>
+
+### When should you use it?
+
+Use Capture Manually when:
+
+- The traveler confirms the payment was completed.
+- PayPal shows that the payment was sent or authorized.
+- The booking in WP Travel Engine still shows the payment as Pending.
+
+After a successful capture, the payment is recorded on the booking and reflected in the Payment Summary.
+
+## Troubleshooting
+
+<Expandable title="PayPal Express not showing">
+  Make sure the PayPal Express Checkout addon is activated and enabled under **WP Travel Engine > Settings > Payments > General**.
+</Expandable>
+
+<Expandable title="Invalid Client ID or Secret">
+  Verify that you've copied the Client ID and PayPal Secret correctly from your PayPal Developer account. Make sure there are no extra spaces before or after the credentials, then save the settings again.
+</Expandable>
+
+<Expandable title="Payment stuck in Pending">
+  Open the booking and click **Capture Manually** from the Payment tab after confirming the payment was completed in PayPal.
+</Expandable>
+
+<Expandable title="Capture Manually button missing">
+  This button only appears when automatic payment capture fails for an authorized PayPal payment.
+</Expandable>
+
+<Expandable title="Pay with Card option not showing">
+  Enable **Show Card Payment Option** in the PayPal Express settings. Availability also depends on PayPal and the customer's region.
+</Expandable>
+
+## Frequently asked questions
+
+<Expandable title="Do I need a PayPal Express account to use this addon?">
+  Yes. You must have a verified PayPal Express account to accept payments through this addon.
+</Expandable>
+
+<Expandable title="Can I use PayPal Express in test mode?">
+  Yes. You can test your checkout process using a test Client ID and Secret from PayPal Express without processing real payments.
+</Expandable>
+
+<Expandable title="Where can I find my PayPal Client ID and Secret?">
+  You can obtain your Client ID and Secret from your PayPal Developer account after creating a PayPal application.
+</Expandable>

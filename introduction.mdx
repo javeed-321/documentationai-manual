@@ -1,9 +1,106 @@
 ---
-'0': H
-'1': e
-'2': l
-'3': l
-'4': o
+title: Introduction to WP Travel Engine
+description: Discover WP Travel Engine, a comprehensive WordPress plugin for creating and managing travel booking websites with features for trip itineraries, customer portals, and pro addons.
 ---
-<div className="rm-slider"><Image src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=250&q=80" alt="A tropical ocean cove." caption=" " /><Image src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=250&q=80" alt="A flock of birds at dusk." caption=" " /><Image src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=250&q=80" alt="A manicured hotel beach." caption=" " /></div>
 
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+WP Travel Engine is a powerful WordPress plugin that lets you create professional travel booking websites. You can build detailed trip pages with itineraries, pricing, galleries, and booking forms. It handles everything from trip management to customer portals, making it easy to run a travel business online.
+
+Key benefits include customizable designs, seamless booking integration, and pro addons for advanced features like seat allocation and social login. Whether you manage tours, adventures, or packages, WP Travel Engine streamlines your workflow while delivering great user experiences.
+
+## Key Features
+
+<Columns cols={3}>
+  <Card title="Trip Management" icon="map" href="/quickstart">
+    Create trips with general info, itineraries, pricing, and galleries. Manage bookings and capacities effortlessly.
+  </Card>
+  <Card title="Customer Portal" icon="users" href="/authentication">
+    Provide user dashboards for booking history, social login, and personalized experiences.
+  </Card>
+  <Card title="Design Customization" icon="palette" href="#">
+    Use blocks, patterns, and templates to match your brand. Customize layouts without coding.
+  </Card>
+</Columns>
+
+## Quick Start
+
+<Callout kind="info">
+  Ensure you have WordPress `>=5.0` and PHP `>=7.4`. Basic hosting with MySQL support works best.
+</Callout>
+
+Follow these steps to get WP Travel Engine running in minutes.
+
+<Steps>
+  <Step title="Install the Plugin" icon="download">
+    Choose your preferred method.
+
+    <Tabs>
+      <Tab title="WordPress Admin" icon="monitor">
+        1. Go to **Plugins > Add New**.
+        2. Upload the `wp-travel-engine.zip` file.
+        3. Click **Install Now** then **Activate**.
+      </Tab>
+      <Tab title="WP-CLI" icon="terminal">
+````bash
+wp plugin install wp-travel-engine.zip --activate
+````
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Create Your First Trip" icon="plus">
+    Navigate to **Trips > Add New** in your admin dashboard.
+
+    Fill in:
+    - General info (title, description)
+    - Date and price
+    - Itinerary tabs
+
+    Publish the trip.
+  </Step>
+  <Step title="Display Trips" icon="eye">
+    Add this shortcode to any page or post:
+
+````php
+[wpte_trip_search]
+````
+
+    Or use Gutenberg blocks: Search for "WP Travel Engine" blocks.
+  </Step>
+</Steps>
+
+## System Requirements
+
+<Expandable title="Detailed Requirements" default-open="true">
+  | Requirement       | Minimum Version |
+  |-------------------|-----------------|
+  | WordPress         | 5.0             |
+  | PHP               | 7.4             |
+  | MySQL             | 5.6             |
+  | Memory Limit      | 256MB           |
+  | HTTPS             | Required        |
+
+  Compatible with popular themes and page builders like Elementor.
+</Expandable>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+    Detailed setup and first booking.
+  </Card>
+  <Card title="User Authentication" icon="shield" href="/authentication">
+    Configure dashboards and social login.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    See latest updates and features.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Explore the <a href="/quickstart">Quickstart Guide</a> next to create your first trip. Customize templates to match your brand!
+</Callout>

@@ -1,0 +1,388 @@
+---
+title: Price on Request - Replace the Booking Widget with an Inquiry Card
+description: >-
+  Turn any trip into a lead capture opportunity by swapping the booking widget
+  for a pricing card with an optional starting price and an inquiry button.
+type: guide
+---
+## Overview
+
+Some trips need a conversation before a booking. **Price on Request** is built for those trips.
+
+It replaces the booking widget on any trip with a pricing card: an optional starting price, a few highlights, and a button that connects travelers to you. Use it for custom itineraries, private tours, luxury packages, or any trip where the price depends on who's asking.
+
+<Callout kind="info" collapsed="false">
+  Price on Request works per trip. Enabling it on one trip has no effect on any other trip on your site.
+</Callout>
+
+<Video src="https://www.youtube.com/embed/n-NGUKv9amY" render-type="video" width="100%" height="400" controls="true" allow-full-screen="true" />
+
+---
+
+## Key Features & Benefits
+
+| Feature                                                    | Benefit                                                                              |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Per-trip toggle                                            | Turn any trip into a lead capture opportunity before you're ready to publish a price |
+| Optional starting price (original + sale + category)       | Give travelers a cost anchor before they inquire, without locking in a fixed amount  |
+| Trip highlights                                            | Tell travelers what's included and what's flexible, directly on the pricing card     |
+| Customizable section title and button text                 | Match the card's language to the trip and your brand                                 |
+| Three button actions (inquiry form, custom link, own form) | Connect travelers to your preferred inquiry channel without sending them off-page    |
+
+---
+
+## Prerequisites
+
+Make sure you have:
+
+- **WP Travel Engine** installed and activated on your WordPress site, updated to its latest version.
+- The **Price on Request** add-on installed and activated.
+
+---
+
+## How to Install the Price on Request Add-on
+
+<Callout kind="info" collapsed="false">
+  Follow the steps in [Activate Your Pro Add-on License Key](/article/activate-pro-addon-license-key) to install the add-on and activate its license key.
+</Callout>
+
+---
+
+## Verification
+
+<Steps>
+  <Step title="Open a trip" icon="folder-open" title-type="p">
+    Go to your WordPress Dashboard, navigate to **Trips**, and open any trip.
+  </Step>
+
+  <Step title="Go to Date & Price" icon="calendar" title-type="p">
+    Click **Date & Price** from the left menu.
+  </Step>
+
+  <Step title="Confirm the tab is present" icon="check-circle" title-type="p">
+    Confirm that a **Price on Request** tab appears at the top, alongside the other tabs.
+
+    <Callout kind="alert" collapsed="false">
+      If the tab doesn't appear, deactivate and reactivate the add-on from the **Plugins** screen.
+    </Callout>
+  </Step>
+
+  <Step title="New Step" title-type="p">
+    Description for this step...
+  </Step>
+</Steps>
+
+---
+
+## Configuring the Price on Request Add-on
+
+Go to **Trips**, open the trip you want to configure, then navigate to **WP Travel Engine - Trip Settings → Date & Price** and select the **Price on Request** tab.
+
+### Offer Price on Request
+
+Toggle on **Offer Price on Request**. This hides the booking widget - date selection, traveler count, and checkout - and replaces it with the pricing card for this trip.
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-6.png" width="1100" height="938" alt="Offer Price on Request toggle enabled in the trip settings panel" />
+
+<Callout kind="info" collapsed="false">
+  This is a per-trip setting. Turning it on here has no effect on any other trip on your site.
+</Callout>
+
+### Section Title
+
+Enter the heading that appears at the top of the pricing card on the trip page. Change it to anything that fits the trip - _Request a Custom Itinerary_ or _Get a Tailored Quote_, for example.
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-5.png" width="1100" height="938" alt="Section Title field for the Price on Request pricing card" />
+
+### Display a Starting Price
+
+Toggle on to show a price anchor on the trip page. Four fields appear:
+
+- **From** - The label shown before the price.
+- **Original price** - Displays with a strikethrough to indicate the full cost before discount.
+- **Sale price** - The price travelers see highlighted. Required when this toggle is on.
+- **Price category** - The traveler type this price applies to, for example _Adult_.
+
+Leave the toggle off to show no price at all.
+
+<Callout kind="tip" collapsed="false">
+  A starting price tends to reduce back-and-forth. Travelers who reach out already know the ballpark cost.
+</Callout>
+
+
+
+### What to Highlight to Travelers
+
+Add a short list of bullet points that appear on the pricing card above the inquiry button - what's included, what's flexible, and why the trip is worth contacting you about.
+
+<Steps>
+  <Step title="Add a highlight" icon="plus" title-type="p">
+    Click any field and type your highlight.
+  </Step>
+
+  <Step title="Add more rows" icon="list-plus" title-type="p">
+    Click **+ Add Trip Highlight** to add more rows.
+  </Step>
+
+  <Step title="Remove a highlight" icon="trash-2" title-type="p">
+    Click the delete icon on the right to remove a highlight.
+  </Step>
+</Steps>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image.png" width="1100" height="938" alt="Trip highlights list with Add Trip Highlight button and delete icons" />
+
+### Call-to-Action Button Text
+
+Enter the label for the inquiry button.
+
+<Callout kind="tip" collapsed="false">
+  Labels like _Request a Quote_ and _Plan My Trip_ tend to convert better than generic ones like _Contact Us_.
+</Callout>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-2.png" width="1100" height="938" alt="Call-to-Action Button Text field for the Price on Request pricing card" />
+
+### What Happens When Travelers Click the Button
+
+Three options control what the button does.
+
+<Tabs>
+  <Tab title="Open inquiry form" icon="inbox">
+    Opens the built-in WP Travel Engine inquiry form on the trip page. No extra setup needed.
+  </Tab>
+
+  <Tab title="Go to custom link" icon="link">
+    Takes travelers to a URL you choose - your contact page, a Calendly link, or any external page.
+
+    - **Destination URL** - The full URL travelers land on after clicking.
+    - **Open in a New Tab** - Toggle on to open the link in a new browser tab.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-1.png" width="1100" height="938" alt="Go to custom link option with Destination URL and Open in a New Tab fields" />
+  </Tab>
+
+  <Tab title="Use my own form" icon="file-input">
+    Opens a third-party form in a lightbox popup when travelers click the button. Works with Contact Form 7, WPForms, Gravity Forms, and any plugin that generates a shortcode.
+
+    - **Form Shortcode** - Paste your form's shortcode here.
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-7.png" width="1100" height="938" alt="Use my own form option with a Form Shortcode field" />
+  </Tab>
+</Tabs>
+
+Once all settings are configured, click **Save** in the top right corner.
+
+---
+
+## Use Cases
+
+### Use Case 1: Custom Safari Pricing
+
+**Situation:** You offer private safari packages where the final price depends on group size, travel dates, and accommodation tier. A fixed checkout widget would either undercharge small groups or lose large ones before they even inquire.
+
+<Steps>
+  <Step title="Open Price on Request settings" icon="settings" title-type="p">
+    Open the trip in your WordPress dashboard and go to **Date & Price → Price on Request**.
+  </Step>
+
+  <Step title="Enable the pricing card" icon="toggle-right" title-type="p">
+    Toggle on **Offer Price on Request**.
+  </Step>
+
+  <Step title="Add highlights" icon="list" title-type="p">
+    Add highlights that cover what's included - private vehicle, guide, accommodation options.
+  </Step>
+
+  <Step title="Set the button action" icon="mouse-pointer-click" title-type="p">
+    Set the button action to **Open inquiry form** so travelers can reach out without leaving the page.
+  </Step>
+
+  <Step title="Save" icon="save" title-type="p">
+    Click **Save**.
+  </Step>
+</Steps>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-11.png" width="1100" height="938" alt="Price on Request settings configured for a custom safari pricing trip" />
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-10-scaled.png" width="1100" height="938" alt="Frontend pricing card for the custom safari trip with highlights and inquiry button" />
+
+<Callout kind="success" collapsed="false">
+  Travelers see a focused pricing card with your highlights and a single button to inquire. You capture the lead and discuss pricing before any booking is confirmed.
+</Callout>
+
+### Use Case 2: Listing a Trip Before Pricing Is Finalized
+
+**Situation:** You want to publish a new itinerary to gauge interest, but supplier quotes aren't back yet and you can't commit to a price.
+
+<Steps>
+  <Step title="Open Price on Request settings" icon="settings" title-type="p">
+    Open the trip and go to **Date & Price → Price on Request**.
+  </Step>
+
+  <Step title="Enable the pricing card" icon="toggle-right" title-type="p">
+    Toggle on **Offer Price on Request**.
+  </Step>
+
+  <Step title="Skip the starting price" icon="eye-off" title-type="p">
+    Leave **Display a Starting Price** off so no price appears on the page.
+  </Step>
+
+  <Step title="Point the button to your contact channel" icon="link" title-type="p">
+    Set the button action to **Go to custom link** and point it to your contact page or a Calendly booking link.
+  </Step>
+
+  <Step title="Save" icon="save" title-type="p">
+    Click **Save**.
+  </Step>
+</Steps>
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-9.png" width="1100" height="938" alt="Price on Request settings configured without a starting price and a custom link button action" />
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-8-scaled.png" width="1100" height="938" alt="Frontend pricing card for a trip listed before pricing was finalized" />
+
+<Callout kind="success" collapsed="false">
+  The trip goes live and starts collecting leads. Once pricing is confirmed, you can disable Price on Request and set up standard packages.
+</Callout>
+
+---
+
+## Frontend Preview
+
+<Tabs>
+  <Tab title="Desktop" icon="monitor">
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-12-scaled.png" width="1100" height="938" alt="Desktop view of the Price on Request pricing card on a trip page" />
+  </Tab>
+
+  <Tab title="Mobile" icon="smartphone">
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-13-563x1024.png" width="563" height="1024" alt="Mobile view of the Price on Request pricing card on a trip page" />
+
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2026/06/image-14-565x1024.png" width="565" height="1024" alt="Mobile view of the Price on Request inquiry button and highlights" />
+  </Tab>
+</Tabs>
+
+---
+
+## Frequently Asked Questions
+
+<ExpandableGroup>
+  <Expandable title="Does enabling Price on Request affect my other trips?" default-open="false">
+    No. Price on Request is a per-trip setting. Enabling it on one trip hides the booking widget only for that trip. All other trips on your site continue to use the standard booking widget.
+  </Expandable>
+
+  <Expandable title="Can I show a starting price without committing to a fixed booking price?" default-open="false">
+    Yes. Toggle on **Display a Starting Price** and enter an original price and sale price. This gives travelers a cost anchor on the pricing card without requiring them to book at that exact price. Leave the toggle off if you prefer to show no price at all.
+  </Expandable>
+
+  <Expandable title="What happens to the booking widget when Price on Request is enabled?" default-open="false">
+    The booking widget — date selection, traveler count, and checkout — is replaced by the pricing card. Travelers see your section title, optional starting price, trip highlights, and the inquiry button instead of the booking form.
+  </Expandable>
+
+  <Expandable title="Which form plugins work with the Use my own form option?" default-open="false">
+    Any plugin that generates a shortcode is supported, including Contact Form 7, WPForms, and Gravity Forms. Paste the form shortcode into the **Form Shortcode** field, and the form opens in a lightbox popup when travelers click the button.
+  </Expandable>
+
+  <Expandable title="How do I switch back to the normal booking widget?" default-open="false">
+    Open the trip, go to **Date & Price → Price on Request**, and toggle off **Offer Price on Request**. Click **Save**. The standard booking widget returns immediately.
+  </Expandable>
+
+  <Expandable title="Is a starting price required?" default-open="false">
+    No. The **Display a Starting Price** toggle is optional. Leave it off and the pricing card shows only your section title, highlights, and inquiry button — no price at all.
+  </Expandable>
+
+  <Expandable title="Can I link the inquiry button to an external page?" default-open="false">
+    Yes. Set the button action to **Go to custom link** and enter the destination URL. You can also toggle on **Open in a New Tab** so travelers don't leave your site entirely.
+  </Expandable>
+</ExpandableGroup>
+
+---
+
+## Troubleshooting
+
+### Price on Request tab doesn't appear in trip settings
+
+<Steps>
+  <Step title="Verify the add-on is active" icon="check-circle" title-type="p">
+    Go to **WordPress Dashboard → Plugins** and confirm the Price on Request add-on is activated.
+  </Step>
+
+  <Step title="Deactivate and reactivate" icon="refresh-cw" title-type="p">
+    If the tab is still missing, deactivate the add-on from the Plugins screen and reactivate it. This re-registers the tab with WP Travel Engine.
+  </Step>
+
+  <Step title="Update WP Travel Engine" icon="arrow-up-circle" title-type="p">
+    Ensure WP Travel Engine is updated to its latest version. Outdated versions may not register add-on tabs correctly.
+  </Step>
+</Steps>
+
+### Pricing card not showing on the frontend
+
+<Steps>
+  <Step title="Confirm the toggle is on" icon="toggle-right" title-type="p">
+    Open the trip and verify **Offer Price on Request** is toggled on under **Date & Price → Price on Request**.
+  </Step>
+
+  <Step title="Save the trip" icon="save" title-type="p">
+    Click **Save** in the top right corner. If you navigated away without saving, your changes weren't applied.
+  </Step>
+
+  <Step title="Clear your cache" icon="trash-2" title-type="p">
+    If you use a caching plugin (WP Rocket, W3 Total Cache, etc.), clear the cache and reload the trip page. Also clear your browser cache.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  If the card still doesn't appear after clearing the cache, try switching to a default WordPress theme (like Twenty Twenty-Three) temporarily. If the card shows up, your theme may be overriding the Price on Request template.
+</Callout>
+
+### Third-party form not loading in the lightbox popup
+
+<Steps>
+  <Step title="Verify the form plugin is active" icon="check-circle" title-type="p">
+    Go to **Plugins** and confirm the form plugin (Contact Form 7, WPForms, Gravity Forms, etc.) is installed and activated.
+  </Step>
+
+  <Step title="Check the shortcode" icon="code" title-type="p">
+    Open the form plugin's form list, copy the shortcode, and paste it into the **Form Shortcode** field. Make sure the shortcode is complete — it should include the form ID or name.
+  </Step>
+
+  <Step title="Test the shortcode separately" icon="flask-conical" title-type="p">
+    Paste the shortcode into a test page or post and preview it. If the form doesn't render there, the issue is with the form plugin, not Price on Request.
+  </Step>
+</Steps>
+
+### Starting price not displaying
+
+<Steps>
+  <Step title="Confirm the toggle is on" icon="toggle-right" title-type="p">
+    Under **Date & Price → Price on Request**, verify **Display a Starting Price** is toggled on.
+  </Step>
+
+  <Step title="Fill in the sale price" icon="dollar-sign" title-type="p">
+    The **Sale price** field is required when the toggle is on. If it's empty, no price will display on the card.
+  </Step>
+
+  <Step title="Save changes" icon="save" title-type="p">
+    Click **Save** in the top right corner and reload the trip page on the frontend.
+  </Step>
+</Steps>
+
+### Inquiry button does nothing when clicked
+
+<Steps>
+  <Step title="Check the button action setting" icon="mouse-pointer-click" title-type="p">
+    Open the trip settings and confirm which button action is selected — **Open inquiry form**, **Go to custom link**, or **Use my own form**.
+  </Step>
+
+  <Step title="Verify the destination" icon="external-link" title-type="p">
+    If using a custom link, confirm the destination URL is correct and reachable. If using your own form, confirm the shortcode is valid.
+  </Step>
+
+  <Step title="Check for JavaScript errors" icon="alert-triangle" title-type="p">
+    Open your browser's developer tools (F12) and check the Console tab for errors. A JavaScript conflict with another plugin or your theme can prevent the button from working.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Still stuck? Contact our support team with a description of the issue, the trip URL, and a screenshot of your Price on Request settings.
+</Callout>
+
+---
+

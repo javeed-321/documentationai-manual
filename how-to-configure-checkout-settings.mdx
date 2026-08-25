@@ -1,0 +1,157 @@
+---
+title: How to Configure Checkout Settings in WP Travel Engine
+description: >-
+  Set up the page where travelers complete their bookings. Choose a layout,
+  collect traveler details, show coupon codes, write a confirmation message, and
+  handle privacy notices.
+type: reference
+---
+When a traveler picks a trip and clicks "Book Now," they land on your checkout page. This is where they enter their details and pay. The settings here let you manage traveler details, show emergency contact fields, customize the message shown after booking, and handle privacy and data compliance.
+
+## Before you start
+
+You'll need WP Travel Engine installed and active on your WordPress site. If you can see **WP Travel Engine** in the left-hand menu of your dashboard, you're ready to go.
+
+## Opening the checkout settings
+
+<Steps>
+  <Step title="Go to your WordPress dashboard" title-type="p">
+    Log in to the admin area of your website. You can reach it by typing your website address followed by **/wp-admin** in your browser.
+  </Step>
+
+  <Step title="Find WP Travel Engine settings" title-type="p">
+    On the left side of your dashboard, look for **WP Travel Engine** in the menu. Click it, then click **Settings**.
+  </Step>
+
+  <Step title="Open the Display tab, then Checkout" title-type="p">
+    At the top of the settings page, click the **Display** tab. Then click **Checkout**. This is where every option on this page lives.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787480467545-9mp2fkcx2n-checkout-settings.checkout-settings?fm=auto&auto=compress%2Cformat" width="1024" height="521" alt="" />
+  </Step>
+</Steps>
+
+You're now looking at the checkout settings. Let's go through each one.
+
+## Booking Confirmation Message
+
+After a traveler finishes booking, you can show them a message confirming everything went through. Type your message into the **Book Confirmation Message** field.
+
+Say you run adventure tours and want travelers to know what happens next. You might write something like: "You're all set! We'll email you a packing list and departure details within 24 hours. Questions? Call us at 555-1234."
+
+The message appears on screen right after they submit the checkout form. It's a good spot to set expectations and make travelers feel looked after.
+
+## Choosing a Checkout Page Layout
+
+You have two layout options: **Default** and **New**.
+
+- **Default** is the original checkout design that came with the plugin.
+- **New** gives your checkout page a cleaner, more modern look.
+
+Both layouts work the same way behind the scenes. The difference is how they look. Pick whichever one fits the style of your site.
+
+A "layout" here means the visual arrangement of the page: where the booking form sits, how the trip summary appears, and so on. Think of it like choosing a template for a printed brochure. Same information, different presentation.
+
+Each layout also comes with its own options for collecting traveler information. The next two sections cover what you get with each one.
+
+### Default Layout: Traveler Information
+
+The Default layout gives you one main option for collecting traveler details:
+
+- **Show Traveller's Information**: Turn this on to make it mandatory to collect details for every traveler on the booking. After someone checks out, they'll need to fill in information for each person. Once this is on, you also get a second toggle to request emergency contact details for each traveler.
+
+Say you run a 5-day group trek and need each person's dietary restrictions plus an emergency contact back home. You'd turn on both of these.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787481232148-6fc9r19wo16-checkout-settings-billing-details.checkout-settings-billing-details?fm=auto&auto=compress%2Cformat" width="1149" height="803" alt="" />
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787481268016-bollch83kpc-checkout-settings-travellers-information.checkout-settings-travellers-information?fm=auto&auto=compress%2Cformat" width="991" height="777" alt="" />
+
+### New Layout: Traveler Information
+
+The New layout gives you more control over how and when you collect traveler details:
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787481293279-i630qfzzy9-checkout-settings-new-layout.checkout-settings-new-layout?fm=auto&auto=compress%2Cformat" width="1024" height="595" alt="" />
+
+- **Show Traveller Information Form**: Turn this on to collect traveler details after checkout. Without this, no traveler information is collected at all.
+- **Show Emergency Contact Details**: This toggle appears once traveler information is turned on. Turn it on to collect emergency contact details for each person on the booking.
+- **Display Traveller and Emergency Details**: This lets you choose where travelers fill in their information. They can do it right on the checkout page, or after they finish paying. Filling it out on the checkout page means everything is collected in one go. Moving it to after checkout means a faster checkout, but travelers will need to come back and fill in their details.
+- **Collect Traveller Information**: Choose whether to collect details for everyone on the booking or only the person making the booking. If you run a family day tour and only need the lead booker's info, pick **Only Lead Traveller**. For a group trek where every participant's details matter, pick **All Travellers**.
+
+If you want more control over how and when you collect traveler info, the **New** layout is the better choice. If you prefer to keep things straightforward and don't mind the classic look, **Default** works fine.
+
+## Settings That Work With Both Layouts
+
+No matter which layout you pick, these four settings are available:
+
+<Steps>
+  <Step title="Show Additional Note" title-type="p">
+    Turn on the **Show Additional Note** toggle if you want travelers to be able to type a note while booking. This comes in handy if you run trips where people often have special requests, like dietary needs, room preferences, or gear sizes.
+  </Step>
+
+  <Step title="Show Coupon Code Field" title-type="p">
+    Turn on **Show Coupon Code Field** to show a discount code box on the checkout page. If you offer promotions or seasonal discounts, this lets travelers type in a code and see their price drop before paying.
+  </Step>
+
+  <Step title="Privacy Policy Notice" title-type="p">
+    Use the **Privacy Policy Notice** field to add or change the privacy text shown on the checkout page. Since you collect personal details from travelers (names, contact info, and so on), it's good practice to let them know how you handle their data.
+  </Step>
+
+  <Step title="Footer Copyright" title-type="p">
+    Type a custom copyright line into **Footer Copyright**. This text appears at the bottom of your checkout page once you've applied the Checkout Page template (described below). It's a small touch, but it makes the page feel like part of your brand rather than a generic form.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787481363567-iopnycov8n-checkout-settings-new-layput-frontend.checkout-settings-new-layput-frontend?fm=auto&auto=compress%2Cformat" width="1024" height="717" alt="" />
+  </Step>
+</Steps>
+
+Don't forget to click **Save Changes** at the bottom of the settings page when you're done. It's a common habit to set everything up and move on without saving, so it's worth a quick check.
+
+## Using the New Checkout Page Template
+
+If you chose the **New** layout, there's one more step. WP Travel Engine includes a dedicated page template that gives the checkout page its updated design. You'll need to apply it to the page where your checkout lives.
+
+A "page template" controls how a specific page looks. Think of it as a frame that WordPress wraps around your content. In this case, the frame is built specifically for checkout pages.
+
+<Steps>
+  <Step title="Create or open your checkout page" title-type="p">
+    In your dashboard, go to **Pages > Add New** if you're creating a fresh page. Or go to **Pages > All Pages** and click on your existing checkout page to edit it.
+  </Step>
+
+  <Step title="Select the Checkout Page template" title-type="p">
+    On the right side of the page editor, look for the **Template** dropdown. Click it and choose **Checkout Page**. This swaps out your theme's usual header and footer for ones designed to match the new checkout layout.
+  </Step>
+
+  <Step title="Tell WP Travel Engine which page is your checkout" title-type="p">
+    Go back to **WP Travel Engine > Settings**, and under Page Settings, select the page you set up in the steps above as your **Checkout Page**. This tells the plugin where to send travelers when they click "Book Now."
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1787481501872-gg3os2c3awq-checkout-settings-chekout-page.checkout-settings-chekout-page?fm=auto&auto=compress%2Cformat" width="1024" height="304" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  When you apply the Checkout Page template to a page, it takes over the layout completely. Any layout option you picked in the checkout settings (Default or New) won't matter on that page. The template is what shows up.
+</Callout>
+
+That covers the main setup. If you're comfortable with the basics and want more control over how the checkout page is built, the next section covers shortcodes. But if the steps above are all you need, you can stop here.
+
+## Shortcodes for Building a Custom Checkout Page
+
+A "shortcode" is a small piece of text wrapped in brackets that WordPress replaces with content when the page loads. You type the shortcode, and WordPress swaps in the actual booking form, trip summary, or whatever the shortcode stands for.
+
+If you want to design your checkout page from scratch instead of using the template above, you can place these shortcodes wherever you'd like the content to appear:
+
+| Shortcode                                           | What it shows                                   |
+| --------------------------------------------------- | ----------------------------------------------- |
+| `[WPTRAVELENGINE_CHECKOUT content='checkout-form']` | Only the booking form, without the trip summary |
+| `[WPTRAVELENGINE_CHECKOUT content='cart-summary']`  | Only the cart summary (price breakdown)         |
+| `[WPTRAVELENGINE_CHECKOUT content='tour-details']`  | A summary of the tour details                   |
+| `[WP_TRAVEL_ENGINE_PLACE_ORDER version=2.0]`        | The new checkout page layout (all in one)       |
+
+To use one, go to **Dashboard > Pages > Add New**, add a Shortcode block, and paste the shortcode for the piece you want. In the block editor, click the **+** button and search for "shortcode" to find the block.
+
+<Callout kind="info" collapsed="false">
+  Using `[WP_TRAVEL_ENGINE_PLACE_ORDER version=2.0]` will show the new checkout layout on your page, even if you have **Default** selected in the checkout settings. It's a way to use the modern design without changing the global setting.
+</Callout>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  Still stuck on something? The WP Travel Engine support team is happy to help. [Open a support ticket](https://wptravelengine.com/support-ticket/) and someone will walk you through it.
+</Callout>
+

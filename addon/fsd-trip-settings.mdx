@@ -1,0 +1,147 @@
+---
+title: Trip-Level Settings
+description: Assign fixed starting dates to trip packages, configure recurring schedules, manage seat availability per date, and set conditional pricing for peak and off-season periods.
+---
+
+## Access trip-level FSD settings
+
+Trip-level FSD settings control dates, seats, and availability for individual trips, complementing the global settings.
+
+<Steps>
+  <Step title="Open Trips" icon="folder">
+
+  Go to **Trips** in your WordPress dashboard.
+
+  </Step>
+  <Step title="Edit a trip" icon="edit">
+
+  Open the trip you want to configure.
+
+  </Step>
+  <Step title="Go to Date and Price" icon="settings">
+
+  Navigate to the **Date and Price** section in the trip editor.
+
+  </Step>
+  <Step title="Open the Dates tab" icon="calendar">
+
+  Click the **Dates** tab to assign fixed starting dates.
+
+  </Step>
+</Steps>
+
+## Assigning dates to packages
+
+Each package, such as Standard or Premium, can have its own dates, seat capacity, and availability labels. Package dates are managed separately, so changes you make to one package do not affect the others.
+
+<Steps>
+  <Step title="Select a package" icon="package">
+
+  Choose the package you want to configure.
+
+  </Step>
+  <Step title="Open package date settings" icon="settings">
+
+  Under **Package Dates**, click **Edit Pricing and Dates**.
+
+  </Step>
+  <Step title="Open the Date tab" icon="calendar">
+
+  Click the **Date** tab inside the package settings.
+
+  </Step>
+  <Step title="Choose a starting date" icon="check-circle">
+
+  Select the starting date from the calendar.
+
+  </Step>
+</Steps>
+
+## Date ranges
+
+Use date ranges when you want to open a package for several consecutive days at once instead of selecting each date individually. This is useful for short seasonal windows, holiday programs, or multi-day daily departures.
+
+To assign multiple consecutive dates, enable **Select a range of dates using the range calendar**. If you select 1 August through 7 August, the package becomes available on each of those dates.
+
+## Conditional pricing
+
+Set date-specific prices when demand changes throughout the year. This lets you charge one rate for peak periods and another for quieter periods without changing the trip's default package pricing.
+
+If you do not set a price for a specific date, the system automatically uses the global pricing already configured for that package.
+
+<Callout kind="tip">
+Use conditional pricing to manage seasonal demand, promotional windows, or premium departures without duplicating packages.
+</Callout>
+
+## Time slots
+
+Add multiple departure times to the same date when a trip runs more than once per day. This works well for activities with morning and afternoon departures.
+
+After selecting a date, click **Add Time** and enter each time slot you want to offer. For example, you might add 9:00 AM for a morning departure and 3:00 PM for an afternoon departure. Each time slot shares the same seat limit for that date.
+
+<Callout kind="info">
+Seat distribution across time slots is covered in the Seat Allocation documentation.
+</Callout>
+
+## Recurring dates
+
+Recurring schedules let you create repeated departures automatically instead of adding each date manually. Choose the recurrence pattern that matches how the trip runs.
+
+<ExpandableGroup>
+  <Expandable title="Daily" default-open="true">
+
+  The trip repeats every day starting from the date you choose. Use this option for trips that run on consecutive days.
+
+  </Expandable>
+
+  <Expandable title="Weekly">
+
+  The trip repeats every week on the same weekday as the starting date. You can also choose specific weekdays for the repeat schedule.
+
+  For example, if the trip starts on 5 August, which falls on a Monday, the system creates departures for every following Monday.
+
+  </Expandable>
+
+  <Expandable title="Monthly">
+
+  The trip repeats once each month from the selected start date. You can also limit the recurrence to specific months, such as January and February only.
+
+  </Expandable>
+
+  <Expandable title="Yearly">
+
+  The trip repeats once a year on the same date. Use this option for annual departures or recurring seasonal events.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Stopping repeats
+
+Stop a recurring schedule by setting either an end date or a repeat count. Choose the method that fits how you plan and publish departures.
+
+- **Repeat Until** — Select a specific end date, such as 31 December 2025.
+- **Repeat Limit** — Enter the total number of repeats, such as 10.
+
+<Callout kind="info">
+You can use only one stop method for each recurring date.
+</Callout>
+
+## Total seats
+
+Set the seat limit for each package date or time slot to control how many travelers can book that departure. Once the limit is reached, that date is no longer available for additional bookings.
+
+For example, if you set **3** seats, only 3 travelers can book that package for that date and time.
+
+<Callout kind="alert">
+Make sure package and date-level seat limits do not exceed the **Total Traveller Seats** value in General Settings. When both limits are set, the system uses the smaller number.
+</Callout>
+
+## Availability labels
+
+Apply availability labels at the trip level to show the booking status for each package date. These labels help travelers understand whether a departure is confirmed, open, or nearly full.
+
+- **Guaranteed** — The trip will definitely run.
+- **Available** — Seats are still open.
+- **Limited** — Only a few seats are left.
+
+You can also apply custom labels created in the global **Availability Labels** settings.

@@ -1,0 +1,69 @@
+---
+title: PayHere Payment Gateway
+description: >-
+  Install and configure the PayHere Payment Gateway addon to accept trip
+  payments from Sri Lanka and other supported currencies in WP Travel Engine.
+type: guide
+---
+## Overview
+
+[PayHere Payment Gateway](https://wptravelengine.com/plugins/payhere-payment-gateway/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) is an extension for WP Travel Engine that lets tour operators accept trip and tour payments through PayHere, one of Sri Lanka's popular merchant services.
+
+<Callout kind="info" collapsed="false">
+  PayHere Payment Gateway requires [WP Travel Engine](https://wptravelengine.com/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) v3.0.5 or later.
+</Callout>
+
+## Requirements
+
+You must have an active merchant account with [PayHere](https://www.payhere.lk/) to use this payment gateway. You'll need:
+
+- A PayHere Merchant ID
+- A PayHere Merchant Secret
+
+Payments from any country can be accepted, as long as you use LKR, USD, EUR, GBP, or AUD as the transaction currency.
+
+## Installation
+
+<Steps>
+  <Step title="Download the extension" title-type="p">
+    Download the extension from your dashboard.
+  </Step>
+
+  <Step title="Upload the plugin folder" title-type="p">
+    Upload the folder to your `/wp-content/plugins/` directory.
+  </Step>
+
+  <Step title="Activate the plugin" title-type="p">
+    Activate **WP Travel Engine – PayHere Payment Gateway** from the Plugins menu within WordPress.
+  </Step>
+</Steps>
+
+## Configure the gateway
+
+<Steps>
+  <Step title="Open Payment settings" title-type="p">
+    Go to **WP Travel Engine > Settings > Payments**.
+  </Step>
+
+  <Step title="Select PayHere" title-type="p">
+    You'll see PayHere as an option to enable the PayHere Payment Gateway for trip bookings. Click **PayHere** to configure its settings.
+  </Step>
+
+  <Step title="Enter your merchant credentials" title-type="p">
+    Enter your Merchant ID and Merchant Secret.
+  </Step>
+
+  <Step title="Set a supported currency" title-type="p">
+    Go to **WP Travel Engine > Settings > Miscellaneous** and choose a supported currency — Sri Lanka Rupee, United States Dollar, Euro, Pound Sterling, or Australian Dollar — as the Currency Code.
+  </Step>
+</Steps>
+
+<ParamField param-type="string" required="true" deprecated="false" show-location="true">
+  Your PayHere Merchant ID.
+</ParamField>
+
+<ParamField param-type="string" required="true" deprecated="false" show-location="true">
+  Your PayHere Merchant Secret code.
+</ParamField>
+
+Once configured, when a traveler books a trip through the PayHere Payment Gateway, they're taken to PayHere to complete a secure payment.

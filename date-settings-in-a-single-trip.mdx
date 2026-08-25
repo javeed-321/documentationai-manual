@@ -1,0 +1,71 @@
+---
+title: 'Date Settings in a Single Trip '
+---
+To configure the settings, go to **Trips → Edit a Trip → Date and Price → Date Settings**.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786389303653-wlx5i6gq1ns-date-settings.date-settings?fm=auto&auto=compress%2Cformat" width="1870" height="790" alt="" />
+
+### **Section Title**
+
+This allows you to enter a custom heading for the availability section on the trip page.
+
+**Example:**
+
+- If you enter _Upcoming Departures_, travellers will see this heading above the list of dates.
+- If you leave it blank, the default title will be used.
+
+### **Hide Fixed Trip Starts Dates Section**
+
+Enable this option if you want to hide the fixed departure dates section on a single trip page. Normally, the dates section appears between the featured image or slider and the main trip content. Turning this on will remove that section from view.
+
+### **Trip Expiry Date**
+
+<Iframe uid="1a4ce310-399d-400d-89f1-1df15316c4e5" src="https://www.youtube.com/embed/Cx5aV88VI68" title="Embedded content" width="928" height="522" allow-full-screen="true" display-mode="fixed" />
+
+This setting allows you to choose a date after which the trip cannot be booked. The trip page will still be visible to visitors, but bookings will automatically be disabled once the expiry date is reached.
+
+**Example**:\
+\
+If you set the expiry date to _31 December 2025_, travellers can view the trip details but will not be able to make bookings after that date.
+
+### **Excluded Dates**
+
+This option lets you block specific dates for this trip only. You can exclude individual dates or select a range of dates from the calendar. You can choose how this date blocks bookings, and you can also set it to repeat every year if needed.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786389441961-qbnplozcogq-excluded-dates-single-trip.excluded-dates-single-trip?fm=auto&auto=compress%2Cformat" width="890" height="716" alt="" />
+
+### **How Excluded Dates work for this trip**
+
+When adding an excluded date, choose one of the following block behaviors:
+
+- **Block Entire Trip Duration**: The trip cannot be booked if its duration includes the excluded date, even if the trip starts before or ends after that date.
+- **Block Start Date Only**: The trip cannot start on the excluded date, but bookings are still allowed if the trip includes the date during its duration.
+- **Block Specific Time Slots**: Blocks only the departure times you pick on that date, while the trip’s other time slots stay bookable. Under Select Time Slots, tap the times you want to block; the ones you select show a blocked icon.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786389493513-xo7w7brgnzh-pasted-image-1786389491033.png?fm=auto&auto=compress%2Cformat" width="880" height="213" alt="" />
+
+<Callout kind="info" collapsed="false">
+  Note: Only the departure times already configured for that date appear here. If the trip has no time slots set up for that date, there’s nothing to select.
+</Callout>
+
+#### **Examples:**
+
+- If a trip runs daily in August but **cannot operate on 15 August**, exclude that date using **Block Entire Trip Duration**.
+- If a trip **should not start on 15 August** but can continue through that day, exclude the date using **Block Start Date Only.**
+- If a trip runs three departures a day and one departure on 15 August is fully staffed elsewhere, exclude just that time using **Block Specific Time Slots**, keeping the other departures open.
+
+
+
+#### **Important Note:** 
+
+1. There are two types of exclusions:
+   - **Global Exclusions**: Set in the global settings and applied to all trips.
+   - **Trip-Specific Exclusions**: Set here and applied only to the individual trip you are editing.
+2. If the same date is excluded in both Global and Trip-Specific settings, the Trip-Specific setting takes priority.
+3. If the block behavior differs for the same date, the Trip-Specific block behavior overrides the Global one for this trip.
+
+<Callout kind="info" collapsed="false">
+  &#x20;For example, if 2 January 2027 is excluded globally with **Block Entire Trip Duration**, but this trip has 2 January 2027 excluded with **Block Specific Time Slots**, this trip only blocks the selected time slots on that date – the global “block entire duration” rule doesn’t apply to this specific trip.
+</Callout>
+
+The final unavailable dates for a trip are a combination of both global and trip-specific exclusions.

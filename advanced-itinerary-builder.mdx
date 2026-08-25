@@ -1,0 +1,615 @@
+---
+title: Advanced Itinerary Builder
+description: >-
+  Build clear, detailed trip itineraries with daily plans, meal and stay
+  details, elevation charts, and photo galleries that help travelers book with
+  confidence.
+type: guide
+---
+## Plan richer trip pages with day-by-day detail
+
+Use Advanced Itinerary Builder to turn a basic trip outline into a full daily plan that travelers can trust. You can show where guests stay each night, which meals are included, how long each day takes, and even how the altitude changes across the trip.&#x20;
+
+An add-on is a small extension that adds more features to WP Travel Engine. If you run treks, tours, or multi-day packages, this add-on helps you present each day in a way that feels clear and professional.
+
+You do not need to know WordPress deeply to use it. You will work from your WordPress dashboard, which is the main admin area with the menu on the left side of the screen.
+
+<Callout kind="info" collapsed="false">
+  Perfect for trekking and mountaineering companies, multi-day tour operators, adventure travel agencies, educational travel programs, and pilgrimage and cultural tours.
+</Callout>
+
+<Video uid="26f54f60-7769-494a-bb05-29be13da898b" src="https://www.youtube.com/embed/xCOhU7yNoZ8" render-type="iframe" width="672" height="378" controls="true" allow-full-screen="true" style="width: 672px; height: auto; cursor: pointer;" />
+
+## What this add-on does
+
+- **Day-by-day itinerary** - Add a title and description for each day of the trip.
+- **Sleep modes and meals** - Show where travelers stay and which meals are included each day.
+- **Extra itinerary details** - Add useful fields like walking distance, activities, or daily highlights.
+- **Elevation charts** - Show altitude changes across the trip so travelers know what to expect.
+- **Image galleries** - Add multiple photos to each day to make the itinerary more visual.
+
+## What you'll need before you start
+
+A plugin is a tool you install in WordPress to add features to your site.
+
+- You have WP Travel Engine installed and activated on your WordPress site (Version 4.3.0 or higher).
+- You have installed and activated the Advanced Itinerary Builder add-on.
+
+Once those are ready, you can check what this add-on will help you show on your trip pages.
+
+## Why tour operators use this add-on
+
+| Feature                          | User benefit                                                                                                     |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Altitude Charts                  | Show travelers how the route goes up and down so they can prepare for harder days.                               |
+| Sleep Modes                      | Tell travelers what kind of place they will sleep in, such as a hotel, lodge, tent, or homestay.                 |
+| Meals Tracking                   | Show which meals are included so guests can plan their spending and food needs.                                  |
+| Duration Fields                  | Tell travelers how long each day will take so they can judge the effort involved.                                |
+| Image Galleries                  | Add photos for each day so the trip feels more real and easier to picture.                                       |
+| Location Data                    | Show where each day starts or ends, along with altitude, for a clearer route plan.                               |
+| Expand All Option                | Let visitors view the whole itinerary at once or open one day at a time.                                         |
+| Unit Switching                   | Choose meters or feet so the chart makes sense for your audience.                                                |
+| Rich Text Content                | Format your day descriptions with headings, lists, links, and highlighted details.                               |
+| Custom Chart Design              | Match the elevation chart to your site style with your own colors and background image.                          |
+| Additional Itinerary Info Fields | Show structured details like walking distance, activities, or highlights in a clean and repeatable way each day. |
+
+## Installing the Advanced Itinerary Builder add-on
+
+This part gets the add-on ready inside WordPress so you can start using the extra itinerary fields on your trip pages.
+
+<Callout kind="info" collapsed="false">
+  See [how to activate a Pro add-on license key](/article/activate-pro-addon-license-key/) for the full installation and activation walkthrough.
+</Callout>
+
+That guide shows you how to install the add-on, activate it, and connect the license key so it works properly on your site.
+
+### Checking that it's working
+
+It is worth checking this before you start building trips. That way, you know the add-on is active and the extra fields are ready to use.
+
+<Steps>
+  <Step title="Open the Extensions area" title-type="p">
+    Go to your WordPress dashboard. Then use the left sidebar and open **WP Travel Engine → Settings → Extensions**.
+
+    You should see the Advanced Itinerary Builder tab under Extensions.
+  </Step>
+
+  <Step title="Open any trip and check the Itinerary tab" title-type="p">
+    Edit any trip on your site. Then open the **Itinerary** tab on the trip edit screen.
+
+    You should now see extra fields like Duration, Sleep Mode, Meals, Start Location, Altitude, and Itinerary Info.
+  </Step>
+</Steps>
+
+If you can see those fields, the add-on is ready. Next, you can set up the options that will apply across all your trips.
+
+## Configuring the global settings for Advanced Itinerary Builder
+
+Global settings are site-wide settings. That means they affect all trips, not only one trip.
+
+You can find them in your WordPress dashboard under **WP Travel Engine > Settings > Extensions > Advanced Itinerary Builder** on the left sidebar. Set these up first so your trip editors have the options they need later.
+
+### Always Show All Itinerary
+
+This setting controls how your itinerary looks when a traveler first opens a trip page. If you turn it on, every day opens by default. If you turn it off, travelers can open days one by one.
+
+Say you run a long 12-day trek. Keeping all days collapsed can make the page feel shorter and easier to scan.
+
+<Steps>
+  <Step title="Open the Advanced Itinerary Builder settings" title-type="p">
+    In your WordPress dashboard, go to **WP Travel Engine → Settings → Extensions → Advanced Itinerary Builder**.
+  </Step>
+
+  <Step title="Find the Always Show All Itinerary option" title-type="p">
+    Look for **Always Show All Itinerary** in the settings page.
+  </Step>
+
+  <Step title="Choose how your itineraries should open" title-type="p">
+    Turn the setting on if you want every day expanded on the frontend.
+
+    Turn the setting off if you want travelers to click and open each day as needed.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786686553664-g5202mwjim5-Show-All-Itinerary.Show All Itinerary?fm=auto&auto=compress%2Cformat" width="1690" height="808" alt="" />
+
+Once this is set, you can move on to accommodation options for each day.
+
+### Sleep Mode Fields
+
+Sleep modes are the accommodation choices you can pick for each itinerary day. This helps you show whether guests stay in a hotel, lodge, tent, guesthouse, or something else.
+
+For example, if you run both luxury cultural tours and mountain treks, you might create options like "5 Stars Hotel," "Tea House," and "Camping." Then you can choose the right one for each day of each trip.
+
+<Steps>
+  <Step title="Open the sleep mode settings" title-type="p">
+    Go to **WP Travel Engine → Settings → Extensions → Advanced Itinerary Builder** and look for **Sleep Mode Fields for Itinerary**.
+  </Step>
+
+  <Step title="Review the options you already have" title-type="p">
+    Check the list of existing sleep modes. These are the accommodation types available when you edit a trip day later.
+  </Step>
+
+  <Step title="Add a new accommodation type" title-type="p">
+    Click **Add Sleep Mode** near the bottom of the section.
+
+    Then enter the name you want to use, such as "3 Stars Hotel," "Tea House," or "Homestay."
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786686622265-wv6rauw4e0l-Sleep-Mode-Fields.Sleep Mode Fields?fm=auto&auto=compress%2Cformat" width="1433" height="818" alt="" />
+
+<Callout kind="info" collapsed="false">
+  Sleep modes are global. If you delete one here, it is removed from every trip that uses it.
+</Callout>
+
+With your accommodation list ready, you can set up the elevation chart if your trips involve changing altitude.
+
+### Itinerary Elevation Chart settings
+
+These settings control how the altitude chart looks on your trip pages. This is especially useful for treks, climbs, and high-altitude routes where travelers want to understand the journey before they book.
+
+Say you run an Annapurna trek. A chart helps guests see which days climb steeply and which nights are spent at higher altitude.
+
+<Video uid="9743c05b-eb2c-49f3-85ad-2f80caf9e1ce" src="https://www.youtube.com/embed/FyJtJiu-ulw" render-type="iframe" width="660" height="371" controls="true" allow-full-screen="true" style="width: 660px; height: auto; cursor: pointer;" />
+
+<Steps>
+  <Step title="Turn the chart on for your trip pages" title-type="p">
+    Find **Show Chart on Trip Page**.
+
+    Turn it on if you want the elevation chart to appear above the itinerary on all trip pages. Turn it off if you do not want to show charts anywhere on the site.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786686856792-eywpzpvbd4-Show-Chart-Trip-on-Trip-Page.Show Chart Trip on Trip Page?fm=auto&auto=compress%2Cformat" width="1024" height="590" alt="" />
+  </Step>
+
+  <Step title="Choose the unit you will use when entering altitude" title-type="p">
+    Set **Elevation Input Unit** to the unit you want to type into the trip editor.
+
+    This helps keep all your trip data consistent.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786686927204-c9vz50gi9he-Elevation-Input-Unit.Elevation Input Unit?fm=auto&auto=compress%2Cformat" width="1024" height="584" alt="" />
+  </Step>
+
+  <Step title="Choose whether to show the chart labels" title-type="p">
+    Turn on **Show X-Axis** if you want day labels along the bottom.
+
+    Turn on **Show Y-Axis** if you want altitude values along the left side.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687039039-y6ktigamwyr-Show-X-and-Y-axis.Show X and Y axis?fm=auto&auto=compress%2Cformat" width="1024" height="590" alt="" />
+  </Step>
+
+  <Step title="Choose the chart style" title-type="p">
+    Use **Show Line Graph** to choose the chart style.
+
+    One style shows a filled area below the line. The other shows a simple line.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687077682-s3ce4gwwld-Show-Line-Graph.Show Line Graph?fm=auto&auto=compress%2Cformat" width="1024" height="590" alt="" />
+  </Step>
+
+  <Step title="Set the chart colors and background" title-type="p">
+    Use **Theme Color** to match the chart to your brand.
+
+    You can also add a background image if that fits your site design.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687116967-8gub0cypbnh-Theme-Color-and-Background-Image.Theme Color and Background Image?fm=auto&auto=compress%2Cformat" width="1024" height="484" alt="" />
+  </Step>
+
+  <Step title="Choose how altitude is shown to travelers" title-type="p">
+    Use **Altitude Unit** to display altitude in meters or feet on the frontend chart.
+
+    This is helpful if you sell trips to both local and international audiences.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687144089-9tvnhn8gu0m-Altitude-Unit.Altitude Unit?fm=auto&auto=compress%2Cformat" width="714" height="564" alt="" />
+  </Step>
+
+  <Step title="Preview the chart style" title-type="p">
+    Click **Randomize** if you want to preview changes in the chart values while keeping the rest of the chart layout in place.
+
+    This helps you test the look before you move on.
+
+    When this is turned on, the chart appears above the itinerary on your trip pages. After that, you can add extra daily detail fields for things like walking distance or activities.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687174124-3wt6mrjtj3b-Randomize.Randomize?fm=auto&auto=compress%2Cformat" width="714" height="564" alt="" />
+
+### Additional Itinerary Fields
+
+These fields help you show the same kind of detail across every trip day. This is useful when you want a clean layout for information like walking distance, activities, route highlights, or special notes.
+
+<Callout kind="info" collapsed="false">
+  To use the Additional Itinerary Fields, make sure your WP Travel Engine plugin is updated to version 6.6.9.
+</Callout>
+
+<Steps>
+  <Step title="Turn on the extra itinerary info section" title-type="p">
+    Find **Show Itinerary Info** and switch it on.
+
+    This makes the extra structured fields available for your trip days.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687439558-pk5bpqim68l-Show-Itinerary-Info-.Show Itinerary Info:?fm=auto&auto=compress%2Cformat" width="1024" height="577" alt="" />
+  </Step>
+
+  <Step title="Choose where the extra info should appear" title-type="p">
+    Set **Itinerary Info Display Position** to where you want the details to show on the trip page.
+
+    **Below Title** places the info under the day title. **Below Description** places it after the day description.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687483640-1ekui4eeh12-Itinerary-Info-Display-Position.Itinerary Info Display Position?fm=auto&auto=compress%2Cformat" width="1024" height="577" alt="" />
+  </Step>
+
+  <Step title="Create the fields you want to use" title-type="p">
+    Click **Add Info** to create a new field.
+
+    Enter the field name and choose or upload an icon.
+  </Step>
+
+  <Step title="Turn fields on or off and arrange them" title-type="p">
+    Use the toggle to show or hide a field.
+
+    Use the Delete icon to remove a field.
+
+    Drag and drop fields into the order you want. That order is used in the trip editor and on the frontend.
+
+    <Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687515199-11gs8wpgkwec-Add-New-Info.Add%20New%20Info?fm=auto&auto=compress%2Cformat" width="1024" height="597" alt="" />
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  A good starting setup for a trekking company might be fields like Walking Distance, Trek Duration, Max Altitude, and Highlights.
+</Callout>
+
+Only enabled fields with values entered will appear on the trip page. Now you are ready to fill in the details for each individual trip.
+
+## Advanced Itinerary Builder trip-specific settings
+
+These settings are for one trip at a time. You will add them when you edit a trip in WordPress.
+
+The regular itinerary builder already gives you title and description fields for each day. This add-on adds more fields beside those, so you can show accommodation, meals, altitude, photos, and extra day-by-day details.
+
+### Itinerary Title
+
+This is the main name for the day. Use a short title that tells travelers what happens that day.
+
+For example, you might write "Drive to Pokhara" or "Trek to Ghorepani." A clear title helps travelers scan the itinerary quickly.
+
+<Steps>
+  <Step title="Open the trip you want to edit" title-type="p">
+    In your WordPress dashboard, open the trip from the left sidebar area where your trips are managed.
+
+    Then go to the **Itinerary** tab in the trip editor.
+  </Step>
+
+  <Step title="Enter a clear title for the day" title-type="p">
+    Type the day title into the **Itinerary Title** field.
+
+    Use wording that matches the actual experience for that day.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687649743-fzxl9qreaft-Itinerary-Title.Itinerary Title?fm=auto&auto=compress%2Cformat" width="1024" height="429" alt="" />
+
+Once the title is in place, you can adjust how the day label appears.
+
+### Days Label
+
+This field lets you rename the day label. You are not limited to names like Day 1 or Day 2.
+
+This is helpful when a day is different from the normal trip flow. For example, you might use "Arrival Day," "Optional Day," or "Rest Day."
+
+<Steps>
+  <Step title="Find the Days Label field" title-type="p">
+    Open the itinerary day you want to edit and look for **Days Label**.
+  </Step>
+
+  <Step title="Enter the label you want travelers to see" title-type="p">
+    Type a label such as "Day 1," "Rest Day," or "Optional Excursion."
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687677040-y9pmxd3amrf-Day-Label.Day Label?fm=auto&auto=compress%2Cformat" width="1024" height="429" alt="" />
+
+A clear label makes the day easier to understand at a glance.
+
+### Duration
+
+Use this field to show how long the day's activity takes. This helps travelers understand the pace of the trip.
+
+For a walking tour, you might enter 4 hours. For a short transfer or local activity, you might use minutes instead.
+
+<Steps>
+  <Step title="Enter the time for the day's activity" title-type="p">
+    Add the number in the **Duration** field.
+  </Step>
+
+  <Step title="Choose the right time unit" title-type="p">
+    Select **Hour(s)** for longer activities such as trekking or touring.
+
+    Select **Minute(s)** for shorter activities.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687701042-8jazu5aq6s3-Duration.Duration?fm=auto&auto=compress%2Cformat" width="1024" height="429" alt="" />
+
+This small detail helps set the right expectations before guests book.
+
+### Itinerary Content
+
+This is where you describe the day in full. You can include the route, key stops, activities, and anything guests should know.
+
+If you are new to WordPress, the rich text editor is the writing box where you can format text with bold text, lists, and links.
+
+<Steps>
+  <Step title="Write the day's description" title-type="p">
+    Add the main details into the **Itinerary Content** editor.
+
+    Focus on what the traveler will do, see, and experience that day.
+  </Step>
+
+  <Step title="Format the important parts" title-type="p">
+    Use the editor tools to add bold text, bullet lists, or links where needed.
+
+    This is helpful for things like route highlights, packing reminders, or activity breakdowns.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687729534-9sfba95g42k-Itinerary-Content.Itinerary Content?fm=auto&auto=compress%2Cformat" width="1024" height="429" alt="" />
+
+Once the description is written, you can add where travelers will stay.
+
+### Sleep Mode
+
+Use this field to choose the accommodation type for that day. The choices here come from the sleep modes you created in the global settings.
+
+If you do not see any options, go back to **WP Travel Engine → Settings → Extensions → Advanced Itinerary Builder** and create them there first.
+
+<Steps>
+  <Step title="Open the sleep mode dropdown for the day" title-type="p">
+    In the itinerary day settings, find **Sleep Mode**.
+  </Step>
+
+  <Step title="Choose the accommodation type" title-type="p">
+    Pick the option that fits that day, such as hotel, lodge, tent, or homestay.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687760071-t76rl7z3uy-Sleep-Mode.Sleep Mode?fm=auto&auto=compress%2Cformat" width="1024" height="432" alt="" />
+
+This gives travelers a clearer picture of the comfort level on the trip.
+
+### Sleep Mode Additional Info
+
+Use this field when you want to say more about the accommodation. This is a good place for hotel names, amenities, room style, or check-in details.
+
+For example, if guests stay in a mountain lodge with shared bathrooms, this is the place to say it clearly.
+
+<Steps>
+  <Step title="Find the extra accommodation details field" title-type="p">
+    Open the itinerary day and look for **Sleep Mode Additional Info**.
+  </Step>
+
+  <Step title="Add the details travelers should know" title-type="p">
+    Enter useful information such as the hotel name, wifi availability, or whether the stay is twin-sharing.
+
+    Travelers can view this on the frontend by clicking the info icon next to the sleep mode.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687792247-p1ejg7xh8t-Sleep-Mode-Additional-Info.Sleep Mode Additional Info?fm=auto&auto=compress%2Cformat" width="1024" height="271" alt="" />
+
+A little detail here can answer common customer questions before they ask.
+
+### Add Image
+
+Photos help travelers picture the day. You can add one image or several.
+
+This works well for days that include scenic routes, major landmarks, or accommodation highlights.
+
+<Steps>
+  <Step title="Open the image area for the day" title-type="p">
+    In the itinerary day settings, find **Add Image**.
+  </Step>
+
+  <Step title="Upload one or more photos" title-type="p">
+    Click **Add Image** and choose the images you want to attach to that day.
+
+    Repeat this if you want to build a small gallery for the day.
+  </Step>
+
+  <Step title="Replace or remove a photo if needed" title-type="p">
+    Hover over an image to see the replace or delete options.
+
+    Use those buttons to update the gallery later.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  For best results, use high-quality landscape images of at least 1200×800 pixels.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687845209-qxamo6jb0pc-Add-Image.Add Image?fm=auto&auto=compress%2Cformat" width="1024" height="271" alt="" />
+
+Good photos make the itinerary feel more real. Next, you can show what guests will eat.
+
+### Meals Included
+
+Use this section to show which meals come with each day. This helps travelers understand what is covered in the trip price.
+
+Say your 3-day package includes lunch and dinner on day 1, breakfast on day 2, and all meals on day 3. You can show that clearly here.
+
+<Steps>
+  <Step title="Open the meal options for the day" title-type="p">
+    In the itinerary day settings, find **Meals Included**.
+  </Step>
+
+  <Step title="Select the meals provided" title-type="p">
+    Check **Breakfast**, **Lunch**, and **Dinner** as needed for that day.
+  </Step>
+
+  <Step title="Use the quick selection buttons if helpful" title-type="p">
+    Click **Tick All** to select all meals.
+
+    Click **Untick All** to clear them.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687868456-jcmntye8dj-Meals-Included.Meals Included?fm=auto&auto=compress%2Cformat" width="1024" height="206" alt="" />
+
+On the frontend, travelers will see meal icons with the meal names. After that, you can enter route and altitude details for the chart.
+
+### Start Location and Altitude
+
+These two fields are used for the elevation chart. You need both for the chart to work properly.
+
+For example, you might enter "Namche Bazaar" as the start location and 3440 as the altitude if your global settings use meters.
+
+<Steps>
+  <Step title="Enter the place name for the day" title-type="p">
+    In **Start Location**, type the starting point or location for that day.
+  </Step>
+
+  <Step title="Enter the altitude value" title-type="p">
+    In **Altitude**, enter the elevation number using the same unit you set in the global settings.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  The altitude chart only appears if both the Location and Altitude fields are filled for at least two days.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687894571-yonzegi2gj9-Start-Location-and-Altitude.Start Location and Altitude?fm=auto&auto=compress%2Cformat" width="1024" height="206" alt="" />
+
+Once that is done, you can fill in any extra itinerary details you created earlier.
+
+### Itinerary Info
+
+This section shows the extra itinerary info fields you created in the global settings. You can fill in only the ones that matter for that day.
+
+For example, if you created a field called Walking Distance, you might enter "10 km hike" for one day and leave it blank on another.
+
+<Steps>
+  <Step title="Find the extra itinerary fields for the day" title-type="p">
+    Open the itinerary day and scroll to **Itinerary Info**.
+  </Step>
+
+  <Step title="Enter the values you want to show" title-type="p">
+    Fill in the fields that apply to that day.
+
+    Leave any field blank if it does not fit that day.
+  </Step>
+</Steps>
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786687923525-x7oi7pd1xip-Itinerary-Info.Itinerary Info?fm=auto&auto=compress%2Cformat" width="1024" height="216" alt="" />
+
+Blank fields do not show on the frontend. That gives you flexibility without making every day look the same.
+
+**Frontend Preview**
+
+\<div style="position:relative;height:0;width:100%;overflow:hidden;z-index:99999;border-radius:6px;box-sizing:border-box;padding-bottom:calc(45.24739583% + 32px)">\<iframe src="[https://www.guidejar.com/embed/43282d54-b960-4a0c-adeb-272a394d4587?type=1\&amp;controls=on](https://www.guidejar.com/embed/43282d54-b960-4a0c-adeb-272a394d4587?type=1\&amp;controls=on)" width="100%" height="100%" style="position:absolute;inset:0" allowfullscreen="" frameborder="0">\</iframe>\</div>
+
+## Real-world examples
+
+### Multi-day tours with different meal plans
+
+If your meal inclusions change from day to day, this add-on helps you show that clearly.
+
+For example, say you run a 3-day tour:
+
+- Day 1 includes Lunch and Dinner.
+- Day 2 includes Breakfast.
+- Day 3 includes Breakfast, Lunch, and Dinner.
+
+<Callout kind="tip" collapsed="false">
+  In Sleep Mode Additional Info, you can add restaurant suggestions for days with fewer included meals.
+</Callout>
+
+This helps travelers budget better and avoids confusion about what is included.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786689089506-6eqkwc3v75k-Multi-Day-Tours-with-Varied-Meal-Plans.Multi-Day Tours with Varied Meal Plans?fm=auto&auto=compress%2Cformat" width="776" height="831" alt="" />
+
+### Trips that need stronger visual storytelling
+
+Some trips sell better when travelers can picture each day. This is common with treks, cultural journeys, and experience-based tours.
+
+You might use the add-on like this:
+
+- Add 2 to 3 good photos for each day.
+- Use the rich text editor to separate activities with headings or bold text.
+- Add accurate durations so travelers understand the pace.
+- Use Sleep Mode to show the difference between a heritage hotel, mountain lodge, or modern hotel.
+
+This gives travelers a fuller preview of the experience and helps build trust before booking.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786689177291-8y49fr6dk1p-Trips-with-Rich-Multi-media-Itineraries.Trips with Rich Multi-media Itineraries?fm=auto&auto=compress%2Cformat" width="768" height="356" alt="" />
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786689216945-cc6djv6h46d-Trips-with-Rich-Multi-media-Itineraries-2.Trips with Rich Multi-media Itineraries 2?fm=auto&auto=compress%2Cformat" width="768" height="456" alt="" />
+
+## The elevation chart isn't showing up on my trip page
+
+Check the **Start Location** and **Altitude** fields for your itinerary days. You need to fill in both fields for at least two days before the chart can appear.
+
+If one of those fields is blank, the chart will not show. Start there first.
+
+## The extra itinerary info fields aren't appearing
+
+Go to the global settings at **WP Travel Engine → Settings → Extensions → Advanced Itinerary Builder** and make sure **Show Itinerary Info** is turned on.
+
+Then open the trip and check that you entered values for those fields on the specific itinerary days. If a field is empty for a day, it will not appear on that day's page.
+
+## Meals aren't showing for one of my days
+
+Open that trip and edit the correct itinerary day. Then check the **Meals Included** section and make sure the right meal boxes are selected for that day.
+
+Meals only show when they are checked on that specific day.
+
+## I don't see the Advanced Itinerary Builder settings when I edit my trip
+
+First, make sure the add-on is installed and activated. Then go to your WordPress dashboard and check **WP Travel Engine → Settings → Extensions** on the left sidebar.
+
+If the add-on is active, you should see the Advanced Itinerary Builder settings there. If you do not, the add-on may not be installed or activated yet.
+
+## My sleep mode options aren't showing up when I edit a trip
+
+Sleep mode options do not appear automatically. You need to create them first in the global settings.
+
+Go to **WP Travel Engine → Settings → Extensions → Advanced Itinerary Builder** and add your sleep modes under **Sleep Mode Fields**. After that, those options will appear when you edit each trip day.
+
+## All my itinerary days are expanded and I want them collapsed
+
+Open the global settings at **WP Travel Engine → Settings → Extensions → Advanced Itinerary Builder** and turn off **Always Show All Itinerary**.
+
+That makes the itinerary days stay collapsed by default on the frontend. Travelers can still open them when they want.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can I set different accommodation types for different trips?" default-open="false">
+    Sleep modes are global, so you create the full list once. Then you choose the right sleep mode for each day of each trip.
+
+    You do not have to use every sleep mode on every trip.
+  </Expandable>
+
+  <Expandable title="Can I rearrange days after I've created them?" default-open="false">
+    Yes. Click and drag each itinerary day into the order you want.
+  </Expandable>
+
+  <Expandable title="Can I use different chart colors for different trips?" default-open="false">
+    No. Chart colors are global, so the same chart style applies across all trips.
+
+    Pick one brand color that works well for your whole site.
+  </Expandable>
+
+  <Expandable title="Do I have to fill in every field for every day?" default-open="false">
+    No. Leave any field blank if it does not apply to that day.
+
+    Blank fields do not show on the trip page.
+  </Expandable>
+
+  <Expandable title="Can I add more than one photo per day?" default-open="false">
+    Yes. Click **Add Image** as many times as you need for that itinerary day.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info" collapsed="false" color="#06b6d4">
+  If you're still stuck or have a question we didn't cover, our support team is happy to help. Reach out at **[our support page](https://wptravelengine.com/support-ticket/)** and we'll get you sorted.
+</Callout>

@@ -1,0 +1,65 @@
+---
+title: PayU Biz Payment Gateway
+description: >-
+  Install and configure the PayU Payment Gateway addon so travelers can pay for
+  trips using credit card, debit card, internet banking, or PayPal through PayU.
+type: guide
+---
+## Overview
+
+[PayU Payment Gateway](https://wptravelengine.com/plugins/payu-biz-payment-gateway/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) is an extension for WP Travel Engine that lets you accept trip and tour payments through PayU, one of the leading financial services in global growth markets.
+
+PayU Payment Gateway supports payment methods like credit card, debit card, internet banking, and PayPal. Travelers can make card payments as well as direct payments through any associated bank.
+
+<Callout kind="info">
+  PayU Payment Gateway requires the [WP Travel Engine](https://wptravelengine.com/?utm_source=free_plugin\&utm_medium=docs\&utm_campaign=upgrade_to_pro) plugin to be installed.
+</Callout>
+
+## Requirements
+
+You must have an active merchant account with [PayU](https://www.payumoney.com/) to use this payment gateway. You'll need:
+
+- A PayU Merchant Key
+- A PayU Merchant Salt
+
+## Installation
+
+<Steps title-type="h3">
+  <Step title="Download the extension">
+    Download the extension from your dashboard.
+  </Step>
+
+  <Step title="Upload the plugin folder">
+    Upload the folder to your `/wp-content/plugins/` directory.
+  </Step>
+
+  <Step title="Activate the plugin">
+    Activate **WP Travel Engine – PayU Payment Gateway** from the Plugins menu within WordPress.
+  </Step>
+</Steps>
+
+## Configure the gateway
+
+<Steps title-type="h3">
+  <Step title="Open Payment settings">
+    Go to **Trips > Settings > Payments**.
+  </Step>
+
+  <Step title="Select PayU">
+    You'll see PayU as an option to enable the PayU Payment Gateway for trip bookings. Click **PayU** to configure its settings.
+  </Step>
+
+  <Step title="Enter your merchant credentials">
+    Enter your Merchant Key and Merchant Salt.
+  </Step>
+</Steps>
+
+<ParamField name="Merchant Key" param-type="string" required="true">
+  Your PayU Merchant Key.
+</ParamField>
+
+<ParamField name="Merchant Salt" param-type="string" required="true">
+  Your PayU Merchant Salt.
+</ParamField>
+
+Once configured, when a traveler books a trip through the PayU Payment Gateway, they're taken to PayU to complete a secure payment.

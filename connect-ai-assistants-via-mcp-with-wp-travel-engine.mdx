@@ -1,0 +1,338 @@
+---
+title: Connect AI Assistants via MCP with WP Travel Engine
+description: >-
+  Connect Claude, ChatGPT, Cursor, VS Code, or any MCP-capable client to your WP
+  Travel Engine site using Altus AI's MCP module.
+type: guide
+---
+## What MCP does
+
+MCP (Model Context Protocol) lets an AI assistant — Claude, ChatGPT, Cursor, VS Code, or another MCP-capable client — connect directly to your site and act on it: reading trips, bookings, and customers, and creating or updating them where you allow it. Once connected, you ask the assistant a question or hand it a task in plain language instead of copying data back and forth.
+
+## Benefits at a glance
+
+| Feature                | User benefit                                                                                                         |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Live data access       | Your assistant reads real trip, booking, and customer data instead of you pasting it in manually                     |
+| Two connection methods | Application Password for local tools like Claude Code and Cursor, OAuth for browser tools like Claude.ai and ChatGPT |
+| One-click client setup | Claude Code, Cursor, and VS Code get a ready-to-run command or deep link, nothing to configure by hand               |
+| Granular tool access   | Every read and write action is a separate tool, so you can see exactly what an assistant is able to do               |
+| Write actions gated    | Creating or updating trips, bookings, coupons, or settings always requires an admin-level WordPress user             |
+| Revocable anytime      | Shut off any connection instantly without affecting your regular WordPress login                                     |
+
+## Prerequisites
+
+1. WP Travel Engine is installed and activated on your WordPress site.
+2. The Altus AI plugin is installed and activated.
+3. You have a WordPress admin login ready — some connection steps redirect you to sign in and approve access.
+
+<Callout kind="info">
+  New to Altus AI? Follow the [Getting Started with Altus AI](/altus-ai/getting-started-with-altus-ai) guide first to install the add-on and activate your license key.
+</Callout>
+
+## Verify the MCP module is active
+
+<Steps title-type="h3">
+  <Step title="Open the Modules page">
+    Go to your WordPress dashboard, then **Altus AI > Modules**.
+  </Step>
+
+  <Step title="Confirm MCP is active">
+    Confirm the **MCP** card shows **Active**, with its toggle switched on.
+  </Step>
+
+  <Step title="Open the configuration screen">
+    Click **Configure** on the MCP card, or go to **Altus AI > MCP**, to open the configuration screen.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+  If MCP doesn't show as active after toggling it on, click **Save Settings** at the bottom of the Modules screen.
+</Callout>
+
+## Understand read vs. write access
+
+Every connected assistant can freely use Altus's **read** tools: viewing trips, bookings, customers, coupons, payments, and analytics. **Write** tools — creating or updating a trip, booking, coupon, customer, or your global settings — are gated to an admin-level WordPress user no matter which client connects.
+
+<Callout kind="danger">
+  Only connect Altus MCP to assistants and accounts you trust. A connected assistant with write access can create bookings, change prices, and edit customer data on your live site. Review the [Available tools](#available-tools) list before granting access — click any tool to see exactly what it does.
+</Callout>
+
+## Choose a connection method
+
+On **Altus AI > MCP**, the **Add Altus to your client** screen has two tabs. Which one you use depends entirely on the AI tool you're connecting — they are not interchangeable.
+
+| Method               | Use it for                                                                                                                                                 | Where it lives        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| OAuth                | Browser-based tools that log in through your site rather than storing a static credential — Claude (Desktop, Mobile & Web) and ChatGPT                     | **OAuth** tab         |
+| Application Password | Local clients that run on your own machine and store their own connection config — Claude Code, Cursor, VS Code, Continue, or any other SSE-capable client | **Editors & CLI** tab |
+
+Pick the tab below that matches the tool you're connecting.
+
+<Tabs tabs="OAuth (Claude & ChatGPT),Application Password (Local Clients)" default-tab="0">
+  <Tab>
+    ### Method A: OAuth (Claude and ChatGPT)
+
+    OAuth authorizes the connection interactively: the AI tool redirects you to your WordPress site to log in and approve access, then redirects you back. There's no credential to copy.
+
+    #### Connecting Claude (Desktop, Mobile & Web)
+
+    <Steps title-type="h5">
+      <Step title="Select Claude in the OAuth tab">
+        On **Altus AI > MCP**, under the **OAuth** tab, select **Claude (Desktop, Mobile & Web)**.
+      </Step>
+
+      <Step title="Add a custom connector in Claude">
+        In Claude, open **Settings > Connectors > Add custom connector** (available on Desktop, mobile app, or web on a Pro, Team, or Enterprise plan).
+      </Step>
+
+      <Step title="Paste the MCP Server URL">
+        Give your connector a name, for example "Altus," then paste in the **MCP Server URL** shown on the Altus screen using the **Copy** button.
+      </Step>
+
+      <Step title="Leave Advanced settings empty">
+        Dynamic Client Registration handles the rest automatically.
+      </Step>
+
+      <Step title="Sign in and approve">
+        Click **Add** in Claude. When prompted, sign in with your WordPress account and approve the connection.
+
+        <Callout kind="info">
+          No application password is needed for this method. Sign-in happens through your WordPress login.
+        </Callout>
+      </Step>
+
+      <Step title="Test the connection">
+        Start a new conversation in Claude, enable the connector, and test it with a read-only question, for example "How many bookings do I have this month?"
+      </Step>
+    </Steps>
+
+    <Callout kind="tip" collapsed="true">
+      If your setup can't use Dynamic Client Registration, expand **Advanced: manual OAuth client (optional)** and click **Show OAuth Client ID / Secret fields**. Click **Generate** next to each field to create them manually, or leave both blank to let Dynamic Client Registration handle it. Most setups won't need this.
+    </Callout>
+
+    #### Connecting ChatGPT
+
+    ChatGPT's OAuth connectors sit behind a feature called **Developer Mode**, and are only available on paid plans (Plus, Pro, Team, Business, Enterprise, or Edu). The free plan cannot add custom connectors at all.
+
+    <Steps title-type="h5">
+      <Step title="Turn on Developer Mode">
+        Sign in to chatgpt.com on a paid plan, click your profile icon in the bottom-left corner, go to **Settings > Security and Login**, and scroll to the **Developer Mode** toggle. Toggle it on and acknowledge the warning about connecting unverified connectors.
+      </Step>
+
+      <Step title="Add Altus as a custom app">
+        Still under **Settings > Plugins**, click the **+** icon in the top-right corner. Fill in a **Name** (your site or business name), a specific **Description** (ChatGPT uses this to decide when to bring the connector into a conversation — be specific, not generic), and the **Server URL** from Altus's OAuth tab. Set **Authentication** to **OAuth**, check the risk-acknowledgment box, and click **Create**.
+      </Step>
+
+      <Step title="Authorize the connection">
+        ChatGPT redirects you to your WordPress site's OAuth consent screen. Review the permissions and click **Authorize**. You're redirected back, and your connector appears under installed plugins.
+      </Step>
+
+      <Step title="Use it in a conversation">
+        Open a new ChatGPT conversation, click **+ > More**, and select your Altus connector. This is enabled per conversation, so repeat it each time you start a new chat. Test with a read-only prompt first, for example "Give me the latest booking?"
+      </Step>
+    </Steps>
+
+    <Callout kind="alert">
+      ChatGPT restricts write access by plan. Plus and Pro are read-only, even though Altus exposes write tools. Team allows limited write actions. Business, Enterprise, and Edu get full read and write support. If you're on Plus or Pro and need write access, connect through Claude instead — it has no such tier restriction.
+    </Callout>
+  </Tab>
+
+  <Tab>
+    ### Method B: Application Password (Claude Code, Cursor, VS Code, and other local clients)
+
+    An Application Password is a revocable, WordPress-native credential made for exactly this purpose. It isn't your login password, doesn't expire on its own, and can be revoked at any time without affecting your regular account. Every client using it sends the password as an HTTP `Authorization: Basic` header on each request — there's no separate process or local server to run.
+
+    #### 1. Create an application password
+
+    <Steps title-type="h5">
+      <Step title="Open the Editors & CLI tab">
+        On **Altus AI > MCP**, switch to the **Editors & CLI** tab.
+      </Step>
+
+      <Step title="Name the credential (optional)">
+        Under **Create an application password**, optionally enter a **Name** to label the credential (defaults to "Altus" if left blank).
+      </Step>
+
+      <Step title="Generate the password">
+        Click **Generate another application password**.
+
+        <Callout kind="alert">
+          Once generated, the password can't be viewed again — it's a one-time-only credential.
+        </Callout>
+      </Step>
+    </Steps>
+
+    #### 2. Connect your client
+
+    Pick the tab matching your client below — each one provides a ready command or deep link with the credential already filled in.
+
+    <Tabs tabs="Claude Code,Cursor,VS Code,Continue / Other (SSE)" default-tab="0">
+      <Tab>
+        <Steps title-type="h6">
+          <Step title="Start Claude Code">
+            Open a terminal in your project directory and start Claude Code (`claude`).
+          </Step>
+
+          <Step title="Copy the connection command">
+            Copy the command shown under the **Claude Code CLI** tab — a `claude mcp add` command with the endpoint URL. The Authorization header is included only if you copy the command right after generating the password, since the password itself can't be retrieved afterward. If you copy it later, add the header yourself using the password you saved.
+          </Step>
+
+          <Step title="Run the command">
+            Paste and run it in your terminal.
+          </Step>
+
+          <Step title="Confirm the connection">
+            In a new session, confirm the server shows as connected (Claude Code lists connected MCP servers at startup or via a status command).
+          </Step>
+        </Steps>
+      </Tab>
+
+      <Tab>
+        <Steps title-type="h6">
+          <Step title="Open the deep link">
+            Click **Add to Cursor** under the **Cursor** tab. This opens a `cursor://` deep link with the endpoint URL and Basic-auth header pre-filled.
+          </Step>
+
+          <Step title="Use the fallback if needed">
+            If Cursor doesn't open or isn't installed, expand **Cursor not installed, or the button didn't open it? Copy the prompt instead**, and paste that prompt into Cursor's chat.
+          </Step>
+
+          <Step title="Confirm the connection">
+            Cursor shows the server as connected once it can reach it, with its tools available in chat and composer.
+          </Step>
+        </Steps>
+      </Tab>
+
+      <Tab>
+        <Steps title-type="h6">
+          <Step title="Open the deep link">
+            Click **Add to VS Code** under the **VS Code** tab. This opens a `vscode:` deep link that installs the server as an HTTP MCP server, with the endpoint URL and Basic-auth header pre-filled.
+          </Step>
+
+          <Step title="Use the fallback if needed">
+            If VS Code doesn't open or isn't installed, expand the fallback prompt option and paste it into VS Code's chat.
+          </Step>
+
+          <Step title="Confirm the connection">
+            VS Code lists the server as connected once it can reach it, with tools available in Copilot Chat.
+          </Step>
+        </Steps>
+      </Tab>
+
+      <Tab>
+        <Steps title-type="h6">
+          <Step title="Select the matching tab">
+            Select the **Continue** tab, or **Other (SSE)** if your client isn't listed.
+          </Step>
+
+          <Step title="Copy the setup prompt">
+            Copy the prompt shown — it contains the endpoint URL, your Application Password, and the setup instructions the client needs to configure itself.
+          </Step>
+
+          <Step title="Paste it into your client">
+            Paste the prompt into your client to complete setup.
+          </Step>
+        </Steps>
+      </Tab>
+    </Tabs>
+
+    #### 3. Confirm it's connected
+
+    Regardless of which client you used, start a new conversation and ask a read-only question, for example "What trips do I have listed?" If you get a real answer from your site's data, the connection is working.
+
+    <Callout kind="alert">
+      If it fails, regenerate the Application Password on the **Editors & CLI** tab, re-copy the command or link, and confirm the **MCP** module is still active under **Altus AI > Modules**.
+    </Callout>
+  </Tab>
+</Tabs>
+
+## Available tools
+
+Once connected, an assistant can call any of these WP Travel Engine tools, subject to the read/write access described above.
+
+<Expandable title="Read tools" default-open="true">
+  `get-analytics`, `get-booking`, `get-coupon`, `get-customer`, `get-enquiry`, `get-global-settings`, `get-payment`, `get-trip`, `get-trip-packages`, `list-bookings`, `list-coupons`, `list-customers`, `list-enquiries`, `list-payments`, `list-taxonomy-terms`, `list-trips`, `map`
+</Expandable>
+
+<Expandable title="Write tools" default-open="true">
+  `assign-trip-taxonomies`, `create-booking`, `create-coupon`, `create-trip`, `manage-taxonomy-term`, `update-booking`, `update-coupon`, `update-customer`, `update-global-settings`, `update-package`, `update-trip`, `upload-media`, `write-addon-entity`
+</Expandable>
+
+<Callout kind="info">
+  Click any tool on the **Available tools** list in your dashboard to see exactly what it does before granting access.
+</Callout>
+
+## Revoke access
+
+<Steps title-type="h3">
+  <Step title="Open the MCP settings">
+    Go to **Altus AI > MCP**.
+  </Step>
+
+  <Step title="Revoke an Application Password connection">
+    For Claude Code, Cursor, VS Code, and similar clients — under the **Editors & CLI** tab, expand **Manage existing application password**, and revoke the credential. This immediately breaks the connection for every client using that password.
+  </Step>
+
+  <Step title="Revoke an OAuth connection">
+    For Claude and ChatGPT — under the **OAuth** tab, expand **Advanced: manual OAuth client** and click **Reset OAuth** to invalidate the client, disconnecting every assistant authorized through it.
+  </Step>
+</Steps>
+
+<Callout kind="danger">
+  Revoke access immediately if a device, staff member, or account no longer needs it. Write-capable connections can change live bookings, pricing, and customer data.
+</Callout>
+
+## Use cases
+
+### Managing bookings from Claude Desktop while traveling
+
+**Situation:** You're away from your laptop's admin dashboard but need to check and update a booking.
+
+**Implementation:** Connect Claude (Desktop, Mobile & Web) via OAuth, following Method A. Ask Claude directly, for example "Show me today's new bookings" or "Update booking #16668's payment status."
+
+**Benefit:** You manage live bookings from a phone or any device with Claude installed, without opening wp-admin.
+
+### A developer debugging trip data from the terminal
+
+**Situation:** A developer needs to inspect live trip and booking data while working in Claude Code.
+
+**Implementation:** Generate an Application Password under the Editors & CLI tab, run the provided `claude mcp add` command in the project terminal, and ask Claude Code to pull specific trip or booking records while debugging.
+
+**Benefit:** The developer gets real site data directly in their coding environment, without switching to wp-admin or exporting data manually.
+
+## Troubleshooting
+
+<Expandable title="Connector doesn't appear after adding it" default-open="false">
+  Confirm the **MCP** module is still active under **Altus AI > Modules**.
+</Expandable>
+
+<Expandable title="Claude or ChatGPT can't authorize" default-open="false">
+  Double-check the MCP Server URL was copied exactly from the OAuth tab, and that you're signed in to WordPress with an account that has access.
+</Expandable>
+
+<Expandable title="Write actions fail on ChatGPT" default-open="false">
+  Check your plan tier — Plus and Pro accounts are read-only regardless of the tools Altus exposes.
+</Expandable>
+
+<Expandable title="Local editor can't connect" default-open="false">
+  Regenerate the Application Password under Editors & CLI and re-copy the full command or link — a partial copy will fail authentication.
+</Expandable>
+
+<Expandable title="Cursor or VS Code deep link doesn't open the app" default-open="false">
+  Use the fallback "copy the prompt instead" option under that client's tab.
+</Expandable>
+
+## FAQs
+
+<Expandable title="Are OAuth and Application Password connections independent of each other?" default-open="false">
+  Yes. OAuth and Application Password connections are independent, and you can generate multiple Application Passwords for different clients.
+</Expandable>
+
+<Expandable title="Does revoking one Application Password affect others?" default-open="false">
+  No. Each Application Password is a separate credential. Revoking one only disconnects the clients using that specific password.
+</Expandable>
+
+<Expandable title="Which method should I use if I'm not a developer?" default-open="false">
+  Use OAuth. It's built for Claude and ChatGPT and requires no command line or credential copying — just signing in through your WordPress account.
+</Expandable>

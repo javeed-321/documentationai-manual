@@ -1,0 +1,112 @@
+---
+title: Misc Settings (Travel Monster Pro)
+description: >-
+  Configure performance optimization, custom scripts, and customizer reset
+  options provided by Travel Monster Pro.
+type: guide
+---
+Travel Monster Pro's Misc Settings panel groups three separate tools: a Performance optimization suite, a Custom Scripts injector, and a Customizer Reset option.
+
+## Performance setting
+
+The Performance setting includes options to optimize different elements that build up your website — images, WordPress core behaviors, CSS/JS delivery, and Elementor.
+
+You can access the Performance settings from **Dashboard > Appearance > Customize > Misc Settings > Performance**.
+
+<Tabs default-tab="1" tabs="Images,WordPress,CSS/JS Optimization,Elementor">
+  <Tab title="Images">
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-66.png" alt="Image optimization settings including lazy load options" width="342" height="640" />
+
+    | Setting                                                                                | What it does                                                                                                                                            |
+    | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | Should images load lazily? (Lazy Load Images)                                          | Activates lazy loading for your site's images so they load only as visitors scroll to them.                                                             |
+    | Should some images skip lazy loading? (Exclude Lazy Load Images)                       | Excludes specific images from lazy loading.                                                                                                             |
+    | Which images should skip lazy loading? (Excluded images list)                          | Only visible when Exclude Lazy Load Images is on. Enter one keyword per line — an image filename, CSS class, or domain — to identify images to exclude. |
+    | How many top images should skip lazy loading? (Exclude Above-the-fold Images)          | Sets the number of images from the top of the homepage that should be excluded from lazy loading, since visitors see them immediately.                  |
+    | What animation should lazy-loaded images use? (Lazy Load Animation)                    | Sets the animation effect shown while lazy-loaded images come into view. Only visible when Lazy Load Images is on.                                      |
+    | Should the featured image skip lazy loading? (Disable Featured Image Lazy Load)        | Disables lazy loading specifically for the featured image on single posts.                                                                              |
+    | Should images open in a lightbox? (Lightbox for Images and Galleries)                  | Enables a lightbox viewer for images and galleries.                                                                                                     |
+    | Should missing image dimensions be added automatically? (Add Missing Image Dimensions) | Adds width and height attributes to images to improve Cumulative Layout Shift (CLS).                                                                    |
+  </Tab>
+
+  <Tab title="WordPress">
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-67.png" alt="WordPress core optimization settings" width="600" height="400" />
+
+    | Setting                                                                              | What it does                                                                                    |
+    | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+    | Should the automatic favicon request be blocked? (Prevent Automatic Favicon Request) | Disables the automatic favicon request to speed up your site.                                   |
+    | Should the Emoji script be removed? (Remove Emojis script)                           | Removes the WordPress Emoji JavaScript file from your frontend.                                 |
+    | Should self pingbacks be disabled? (Disable Self Pingbacks)                          | Disables the pingbacks generated when you link to your own articles.                            |
+    | Should RSS feeds be disabled? (Disable RSS Feeds)                                    | Disables WordPress-generated RSS feeds and 301-redirects the feed URL to the parent page.       |
+    | Should RSS feed links be removed? (Remove RSS Feed Links)                            | Removes the RSS feed `<link>` tags WordPress generates automatically.                           |
+    | Should the Embeds script be disabled? (Disable Embeds script)                        | Removes the WordPress Embeds JavaScript file.                                                   |
+    | Should Gravatars load from your own server? (Load Gravatar Locally)                  | Loads Gravatar images from your own server rather than Gravatar's servers, improving load time. |
+  </Tab>
+
+  <Tab title="CSS/JS Optimization">
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-69.png" alt="CSS and JavaScript optimization settings" width="600" height="400" />
+
+    | Setting                                                               | What it does                                                                                                                               |
+    | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+    | Should version query strings be removed? (Ver parameters)             | Removes version query strings from static resources, improving how browsers cache them.                                                    |
+    | Should scripts load with defer? (Defer JavaScript)                    | Adds the `defer` attribute to script tags, improving page download speed.                                                                  |
+    | Which scripts should skip defer? (Deferred Excluded JavaScript Files) | Only visible when Defer JavaScript is on. List JavaScript files (one per line) to exclude from deferring.                                  |
+    | Should JS files wait for user interaction? (Delay JavaScript Files)   | Delays loading JavaScript files until the visitor interacts with the page — clicking, scrolling, and so on — improving initial load speed. |
+  </Tab>
+
+  <Tab title="Elementor">
+    <Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-70.png" alt="Elementor-specific performance optimization settings" width="600" height="400" />
+
+    | Setting                                                                    | What it does                                                                                         |
+    | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+    | Should Elementor's Google Fonts be blocked? (Disable Google Fonts)         | Prevents Elementor's Google Fonts from loading.                                                      |
+    | Should Elementor's icon library be blocked? (Disable Icons)                | Prevents Elementor's icon library from loading.                                                      |
+    | Should Font Awesome be blocked? (Disable Font Awesome)                     | Prevents Elementor's Font Awesome icons from loading.                                                |
+    | Should Elementor's frontend scripts be blocked? (Disable Frontend scripts) | Prevents Elementor frontend scripts — such as Swiper, dialog, and share link scripts — from loading. |
+    | Should Elementor Pro's scripts be blocked? (Disable Elementor Pro scripts) | Prevents some Elementor Pro scripts from loading.                                                    |
+  </Tab>
+</Tabs>
+
+<Callout kind="alert">
+  Disabling scripts or fonts your page actually uses (e.g. Font Awesome or Elementor frontend scripts) can break icons or interactive elements. Test your site after enabling any Elementor optimization option.
+</Callout>
+
+## Custom Scripts
+
+Custom Scripts lets you inject custom code snippets into your website's header, body, and footer files — without manually editing theme files or installing a separate plugin.
+
+You can access this setting from **Dashboard > Appearance > Customize > Misc Settings > Custom Scripts**.
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-71.png" alt="Custom Scripts fields for header, body, and footer code" width="600" height="400" />
+
+<Steps title-type="h3">
+  <Step title="Enter your scripts">
+    Paste your code into the Header, Body, or Footer field depending on where it needs to run.
+  </Step>
+
+  <Step title="Publish your changes">
+    Click **Publish** in the Customizer to apply the scripts to your live site.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+  Custom scripts run directly on your site with no validation. Test changes on a staging site first, since a broken script can affect your entire site's frontend.
+</Callout>
+
+## Customizer Reset
+
+Customizer Reset lets you reset every setting you've configured in the Customizer back to its default state.
+
+You can access this setting from **Dashboard > Appearance > Customize > Misc Settings > Customizer Reset**.
+
+<Image src="https://docs.wptravelengine.com/wp-content/uploads/2022/09/1-72.png" alt="Customizer Reset button in Travel Monster Pro settings" width="600" height="400" />
+
+Click **Reset** to restore all Customizer settings for your website to their default values.
+
+<Callout kind="danger">
+  This action reverts every Customizer setting you've configured — not just Travel Monster Pro's — and cannot be undone. Make sure you actually want to start over before clicking Reset.
+</Callout>
+
+## Getting help
+
+If you run into any issues configuring these settings, contact the [WP Travel Engine support team](https://wptravelengine.com/support-ticket/).

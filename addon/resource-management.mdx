@@ -1,0 +1,329 @@
+---
+title: Resource Management
+description: >-
+  Set maximum bookable quantities for rooms and extra services on your trips,
+  enforce capacity limits automatically, and release freed-up inventory to
+  waitlisted travelers.
+---
+Resource Management is an add-on that lets you set a maximum bookable quantity for rooms and extra services on your trips, and enforces that limit automatically once it's set.
+
+Use it for a room type with only a handful of physical units, or an extra service like a private transfer or gear rental that can only be fulfilled a limited number of times per day.
+
+Works across trips or per trip, your choice. Everything else on your site stays untouched.
+
+## Key features & benefits
+
+| Feature                          | Benefit                                                                                                                             |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Room and service capacity limits | No more selling more rooms or extra services than you physically have.                                                              |
+| One rule, many trips             | Apply the same capacity to every departure that shares a room type.                                                                 |
+| Flexible capacity resets         | Decide whether a limit applies per departure or is shared across overlapping stays, depending on how you actually manage inventory. |
+| Occupancy Calendar               | See rooms occupied and services booked for any date.                                                                                |
+| Built-in Waitlist integration    | Release freed-up capacity to a specific waitlisted traveler and notify them directly.                                               |
+
+## Prerequisites
+
+- WordPress 6.5+
+- WP Travel Engine installed and activated
+- WP Travel Engine updated to 6.8.5+
+- Resource Management add-on installed with a valid license
+- At least one of the following:
+  - Accommodation 1.0.9+
+  - Extra Services 2.2.2+
+
+<Callout kind="info" collapsed="false">
+  You need either **Accommodation** or **Extra Services** to use Resource Management. Install and activate the one that matches the inventory you want to manage.
+</Callout>
+
+## Install the add-on
+
+Install the Resource Management add-on before you create any capacity rules.
+
+<Callout kind="info" collapsed="false">
+  Check the add-on installation instructions, then activate the **License Key** before you continue.
+</Callout>
+
+## Verify installation
+
+<Steps>
+  <Step title="Go to WordPress Dashboard" icon="home" title-type="p">
+    Sign in to your WordPress admin area.
+  </Step>
+
+  <Step title="Navigate to WP Travel Engine" icon="folder" title-type="p">
+    Open **WP Travel Engine** from the left sidebar menu.
+  </Step>
+
+  <Step title="Confirm Resource Management appears in submenu" icon="check-circle" title-type="p">
+    Check that **Resource Management** appears under the **WP Travel Engine** menu.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  If the menu item doesn't appear, deactivate and reactivate the add-on from the **Plugins** screen.
+</Callout>
+
+## Create a capacity rule
+
+Create one rule for each inventory policy you want to enforce.
+
+<Steps>
+  <Step title="Open Resource Management" icon="settings" title-type="p">
+    Go to **WP Travel Engine** > **Resource Management**.
+  </Step>
+
+  <Step title="Click Add Rule" icon="plus" title-type="p">
+    Click **Add Rule** to open the **Configure New Capacity Rule** panel.
+  </Step>
+
+  <Step title="Enter a Rule Name" icon="edit" title-type="p">
+    Enter a descriptive label like **Deluxe Room, Summer Season**. This is for your own reference, and travelers never see it.
+  </Step>
+
+  <Step title="Choose Applies To" icon="folder" title-type="p">
+    Choose **All Trips** or **Specific Trips**. **Specific Trips** reveals a drop-down where you can search and select individual trips.
+  </Step>
+
+  <Step title="Set Date Ranges (optional)" icon="calendar" title-type="p">
+    Turn this on if the rule should apply only within a specific departure window, then set **Start Date** and **End Date**. Trips outside that range use normal unrestricted inventory.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Leave this off if the rule should stay active indefinitely.
+</Callout>
+
+<Steps>
+  <Step title="Select Track Capacity For" icon="check-circle" title-type="p">
+    Select **Accommodation**, **Extra Services**, or both. Each selection reveals its own restriction section below.
+  </Step>
+</Steps>
+
+## Accommodation restriction
+
+Control how room capacity is reduced when travelers book accommodation.
+
+<ExpandableGroup>
+  <Expandable title="On the departure date only" default-open="true">
+    Each departure has its own room count. A multi-night booking won't block rooms for other departures.
+
+    Example: Room A capped at 10 units. A 3-day trip departs June 1st and June 2nd. Booking 5 units on June 1st leaves 5 left for June 1st, but June 2nd still has all 10.
+  </Expandable>
+
+  <Expandable title="Across the entire trip duration" default-open="false">
+    The room stays booked for every night of that stay, so no other trip can use it during that time.
+
+    Example: Room A capped at 10. Trip departs June 1st for 5 nights, another departs June 3rd for 4 nights. If June 1st trip books 6 units, those rooms stay held through June 6th. Since June 3rd's dates fall inside that window, only 4 units are left.
+  </Expandable>
+</ExpandableGroup>
+
+Select which rooms and upgrades this rule applies to. Each selected item appears in a table with an **Exclusive Capacity** box where you enter how many can be booked. For example, you might set Room A to 5 and Room B to 10.
+
+<Callout kind="tip" collapsed="false">
+  Leave a room's number empty if you just want to see it on the calendar without setting a limit.
+</Callout>
+
+## Extra services restrictions
+
+Manage extra service inventory the same way, with a choice between per-departure limits or shared limits across overlapping trip dates.
+
+<ExpandableGroup>
+  <Expandable title="On the departure date only" default-open="true">
+    Each departure has its own separate slots.
+  </Expandable>
+
+  <Expandable title="Across the entire trip duration" default-open="false">
+    Shares slots between departures whose dates overlap.
+  </Expandable>
+</ExpandableGroup>
+
+Click the field and select which extra services apply, such as Water or Camera. You can select more than one service. Once selected, each service appears in a table with a **Total Slots** box where you enter the maximum bookings. Water set to 5, Camera to 4.
+
+<Callout kind="info" collapsed="false">
+  A service that runs out on one date won't block a different date unless the entire trip duration is selected.
+</Callout>
+
+Once everything is set, click **Add Rule** and then **Save Changes**.
+
+## Capacity management settings
+
+Resource Management stores the rules and capacity numbers. What travelers actually see on the trip page is controlled separately, in Accommodation's and Extra Services' own settings.
+
+### Capacity management in Accommodation
+
+From your WordPress dashboard, go to **WP Travel Engine** > **Settings** > **Extensions** > **Accommodation**. Select the **Capacity Management** tab.
+
+<Image src="https://blob-cdn.documentation.ai/org-fd8ba769-7008-47cf-98f1-e0d78d98350b/doc-08c376b3-8054-4dc6-b874-0c65a04a623e/1786343474591-mkgwc69v6i-Configure-Capacity-Rules.Configure Capacity Rules?fm=auto&auto=compress%2Cformat" width="813" height="717" alt="" />
+
+<ParamField body="Show Availability Count" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Toggle ON to show an **X Left** badge next to a room once it's close to selling out.
+</ParamField>
+
+<ParamField body="Show Sold-out Room" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Toggle ON to keep a fully booked room visible on the trip page, tagged **Sold out**, instead of hiding it.
+</ParamField>
+
+<ParamField body="Allow Waitlist When a Room is Fully Booked" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Toggle on to allow travelers to join the waitlist when the room is sold out.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  You need the Waitlist add-on installed, activated, and updated to version 1.0.4 or later to use this feature.
+</Callout>
+
+You can release rooms to your waitlisters later from the **Upcoming Tours Dashboard**. It lists all waitlisters for a specific departure alongside your Trip waitlisters.
+
+Click **Save Settings** to apply.
+
+### Capacity management in Extra Services
+
+Works the same way as Accommodation. Go to **WP Travel Engine** > **Settings** > **Extensions** > **Extra Services**. Under your existing settings, you'll find the same **Show Availability Count** and **Show Sold-out Service** toggles, doing the same job for extra services instead of rooms.
+
+<ParamField body="Show Availability Count" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Toggle ON to show an **X Left** badge while service slots are still available.
+</ParamField>
+
+<ParamField body="Show Sold-out Service" param-type="toggle" required="false" deprecated="false" show-location="false">
+  Toggle ON to keep a fully booked service visible on the trip page, tagged **Sold out**, instead of hiding it.
+</ParamField>
+
+## What travelers see on the trip page
+
+Turn on availability and sold-out settings to show travelers what is still bookable before they complete checkout.
+
+### Accommodation step in booking modal
+
+With **Show Availability Count** on, travelers see a live count next to each room. With **Show Sold-out Room** on, a fully booked item stays on the page tagged as sold out.
+
+### Extra service step in booking modal
+
+Extra Services behave the same way: a live count badge while slots remain, and a **Sold out** tag once a service is full.
+
+## Occupancy calendar
+
+Go to **WordPress Dashboard** > **WP Travel Engine** > **Resource Management** > **Occupancy Calendar**. Each day shows how many rooms are occupied and how many services are booked.
+
+Click a day to open its breakdown showing all rooms and extra services booked that day, including per-trip counts.
+
+<Callout kind="info" collapsed="false">
+  The calendar only shows rooms and services that have actually been booked. If you release extra capacity for someone on the waitlist, that extra capacity does not show up on the calendar right away. It only appears once that traveler actually completes their booking.
+</Callout>
+
+## Release room capacity from Upcoming Tours
+
+<Steps>
+  <Step title="Open Upcoming Tours" icon="calendar" title-type="p">
+    Go to **WP Travel Engine** > **Upcoming Tours**. Click **Waitlist Details** on the departure row.
+  </Step>
+
+  <Step title="Release seats" icon="plus" title-type="p">
+    Under **Room Capacity Management**, set how many extra seats to release for each room.
+  </Step>
+
+  <Step title="Assign to a waitlisted traveler" icon="mail" title-type="p">
+    Choose which waitlisted traveler gets access to the released seats.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Released seats are not shown on the trip page for new visitors. They're only reserved for travelers already on the waitlist. Check the Waitlist documentation for details on notifying travelers.
+</Callout>
+
+<Callout kind="alert" collapsed="false">
+  Released room capacity can't exceed the total seats released for the trip. A validation message appears if the numbers don't line up.
+</Callout>
+
+If a trip uses Activity Tour Booking, travelers choose a specific time, like 9:00 AM or 2:00 PM, instead of just a date. When you release extra capacity for a waitlisted traveler on this kind of trip, that release only applies to the time they were waitlisted for. For example, releasing a seat for the 9:00 AM tour won't open up any extra seats on the 2:00 PM tour of the same day.
+
+## Use cases
+
+<ExpandableGroup>
+  <Expandable title="Capping a popular room type across the season" default-open="true">
+    **Situation:** An operator sells a Deluxe Room with only 10 physical units, but several trip departures list it as bookable. Without a shared limit, overlapping departures could sell more rooms than exist.
+
+    **Implementation:**
+
+    <Steps>
+      <Step title="Open Resource Management" icon="settings" title-type="p">
+        Go to **WP Travel Engine** > **Resource Management** and click **Add Rule**.
+      </Step>
+
+      <Step title="Name the rule" icon="edit" title-type="p">
+        Name it **Deluxe Room, Season Cap** and set **Applies To** to **All Trips**.
+      </Step>
+
+      <Step title="Track accommodation capacity" icon="check-circle" title-type="p">
+        Under **Track Capacity For**, tick **Accommodation**.
+      </Step>
+
+      <Step title="Set the room limit" icon="plus" title-type="p">
+        Select the Deluxe Room and set its capacity to 10.
+      </Step>
+
+      <Step title="Share capacity across overlapping stays" icon="calendar" title-type="p">
+        Choose the entire trip duration so overlapping stays share the same pool.
+      </Step>
+
+      <Step title="Save the rule" icon="check-circle" title-type="p">
+        Click **Save Changes**.
+      </Step>
+    </Steps>
+
+    **Benefit:** Every departure checks against the same 10-room limit. No trip can oversell the room.
+  </Expandable>
+
+  <Expandable title="Reserving a freed-up seat for a specific waitlisted traveler" default-open="false">
+    **Situation:** A trip's Ocean View room sold out, but a returning customer on the waitlist wants first access if a cancellation opens up.
+
+    **Implementation:**
+
+    <Steps>
+      <Step title="Open trip details" icon="calendar" title-type="p">
+        Go to **WP Travel Engine** > **Upcoming Tours** and open the trip's **View Details**.
+      </Step>
+
+      <Step title="Release room capacity" icon="plus" title-type="p">
+        Under **Room Capacity Management**, release 1 seat for Ocean View.
+      </Step>
+
+      <Step title="Notify the waitlisted traveler" icon="mail" title-type="p">
+        Find the customer's waitlist entry and click **Send Email**.
+      </Step>
+
+      <Step title="Send the private booking link" icon="check-circle" title-type="p">
+        Send the private booking link.
+      </Step>
+    </Steps>
+
+    **Benefit:** Only that traveler can book the newly opened room. Their status updates are notified once the email goes out.
+  </Expandable>
+</ExpandableGroup>
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Does Resource Management replace the trip seat limits WP Travel Engine already has?" default-open="false">
+    No. It adds a separate limit on rooms and extra services. Trip-level seat limits keep working the same way.
+  </Expandable>
+
+  <Expandable title="What happens if I don't set a capacity for a room or service?" default-open="false">
+    The room or service is tracked on the Occupancy Calendar without an enforced limit. This is useful for visibility without restricting bookings yet.
+  </Expandable>
+
+  <Expandable title="Can one rule cover rooms and services from different trips?" default-open="false">
+    Yes. Set **Applies To** to **All Trips**, or add the specific trips under **Specific Trips**. One rule can control both rooms and services across multiple trips.
+  </Expandable>
+
+  <Expandable title="Does releasing capacity for a waitlisted traveler show on the Occupancy Calendar right away?" default-open="false">
+    No. Releasing capacity only sends the waitlisted traveler a booking link. The Occupancy Calendar reflects the change only once that traveler actually completes their booking using the link you sent them.
+  </Expandable>
+
+  <Expandable title="What happens if I deactivate a rule?" default-open="false">
+    Its capacity stops being enforced. Any rooms or services it covered return to their normal, unrestricted availability.
+  </Expandable>
+
+  <Expandable title="Does this work with Activity Tour Booking's time slots?" default-open="false">
+    Yes, rules apply the same way. Only capacity released for a waitlisted traveler is scoped to a single time slot instead of the whole day.
+  </Expandable>
+</ExpandableGroup>
+
