@@ -168,6 +168,18 @@
                 "icon": "alert-circle"
               }
             ]
+          },
+          {
+            "group": "Users",
+            "pages": [
+              {
+                "title": "user-1-api",
+                "path": "user-1-api",
+                "openapi": "api-reference/user-api.yaml GET /users",
+                "openapi-mode": "auto",
+                "method": "GET"
+              }
+            ]
           }
         ]
       },
