@@ -1,9 +1,8 @@
 {
   "project": "developer-drivewealth-com",
   "site": "https://developer.drivewealth.com/apis/docs/intro",
-  "startedAt": "2026-08-25T13:01:52.120Z",
-  "finishedAt": "2026-08-25T13:02:48.660Z",
-  "outDir": "/home/javeed/Documents/CAPILLARY/mintlify-clone/output/projects/developer-drivewealth-com",
+  "startedAt": "2026-08-26T04:05:08.273Z",
+  "finishedAt": "2026-08-26T04:07:08.240Z",
   "discovery": {
     "vendor": "readme",
     "source": "the sidebar walk",
@@ -11,8 +10,8 @@
       {
         "name": "Guides",
         "url": "/apis/docs",
-        "groups": 21,
-        "pages": 87
+        "groups": 22,
+        "pages": 88
       },
       {
         "name": "API Reference",
@@ -28,105 +27,21 @@
       }
     ],
     "skippedTabs": [],
-    "navPages": 217,
-    "listedPages": 217
+    "navPages": 218,
+    "listedPages": 218
   },
   "totals": {
-    "pages": 217,
-    "converted": 217,
-    "failed": 0,
-    "compiles": 216,
+    "pages": 218,
+    "converted": 212,
+    "failed": 6,
+    "compiles": 211,
     "needRepair": 2,
     "blockers": 10,
-    "flags": 113,
+    "flags": 99,
     "quarantined": 2,
     "endpoints": 32
   },
   "pages": [
-    {
-      "slug": "apis/docs/intro",
-      "title": "Introduction",
-      "url": "https://developer.drivewealth.com/apis/docs/intro",
-      "parseMode": "mdx",
-      "outputCompiles": true,
-      "notes": {
-        "blocker": 0,
-        "flag": 0,
-        "change": 7
-      },
-      "quarantined": [],
-      "path": "apis/docs/intro.mdx"
-    },
-    {
-      "slug": "apis/docs/choosing-your-integration-model",
-      "title": "Choosing your integration model",
-      "url": "https://developer.drivewealth.com/apis/docs/choosing-your-integration-model",
-      "parseMode": "mdx",
-      "outputCompiles": true,
-      "notes": {
-        "blocker": 0,
-        "flag": 12,
-        "change": 18
-      },
-      "quarantined": [],
-      "path": "apis/docs/choosing-your-integration-model.mdx"
-    },
-    {
-      "slug": "apis/docs/api-lifecycle-guide",
-      "title": "API lifecycle",
-      "url": "https://developer.drivewealth.com/apis/docs/api-lifecycle-guide",
-      "parseMode": "mdx",
-      "outputCompiles": true,
-      "notes": {
-        "blocker": 0,
-        "flag": 2,
-        "change": 7
-      },
-      "quarantined": [],
-      "path": "apis/docs/api-lifecycle-guide.mdx"
-    },
-    {
-      "slug": "apis/docs/common-data-types",
-      "title": "Common data types",
-      "url": "https://developer.drivewealth.com/apis/docs/common-data-types",
-      "parseMode": "mdx",
-      "outputCompiles": true,
-      "notes": {
-        "blocker": 0,
-        "flag": 0,
-        "change": 5
-      },
-      "quarantined": [],
-      "path": "apis/docs/common-data-types.mdx"
-    },
-    {
-      "slug": "apis/docs/drivewealth-mcp-server",
-      "title": "DriveWealth MCP server",
-      "url": "https://developer.drivewealth.com/apis/docs/drivewealth-mcp-server",
-      "parseMode": "mdx",
-      "outputCompiles": true,
-      "notes": {
-        "blocker": 0,
-        "flag": 0,
-        "change": 9
-      },
-      "quarantined": [],
-      "path": "apis/docs/drivewealth-mcp-server.mdx"
-    },
-    {
-      "slug": "apis/docs/mcp-examples",
-      "title": "MCP examples",
-      "url": "https://developer.drivewealth.com/apis/docs/mcp-examples",
-      "parseMode": "mdx",
-      "outputCompiles": true,
-      "notes": {
-        "blocker": 0,
-        "flag": 0,
-        "change": 4
-      },
-      "quarantined": [],
-      "path": "apis/docs/mcp-examples.mdx"
-    },
     {
       "slug": "apis/docs/mcp-tool-catalog",
       "title": "MCP Tool Catalog",
@@ -136,7 +51,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/mcp-tool-catalog.mdx"
@@ -150,7 +65,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/moving-to-production.mdx"
@@ -164,7 +79,7 @@
       "notes": {
         "blocker": 1,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [
         {
@@ -184,7 +99,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 12
+        "change": 11
       },
       "quarantined": [],
       "path": "apis/docs/opening-accounts.mdx"
@@ -198,7 +113,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/docs/user-onboarding-data-requirements.mdx"
@@ -212,7 +127,7 @@
       "notes": {
         "blocker": 2,
         "flag": 1,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/onboarding-businesses.mdx"
@@ -226,7 +141,7 @@
       "notes": {
         "blocker": 2,
         "flag": 1,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/trust-account-onboarding-guide.mdx"
@@ -240,7 +155,7 @@
       "notes": {
         "blocker": 0,
         "flag": 3,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/self-managed-super-fund-smsf-account-onboarding-guide.mdx"
@@ -254,7 +169,7 @@
       "notes": {
         "blocker": 0,
         "flag": 3,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/trump-account.mdx"
@@ -268,7 +183,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/docs/customer-verification.mdx"
@@ -282,7 +197,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 27
+        "change": 26
       },
       "quarantined": [],
       "path": "apis/docs/showing-disclosures.mdx"
@@ -296,7 +211,7 @@
       "notes": {
         "blocker": 1,
         "flag": 0,
-        "change": 13
+        "change": 12
       },
       "quarantined": [],
       "path": "apis/docs/retirement-accounts.mdx"
@@ -310,7 +225,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/teen-custodial-accounts.mdx"
@@ -324,7 +239,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/enabling-leverage.mdx"
@@ -338,7 +253,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/equities.mdx"
@@ -352,7 +267,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 11
+        "change": 10
       },
       "quarantined": [],
       "path": "apis/docs/extended-hours-trading.mdx"
@@ -366,7 +281,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/ucits-etfs.mdx"
@@ -380,7 +295,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/mutual-funds.mdx"
@@ -394,7 +309,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/alternative-asset-funds.mdx"
@@ -408,7 +323,7 @@
       "notes": {
         "blocker": 0,
         "flag": 6,
-        "change": 11
+        "change": 10
       },
       "quarantined": [],
       "path": "apis/docs/options.mdx"
@@ -422,7 +337,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/enabling-options-features.mdx"
@@ -436,7 +351,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/docs/filtering-options.mdx"
@@ -450,7 +365,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/options-chain.mdx"
@@ -464,7 +379,7 @@
       "notes": {
         "blocker": 0,
         "flag": 3,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/docs/placing-option-orders.mdx"
@@ -478,7 +393,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/exercising-contracts-managing-expiration.mdx"
@@ -492,7 +407,7 @@
       "notes": {
         "blocker": 1,
         "flag": 2,
-        "change": 4
+        "change": 3
       },
       "quarantined": [
         {
@@ -512,7 +427,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 11
+        "change": 10
       },
       "quarantined": [],
       "path": "apis/docs/filtering-fi-instruments.mdx"
@@ -526,7 +441,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/fixed-income-depth-of-book.mdx"
@@ -540,7 +455,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/accrued-interest.mdx"
@@ -554,7 +469,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/displaying-prices-and-information.mdx"
@@ -568,7 +483,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/showing-historical-charts.mdx"
@@ -582,7 +497,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/docs/creating-an-order.mdx"
@@ -596,7 +511,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/fees-commissions-and-markups.mdx"
@@ -610,7 +525,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/fractionalized-assets.mdx"
@@ -624,7 +539,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/block-trading-for-multiple-accounts.mdx"
@@ -638,7 +553,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 20
+        "change": 19
       },
       "quarantined": [],
       "path": "apis/docs/automated-trading.mdx"
@@ -652,7 +567,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/docs/trading-violations.mdx"
@@ -666,7 +581,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/testing-in-sandbox.mdx"
@@ -680,7 +595,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/reinvesting-dividends.mdx"
@@ -694,7 +609,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/omnibus-setup.mdx"
@@ -708,7 +623,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/individual-funding.mdx"
@@ -722,7 +637,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/docs/depositing-1.mdx"
@@ -736,7 +651,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/withdrawing-1.mdx"
@@ -750,7 +665,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 31
+        "change": 30
       },
       "quarantined": [],
       "path": "apis/docs/bulk-funding.mdx"
@@ -764,7 +679,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 32
+        "change": 31
       },
       "quarantined": [],
       "path": "apis/docs/bulk-fundingcashless.mdx"
@@ -778,10 +693,24 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 12
+        "change": 11
       },
       "quarantined": [],
       "path": "apis/docs/transferring-securities.mdx"
+    },
+    {
+      "slug": "apis/docs/internal-transfers",
+      "title": "Internal transfers",
+      "url": "https://developer.drivewealth.com/apis/docs/internal-transfers",
+      "parseMode": "mdx",
+      "outputCompiles": true,
+      "notes": {
+        "blocker": 0,
+        "flag": 0,
+        "change": 10
+      },
+      "quarantined": [],
+      "path": "apis/docs/internal-transfers.mdx"
     },
     {
       "slug": "apis/docs/using-plaid",
@@ -792,7 +721,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/using-plaid.mdx"
@@ -806,7 +735,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 14
+        "change": 13
       },
       "quarantined": [],
       "path": "apis/docs/travel-rule.mdx"
@@ -820,7 +749,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/cash-promotions.mdx"
@@ -834,7 +763,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/getting-balances-and-positions.mdx"
@@ -848,7 +777,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/showing-historical-transactions.mdx"
@@ -862,7 +791,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/understanding-how-drivewealth-calculates-account-performance.mdx"
@@ -876,7 +805,7 @@
       "notes": {
         "blocker": 0,
         "flag": 4,
-        "change": 18
+        "change": 17
       },
       "quarantined": [],
       "path": "apis/docs/showing-account-performance.mdx"
@@ -890,7 +819,7 @@
       "notes": {
         "blocker": 0,
         "flag": 3,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/official-documents.mdx"
@@ -904,7 +833,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/tax-handling.mdx"
@@ -918,7 +847,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/w-9-b-notice-remediation.mdx"
@@ -932,7 +861,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/w-8ben-recertification.mdx"
@@ -946,7 +875,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/irs-section-871m-for-options.mdx"
@@ -960,7 +889,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/cash-interest.mdx"
@@ -974,7 +903,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/securities-lending.mdx"
@@ -988,7 +917,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/corporate-actions.mdx"
@@ -1002,7 +931,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/equities-1.mdx"
@@ -1016,7 +945,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/shareholder-communications.mdx"
@@ -1030,7 +959,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/dividends.mdx"
@@ -1044,7 +973,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/splits.mdx"
@@ -1058,7 +987,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/spin-offs.mdx"
@@ -1072,7 +1001,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/mergers-acquisitions.mdx"
@@ -1086,7 +1015,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/symbol-changes.mdx"
@@ -1100,7 +1029,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/delistings-going-private.mdx"
@@ -1114,7 +1043,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/tender-offers.mdx"
@@ -1128,7 +1057,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/options-1.mdx"
@@ -1142,7 +1071,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/docs/escheatments.mdx"
@@ -1156,7 +1085,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/regulatory-reporting.mdx"
@@ -1170,7 +1099,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/ftp-document-access.mdx"
@@ -1184,7 +1113,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/docs/getting-started-w-drivehub.mdx"
@@ -1198,7 +1127,7 @@
       "notes": {
         "blocker": 0,
         "flag": 9,
-        "change": 14
+        "change": 13
       },
       "quarantined": [],
       "path": "apis/docs/setting-up-ssowith-okta.mdx"
@@ -1212,7 +1141,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/docs/drivehub-authentication-access.mdx"
@@ -1226,7 +1155,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/basic-authentication.mdx"
@@ -1240,7 +1169,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/docs/multi-factor-authentication-mfa.mdx"
@@ -1254,7 +1183,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/docs/single-sign-on-sso.mdx"
@@ -1268,7 +1197,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/docs/retrieve-account-summary-migration-guide.mdx"
@@ -1282,7 +1211,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/introduction.mdx"
@@ -1296,7 +1225,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/idempotent-requests.mdx"
@@ -1310,7 +1239,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/sqs-events.mdx"
@@ -1324,7 +1253,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/reference/errors.mdx"
@@ -1338,7 +1267,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/enums.mdx"
@@ -1352,7 +1281,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/post_auth-tokens.mdx",
@@ -1372,7 +1301,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/post_users.mdx",
@@ -1392,7 +1321,7 @@
       "notes": {
         "blocker": 1,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_entities-entityid.mdx"
@@ -1406,7 +1335,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_accounts.mdx",
@@ -1426,7 +1355,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_instruments.mdx",
@@ -1446,7 +1375,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-summary-orders.mdx",
@@ -1466,7 +1395,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-summary-positions.mdx",
@@ -1486,7 +1415,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-summary-transactions.mdx",
@@ -1506,7 +1435,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_exchanges.mdx",
@@ -1526,7 +1455,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-commissions.mdx",
@@ -1546,7 +1475,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_countries.mdx",
@@ -1566,7 +1495,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_correspondantreport.mdx",
@@ -1586,7 +1515,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/accountperformance.mdx",
@@ -1606,7 +1535,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/post_accounts-accountid-positions-options-exercise.mdx",
@@ -1626,7 +1555,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-violations.mdx",
@@ -1646,7 +1575,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-statements.mdx",
@@ -1666,7 +1595,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_accounts-accountid-beneficiaries.mdx",
@@ -1686,7 +1615,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_documents.mdx",
@@ -1706,7 +1635,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_users-userid-bank-accounts.mdx",
@@ -1726,7 +1655,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-funding-deposit-instructions.mdx",
@@ -1746,7 +1675,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-funding-deposits.mdx",
@@ -1766,7 +1695,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/deposit-status.mdx"
@@ -1780,7 +1709,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_accounts-accountid-funding-redemptions.mdx",
@@ -1800,7 +1729,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/redemption-status.mdx"
@@ -1814,7 +1743,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_asset-transfers-acats.mdx",
@@ -1834,7 +1763,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_settlements.mdx",
@@ -1854,7 +1783,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_subscriptions.mdx",
@@ -1874,7 +1803,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/get_quotes.mdx",
@@ -1894,7 +1823,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_bars.mdx",
@@ -1914,7 +1843,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/getquotedepth.mdx",
@@ -1934,7 +1863,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_managed-allocations.mdx",
@@ -1954,7 +1883,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/get_users-userid-managed-orders-summary.mdx",
@@ -1974,7 +1903,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_managed-funds.mdx",
@@ -1994,7 +1923,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_managed-portfolios.mdx",
@@ -2014,7 +1943,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/post_managed-autopilot-partnerid.mdx",
@@ -2034,7 +1963,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/accounts-events.mdx"
@@ -2048,7 +1977,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/allocation-events.mdx"
@@ -2062,7 +1991,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 16
+        "change": 15
       },
       "quarantined": [],
       "path": "apis/reference/acat-events.mdx"
@@ -2076,7 +2005,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 16
+        "change": 15
       },
       "quarantined": [],
       "path": "apis/reference/cancel-rebill-events.mdx"
@@ -2090,7 +2019,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/merger-acquisitions-events.mdx"
@@ -2104,7 +2033,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/spin-off-events.mdx"
@@ -2118,7 +2047,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/stock-splits.mdx"
@@ -2132,7 +2061,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/symbol-change.mdx"
@@ -2146,7 +2075,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/voluntary-tender-offer.mdx"
@@ -2160,7 +2089,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/involuntary-tender-offer.mdx"
@@ -2174,7 +2103,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/going-private-events.mdx"
@@ -2188,7 +2117,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/reference/dividends-events.mdx"
@@ -2202,7 +2131,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/bond-redemption-events.mdx"
@@ -2216,7 +2145,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/reference/coupon-events.mdx"
@@ -2230,7 +2159,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/bond-maturity-events.mdx"
@@ -2244,7 +2173,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/reference/deposits-events.mdx"
@@ -2258,7 +2187,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/reference/instruments-events.mdx"
@@ -2272,7 +2201,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/reference/kyc-events.mdx"
@@ -2286,7 +2215,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/reference/linked-bank-accounts-events.mdx"
@@ -2300,7 +2229,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 14
+        "change": 13
       },
       "quarantined": [],
       "path": "apis/reference/orders-events.mdx"
@@ -2314,7 +2243,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 14
+        "change": 13
       },
       "quarantined": [],
       "path": "apis/reference/positions-events.mdx"
@@ -2328,7 +2257,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 16
+        "change": 15
       },
       "quarantined": [],
       "path": "apis/reference/settlements-events.mdx"
@@ -2342,7 +2271,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/statements-events.mdx"
@@ -2356,7 +2285,7 @@
       "notes": {
         "blocker": 1,
         "flag": 0,
-        "change": 11
+        "change": 10
       },
       "quarantined": [],
       "path": "apis/reference/transactions-events.mdx"
@@ -2370,7 +2299,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/user-events.mdx"
@@ -2384,7 +2313,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/reference/violations-events.mdx"
@@ -2398,7 +2327,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/reference/withdrawals-events.mdx"
@@ -2412,7 +2341,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/document-events.mdx"
@@ -2426,7 +2355,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/reference/entity-events.mdx"
@@ -2440,7 +2369,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/release-notes-2026-08-25.mdx"
@@ -2454,7 +2383,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/release-notes-2026-08-19.mdx"
@@ -2468,7 +2397,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/changelog/release-notes-2026-08-13.mdx"
@@ -2482,7 +2411,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/release-notes-2026-07-24.mdx"
@@ -2496,7 +2425,7 @@
       "notes": {
         "blocker": 0,
         "flag": 4,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/changelog/release-notes-2026-07-15.mdx"
@@ -2510,7 +2439,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-v1820.mdx"
@@ -2524,7 +2453,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-v1810.mdx"
@@ -2538,7 +2467,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-1-69-0.mdx"
@@ -2552,7 +2481,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-1-68-1.mdx"
@@ -2566,7 +2495,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-1-67-2.mdx"
@@ -2580,7 +2509,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-1-67-0.mdx"
@@ -2594,7 +2523,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-1660.mdx"
@@ -2608,7 +2537,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-1640.mdx"
@@ -2622,7 +2551,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-162.mdx"
@@ -2636,7 +2565,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-161.mdx"
@@ -2650,7 +2579,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 9
+        "change": 8
       },
       "quarantined": [],
       "path": "apis/changelog/publicly-traded-partnership-ptp-withholding.mdx"
@@ -2664,7 +2593,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 13
+        "change": 12
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-160.mdx"
@@ -2678,7 +2607,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-158.mdx"
@@ -2692,7 +2621,7 @@
       "notes": {
         "blocker": 0,
         "flag": 5,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/changelog/dh-release-217.mdx"
@@ -2706,7 +2635,7 @@
       "notes": {
         "blocker": 0,
         "flag": 3,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/changelog/dh-release-2154.mdx"
@@ -2720,7 +2649,7 @@
       "notes": {
         "blocker": 0,
         "flag": 4,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/changelog/dh-release-29.mdx"
@@ -2734,7 +2663,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-157.mdx"
@@ -2748,7 +2677,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-156.mdx"
@@ -2762,7 +2691,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 18
+        "change": 17
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-155.mdx"
@@ -2776,7 +2705,7 @@
       "notes": {
         "blocker": 0,
         "flag": 2,
-        "change": 10
+        "change": 9
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-154.mdx"
@@ -2790,7 +2719,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 17
+        "change": 16
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-152.mdx"
@@ -2804,7 +2733,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-151.mdx"
@@ -2818,7 +2747,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/post-requests.mdx"
@@ -2832,7 +2761,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-149.mdx"
@@ -2846,7 +2775,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-148.mdx"
@@ -2860,7 +2789,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-146.mdx"
@@ -2874,7 +2803,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/changelog/pattern-day-trading-enhancements.mdx"
@@ -2888,7 +2817,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-145.mdx"
@@ -2902,7 +2831,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-144.mdx"
@@ -2916,7 +2845,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-143.mdx"
@@ -2930,7 +2859,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-142.mdx"
@@ -2944,7 +2873,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 6
+        "change": 5
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-140.mdx"
@@ -2958,7 +2887,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/extended-hours.mdx"
@@ -2972,7 +2901,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-139.mdx"
@@ -2986,7 +2915,7 @@
       "notes": {
         "blocker": 0,
         "flag": 1,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/changelog/pdt-for-lpma-accounts.mdx"
@@ -3000,7 +2929,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-138.mdx"
@@ -3014,7 +2943,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/autopilot-updates.mdx"
@@ -3028,7 +2957,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/rate-limits.mdx"
@@ -3042,7 +2971,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-137.mdx"
@@ -3056,7 +2985,7 @@
       "notes": {
         "blocker": 1,
         "flag": 0,
-        "change": 5
+        "change": 4
       },
       "quarantined": [],
       "path": "apis/changelog/247-cash-rewards.mdx"
@@ -3070,7 +2999,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/ach-deposits-withdrawals.mdx"
@@ -3084,7 +3013,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-136.mdx"
@@ -3098,7 +3027,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-135.mdx"
@@ -3112,7 +3041,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-134.mdx"
@@ -3126,7 +3055,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-133.mdx"
@@ -3140,7 +3069,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-132.mdx"
@@ -3154,7 +3083,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-131.mdx"
@@ -3168,7 +3097,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-130.mdx"
@@ -3182,7 +3111,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-129.mdx"
@@ -3196,7 +3125,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 8
+        "change": 7
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-128.mdx"
@@ -3210,7 +3139,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-127.mdx"
@@ -3224,7 +3153,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 4
+        "change": 3
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-126.mdx"
@@ -3238,7 +3167,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-124.mdx"
@@ -3252,7 +3181,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-120.mdx"
@@ -3266,7 +3195,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 7
+        "change": 6
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-118.mdx"
@@ -3280,7 +3209,7 @@
       "notes": {
         "blocker": 0,
         "flag": 0,
-        "change": 3
+        "change": 2
       },
       "quarantined": [],
       "path": "apis/changelog/api-release-117.mdx"
@@ -3363,7 +3292,32 @@
       "detail": "image has no alt and the file name carries no words to derive one from — alt is required, so write one"
     }
   ],
-  "failed": [],
+  "failed": [
+    {
+      "slug": "apis/docs/intro",
+      "message": ": Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/intro.md: 429 Too Many Requests"
+    },
+    {
+      "slug": "apis/docs/choosing-your-integration-model",
+      "message": ": Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/choosing-your-integration-model.md: 429 Too Many Requests"
+    },
+    {
+      "slug": "apis/docs/api-lifecycle-guide",
+      "message": ": Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/api-lifecycle-guide.md: 429 Too Many Requests"
+    },
+    {
+      "slug": "apis/docs/common-data-types",
+      "message": ": Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/common-data-types.md: 429 Too Many Requests"
+    },
+    {
+      "slug": "apis/docs/drivewealth-mcp-server",
+      "message": ": Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/drivewealth-mcp-server.md: 429 Too Many Requests"
+    },
+    {
+      "slug": "apis/docs/mcp-examples",
+      "message": ": Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/mcp-examples.md: 429 Too Many Requests"
+    }
+  ],
   "brand": {
     "url": "https://developer.drivewealth.com/apis/docs/intro",
     "found": [
@@ -3399,11 +3353,7 @@
       }
     ],
     "missing": [],
-    "assets": {
-      "https://files.readme.io/f69c03d-dev-logo-dark.svg": "/brand/f69c03d-dev-logo-dark.svg",
-      "https://files.readme.io/8fac420-favicon.ico": "/brand/8fac420-favicon.ico",
-      "https://files.readme.io/dd3b219-dev-logo-light.svg": "/brand/dd3b219-dev-logo-light.svg"
-    },
+    "assets": {},
     "failedAssets": [],
     "adjusted": [
       {

@@ -2,7 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Core APIs",
-    "version": "2026-08-25",
+    "version": "2026-08-26",
     "contact": {
       "email": "producteng@drivewealth.tech"
     }
@@ -547,6 +547,9 @@
                   "$ref": "#/components/schemas/Investor_Profile_Info"
                 },
                 {
+                  "$ref": "#/components/schemas/Compliance_AML_Info"
+                },
+                {
                   "$ref": "#/components/schemas/Disclosures"
                 },
                 {
@@ -936,6 +939,7 @@
               "ADDRESS_INFO",
               "EMPLOYMENT_INFO",
               "INVESTOR_PROFILE_INFO",
+              "COMPLIANCE_AML_INFO",
               "DISCLOSURES",
               "MARGIN_DISCLOSURE",
               "FPSL_DISCLOSURE",
@@ -995,6 +999,7 @@
               "ADDRESS_INFO",
               "EMPLOYMENT_INFO",
               "INVESTOR_PROFILE_INFO",
+              "COMPLIANCE_AML_INFO",
               "DISCLOSURES",
               "MARGIN_DISCLOSURE",
               "FPSL_DISCLOSURE",
@@ -1062,6 +1067,7 @@
               "ADDRESS_INFO",
               "EMPLOYMENT_INFO",
               "INVESTOR_PROFILE_INFO",
+              "COMPLIANCE_AML_INFO",
               "DISCLOSURES",
               "MARGIN_DISCLOSURE",
               "FPSL_DISCLOSURE",
@@ -1110,6 +1116,7 @@
               "ADDRESS_INFO",
               "EMPLOYMENT_INFO",
               "INVESTOR_PROFILE_INFO",
+              "COMPLIANCE_AML_INFO",
               "DISCLOSURES",
               "MARGIN_DISCLOSURE",
               "FPSL_DISCLOSURE",
@@ -1179,6 +1186,7 @@
               "ADDRESS_INFO",
               "EMPLOYMENT_INFO",
               "INVESTOR_PROFILE_INFO",
+              "COMPLIANCE_AML_INFO",
               "DISCLOSURES",
               "MARGIN_DISCLOSURE",
               "FPSL_DISCLOSURE",
@@ -1541,6 +1549,85 @@
               "otherFinancialExperience": {
                 "$ref": "#/components/schemas/investmentSuitabilityDeclineToAnswer",
                 "description": "An object containing fields that evaluate the User's experience and suitability for other financial instruments trading."
+              }
+            }
+          }
+        }
+      },
+      "Compliance_AML_Info": {
+        "type": "object",
+        "required": [
+          "type",
+          "data"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of data object.",
+            "example": "COMPLIANCE_AML_INFO"
+          },
+          "data": {
+            "type": "object",
+            "required": [
+              "fundingSources"
+            ],
+            "properties": {
+              "fundingSources": {
+                "type": "array",
+                "description": "A list of the User's funding sources.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "EMP",
+                    "GIFT",
+                    "TRUST",
+                    "INVESTMENT",
+                    "SAVINGS",
+                    "RETIRE",
+                    "GAMBLING",
+                    "LEGAL",
+                    "FAMILY",
+                    "UNEMP",
+                    "ROLLOVER",
+                    "RENT",
+                    "SALE",
+                    "INSURANCE"
+                  ]
+                },
+                "example": [
+                  "EMP",
+                  "SAVINGS"
+                ]
+              },
+              "transferFrequencyPerMonth": {
+                "type": "integer",
+                "description": "The expected number of transfers per month.",
+                "example": 7
+              },
+              "transferTotalExpected": {
+                "type": "number",
+                "writeOnly": true,
+                "description": "The expected total transfer amount. Only accepted on write; DriveWealth maps it to `transferTotalExpectedRange` for the response.",
+                "example": 45350
+              },
+              "transferTotalExpectedRange": {
+                "type": "string",
+                "readOnly": true,
+                "description": "A range mapping for the expected total transfer amount, computed by DriveWealth.",
+                "enum": [
+                  "$0_9999",
+                  "$10K_49999",
+                  "$50K_99999",
+                  "$100K_249999",
+                  "$250K_499999",
+                  "$500K_"
+                ],
+                "example": "$10K_49999"
+              },
+              "investmentHistory12M": {
+                "type": "integer",
+                "description": "The number of investment transactions in the last 12 months.",
+                "example": 12
               }
             }
           }

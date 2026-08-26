@@ -2,9 +2,9 @@
 
 https://developer.drivewealth.com/apis/docs/intro · readme · page list from the sidebar walk
 
-217 pages · 217 converted · 0 failed · 10 blockers · 113 flags · 32 endpoints wired
+218 pages · 212 converted · 6 failed · 10 blockers · 99 flags · 32 endpoints wired
 
-Run finished 2026-08-25T13:02:48.660Z.
+Run finished 2026-08-26T04:07:08.240Z.
 
 > **1 page will not compile as MDX.** Those pages fail to sync — see the per-page table below.
 
@@ -31,7 +31,7 @@ Run finished 2026-08-25T13:02:48.660Z.
 
 | Tab | Groups | Pages |
 |---|---:|---:|
-| Guides | 21 | 87 |
+| Guides | 22 | 88 |
 | API Reference | 42 | 69 |
 | Changelog | 1 | 61 |
 
@@ -60,6 +60,19 @@ Each of these is in the output inside a code fence, so the page compiles and not
 | `apis/reference/get_entities-entityid` | 10 | openapi | the "# OpenAPI definition" dump is not valid JSON (Bad escaped character in JSON at position 31062 (line 907 column 26)), so it was left in the page body rather than deleted — no spec file was written and this page has no playground until the JSON is repaired |
 | `apis/reference/transactions-events` | 10 | code-group | tab label "Created [shares, cash swap]" contains a comma, which is the separator in tabs="…" — rename the label |
 | `apis/changelog/247-cash-rewards` | 46 | image | image has no alt and the file name carries no words to derive one from — alt is required, so write one |
+
+## Pages that could not be fetched
+
+These must be dropped from `documentation.json` or it will point at files that do not exist.
+
+| Page | Why |
+|---|---|
+| `apis/docs/intro` | : Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/intro.md: 429 Too Many Requests |
+| `apis/docs/choosing-your-integration-model` | : Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/choosing-your-integration-model.md: 429 Too Many Requests |
+| `apis/docs/api-lifecycle-guide` | : Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/api-lifecycle-guide.md: 429 Too Many Requests |
+| `apis/docs/common-data-types` | : Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/common-data-types.md: 429 Too Many Requests |
+| `apis/docs/drivewealth-mcp-server` | : Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/drivewealth-mcp-server.md: 429 Too Many Requests |
+| `apis/docs/mcp-examples` | : Failed to fetch markdown for https://developer.drivewealth.com/apis/docs/mcp-examples.md: 429 Too Many Requests |
 
 ## API reference
 
@@ -106,12 +119,6 @@ Mode: **25 `auto`** — the spec writes the whole page, because once the definit
 
 | Page | Parser | Compiles | Blockers | Flags | Fenced |
 |---|---|---|---:|---:|---:|
-| `apis/docs/intro` | mdx | yes | 0 | 0 | 0 |
-| `apis/docs/choosing-your-integration-model` | mdx | yes | 0 | 12 | 0 |
-| `apis/docs/api-lifecycle-guide` | mdx | yes | 0 | 2 | 0 |
-| `apis/docs/common-data-types` | mdx | yes | 0 | 0 | 0 |
-| `apis/docs/drivewealth-mcp-server` | mdx | yes | 0 | 0 | 0 |
-| `apis/docs/mcp-examples` | mdx | yes | 0 | 0 | 0 |
 | `apis/docs/mcp-tool-catalog` | mdx | yes | 0 | 0 | 0 |
 | `apis/docs/moving-to-production` | mdx | yes | 0 | 0 | 0 |
 | `apis/docs/subscribe-to-api-updates` | mdx | yes | 1 | 1 | 1 |
@@ -158,6 +165,7 @@ Mode: **25 `auto`** — the spec writes the whole page, because once the definit
 | `apis/docs/bulk-funding` | mdx | yes | 0 | 2 | 0 |
 | `apis/docs/bulk-fundingcashless` | mdx | yes | 0 | 2 | 0 |
 | `apis/docs/transferring-securities` | mdx | yes | 0 | 0 | 0 |
+| `apis/docs/internal-transfers` | mdx | yes | 0 | 0 | 0 |
 | `apis/docs/using-plaid` | mdx | yes | 0 | 0 | 0 |
 | `apis/docs/travel-rule` | mdx | yes | 0 | 0 | 0 |
 | `apis/docs/cash-promotions` | mdx | yes | 0 | 0 | 0 |

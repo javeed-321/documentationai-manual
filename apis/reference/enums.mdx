@@ -126,6 +126,40 @@ Used by the `type` field within each object in the `documents` array on POST/PAT
 | INSTITUTIONAL\_INFO     | Physical address and structure for institutional accounts.        |
 | TRUST\_INFO             | Trust name, date established, and trustee authority.              |
 
+#### Compliance AML Info - Funding Sources
+
+Used by `fundingSources` within the `COMPLIANCE_AML_INFO` document to indicate a user's sources of funds.
+
+| ENUM       | Definition             |
+| :--------- | :--------------------- |
+| EMP        | Employment income.     |
+| GIFT       | Gift.                  |
+| TRUST      | Trust.                 |
+| INVESTMENT | Investment income.     |
+| SAVINGS    | Savings.               |
+| RETIRE     | Retirement income.     |
+| GAMBLING   | Gambling winnings.     |
+| LEGAL      | Legal settlement.      |
+| FAMILY     | Family support.        |
+| UNEMP      | Unemployment benefits. |
+| ROLLOVER   | Retirement rollover.   |
+| RENT       | Rental income.         |
+| SALE       | Sale of assets.        |
+| INSURANCE  | Insurance proceeds.    |
+
+#### Compliance AML Info - Transfer Total Expected Range
+
+Returned in `transferTotalExpectedRange` within the `COMPLIANCE_AML_INFO` document as a range mapping for the expected total transfer amount. This is a response-only, server-computed field.
+
+| ENUM          | Definition          |
+| :------------ | :------------------ |
+| $0\_9999      | $0 - $9,999         |
+| $10K\_49999   | $10,000 - $49,999   |
+| $50K\_99999   | $50,000 - $99,999   |
+| $100K\_249999 | $100,000 - $249,999 |
+| $250K\_499999 | $250,000 - $499,999 |
+| $500K\_       | $500,000+           |
+
 # Accounts
 
 #### Account Management Types

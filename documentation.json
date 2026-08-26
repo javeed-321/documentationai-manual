@@ -18,11 +18,6 @@
       "text": "#c1c1c1"
     }
   },
-  "css": [
-    {
-      "src": "styles/brand.css"
-    }
-  ],
   "navigation": {
     "tabs": [
       {
@@ -33,22 +28,22 @@
             "group": "Getting started",
             "pages": [
               {
-                "title": "Introduction",
+                "title": "Intro",
                 "path": "apis/docs/intro"
               },
               {
                 "group": "Choosing your integration model",
                 "pages": [
                   {
-                    "title": "Choosing your integration model",
+                    "title": "Choosing Your Integration Model",
                     "path": "apis/docs/choosing-your-integration-model"
                   },
                   {
-                    "title": "API lifecycle",
+                    "title": "Api Lifecycle Guide",
                     "path": "apis/docs/api-lifecycle-guide"
                   },
                   {
-                    "title": "Common data types",
+                    "title": "Common Data Types",
                     "path": "apis/docs/common-data-types"
                   }
                 ]
@@ -57,11 +52,11 @@
                 "group": "DriveWealth MCP server",
                 "pages": [
                   {
-                    "title": "DriveWealth MCP server",
+                    "title": "Drivewealth Mcp Server",
                     "path": "apis/docs/drivewealth-mcp-server"
                   },
                   {
-                    "title": "MCP examples",
+                    "title": "Mcp Examples",
                     "path": "apis/docs/mcp-examples"
                   },
                   {
@@ -302,8 +297,17 @@
                 "path": "apis/docs/bulk-fundingcashless"
               },
               {
-                "title": "Transferring securities",
-                "path": "apis/docs/transferring-securities"
+                "group": "Transferring securities",
+                "pages": [
+                  {
+                    "title": "Transferring securities",
+                    "path": "apis/docs/transferring-securities"
+                  },
+                  {
+                    "title": "Internal transfers",
+                    "path": "apis/docs/internal-transfers"
+                  }
+                ]
               },
               {
                 "title": "Using Plaid",

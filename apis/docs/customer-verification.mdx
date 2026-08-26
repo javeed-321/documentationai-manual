@@ -158,7 +158,7 @@ In some cases, Accounts will be restricted from trading while an investigation i
 
 ## Simulating specific cases
 
-In sandbox, you can test error cases by setting the `lastName` of a User to the specific error condition you want to encounter.
+In sandbox, you can test error cases by setting the `lastName` of a User to the specific KYC error you want to simulate, with `_` replaced by a space. For instance, `DOB_NOT_MATCH` can be entered as `DOB NOT MATCH`.
 
 For example, you can create a User with this data:
 
@@ -171,7 +171,7 @@ POST /back-office/users
       "type": "BASIC_INFO",
       "data": {
         "firstName": "Daryl",
-        "lastName": "DOB_NOT_MATCH",
+        "lastName": "DOB NOT MATCH",
         "username": "DHall",
         "country": "USA",
         "phone": "2914443333",

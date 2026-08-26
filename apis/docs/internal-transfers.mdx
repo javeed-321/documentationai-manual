@@ -1,0 +1,701 @@
+---
+title: "Internal transfers"
+---
+
+## Overview
+
+An **internal transfer** moves cash, positions, or both between two DriveWealth accounts that belong to the **same client**. Both accounts remain `OPEN` throughout the lifecycle.
+
+DriveWealth automatically classifies a transfer as **INTERNAL** when:
+
+- `clearingNo` is `2402` (the DriveWealth DTC clearing number), **and**
+- the source and destination accounts are from same client.
+
+If the accounts belong to different client the transfer is classified as **PTP** (client-to-client) and different rules apply.
+
+**Supported transfer types for internal transfers**
+
+| `transferType`  | What is moved                                 | `cash` field                    | `positions` field                    |
+| --------------- | --------------------------------------------- | ------------------------------- | ------------------------------------ |
+| `FULL`          | All cash and all positions                    | Must not be sent                | Must not be sent                     |
+| `PARTIAL`       | A declared cash amount and/or named positions | Required when transferring cash | Required when transferring positions |
+| `ALL_CASH`      | All available cash only                       | Must not be sent                | Must not be sent                     |
+| `ALL_POSITIONS` | All open positions only                       | Must not be sent                | Must not be sent                     |
+
+> **Note**
+>
+> `PARTIAL` requires at least one of `cash` or `positions` to be present. If both are omitted, the request returns a `400 BAD_MISSING_PARAMETERS_BODY` error.
+
+---
+
+## Prerequisites
+
+Before initiating a transfer, confirm the following:
+
+- You have a valid Back-Office API key (`dw-client-app-key`).
+- Both accounts are `OPEN` and belong to the same client (`ibID`).
+- The account holders share the same legal name and, for US taxpayers, the same SSN.
+- KYC is approved on the source account.
+- The source account has sufficient cash and/or positions to cover the transfer.
+- The source and destination account type combination is permitted. See [Account Type Compatibility](#account-type-compatibility).
+
+---
+
+## Authentication
+
+Every API call requires a session token. Obtain one by posting your app key to the authentication endpoint. The token expires after 3,600 seconds.
+
+**Request**
+
+```shell
+curl --request POST \
+     --url https://{{baseUrl}}/back-office/auth/tokens \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'dw-client-app-key: {{yourAppKey}}'
+```
+
+**Response**
+
+```json
+{
+  "token_type": "Bearer",
+  "expires_in": "3600",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "scope": "all_trading"
+}
+```
+
+Pass the `access_token` as a `Bearer` token in the `Authorization` header for all subsequent requests.
+
+---
+
+## Transfer eligibility
+
+The following conditions are checked before a transfer record is created. Any failure returns a `400` or `403` with a descriptive message.
+
+### Account requirements
+
+| Condition                    | Detail                                                                                      |
+| ---------------------------- | ------------------------------------------------------------------------------------------- |
+| Both accounts must be `OPEN` | Accounts in `FROZEN`, `CLOSED`, or any other status are rejected.                           |
+| Source ≠ destination         | The same account cannot appear on both sides.                                               |
+| Same client                  | Both accounts must share the same `ibID` for INTERNAL classification.                       |
+| No special-purpose accounts  | Accounts with a non-null `accountPurpose` are blocked unless the purpose is `OMNIBUS`.      |
+| No true margin accounts      | Accounts with `tradingType = "M"` and `margin = 0.5` cannot initiate or receive a transfer. |
+
+### Identity and compliance
+
+| Condition             | Detail                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------- |
+| Name match            | First and last name on source and destination user must match.                                    |
+| SSN match             | For US taxpayers, the SSN on both accounts must match (formatting is stripped before comparison). |
+| KYC approval          | The source account user must have a completed KYC approval.                                       |
+| Government ID present | Both users must have a non-empty ID number unless `idType` is `FTNLO`.                            |
+
+### Cash and position rules
+
+| Condition                 | Detail                                                                                          |
+| ------------------------- | ----------------------------------------------------------------------------------------------- |
+| Sufficient cash           | The requested `cash` amount must not exceed `cashAvailableForWithdrawal`.                       |
+| Fee coverage              | After fee deduction, source account cash must remain ≥ 0.                                       |
+| Source account has assets | The source account must have at least some cash or open positions.                              |
+| Position availability     | For `PARTIAL`, each requested symbol must exist on the source account with sufficient quantity. |
+| No duplicate symbols      | The same symbol cannot appear more than once in the `positions` array.                          |
+| Position limit            | A single `PARTIAL` request cannot contain more positions than the configured limit.             |
+| Active instrument         | Every symbol in `positions` must map to an `ACTIVE` instrument.                                 |
+| `cash > 0`                | If `cash` is provided, it must be a positive number for non cashless clients.                   |
+
+## Account type compatibility
+
+Every internal transfer is validated against the Account Type Compatibility Matrix before processing. The matrix is organized into account families. Transfers are only permitted within the same family or between explicitly listed cross-family combinations.
+
+<Callout kind="alert">
+  ****Warning****
+
+  Transfers between account types that are **not listed** in the matrix are rejected with `ASSETS_TRANSFER_REJECTED`. There is no implicit fallback — if a source → destination pair does not appear, the transfer is denied.
+</Callout>
+
+> **Note**
+>
+> If either account's `accountMgmtType` is `null` or unrecognized, the compatibility check is skipped and the transfer is allowed to proceed.
+
+### Compatibility by account family
+
+| Source family                                                                                                                     | Allowed destination families                         |
+| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Standard Brokerage** (`SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`) | Standard Brokerage, Traditional IRA, Roth IRA, HSA   |
+| **Custodial** (`CUSTODIAL`, `CUSTODIAL_MANAGED`, `CUSTODIAL_ALT`)                                                                 | Custodial only                                       |
+| **Trustee** (`TRUSTEE`, `TRUSTEE_MANAGED`)                                                                                        | Trustee only                                         |
+| **SMSF** (`SMSF`, `SMSF_MANAGED`)                                                                                                 | SMSF only                                            |
+| **Traditional IRA** (`RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`)      | Traditional IRA, Roth IRA, Inherited Traditional IRA |
+| **Roth IRA** (`RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`)                                  | Roth IRA, Inherited Roth IRA                         |
+| **Inherited Traditional IRA** (`INHERITED_RETIREMENT_TRADITIONAL_SELF`)                                                           | Traditional IRA, Inherited Traditional IRA           |
+| **Inherited Roth IRA** (`INHERITED_RETIREMENT_ROTH_SELF`)                                                                         | Roth IRA, Inherited Roth IRA                         |
+| **Trust** (`TRUST_SELF`, `TRUST_ADVISORY`, `TRUST_RIA_MANAGED`)                                                                   | Trust only                                           |
+| **HSA** (`HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`)                                                                           | HSA only                                             |
+| **Business** (`BUSINESS_SELF`, `BUSINESS_ADVISORY`, `BUSINESS_RIA_MANAGED`)                                                       | Business only (plus `SELF` from `BUSINESS_SELF`)     |
+
+<Expandable title="Expand full account type compatibility matrix" default-open="false">
+  <div className="overflow-x-auto">
+    | Source account type                     | Allowed destination account types                                                                                                                                                                                                                                                                                                                  |
+    | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `SELF`                                  | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `ADVISORY`                              | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `RIA_MANAGED`                           | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `BROKER_MANAGED`                        | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `CONSOLIDATED_MARGIN`                   | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `RESERVE`                               | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `CASH_MANAGEMENT`                       | `SELF`, `ADVISORY`, `RIA_MANAGED`, `BROKER_MANAGED`, `CONSOLIDATED_MARGIN`, `RESERVE`, `CASH_MANAGEMENT`, `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED` |
+    | `CUSTODIAL`                             | `CUSTODIAL`, `CUSTODIAL_MANAGED`, `CUSTODIAL_ALT`                                                                                                                                                                                                                                                                                                  |
+    | `CUSTODIAL_MANAGED`                     | `CUSTODIAL`, `CUSTODIAL_MANAGED`, `CUSTODIAL_ALT`                                                                                                                                                                                                                                                                                                  |
+    | `CUSTODIAL_ALT`                         | `CUSTODIAL`, `CUSTODIAL_MANAGED`, `CUSTODIAL_ALT`                                                                                                                                                                                                                                                                                                  |
+    | `TRUSTEE`                               | `TRUSTEE`, `TRUSTEE_MANAGED`                                                                                                                                                                                                                                                                                                                       |
+    | `TRUSTEE_MANAGED`                       | `TRUSTEE`, `TRUSTEE_MANAGED`                                                                                                                                                                                                                                                                                                                       |
+    | `SMSF`                                  | `SMSF`, `SMSF_MANAGED`                                                                                                                                                                                                                                                                                                                             |
+    | `SMSF_MANAGED`                          | `SMSF`, `SMSF_MANAGED`                                                                                                                                                                                                                                                                                                                             |
+    | `RETIREMENT_TRADITIONAL_SELF`           | `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `INHERITED_RETIREMENT_TRADITIONAL_SELF`                                                                                                                 |
+    | `RETIREMENT_TRADITIONAL_ADVISORY`       | `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`                                                                                                                                                          |
+    | `RETIREMENT_TRADITIONAL_RIA_MANAGED`    | `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `RETIREMENT_TRADITIONAL_RIA_MANAGED`, `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`                                                                                                                                                          |
+    | `RETIREMENT_ROTH_SELF`                  | `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`, `INHERITED_RETIREMENT_ROTH_SELF`                                                                                                                                                                                                                                |
+    | `RETIREMENT_ROTH_ADVISORY`              | `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`                                                                                                                                                                                                                                                                  |
+    | `RETIREMENT_ROTH_RIA_MANAGED`           | `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `RETIREMENT_ROTH_RIA_MANAGED`                                                                                                                                                                                                                                                                  |
+    | `INHERITED_RETIREMENT_TRADITIONAL_SELF` | `RETIREMENT_TRADITIONAL_SELF`, `RETIREMENT_TRADITIONAL_ADVISORY`, `INHERITED_RETIREMENT_TRADITIONAL_SELF`                                                                                                                                                                                                                                          |
+    | `INHERITED_RETIREMENT_ROTH_SELF`        | `RETIREMENT_ROTH_SELF`, `RETIREMENT_ROTH_ADVISORY`, `INHERITED_RETIREMENT_ROTH_SELF`                                                                                                                                                                                                                                                               |
+    | `TRUST_SELF`                            | `TRUST_SELF`, `TRUST_ADVISORY`, `TRUST_RIA_MANAGED`                                                                                                                                                                                                                                                                                                |
+    | `TRUST_ADVISORY`                        | `TRUST_SELF`, `TRUST_ADVISORY`, `TRUST_RIA_MANAGED`                                                                                                                                                                                                                                                                                                |
+    | `TRUST_RIA_MANAGED`                     | `TRUST_SELF`, `TRUST_ADVISORY`, `TRUST_RIA_MANAGED`                                                                                                                                                                                                                                                                                                |
+    | `HSA_SELF`                              | `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`                                                                                                                                                                                                                                                                                                      |
+    | `HSA_ADVISORY`                          | `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`                                                                                                                                                                                                                                                                                                      |
+    | `HSA_RIA_MANAGED`                       | `HSA_SELF`, `HSA_ADVISORY`, `HSA_RIA_MANAGED`                                                                                                                                                                                                                                                                                                      |
+    | `BUSINESS_SELF`                         | `SELF`, `BUSINESS_SELF`, `BUSINESS_ADVISORY`, `BUSINESS_RIA_MANAGED`                                                                                                                                                                                                                                                                               |
+    | `BUSINESS_ADVISORY`                     | `BUSINESS_SELF`, `BUSINESS_ADVISORY`, `BUSINESS_RIA_MANAGED`                                                                                                                                                                                                                                                                                       |
+    | `BUSINESS_RIA_MANAGED`                  | `BUSINESS_SELF`, `BUSINESS_ADVISORY`, `BUSINESS_RIA_MANAGED`                                                                                                                                                                                                                                                                                       |
+    | `PROMOTION_ACCOUNT`                     | `PROMOTION_ACCOUNT`, `TRUMP_ACCOUNT`                                                                                                                                                                                                                                                                                                               |
+  </div>
+</Expandable>
+
+**Rejected example**
+
+A transfer from `SELF` to `CUSTODIAL` is not in the matrix and returns:
+
+```json
+{
+  "errorCode": "ASSETS_TRANSFER_REJECTED",
+  "message": "Transfer from account type SELF to account type CUSTODIAL is not allowed according to the account type compatibility matrix. Please refer to the 'Transfers Allowed' rules."
+}
+```
+
+---
+
+## Create internal transfer
+
+Post the transfer request to the transfers endpoint. Set `clearingNo` to `2402`. The system determines the transfer classification from the clearing number and the accounts' `ibID` values.
+
+### Transfer all cash
+
+Moves the entire available cash balance. Do **not** include `cash` or `positions` — the amount is determined at processing time.
+
+**Request**
+
+```shell
+curl --request POST \
+     --url https://{{baseUrl}}/back-office/asset-transfers/transfers \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'authorization: Bearer \{\{accessToken}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '{
+       "source": "DWST000077",
+       "destination": "DWST000099",
+       "clearingNo": "2402",
+       "transferType": "ALL_CASH",
+       "comment": "Consolidating cash to primary account",
+       "metadata": { "clientRef": "ref-001" }
+     }'
+```
+
+**Response**
+
+```json
+{
+  "id": "int_3fb1e8a9-f7d5-4d90-95e2-43e7326b5636",
+  "source": "DWST000077",
+  "sourceAccountID": "0310893a-cddf-43b3-84c6-4da40e0b983e.1455594524969",
+  "destination": "DWST000099",
+  "destinationAccountID": "1a2b3c4d-abcd-1234-efgh-56789012abcd.1455594524970",
+  "clearingNo": "2402",
+  "status": "STARTED",
+  "type": "INTERNAL",
+  "transferType": "ALL_CASH",
+  "partner": {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+    "name": "Tendies Trading Company"
+  },
+  "comment": "Consolidating cash to primary account",
+  "metadata": { "clientRef": "ref-001" },
+  "created": "2026-06-10T14:22:01.073Z"
+}
+```
+
+---
+
+### Transfer all positions
+
+Moves every open position. Cash is not included. Do **not** include `cash` or `positions`.
+
+**Request**
+
+```shell
+curl --request POST \
+     --url https://\{\{baseUrl}}/back-office/asset-transfers/transfers \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'authorization: Bearer \{\{accessToken}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '{
+       "source": "DWST000077",
+       "destination": "DWST000099",
+       "clearingNo": "2402",
+       "transferType": "ALL_POSITIONS",
+       "comment": "Moving all equity positions"
+     }'
+```
+
+**Response**
+
+```json
+{
+  "id": "int_7ab2c3d4-0000-1111-2222-333344445555",
+  "source": "DWST000077",
+  "sourceAccountID": "0310893a-cddf-43b3-84c6-4da40e0b983e.1455594524969",
+  "destination": "DWST000099",
+  "destinationAccountID": "1a2b3c4d-abcd-1234-efgh-56789012abcd.1455594524970",
+  "clearingNo": "2402",
+  "status": "STARTED",
+  "type": "INTERNAL",
+  "transferType": "ALL_POSITIONS",
+  "partner": {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+    "name": "Tendies Trading Company"
+  },
+  "comment": "Moving all equity positions",
+  "created": "2026-06-10T14:25:00.073Z"
+}
+```
+
+---
+
+### Transfer a specific cash amount
+
+Moves a declared cash amount. `positions` may optionally be included in the same request.
+
+**Request**
+
+```shell
+curl --request POST \
+     --url https://\{\{baseUrl}}/back-office/asset-transfers/transfers \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'authorization: Bearer \{\{accessToken}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '{
+       "source": "DWST000077",
+       "destination": "DWST000099",
+       "clearingNo": "2402",
+       "transferType": "PARTIAL",
+       "cash": 500.00,
+       "comment": "Moving $500 cash"
+     }'
+```
+
+**Response**
+
+```json
+{
+  "id": "int_9cd4e5f6-1234-5678-9abc-def012345678",
+  "source": "DWST000077",
+  "sourceAccountID": "0310893a-cddf-43b3-84c6-4da40e0b983e.1455594524969",
+  "destination": "DWST000099",
+  "destinationAccountID": "1a2b3c4d-abcd-1234-efgh-56789012abcd.1455594524970",
+  "clearingNo": "2402",
+  "status": "STARTED",
+  "type": "INTERNAL",
+  "transferType": "PARTIAL",
+  "partner": {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+    "name": "Tendies Trading Company"
+  },
+  "cash": 500.00,
+  "comment": "Moving $500 cash",
+  "created": "2026-06-10T14:28:00.073Z"
+}
+```
+
+---
+
+### Transfer specific positions
+
+Moves named positions by symbol and quantity. Each symbol must be active and present on the source account with sufficient quantity.
+
+**Request**
+
+```shell
+curl --request POST \
+     --url https://\{\{baseUrl}}/back-office/asset-transfers/transfers \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'authorization: Bearer \{\{accessToken}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '{
+       "source": "DWST000077",
+       "destination": "DWST000099",
+       "clearingNo": "2402",
+       "transferType": "PARTIAL",
+       "positions": [
+         { "symbol": "AAPL", "qty": 10 },
+         { "symbol": "MSFT", "qty": 5 }
+       ],
+       "comment": "Transferring AAPL and MSFT positions"
+     }'
+```
+
+**Response**
+
+```json
+{
+  "id": "int_aab1c2d3-aaaa-bbbb-cccc-ddddeeee1234",
+  "source": "DWST000077",
+  "sourceAccountID": "0310893a-cddf-43b3-84c6-4da40e0b983e.1455594524969",
+  "destination": "DWST000099",
+  "destinationAccountID": "1a2b3c4d-abcd-1234-efgh-56789012abcd.1455594524970",
+  "clearingNo": "2402",
+  "status": "STARTED",
+  "type": "INTERNAL",
+  "transferType": "PARTIAL",
+  "partner": {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+    "name": "Tendies Trading Company"
+  },
+  "positions": [
+    {
+      "symbol": "AAPL",
+      "qty": 10,
+      "instrumentID": "a67422af-8504-43df-9e63-7361eb0bd99e",
+      "instrumentType": "EQUITY"
+    },
+    {
+      "symbol": "MSFT",
+      "qty": 5,
+      "instrumentID": "b78533bf-9615-54ef-0f74-8472fc1ce0f0",
+      "instrumentType": "EQUITY"
+    }
+  ],
+  "comment": "Transferring AAPL and MSFT positions",
+  "created": "2026-06-10T14:30:00.073Z"
+}
+```
+
+---
+
+### Transfer everything
+
+Moves all cash and all positions in one request. Do **not** include `cash` or `positions`.
+
+**Request**
+
+```shell
+curl --request POST \
+     --url https://\{\{baseUrl}}/back-office/asset-transfers/transfers \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --header 'authorization: Bearer \{\{accessToken}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}' \
+     --data '{
+       "source": "DWST000077",
+       "destination": "DWST000099",
+       "clearingNo": "2402",
+       "transferType": "FULL",
+       "comment": "Full account consolidation"
+     }'
+```
+
+**Response**
+
+```json
+{
+  "id": "int_b2c3d4e5-2222-3333-4444-555566667777",
+  "source": "DWST000077",
+  "sourceAccountID": "0310893a-cddf-43b3-84c6-4da40e0b983e.1455594524969",
+  "destination": "DWST000099",
+  "destinationAccountID": "1a2b3c4d-abcd-1234-efgh-56789012abcd.1455594524970",
+  "clearingNo": "2402",
+  "status": "STARTED",
+  "type": "INTERNAL",
+  "transferType": "FULL",
+  "partner": {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+    "name": "Tendies Trading Company"
+  },
+  "comment": "Full account consolidation",
+  "created": "2026-06-10T14:35:00.073Z"
+}
+```
+
+---
+
+## Monitor transfer status
+
+Use the transfer ID from the creation response to poll the current state. The transfer processes asynchronously — poll until `status` reaches a terminal value.
+
+**Request**
+
+```shell
+curl --request GET \
+     --url https://\{\{baseUrl}}/back-office/asset-transfers/int_3fb1e8a9-f7d5-4d90-95e2-43e7326b5636 \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer \{\{accessToken}}' \
+     --header 'dw-client-app-key: \{\{yourAppKey}}'
+```
+
+**Response — SUCCESSFUL**
+
+```json
+{
+  "id": "int_3fb1e8a9-f7d5-4d90-95e2-43e7326b5636",
+  "source": "DWST000077",
+  "sourceAccountID": "0310893a-cddf-43b3-84c6-4da40e0b983e.1455594524969",
+  "destination": "DWST000099",
+  "destinationAccountID": "1a2b3c4d-abcd-1234-efgh-56789012abcd.1455594524970",
+  "clearingNo": "2402",
+  "status": "SUCCESSFUL",
+  "type": "INTERNAL",
+  "transferType": "ALL_CASH",
+  "partner": {
+    "id": "80f9b672-120d-4b73-9cc9-42fb3262c4b9",
+    "name": "Tendies Trading Company"
+  },
+  "incomingCash": 1250.00,
+  "outgoingCash": 1250.00,
+  "comment": "Consolidating cash to primary account",
+  "metadata": { "clientRef": "ref-001" },
+  "created": "2026-06-10T14:22:01.073Z",
+  "updated": "2026-06-10T18:00:05.211Z",
+  "auditDetails": [
+    {
+      "status": "STARTED",
+      "comment": "Transfer request has been submitted in queue",
+      "timestamp": "2026-06-10T14:22:01.073Z",
+      "updatedBy": "bo-user-id-here"
+    },
+    {
+      "status": "SUCCESSFUL",
+      "comment": "Transfer completed successfully",
+      "timestamp": "2026-06-10T18:00:05.211Z",
+      "updatedBy": "SYSTEM"
+    }
+  ]
+}
+```
+
+Once `status` is `SUCCESSFUL`:
+
+- `incomingCash` / `outgoingCash` are populated with the actual settled cash amounts.
+- `incomingPositions` / `outgoingPositions` are populated for position transfers.
+- `auditDetails` contains the full status history from creation to completion.
+
+**Transfer statuses**
+
+| Status       | Terminal | Meaning                                                               |
+| ------------ | -------- | --------------------------------------------------------------------- |
+| `STARTED`    | No       | Transfer record created and queued for processing.                    |
+| `PENDING`    | No       | Awaiting approval or pre-processing checks.                           |
+| `ON_HOLD`    | No       | Paused — may require manual review.                                   |
+| `SUCCESSFUL` | **Yes**  | Assets moved successfully.                                            |
+| `FAILED`     | **Yes**  | Transfer could not be completed. Check `auditDetails` for the reason. |
+
+---
+
+## Error Handling
+
+| HTTP status | `errorCode`                          | Cause                                                                                                                                                            |
+| ----------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `400`       | `BAD_MISSING_PARAMETERS_BODY`        | A required field is missing, has an invalid value, or violates a field-level rule (e.g., `cash ≤ 0`, comment exceeds 200 characters).                            |
+| `400`       | `ASSETS_TRANSFER_REJECTED`           | A business rule blocked the transfer — name mismatch, SSN mismatch, insufficient funds, incompatible account types, sweep-window violation, or FPSL restriction. |
+| `400`       | `ALREADY_EXISTS`                     | A transfer with the same source account and clearing number is already in progress for the destination account.                                                  |
+| `403`       | `USER_NO_ACCESS`                     | The destination is a special-purpose account not eligible for transfers.                                                                                         |
+| `403`       | `USER_INVALID_REFERRER_PARENTIB_SET` | The calling client does not own the destination account.                                                                                                         |
+| `403`       | `INVALID_ACTION_BODY`                | A non-DW clearing number was supplied with a source account that exists in the DW system.                                                                        |
+| `404`       | `NOT_FOUND`                          | The transfer ID does not exist.                                                                                                                                  |
+
+---
+
+## Workflow summary
+
+1. **Authenticate** — obtain a session token using your app key.
+2. **Verify eligibility** — confirm both accounts are `OPEN`, share the same partner, and pass identity requirements.
+3. **Confirm account type compatibility** — check the matrix to ensure the source → destination pair is permitted.
+4. **Create the transfer** — `POST /back-office/asset-transfers/transfers` with `clearingNo: "2402"` and the appropriate `transferType`.
+5. **Monitor status** — `GET /back-office/asset-transfers/{transferID}` and poll until `status` is `SUCCESSFUL` or `FAILED`.
+6. **Review audit details** — if `status` is `FAILED`, inspect the `auditDetails` array for the failure reason.
+
+---
+
+## Reference
+
+### Request fields
+
+<ParamField body="source" param-type="string">
+  Source account number or account ID. Also accepts the 19-character client format `XXXX-XXX-XXXXXXXXXX`.
+</ParamField>
+
+<ParamField body="destination" param-type="string">
+  Destination account number or account ID.
+</ParamField>
+
+<ParamField body="clearingNo" param-type="string">
+  Must be `2402` for internal transfers.
+</ParamField>
+
+<ParamField body="transferType" param-type="string">
+  `FULL`, `PARTIAL`, `ALL_CASH`, or `ALL_POSITIONS`. Also accepted as `acatType`.
+</ParamField>
+
+<ParamField body="cash" param-type="decimal">
+  Cash amount to transfer. Required for `PARTIAL` cash transfers. Must be `> 0`.
+</ParamField>
+
+<ParamField body="positions" param-type="array">
+  Positions to transfer. Required for `PARTIAL` position transfers. Each entry must include `symbol` (or `instrumentID`) and `qty > 0`.
+</ParamField>
+
+<ParamField body="comment" param-type="string">
+  Free-text note. Maximum 200 characters.
+</ParamField>
+
+<ParamField body="metadata" param-type="object">
+  Key-value pairs echoed back in the response.
+</ParamField>
+
+### Response fields
+
+<ResponseField name="id">
+  Unique transfer ID. Prefixed with `int_` for internal transfers.
+</ResponseField>
+
+<ResponseField name="source">
+  Source account number as resolved by the system.
+</ResponseField>
+
+<ResponseField name="sourceAccountID">
+  Source account UUID.
+</ResponseField>
+
+<ResponseField name="destination">
+  Destination account number.
+</ResponseField>
+
+<ResponseField name="destinationAccountID">
+  Destination account UUID.
+</ResponseField>
+
+<ResponseField name="clearingNo">
+  Clearing number used (`2402` for internal).
+</ResponseField>
+
+<ResponseField name="status">
+  Transfer status. See status table in [Monitor Transfer Status](#monitor-transfer-status).
+</ResponseField>
+
+<ResponseField name="type">
+  Transfer classification: `INTERNAL`.
+</ResponseField>
+
+<ResponseField name="transferType">
+  Transfer sub-type: `FULL`, `PARTIAL`, `ALL_CASH`, or `ALL_POSITIONS`.
+</ResponseField>
+
+<ResponseField name="partner">
+  Partner object — `id` and `name`.
+</ResponseField>
+
+<ResponseField name="cash">
+  Requested cash amount. Present for `PARTIAL` cash transfers only.
+</ResponseField>
+
+<ResponseField name="incomingCash">
+  Actual cash credited to the destination. Populated after processing.
+</ResponseField>
+
+<ResponseField name="outgoingCash">
+  Actual cash debited from the source. Populated after processing.
+</ResponseField>
+
+<ResponseField name="positions">
+  Requested positions. Present for `PARTIAL` position transfers only. Each entry includes `symbol`, `qty`, `instrumentID`, `instrumentType`.
+</ResponseField>
+
+<ResponseField name="incomingPositions">
+  Settled incoming positions with CUSIP. Populated after processing.
+</ResponseField>
+
+<ResponseField name="outgoingPositions">
+  Settled outgoing positions with CUSIP. Populated after processing.
+</ResponseField>
+
+<ResponseField name="comment">
+  The comment supplied in the request. Absent if not provided.
+</ResponseField>
+
+<ResponseField name="metadata">
+  The metadata supplied in the request. Absent if not provided.
+</ResponseField>
+
+<ResponseField name="created">
+  ISO 8601 timestamp of when the transfer was submitted.
+</ResponseField>
+
+<ResponseField name="updated">
+  ISO 8601 timestamp of the most recent status change. Absent until first update.
+</ResponseField>
+
+<ResponseField name="auditDetails">
+  Full status history. Present on GET responses only. Each entry has `status`, `comment`, `timestamp`, `updatedBy`.
+</ResponseField>
+
+### Account type codes
+
+<Expandable title="Expand to see all account management type codes" default-open="false">
+  <div className="overflow-x-auto">
+    | Code | Name                                    |
+    | ---- | --------------------------------------- |
+    | 1    | `SELF`                                  |
+    | 2    | `ADVISORY`                              |
+    | 3    | `RIA_MANAGED`                           |
+    | 4    | `CUSTODIAL`                             |
+    | 5    | `CUSTODIAL_MANAGED`                     |
+    | 6    | `TRUSTEE`                               |
+    | 7    | `TRUSTEE_MANAGED`                       |
+    | 9    | `SMSF`                                  |
+    | 10   | `SMSF_MANAGED`                          |
+    | 11   | `BROKER_MANAGED`                        |
+    | 12   | `CONSOLIDATED_MARGIN`                   |
+    | 15   | `RESERVE`                               |
+    | 16   | `CASH_MANAGEMENT`                       |
+    | 17   | `RETIREMENT_TRADITIONAL_SELF`           |
+    | 18   | `RETIREMENT_TRADITIONAL_ADVISORY`       |
+    | 19   | `RETIREMENT_TRADITIONAL_RIA_MANAGED`    |
+    | 20   | `RETIREMENT_ROTH_SELF`                  |
+    | 21   | `RETIREMENT_ROTH_ADVISORY`              |
+    | 22   | `RETIREMENT_ROTH_RIA_MANAGED`           |
+    | 23   | `TRUST_SELF`                            |
+    | 24   | `TRUST_ADVISORY`                        |
+    | 25   | `TRUST_RIA_MANAGED`                     |
+    | 26   | `OMNIBUS_MANAGED`                       |
+    | 27   | `INHERITED_RETIREMENT_TRADITIONAL_SELF` |
+    | 28   | `INHERITED_RETIREMENT_ROTH_SELF`        |
+    | 29   | `HSA_SELF`                              |
+    | 30   | `HSA_ADVISORY`                          |
+    | 31   | `HSA_RIA_MANAGED`                       |
+  </div>
+</Expandable>
