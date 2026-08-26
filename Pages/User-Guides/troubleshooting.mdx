@@ -1,0 +1,148 @@
+---
+title: Troubleshooting
+description: >-
+  Handle common errors, interpret HTTP status codes, and troubleshoot issues
+  effectively when integrating with the Wholechain API.
+---
+## Common HTTP Status Codes
+
+When integrating with the Wholechain API, you encounter standard HTTP status codes. These indicate the outcome of your requests.
+
+| Status Code | Category     | Description                                    |
+| ----------- | ------------ | ---------------------------------------------- |
+| `200`       | Success      | Request succeeded.                             |
+| `201`       | Success      | Resource created successfully.                 |
+| `400`       | Client Error | Bad request, often due to invalid parameters.  |
+| `401`       | Client Error | Unauthorized; check your authentication token. |
+| `403`       | Client Error | Forbidden; insufficient permissions.           |
+| `404`       | Client Error | Resource not found.                            |
+| `429`       | Client Error | Rate limit exceeded.                           |
+| `500`       | Server Error | Internal server error; retry later.            |
+| `502`       | Server Error | Bad gateway; service temporarily unavailable.  |
+
+<Callout kind="tip" collapsed="false">
+  Always inspect the response body for detailed error messages, even on success codes.
+</Callout>
+
+## Error Response Format
+
+Wholechain API errors return structured JSON responses. Use these to pinpoint issues.
+
+<Response show-lines="true">
+  ```json
+  {
+    "error": {
+      "code": "INVALID_INPUT",
+      "message": "The 'event_type' field is required.",
+      "details": {
+        "field": "event_type"
+      }
+    }
+  }
+  ```
+
+  ```json
+  {
+    "error": {
+      "code": "UNAUTHORIZED",
+      "message": "Invalid API key provided."
+    }
+  }
+  ```
+
+  ```json
+  {
+    "error": {
+      "code": "RATE_LIMIT_EXCEEDED",
+      "message": "Too many requests. Retry after 60 seconds.",
+      "retry_after": 60
+    }
+  }
+  ```
+</Response>
+
+## Debugging API Requests
+
+Follow these steps to diagnose issues systematically.
+
+<Steps>
+  <Step title="Verify Authentication" icon="shield" title-type="p">
+    Ensure your `Authorization` header uses `Bearer YOUR_API_KEY`. Test with a simple GET request.
+  </Step>
+
+  <Step title="Check Request Payload" icon="file-text" title-type="p">
+    Validate JSON syntax and required fields using tools like JSONLint.
+  </Step>
+
+  <Step title="Review Logs" icon="terminal" title-type="p">
+    Enable verbose logging in your client library to capture full requests and responses.
+  </Step>
+
+  <Step title="Test in Sandbox" icon="play" title-type="p">
+    Reproduce the issue in the sandbox environment before production.
+  </Step>
+
+  <Step title="Contact Support" icon="mail" title-type="p">
+    If unresolved, gather request ID from headers and reach out via support.
+  </Step>
+</Steps>
+
+## Common Issues and Resolutions
+
+Use these targeted fixes for frequent problems.
+
+<Tabs>
+  <Tab title="Authentication Errors" icon="key">
+    <CodeGroup show-lines="true">
+      ```bash
+      curl -X GET https://api.example.com/v1/events \
+        -H "Authorization: Bearer YOUR_API_KEY"
+      ```
+
+      ```javascript
+      const response = await fetch('https://api.example.com/v1/events', {
+        headers: {
+          'Authorization': 'Bearer YOUR_API_KEY'
+        }
+      });
+      ```
+    </CodeGroup>
+
+    <Callout kind="alert" collapsed="false">
+      Rotate your API key if compromised. Generate a new one from the dashboard.
+    </Callout>
+  </Tab>
+
+  <Tab title="Rate Limiting" icon="clock">
+    Implement exponential backoff. Respect `retry_after` from error responses.
+
+    ```javascript
+    // Example backoff logic
+    const delay = (retryAfter) => new Promise(resolve => setTimeout(resolve, retryAfter * 1000));
+    ```
+  </Tab>
+
+  <Tab title="Network Timeouts" icon="zap">
+    Increase your client timeout to `30s`. Check firewall rules blocking `api.example.com`.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Debugging Tips" default-open="false">
+  Capture traffic with tools like Wireshark or browser dev tools. Compare successful vs. failed requests side-by-side. Verify endpoint versions match your integration guide.
+</Expandable>
+
+## Next Steps
+
+<Columns cols="2">
+  <Card title="API Reference" href="/api-reference" icon="code" horizontal="false">
+    Dive into full endpoint documentation and schemas.
+  </Card>
+
+  <Card title="Support" href="https://support.wholechain.com/" icon="help-circle" horizontal="false" target="_blank">
+    Submit a ticket with request logs for expert help.
+  </Card>
+</Columns>
+
+<Callout kind="info" collapsed="false">
+  Most issues stem from authentication or payload validation. Double-check headers and JSON structure first.
+</Callout>
