@@ -1,0 +1,148 @@
+---
+title: Changelog
+description: >-
+  Version history of the Wholechain API, highlighting recent updates, new
+  features, and important changes.
+---
+## Recent Updates
+
+Keep your integration current with the Wholechain API. Review changes below to ensure compliance, transparency, and efficiency in your supply chain tracking.
+
+<Update label="2024-10-15" description="v2.3.0" tags={["feature","improvement"]}>
+  ## New Features
+
+  - Added `/events/v2` endpoint for enhanced event creation with trade partner support.
+  - Introduced bulk location uploads via `POST /locations/bulk` for faster onboarding.
+
+  ## Improvements
+
+  - Reduced latency on product queries by `>30%` with optimized caching.
+  - Enhanced error responses with detailed `error_code` fields for better debugging.
+
+  ## Bug Fixes
+
+  - Fixed pagination issues in `/products` listings.
+  - Resolved intermittent failures in authentication token refresh.
+</Update>
+
+<Update label="2024-09-20" description="v2.2.0" tags={["feature","bugfix"]}>
+  ## New Features
+
+  - New webhook support for real-time event notifications at `POST /webhooks`.
+  - Sandbox environment now mirrors production with sample data generation.
+
+  ## Bug Fixes
+
+  - Corrected invalid schema validation on location creation.
+  - Fixed `400` errors during trade partner association.
+</Update>
+
+<Update label="2024-08-10" description="v2.1.0" tags={["breaking","feature"]}>
+  ## Breaking Changes
+
+  - Deprecated `/events/v1` endpoint; migrate to `/events/v2`.
+  - `Authorization` header now requires `Bearer` prefix strictly.
+
+  ## New Features
+
+  - Added `GET /trade-partners` for querying verified partners.
+  - Support for custom metadata in product events.
+
+  ## Migration Notes
+
+  Update your requests to use the new endpoints. See migration guide below.
+</Update>
+
+## Upcoming Roadmap
+
+Track planned enhancements for the Wholechain API.
+
+<Board uid="b8c98c6d-3cfd-4853-adae-3d75de965189" title="Q4 2024 Roadmap">
+  <BoardColumn title="Planned" uid="d890206d-f194-40c3-86fa-b315ac6c1bb5" color="0" icon="calendar">
+    <BoardCard title="Advanced Analytics" uid="7e0df62d-5677-4790-aca1-dfddf0b409a4" description="Query event insights with filters" icon="bar-chart-3" due-date="2024-12-15" />
+
+    <BoardCard title="OAuth 2.0 Support" uid="fe4aab11-9b24-4cf3-9132-4ba47f6d8cdb" description="Federated identity providers" icon="shield" due-date="2024-12-01" />
+  </BoardColumn>
+
+  <BoardColumn title="In Progress" uid="a277df5d-67f3-4d9a-bf85-6c0d8653c934" color="1" icon="loader-2">
+    <BoardCard title="Rate Limiting" uid="2028e757-a452-4ce6-a969-04cf555e8a32" description="Per-endpoint quotas and headers" icon="zap" author="API Team" />
+  </BoardColumn>
+
+  <BoardColumn title="Completed" uid="f7f8a005-7031-4205-925b-ed0109401fd5" color="2" icon="check-circle">
+    <BoardCard title="Bulk Operations" uid="02436be2-fdcf-4a5e-b88b-670c081e6e27" description="Events and locations" icon="package" created-at="2024-10-15" />
+  </BoardColumn>
+</Board>
+
+## Migration Guide
+
+Follow these steps to upgrade your integration painlessly.
+
+<Steps>
+  <Step title="Review Breaking Changes" icon="alert-triangle" title-type="p">
+    Check the `v2.1.0` release notes above for deprecated endpoints.
+  </Step>
+
+  <Step title="Update Authentication" icon="lock" title-type="p">
+    <CodeGroup show-lines="true">
+      ```javascript
+      const response = await fetch('https://api.example.com/events/v2', {
+        headers: {
+          'Authorization': `Bearer ${YOUR_TOKEN}`,
+          'Content-Type': 'application/json'
+        }
+      });
+      ```
+
+      ```bash
+      curl -X POST https://api.example.com/events/v2 \
+        -H "Authorization: Bearer YOUR_TOKEN" \
+        -H "Content-Type: application/json" \
+        -d '{"event_type": "shipment"}'
+      ```
+    </CodeGroup>
+  </Step>
+
+  <Step title="Test in Sandbox" icon="terminal" title-type="p">
+    Use the sandbox at `https://sandbox.example.com` to validate changes.
+  </Step>
+
+  <Step title="Deploy to Production" icon="rocket" title-type="p">
+    Monitor webhooks for any issues post-deployment.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  Breaking changes in `v2.1.0` require immediate action. Update before `2024-11-01` to avoid disruptions.
+</Callout>
+
+## Resources
+
+<Columns cols="2">
+  <Card title="Quickstart" href="/quickstart" icon="book-open" horizontal="false">
+    Get started with core API calls.
+  </Card>
+
+  <Card title="API Reference" href="/api-reference" icon="code" horizontal="false">
+    Full endpoint documentation.
+  </Card>
+
+  <Card title="Authentication" href="/authentication" icon="shield" horizontal="false">
+    Secure your integration.
+  </Card>
+
+  <Card title="Support" href="https://support.wholechain.com" icon="help-circle" horizontal="false" target="_blank">
+    Contact our team for help.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed v2.3.0 Release Notes" default-open="false">
+  For exhaustive details, including schema diffs:
+
+  | Change         | Old             | New              |
+  | -------------- | --------------- | ---------------- |
+  | Event Endpoint | `/events/v1`    | `/events/v2`     |
+  | Auth Header    | `Token {token}` | `Bearer {token}` |
+  | Response Time  | `<500ms`        | `<100ms` avg     |
+
+  Review full diffs in your GitHub repo.
+</Expandable>
