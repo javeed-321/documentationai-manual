@@ -1,0 +1,199 @@
+---
+title: "Additional FAQs: Asset Management"
+---
+
+Find answers to common queries about the asset management module.
+
+<ExpandableGroup>
+  <Expandable title="How does Scrut discover my cloud assets?" default-open="true">
+    When you integrate your cloud accounts to Scrut, the system automatically:
+
+    - Scans your connected cloud accounts to identify all supported services
+    - Assigns each discovered resource to the appropriate asset category
+    - Regularly syncs to keep your inventory up-to-date
+    - Creates a unified multi-cloud view across all your providers
+  </Expandable>
+
+  <Expandable title="Does Scrut support multi-cloud environments?" default-open="true">
+    Yes! Scrut unifies assets from AWS, Azure, and GCP under consistent categories. For example, AWS EC2 instances, Azure Virtual Machines, and GCP Compute Engine instances all fall under the "Virtual Machines" category. This makes it easier to manage multi-cloud environments.
+  </Expandable>
+
+  <Expandable title="What AWS compute resources can Scrut automatically discover?" default-open="true">
+    **Virtual Machines:**
+
+    - EMR Clusters (Elastic MapReduce for big data)
+    - EC2 Instances (virtual servers)
+    - AMIs (Amazon Machine Images)
+
+    **Serverless Functions:**
+
+    - Lambda Functions
+  </Expandable>
+
+  <Expandable title="What AWS storage and database services can Scrut automatically discover?" default-open="true">
+    **Object Storage category includes:**
+
+    - DynamoDB Tables (NoSQL database)
+    - RDS Instances and Snapshots (relational databases)
+    - Redshift Clusters (data warehouses)
+    - EFS File Systems (shared storage)
+    - S3 Buckets (object storage)
+    - ElastiCache (Redis, Memcached)
+  </Expandable>
+
+  <Expandable title="What AWS networking services can Scrut automatically discover?" default-open="true">
+    The **Virtual Networks category** includes:
+
+    - VPCs (Virtual Private Clouds)
+    - Subnets
+    - VPC Peering Connections
+    - Network Interfaces (ENIs)
+  </Expandable>
+
+  <Expandable title="What AWS security and monitoring services can Scrut automatically discover?" default-open="true">
+    **Monitoring & Logging:**
+
+    - CloudTrail Trails (API activity logging)
+    - CloudWatch Alarms and Metric Filters
+
+    **Key Management:**
+
+    - KMS Keys (encryption keys)
+    - Secrets Manager Secrets
+
+    **Identity & Access:**
+
+    - IAM Users, Roles, and Groups
+  </Expandable>
+
+  <Expandable title="What other AWS services does Scrut automatically discover?" default-open="true">
+    Scrut also supports ACM, CloudFormation, CloudFront, CodeBuild, Config, Direct Connect, ELB/ELBv2, Route53, SES, SNS, and SQS.
+  </Expandable>
+
+  <Expandable title="What Azure compute services can Scrut automatically discover?" default-open="true">
+    **Virtual Machines category:**
+
+    - Virtual Machines (compute instances)
+    - Managed Disks (block storage)
+    - Snapshots (disk backups)
+    - Images (VM templates)
+
+    **Containers category:**
+
+    - App Service Web Apps (PaaS applications)
+  </Expandable>
+
+  <Expandable title="What Azure storage and database services can Scrut automatically discover?" default-open="true">
+    **Object Storage category includes:**
+
+    - Storage Accounts (blob, file, queue, table)
+    - SQL Database Servers
+    - PostgreSQL Database Servers
+    - MySQL Database Servers
+  </Expandable>
+
+  <Expandable title="Does Scrut support Azure networking?" default-open="true">
+    Yes, Scrut supports Azure Virtual Networks under the Virtual Networks category.
+  </Expandable>
+
+  <Expandable title="What Azure security and identity services can Scrut automatically discover?" default-open="true">
+    **Key Management:**
+
+    - Key Vaults (keys, secrets, certificates)
+
+    **Monitoring & Logging:**
+
+    - Logging/Monitoring Resources (Azure Monitor)
+
+    **Identity & Access:**
+
+    - Azure AD Users and Groups
+    - RBAC Roles (including custom roles)
+
+    Scrut also integrates with Azure Security Center.
+  </Expandable>
+
+  <Expandable title="What GCP compute services can Scrut automatically discover?" default-open="true">
+    **Virtual Machines:**
+
+    - Compute Engine Instances
+    - Compute Engine Snapshots
+
+    **Containers:**
+
+    - GKE Clusters (Google Kubernetes Engine)
+
+    **Serverless Functions:**
+
+    - Cloud Functions v1 and v2
+  </Expandable>
+
+  <Expandable title="What GCP storage and database services can Scrut automatically discover?" default-open="true">
+    **Object Storage category includes:**
+
+    - Cloud Storage Buckets
+    - Cloud SQL Instances (managed databases)
+    - Redis Instances (Cloud Memorystore)
+    - BigQuery Datasets (data warehouse)
+  </Expandable>
+
+  <Expandable title="Can Scrut discover GCP networking services?" default-open="true">
+    Yes, under Virtual Networks:
+
+    - VPC Networks
+    - Subnetworks
+    - DNS Managed Zones
+  </Expandable>
+
+  <Expandable title="What GCP security and monitoring services can Scrut automatically discover?" default-open="true">
+    **Monitoring & Logging:**
+
+    - Logging Sinks and Metrics
+    - Uptime Checks
+    - Alert Policies
+
+    **Key Management:**
+
+    - KMS Keyrings
+
+    **Identity & Access:**
+
+    - IAM Users and Groups
+  </Expandable>
+
+  <Expandable title="Does the Asset Management module support version control systems?" default-open="true">
+    Yes, Scrut supports code repositories from platforms like GitHub, GitLab, and Bitbucket under the Version Control category.
+  </Expandable>
+
+  <Expandable title="Does the Asset Management module support mobile devices?" default-open="true">
+    Yes, Scrut integrates with Mobile Device Management (MDM) platforms to track mobile devices.
+  </Expandable>
+
+  <Expandable title="Where will my AWS RDS database appear?" default-open="true">
+    AWS RDS instances are categorized under "Object Storage" along with other database and storage services.
+  </Expandable>
+
+  <Expandable title="I use AWS Lambda and Azure functions. Will they be grouped together?" default-open="true">
+    Yes! AWS Lambda Functions and Azure equivalents would appear in the same asset management views, though Azure Functions (if added as App Service) may appear under Containers. Serverless functions are grouped in the "Serverless Functions" category.
+  </Expandable>
+
+  <Expandable title="How do I find all my databases across different cloud providers?" default-open="true">
+    Look in the "Object Storage" category, which includes databases from all providers: AWS RDS, Azure SQL Database, GCP Cloud SQL, and more.
+  </Expandable>
+
+  <Expandable title="Can I see all my encryption keys across cloud providers?" default-open="true">
+    Yes, all encryption keys from AWS KMS, Azure Key Vault, and GCP KMS appear under the "Key Management" category.
+  </Expandable>
+
+  <Expandable title="How do I track all user accounts across my cloud environments?" default-open="true">
+    Check the "Users" category, which consolidates IAM users from AWS, Azure AD, and GCP IAM in one place.
+  </Expandable>
+
+  <Expandable title="Can I manually add assets from unsupported services?" default-open="true">
+    Yes! You can manually add any asset and assign it to the most appropriate category, even if it's not automatically discovered. Use the "Add Asset" feature and select "Manually."
+  </Expandable>
+
+  <Expandable title="I have custom or on-premise infrastructure. Can Scrut manage it?" default-open="true">
+    Yes, you can manually add on-premise or custom infrastructure as assets. Add them manually and assign them to the appropriate category (e.g., Virtual Machines, Object Storage) for consistent management and compliance tracking.
+  </Expandable>
+</ExpandableGroup>

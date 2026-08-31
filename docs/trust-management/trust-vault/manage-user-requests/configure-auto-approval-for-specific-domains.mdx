@@ -1,0 +1,76 @@
+---
+title: "Configure Auto Approval for Specific Domains"
+description: "Learn how to configure auto-approval for Trust Portal access for specific domains."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Included in the **Scale** plan
+  - Available in the **Trust Advanced Add-On** for **Foundation** and **Growth** plans
+</Callout>
+
+By default, anyone who visits your Trust Portal must submit an access request to view sensitive information. Domain-based auto-approval lets you automatically approve requests from a specified email domain, without waiting for manual review. This reduces friction for legitimate prospects and keeps your sales cycle moving.
+
+## How It Works
+
+When domain-based auto-approval is turned on, Scrut checks the email domain of each incoming access request against your saved domain list.
+
+- If there's a match, access is approved instantly, an NDA is sent via your selected provider, and the requester receives an email confirmation.
+- Requests from domains not on the list continue through the standard approval flow.
+
+## How to Set Up Domain-Based Auto-Approval
+
+1. Navigate to **Trust → Trust Vault → Settings → Auto Approve**.
+
+   <Image src="/images/Auto-Approve-Settings-Tab.png" alt="" />
+
+2. Under Auto Approve If, turn on the toggle labeled **Auto approve requests from specific domains**.
+
+3. In the domain input field, type a domain (for example, `partner.io`) and press Enter, comma, or Space to add it as a tag. Repeat this step to add more domains. Each domain appears as a removable tag. To remove a domain, click the X on its tag.
+
+4. Select an NDA provider from the NDA Provider dropdown.
+
+5. Select a duration from the Expiry Duration dropdown. Options include 7 days, 15 days, 30 days, Never, or Custom.
+
+6. Click **Save**.
+
+   <Image src="/images/Screenshot-2026-03-25-at-11.14.50.png" alt="" />
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Domain-based auto-approval is turned off by default for all accounts. Turning it on applies immediately to all incoming access requests from matching domains.
+</Callout>
+
+## What Happens Next?
+
+Depending on the domains you've saved in the Auto Approve tab, whenever a customer or prospect requests access to your Trust Portal, the request will get auto-approved if the requester's email domain matches a domain on your list. If there is a match, you don't have to approve the access request. Scrut will automatically grant them access to your Trust Portal.
+
+**Note:** Users who are auto-approved via this rule will have the Domain tag associated with them. You can check this in **Trust → Trust Vault → Access Requests → Approved**. The Approved By column is set to **Domain Auto-Approved**.
+
+<Image src="/images/Screenshot-2026-03-25-at-11.36.55.png" alt="" />
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Can I add multiple domains at once?" default-open="true">
+    Yes, you can paste multiple domains at once into the Whitelisted Domains field. Scrut automatically parses and converts each valid domain into a tag. Domains that don't pass format validation are flagged inline. Review any flagged entries, correct them, and press Enter to add them.
+  </Expandable>
+
+  <Expandable title="How does this rule impact access requesters?" default-open="true">
+    When a request is auto-approved via a domain match, the requester receives an email notification confirming their access.
+  </Expandable>
+
+  <Expandable title="Can I use both domain-based and Salesforce-based auto-approval?" default-open="true">
+    Yes. Both rules can be active at the same time.
+  </Expandable>
+
+  <Expandable title="How do I filter domain-auto-approved users?" default-open="true">
+    Use the **Approval Type** filter in the Access Requests → Approved tab to view domain auto-approved users.
+
+    <Image src="/images/Screenshot-2026-03-25-at-11.41.07.png" alt="" />
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

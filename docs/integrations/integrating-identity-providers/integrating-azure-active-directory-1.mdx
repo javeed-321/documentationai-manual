@@ -1,0 +1,221 @@
+---
+title: "Integrate Microsoft Entra (Azure AD)"
+description: "Learn how to connect your Microsoft Entra (Azure AD) account with Scrut."
+---
+
+In this guide, we walk you through the process of connecting your Microsoft Entra (Formerly, Azure Active Directory) account with Scrut.
+
+## What This Integration Does in Scrut
+
+- **Employee Directory:** Syncs employee and group data into Scrut's People module. These users can then access the Employee Portal for training, policy acceptance, and device-related activities.
+- **User Access Data:** Fetches user details, roles, and permissions from Microsoft Entra (Azure AD) for Access Reviews.
+- **Automated Tests:** Runs automated compliance checks that continuously evaluate your configurations against applicable compliance frameworks.
+- **Vendor Management:** Surfaces applications your employees access using their Microsoft Entra (Azure AD) accounts as prospective vendors in Risk → Vendors → Onboarding → Discovered from Integration.
+- **SSO:** Enables admins and employees to log in to Scrut and the Employee Portal, respectively, using their Microsoft Entra (Azure AD) accounts.
+
+## Prerequisites
+
+- An active Microsoft Entra (Azure AD) account with Global Administrator access.
+- Users in your Microsoft Entra (Azure AD) account have email addresses assigned.
+
+<Expandable title="Why is administrator access required?" default-open="true">
+  For the Scrut integration to work, it requires an administrator-level role (Global, Application, or Cloud Application Administrator) to grant the required tenant-wide, read-only permissions.
+</Expandable>
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  Log in to your Microsoft Entra (Azure AD) account before beginning the setup in Scrut. This makes the OAuth authorization flow faster and avoids an additional sign-in prompt mid-setup.
+</Callout>
+
+## Permissions and Access Requirements
+
+#### For Microsoft Entra (Azure AD)
+
+Scrut requests the following read-only permissions during the OAuth authorization flow:
+
+- openid
+- profile
+- email
+- offline_access
+- Application.Read.All
+- Directory.Read.All
+- User.Read
+- User.Read.All
+- UserAuthenticationMethod.Read
+- UserAuthenticationMethod.Read.All
+- Policy.Read.All
+
+**Note:** For a detailed explanation of each permission scope, refer to [Microsoft's Graph permissions reference documentation](https://learn.microsoft.com/en-us/graph/permissions-reference).
+
+<Image src="/images/Screenshot-2025-08-18-at-20.10.29.png" alt="" />
+
+#### For Scrut
+
+- Admin access to Scrut, or Contributor Role (with access to the Integrations module)
+
+## Supported Versions
+
+This integration supports Microsoft Entra (Azure AD) across all account versions (v1, v2, v3, and v4).
+
+## Data Collected
+
+- Users
+
+  - displayName
+  - mail / userPrincipalName
+  - createdDateTime (The date the user was added to Azure AD)
+  - deletedDateTime (The date the user was deleted from Azure AD)
+  - administrativeUnit (The Administrative Unit the employee belongs to)
+
+- Groups
+
+  - memberOf (Group memberships associated with the user)
+
+- Vendors
+
+  - Application display names (Applications accessed via Entra accounts, surfaced as prospective vendors in Scrut)
+
+## Sync Frequency
+
+Data syncs automatically every 24 hours. You can also trigger a manual sync at any time from the integration settings page.
+
+## Integration Setup
+
+### Step 1: Navigate to Integrations in Scrut
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
+
+2. Click the **Integrations Library** tab and navigate to **Identity Providers** in the **Categories** section.
+
+3. Locate the **Microsoft Entra (Azure AD)** integration tile and click **Integrate**.
+
+   <Image src="/images/Screenshot-2025-08-06-at-22.56.56.png" alt="" />
+
+4. Click the **Connect** button on the Microsoft Entra (Azure AD) integration page.
+
+   <Image src="/images/Screenshot-2025-08-06-at-22.59.24.png" alt="" />
+
+### Step 2: Authorize the Integration
+
+1. You will be redirected to Microsoft's authentication page.
+
+   **Note:** If you haven’t signed into your Microsoft account, you’ll be prompted to complete the sign-in process. Sign in with your Microsoft administrator account if prompted.
+
+   <Image src="/images/Screenshot-2025-08-06-at-22.59.45.png" alt="" />
+
+2. Review the permissions requested on the Microsoft OAuth screen and click **Accept**.
+
+   <Image src="/images/Screenshot-2025-08-18-at-20.10.29.png" alt="" />
+
+3. You will be redirected back to Scrut. The integration status updates to Connected.
+
+   <Image src="/images/Screenshot-2025-08-06-at-23.08.13.png" alt="" />
+
+### Step 3: Configure Scope
+
+1. Click **Configure Scope**. A list of licenses available in your Office 365 account will be displayed.
+
+2. The Configure License feature allows you to sync employees associated with preferred license(s).
+
+   <Image src="/images/Screenshot-2025-08-06-at-23.09.08.png" alt="" />
+
+3. A list of licenses available in your Office 365 account will be displayed.
+
+4. Toggle on the licenses for which you want to sync employees.
+
+5. Click **Save** to confirm your selections.
+
+6. Once the licenses are configured, the employee information corresponding to the selected licenses will be populated in the **People → Employees** module.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  It may take a few minutes after saving for employee data to begin populating in the People module. Check the Audit Log on the integration page to monitor sync status.
+</Callout>
+
+## What Happens Next?
+
+#### Initial data sync
+
+Scrut begins syncing employee data from your Microsoft Entra (Azure AD) account immediately after the integration is connected, and your license scope is saved. You can monitor sync progress and history in the Audit Log on the Microsoft Entra (Azure AD) integration page.
+
+#### Manual sync
+
+If you need to sync data before the next scheduled run, click Sync Now on the integration page. Select from the available sync options:
+
+- Sync Now for Employee Details
+- Sync Now for Employee Groups
+- Sync Now for Vendor Discovery
+
+<Image src="/images/Screenshot-2025-08-06-at-23.21.52.png" alt="" />
+
+#### Review synced data
+
+Once the initial sync is complete, verify that data has landed correctly in the following locations:
+
+- Navigate to **People → Employees** to view synced employee records, including name, email, joining date, and Administrative Unit.
+- Navigate to **Risk → Vendors → Onboarding → Discovered from Integration** to review applications surfaced as prospective vendors.
+- Navigate to **Tests** to view automated test results tied to your Azure AD configuration. Filter by Application to view tests for Azure AD.
+
+## Common Errors & Troubleshooting
+
+#### Integration not connecting
+
+Possible solutions:
+
+- Confirm you are signing in with an account that has Global Administrator permissions in Microsoft Entra (Azure AD).
+- Ensure your organization allows third-party OAuth applications. Check your Entra app consent settings.
+- Try signing in to your Microsoft account in a separate browser tab, then reattempt the OAuth flow in Scrut.
+
+#### Employee data not appearing after sync
+
+Possible solutions:
+
+- Confirm that the correct licenses are toggled on under Configure Scope. Employees not covered by a selected license are not synced.
+- Allow a few minutes after saving scope changes before checking the People module.
+- Check the Audit Log on the integration page.
+- Try triggering a manual sync using Sync Now.
+
+#### Administrative unit showing as blank
+
+Possible solutions:
+
+- Confirm that Administrative Units are configured in your Microsoft Entra (Azure AD) account and that the synced users are assigned to one. Users without an AU assignment will show a blank value in Scrut.
+
+#### Vendor data not appearing
+
+Possible solutions:
+
+- Trigger a manual Sync Now for Vendor Discovery from the integration page.
+- Confirm that your Microsoft Entra (Azure AD) account has application data associated with users. If no applications are registered or assigned, the Vendor Management module will not populate.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="What happens when an employee is deleted from Microsoft Entra (Azure AD)?" default-open="true">
+    The deletion date is captured as the employee's exit date in Scrut. The employee record is not removed from Scrut, but the employee’s status changes to Offboarding Needed in Scrut.
+  </Expandable>
+
+  <Expandable title="Can I control which employees are synced into Scrut?" default-open="true">
+    Yes. Use the Configure Scope option on the integration page to select which Office 365 licenses Scrut should sync. Only employees assigned to the selected licenses are pulled into the People module.
+  </Expandable>
+
+  <Expandable title="How do I trigger a sync before the next scheduled run?" default-open="true">
+    Click Sync Now on the Microsoft Entra (Azure AD) integration page. Select the appropriate sync option based on the data you want to refresh.
+  </Expandable>
+
+  <Expandable title="What if I need to change the administrator account used for this integration?" default-open="true">
+    Disconnect the existing integration and reconnect using the updated administrator account.
+  </Expandable>
+
+  <Expandable title="Does this integration support Single Sign-On (SSO)?" default-open="true">
+    Yes. Once the integration is connected, admins and employees can log in to Scrut and the Employee Portal using their Microsoft Entra (Azure AD) accounts.
+  </Expandable>
+
+  <Expandable title="Where in Scrut are the employee administrative unit details displayed?" default-open="true">
+    When employees are synced into Scrut via Microsoft Entra (Azure AD), Scrut will display their assigned Administrative Unit on the individual employee details page.
+
+    <Image src="/images/image-OQOT4PQV.png" alt="" />
+  </Expandable>
+</ExpandableGroup>

@@ -1,0 +1,164 @@
+---
+title: "What are Checklists in Scrut?"
+description: "Understand what checklists are in Scrut, the different task types, and categories in an employee checklist."
+---
+
+Once you’ve imported your employee details into Scrut, the next step is to assign them specific tasks that they must complete to meet your organization’s security and compliance requirements. To do this, you’ll need to add tasks to a checklist and assign the checklist to all employees or specific employee groups, as needed.
+
+Scrut uses **Checklists** to help you assign security and compliance tasks to your workforce. This article explains the various personnel tasks that can be added to checklists and also shares best practices for using checklists in Scrut.
+
+In this article, let’s take a closer look at checklists and how to add tasks to them to suit your specific requirements.
+
+## What are checklists?
+
+In Scrut, a **checklist lists a set of tasks employees must complete** to maintain compliance with your organization’s security and regulatory requirements. Employees assigned to a checklist must complete all the tasks in it to meet your organizational requirements. A few examples of tasks in a checklist include:
+
+- Ongoing tasks such as:
+
+  - Accepting company policies
+  - Installing device monitoring agents
+  - Installing specific software
+  - Undergoing background checks
+  - Completing training campaigns
+
+- Offboarding tasks such as:
+
+  - Terminating access to critical applications
+
+## How Do Employees Complete the Tasks on the Checklist
+
+Employees can view and complete these tasks through Scrut’s dedicated [employee portal](/docs/people/employee-portal/employee-portal-overview). When you assign a checklist to an employee group, all group members will receive an automated email from Scrut notifying them of the assigned tasks. They can find the employee portal login details in the email.
+
+Once an employee logs in to the employee portal, they can view all tasks assigned to them. As employees complete tasks, Scrut automatically reflects the data in the **People → Employee** module. This provides a real-time view of employee compliance, enabling you to follow up with non-compliant team members.
+
+<Image src="/images/Employee-Portal.png" alt="" />
+
+## Task Categories
+
+The tasks in an employee checklist are organized into the following categories:
+
+### Ongoing Tasks
+
+Which includes:
+
+- **Onboarding tasks** are assigned to new employees and must be completed during their first few days or weeks with the company.
+- **Recurring tasks** are assigned to all active personnel and must be completed on a regular schedule (e.g., annual security awareness training, quarterly policy reviews)
+
+### Offboarding Tasks
+
+- **Offboarding tasks** are assigned to departing employees when they leave your organization. These tasks ensure the proper removal of access when personnel leave the organization.
+
+## Task Types
+
+Scrut offers the following security and compliance tasks that you can add to checklists as required.
+
+<Tabs>
+  <Tab title="Ongoing Tasks">
+    ### #1: Policy Acceptance
+
+    <Image src="/images/Screenshot-2025-06-05-at-18.00.07.png" alt="" />
+
+    **What is it:** This task requires employees to review and acknowledge the company policies that you have configured in the checklist. You can choose which policies you want included in this task.
+
+    **How to complete**: Employees log in to the Scrut [employee portal](/docs/people/employee-portal/employee-portal-overview) and acknowledge policies on their dashboard.
+
+    **Note:**
+
+    - While you can select any policy, only those with status “**Published**” will be available for employees to review and accept.
+
+    - Policies marked with a blue diamond are Scrut-suggested. Scrut recommends adding these to the checklist. Click the **Include Suggested Policies** button to add all Scrut-suggested policies to this checklist.
+
+      <Image src="/images/Blue-Diamond.png" alt="" />
+
+    - Turn on the **Show Selected Policies** toggle to view all the policies you’ve selected.
+
+    <Image src="/images/Screenshot-2025-11-04-at-19.03.25.png" alt="" />
+
+    ### #2: Install Monitoring Agent
+
+    <Image src="/images/Screenshot-2025-07-16-at-14.32.08.png" alt="" />
+
+    **What is it:** Prompts employees to install the security monitoring agent(s) required by your organization. As part of the checklist, Scrut will track installation status and ensure personnel devices meet organizational security requirements.
+
+    **How to complete**:
+
+    - **Using Scrut Agent**: Personnel download and install [Scrut Agent](/docs/people/scrut-agent/scrut-agent-walkthrough) on their device.
+    - **Using MDM**: You can also manage employee device compliance by [integrating your MDM solution](/docs/integrations/integrations-overview#7-mobile-device-management-mdm-tools) with Scrut. In this case, personnel must have the selected MDM tool on their device.
+
+    #### #2.1 Install Password Manager
+
+    <Image src="/images/Screenshot-2025-07-16-at-14.33.15.png" alt="" />
+
+    **What is it:** Monitors if employees have set up your organization-approved password management tool. Select your preferred password management tool from the dropdown list.
+
+    **How to complete:** Personnel must install the approved password manager on their devices to complete this task.
+
+    <Callout kind="alert">
+      **Important:**
+
+      You can add this task to the checklist only when you've selected at least one MDM tool.
+    </Callout>
+
+    #### #2.2 Device Security
+
+    <Image src="/images/Screenshot-2025-07-16-at-14.34.02.png" alt="" />
+
+    **What is it:** Ensures that personnel devices comply with key security configurations, including antivirus installation, encrypted storage, enabled screen lock, and disabled USB access. You have the flexibility to customize and select which device security tasks you'd like to activate.
+
+    **How to complete:**
+
+    - **Install Antivirus:** Personnel must install and ensure the antivirus software is running on their devices.
+    - **Encrypt Storage Devices (HDD/SSD):** Personnel must ensure that their device storage is encrypted in accordance with company policy.
+    - **Enable Screen Lock:** Personnel must configure their devices to automatically lock after a period of inactivity.
+    - **Disable Device USB:** Personnel must disable unauthorized USB access on their devices in accordance with company policy. This feature currently works only with **Scrut Agent**.
+    - **Install Device Security Patches:** Checks if all employee devices have the latest operating system (OS) patches installed. This feature currently works only with **NinjaOne**.
+
+    #### #2.3 Install Required Software
+
+    <Image src="/images/Adding-Software-in-Checklist.gif" alt="" />
+
+    **What is it:** Ensures that personnel have installed all necessary software applications as required by your organization. Click **+ Add Software** to add the software versions for different operating systems as needed.
+
+    **How to complete:** Personnel must install all applications designated as "required software" to complete this task.
+
+    <Callout kind="alert">
+      **Important:**
+
+      You can add this task to the checklist only when you’ve selected at least one MDM tool. Currently, this task is not available for Sophos MDM.
+    </Callout>
+
+    ### #3: Training Campaigns
+
+    <Image src="/images/Screenshot-2025-06-05-at-18.10.51.png" alt="" />
+
+    **What is it:** Tracks if employees have completed the required security awareness training campaigns.
+
+    **How to complete**: Employees log in to the Scrut [employee portal](/docs/people/employee-portal/employee-portal-overview), complete the assigned training campaigns and finish associated quizzes. The training completion status syncs directly into the Employees module.
+
+    ### #4: Background Checks
+
+    <Image src="/images/Screenshot-2025-06-05-at-18.21.53.png" alt="" />
+
+    **What is it**: Verifies if personnel have completed background checks. When enabling it, you can choose to perform background verification for all employees (retrospectively) or only those who joined after a specific date.
+
+    **How to complete**: [Integrate your background verification tool](/docs/integrations/integrations-overview#6-background-check) with Scrut and import results into Scrut.
+  </Tab>
+
+  <Tab title="Offboarding Tasks">
+    ### #1: Access Removal of Monitored Applications
+
+    <Image src="/images/Screenshot-2025-06-05-at-18.22.23.png" alt="" />
+
+    **What is it**: Ensures the removal of access to monitored applications for offboarding employees. The dropdown shows all applications integrated with Scrut, allowing you to select which ones to include in this task.
+
+    **How to complete**: Scrut automatically detects account deactivation for applications that you have integrated with the platform.
+
+    ### #2: Access Removal of Unmonitored Applications
+
+    <Image src="/images/Screenshot-2025-06-05-at-18.22.49.png" alt="" />
+
+    **What is it**: Ensures the removal of access to unmonitored applications for offboarding employees. Click **+ Add Application** to include specific applications as part of this checklist task.
+
+    **How to complete**: Manually deactivate accounts in the respective applications and mark as completed in Scrut.
+  </Tab>
+</Tabs>

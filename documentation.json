@@ -1,471 +1,3174 @@
 {
-  "name": "Wholechain",
+  "name": "Scrut Help Center",
+  "initialRoute": "docs/lighthouse-documentation/onboarding-setup/how-to-log-into-scrut",
   "colors": {
     "light": {
-      "brand": "#2c3494"
+      "brand": "#3143e3",
+      "heading": "#1a1a1a",
+      "text": "#374151"
     },
     "dark": {
-      "brand": "#7A81D2"
+      "brand": "#85a1ff",
+      "heading": "#f2f2f2",
+      "text": "#c1c1c1"
     }
   },
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "User Guides",
-        "groups": [
+        "group": "Getting Started",
+        "expandable": true,
+        "pages": [
           {
-            "group": "Getting Started",
+            "group": "Onboarding & Setup",
+            "expandable": true,
             "pages": [
               {
-                "title": "Introduction",
-                "path": "Pages/User-Guides/Getting-Started/introduction",
-                "icon": "home",
-                "show-parent-label": false,
-                "ask-feedback": false
+                "title": "Log In to Scrut",
+                "path": "docs/lighthouse-documentation/onboarding-setup/how-to-log-into-scrut"
               },
               {
-                "title": "Introduction to Event-based Traceability",
-                "path": "Pages/User-Guides/Getting-Started/intro-to-event-based-traecability"
+                "title": "Complete Onboarding Tasks",
+                "path": "docs/lighthouse-documentation/onboarding-setup/onboarding-tasks"
               },
               {
-                "title": "Navigation",
-                "path": "Pages/User-Guides/Getting-Started/navigation",
-                "badge": "New"
+                "title": "Notification Center: Walkthrough",
+                "path": "docs/lighthouse-documentation/onboarding-setup/notification-center"
+              },
+              {
+                "title": "Quick Start Guide: Setup Wizard",
+                "path": "docs/lighthouse-documentation/onboarding-setup/setup-wizard"
+              },
+              {
+                "title": "Download Framework Certificates",
+                "path": "docs/lighthouse-documentation/onboarding-setup/download-framework-certificates"
+              },
+              {
+                "title": "Initiate Certification Renewal",
+                "path": "docs/lighthouse-documentation/onboarding-setup/initiate-certification-renewal"
               }
             ]
           },
           {
-            "group": "Master Data",
+            "group": "Task Center",
+            "expandable": true,
             "pages": [
               {
-                "title": "update-a-location-/-trade-object",
-                "path": "update-a-location-/-trade-object"
+                "title": "Task Center: Walkthrough",
+                "path": "docs/lighthouse-documentation/task-center/task-center-walkthrough"
               },
               {
-                "title": "Locations",
-                "path": "Pages/User-Guides/Master-Data/locations"
+                "title": "Track & Complete Audit Prep Tasks",
+                "path": "docs/lighthouse-documentation/task-center/task-center-audit-prep"
+              },
+              {
+                "title": "Track & Complete Your Tasks in Scrut",
+                "path": "docs/lighthouse-documentation/task-center/my-tasks-task-center"
+              },
+              {
+                "title": "Track & Complete Continuous Compliance Tasks",
+                "path": "docs/lighthouse-documentation/task-center/continuous-compliance-task-center"
               }
             ]
           },
           {
-            "group": "Event Data",
+            "group": "Dashboards",
+            "expandable": true,
             "pages": [
               {
-                "title": "Core Data",
-                "path": "Pages/User-Guides/Event-Data/core-data"
-              },
-              {
-                "title": "Custom Data",
-                "path": "Pages/User-Guides/Event-Data/custom-data"
+                "title": "Understand the Compliance Dashboard",
+                "path": "docs/lighthouse-documentation/dashboards-navigation/understanding-compliance-progress"
               }
             ]
           },
           {
-            "group": "Settings",
+            "group": "Getting Around Scrut",
+            "expandable": true,
             "pages": [
               {
-                "title": "Personal Settings",
-                "path": "Pages/User-Guides/Settings/personal-settings"
+                "title": "Customize Table Data",
+                "path": "docs/lighthouse-documentation/getting-around-scrut/customizing-rows"
               },
               {
-                "title": "Account Settings",
-                "path": "Pages/User-Guides/Settings/account-settings"
+                "title": "Search Within Scrut",
+                "path": "docs/lighthouse-documentation/getting-around-scrut/how-to-search-within-scrut"
+              }
+            ]
+          },
+          {
+            "group": "Account, Access & Support",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Contact Scrut Support",
+                "path": "docs/lighthouse-documentation/account-access-support/how-to-contact-scrut-support"
               },
               {
-                "title": "Brands",
-                "path": "Pages/User-Guides/Settings/brands"
+                "title": "Can I Access Scrut on Mobile or Tablet?",
+                "path": "docs/lighthouse-documentation/account-access-support/supported-devices-and-browsers"
               },
               {
-                "title": "Supplier Portal",
-                "path": "Pages/User-Guides/Settings/supplier-portal"
+                "title": "Understand Scrut's Data Security Measures",
+                "path": "docs/lighthouse-documentation/account-access-support/data-security-measures"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Frameworks & Controls",
+        "expandable": true,
+        "pages": [
+          {
+            "group": "Frameworks",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Frameworks: Walkthrough",
+                "path": "docs/frameworks-controls/frameworks/understanding-framework-dashboard"
               },
               {
-                "title": "Purchase Orders",
-                "path": "Pages/User-Guides/Settings/purchase-orders"
+                "title": "Quick Start Guide: Frameworks",
+                "path": "docs/frameworks-controls/frameworks/quick-start-guide-frameworks"
               },
               {
-                "title": "Integrations",
-                "path": "Pages/User-Guides/Settings/integrations"
+                "title": "Which Frameworks Does Scrut Support?",
+                "path": "docs/frameworks-controls/frameworks/framework-overview"
               },
               {
-                "title": "Users & Permissions",
-                "path": "Pages/User-Guides/Settings/users-permissions"
-              },
-              {
-                "title": "Subscription & Billing",
-                "path": "Pages/User-Guides/Settings/subscription-billing"
-              },
-              {
-                "title": "Data Element Library",
-                "path": "Pages/User-Guides/Settings/data-element-library"
-              },
-              {
-                "title": "Template Attributes",
-                "path": "Pages/User-Guides/Settings/template-attributes"
-              },
-              {
-                "title": "Master Data Settings",
-                "path": "Pages/User-Guides/Settings/master-data-settings"
-              },
-              {
-                "group": "Tools",
+                "group": "Manage Frameworks",
+                "expandable": true,
                 "pages": [
                   {
-                    "title": "Bulk Upload Aliases",
-                    "path": "bulk-upload-aliases"
+                    "title": "Add a New Framework",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/framework"
                   },
                   {
-                    "title": "External Identifier Manager",
-                    "path": "external-identifier-manager"
+                    "title": "Add a Framework Requirement",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/adding-framework-requirements"
                   },
                   {
-                    "title": "Data Policies & Frameworks",
-                    "path": "Pages/User-Guides/Master-Data/data-policies-frameworks"
+                    "title": "Create a Custom Framework",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/creating-your-own-framework"
+                  },
+                  {
+                    "title": "Edit Custom Framework Name",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/editing-custom-framework-name"
+                  },
+                  {
+                    "title": "Edit or Delete a Framework Requirement",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/editing-and-deleting-framework-requirement"
+                  },
+                  {
+                    "title": "Mark a Framework Requirement as Out of Scope",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/marking-framework-requirements-as-out-of-scope"
+                  },
+                  {
+                    "title": "Link and Unlink Framework Requirements to a Control",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/linking-controls-and-framework-requirements"
+                  },
+                  {
+                    "title": "Link and Unlink Controls to a Framework Requirement",
+                    "path": "docs/frameworks-controls/frameworks/manage-frameworks/linking-framework-requirement-to-a-control"
+                  }
+                ]
+              },
+              {
+                "group": "Framework Documents and Downloads",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Download SoA for ISO Frameworks",
+                    "path": "docs/frameworks-controls/frameworks/documents-and-downloads/download-soa-for-iso-frameworks"
+                  },
+                  {
+                    "title": "Create a System Description",
+                    "path": "docs/frameworks-controls/frameworks/documents-and-downloads/create-a-system-description"
+                  },
+                  {
+                    "title": "Download Framework Compliance Report",
+                    "path": "docs/frameworks-controls/frameworks/documents-and-downloads/downloading-framework-compliance-report"
+                  },
+                  {
+                    "title": "Export Framework Requirements",
+                    "path": "docs/frameworks-controls/frameworks/documents-and-downloads/exporting-inout-scope-framework-requirements"
                   }
                 ]
               }
             ]
           },
           {
-            "group": "Modules",
+            "group": "Controls",
+            "expandable": true,
             "pages": [
               {
-                "title": "Master Data Overview",
-                "path": "Pages/User-Guides/Modules/master-data-overview"
+                "title": "Controls: Walkthrough",
+                "path": "docs/frameworks-controls/controls-1/understanding-controls"
               },
               {
-                "title": "Traceability",
-                "path": "Pages/User-Guides/Modules/traceability"
+                "title": "Create a Custom Control",
+                "path": "docs/frameworks-controls/controls-1/creating-custom-controls"
               },
               {
-                "title": "PO Tracker",
-                "path": "Pages/User-Guides/Modules/po-tracker"
+                "title": "View Risks Linked to a Control",
+                "path": "docs/frameworks-controls/controls-1/viewing-risks-linked-to-a-control"
               },
               {
-                "title": "Compliance",
-                "path": "Pages/User-Guides/Modules/compliance"
-              }
-            ]
-          },
-          {
-            "group": "Maintenance",
-            "icon": "tool",
-            "pages": [
-              {
-                "title": "CSV Test",
-                "path": "Pages/User-Guides/csv-test",
-                "icon": "file-chart-line"
+                "title": "Edit, Delete or Mark a Control Out of Scope",
+                "path": "docs/frameworks-controls/controls-1/editing-and-deleting-control"
               },
               {
-                "title": "Authentication",
-                "path": "Pages/User-Guides/authentication"
+                "title": "Export Controls",
+                "path": "docs/frameworks-controls/controls-1/exporting-controls"
               },
               {
-                "title": "Quickstart",
-                "path": "Pages/User-Guides/quickstart",
-                "icon": "zap",
-                "content-width": "wide"
-              },
-              {
-                "title": "Troubleshooting",
-                "path": "Pages/User-Guides/troubleshooting",
-                "icon": "alert-circle"
-              }
-            ]
-          },
-          {
-            "group": "Users",
-            "pages": [
-              {
-                "title": "user-1-api",
-                "path": "user-1-api",
-                "openapi": "api-reference/user-api.yaml GET /users",
-                "openapi-mode": "auto",
-                "method": "GET"
+                "title": "Link and Unlink Artifacts to a Control",
+                "path": "docs/frameworks-controls/controls-1/linking-controls-and-artifacts"
               }
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              {
-                "title": "Introduction",
-                "path": "Pages/API/Overview/api-introduction"
-              },
-              {
-                "title": "Authentication",
-                "path": "Pages/API/Overview/api-authentication"
-              },
-              {
-                "title": "Environments & base URLs",
-                "path": "Pages/API/Overview/environments-base-urls",
-                "badge": "New"
-              },
-              {
-                "title": "Errors & status codes",
-                "path": "Pages/API/Overview/errors-status-codes"
-              },
-              {
-                "title": "Rate limits",
-                "path": "Pages/API/Overview/rate-limits"
-              },
-              {
-                "title": "Pagination",
-                "path": "Pages/API/Overview/pagination"
-              },
-              {
-                "title": "SDKs & code samples",
-                "path": "Pages/API/Overview/sdks-code-samples"
-              }
-            ]
-          },
-          {
-            "group": "Products",
-            "pages": [
-              {
-                "title": "Create a Product",
-                "path": "Pages/API/Products/product-creation"
-              },
-              {
-                "title": "Retrieve a Product",
-                "path": "Pages/API/Products/retrieve-a-product"
-              },
-              {
-                "title": "List Products",
-                "path": "Pages/API/Products/list-products"
-              },
-              {
-                "title": "Update a Product",
-                "path": "Pages/API/Products/update-a-product"
-              },
-              {
-                "title": "The Product object",
-                "path": "Pages/API/Products/the-product-object"
-              }
-            ]
-          },
-          {
-            "group": "Locations & Trade Partners",
-            "pages": [
-              {
-                "title": "Create a Location / Trade Partner",
-                "path": "Pages/API/Locations/create-location"
-              },
-              {
-                "title": "Retrieve a Location",
-                "path": "retrieve-a-location"
-              },
-              {
-                "title": "List Locations",
-                "path": "list-locations"
-              },
-              {
-                "title": "Update a Location / Trade Object",
-                "path": "update-a-location-/-trade-object"
-              },
-              {
-                "title": "The Location object",
-                "path": "the-location-object"
-              }
-            ]
-          },
-          {
-            "group": "Events",
-            "pages": [
-              {
-                "title": "Overview of the Events API",
-                "path": "overview-of-the-events-api"
-              },
-              {
-                "title": "Shared objects reference",
-                "path": "shared-objects-reference"
-              },
-              {
-                "title": "Create a Commission event",
-                "path": "create-a-commission-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create an Aggregation event",
-                "path": "create-an-aggregation-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create a Disaggregation event",
-                "path": "create-a-disaggregation-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create a Ship event",
-                "path": "create-a-ship-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create a Receive event",
-                "path": "create-a-receive-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create a Transform event",
-                "path": "create-a-transform-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create an Observe event",
-                "path": "create-an-observe-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Create a Decommission event",
-                "path": "create-a-decommission-event",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Submit multiple events (batch)",
-                "path": "submit-multiple-events-batch",
-                "openapi": "api-reference/wholechain-openapi.json.json POST /Integration/Events",
-                "openapi-mode": "auto",
-                "method": "POST"
-              },
-              {
-                "title": "Update an event",
-                "path": "update-an-event"
-              },
-              {
-                "title": "Delete an event",
-                "path": "delete-an-event",
-                "openapi": "api-reference/wholechain-openapi.json.json DELETE /Integration/Events/{eventId}",
-                "openapi-mode": "auto",
-                "method": "DELETE"
-              },
-              {
-                "title": "Retrieve event details",
-                "path": "retrieve-event-details",
-                "openapi": "api-reference/wholechain-openapi.json.json GET /epcis/Events/details",
-                "openapi-mode": "auto",
-                "method": "GET"
-              },
-              {
-                "title": "The Event object",
-                "path": "the-event-object"
-              }
-            ]
-          },
-          {
-            "group": "Inventory",
-            "pages": [
-              {
-                "title": "Get inventory",
-                "path": "get-inventory",
-                "openapi": "api-reference/wholechain-openapi.json.json GET /Integration/Inventory",
-                "openapi-mode": "auto",
-                "method": "GET"
-              },
-              {
-                "title": "The Inventory object",
-                "path": "the-inventory-object"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
+        "group": "Policies",
+        "expandable": true,
         "pages": [
           {
-            "title": "Roadmap",
-            "path": "roadmap",
-            "show-toc": false
+            "title": "Policies: Walkthrough",
+            "path": "docs/policy/policy-module-walkthrough"
           },
           {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
+            "title": "Quick Start Guide: Policies",
+            "path": "docs/policy/quick-start-guide-policies"
+          },
+          {
+            "group": "Create & Import Policies",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Create, Upload, or Link Policy Content",
+                "path": "docs/policy/working-with-policies/uploading-policy"
+              },
+              {
+                "title": "Import a Policy from Google Drive",
+                "path": "docs/policy/working-with-policies/import-a-policy-from-google-drive"
+              },
+              {
+                "title": "Create a Custom Policy",
+                "path": "docs/policy/working-with-policies/creating-policy"
+              },
+              {
+                "title": "Edit Policy Name & Details",
+                "path": "docs/policy/working-with-policies/editing-policy"
+              }
+            ]
+          },
+          {
+            "group": "Edit Policy Content",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Edit Policy Content in Scrut's Editor",
+                "path": "docs/policy/editing-policy-content/how-to-use-policy-editor"
+              },
+              {
+                "title": "Auto Save a Policy",
+                "path": "docs/policy/editing-policy-content/policy-autosave"
+              },
+              {
+                "title": "Add Policy Header and Footer",
+                "path": "docs/policy/editing-policy-content/policy-header-and-footer"
+              },
+              {
+                "title": "Understand Policy Variables",
+                "path": "docs/policy/editing-policy-content/policy-variables"
+              }
+            ]
+          },
+          {
+            "group": "Manage & Organize Policies",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Bulk Manage Policies",
+                "path": "docs/policy/managing-organizing-policies/bulk-action-feature"
+              },
+              {
+                "title": "Clone a Policy",
+                "path": "docs/policy/managing-organizing-policies/clone-a-policy"
+              },
+              {
+                "title": "Delete a Policy",
+                "path": "docs/policy/managing-organizing-policies/delete-a-policy"
+              },
+              {
+                "title": "Link and Unlink Controls to a Policy",
+                "path": "docs/policy/managing-organizing-policies/linking-policy-to-a-control"
+              },
+              {
+                "title": "View the Policy Effort Estimate",
+                "path": "docs/policy/managing-organizing-policies/set-policy-effort-estimate"
+              },
+              {
+                "title": "Turn On Policy IDs",
+                "path": "docs/policy/managing-organizing-policies/policy-id"
+              },
+              {
+                "title": "Manage Policy Versions",
+                "path": "docs/policy/managing-organizing-policies/editing-a-policy-version"
+              },
+              {
+                "title": "Mark a Policy as Not Relevant",
+                "path": "docs/policy/managing-organizing-policies/marking-a-policy-not-relevant"
+              },
+              {
+                "title": "Mark a Policy as Relevant",
+                "path": "docs/policy/managing-organizing-policies/marking-a-policy-not-relevant-1"
+              }
+            ]
+          },
+          {
+            "group": "Policy Approval & Review",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand Policy Approval Workflow",
+                "path": "docs/policy/policy-review/understanding-policy-approval-workflow"
+              },
+              {
+                "title": "Add Policy Approvers",
+                "path": "docs/policy/policy-review/add-policy-approvers"
+              },
+              {
+                "title": "Add Policy Assignees",
+                "path": "docs/policy/policy-review/marking-a-policy-not-relevant-2"
+              },
+              {
+                "title": "Set a Policy Review Cycle",
+                "path": "docs/policy/policy-review/settings-a-policy-review-cycle"
+              }
+            ]
+          },
+          {
+            "group": "Policy Status",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand Policy Statuses",
+                "path": "docs/policy/overview/policy-statuses"
+              }
+            ]
+          },
+          {
+            "group": "Policy Exports & Attachments",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Export Policies & Attachments",
+                "path": "docs/policy/export-policies/exporting-policies"
+              },
+              {
+                "title": "Delete Policy Attachment",
+                "path": "docs/policy/export-policies/removing-policy-content"
+              }
+            ]
+          },
+          {
+            "group": "AI in Policies",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Map Controls to Policies Using Scrut Teammates",
+                "path": "docs/policy/ai-powered-features-1/ai-suggested-policy-control-mapping"
+              },
+              {
+                "title": "Review AI-Detected Policy Gaps",
+                "path": "docs/policy/ai-powered-features-1/ai-detected-policy-gaps"
+              }
+            ]
+          },
+          {
+            "group": "Additional FAQs: Policies",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Impact of Policy Variables on Existing Policies",
+                "path": "docs/policy/faqs/impact-of-policy-variables-on-existing-policies"
+              },
+              {
+                "title": "Access Policy Settings",
+                "path": "docs/policy/faqs/how-to-access-policy-settings"
+              }
+            ]
           }
         ]
       },
       {
-        "tab": "Help Center",
+        "group": "Integrations",
+        "expandable": true,
         "pages": [
           {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
+            "title": "Which Integrations Does Scrut Support?",
+            "path": "docs/integrations/integrations-overview"
           },
           {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
+            "title": "Troubleshoot Integration Issues",
+            "path": "docs/integrations/integration-troubleshooting"
+          },
+          {
+            "title": "Additional FAQs: Integrations",
+            "path": "docs/integrations/integration-faqs-troubleshooting"
+          },
+          {
+            "group": "Background Check",
+            "expandable": true,
             "pages": [
               {
-                "title": "How to Access Dashboard",
-                "path": "help-center/faq/how-to-access-dashboard"
+                "title": "Integrate Certn",
+                "path": "docs/integrations/background-check/integrating-certn"
+              },
+              {
+                "title": "Integrate Checkr",
+                "path": "docs/integrations/background-check/checkr-integration-sync-employee-bgv-data-to-scrut"
+              },
+              {
+                "title": "Integrate Zinc Work",
+                "path": "docs/integrations/background-check/integrating-zinc-work"
+              },
+              {
+                "title": "Integrate SpringVerify",
+                "path": "docs/integrations/background-check/integrating-springverify"
               }
             ]
           },
           {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
+            "group": "Campaigns & Trainings",
+            "expandable": true,
             "pages": [
               {
-                "title": "Data Upload Fail",
-                "path": "help-center/troubleshooting/data-upload-fail"
+                "title": "Integrate KnowBe4",
+                "path": "docs/integrations/campaigns-trainings/integrating-knowbe4"
+              },
+              {
+                "title": "Integrate ThreatCop",
+                "path": "docs/integrations/campaigns-trainings/integrating-threatcop"
+              },
+              {
+                "title": "Integrate EC Council",
+                "path": "docs/integrations/campaigns-trainings/integrating-ec-council"
+              },
+              {
+                "title": "Integrate Phished",
+                "path": "docs/integrations/campaigns-trainings/integrating-phished"
               }
             ]
           },
           {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
+            "group": "Capacity & Usage Monitoring",
+            "expandable": true,
             "pages": [
               {
-                "title": "Invite Team Member",
-                "path": "help-center/guides/invite-team-member"
+                "title": "Integrate Datadog",
+                "path": "docs/integrations/capacity-usage-monitoring/integrating-datadog"
+              },
+              {
+                "title": "Integrate New Relic",
+                "path": "docs/integrations/capacity-usage-monitoring/integrating-new-relic"
+              },
+              {
+                "title": "Integrate Sumo Logic",
+                "path": "docs/integrations/capacity-usage-monitoring/integrating-sumo-logic"
+              },
+              {
+                "title": "Integrate Tableau",
+                "path": "docs/integrations/capacity-usage-monitoring/integrating-tableau"
+              },
+              {
+                "title": "Integrate Google Analytics",
+                "path": "docs/integrations/capacity-usage-monitoring/integrating-google-analytics"
               }
             ]
+          },
+          {
+            "group": "Cloud Providers",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate AWS",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-aws"
+              },
+              {
+                "title": "Integrate Microsoft Azure",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-azure"
+              },
+              {
+                "title": "Integrate GCP",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-gcp-using-service-account-impersonation"
+              },
+              {
+                "title": "Integrate GCP (Multi-Project) [BETA]",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-gcp-new"
+              },
+              {
+                "title": "Integrate DigitalOcean",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-digitalocean"
+              },
+              {
+                "title": "Integrate Heroku",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-heroku"
+              },
+              {
+                "title": "Integrate Vercel",
+                "path": "docs/integrations/integrating-cloud-providers/integrating-vercel"
+              },
+              {
+                "title": "Configure Scope for AWS Integration",
+                "path": "docs/integrations/integrating-cloud-providers/aws-integration-enhancement"
+              },
+              {
+                "title": "Configure Scope for Azure Integration",
+                "path": "docs/integrations/integrating-cloud-providers/azure-integration-enhancement"
+              },
+              {
+                "title": "Rebind GCP - Service Account",
+                "path": "docs/integrations/integrating-cloud-providers/gcpserviceaccountrebinding"
+              }
+            ]
+          },
+          {
+            "group": "Communication Tools",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Dialpad",
+                "path": "docs/integrations/communication-tools/integrating-dialpad"
+              },
+              {
+                "title": "Integrate Fireflies",
+                "path": "docs/integrations/communication-tools/integrating-fireflies"
+              },
+              {
+                "title": "Integrate SendGrid",
+                "path": "docs/integrations/communication-tools/integrating-sendgrid"
+              },
+              {
+                "title": "Integrate Slack",
+                "path": "docs/integrations/communication-tools/integrating-slack"
+              },
+              {
+                "title": "Integrate Zoom",
+                "path": "docs/integrations/communication-tools/help-guide-for-access-review-only-integrations"
+              },
+              {
+                "title": "Integrating Microsoft Teams",
+                "path": "docs/integrations/communication-tools/integrating-microsoft-teams"
+              }
+            ]
+          },
+          {
+            "group": "Customer Relationship Management",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Active Campaign",
+                "path": "docs/integrations/customer-relationship-management/integrating-active-campaign"
+              },
+              {
+                "title": "Integrate Close CRM",
+                "path": "docs/integrations/customer-relationship-management/integrating-close-crm"
+              },
+              {
+                "title": "Integrate Copper",
+                "path": "docs/integrations/customer-relationship-management/integrating-copper"
+              },
+              {
+                "title": "Integrate Freshdesk",
+                "path": "docs/integrations/customer-relationship-management/integrating-freshdesk"
+              },
+              {
+                "title": "Integrate HubSpot",
+                "path": "docs/integrations/customer-relationship-management/integrating-hubspot"
+              },
+              {
+                "title": "Integrate Insightly",
+                "path": "docs/integrations/customer-relationship-management/integrating-insightly"
+              },
+              {
+                "title": "Integrate Less Annoying CRM",
+                "path": "docs/integrations/customer-relationship-management/integrating-less-annoying-crm"
+              },
+              {
+                "title": "Integrate NetSuite",
+                "path": "docs/integrations/customer-relationship-management/integrating-netsuite"
+              },
+              {
+                "title": "Integrate Oracle Cloud HCM",
+                "path": "docs/integrations/customer-relationship-management/integrating-oracle-cloud-hcm"
+              },
+              {
+                "title": "Integrate Oracle Sales & Fusion Service",
+                "path": "docs/integrations/customer-relationship-management/integrating-oracle-sales-fusion-service"
+              },
+              {
+                "title": "Integrate Salesforce",
+                "path": "docs/integrations/customer-relationship-management/salesforce-integration"
+              }
+            ]
+          },
+          {
+            "group": "Database",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Databricks",
+                "path": "docs/integrations/database/integrating-databricks"
+              },
+              {
+                "title": "Integrate Fivetran",
+                "path": "docs/integrations/database/integrating-fivetran"
+              },
+              {
+                "title": "Integrate MongoDB",
+                "path": "docs/integrations/database/integrating-mongodb"
+              },
+              {
+                "title": "Integrate Snowflake",
+                "path": "docs/integrations/database/integrating-snowflake"
+              }
+            ]
+          },
+          {
+            "group": "Human Resource Information Systems",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate ADP",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-adp"
+              },
+              {
+                "title": "Integrate AlexisHR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-alexishr"
+              },
+              {
+                "title": "Integrate Bamboo HR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-bamboo-hr"
+              },
+              {
+                "title": "Integrate Breathe HR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-breathehr"
+              },
+              {
+                "title": "Integrate BreezyHR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-breezyhr"
+              },
+              {
+                "title": "Integrate Charlie HR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-charlie-hr"
+              },
+              {
+                "title": "Integrate CyberArk",
+                "path": "docs/integrations/integrating-human-resource-information-systems/cyberark-integration"
+              },
+              {
+                "title": "Integrate Darwinbox",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-darwinbox"
+              },
+              {
+                "title": "Integrate Deel",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-deel"
+              },
+              {
+                "title": "Integrate Employment Hero",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-employment-hero"
+              },
+              {
+                "title": "Integrate Freshteam",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-freshteam"
+              },
+              {
+                "title": "Integrate greytHR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-greythr"
+              },
+              {
+                "title": "Integrate HiBob",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-hibob"
+              },
+              {
+                "title": "Integrate HR Works",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-hr-works"
+              },
+              {
+                "title": "Integrate Jibble",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-jibble"
+              },
+              {
+                "title": "Integrate Keka",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-keka-hr"
+              },
+              {
+                "title": "Integrate Paycom",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-paycom"
+              },
+              {
+                "title": "Integrate Paylocity",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-paylocity"
+              },
+              {
+                "title": "Integrate Personio",
+                "path": "docs/integrations/integrating-human-resource-information-systems/personio-integration"
+              },
+              {
+                "title": "Integrate Rippling",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-rippling"
+              },
+              {
+                "title": "Integrate Sage HR",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-sage-hr"
+              },
+              {
+                "title": "Integrate SAP Success Factors",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-sap-success-factor"
+              },
+              {
+                "title": "Integrate UKG Pro",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-ukg-pro"
+              },
+              {
+                "title": "Integrate Workday",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-workday"
+              },
+              {
+                "title": "Integrate Zenefits",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-zenefits"
+              },
+              {
+                "title": "Integrate Zoho",
+                "path": "docs/integrations/integrating-human-resource-information-systems/integrating-zoho-people"
+              }
+            ]
+          },
+          {
+            "group": "Identity Providers",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Google Workspace",
+                "path": "docs/integrations/integrating-identity-providers/integrating-google-workspace"
+              },
+              {
+                "title": "Integrate Microsoft Entra (Azure AD)",
+                "path": "docs/integrations/integrating-identity-providers/integrating-azure-active-directory-1"
+              },
+              {
+                "title": "Integrate Okta (IDP)",
+                "path": "docs/integrations/integrating-identity-providers/integrating-okta-idp"
+              },
+              {
+                "title": "Integrate Okta (SSO)",
+                "path": "docs/integrations/integrating-identity-providers/integrating-okta"
+              },
+              {
+                "title": "Integrate OneLogin",
+                "path": "docs/integrations/integrating-identity-providers/integrating-onelogin"
+              },
+              {
+                "title": "Integrate JumpCloud SSO",
+                "path": "docs/integrations/integrating-identity-providers/jumpcloud-sso"
+              },
+              {
+                "title": "Integrate Auth0",
+                "path": "docs/integrations/integrating-identity-providers/integrating-autho-1"
+              },
+              {
+                "title": "Integrate PingOne (Beta)",
+                "path": "docs/integrations/integrating-identity-providers/integrating-pingidentity"
+              }
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate 15Five",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-15five"
+              },
+              {
+                "title": "Integrate Adyen",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-adyen"
+              },
+              {
+                "title": "Integrate Aircall",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-aircall"
+              },
+              {
+                "title": "Integrate Amplitude",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-amplitude"
+              },
+              {
+                "title": "Integrate Anthropic Claude",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-anthropic-claude"
+              },
+              {
+                "title": "Integrate Apollo.io",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-apollo-io"
+              },
+              {
+                "title": "Integrate AppDirect",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-appdirect"
+              },
+              {
+                "title": "Integrate Cal.com",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-cal-com"
+              },
+              {
+                "title": "Integrate Calendly",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-calendly"
+              },
+              {
+                "title": "Integrate Collibra",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-collibra"
+              },
+              {
+                "title": "Integrate Gainsight PX",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-gainsight-px"
+              },
+              {
+                "title": "Integrate Gong",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-gong"
+              },
+              {
+                "title": "Integrate Harvest",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-harvest"
+              },
+              {
+                "title": "Integrate Hunter",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-hunter"
+              },
+              {
+                "title": "Integrate Notion",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-notion"
+              },
+              {
+                "title": "Integrate OpenAI",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-openai"
+              },
+              {
+                "title": "Integrate Stripe",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-stripe"
+              },
+              {
+                "title": "Integrate Supabase",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-supabase"
+              },
+              {
+                "title": "Integrate Xero",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-xero"
+              },
+              {
+                "title": "Integrate Airtable",
+                "path": "docs/integrations/integrating-miscellaneous/integrating-airtable"
+              }
+            ]
+          },
+          {
+            "group": "Mobile Device Management Tools",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Jamf Pro",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-jamf-pro"
+              },
+              {
+                "title": "Integrate JumpCloud",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-jumpcloud"
+              },
+              {
+                "title": "Integrate Kandji (Iru)",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-kandji"
+              },
+              {
+                "title": "Integrate MS Intune",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/microsoft-intune"
+              },
+              {
+                "title": "Integrate Endpoint Central",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-endpoint-central"
+              },
+              {
+                "title": "Integrating Fleet",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-fleet"
+              },
+              {
+                "title": "Integrate KiteCyber",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-kitecyber"
+              },
+              {
+                "title": "Integrate NinjaOne",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-ninjaone"
+              },
+              {
+                "title": "Integrate Sophos",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-sophos"
+              },
+              {
+                "title": "Integrate Kolide",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-kolide"
+              },
+              {
+                "title": "Integrate Hexnode",
+                "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-hexnode"
+              }
+            ]
+          },
+          {
+            "group": "Policy Management",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Confluence",
+                "path": "docs/integrations/policy-management/integrating-confluence"
+              },
+              {
+                "title": "Integrate SharePoint",
+                "path": "docs/integrations/policy-management/integrating-sharepoint"
+              },
+              {
+                "title": "Integrate PandaDoc",
+                "path": "docs/integrations/policy-management/integrating-pandadoc"
+              }
+            ]
+          },
+          {
+            "group": "Project Management Platforms",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand Task Management Integration Capabilities",
+                "path": "docs/integrations/integrating-project-management-platforms/task-management-integration-capabilities"
+              },
+              {
+                "title": "Integrate Jira",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-jira"
+              },
+              {
+                "title": "Manage Jira Tickets",
+                "path": "docs/integrations/integrating-project-management-platforms/creating-jira-ticket"
+              },
+              {
+                "title": "Integrate Monday.com",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-mondaycom"
+              },
+              {
+                "title": "Integrate ClickUp",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-click-up"
+              },
+              {
+                "title": "Integrate Shortcut",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-shortcut"
+              },
+              {
+                "title": "Create Shortcut Story",
+                "path": "docs/integrations/integrating-project-management-platforms/creating-a-shortcut-story"
+              },
+              {
+                "title": "Integrate Linear",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-linear"
+              },
+              {
+                "title": "Create Linear Issue",
+                "path": "docs/integrations/integrating-project-management-platforms/creating-linear-issue"
+              },
+              {
+                "title": "Integrate Asana",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-asana"
+              },
+              {
+                "title": "Create Asana Tasks",
+                "path": "docs/integrations/integrating-project-management-platforms/creating-asana-ticket"
+              },
+              {
+                "title": "Integrate Azure DevOps (Create Tickets)",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-azure-devops-1"
+              },
+              {
+                "title": "Integrate ServiceNow",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-servicenow"
+              },
+              {
+                "title": "Integrate Basecamp",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-basecamp"
+              },
+              {
+                "title": "Integrate Trello",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-trello"
+              },
+              {
+                "title": "Integrate Miro",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-miro"
+              },
+              {
+                "title": "Integrate Figma",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-figma"
+              },
+              {
+                "title": "Integrate Hive",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-hive"
+              },
+              {
+                "title": "Integrate Canny",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-canny"
+              },
+              {
+                "title": "Integrate OpenProject",
+                "path": "docs/integrations/integrating-project-management-platforms/integrating-openproject"
+              }
+            ]
+          },
+          {
+            "group": "Threat Intelligence",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate SentinelOne",
+                "path": "docs/integrations/threat-intelligence/integrating-sentinelone"
+              }
+            ]
+          },
+          {
+            "group": "Ticket Management",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Freshservice",
+                "path": "docs/integrations/ticket-management/integrating-freshservice"
+              },
+              {
+                "title": "Integrate ServiceDesk Plus",
+                "path": "docs/integrations/ticket-management/integrating-servicedesk-plus"
+              },
+              {
+                "title": "Integrate Zendesk",
+                "path": "docs/integrations/ticket-management/integrating-zendesk"
+              }
+            ]
+          },
+          {
+            "group": "Version Control",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Azure DevOps",
+                "path": "docs/integrations/integrating-version-control/integrating-azure-devops"
+              },
+              {
+                "title": "Integrate Bitbucket",
+                "path": "docs/integrations/integrating-version-control/integrating-bitbucket"
+              },
+              {
+                "title": "Integrate GitHub",
+                "path": "docs/integrations/integrating-version-control/integrating-github"
+              },
+              {
+                "title": "Create GitHub Issues",
+                "path": "docs/integrations/integrating-version-control/create-github-issues"
+              },
+              {
+                "title": "Integrate GitLab",
+                "path": "docs/integrations/integrating-version-control/adding-gitlab"
+              }
+            ]
+          },
+          {
+            "group": "Vulnerability Scanners",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrating Aikido",
+                "path": "docs/integrations/vulnerability-scanners/integrating-aikido"
+              },
+              {
+                "title": "Integrate Microsoft Defender Endpoint",
+                "path": "docs/integrations/vulnerability-scanners/integrating-microsoft-defender-endpoint"
+              },
+              {
+                "title": "Integrate Qualys",
+                "path": "docs/integrations/vulnerability-scanners/integrating-qualys"
+              },
+              {
+                "title": "Integrate Sentry",
+                "path": "docs/integrations/vulnerability-scanners/integrating-sentry"
+              },
+              {
+                "title": "Integrate Snyk",
+                "path": "docs/integrations/vulnerability-scanners/integrating-snyk"
+              },
+              {
+                "title": "Integrate SonarCloud",
+                "path": "docs/integrations/vulnerability-scanners/integrating-sonarcloud"
+              },
+              {
+                "title": "Integrate Tenable",
+                "path": "docs/integrations/vulnerability-scanners/integrating-tenable"
+              }
+            ]
+          },
+          {
+            "group": "Web Security & CDN",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Integrate Cloudflare",
+                "path": "docs/integrations/web-security-cdn/integrating-cloudflare"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Continuous Compliance",
+        "expandable": true,
+        "pages": [
+          {
+            "group": "Evidence Collection",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Evidence Tasks: Walkthrough",
+                "path": "docs/continuous-compliance/evidence-tasks/evidence-tasks-walkthrough"
+              },
+              {
+                "group": "Evidence Task Statuses",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Understand Evidence Statuses",
+                    "path": "docs/continuous-compliance/evidence-tasks/overview-1/evidence-statuses"
+                  }
+                ]
+              },
+              {
+                "group": "Working with Evidence Tasks",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Add Assignees to Evidence Tasks",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/assigning-an-evidence"
+                  },
+                  {
+                    "title": "Archive Evidence Attachments",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/archiving-for-evidence-attachments"
+                  },
+                  {
+                    "title": "Create a Custom Evidence Task",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/how-to-create-evidence-tasks"
+                  },
+                  {
+                    "title": "Clone an Evidence Task",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/clone-an-evidence-task"
+                  },
+                  {
+                    "title": "Edit and Delete Evidence Tasks",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/editing-and-deleting-an-evidence-task"
+                  },
+                  {
+                    "title": "Effort Estimate for Evidence Tasks",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/effort-estimate-for-evidence-tasks"
+                  },
+                  {
+                    "title": "Export Evidence",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/exporting-evidences"
+                  },
+                  {
+                    "title": "Link and Unlink Controls to an Evidence Task",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/linking-and-unlinking-an-evidence-task-to-controls"
+                  },
+                  {
+                    "title": "Mark an Evidence Task as Not Relevant",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/marking-an-evidence-task-not-relevant"
+                  },
+                  {
+                    "title": "Mark an Evidence Task as Relevant",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/marking-a-policy-not-relevant-1-1"
+                  },
+                  {
+                    "title": "Remove an Evidence Attachment",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/removing-an-evidence"
+                  },
+                  {
+                    "title": "Review Evidence Audit Logs",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/evidence-audit-logs"
+                  },
+                  {
+                    "title": "Setup Bi-Directional Sync With Jira for Evidence Management",
+                    "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/syncing-scrut-with-jira-for-evidence-management"
+                  }
+                ]
+              },
+              {
+                "group": "Evidence Approval & Review",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Evidence Approval Workflow",
+                    "path": "docs/continuous-compliance/evidence-tasks/review-approval/understanding-evidence-approval-workflow"
+                  },
+                  {
+                    "title": "Set Recurrence and Review Date for Evidence Tasks",
+                    "path": "docs/continuous-compliance/evidence-tasks/review-approval/setting-an-evidence-review-cycle"
+                  }
+                ]
+              },
+              {
+                "group": "Document Vault",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Vault: Walkthrough",
+                    "path": "docs/continuous-compliance/evidence-tasks/vault/vault-walkthrough"
+                  },
+                  {
+                    "title": "Add and Manage Documents and Folders",
+                    "path": "docs/continuous-compliance/evidence-tasks/vault/exploring-the-vault-module"
+                  },
+                  {
+                    "title": "Enable AI Readability for Vault Files",
+                    "path": "docs/continuous-compliance/evidence-tasks/vault/enabling-ai-readability"
+                  },
+                  {
+                    "title": "Switch between List and Grid Layouts in Vault",
+                    "path": "docs/continuous-compliance/evidence-tasks/vault/change-between-list-and-grid-layout"
+                  },
+                  {
+                    "title": "Manage Tags in the Vault",
+                    "path": "docs/continuous-compliance/evidence-tasks/vault/managing-tags-in-the-vault"
+                  },
+                  {
+                    "title": "Search for Files in the Vault",
+                    "path": "docs/continuous-compliance/evidence-tasks/vault/searching-in-the-vault"
+                  }
+                ]
+              },
+              {
+                "group": "Evidence Automation",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Quick Start Guide: Evidence Automation",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/evidence-automation-workflow"
+                  },
+                  {
+                    "title": "Understand Evidence Automation & Statuses",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/understanding-evidence-collection-statuses"
+                  },
+                  {
+                    "title": "Check Your Evidence Automation Coverage",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/check-your-evidence-automation-coverage"
+                  },
+                  {
+                    "title": "Mark an Evidence as Fully or Partially Automated",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/mark-an-evidence-as-fully-or-partially-automated"
+                  },
+                  {
+                    "title": "Complete Pending Scrut Monitor Setup",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/complete-a-pending-scrut-monitor-setup"
+                  },
+                  {
+                    "title": "Link/Unlink Automated Tests to Evidence Tasks",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/manage-automated-tests-on-evidence-tasks"
+                  },
+                  {
+                    "title": "FAQs: Evidence Automation",
+                    "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/evidence-automation-faqs"
+                  }
+                ]
+              },
+              {
+                "group": "Upload Evidence",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Upload Evidence",
+                    "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/how-to-upload-evidence"
+                  },
+                  {
+                    "title": "Upload Evidence from Google Drive",
+                    "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/google-drive-integration-upload-evidences-from-google-drive"
+                  },
+                  {
+                    "title": "Upload Evidence Manually",
+                    "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/uploading-evidence"
+                  },
+                  {
+                    "title": "Use Sample Templates for Evidence",
+                    "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/using-evidence-templates"
+                  },
+                  {
+                    "group": "Scrut Monitor",
+                    "expandable": true,
+                    "pages": [
+                      {
+                        "title": "Scrut Monitor",
+                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/scrut-monitor"
+                      },
+                      {
+                        "title": "Set up a Scrut Monitor",
+                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/how-to-set-up-scrut-monitor"
+                      },
+                      {
+                        "title": "Set up a Scrut Monitor for Scrut Modules",
+                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/how-to-automate-evidence-collection-from-scrut-modules"
+                      },
+                      {
+                        "title": "Set up a Scrut Monitor for Jira",
+                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/setting-up-scrut-monitor-for-jira"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "AI in Evidence Collection",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Detect Gaps in Evidence with Scrut Teammates",
+                    "path": "docs/continuous-compliance/evidence-tasks/ai-powered-features-2/automated-evidence-checker"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Cloud",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Cloud Tests: Walkthrough",
+                "path": "docs/continuous-compliance/cloud/accessing-the-cloud-module"
+              },
+              {
+                "title": "Quick Start Guide: Cloud Tests",
+                "path": "docs/continuous-compliance/cloud/cloud-quick-start-guide"
+              },
+              {
+                "title": "View Cloud Test Details",
+                "path": "docs/continuous-compliance/cloud/cloud-test-details-page"
+              },
+              {
+                "title": "Cloud Test Statuses",
+                "path": "docs/continuous-compliance/cloud/understanding-cloud-test-statuses"
+              },
+              {
+                "group": "Working on a Test Finding",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Fix Failing Tests",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/how-to-fix-failing-tests"
+                  },
+                  {
+                    "title": "Assign a Test Finding",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-test-finding"
+                  },
+                  {
+                    "title": "Assign a Flagged Resource",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-resource-in-a-failing-test"
+                  },
+                  {
+                    "title": "Remediate a Test Finding",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/remediating-a-test-finding"
+                  },
+                  {
+                    "title": "Validate Test Remediation",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/validating-remediation-with-test-now"
+                  },
+                  {
+                    "title": "Ignore a Test",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/ignoring-a-test-finding"
+                  },
+                  {
+                    "title": "Ignore a Resource Within a Test Finding",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/ignoring-a-resource-of-a-test-finding"
+                  },
+                  {
+                    "title": "Monitor an Ignored Test",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/monitoring-a-test-finding"
+                  },
+                  {
+                    "title": "Create a Risk from a Test Finding",
+                    "path": "docs/continuous-compliance/cloud/working-a-test-finding/risk-generation-from-cloud-test-findings"
+                  }
+                ]
+              },
+              {
+                "group": "Additional FAQs: Cloud",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Cloud vs. Automated Tests",
+                    "path": "docs/continuous-compliance/cloud/faqs-1/cloud-vs-automated-tests"
+                  },
+                  {
+                    "title": "Supported Services for Each Cloud Provider",
+                    "path": "docs/continuous-compliance/cloud/faqs-1/cloud-faqs"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Tests",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Tests: Walkthrough",
+                "path": "docs/continuous-compliance/automated-tests/getting-started-with-tests-in-scrut"
+              },
+              {
+                "title": "Import Tests from the Test Library",
+                "path": "docs/continuous-compliance/automated-tests/test-library"
+              },
+              {
+                "title": "View Test Details",
+                "path": "docs/continuous-compliance/automated-tests/automated-tests-tab"
+              },
+              {
+                "title": "Link and Unlink Controls to a Test",
+                "path": "docs/continuous-compliance/automated-tests/linking-test-to-a-control"
+              },
+              {
+                "title": "Check Test Run Status & Next Scheduled Scan",
+                "path": "docs/continuous-compliance/automated-tests/understanding-scan-status-in-the-tests-module"
+              },
+              {
+                "title": "View the Effort Estimate to Complete Tests",
+                "path": "docs/continuous-compliance/automated-tests/effort-estimate-for-tests"
+              },
+              {
+                "title": "Understand Deprecated Tests",
+                "path": "docs/continuous-compliance/automated-tests/deprecated-tests-in-scrut"
+              }
+            ]
+          },
+          {
+            "group": "Vulnerabilites",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Vulnerabilities: Walkthrough",
+                "path": "docs/continuous-compliance/vulnerabilites/vulnerabilities-walkthrough"
+              },
+              {
+                "title": "Define SLAs for Vulnerability Findings",
+                "path": "docs/continuous-compliance/vulnerabilites/defining-sla-for-vulnerability-findings"
+              },
+              {
+                "title": "Populate Vulnerabilities Via Third-Party Tools",
+                "path": "docs/continuous-compliance/vulnerabilites/populating-vulnerabilities-via-third-party-scans"
+              },
+              {
+                "title": "Import Vulnerabilities From External Reports",
+                "path": "docs/continuous-compliance/vulnerabilites/importing-vulnerabilities-from-external-reports"
+              },
+              {
+                "title": "Add Custom Fields to Vulnerability Findings",
+                "path": "docs/continuous-compliance/vulnerabilites/custom-fields-vulnerabilities"
+              },
+              {
+                "title": "View Vulnerability Details in Third-Party Scans",
+                "path": "docs/continuous-compliance/vulnerabilites/understanding-vulnerability-details-page"
+              },
+              {
+                "title": "Download the Vulnerability Report",
+                "path": "docs/continuous-compliance/vulnerabilites/application-security-assessment-report"
+              },
+              {
+                "group": "Quick Start Guide: Vulnerabilities",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Step 1: Add Targets",
+                    "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/vulnerabilities-add-targets"
+                  },
+                  {
+                    "title": "Step 2: Run Scans",
+                    "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/vulnerabilities-run-scans"
+                  },
+                  {
+                    "title": "Step 3: Review Scan Results",
+                    "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/review-scan-results"
+                  },
+                  {
+                    "title": "Step 4: Take Actions on Scan Findings",
+                    "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/take-actions-on-scan-findings"
+                  },
+                  {
+                    "title": "Step 5: Get Expert Assistance",
+                    "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/get-expert-assistance"
+                  }
+                ]
+              },
+              {
+                "group": "PTaaS (Pen Testing as a Service)",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Understand PTaaS",
+                    "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/what-is-scrut-ptaas"
+                  },
+                  {
+                    "title": "Know PTaaS Scope & Coverage",
+                    "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/ptaas-scope-coverage"
+                  },
+                  {
+                    "title": "Step-by-Step Guide to Run Your PTaaS Program",
+                    "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/getting-started-with-ptaas"
+                  },
+                  {
+                    "title": "Understand Your PTaaS Program Calendar",
+                    "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/understand-your-ptaas-program-calendar"
+                  },
+                  {
+                    "title": "What's Included in Your PTaaS Reports",
+                    "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/what-s-included-in-your-ptaas-reports"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Risk Management",
+        "expandable": true,
+        "pages": [
+          {
+            "title": "Risks: Walkthrough",
+            "path": "docs/risk-management/how-to-use-the-risk-dashboard"
+          },
+          {
+            "title": "Quick Start Guide: Risk Management",
+            "path": "docs/risk-management/quick-start-guide-risk-management"
+          },
+          {
+            "group": "Create and Edit Risks",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "What is the Risk Register",
+                "path": "docs/risk-management/overview-5/understanding-risk-register"
+              },
+              {
+                "title": "Add a Risk",
+                "path": "docs/risk-management/overview-5/adding-a-new-risk"
+              },
+              {
+                "title": "Edit Risk Details",
+                "path": "docs/risk-management/overview-5/editing-risk-details"
+              },
+              {
+                "title": "Edit Risk Score",
+                "path": "docs/risk-management/overview-5/editing-risk-score"
+              },
+              {
+                "title": "Delete a Risk",
+                "path": "docs/risk-management/overview-5/deleting-a-risk"
+              },
+              {
+                "title": "Link and Unlink Controls to a Risk",
+                "path": "docs/risk-management/overview-5/risk-assessment"
+              },
+              {
+                "title": "Link Assets to a Risk",
+                "path": "docs/risk-management/overview-5/linking-assets-to-a-risk"
+              }
+            ]
+          },
+          {
+            "group": "Risk Treatment",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand Risk Statuses",
+                "path": "docs/risk-management/risk-treatment/understand-risk-statuses"
+              },
+              {
+                "title": "Understand Risk Treatment Strategies",
+                "path": "docs/risk-management/risk-treatment/risk-treatment-workflow"
+              },
+              {
+                "title": "Risk Assessment Workflow",
+                "path": "docs/risk-management/risk-treatment/risk-assessment-workflow"
+              },
+              {
+                "title": "Risk Approval Workflow",
+                "path": "docs/risk-management/risk-treatment/risk-approval-workflow"
+              },
+              {
+                "title": "Monitor a Risk",
+                "path": "docs/risk-management/risk-treatment/risk-monitor-state-improved-risk-lifecycle"
+              },
+              {
+                "title": "Add Residual Risk",
+                "path": "docs/risk-management/risk-treatment/closing-or-adding-a-residual-risk"
+              },
+              {
+                "title": "Reset a Risk",
+                "path": "docs/risk-management/risk-treatment/reseting-a-risk"
+              },
+              {
+                "title": "Close a Risk",
+                "path": "docs/risk-management/risk-treatment/closing-a-risk"
+              }
+            ]
+          },
+          {
+            "group": "Risk Graphs & Reports",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand the Risk Trend Graph",
+                "path": "docs/risk-management/understanding-risk-dashboard/risk-trend-graph"
+              },
+              {
+                "title": "Export the Risk Register",
+                "path": "docs/risk-management/understanding-risk-dashboard/exporting-risk-register"
+              },
+              {
+                "title": "Download the Risk Report",
+                "path": "docs/risk-management/understanding-risk-dashboard/risk-report"
+              }
+            ]
+          },
+          {
+            "group": "Risk Mitigation Tasks",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand the Risk Mitigation Workflow",
+                "path": "docs/risk-management/mitigation-task/risk-mitigation-workflow"
+              },
+              {
+                "title": "Mitigation Tasks: Walkthrough",
+                "path": "docs/risk-management/mitigation-task/unified-mitigation-task-tab"
+              },
+              {
+                "title": "Create a Mitigation Task for a Specific Risk",
+                "path": "docs/risk-management/mitigation-task/add-a-mitigation-task"
+              },
+              {
+                "title": "Upload a Document To a Mitigation Task",
+                "path": "docs/risk-management/mitigation-task/uploading-a-mitigation-task-document"
+              },
+              {
+                "title": "Mitigation Task Approval Workflow",
+                "path": "docs/risk-management/mitigation-task/mitigation-task-approval-workflow"
+              },
+              {
+                "title": "Edit and Delete Mitigation Tasks",
+                "path": "docs/risk-management/mitigation-task/editing-and-deleting-a-mitigation-task"
+              },
+              {
+                "title": "Link and Unlink Controls to a Mitigation Task",
+                "path": "docs/risk-management/mitigation-task/linking-unlinking-controls-to-a-mitigation-task"
+              },
+              {
+                "title": "Auto-Populate Controls in Mitigation Tasks",
+                "path": "docs/risk-management/mitigation-task/automatic-population-of-controls"
+              }
+            ]
+          },
+          {
+            "group": "Risk Settings",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Configure Risk Scores & Factors",
+                "path": "docs/risk-management/configuring-risk-register/configuring-custom-risk-score-formula"
+              },
+              {
+                "title": "Create Custom Risk Categories",
+                "path": "docs/risk-management/configuring-risk-register/configuring-custom-risk-categories"
+              },
+              {
+                "title": "Create Custom Risk Fields",
+                "path": "docs/risk-management/configuring-risk-register/configuring-custom-fields-for-risks"
+              },
+              {
+                "title": "Rename System Risk Fields",
+                "path": "docs/risk-management/configuring-risk-register/rename-system-risk-fields"
+              },
+              {
+                "title": "Customize Risk Register Layout",
+                "path": "docs/risk-management/configuring-risk-register/customize-risk-register-layout"
+              },
+              {
+                "title": "Configure the Add Risk Form",
+                "path": "docs/risk-management/configuring-risk-register/configure-add-risk-form"
+              },
+              {
+                "title": "Turn on Risk IDs",
+                "path": "docs/risk-management/configuring-risk-register/configuring-risk-id-for-risk"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Asset Management",
+        "expandable": true,
+        "pages": [
+          {
+            "title": "Asset Management: Walkthrough",
+            "path": "docs/asset-management/asset-management-walkthrough"
+          },
+          {
+            "title": "Quick Start Guide: Asset Management",
+            "path": "docs/asset-management/adding-assets"
+          },
+          {
+            "title": "Which Asset Types Does Scrut Support?",
+            "path": "docs/asset-management/asset-management-overview"
+          },
+          {
+            "title": "Perform Actions on Assets",
+            "path": "docs/asset-management/asset-actions"
+          },
+          {
+            "title": "Create Risks From Assets",
+            "path": "docs/asset-management/add-risk-to-an-asset"
+          },
+          {
+            "title": "Additional FAQs: Asset Management",
+            "path": "docs/asset-management/asset-management-faqs"
+          }
+        ]
+      },
+      {
+        "group": "People Compliance",
+        "expandable": true,
+        "pages": [
+          {
+            "group": "Employees",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Employees Module: Walkthrough",
+                "path": "docs/people/employees-1/employees-module"
+              },
+              {
+                "title": "Quick Start Guide: Employees Module",
+                "path": "docs/people/employees-1/step-by-step-tutorial-for-employee-module"
+              },
+              {
+                "title": "Import & Sync Employee Details",
+                "path": "docs/people/employees-1/adding-an-employee"
+              },
+              {
+                "title": "Manage Employee Groups",
+                "path": "docs/people/employees-1/groups"
+              },
+              {
+                "title": "View an Individual Employee Record",
+                "path": "docs/people/employees-1/managing-employees"
+              },
+              {
+                "title": "Mark an Employee On leave",
+                "path": "docs/people/employees-1/marking-an-employee-on-leave"
+              },
+              {
+                "title": "Upload Onboarding & Offboarding Documents",
+                "path": "docs/people/employees-1/uploading-onboarding-documents-of-an-employee"
+              },
+              {
+                "title": "How To Offboard an Employee",
+                "path": "docs/people/employees-1/terminating-and-offboarding-an-employee"
+              },
+              {
+                "title": "Reset Terminated Employee",
+                "path": "docs/people/employees-1/resetting-terminated-employee"
+              },
+              {
+                "title": "Reset Employee Offboarding",
+                "path": "docs/people/employees-1/resetting-an-offboarded-employee"
+              },
+              {
+                "title": "Mark an Employee as Non-Personnel",
+                "path": "docs/people/employees-1/marking-an-employee-not-a-person"
+              },
+              {
+                "title": "Revert Non-Personnel Status",
+                "path": "docs/people/employees-1/marking-an-employee-person"
+              },
+              {
+                "title": "Send Task Reminders",
+                "path": "docs/people/employees-1/sending-training-reminders"
+              },
+              {
+                "title": "View Audit Logs in Employee Module",
+                "path": "docs/people/employees-1/audit-logs-for-employee-section"
+              },
+              {
+                "group": "Checklists",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "What are Checklists in Scrut?",
+                    "path": "docs/people/employees-1/checklists/checklist-tasks"
+                  },
+                  {
+                    "title": "Recommended Checklist Workflow",
+                    "path": "docs/people/employees-1/checklists/step-by-step-guide-to-using-checklists"
+                  },
+                  {
+                    "title": "Customize Checklist Tasks",
+                    "path": "docs/people/employees-1/checklists/customizing-checklist-tasks"
+                  },
+                  {
+                    "title": "Create a New Checklist",
+                    "path": "docs/people/employees-1/checklists/create-a-new-checklist"
+                  },
+                  {
+                    "title": "Exclude Specific Tasks for Employees",
+                    "path": "docs/people/employees-1/checklists/disabling-specific-tasks-for-employees"
+                  },
+                  {
+                    "title": "Create an Empty Checklist",
+                    "path": "docs/people/employees-1/checklists/empty-checklists"
+                  },
+                  {
+                    "title": "Additional FAQs: Checklists",
+                    "path": "docs/people/employees-1/checklists/checklist-faqs"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Employee Portal",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Employee Portal: Walkthrough",
+                "path": "docs/people/employee-portal/employee-portal-overview"
+              },
+              {
+                "title": "Login to the Employee Portal",
+                "path": "docs/people/employee-portal/employee-portal-login-guide"
+              },
+              {
+                "title": "Accept Policies in the Employee Portal",
+                "path": "docs/people/employee-portal/accepting-policies-in-the-employee-portal"
+              },
+              {
+                "title": "Complete Security Training",
+                "path": "docs/people/employee-portal/completing-assigned-security-campaigns"
+              }
+            ]
+          },
+          {
+            "group": "Training Campaigns",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Training Campaigns: Walkthrough",
+                "path": "docs/people/training-campaigns/understanding-security-awareness"
+              },
+              {
+                "title": "Create a Training Campaign",
+                "path": "docs/people/training-campaigns/create-security-awareness-campaign"
+              },
+              {
+                "title": "Understand Training Campaign Details",
+                "path": "docs/people/training-campaigns/viewing-a-training-campaign"
+              },
+              {
+                "title": "Customize a Training Quiz",
+                "path": "docs/people/training-campaigns/configure-quiz"
+              },
+              {
+                "title": "Assign and Manage Employees to Training Campaigns",
+                "path": "docs/people/training-campaigns/assigning-and-removing-employee-from-a-campaign"
+              },
+              {
+                "title": "Edit a Training Campaign",
+                "path": "docs/people/training-campaigns/editing-security-awareness-campaign"
+              },
+              {
+                "title": "Reschedule a Training Campaign",
+                "path": "docs/people/training-campaigns/extending-a-training-campaign"
+              },
+              {
+                "title": "End a Training Campaign",
+                "path": "docs/people/training-campaigns/end-a-training-campaign"
+              },
+              {
+                "title": "Delete a Training Campaign",
+                "path": "docs/people/training-campaigns/deleting-a-training-campaign"
+              },
+              {
+                "title": "Clone a Training Campaign",
+                "path": "docs/people/training-campaigns/cloning-a-campaign"
+              },
+              {
+                "title": "Send Manual Reminders",
+                "path": "docs/people/training-campaigns/send-manual-reminders-for-training-campaigns"
+              },
+              {
+                "title": "Turn On Automated Evidence Collection for Training Campaigns",
+                "path": "docs/people/training-campaigns/automated-evidence-collection-for-completed-training-campaigns"
+              },
+              {
+                "title": "View Audit Logs in Training Campaigns",
+                "path": "docs/people/training-campaigns/audit-logs-for-training-campaigns"
+              }
+            ]
+          },
+          {
+            "group": "Access Reviews",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Access Reviews: Walkthrough",
+                "path": "docs/people/access-review-1/access-review-walkthrough"
+              },
+              {
+                "title": "Quick Start Guide: Access Reviews",
+                "path": "docs/people/access-review-1/quick-start-guide-access-review"
+              },
+              {
+                "title": "Create a New Access Review",
+                "path": "docs/people/access-review-1/creating-a-new-access-review"
+              },
+              {
+                "title": "Conduct an Access Review",
+                "path": "docs/people/access-review-1/lifecycle-of-an-access-review"
+              },
+              {
+                "title": "Additional FAQs: Access Reviews",
+                "path": "docs/people/access-review-1/access-review-faqs"
+              },
+              {
+                "title": "What to Do After Completing an Access Review",
+                "path": "docs/people/access-review-1/post-review-actions"
+              },
+              {
+                "group": "Shadow IT",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Shadow IT: Walkthrough",
+                    "path": "docs/people/access-review-1/shadow-it/shadow-it-walkthrough"
+                  },
+                  {
+                    "title": "Quick Start Guide: Shadow IT",
+                    "path": "docs/people/access-review-1/shadow-it/quick-start-guide-shadow-it"
+                  },
+                  {
+                    "title": "How To Manage Discovered Applications",
+                    "path": "docs/people/access-review-1/shadow-it/how-to-manage-discovered-applications"
+                  },
+                  {
+                    "title": "How to Notify Users About Restricted Applications",
+                    "path": "docs/people/access-review-1/shadow-it/how-to-notify-users-about-restricted-applications"
+                  },
+                  {
+                    "title": "How to Set a Reviewer for an App",
+                    "path": "docs/people/access-review-1/shadow-it/how-to-set-an-app-reviewer"
+                  },
+                  {
+                    "title": "Shadow AI Governance: Review & Manage AI Apps",
+                    "path": "docs/people/access-review-1/shadow-it/shadow-ai-governance-review-manage-ai-applications"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Scrut Agent",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Scrut Agent: Walkthrough",
+                "path": "docs/people/scrut-agent/scrut-agent-walkthrough"
+              },
+              {
+                "title": "Quick Start Guide: Scrut Agent",
+                "path": "docs/people/scrut-agent/how-to-use-the-scrut-agent"
+              },
+              {
+                "title": "View Data Collected by Scrut Agent",
+                "path": "docs/people/scrut-agent/viewing-collected-agent-data"
+              },
+              {
+                "title": "Scrut Agent: Supported Operating Systems",
+                "path": "docs/people/scrut-agent/scrut-agent-supported-operating-systems"
+              },
+              {
+                "title": "Additional FAQs: Scrut Agent",
+                "path": "docs/people/scrut-agent/scrut-agent-faqs-troubleshooting"
+              },
+              {
+                "group": "Install Scrut Agent",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "How can Employees Install Scrut Agent",
+                    "path": "docs/people/scrut-agent/how-to-install-scrut-agent/how-to-install-scrut-agent-1"
+                  },
+                  {
+                    "title": "Install Scrut Agent for macOS",
+                    "path": "docs/people/scrut-agent/how-to-install-scrut-agent/scrut-agent-installation-guide-for-macos"
+                  },
+                  {
+                    "title": "Install Scrut Agent for Windows",
+                    "path": "docs/people/scrut-agent/how-to-install-scrut-agent/scrut-agent-installation-for-windows"
+                  },
+                  {
+                    "title": "Install Scrut Agent for Debian Linux/Ubuntu",
+                    "path": "docs/people/scrut-agent/how-to-install-scrut-agent/installing-scrut-agent-for-linux-and-ubuntu"
+                  },
+                  {
+                    "title": "Install Scrut Agent for Fedora Linux/RPM",
+                    "path": "docs/people/scrut-agent/how-to-install-scrut-agent/install-scrut-agent-for-fedora-linux"
+                  }
+                ]
+              },
+              {
+                "group": "Uninstall Scrut Agent",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Uninstall Scrut Agent for Windows",
+                    "path": "docs/people/scrut-agent/uninstall-scrut-agent/uninstalling-scrut-agent-for-mac-os"
+                  },
+                  {
+                    "title": "Uninstall Scrut Agent for MAC OS",
+                    "path": "docs/people/scrut-agent/uninstall-scrut-agent/uninstalling-scrut-agent-for-mac-os-1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Vendor Management",
+        "expandable": true,
+        "pages": [
+          {
+            "title": "Vendors: Walkthrough",
+            "path": "docs/vendor-management/understanding-vendor-management"
+          },
+          {
+            "title": "Vendor Dashboard: Walkthrough",
+            "path": "docs/vendor-management/understanding-vendor-dashboard"
+          },
+          {
+            "title": "Quick Start Guide: Vendor Management",
+            "path": "docs/vendor-management/quick-start-guide-vendor-management"
+          },
+          {
+            "group": "Add Vendors",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "How to Add a Vendor",
+                "path": "docs/vendor-management/managing-your-vendors/how-to-add-a-vendor"
+              },
+              {
+                "title": "Auto-Populate Vendors from Integrations",
+                "path": "docs/vendor-management/managing-your-vendors/added-via-integrations"
+              },
+              {
+                "title": "Add Vendors Manually",
+                "path": "docs/vendor-management/managing-your-vendors/adding-a-single-vendor"
+              },
+              {
+                "title": "Understand the Pre-Added Scrut Automation Vendor",
+                "path": "docs/vendor-management/managing-your-vendors/pre-added-scrut-vendor"
+              },
+              {
+                "group": "Via SSO",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Discover Vendors via SSO Integrations",
+                    "path": "docs/vendor-management/managing-your-vendors/discover-vendors-through-integrations/discover-vendors-through-sso-integration"
+                  },
+                  {
+                    "title": "Discover Vendors via Google Workspace",
+                    "path": "docs/vendor-management/managing-your-vendors/discover-vendors-through-integrations/google-workspace-integration-to-discover-vendors"
+                  },
+                  {
+                    "title": "Discover Vendors via Azure AD",
+                    "path": "docs/vendor-management/managing-your-vendors/discover-vendors-through-integrations/azure-ad-integration-to-discover-vendors"
+                  }
+                ]
+              },
+              {
+                "group": "Vendor Onboarding via Intake Form",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Onboard Vendors using an Intake Form",
+                    "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/how-to-onboard-vendors-using-an-intake-form"
+                  },
+                  {
+                    "title": "Create a Vendor Intake Form",
+                    "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/vendor-onboarding-via-vendor-intake-form"
+                  },
+                  {
+                    "title": "Submit a Vendor Procurement Request",
+                    "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/employee-submission-form"
+                  },
+                  {
+                    "title": "Review Vendor Procurement Requests",
+                    "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/grc-team-evaluation-and-approvaldecline"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Change Vendor Status",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "How to Change Vendor Status",
+                "path": "docs/vendor-management/change-vendor-status/how-to-change-vendor-status"
+              },
+              {
+                "title": "Mark a Vendor as Active",
+                "path": "docs/vendor-management/change-vendor-status/mark-a-vendor-as-active"
+              },
+              {
+                "title": "Mark a Vendor as Prospective",
+                "path": "docs/vendor-management/change-vendor-status/mark-a-vendor-as-prospective"
+              },
+              {
+                "title": "Archive or Unarchive a Vendor",
+                "path": "docs/vendor-management/change-vendor-status/archive-a-vendor"
+              }
+            ]
+          },
+          {
+            "group": "Edit Vendor Details",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand the Vendor Details Page",
+                "path": "docs/vendor-management/editing-vendor-details/understanding-vendor-details-page"
+              },
+              {
+                "title": "Edit Vendor Details",
+                "path": "docs/vendor-management/editing-vendor-details/editing-and-deleting-a-vendor"
+              },
+              {
+                "title": "Add & Edit Vendor POC Details",
+                "path": "docs/vendor-management/editing-vendor-details/editing-poc-details"
+              },
+              {
+                "title": "Delete a Vendor",
+                "path": "docs/vendor-management/editing-vendor-details/delete-a-vendor"
+              }
+            ]
+          },
+          {
+            "group": "Manage Vendor Documents",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "What are Vendor Documents?",
+                "path": "docs/vendor-management/working-on-vendor-document/what-are-vendor-documents"
+              },
+              {
+                "title": "Auto Fetch Vendor Documents",
+                "path": "docs/vendor-management/working-on-vendor-document/auto-fetch-documents-via-scrut-teammates"
+              },
+              {
+                "title": "Add Vendor Documents",
+                "path": "docs/vendor-management/working-on-vendor-document/adding-a-document"
+              },
+              {
+                "title": "Delete Vendor Documents",
+                "path": "docs/vendor-management/working-on-vendor-document/deleting-a-document"
+              },
+              {
+                "title": "Download Vendor Documents",
+                "path": "docs/vendor-management/working-on-vendor-document/downloading-a-document"
+              },
+              {
+                "title": "Export Vendor Documents",
+                "path": "docs/vendor-management/working-on-vendor-document/export-vendor-documents"
+              }
+            ]
+          },
+          {
+            "group": "Vendor Questionnaire Templates",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "What are Vendor Questionnaire Templates?",
+                "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/what-are-vendor-questionnaire-templates"
+              },
+              {
+                "title": "Use the VSA Template",
+                "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/using-the-vsa-template-for-vendor-questionnaire"
+              },
+              {
+                "title": "Create a Vendor Questionnaire Template Manually",
+                "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/adding-vendor-questionnaire-manually"
+              },
+              {
+                "title": "Import a Vendor Questionnaire Template",
+                "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/bulk-importing-template"
+              },
+              {
+                "title": "Edit a Vendor Questionnaire Template",
+                "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/editing-vendor-template"
+              },
+              {
+                "title": "Delete a Vendor Questionnaire Template",
+                "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/deleting-vendor-template"
+              }
+            ]
+          },
+          {
+            "group": "Vendor Risk Assessment Workflow",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Complete a Vendor Risk Assessment",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/steps-to-complete-vendor-risk-assessment"
+              },
+              {
+                "title": "Assess Vendors with Scrut Teammates",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/ai-enhanced-vendor-assessment"
+              },
+              {
+                "title": "Track Vendor Assessment Progress",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/vendor-assessment-progress-timeline"
+              },
+              {
+                "title": "Create a Vendor Questionnaire Manually",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/sending-vendor-questionnaire"
+              },
+              {
+                "title": "Evaluate Vendor Responses",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/evaluating-vendor-questionnaire"
+              },
+              {
+                "title": "Create Risks from Vendor Questionnaires",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/risk-creation-from-vendor-questionnaires"
+              },
+              {
+                "title": "Reassess a Vendor",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/vendor-reassessment"
+              },
+              {
+                "title": "Export Vendor Risk Assessment Report",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/exporting-vendor-risk-assessment-report"
+              },
+              {
+                "title": "Change Vendor Assessment Status Manually",
+                "path": "docs/vendor-management/vendor-risk-assessment-workflow/change-vendor-assessment-status-manually"
+              }
+            ]
+          },
+          {
+            "group": "Vendor Mitigation Tasks",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Vendor Mitigation Task Approval Workflow",
+                "path": "docs/vendor-management/working-on-mitigation-task-1/understanding-vendor-mitigation-task-approval-workflow"
+              },
+              {
+                "title": "Create a Vendor Mitigation Task",
+                "path": "docs/vendor-management/working-on-mitigation-task-1/creating-mitigation-task"
+              },
+              {
+                "title": "Upload a Mitigation Task Document",
+                "path": "docs/vendor-management/working-on-mitigation-task-1/uploading-attachments-and-adding-comments"
+              },
+              {
+                "title": "Edit or Delete Vendor Mitigation Tasks",
+                "path": "docs/vendor-management/working-on-mitigation-task-1/editing-and-deleting-a-mitigation-task-1"
+              },
+              {
+                "title": "Approve a Vendor Mitigation Task",
+                "path": "docs/vendor-management/working-on-mitigation-task-1/approving-vendor-mitigation-task"
+              }
+            ]
+          },
+          {
+            "group": "Vendor Settings",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "How to Access Vendor Settings",
+                "path": "docs/vendor-management/vendor-settings/how-to-access-vendor-settings"
+              },
+              {
+                "title": "Configure Custom Vendor Fields",
+                "path": "docs/vendor-management/vendor-settings/customizing-vendor-fields"
+              },
+              {
+                "title": "Configure Custom Vendor Categories",
+                "path": "docs/vendor-management/vendor-settings/configuring-vendor-custom-categories"
+              },
+              {
+                "title": "Configure Vendor Questionnaire Domains",
+                "path": "docs/vendor-management/vendor-settings/configuring-vendor-questionnaire-domains"
+              },
+              {
+                "title": "View Audit Logs in Vendor Settings",
+                "path": "docs/vendor-management/vendor-settings/vendor-settings-audit-logs"
+              }
+            ]
+          },
+          {
+            "group": "Vendor Portal",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "How To Use the Vendor Portal",
+                "path": "docs/vendor-management/overview-2/centralised-vendor-portal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Trust Management",
+        "expandable": true,
+        "pages": [
+          {
+            "group": "Trust Vault",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Trust Portal: Walkthrough",
+                "path": "docs/trust-management/trust-vault/trust-vault-user-navigation"
+              },
+              {
+                "title": "Quick Start Guide: Trust Vault & Trust Portal",
+                "path": "docs/trust-management/trust-vault/quick-start-guide-trust-vault"
+              },
+              {
+                "title": "Additional FAQs: Trust Vault",
+                "path": "docs/trust-management/trust-vault/additional-faqs-trust-vault"
+              },
+              {
+                "group": "Add & Manage Content",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Add Organization Description",
+                    "path": "docs/trust-management/trust-vault/adding-managing-content/organization-description"
+                  },
+                  {
+                    "title": "Add Compliance Frameworks",
+                    "path": "docs/trust-management/trust-vault/adding-managing-content/how-to-add-compliance"
+                  },
+                  {
+                    "title": "Add Sub-Processors",
+                    "path": "docs/trust-management/trust-vault/adding-managing-content/how-to-add-subprocessors"
+                  },
+                  {
+                    "title": "Add FAQs in Trust Vault",
+                    "path": "docs/trust-management/trust-vault/adding-managing-content/adding-faqs-and-updates"
+                  },
+                  {
+                    "title": "Add Updates in Trust Vault",
+                    "path": "docs/trust-management/trust-vault/adding-managing-content/updates"
+                  },
+                  {
+                    "title": "How to Keep Trust Vault Policy Attachments Up to Date",
+                    "path": "docs/trust-management/trust-vault/adding-managing-content/keeping-trust-vault-policy-attachments-up-to-date"
+                  },
+                  {
+                    "group": "Manage Controls & Categories",
+                    "expandable": true,
+                    "pages": [
+                      {
+                        "title": "Understand Controls & Categories in Trust Vault",
+                        "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/what-are-controls-categories-in-trust-vault"
+                      },
+                      {
+                        "title": "Add Controls",
+                        "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/how-to-add-security-items"
+                      },
+                      {
+                        "title": "Rename a Category",
+                        "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/edit-category-names"
+                      },
+                      {
+                        "title": "Create a Custom Category",
+                        "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/creating-custom-controls-in-trust-vault"
+                      },
+                      {
+                        "title": "Delete Controls & Categories",
+                        "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/delete-categories-controls"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Branding",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Customize Your Trust Portal's Branding",
+                    "path": "docs/trust-management/trust-vault/branding/branding-your-trust-vault"
+                  }
+                ]
+              },
+              {
+                "group": "Settings",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Add Custom Domain",
+                    "path": "docs/trust-management/trust-vault/settings-1/add-custom-domain"
+                  },
+                  {
+                    "title": "Configure Clickwrap NDA",
+                    "path": "docs/trust-management/trust-vault/settings-1/clickwrap-nda"
+                  },
+                  {
+                    "title": "Add Terms of Service and Privacy Policy",
+                    "path": "docs/trust-management/trust-vault/settings-1/add-terms-of-service-tos-and-privacy-policy"
+                  },
+                  {
+                    "title": "Turn on Subscriptions to Trust Portal Updates",
+                    "path": "docs/trust-management/trust-vault/settings-1/turn-on-subscriptions-to-trust-portal-updates"
+                  },
+                  {
+                    "title": "Enable Reports Download",
+                    "path": "docs/trust-management/trust-vault/settings-1/enable-downloading-of-reports"
+                  },
+                  {
+                    "title": "Add Watermark to Downloads",
+                    "path": "docs/trust-management/trust-vault/settings-1/enable-watermarking-on-trust-vault-downloads"
+                  },
+                  {
+                    "title": "Customize the Display Order of Your Trust Portal",
+                    "path": "docs/trust-management/trust-vault/settings-1/customize-the-display-order-of-your-trust-portal"
+                  },
+                  {
+                    "title": "View Audit Logs in Trust Vault Settings",
+                    "path": "docs/trust-management/trust-vault/settings-1/audit-logs-trust-vault-settings"
+                  }
+                ]
+              },
+              {
+                "group": "Manage User Access",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Access Request Workflow: Walkthrough",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/how-will-customers-request-access-to-trust-vault"
+                  },
+                  {
+                    "title": "Approve or Decline Access Requests",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/how-to-grant-access-to-trust-vault"
+                  },
+                  {
+                    "title": "Configure Auto Approval via Salesforce Integration",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/configuring-auto-approval-in-trust-vault-via-salesforce-integration"
+                  },
+                  {
+                    "title": "Configure Auto Approval for Specific Domains",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/configure-auto-approval-for-specific-domains"
+                  },
+                  {
+                    "title": "Grant Partial or Full Access to Your Trust Portal",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/granular-access-in-trust-vault"
+                  },
+                  {
+                    "title": "Customize Download Permissions in Trust Portal",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/granular-download-permissions-in-trust-vault"
+                  },
+                  {
+                    "title": "Send Direct Links to Specific Trust Portal Items",
+                    "path": "docs/trust-management/trust-vault/manage-user-requests/how-to-share-granular-links-for-specific-trust-vault-items"
+                  }
+                ]
+              },
+              {
+                "group": "Dashboard & Analytics",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Understand Trust Vault Dashboard",
+                    "path": "docs/trust-management/trust-vault/dashboard-analytics/trust-vault-dashboard"
+                  },
+                  {
+                    "title": "Review Customer Activity",
+                    "path": "docs/trust-management/trust-vault/dashboard-analytics/customer-activity"
+                  },
+                  {
+                    "title": "View Trust Vault Audit Logs",
+                    "path": "docs/trust-management/trust-vault/dashboard-analytics/audit-logs-trust-vault"
+                  }
+                ]
+              },
+              {
+                "group": "AI in Trust Vault & Portal",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Enable AI Readability for Trust Vault Sections",
+                    "path": "docs/trust-management/trust-vault/ai-powered-features/turn-on-ai-readability"
+                  },
+                  {
+                    "title": "Enable Teammates Chat on Trust Portal",
+                    "path": "docs/trust-management/trust-vault/ai-powered-features/enable-scrut-teammates-on-trust-portal"
+                  }
+                ]
+              },
+              {
+                "group": "Multi-Entity Trust Portal",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "What is a Multi-Entity Trust Portal?",
+                    "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/what-is-a-multi-entity-trust-portal"
+                  },
+                  {
+                    "title": "Enable Multiple Entities on Your Trust Portal",
+                    "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/enable-multi-entity-trust-portal"
+                  },
+                  {
+                    "title": "Tag Content to Entities",
+                    "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/tagging-content-to-entities"
+                  },
+                  {
+                    "title": "Manage Access Requests",
+                    "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/managing-access-for-multi-entity-trust-portals"
+                  },
+                  {
+                    "title": "Track Activity by Entity",
+                    "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/track-user-activity-by-entity"
+                  },
+                  {
+                    "title": "FAQs on Multi-Entity Trust Portals",
+                    "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/multi-entity-trust-portal-faqs"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Questionnaires",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "AI-Powered Questionnaire Autofill: Walkthrough",
+                "path": "docs/trust-management/questionnaires/ai-powered-questionnaire-autofill-walkthrough"
+              },
+              {
+                "title": "Quick Start Guide: Questionnaire Autofill",
+                "path": "docs/trust-management/questionnaires/quick-start-guide-questionnaire-autofill"
+              },
+              {
+                "title": "Additional FAQs: Questionnaires",
+                "path": "docs/trust-management/questionnaires/questionnaires-troubleshooting-and-faq"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Audit Readiness",
+        "expandable": true,
+        "pages": [
+          {
+            "title": "Audit Center: Walkthrough",
+            "path": "docs/audit-centre/understanding-audit-center"
+          },
+          {
+            "group": "Create an Audit",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Create an Audit By Framework",
+                "path": "docs/audit-centre/overview-6/creating-an-audit-by-framework"
+              },
+              {
+                "title": "Create an Audit By Control",
+                "path": "docs/audit-centre/overview-6/creating-an-audit-by-control"
+              },
+              {
+                "title": "Understand Audit Details Page",
+                "path": "docs/audit-centre/overview-6/understanding-an-audit-project"
+              },
+              {
+                "title": "Add an Auditor to an Audit",
+                "path": "docs/audit-centre/overview-6/managing-audit-team"
+              },
+              {
+                "title": "Add Audit Scope and Other Attachments",
+                "path": "docs/audit-centre/overview-6/add-audit-scope-and-plan-attachments"
+              },
+              {
+                "title": "Download the Audit Readiness Report",
+                "path": "docs/audit-centre/overview-6/downloading-audit-readiness-report"
+              },
+              {
+                "title": "Grant Access to Auditors to Your Audits",
+                "path": "docs/audit-centre/overview-6/auditor-access-in-audit-center"
+              },
+              {
+                "title": "Clone an Audit",
+                "path": "docs/audit-centre/overview-6/clone-an-audit"
+              },
+              {
+                "title": "Edit and Delete an Audit",
+                "path": "docs/audit-centre/overview-6/editing-and-deleting-an-audit"
+              },
+              {
+                "title": "Mark an Audit Completed",
+                "path": "docs/audit-centre/overview-6/marking-audit-project-completed"
+              },
+              {
+                "title": "View Audit Logs for an Audit",
+                "path": "docs/audit-centre/overview-6/audit-logs-audit-center"
+              },
+              {
+                "title": "Export an Audit Package",
+                "path": "docs/audit-centre/overview-6/export-an-audit-package"
+              }
+            ]
+          },
+          {
+            "group": "Audit Findings",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Audit Finding Closure Workflow",
+                "path": "docs/audit-centre/managing-audit-findings/closing-an-audit-finding"
+              },
+              {
+                "title": "How to View an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/how-to-view-an-audit-finding"
+              },
+              {
+                "title": "Create an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/reporting-an-audit-finding"
+              },
+              {
+                "title": "Add Artifacts to an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/uploading-the-attachments-for-audit-findings"
+              },
+              {
+                "title": "Create a Corrective Action from an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/creating-corrective-action-from-audit-finding"
+              },
+              {
+                "title": "Create a Risk from an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/creating-risk-from-audit-finding"
+              },
+              {
+                "title": "Link and Unlink Controls to an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/linking-controls-to-audit-findings"
+              },
+              {
+                "title": "Edit and Delete an Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/editing-and-deleting-an-audit-findings"
+              },
+              {
+                "title": "Export Audit Findings",
+                "path": "docs/audit-centre/managing-audit-findings/export-audit-center-findings"
+              },
+              {
+                "title": "Reopen a Closed Audit Finding",
+                "path": "docs/audit-centre/managing-audit-findings/open-closed-findings"
+              }
+            ]
+          },
+          {
+            "group": "Audit Requests",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Audit Requests Closure Workflow",
+                "path": "docs/audit-centre/managing-audit-requests/closing-an-audit-request"
+              },
+              {
+                "title": "How to View an Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/how-to-view-an-audit-request"
+              },
+              {
+                "title": "Create an Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/creating-a-request-in-audit-centre"
+              },
+              {
+                "title": "Add Artifacts to an Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/uploading-the-attachments-for-requests"
+              },
+              {
+                "title": "Create a Corrective Action from an Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/creating-corrective-action-from-audit-request"
+              },
+              {
+                "title": "Link and Unlink Controls to an Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/linking-controls-to-audit-request"
+              },
+              {
+                "title": "Edit and Delete an Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/editing-and-deleting-an-audit-request"
+              },
+              {
+                "title": "Export Audit Center Requests",
+                "path": "docs/audit-centre/managing-audit-requests/export-audit-center-requests"
+              },
+              {
+                "title": "Reopen a Closed Audit Request",
+                "path": "docs/audit-centre/managing-audit-requests/open-closed-request"
+              }
+            ]
+          },
+          {
+            "group": "Corrective Action",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Corrective Action Workflow",
+                "path": "docs/audit-centre/corrective-action/corrective-action-workflow"
+              },
+              {
+                "title": "How to Create a Corrective Action",
+                "path": "docs/audit-centre/corrective-action/how-to-create-a-corrective-action"
+              },
+              {
+                "title": "Create a Standalone Corrective Action",
+                "path": "docs/audit-centre/corrective-action/creating-a-corrective-action"
+              },
+              {
+                "title": "Create a Ticket for a Corrective Action",
+                "path": "docs/audit-centre/corrective-action/create-a-ticket-for-a-corrective-action"
+              },
+              {
+                "title": "Custom Fields in Corrective Actions",
+                "path": "docs/audit-centre/corrective-action/custom-fields-in-corrective-actions"
+              },
+              {
+                "title": "Link and Unlink Controls to a Corrective Action",
+                "path": "docs/audit-centre/corrective-action/link-and-unlink-controls-to-a-corrective-action"
+              },
+              {
+                "title": "Export Corrective Actions",
+                "path": "docs/audit-centre/corrective-action/export-corrective-actions"
+              },
+              {
+                "title": "View Audit Logs for Corrective Action",
+                "path": "docs/audit-centre/corrective-action/audit-logs-for-corrective-actions"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Optimize Your Workflow",
+        "expandable": true,
+        "pages": [
+          {
+            "group": "Scrut Teammates",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "What Is Scrut Teammates?",
+                "path": "docs/settings/scrut-teammates/what-is-scrut-teammates"
+              },
+              {
+                "title": "What Can Scrut Teammates Do?",
+                "path": "docs/settings/scrut-teammates/getting-started-with-scrut-teammates"
+              },
+              {
+                "title": "Chat with Scrut Teammates",
+                "path": "docs/settings/scrut-teammates/ask-anything-to-scrut-teammates"
+              },
+              {
+                "title": "Install Scrut Teammates for Slack",
+                "path": "docs/settings/scrut-teammates/scrut-teammates-slack-app"
+              }
+            ]
+          },
+          {
+            "group": "Scrut MCP",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Understand Scrut MCP",
+                "path": "docs/settings/scrut-mcp/understand-scrut-mcp"
+              },
+              {
+                "title": "Connect Scrut MCP",
+                "path": "docs/settings/scrut-mcp/connect-scrut-mcp"
+              },
+              {
+                "title": "Supported Scrut MCP Tools",
+                "path": "docs/settings/scrut-mcp/supported-scrut-mcp-tools"
+              },
+              {
+                "title": "Use Scrut MCP Skills",
+                "path": "docs/settings/scrut-mcp/use-scrut-mcp-skills"
+              },
+              {
+                "title": "FAQs: Scrut MCP",
+                "path": "docs/settings/scrut-mcp/faqs-scrut-mcp"
+              }
+            ]
+          },
+          {
+            "group": "Account & Org Settings",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "View Outstanding Payments & Invoice History",
+                "path": "docs/settings/organization-info-1/view-your-scrut-invoices"
+              },
+              {
+                "title": "Enable Scrut AI",
+                "path": "docs/settings/organization-info-1/scrut-ai"
+              },
+              {
+                "title": "Manage Departments",
+                "path": "docs/settings/organization-info-1/manage-departments"
+              },
+              {
+                "title": "Manage Entities",
+                "path": "docs/settings/organization-info-1/manage-entities"
+              },
+              {
+                "title": "Manage Evidence Attachment",
+                "path": "docs/settings/organization-info-1/manage-evidence-attachment"
+              },
+              {
+                "title": "Manage VAPT",
+                "path": "docs/settings/organization-info-1/manage-vapt"
+              }
+            ]
+          },
+          {
+            "group": "Organization Info",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Configure Organization Info",
+                "path": "docs/settings/organization-info/configure-organization-info"
+              },
+              {
+                "title": "Set Fiscal Year Format",
+                "path": "docs/settings/organization-info/set-fiscal-year-format"
+              }
+            ]
+          },
+          {
+            "group": "Administration",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Configure SSO Login Methods",
+                "path": "docs/settings/administration/configuring-sso-login-methods"
+              }
+            ]
+          },
+          {
+            "group": "Manage Users & Roles",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Manage Users: Walkthrough",
+                "path": "docs/settings/managing-users-roles/managing-users-settings"
+              },
+              {
+                "title": "Understand User Roles in Scrut",
+                "path": "docs/settings/managing-users-roles/user-roles"
+              },
+              {
+                "title": "Add Users",
+                "path": "docs/settings/managing-users-roles/adding-users"
+              },
+              {
+                "title": "Edit Users",
+                "path": "docs/settings/managing-users-roles/editing-users"
+              },
+              {
+                "title": "Deactivate & Reactivate Users",
+                "path": "docs/settings/managing-users-roles/deactivating-users"
+              },
+              {
+                "title": "Delete Users",
+                "path": "docs/settings/managing-users-roles/deleting-users"
+              },
+              {
+                "title": "Additional FAQs: Managing Users",
+                "path": "docs/settings/managing-users-roles/faqs-on-managing-users"
+              },
+              {
+                "title": "Understand Roles & Permissions in Scrut",
+                "path": "docs/settings/managing-users-roles/granular-roles-permissions-in-scrut"
+              },
+              {
+                "title": "Create Custom Roles",
+                "path": "docs/settings/managing-users-roles/create-custom-roles"
+              },
+              {
+                "title": "Contributor & Auditor Permissions: Reference Table",
+                "path": "docs/settings/managing-users-roles/contributor-auditor-permissions-reference-table"
+              }
+            ]
+          },
+          {
+            "group": "Notifications",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Configure Email Notifications",
+                "path": "docs/settings/notifications/email-notifications"
+              },
+              {
+                "title": "Configure Slack Notifications",
+                "path": "docs/settings/notifications/configuring-slack-reminders"
+              },
+              {
+                "title": "Understand the Trigger Cadence for Slack Alerts",
+                "path": "docs/settings/notifications/trigger-cadence-for-slack-alerts-1"
+              },
+              {
+                "title": "Understand the Trigger Cadence for Slack Personalized Tasks",
+                "path": "docs/settings/notifications/trigger-cadence-for-slack-alerts"
+              },
+              {
+                "title": "Email Notification Triggers & Recipients",
+                "path": "docs/settings/notifications/trigger-cadence-for-email"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Reports",
+        "expandable": true,
+        "pages": [
+          {
+            "title": "Reports Module: Walkthrough",
+            "path": "docs/reports/reports-walkthrough"
+          },
+          {
+            "title": "Types of Compliance Reports in Scrut",
+            "path": "docs/reports/types-of-reports"
+          }
+        ]
+      },
+      {
+        "group": "Product Updates",
+        "expandable": true,
+        "pages": [
+          {
+            "group": "Release Notes",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "August 2026",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/august-2026"
+              },
+              {
+                "title": "July 2026",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/july-2026"
+              },
+              {
+                "title": "May 2026",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/may-2026"
+              },
+              {
+                "title": "March 2026",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/march-2026"
+              },
+              {
+                "title": "February 2026",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/february-2026"
+              },
+              {
+                "title": "January 2026",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/january-2026"
+              },
+              {
+                "title": "December 2025",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/dec-18-2025"
+              },
+              {
+                "title": "November 2025",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/nov-27-2025"
+              },
+              {
+                "title": "May 2025",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/may-2025"
+              },
+              {
+                "title": "March 2025",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/march-2025"
+              },
+              {
+                "title": "February 2025",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/february-2025"
+              },
+              {
+                "title": "January 2025",
+                "path": "docs/frequently-asked-questions-faqs/release-notes/january-2025"
+              }
+            ]
+          },
+          {
+            "group": "All Notices",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Scheduled Maintenance: 11-12 July 2026",
+                "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scheduled-maintenance-11-12-july-2026"
+              },
+              {
+                "title": "Task Center Replaces Setup Wizard",
+                "path": "docs/frequently-asked-questions-faqs/maintenance-notices/task-center-replaces-setup-wizard"
+              },
+              {
+                "title": "Email Notification Changes for March 2026",
+                "path": "docs/frequently-asked-questions-faqs/maintenance-notices/email-notification-changes-for-march-2026"
+              },
+              {
+                "title": "Scheduled Maintenance: 3-4 January 2026",
+                "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scheduled-platform-maintenance-january-2026"
+              },
+              {
+                "title": "Scheduled Maintenance on 5 July 2025",
+                "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scheduled-maintenance-5-july-25"
+              },
+              {
+                "title": "Scrut Authentication System Migration",
+                "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scrut-authentication-system-migration"
+              }
+            ]
+          },
+          {
+            "group": "Test",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "internal testing article 81",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-8"
+              },
+              {
+                "title": "Test_artical_for sendbox",
+                "path": "docs/frequently-asked-questions-faqs/test/test-artical-for-sendbox"
+              },
+              {
+                "title": "Internal testing artical 82",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-artical-82"
+              },
+              {
+                "title": "Test_artical11",
+                "path": "docs/frequently-asked-questions-faqs/test/test-artical11"
+              },
+              {
+                "title": "Test_artical10",
+                "path": "docs/frequently-asked-questions-faqs/test/test-artical10"
+              },
+              {
+                "title": "internal testing article 6",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-6"
+              },
+              {
+                "title": "internal testing article 5",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-5"
+              },
+              {
+                "title": "internal testing article 4",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-4"
+              },
+              {
+                "title": "internal testing article 3",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-3"
+              },
+              {
+                "title": "Test_artical_rename_13",
+                "path": "docs/frequently-asked-questions-faqs/test/test-artical12-1"
+              },
+              {
+                "title": "internal testing article 1",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-1221"
+              },
+              {
+                "title": "Test_newartical_131",
+                "path": "docs/frequently-asked-questions-faqs/test/test-newartical-13"
+              },
+              {
+                "title": "internal testing article 212",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-2"
+              },
+              {
+                "title": "Test_artical12",
+                "path": "docs/frequently-asked-questions-faqs/test/test-artical12"
+              },
+              {
+                "title": "internal testing article 7",
+                "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-7-1"
+              },
+              {
+                "title": "July 2026",
+                "path": "docs/frequently-asked-questions-faqs/test/july-2026-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Partner Portal",
+        "expandable": true,
+        "pages": [
+          {
+            "title": "Partner Portal: Walkthrough",
+            "path": "docs/for-scrut-partners/partner-portal-walkthrough"
+          },
+          {
+            "title": "Log in to the Partner Portal",
+            "path": "docs/for-scrut-partners/log-into-scrut-partner-portal"
+          },
+          {
+            "title": "Create and Manage Workspaces",
+            "path": "docs/for-scrut-partners/creating-and-managing-workspaces"
+          },
+          {
+            "title": "Add Frameworks",
+            "path": "docs/for-scrut-partners/add-frameworks"
+          },
+          {
+            "title": "Add Users",
+            "path": "docs/for-scrut-partners/add-users-scrut-partner-portal"
+          },
+          {
+            "title": "Set Up Your Sandbox (NFR) Account",
+            "path": "docs/for-scrut-partners/set-up-your-sandbox-nfr-account"
+          },
+          {
+            "title": "Log in to a Workspace",
+            "path": "docs/for-scrut-partners/login-to-workspaces"
+          },
+          {
+            "title": "View Invoices & Payments",
+            "path": "docs/for-scrut-partners/view-partner-invoices-payments"
+          },
+          {
+            "title": "Upgrade Plan & Add-Ons",
+            "path": "docs/for-scrut-partners/upgrade-plan-add-ons-partner-portal"
           }
         ]
       }
     ]
-  },
-  "logo-light": "https://blob-cdn.documentation.ai/org-8752c954-5ea2-4e88-b2cd-bd142e8b70e3/doc-2b3e0731-9a88-465d-8ff3-6b305a02eb03/1783763744704-63ixqswe72p-Wholechain_Logo.png?fm=auto&auto=compress%2Cformat",
-  "favicon": "https://blob-cdn.documentation.ai/org-8752c954-5ea2-4e88-b2cd-bd142e8b70e3/doc-2b3e0731-9a88-465d-8ff3-6b305a02eb03/1783763755546-0b9eyt9icidj-favicon.png?fm=auto&auto=compress%2Cformat",
-  "logo-dark": "https://blob-cdn.documentation.ai/org-8752c954-5ea2-4e88-b2cd-bd142e8b70e3/doc-2b3e0731-9a88-465d-8ff3-6b305a02eb03/1783763765330-67jngypqa6e-Wholechain_Logo_White.png?fm=auto&auto=compress%2Cformat",
-  "template": "atlas",
-  "navbar": {
-    "actions": {
-      "primary": {
-        "title": "Login",
-        "link": "https://app.wholechain.com/"
-      },
-      "links": [
-        {
-          "title": "Wholechain.com",
-          "link": "https://wholechain.com/"
-        }
-      ]
-    }
   }
 }

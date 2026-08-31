@@ -1,0 +1,79 @@
+---
+title: "Clone an Evidence Task"
+description: "Learn how to clone an evidence task in Scrut to reuse control and requirement mappings, save time, and create new tasks faster. See what gets copied, what"
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Cloning creates a new evidence task from an existing one, carrying over the control and requirement mappings of the source evidence task, so you do not have to rebuild them from scratch.
+
+## How To Clone an Evidence Task
+
+1. Navigate to **Compliance → Evidence Tasks → All Evidence Tasks** and open the task for which you want to create a copy.
+
+2. On the evidence task detail page, click the three-dot icon at the top-right, and click **Clone Evidence**.
+
+   <Image src="/images/Clone-Evidence-Task.png" alt="" />
+
+3. Scrut opens the Add Evidence wizard, pre-filled with details from the source evidence task. Review the callout showing how many requirements and controls are already linked from the source evidence task.
+
+4. Update the Evidence Name field. Scrut pre-fills this as "Clone - \[Source Evidence Task Name\]."
+
+   **Note:** Evidence task names must be unique. If the name already exists, Scrut blocks you from cloning until you edit the name.
+
+5. Review the pre-filled fields, and edit any that need to change for the new task.
+
+6. On the Controls step, review the requirements and controls already selected based on the source evidence task. Turn on Show Linked Controls to see which ones are pre-selected, and select or clear checkboxes to adjust the mappings for the new task.
+
+   <Image src="/images/Screenshot-2026-07-21-at-14.37.36.png" alt="" />
+
+7. Confirm all the details, and click Save.
+
+Scrut creates the new evidence task and takes you directly to it.
+
+## What Gets Copied
+
+The following details carry over from the source evidence task:
+
+- Linked controls and requirements
+- Description
+- Department
+- Assignee(s)
+- Recurrence
+- Effort estimate
+- Relevance
+- Approvers, if the evidence approval workflow is on. Approval status resets to pending.
+
+## What Does Not Get Copied
+
+- Attachments (The cloned task starts with an empty evidence bucket)
+- Sample template content, if the source task uses one
+- Jira or other project management tool links
+- Comments and audit history
+
+#### Points to Note:
+
+- Once created, the cloned evidence task is fully independent with its own artifact ID. Editing, publishing, or deleting the source task does not affect the clone, and changes to the clone do not carry back to the source.
+- The cloned task starts in the Not Uploaded status, regardless of the source task's status.
+- If a Scrut Monitor or automated test is linked to the source evidence task, Scrut sets up a new test for the cloned task rather than sharing the source task's automation.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Is the cloned evidence task linked to the source task after creation?" default-open="true">
+    No. Once created, the clone is fully independent with its own artifact ID. Editing, publishing, or deleting the source task does not affect the clone, and changes to the clone do not carry back to the source. The two are only related by the data that was copied at the moment of cloning.
+  </Expandable>
+
+  <Expandable title="Why clone an evidence task?" default-open="true">
+    Cloning helps in two common situations:
+
+    - **Per-entity evidence collection:** If your organization uses Entities, you can clone an evidence task to collect proof separately per entity, with its own assignee, recurrence, or uploaded documents, while keeping the same control mappings as the source.
+    - **Splitting merged evidence tasks:** Scrut groups related evidence into a single task in some cases. If you collect and store that proof separately, cloning splits them into individually titled tasks without remapping controls from scratch.
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

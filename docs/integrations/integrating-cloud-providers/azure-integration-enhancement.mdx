@@ -1,0 +1,90 @@
+---
+title: "Configure Scope for Azure Integration"
+description: "Discover the changes to Scrut's Azure integration and the next steps to take."
+---
+
+## Important Update: Reconfiguration Required
+
+Scrut has enhanced the Azure integration to provide you with greater control over your compliance monitoring. We’ve modified the [**Scrut-Azure integration**](/docs/integrations/integrating-cloud-providers/integrating-azure) from a broad tenant-based approach to a more granular, **subscription-based model**. This means you now have the flexibility to select which Azure subscriptions you want Scrut to monitor for each tenant connection.
+
+## How This Benefits You
+
+Previously, the Azure integration monitored all subscriptions within a connected tenant. With this enhancement, you can now:
+
+- **Configure scope**: Select only the Azure subscriptions that are relevant to your compliance requirements. For example, if your Azure tenant includes subscriptions for development, testing, and production environments, but only your production subscriptions are in scope for your ISO 27001 audit, you can now configure the integration to monitor only your production subscriptions.
+- **Improve performance**: Focus on subscriptions that matter, reducing noise and unnecessary data in the Cloud Tests module in Scrut.
+- **Better organization**: Assign custom nicknames to individual subscriptions for easier identification and management within Scrut.
+
+<Callout kind="success">
+  **Heads Up!**
+
+  **Your current Azure integration will continue to function as intended**. Scrut will handle the migration in the background without any disruptions to your workflow. However, if you'd like to modify the integration scope to select specific subscriptions, you’ll need to complete the steps given below.
+</Callout>
+
+## Azure Reconfiguration Guide
+
+Follow these steps to modify the integration scope by choosing specific subscriptions within a connected tenant:
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
+
+2. Click **Connected Integrations** and search for Azure.
+
+3. Click the **Configure** button on the Azure integration tile.
+
+   <Image src="/images/Screenshot-2025-06-19-at-14.49.06-1.png" alt="" />
+
+4. Click the edit icon in your connected Azure integration.
+
+   <Image src="/images/Pencil-icon-1.png" alt="Edit icon" />
+
+   <Image src="/images/Screenshot-2025-06-19-at-18.24.22.png" alt="" />
+
+5. Scrut will automatically fill in the **Client ID, Tenant ID**, and **Client Secret**.
+
+   - However, if you need help finding these details, refer to our guide on [obtaining Azure credentials](/docs/integrations/integrating-cloud-providers/integrating-azure).
+
+6. **Note:** You can also **edit the Client Secret**. Azure has a rule that the client-secret key changes every 90 days, so you may need to update it.
+
+7. Enter an **Account Nickname** and choose the Entities to which the integration applies.
+
+   <Image src="/images/Screenshot-2025-07-09-at-11.42.11-1.png" alt="" />
+
+8. Click **Save**.
+
+9. Watch out for the “Integration Successful” and “Fetched Azure subscriptions successfully” notifications.
+
+   <Image src="/images/Screenshot-2025-06-19-at-18.20.01-2.png" alt="" />
+
+10. Select the Azure subscriptions you want to connect with Scrut.
+
+11. Enter a suitable nickname for each, and click **Finish**.
+
+<Image src="/images/Screenshot-2025-06-19-at-16.41.57.png" alt="" />
+
+Watch out for the “Azure subscriptions saved successfully” message and the connected status flag.
+
+<Image src="/images/Screenshot-2025-06-19-at-18.22.59.png" alt="" />
+
+## Azure Integration Guide for First-Time Users
+
+If you’re connecting Azure for the first time with Scrut, follow the step-by-step instructions here.
+
+<Callout kind="info">
+  **Azure Integration Guide**
+
+  [Refer to the detailed instructions here](/docs/integrations/integrating-cloud-providers/integrating-azure).
+</Callout>
+
+## Viewing Subscription-based Data in Scrut
+
+1. Go to the **Cloud** module and click the **Azure** filter.
+
+2. Use the **Subscription ID** filter to view data relevant to specific subscriptions.
+
+3. This filter is available for the following tabs in the Cloud Tests module:
+
+   - Dashboard
+   - Tests
+   - Resources
+
+<Image src="/images/Screenshot-2025-06-19-at-20.30.22.png" alt="" />

@@ -1,0 +1,153 @@
+---
+title: "Manage Policy Versions"
+description: "Understand how Scrut versions your policies."
+---
+
+Scrut makes it easy to track and manage different versions of your policies throughout their lifecycle. Having the details of all current and previous versions within Scrut provides transparency in policy management by maintaining a detailed history of changes, contributors, and approvers. This article explains all that you need to know about Scrut policy versions and how to edit them.
+
+## Enable Policy Versioning
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Policy versions are available only when you turn on the “**Enable Policy Version Details**” toggle in Policy Settings.
+</Callout>
+
+To enable this toggle:
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Policy** on the left navigation menu.
+
+2. Click the **Settings** icon on the top right of the Policies page.
+
+   <Image src="/images/Screenshot-2025-10-16-at-21.32.09-1.png" alt="" />
+
+3. Turn on the **Enable Policy Version Details** toggle.
+
+<Image src="/images/Policy-Settings.png" alt="" />
+
+## Editing Initial Version Details
+
+When you create a new policy in Scrut using the policy editor:
+
+- **Version Assignment:** Scrut automatically assigns it "**Version 1.0**."
+- **Change Description:** Pre-filled as "**Initial Release**."
+- **Created By:** Shows the name of the user who created the initial draft of the policy.
+
+<Image src="/images/Screenshot-2026-03-02-at-17.39.53.png" alt="" />
+
+<Callout kind="alert">
+  **Note:**
+
+  Approved By, Published By, and Version Date are empty as the policy is in Draft mode and not yet published.
+</Callout>
+
+Click the **Edit** icon to change details of this version.
+
+<Image src="/images/Pencil-icon-1.png" alt="Edit icon" />
+
+<Image src="/images/Screenshot-2026-03-02-at-17.42.16.png" alt="" />
+
+## Adding Previous Version Details
+
+Sometimes, you may already have existing versions of a policy on other platforms. Scrut allows you to add these details to the platform to maintain complete historical records.
+
+To add previous policy versions:
+
+1. Click the **Update Versions** button.
+
+   <Image src="/images/Screenshot-2026-03-02-at-17.43.53.png" alt="" />
+
+2. Click **Scan document for versions** to allow Scrut to automatically review your policy document and fetch details of previous versions. If there are none, you can add them directly on this page.
+
+   <Image src="/images/Screenshot-2026-03-02-at-17.47.27.png" alt="" />
+
+3. If available, Scrut will fetch these details from your policy document:
+
+   - **Version Name:** The version name
+   - **Version Date:** Enter the date on which this version of the policy was finalized and made effective. This helps track the document's revision history and timeline.
+   - **Created By:** Enter policy creator names. You can add multiple contributors.
+   - **Approved By:** Enter the names of the policy approvers. You can add various approvers.
+   - **Published By:** Enter the names of the policy publishers. You can add multiple publishers.
+   - **Change Description:** Provide a short description of any changes made in this version compared to previous ones. Include specific reasons for the changes and any relevant context to enhance understanding.
+
+4. You can edit, remove, or add versions, as needed.
+
+5. Click **Save**.
+
+   <Image src="/images/Screenshot-2026-03-02-at-17.50.45.png" alt="" />
+
+#### Points to Note
+
+- You can add multiple previous versions, as needed.
+
+- Scrut sorts previous versions by version date, with the most recent one shown at the top.
+
+- To avoid duplicate version details tables, remove any extra tables by deleting them directly from the editor.
+
+- When you click **Preview**, the **Version Details table** appears at the bottom of the Policy.
+
+  <Image src="/images/Screenshot-2026-03-02-at-18.14.49.png" alt="" />
+
+## Managing Policy Versions through the Policy Lifecycle
+
+Once the policy moves into the **Approved** status, Scrut will automatically add the Approvers’ details to the version history. You can edit it as required before publishing the policy.
+
+<Image src="/images/Screenshot-2025-07-25-at-12.17.45.png" alt="" />
+
+Similarly, when the policy moves into the **Published** status, Scrut will automatically add the Publishers’ details. The version history table is included at the bottom of each policy.
+
+<Image src="/images/Screenshot-2025-07-25-at-12.44.22.png" alt="" />
+
+## Policy Export
+
+When you download a policy, Scrut automatically includes the current policy version in the title page.
+
+<Image src="/images/Screenshot-2025-07-25-at-13.06.01.png" alt="" />
+
+It also includes the complete policy versioning history as a table at the end of the document. The version history table also has the details of any previous versions you have entered.
+
+<Image src="/images/Screenshot-2025-07-25-at-13.05.46.png" alt="" />
+
+<Callout kind="success">
+  **Note:**
+
+  The versioning history is included in both individual policy downloads and bulk export of attachments.
+</Callout>
+
+## Policy Renewal
+
+When you renew the policy, you have two options:
+
+<Image src="/images/Screenshot-2025-07-25-at-13.09.36.png" alt="" />
+
+### #1: Renew with Current Version
+
+Retains the current version number and description. All other details, including Created By, Approved By, Published By, and Version Date, are reset.
+
+<Image src="/images/Screenshot-2026-03-02-at-18.16.54.png" alt="" caption="Renewing with Current Version" />
+
+### #2: Create a New Version
+
+Scrut creates a new policy version for this renewal cycle.
+
+<Image src="/images/Screenshot-2026-03-02-at-18.17.44.png" alt="" />
+
+In this option, Scrut automatically populates the change description for the new version as **Policy Update**. You can edit it as required.
+
+<Image src="/images/Screenshot-2025-07-25-at-13.11.47.png" alt="" />
+
+## FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Will the historical versions be retained while renewing a policy?" default-open="true">
+    Yes. Historical versions are maintained during the renewal.
+  </Expandable>
+
+  <Expandable title="I can’t see the version history." default-open="true">
+    Ensure [**Enable Policy Version Details is turned on**](/docs/policy/managing-organizing-policies/editing-a-policy-version#enable-policy-versioning) in Policy Settings.
+  </Expandable>
+
+  <Expandable title="My imported file’s formatting looks different after import." default-open="true">
+    Scrut preserves formatting when importing files into the editor. If formatting appears inconsistent, reach out to support@scrut.io for assistance. For best results, use .docx or PDF files.
+  </Expandable>
+</ExpandableGroup>

@@ -1,0 +1,71 @@
+---
+title: "Understand Risk Treatment Strategies"
+description: "Learn how to treat risks in Scrut using the Accept, Avoid, Mitigate, and Transfer strategies. Understand mitigation task requirements, residual risk, approval"
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Risk treatment lets you decide how to respond to an identified risk, track the actions you take, and move the risk toward a resolved state. This guide walks through the treatment strategies, the approval process, and the statuses a risk moves through from start to finish.
+
+## Risk Treatment Strategies
+
+Once a risk has been assessed, you choose one of four treatment strategies to address it:
+
+- **Accept:** You choose to take on the risk as is, without further action. Creating a mitigation task is optional, but you can't create one after adding the residual risk.
+- **Avoid:** You eliminate the risk entirely, typically by discontinuing the activity that causes it. No mitigation task or residual risk is required.
+- **Mitigate:** You take action to reduce the risk's likelihood or impact. At least one mitigation task is required.
+- **Transfer:** You shift the risk to a third party, such as through insurance or a vendor contract. At least one mitigation task is required.
+
+## Mitigation Task and Residual Risk Requirements
+
+Each treatment strategy has its own requirements for mitigation tasks and residual risk, summarized below.
+
+| Treatment Strategy | Mitigation Task | Residual Risk |
+| :---: | :---: | :---: |
+| **Avoid** | Optional | Optional |
+| **Accept** | Optional | Mandatory |
+| **Mitigate** | Mandatory | Mandatory |
+| **Transfer** | Mandatory | Mandatory |
+
+- For **Avoid**, the risk moves directly to the Treated state. You don't need to add a residual risk or create mitigation tasks.
+- For **Accept**, the risk moves to the Treated state once you add the residual risk. If you choose to create a mitigation task, do it before adding the residual risk, since you can't create new mitigation tasks afterward.
+- For **Mitigate** and **Transfer**, you must create at least one mitigation task and close all mitigation tasks before you can add the residual risk.
+
+## What Happens After You Select a Treatment Strategy
+
+#### When the approval workflow is off
+
+If the approval workflow is turned off for your organization, a risk moves straight from Treatment in Progress to Treated once you've met the mitigation task and residual risk requirements for your chosen strategy.
+
+#### When the approval workflow is on
+
+If your account uses the approval workflow, you need to submit the risk for approval once you've completed the required steps for your chosen strategy. An approver then reviews the risk, and either approves it or requests a revision.
+
+1. You select a treatment strategy: Accept, Avoid, Transfer, or Mitigate.
+2. You complete the mitigation task and residual risk requirements for that strategy.
+3. You submit the risk for approval.
+4. The approver reviews it.
+5. The approver either approves the risk, moving it to Treated, or requests a revision, moving it to Needs Revision.
+6. If a revision is requested, you review the approver's comments, make the necessary changes, and resubmit for approval.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Once you add residual risk to a risk using the Accept strategy, you can no longer create new mitigation tasks for it.
+</Callout>
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="I see warnings when I choose a risk strategy. How to fix them?" default-open="true">
+    You may see the following warnings while working through a risk's treatment. Here’s how you can resolve them.
+
+    - **Mitigation task required:** This appears when a residual risk is added, but no mitigation task exists for a Mitigate or Transfer strategy. Add a mitigation task or change the treatment strategy to resolve it.
+    - **Avoid strategy doesn't require mitigation tasks or residual risk**: This appears when the treatment strategy is Avoid, but open or overdue mitigation tasks or a residual risk still exist. Remove the mitigation tasks and residual risk, or change the treatment strategy.
+    - **Mitigation tasks not required for Accept:** This appears when an open or overdue mitigation task exists for a risk with the Accept strategy. Remove the mitigation task or change the treatment strategy. Once residual risk is added, you can't create new mitigation tasks.
+  </Expandable>
+</ExpandableGroup>

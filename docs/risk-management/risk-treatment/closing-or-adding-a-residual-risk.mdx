@@ -1,0 +1,66 @@
+---
+title: "Add Residual Risk"
+description: "Learn how to add residual risks in Scrut."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+A residual risk in Scrut refers to the level of risk that remains even after controls or mitigation tasks have been applied. Adding a residual risk allows you to assign a residual risk score and officially treat a risk item while acknowledging any remaining risk.
+
+## How To Add Residual Risk
+
+1. Click **Risk → Risk Management** on the left navigation panel.
+
+2. Go to the **Risk Register** tab and click on the risk for which you want to add a residual risk.
+
+   <Image src="/images/Selecting-a-Risk.png" alt="" />
+
+   <Callout kind="alert">
+     **Heads Up!**
+
+     You cannot add residual risk if any mitigation tasks are open for the risk. Close all pending mitigation tasks to proceed.
+   </Callout>
+
+3. Scroll to the Residual Risk section, and click **Add Residual Risk**.
+
+   <Image src="/images/Screenshot-2026-02-02-at-12.10.43.png" alt="" />
+
+4. You will see a warning message that states, “Adding a residual risk will lock this assessment. You cannot add mitigation tasks until the next assessment cycle.”
+
+   <Image src="/images/Screenshot-2026-02-02-at-12.11.04.png" alt="" />
+
+5. Click **Add Residual Risk** to proceed.
+
+   <Callout kind="info">
+     **Tip!**
+
+     If the risk is not yet treated, complete all pending actions with mitigation tasks before proceeding.
+   </Callout>
+
+6. Drag the slider for each residual factor to adjust its value, and the residual risk score will be automatically calculated using the [configured risk score formula](/docs/risk-management/configuring-risk-register/configuring-custom-risk-score-formula#how-to-configure-risk-scores).
+
+   <Image src="/images/Screenshot-2026-02-02-at-12.15.54.png" alt="" />
+
+7. Set the **Recurrence**. This is the assessment cadence, how frequently this risk should be reviewed after treatment. By default, the recurrence is set to Quarterly. You can choose from: Annually, Bi-Annually, Quarterly, Monthly, Custom, or Never, depending on the risk and your organizational risk appetite.
+
+   <Image src="/images/Screenshot-2026-02-02-at-12.22.08.png" alt="" />
+
+8. The residual risk score is updated.
+
+9. If the [Risk Approval Workflow](/docs/risk-management/risk-treatment/risk-approval-workflow) is turned OFF:
+
+   - It moves to the **Treated** status.
+   - You’ll need to click the **Review Risk** button to make any changes to a risk in the Treated status.
+
+   <Image src="/images/Screenshot-2026-02-02-at-12.28.25.png" alt="" />
+
+10. If the Risk Approval Workflow is turned ON:
+
+    - The risk remains in the **Treatment in Progress** status.
+    - You’ll need to click the **Send for Approval** button to send the risk to the Approver for review.
+
+    <Image src="/images/Send-for-Approval.png" alt="" />

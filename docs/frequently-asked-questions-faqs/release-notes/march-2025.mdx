@@ -1,0 +1,202 @@
+---
+title: "March 2025"
+---
+
+## Scrut Innovations March 2025: Auto-Link Controls, Vendor Bulk Actions, and Nested Vault Folders
+
+**Meta description:** Auto-link controls to audit findings, reopen closed findings for revision, run vendor bulk actions, and adopt Australia ISM or New Jersey privacy controls.
+
+Compliance and audit teams spend too much of every sprint reconnecting the same artifacts, chasing closed findings that still need evidence, and reshaping vendor or access data by hand. This Scrut Innovations March 2025 snapshot covers [Audit Center](https://www.scrut.io/platform/audit-center) automation, [Vendor Risk Management](https://www.scrut.io/platform/vendor-risk-management) bulk actions, Vault organization, Access Review imports, Vulnerability Management report intake, new framework baselines, and related workflow polish across Scrut Automation.
+
+## Automatically link controls when artifacts connect
+
+Most compliance teams discover that an audit finding still has zero controls attached after they have already linked the policy or evidence packet. By then, someone has to open the finding again, hunt the control library, and hope they pick the same mappings the artifact already carries. Manual reconnect work slows the audit, raises the chance of missed linkages, and creates different answers depending on who did the linking.
+
+Scrut Automation's [Audit Center](https://www.scrut.io/platform/audit-center) now auto-links the controls associated with a selected policy or evidence artifact when you link that artifact to an audit finding or audit request. Before you confirm, the product tells you those associated controls will attach with the artifact. If you later unlink the artifact, Scrut also unlinks those controls from the finding unless the same controls remain linked through another artifact, so ownership stays tied to real evidence rather than orphaned control rows.
+
+## Reopen closed findings without duplicate tickets
+
+Auditors often realize after a finding is closed that the submitted artifacts are still thin. Without a structured path back into the workflow, teams fall back to side-channel email, recreate a near-duplicate finding, or accept a weaker close. That breaks notification history, confuses assignees, and makes it harder to show why the original close was reversed.
+
+Scrut Automation's Audit Center now exposes Request Revision on closed findings for auditors, admins, and the person who reported the finding. You add a justification such as a request for more artifacts, the finding moves from closed to needs revision, and the assignee is notified with the reason visible in product. The same revision path is available on Audit Requests. Once the parent audit is marked completed, further revision requests on closed findings are blocked so the completed audit boundary stays intact.
+
+## Link existing risks beside audit findings
+
+When a finding surfaces a real risk, teams previously had to create a brand-new risk record even if an equivalent risk already lived in the register. Duplicate risks fragment owners, treatments, and audit trails. Reviewers also struggled to see policies, evidence, tests, and risks in one place while working the finding.
+
+Scrut Automation's Audit Center Linked Items table (previously Linked Artefacts) now shows linked policies, evidence, tests, and risks together. From a finding or an audit request you can choose Link Existing and attach a risk already in the register, or choose Create New when you truly need a fresh risk. Either path keeps the finding connected to the risk workflow without forcing a duplicate create every time.
+
+## Run bulk actions across many vendors
+
+Third-party risk owners still update assignees, tiers, assessment status, and questionnaire sends one vendor at a time when portfolio work spikes. Spreadsheet exports help for a moment, then fall out of sync with live records. Large programs need the same edit, send, export, or delete applied across a selected set without losing safety checks.
+
+Scrut Automation's [Vendor Management](https://www.scrut.io/platform/vendor-risk-management) bulk actions let you select vendors on a page or use Select All, then edit vendor details such as assignee, category, tier, inherent risk, and custom fields in one save. You can also bulk-update assessment status with a remark, send a questionnaire template with deadline and reviewer selections, export documents, or delete vendors. Before send or export, Scrut surfaces coverage gaps such as missing Points of Contact (POCs) or vendors without documents so you know which records will actually receive the action.
+
+## Nest folders inside the compliance Vault
+
+Audit packets rarely fit a single flat folder. Teams bury policies, evidence, and customer packets under primary folders, then lose time scrolling long lists or downloading files just to reshuffle them elsewhere. Without nested folders and a clear move path, document libraries stay shallow while real work lives in desktop zip files.
+
+Scrut Automation's Vault module now lets you open a primary folder, create nested folders inside it, and upload documents into the current folder. From a document's three-dot menu you can Move items into another folder, including nested destinations, so packets stay organized where reviewers already work.
+
+## Import vendor access exports into Access Review
+
+Access reviewers still receive CSV or Excel dumps from vendors and applications that are not fully integrated. Reformatting columns for Account Identifier, Name, Role, and Multi-Factor Authentication (MFA) status before every review burns hours and introduces mapping mistakes that only show up during validation.
+
+Scrut Automation's Access Review import workflow accepts CSV or XLSX files up to 100 MB, auto-detects headers, and guides field mapping for Account Identifier (mandatory), Name, Role, and MFA, including a not-available option for optional fields. Preview validation highlights missing mandatory fields and duplicates before you finalize, so the import lands cleanly in the review instead of as another spreadsheet cleanup cycle.
+
+## Import external vulnerability reports in one place
+
+Vulnerability Assessment and Penetration Testing (VAPT) results and other external findings often arrive as spreadsheets that never join the same queue as product vulnerabilities. Risk managers then assign work over email, lose severity context across files, and cannot push remediation into the same project tools they already use.
+
+Scrut Automation's Vulnerability Management module now imports external reports through a downloadable template in CSV, XLSX, or Markdown formats up to 100 MB, creating new vulnerabilities or updating existing ones after validation. From the same module, teams can assign items and connect remediation work to tools such as Jira and Asana so external findings join the central vulnerability workflow.
+
+## Adopt Australia ISM December 2024 controls
+
+Organizations that sell to Australian government buyers, or that align to Australian Signals Directorate (ASD) guidance, need the current Information Security Manual (ISM) baseline rather than a stale control list. Waiting on a custom spreadsheet mapping delays assessments and leaves gaps against the December 2024 revisions.
+
+Scrut Automation now includes the Australia ISM (December 2024) framework in the Framework library with pre-mapped controls so teams can adopt the updated baseline, track implementation, and reduce manual assessment prep against ASD's current ISM release.
+
+## Operationalize New Jersey Data Privacy Law controls
+
+Businesses that process New Jersey consumer personal data face the New Jersey Data Privacy Law (NJDPL) obligations around transparency, consumer rights, and security. Building a control set from the statute alone slows privacy programs and makes gap analysis harder to defend to leadership.
+
+Scrut Automation adds a New Jersey Data Privacy Law framework with pre-mapped controls so privacy and compliance teams can align policies, evidence, and assessments to NJDPL expectations inside the same GRC workspace they use for other frameworks.
+
+## Document justification for every out-of-scope control
+
+Marking a control Out of Scope without a recorded reason creates silent debt. Months later, auditors and new owners cannot tell whether the decision was deliberate, temporary, or accidental. Missing rationale also weakens Not Applicable statuses that should stand up in an audit interview.
+
+Scrut Automation's Controls module now requires a justification when you Mark Out Of Scope, sets the control to Not Applicable, and shows that justification on the control details page. Scope changes and justifications are written to the audit log, a Scope filter helps list In Scope and Out of Scope controls, hover reveals justification on out-of-scope rows, and bulk scope updates are available from the control list.
+
+## Stage reminders before policy and vendor reviews
+
+A single reminder a week before a policy, evidence, or vendor reassessment often arrives too late for thorough review and approval. Teams rush publishes, miss reassessments, or discover expired artifacts only when an auditor asks. Programs need earlier, repeated nudges tied to the real review date.
+
+Scrut Automation's notification settings now support multi-level reminders for policy, evidence, and vendor reviews. Under Settings > Notifications you can enable reminders so recipients get notices 30 days before, 15 days before, 7 days before, and on the review or assessment date. New review triggers can use 7-, 15-, or 30-day windows so teams have enough runway to review, approve, and publish.
+
+## Trust Vault content and preview
+
+Trust Vault descriptions now support Markdown where the Markdown indicator appears, with preview before save, and descriptions across About, frameworks, FAQs, and updates can use up to 10,000 characters. Document preview in [Trust Vault](https://www.scrut.io/platform/trust-center) covers spreadsheets (.xlsx, .xls, .csv), email (.eml), PDF with zoom, images (.jpg, .png, .jpeg), and video (.mp4), with in-modal attachment open and download without leaving the preview.
+
+## Integrations and employee sync
+
+Sage HR integration syncs employee records, leave, and assignments so workforce data stays current for compliance tracking. Access Review also gains seven application sources for fetching user access data: Xero, New Relic, Azure AD, Cloudflare, Confluence, Slack, and Trello.
+
+## People, training, and engagement
+
+Training campaigns can embed custom videos through embed codes from external hosting services. In the Training Portal, employees see the full task list up front; training tasks stay locked and greyed until required policies are accepted, then unlock automatically. Scrut Digest can post to Slack public channels, private channels, or groups from Settings > Notifications, including framework summaries, due dates, and pending artifact items.
+
+## Controls, tests, and risk hygiene
+
+Tests, policies, or evidence without control mappings show an Unmapped tag on the Test Dashboard, Test Library, and detail pages. A Show unmapped tests toggle defaults off on the dashboard and on in the library, compliance percentages still use mapped items only, and a No Framework filter isolates unmapped tests. Each test also shows a last-check timestamp for when it was last performed. Risk Management audit logs use action-first message formatting and now record Risk Settings actions under Risk Management → Settings → Audit Logs.
+
+## Framework mapping maintenance
+
+The Cybersecurity Maturity Model Certification (CMMC) Level 2 mapping was updated to add or remove missing controls, evidence, and policies so coverage stays usable without dropping required security standards.
+
+## Audit Center UI polish
+
+Tests under Linked Artifacts in Audit Center open in a side drawer instead of sending you to the Tests page, and you can export test details from that drawer so review stays inside the audit workflow.
+
+---
+
+*Draft generated for Scrut Launch Notes Pipeline (A2). Source: 27 March 2025 release notes. Assignee: Vaishnavi.*
+
+## Scrut Innovations March 2025: Faster Audits, Vendor Bulk Actions, and Evidence Organization
+
+**Meta description:** March 2025 Scrut updates: automatic audit control linking, reopen closed findings, vendor bulk actions, nested Vault folders, and Trust Vault Markdown.
+
+## Introduction
+
+This late-March release focuses on the moments that slow audits and third-party reviews: missing control links on findings, closed items that still need more evidence, vendor portfolio work done one record at a time, and documents that are hard to organize or present clearly. Audit Center, Vendor Management, Vault, Trust Vault, Access Reviews, and the framework library all pick up practical workflow improvements grounded in how GRC teams actually close work.
+
+---
+
+## Automatic Control Linking for Audit Findings
+
+Linking a policy or evidence item to an audit finding is only half the job when the related controls still have to be attached by hand. That second pass is easy to skip under deadline pressure, and it leaves findings under-mapped for auditors who expect clear control coverage.
+
+When you link an artifact such as a policy or evidence item to an audit finding or audit request, Scrut now automatically links the controls associated with that artifact as well. Before you confirm, the product surfaces a message that those controls will be linked; after you link, the finding shows both the artifact and its controls. If you later unlink that artifact, Scrut also unlinks the associated controls from the finding unless those controls remain linked through another artifact. You can verify the source mapping from the policy detail page under Controls.
+
+The result is fewer missed control linkages and less repetitive mapping work during active audits. Many audit readiness workflows still treat artifact attachment and control mapping as separate manual steps; keeping those relationships in sync from the artifact reduces rework without changing how teams review what was linked. Learn more in [Audit Center](https://www.scrut.io/platform/audit-center).
+
+## Request Revision on Closed Audit Findings
+
+Closing a finding used to feel final even when submitted artifacts later looked thin. Teams then chased follow-ups in email or opened duplicate findings, which splits history and slows remediation.
+
+Auditors, admins, and the person who reported the finding can now use Request Revision on a closed finding. Provide a justification, such as asking for more artifacts, and the finding moves from closed to needs revision while the assignee is notified by email and can see the reason. The reporter can edit that reason later if needed. The assignee revises, submits for review, and the finding can be closed again when the evidence is sufficient. The same workflow is available for audit requests. Once an audit is marked completed, further revision requests on closed findings are not available.
+
+That keeps revision history inside the audit workflow instead of outside it. Audit programs often need a controlled way to reopen closed work without inventing a parallel process; using the existing request-revision path preserves context for both auditors and assignees.
+
+## Link Existing Risks from Audit Findings
+
+Findings often point to risks that already exist in the register, yet teams previously had to create a new risk or leave the finding disconnected. That creates duplicates or gaps between audit work and the risk program.
+
+In Audit Center, the Linked Items table (previously Linked Artefacts) now shows linked policies, evidence, tests, and risks together. From a finding, choose Link Existing, then Risk, select the risk, and link it; or choose Create New, then Risk, and complete the create-risk form. The same create and link options are available on audit requests.
+
+Findings stay connected to the live risk register instead of living in a separate trail. Typical audit tooling still treats risk creation as a one-way jump out of the finding; being able to attach an existing risk keeps audit and risk views aligned.
+
+## Bulk Actions in Vendor Management
+
+Large vendor portfolios make one-by-one edits painful: reassigning owners, updating assessment status, sending questionnaires, exporting documents, or cleaning up records all multiply across hundreds of vendors.
+
+Vendor Management now supports bulk actions across selected vendors. Select vendors on the page, or use Select All when you need the full set. From there you can edit vendor details such as assignee, category, tier, inherent risk, and custom fields (fields left blank are not updated); update assessment status with a remark, with a caution when status is changed outside the questionnaire process; send a questionnaire from an existing vendor-settings template with deadline, review date, and reviewers (only vendors with a Point of Contact receive it; if a vendor has multiple POCs, each receives the email); export documents for vendors that have them, with the file link emailed to you; or delete vendors, which also removes associated documents, questionnaires, and mitigation tasks. Large selections can take longer and may notify new assignees by email.
+
+Portfolio maintenance becomes a batch operation instead of a per-vendor loop. Vendor risk programs still spend a large share of time on repetitive register hygiene; bulk actions compress that overhead while keeping questionnaire and POC prerequisites visible before send.
+
+## Nested Folders in the Vault
+
+Flat document piles in the Vault make it hard to mirror how teams already organize evidence by program, system, or audit cycle. Searching for the right file then competes with restructuring folders by hand.
+
+Inside a primary Vault folder, you can create nested folders with Create Folder, name them, and nest further as needed. To relocate a document, open the three-dot menu, choose Move, pick the destination folder, and confirm Move to Selected Folder.
+
+Evidence libraries stay closer to real program structure, which shortens retrieval during audits and day-to-day reviews. Many compliance repositories still force shallow folder trees; nested folders reduce the need for awkward naming conventions as documentation volume grows.
+
+## Import Vulnerabilities from External Reports
+
+Vulnerability findings often arrive from internal VAPT work or external stakeholders in spreadsheets that never make it into the same system used for assignment and remediation. Tracking then splits across email and side files.
+
+In Vulnerability Management, use Import Vulnerabilities, download the template, and upload a CSV, XLSX, or Markdown report up to 100 MB. Scrut validates the file, then creates new vulnerabilities or updates existing ones, surfacing errors when the file needs correction. Imported items can use existing assignment workflows and project-management integrations such as Jira and Asana.
+
+Security and risk teams get one register for externally sourced findings instead of parallel trackers. Centralizing import before remediation is still uneven across GRC stacks; bringing report data into the same workflow shortens time from discovery to owner assignment.
+
+## Import Vendor Access Data for Access Reviews
+
+Access reviews stall when application or vendor exports arrive in formats that do not match the review template. Reformatting CSV and Excel files by hand burns time before any actual review begins.
+
+In Access Reviews, import user access data from a CSV or XLSX file up to 100 MB. Scrut auto-detects headers so you can map Account Identifier (required), Name, Role, and MFA, with a not-available option for optional fields. Preview highlights missing mandatory fields or duplicates before you finalize the import.
+
+Reviewers spend more time deciding on access and less time reshaping source files. Manual transformation of vendor exports remains a common bottleneck in access certification programs; guided field mapping removes that prep step without changing the review itself.
+
+---
+
+## Other Improvements
+
+### Trust Vault
+
+- Description fields support Markdown where indicated by the Markdown symbol, with preview before save and a tooltip link to Markdown syntax help. Formatting options include bold, italics, and ordered or unordered lists, and those descriptions can appear on the Trust Vault portal.
+- Description fields across Trust Vault, including About, Frameworks, FAQs, and Updates, support up to 10,000 characters.
+- When approving a Trust Vault access request, a Document download toggle lets you allow or deny downloads for that user. Global download settings can stay off while a specific user is enabled. Full access allows download of all documents; partial access limits downloads to selected documents. The Approved tab shows whether download is enabled, and you can change it later with Edit. Access-tab tables also gain column selectors with default selections, select all, and reset.
+- Document preview expands in-modal support for spreadsheets (.xlsx, .xls, .csv), email (.eml), PDF (with zoom), images (.jpg, .png, .jpeg), and video (.mp4), with attachment open and download from the preview modal.
+
+### Framework Library
+
+- New Jersey Data Privacy Law (NJDPL / New Jersey Data Protection Act) is available as a framework to help teams organize controls for New Jersey consumer privacy obligations (effective 15 January 2025).
+- Australia Information Security Manual (ISM) mapping reflects the December 2024 ASD release. Required policies in Scrut’s mapping were optimized from 39 to 37 (per Scrut’s published April 2025 framework notes for the same update).
+- CMMC Level 2 mapping updates in Scrut: mapped controls 126 → 145, evidence items 172 → 188, and policies 43 → 44. These figures are Scrut platform mapping counts, not a restatement of the official CMMC Level 2 requirement set (110 NIST SP 800-171 Rev. 2 security requirements).
+
+### Integrations and Notifications
+
+- Sage HR integration syncs employee data for tracking leaves, assignments, and current workforce records used in compliance workflows.
+- Access Review adds integrations for Xero, New Relic, Azure AD, Cloudflare, Confluence, Slack, and Trello so user data can be fetched for review inside Scrut.
+- Scrut Digest can be sent to Slack (public channels, private channels, or groups) from Settings → Notifications, including framework progress, due dates, and pending artifact items.
+- Multi-level reminders for policy, evidence, and vendor review or reassessment can be enabled under Settings → Notifications, with automated reminders 30 days before, 15 days before, 7 days before, and on the review or assessment date.
+
+### People, Training, and Controls
+
+- Training campaigns can embed custom videos via embed codes from external hosting services.
+- The Training Portal shows assigned training tasks up front; tasks stay locked (greyed out) until required policies are accepted, then unlock automatically.
+- Marking a control Out of Scope requires a justification, sets status to Not Applicable, shows the justification on the control details page, records scope changes in the audit log, adds a Scope filter on the control list, supports hover visibility of justification, and allows bulk scope updates.
+- Risk module audit logs use a clearer action-first message format and add logging for Risk Settings actions under Risk Management → Settings → Audit Logs.
+- Tests can show an Unmapped tag when not linked to a control; a Show unmapped tests toggle and No Framework filter help separate mapped compliance metrics from broader security tests. Compliance percentages continue to use mapped items only. Tests also show a last-check timestamp. Additional monitored tests were added for sources including GitHub, Google Workspace, Microsoft Entra, Slack, Snyk, Heroku, and Qualys.
+- In Audit Center, tests under Linked Items open in a side drawer with an export option, so reviewers can inspect test details without leaving the audit context.

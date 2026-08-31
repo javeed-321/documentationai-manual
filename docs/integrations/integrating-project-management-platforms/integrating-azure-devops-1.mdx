@@ -1,0 +1,114 @@
+---
+title: "Integrate Azure DevOps (Create Tickets)"
+description: "Learn how to connect your Azure DevOps account to create issues from Scrut."
+---
+
+Connect Azure DevOps to Scrut to create and manage compliance-related work items directly from the platform.
+
+## What This Integration Does in Scrut
+
+- **Task Management:** Enables you to create project management tickets in Scrut and sync them to Azure DevOps.
+
+## Prerequisites
+
+- An active Azure DevOps account with admin access.
+- A project and team configured in your Azure DevOps organization.
+
+## Permissions and Access Requirements
+
+#### For Azure DevOps
+
+Scrut requests the following OAuth scopes during the integration:
+
+- `vso.graph`: Grants read access to user, group, scope, and group membership information.
+- `vso.project`: Grants read access to projects and teams.
+- `vso.work_write`: Grants the ability to read, create, and update work items and queries, update board metadata, and receive notifications about work item events via service hooks.
+
+#### For Scrut
+
+- Admin access to Scrut or a Contributor role with access to the Integrations module.
+
+## Supported Versions
+
+- Scrut supports Git version control only. Team Foundation Version Control (TFVC) is not supported.
+
+## Integration Setup
+
+### Step 1: Connect Azure DevOps in Scrut
+
+1. From the left navigation panel, select **Integrations**.
+
+2. Navigate to the **Integrations Library** tab, scroll to the **Project Management Platforms** section, and find **Azure DevOps**.
+
+3. Click **Integrate**.
+
+   <Image src="/images/Screenshot-2026-04-24-at-14.28.44.png" alt="" />
+
+4. Click **Connect**.
+
+   <Image src="/images/Screenshot-2026-04-24-at-14.29.02.png" alt="" />
+
+### Step 2: Authorize Scrut Access to Azure DevOps
+
+1. Log in to Azure DevOps using your Azure DevOps credentials or SSO.
+
+<Image src="/images/image-1773229246746.png" alt="Microsoft account picker during OAuth login" />
+
+2. On the permissions screen, review the access Scrut Automation is requesting and click **Accept**.
+
+<Image src="/images/image-1773229345824.png" alt="OAuth permissions screen showing Work items, Project and team, and Graph scopes" />
+
+3. Once authorization is complete, Azure DevOps is successfully connected to Scrut.
+
+<Callout kind="alert">
+  ****Heads Up!****
+
+  To ensure all repositories linked to Git are visible in Scrut, enable **Third-party application access via OAuth** in Azure DevOps before connecting. Go to your **organization name** → **Org Settings** → **Policies** and turn on the toggle.
+</Callout>
+
+<Image src="/images/image-6L1O3JX6.png" alt="Azure DevOps Organization Settings Policies page showing Third-party application access via OAuth toggle" />
+
+### Step 3: \[Optional\] Configure Additional Fields
+
+1. Click the **Configure Additional Fields** button in the top right corner of the Azure DevOps integration page.
+2. Select the fields you want to include when creating work items from Scrut.
+3. Click **Save**.
+
+## What Happens Next?
+
+#### Initial Data Sync
+
+The integration is ready to use as soon as authorization is complete. No initial data sync is required for task management. You can monitor integration activity from the **Audit Log** tab on the Azure DevOps integration settings page in Scrut.
+
+#### Create an Azure DevOps Work Item
+
+You can create an Azure DevOps work item from any of the following compliance modules in Scrut:
+
+- Policies
+- Evidence Tasks
+- Tests
+- Cloud
+- Risk Management
+- Audit → Audit Center → Requests
+- Audit → Audit Center → Findings
+- Audit → Audit Center → Corrective Actions
+- Vulnerabilities → Findings
+
+1. Navigate to the relevant artifact in any of the modules listed above.
+2. Click the three-dots icon at the top-right of the page and select **Create Azure DevOps work item**.
+3. Fill in the details.
+4. Scrut autofills the task name and description based on the compliance item. Edit them as needed.
+5. Select the Team, Priority, Status, Assignee, and Labels.
+6. Click **Create**.
+
+The issue is created in Azure DevOps. You can open it in Azure DevOps to take further action.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Does Azure DevOps support bidirectional sync with Scrut?" default-open="true">
+    No. Scrut supports one-way sync for Azure DevOps (Project Management) work items. Status changes made in Azure DevOps are not automatically reflected in Scrut. See [Task Management Integration Capabilities](/docs/integrations/integrating-project-management-platforms/task-management-integration-capabilities) for a full comparison of sync features across integrations.
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to support@scrut.io or contact your CSM for further assistance.

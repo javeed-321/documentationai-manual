@@ -1,0 +1,125 @@
+---
+title: "Integrate Cal.com"
+description: "Learn how to connect your organization's Cal.com account with Scrut."
+---
+
+The **Scrut - Cal.com** integration fetches user access data, permissions, and role assignments from your Cal.com account and syncs them with the [Access Review](/docs/people/access-review-1/access-review-walkthrough) module. This integration enables your organization to maintain comprehensive visibility over user access rights and streamline periodic access reviews for compliance and security.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  The data synced from Cal.com flows into the **Access Review** module in Scrut.
+</Callout>
+
+## Prerequisites
+
+Before starting the integration, ensure you have the following access and permissions:
+
+### Access
+
+- You must be a Scrut Admin (or Contributor with access to the Integrations module)
+- You must have permissions to generate an API key in Cal.com
+
+### Permissions
+
+Scrut requires **read-only access** to the following data in Cal.com
+
+- User Accounts: View name, email, and user role
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  We recommend logging into your Cal.com account before starting the integration to avoid doing so later.
+</Callout>
+
+## How To Connect Cal.com With Scrut
+
+### Step 1: Fetch API Key from Cal.com
+
+1. Log in to your Cal.com account and click on the dropdown menu beside your name.
+
+2. Click on **My Settings**.
+
+   <Image src="/images/Screenshot-2025-09-08-at-16.55.20.png" alt="" />
+
+3. Scroll to the **Developer** section and click on **API keys**.
+
+   <Image src="/images/Screenshot-2025-09-08-at-16.55.39.png" alt="" />
+
+4. Click **+Add** to create an API key.
+
+5. Name the key as "Scrut" and set its expiry date.
+
+6. Click the **Save** button.
+
+   <Image src="/images/Screenshot-2025-09-08-at-17.00.59.png" alt="" />
+
+7. Copy the API key code, as you won’t be able to see this later. Save the code in a safe location, as you’ll need to enter it in Scrut in the [next step](/docs/integrations/integrating-miscellaneous/integrating-cal-com#step-2-go-to-integrations-in-scrut).
+
+   <Image src="/images/Screenshot-2025-09-08-at-17.01.21.png" alt="" />
+
+**Note:** Refer to this guide from Cal.com for [more information on the API key and what it does](https://cal.com/blog/where-is-my-api-key-and-what-can-it-do).
+
+### Step 2: Go To Integrations in Scrut
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
+
+2. Navigate to the **Integrations Library** tab, and choose **Miscellaneous** in the **Categories** section.
+
+3. Scroll to the **Cal.com** tile and click **Integrate**.
+
+   <Image src="/images/Screenshot-2025-09-08-at-16.40.09.png" alt="" />
+
+4. On the integration page, paste the API key obtained in [Step 1](/docs/integrations/integrating-miscellaneous/integrating-cal-com#step-1-fetch-api-key-from-calcom).
+
+5. Click **Submit**.
+
+   <Image src="/images/Screenshot-2025-09-08-at-17.06.59.png" alt="" />
+
+6. Once authorization is done, you’ll see the “**Connected Successfully**” message and the **Connected** status indicator.
+
+   <Image src="/images/Screenshot-2025-09-08-at-17.07.35.png" alt="" />
+
+## Synchronization Details
+
+- **Initial Sync**: Upon completing the integration, Scrut will start syncing user data from Cal.com. This process typically takes a few hours to complete. Check the Audit Log on the Cal.com integration page in Scrut to review the status.
+
+  <Image src="/images/Screenshot-2025-09-08-at-17.12.13.png" alt="" />
+
+- **Recurring Sync**: After this, Scrut performs the sync once **every 24 hours** to fetch incremental data such as new users, role changes, and permission updates.
+
+- **Manual Sync**: You can also click the **Sync Now** button to trigger an immediate data refresh.
+
+  <Image src="/images/Screenshot-2025-09-08-at-17.12.13-1.png" alt="" />
+
+## Data Fetched from Cal.com
+
+Scrut fetches the following access-related data points from Cal.com:
+
+- User Name
+- User Email
+- User Role
+
+## Viewing Cal.com Data in Scrut
+
+To view the data fetched from your Cal.com account, go to the **People → Access → Overview** tab. On this page, you can see the user details for your Cal.com account.
+
+<Image src="/images/Screenshot-2025-09-08-at-19.35.34.png" alt="" />
+
+You can also create an Access Review (or edit an existing one) and include the Cal.com application in scope. Refer to this guide for step-by-step instructions on [creating an access review](/docs/people/access-review-1/creating-a-new-access-review).
+
+Follow these steps to create a new access review for Cal.com:
+
+1. Go to **People → Access** and click **Create New**.
+2. Enter Review Details: Name, Description, Owner, and Review Days.
+3. In step 2, search for and select Cal.com in the Applications in Scope.
+4. Select **Reviewer** and **Approver**.
+5. Review the details and click **Save Review**.
+
+<Image src="/images/Screenshot-2025-09-08-at-19.36.20.png" alt="" />
+
+From the Access Review page, click Cal.com to view user details in Scrut.
+
+---
+
+If you face any difficulties connecting Cal.com with Scrut, please contact the Scrut support team at support@scrut.io.

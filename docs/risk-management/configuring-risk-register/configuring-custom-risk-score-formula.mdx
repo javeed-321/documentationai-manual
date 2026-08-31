@@ -1,0 +1,294 @@
+---
+title: "Configure Risk Scores & Factors"
+description: "Learn how to define and customize risk score formulas in Scrut."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Growth** and **Scale** plans
+</Callout>
+
+Configuring custom risk scoring formulas in Scrut's [Risk Register](/docs/risk-management/overview-5/understanding-risk-register) is a pivotal step in aligning your risk assessment model with your organization's unique needs. This process involves defining two key components: Factors and the Score (or risk score formula). Let's delve into each of these configurations:
+
+Scrut allows you to define custom risk score formulas that align with your organization’s specific needs. This process involves defining two critical components:
+
+- [Risk Factors](/docs/risk-management/configuring-risk-register/configuring-custom-risk-score-formula#factors)
+- [Risk Scores](/docs/risk-management/configuring-risk-register/configuring-custom-risk-score-formula#scores)
+
+This article provides an in-depth explanation of these two elements.
+
+## Factors
+
+Factors are the input parameters for a risk score formula. They represent the various elements or attributes that you need to consider when assessing risks. For example, it could include:
+
+- **Likelihood of Occurrence:** How probable it is that a particular risk will happen.
+- **Impact:** The potential consequences or damage that could result from the risk materializing.
+- **Control Effectiveness:** An evaluation of how well existing controls or mitigation tasks work on reducing the risk.
+
+For example, if you’re configuring a CIA (Confidentiality, Integrity, Availability) formula, the factors for it would be: Confidentiality (C), Integrity (I), and Availability (A). By identifying and defining specific factors for your organization, you can tailor risk assessment to address the unique requirements of your environment, operations, and potential risks.
+
+### How To Configure Risk Factors
+
+1. Sign in to Scrut and go to **Risk → Risk Management** using the left side panel.
+
+2. Click the **Settings** icon in the top-right corner of the Risk Management page.
+
+   <Image src="/images/Risk-Settings.png" alt="" />
+
+3. Click the **Add Risk Factor** button at the top right of the Factors tab.
+
+4. By default, Scrut includes certain preset factors. If you don’t want to use these preset factors, you can either disregard or delete them, as needed.
+
+   <Image src="/images/Add-Risk-Factor.png" alt="" />
+
+5. Enter factor details:
+
+   - **Title:** Provide a clear and concise name for the factor you are defining. This should give a quick understanding of what the factor represents.
+
+   - **Description:** Optionally, include a brief description that elaborates on the factor. This can help other users understand its significance and context.
+
+   - **Field Criteria**: Select either Inherent or Residual.
+
+     - **Inherent:** Initial risk before any controls are implemented.
+     - **Residual:** Remaining risk after controls and treatment strategies have been implemented.
+
+6. Click **Next**.
+
+   <Image src="/images/image-1771584781165.png" alt="" />
+
+7. Configure the factor range.
+
+   - **Range Name:** Enter a descriptive label that defines a particular range.
+   - **Range Values:** Enter the numeric boundaries that define the limits of each range.
+   - **Color Code:** Assign a distinct color to each factor range to visually distinguish it in risk charts.
+
+<Callout kind="info">
+  **Factor Range Example**
+
+  For a factor related to risk severity, such as Impact, the factor range can be:
+
+  | Factor Range | Range Value | Color |
+  | --- | --- | --- |
+  | Very High | 9 to 10 | Dark Red |
+  | High | 7 to 8 | Light Red |
+  | Medium | 5 to 6 | Orange |
+  | Low | 3 to 4 | Light Green |
+  | Very Low | 1 to 2 | Dark Green |
+</Callout>
+
+8. Click **Add Range** to add more ranges.
+
+   <Image src="/images/image-1771584809151.png" alt="" />
+
+9. Click **Next.**
+
+   <Callout kind="alert">
+     **Heads Up!**
+
+     You cannot edit the range values once created, so please double-check your entries before finalizing.
+   </Callout>
+
+10. Review the information you entered in steps 1 and 2 and click **Save**.
+
+    <Image src="/images/image-1771584837796.png" alt="" />
+
+11. Scrut adds the newly created factor to the Factors table.
+
+<Image src="/images/image-1771584889867.png" alt="" />
+
+## Scores
+
+Once you have defined the risk factors, the next step is to configure the Risk Score. Risk scores are a critical part of your risk management program, providing a standardized, numerical way to understand and prioritize potential risks to your organization. The Risk Score is a formula that quantifies the risk based on the input factors.
+
+### Score Calculation Methods
+
+Scrut supports four score calculation methods, such as:
+
+#### 1: Maximum
+
+Assigns the highest value of all selected risk factors.
+
+**Example**: If you select factors with values \[3, 7, 2, 9\], the result will be 9.
+
+#### 2: Minimum
+
+Assigns the lowest value of all selected risk factors.
+
+**Example:** If you select factors with values \[3, 7, 2, 9\], the result will be 2.
+
+#### 3: Conditional
+
+Uses IF-ELSE conditional rules to calculate the risk score.
+
+**Supported input parameters:** Risk factors and previously calculated risk scores.
+
+**Limitations:** Only numeric fields. String comparisons are not supported.
+
+**Supported operators**
+
+| Category | Operators |
+| --- | --- |
+| **Comparison** | `=`, `!=`, `>`, `<`, `>=`, `<=` |
+| **Logical** | `AND`, `OR`, `NOT` |
+| **Mathematical** | `+`, `-`, `*`, `/` |
+| **Grouping** | ( ) |
+
+**Examples:**
+
+- IF x &lt; y, THEN 1
+- IF x &lt; y, THEN x
+- IF (x + y) &lt; 1, THEN x - z
+- IF (x + y) &lt; z, THEN 1
+- IF risk_score_1 > 5 AND factor_1 &lt; 2, THEN 10
+- IF (risk_score_1 + factor_1) > 10, THEN risk_score_2 \* 2
+
+#### 4: Custom
+
+Defines a formula with factors, scores, constants, and simple math operators.
+
+**Supported Operators:**
+
+- Addition: `+`
+- Subtraction: `-`
+- Division: `/`
+- Multiplication: `*`
+- Exponentiation: `^`
+- Parentheses: `()` for grouping
+
+**Examples:**
+
+- (risk_factor_1 + risk_factor_2) \* 2
+- risk_score_1 ^ 2 - risk_factor_3
+- (risk_score_1 \* 3) / (risk_factor_1 + 5)
+
+#### Rounding Options
+
+You can choose one of the following rounding methods for custom formulas:
+
+- **Standard Rounding:** Rounds risk scores to the nearest whole number. For example, 7.5 rounds up to 8, while 7.4 rounds down to 7.
+- **Round Up:** Rounds risk scores to the next whole number. For example, 7.1 and 7.9 both become 8.
+- **Round Down:** Rounds risk scores down to the previous whole number. For example, 7.1 and 7.9 also becomes 7.
+
+<Callout kind="danger">
+  **Note:**
+
+  - Maximum and Minimum score calculations do not support rounding.
+  - Standard rounding is applied by default for Conditional formulas.
+</Callout>
+
+### How To Configure Risk Scores
+
+1. Sign in to Scrut and go to **Risk → Risk Management** using the left side panel.
+
+2. Click the **Settings** icon on the top right of the Risk Management page.
+
+   <Image src="/images/Risk-Settings.png" alt="" />
+
+3. Go to the Scores tab and click the **+Add Risk Score** button at the top right.
+
+4. By default, Scrut includes certain predefined scores. If you don’t want to use these preset scores, you can either disregard or delete them, as needed.
+
+   <Image src="/images/Add-Risk-Score.png" alt="" />
+
+5. In the first step, you’ll need to select the scoring method and choose the factors that determine the score.
+
+6. Enter the **Score Name**. Provide a clear and concise name for the score you are defining. This should give a quick understanding of what the score represents.
+
+7. For **Field Criteria**, select either Inherent or Residual.
+
+   - **Inherent:** Initial risk before any controls are implemented.
+   - **Residual:** Remaining risk after controls and treatment strategies have been implemented.
+
+8. Select the **Score Calculation Method**. You can choose from: Maximum, Minimum, Conditional, or Custom. To know more about these methods, [see this section](/docs/risk-management/configuring-risk-register/configuring-custom-risk-score-formula#score-calculation-methods).
+
+9. Choose the **Rounding Method**: Standard, Round Up, or Round Down.
+
+10. Click **Validate Formula & Continue**.
+
+    <Image src="/images/image-1771584932801.png" alt="" />
+
+11. Configure the score range.
+
+    - **Range Name:** Enter a descriptive label that defines a particular range.
+    - **Range Values:** Enter the numeric boundaries that define the limits of each range.
+    - **Color Code:** Assign a distinct color to each factor range to make it visually distinguishable in risk charts.
+
+<Callout kind="info">
+  Score Range Example
+
+  | Score Range | Range Value | Color |
+  | --- | --- | --- |
+  | Very High | 21 to 25 | Dark Red |
+  | High | 16 to 20 | Light Red |
+  | Medium | 11 to 15 | Orange |
+  | Low | 6 to 10 | Light Green |
+  | Very Low | 1 to 5 | Dark Green |
+</Callout>
+
+8. Click **Add Range** to add more ranges.
+
+   <Image src="/images/image-1771584953274.png" alt="" />
+
+9. Click **Next.**
+
+   <Callout kind="alert">
+     **Heads Up!**
+
+     You cannot edit the range values once created, so please double-check your entries before finalizing.
+   </Callout>
+
+10. Review the information you entered in steps 1 and 2 and click **Save**.
+
+    <Image src="/images/image-1771584977066.png" alt="" />
+
+11. Scrut adds the newly created score to the Scores table.
+
+    <Image src="/images/image-1771585013851.png" alt="" />
+
+## FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Can you give a few examples of risk score formulas?" default-open="true">
+    Here are a few examples to help you get started:
+
+    1. (Impact \* Likelihood) / 5
+    2. Confidentiality \* Integrity \* Availability
+    3. (Impact \* Likelihood) ^ 0.5
+  </Expandable>
+
+  <Expandable title="How to edit a risk factor?" default-open="true">
+    Go to the **Factors** table in Risk Management → Settings, and click the edit icon in the Actions column of the factor you want to edit.
+
+    <Image src="/images/image-1771585032365.png" alt="" />
+
+    **Note:** You can only modify the following details:
+
+    - Factor name
+    - Factor description
+    - Range names
+    - Color codes for the ranges
+
+    Other fields are not editable. Click the delete icon to remove it permanently.
+
+    <Image src="/images/delete.png" alt="Delete icon" />
+  </Expandable>
+
+  <Expandable title="How to edit a risk score?" default-open="true">
+    Go to the **Scores** table in Risk Management → Settings, and click the edit icon in the Actions column of the score you want to edit.
+
+    <Image src="/images/image-1771585050497.png" alt="" />
+
+    **Note:** You can only modify the following details:
+
+    - Score name
+    - Range names
+    - Color codes for the ranges
+
+    Other fields are not editable. Click the icon to view score calculation and the delete icon to remove it permanently.
+
+    <Image src="/images/fx-sign.png" alt="" />
+
+    <Image src="/images/delete.png" alt="Delete icon" />
+  </Expandable>
+</ExpandableGroup>

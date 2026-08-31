@@ -1,0 +1,215 @@
+---
+title: "November 2025"
+---
+
+## Scrut Innovations November 2025: HITRUST and TISAX Frameworks, Cleaner Multi-Entity Audits, and Faster Vendor Onboarding
+
+**Meta description:** Scrut’s November 2025 release adds HITRUST and TISAX support, entity-scoped audit readiness, prospective vendor workflows, and in-platform VAPT kickoff.
+
+## Introduction
+
+November’s updates widen multi-framework coverage and tighten day-to-day GRC workflows. Teams can prepare for HITRUST CSF e1 and i1 plus TISAX v6.0.3 in the same Frameworks module they already use, keep multi-entity audits inside the right entity boundary, move vendor prospects through a clearer evaluation path, and kick off Vulnerability Assessment and Penetration Testing (VAPT) work without email threads. Smaller improvements cover Teammates in Slack, policy identifiers, GitHub topic scoping, questionnaire exports, and expanded integrations.
+
+## HITRUST CSF e1 and i1 Framework Support
+
+When a customer or partner asks for HITRUST assurance, teams often face a choice that is hard to run in the same system as SOC 2 or ISO 27001 work: start with foundational cybersecurity hygiene, or prepare for a broader implemented-control assessment, while still reusing policies and evidence already collected elsewhere.
+
+Scrut now supports the HITRUST Common Security Framework (CSF) Essentials 1-year (e1) and Implemented 1-year (i1) assessments in the Frameworks module. Teams can scope the relevant control set, connect requirements to policies and evidence, inherit mapped controls from frameworks already in use such as ISO 27001 or SOC 2, track implementation progress on readiness dashboards, and share readiness reports with internal and external stakeholders. HITRUST describes e1 as an entry-level, one-year validated path focused on foundational cybersecurity practices, and i1 as a moderate-assurance, one-year validated path focused on a broader implemented control set.
+
+The practical outcome is one place to prepare for partner-driven HITRUST requests without rebuilding the program in a separate spreadsheet stack. Many third-party risk programs now ask vendors for an e1 or i1 report before deeper r2-level work is on the table, so having both assurance levels available beside existing frameworks shortens the path from contractual ask to structured readiness work.
+
+## TISAX v6.0.3 Framework Support
+
+Automotive suppliers and service providers often need to show information security maturity against OEM expectations before they can handle prototype data, development information, or other restricted supply-chain material. Managing that catalog outside the rest of the compliance program usually means duplicate control tracking and slow re-assessment prep.
+
+Scrut now supports TISAX (Trusted Information Security Assessment Exchange) against the VDA ISA (Verband der Automobilindustrie Information Security Assessment) catalog version 6.0.3 in the Frameworks module. Teams can scope the modules their partners require, such as higher protection needs, prototype protection, and data protection, link requirements to policies and technical documentation, assign owners, track implementation status, and generate readiness reports for stakeholders. VDA ISA 6.0.3 is the current revision of the catalog used as the basis for TISAX assessments under the version 6 transition rules published by ENX and the VDA.
+
+That keeps automotive information security prep in the same operational rhythm as the rest of the GRC program, which matters when OEM questionnaires and re-assessments arrive on short cycles. TISAX remains a widely used mutual-recognition mechanism for automotive supply-chain security assessments, so aligning the in-platform catalog to the current ISA revision reduces version drift between partner expectations and internal tracking.
+
+## Entity-Scoped Multi-Entity Audits
+
+Multi-entity programs often hit the same friction at audit time: an audit opened for one legal entity still surfaces controls, evidence, or findings that belong to another entity. Reviewers then spend cycles filtering noise, metrics look wrong, and the audit trail becomes harder to defend.
+
+Enhanced multi-entity audit support keeps an audit inside the selected entity boundary. When you create an audit for a specific entity, only controls and artifacts for that entity, plus organization-wide items, appear in scope. Control status and audit-readiness percentages are calculated from entity-scoped evidence, and findings and requests can only be created for the audit’s entity so reviewers cannot raise issues against the wrong entity by accident.
+
+Cleaner entity boundaries mean fewer manual filters before an auditor call and reports that match the legal entity under review. Programs that operate multiple subsidiaries or regional entities typically need that separation to keep assurance work accurate as the organization grows.
+
+## Prospective Vendor Onboarding Workflow
+
+Vendor evaluation often starts before a commercial relationship is final, but many registers treat every added company as if it were already an active supplier. That blurs who is still under review, who is live in production, and which questionnaires or mitigation tasks belong to a prospect versus an engaged vendor.
+
+Vendor Management now supports a Prospective vendor status alongside Active. When you add a vendor manually, through an intake form, or from an integration, you can mark the vendor as Prospective (under review for potential engagement) or Active (currently engaged). Prospective vendors show a distinct icon, and teams can still run evaluation workflows such as questionnaires, document collection, and mitigation tracking. Status can be changed from Prospective to Active, or back, when the evaluation outcome is clear.
+
+The result is a clearer pipeline from intake to engagement without inventing a parallel tracker outside Scrut. Structured prospective-versus-active separation is a common need in third-party risk programs that evaluate more vendors than they ultimately onboard.
+
+## In-Platform VAPT Target Onboarding
+
+Starting a Vulnerability Assessment and Penetration Testing (VAPT) engagement used to mean email threads with the customer success manager, incomplete target lists, and details scattered across chat history. Kickoff slowed down whenever a web app, API, or network range was missing from the brief.
+
+Customers using Scrut’s VAPT service can now submit and manage VAPT target details directly in Scrut under Settings > Manage VAPT. Supported target types include web apps, mobile apps, APIs, networks, and source code, each with a purpose-built form. Adding or updating a target notifies the customer success manager, the VAPT team, and selected points of contact, and all targets stay visible in one place for updates and tracking.
+
+Self-serve target intake shortens time-to-kickoff and leaves a clearer record of what was in scope. Security programs that buy testing as a service still need a durable system of record for targets; putting that intake next to the rest of vulnerability work reduces coordination overhead without changing how findings are validated later.
+
+## Teammates Answers in Slack
+
+Compliance questions rarely arrive only inside the GRC platform. They show up in Slack while someone is reviewing a control, drafting a customer answer, or looking for the latest published policy, and the context switch back into Scrut slows the reply.
+
+Teammates is now available through the Slackbot. Users can ask questions in Slack and receive answers grounded in their Scrut profile, published policies, enabled Vault documents, and Scrut’s Help Center, with sources included so the answer can be checked.
+
+Keeping those lookups in Slack reduces the gap between a side-channel question and an evidence-backed answer. AI assistants that cite the organization’s own published compliance materials are increasingly how GRC teams expect to handle first-line questions without opening another browser tab for every ask.
+
+## Permanent Policy IDs
+
+Policy libraries grow quickly, and auditors and internal reviewers often need a stable identifier that survives renames, republishes, and table reordering. Without that, references in tickets, training, and audit workpapers drift toward ambiguous policy titles.
+
+A Policy ID toggle is now available in Policy Settings (off by default). After you enable it and set a custom prefix of up to 10 alphanumeric characters, Scrut assigns a permanent sequential ID to every new and existing policy in the form `[Prefix]-[number]`, ordered by policy creation date. Assigned IDs cannot be edited, deleted policy IDs are not reused, and when the feature is on a Policy ID column appears in the policy table and on the policy detail page. Turning the feature off permanently removes assigned Policy IDs from the database and views, so enablement should be a deliberate admin decision.
+
+Stable identifiers make policy citations in audits and internal workflows less brittle as the library changes. Many compliance programs already treat document numbering as part of change control; bringing that pattern into the policy register keeps references consistent without a separate ID spreadsheet.
+
+## GitHub Topic-Based Integration Scoping
+
+Engineering organizations that already tag repositories with GitHub Topics should not have to re-select hundreds of repos by hand every time the compliance integration scope changes. Manual repo pickers drift as new services appear and old ones are archived.
+
+GitHub integration scoping now supports topics in addition to manual repository selection. Choose one or more GitHub Topics, such as `backend`, `infra`, or `compliance`, and Scrut includes repositories tagged with those topics. An optional setting, “Auto-include future repos matching selected topics,” brings newly created matching repositories into scope automatically.
+
+Topic-based scoping keeps compliance coverage aligned with how engineering already organizes the fleet. For teams running continuous monitoring across large GitHub orgs, that reduces missed repos and repeated admin work as the codebase grows.
+
+## Other Improvements
+
+### Platform and policy workflow
+
+- Questionnaire ZIP export: export a questionnaire with its attachments as a ZIP file; admins receive an email when the export is ready.
+- Attach chat history to support tickets: Teammates chat history can be attached when raising support tickets so resolution starts with fuller context. *(Notion page is video-only; no Slack transcript was provided. Confirm product behavior before publish.)*
+- Effort estimates on policy and evidence tasks: effort estimates help prioritize policy and evidence work. *(Notion page is video-only; no Slack transcript was provided. Confirm fields, units, and where estimates appear before publish.)*
+- Manual policy save mode: Policy Settings includes an Enable Policy Autosave toggle. With autosave off, the inline editor uses an explicit Save button, creates a revision only on Save, prompts on Cancel, and warns before navigating away with unsaved changes. Policy editing remains limited to one user at a time for data integrity.
+
+### Vendor and vulnerability
+
+- Scrut Automation pre-populated as a default vendor on new accounts, including category, tier, inherent risk, and Trust Vault documentation. The entry is editable and follows normal vendor workflows.
+- Vulnerability scan insights now show Scanned Resources (count and list) on the Target Details scan history table. This metadata is not available for older scans.
+
+### Integrations, monitoring, and agent
+
+- New Access Review integrations: Phished, Bitbucket, Kolide, Linear, MongoDB, Fivetran, and Freshdesk.
+- New HRIS integration: Paycom HR.
+- New compliance tests covering separate Development, Test, and Production environments; production servers in private subnets (AWS); MongoDB Atlas API key access not publicly available; and MongoDB Atlas multi-cloud enabled.
+- For every app added in Access Overview (manual, vendor, or integration), Scrut now auto-creates two tests: `[App] Accounts associated with users` and `[App] Access deprovisioned when employees leave`.
+- New Scrut Monitors: AWS list of firewall rules; MongoDB list of firewall rules.
+- Audit logs now cover Groups (create, edit, delete, IDP import, add/remove employees) and Checklists (create, update, delete, with structured detail capture).
+- Scrut Agent diagnostics check VPN configuration, firewall settings, and internet connectivity on first install, every 3 days, and on demand via “Run Diagnostics Again.” Enhanced logging covers user logout sequences, application crashes, and uncaught exceptions. Electron upgraded from 33.2.0 to 39.2.1.
+
+### Schema markup suggestions
+
+- `Article` / `BlogPosting` for the release-notes page (headline, datePublished: 2025-11-27, dateModified on publish, author/publisher Organization: Scrut Automation).
+- `ItemList` of major features (HITRUST frameworks, TISAX, multi-entity audits, prospective vendors, VAPT onboarding, Teammates Slack, Policy IDs, GitHub topic scoping).
+- `SoftwareApplication` references where deep-linking to Frameworks, Vendor Management, Settings > Manage VAPT, Policies, and Integrations help pages.
+
+## Scrut Innovations November 2025: HITRUST i1 and e1, TISAX Assessments, Multi-Entity Audits
+
+**Meta description:** Prepare HITRUST i1 and e1 assessments, scope TISAX v6.0.3 modules, run entity-pure audits, manage prospective vendors, and start VAPT projects in Scrut.
+
+November 2025 expands Scrut Automation's framework library, tightens multi-entity audit boundaries, and streamlines vendor evaluation and Vulnerability Assessment and Penetration Testing (VAPT) kickoff. The sections below answer the buyer questions these releases target. Product polish and coverage expansions appear in the bundled notes at the end.
+
+---
+
+## How do you prepare for a HITRUST CSF i1 assessment without rebuilding controls from scratch?
+
+Moderate-assurance buyers are increasingly asked for a HITRUST Cybersecurity Framework (CSF) Implemented 1-year (i1) report. Teams that already run SOC 2 or ISO/IEC 27001 still face a second mapping project if i1 lives in a separate tool or spreadsheet, which delays the external validation window.
+
+Scrut Automation now includes HITRUST CSF i1 in the Frameworks module with the full i1 control set available for scoping and ownership. Scrut Automation's HITRUST CSF i1 support lets teams inherit mapped controls and evidence already collected for frameworks such as ISO 27001 or SOC 2, then track implementation and remediation progress on readiness dashboards before the assessor window opens. Teams can generate readiness reports for internal stakeholders and partners without exporting a parallel control inventory.
+
+Most programs still maintain HITRUST work in MyCSF or offline trackers while evidence for other frameworks sits elsewhere. Scrut's approach keeps i1 requirements connected to the same policies, risks, and artifacts used across the broader compliance program.
+
+Explore Scrut's [frameworks library](https://www.scrut.io/solutions/all-frameworks) for out-of-the-box standards and control inheritance patterns.
+
+## How do you demonstrate foundational HITRUST e1 assurance for vendor qualification?
+
+Many supplier questionnaires now ask for a HITRUST Essentials 1-year (e1) certification as the minimum bar. Smaller security programs struggle when "foundational controls" are scattered across policies, tickets, and ad-hoc checklists with no clear e1 scope.
+
+Scrut Automation now supports HITRUST CSF e1 in the Frameworks module so teams can scope the e1 control subset, assign owners, and connect requirements to policies, risk processes, and technical documentation. Scrut Automation's HITRUST CSF e1 support provides a platform-native path to track implementation status and produce readiness reports for the one-year e1 cycle. The same workspace can later expand toward i1 or Risk-based 2-year (r2) work without restarting the control library.
+
+Typical vendor-qualification responses still rely on static policy PDFs or a generic security questionnaire. Structuring e1 as a scoped framework with owners and progress tracking makes the assurance claim auditable rather than anecdotal.
+
+## How do you scope TISAX v6.0.3 modules for automotive supplier assessments?
+
+Automotive original equipment manufacturers (OEMs) and tier partners expect a Trusted Information Security Assessment Exchange (TISAX) label against the current Verband der Automobilindustrie Information Security Assessment (VDA ISA) catalogue. Suppliers lose deals when Prototype Protection, Data Protection, or related modules are tracked outside the system that already holds ISO 27001 evidence.
+
+Scrut Automation now supports TISAX v6.0.3 (VDA ISA 6.0.3) in the Frameworks module. Scrut Automation's TISAX v6.0.3 support lets teams scope the specific modules required by automotive partners, link requirements to policies and risk workflows, assign control owners, and generate readiness reports for assessment preparation and re-assessment cycles.
+
+Most automotive suppliers still keep TISAX workbooks separate from their general Governance, Risk, and Compliance (GRC) system. Managing VDA ISA 6.0.3 modules beside existing ISO-aligned controls reduces duplicate documentation when partners ask for the current catalogue version.
+
+See Scrut's [platform overview](https://www.scrut.io/platform/scrut-platform) for multi-framework and multi-entity workspace patterns used alongside TISAX programs.
+
+## How do you run an entity-specific compliance audit without cross-entity evidence noise?
+
+Multi-entity programs often discover the problem mid-audit: a United States ISO 27001 engagement still surfaces controls or artifacts tagged to another legal entity. Metrics look wrong, findings get filed against the wrong scope, and teams spend fieldwork weeks manually filtering sibling noise.
+
+With enhanced multi-entity audit support, Scrut Automation scopes an audit to a selected entity so only that entity's controls and artifacts, plus org-wide items, appear in the engagement. Scrut Automation's entity-scoped audit engine calculates control status and audit-readiness percentages from entity-scoped evidence only, and it constrains findings and requests to the audit's entity so reviewers cannot raise issues against the wrong business unit. Audit reports stay aligned to the defined entity or org-wide scope.
+
+Default multi-entity GRC views frequently share a pooled control set across subsidiaries. Scrut inverts that default by enforcing entity boundaries at audit creation, metrics, and finding workflows.
+
+More context on entity-aware trust surfaces: [How Scrut simplifies multi-entity trust management](https://www.scrut.io/post/how-scrut-makes-multi-entity-trust-simpler-and-smarter).
+
+## How do you track prospective vendors through due diligence before they become active?
+
+Third-party risk teams evaluate several vendor prospects before a contract is signed. When every record looks like an active vendor, under-review suppliers pollute residual risk dashboards, and status conversations happen in email instead of the vendor system of record.
+
+Scrut Automation adds a Prospective Vendor status alongside Active. Scrut Automation's prospective vendor workflow lets teams designate Vendor Status as Prospective or Active when a vendor is added manually, via intake form, or from an integration, then run questionnaires, document collection, and mitigation tasks while the supplier is still under evaluation. Prospective vendors show a distinct icon, and status can convert either direction when evaluation completes.
+
+Most third-party risk management (TPRM) inventories treat every row as an engaged supplier. Separating Prospective from Active keeps evaluation work visible without misrepresenting who is already delivering services.
+
+## How do you kick off a VAPT engagement without email-thread intake?
+
+Starting a Vulnerability Assessment and Penetration Testing (VAPT) project often means clarifying targets over email, waiting for a Customer Success Manager (CSM) to relay details, and reconciling inconsistent attachments across threads. Kickoff slips when a web app, API, or network range is missing from the brief.
+
+For customers using Scrut's VAPT service, Scrut Automation adds a Manage VAPT section under Settings. Scrut Automation's in-platform VAPT onboarding lets teams submit web apps, mobile apps, APIs, networks, and source code through guided, purpose-built forms, notifies the CSM, VAPT team, and selected points of contact (POCs) when targets are added or updated, and keeps all VAPT target records in one organized workspace.
+
+Typical VAPT intake still lives in shared inboxes and spreadsheets. Structured forms with automatic notifications replace that coordination tax for Scrut VAPT customers.
+
+## How do you scope a GitHub compliance integration by topics instead of hand-picking every repository?
+
+Security and compliance teams that connect GitHub often manage hundreds of repositories. Manual repository picklists drift the moment engineering creates a new service repo, especially when the engineering org already tags repos with GitHub Topics such as backend, infra, or compliance.
+
+Scrut Automation's GitHub integration now supports scoping by repositories or by GitHub Topics. Scrut Automation's topic-based GitHub scoping includes all repositories tagged with the selected topics and can optionally auto-include future repos as soon as they are created with those topics in GitHub, so the compliance scope follows engineering taxonomy without a recurring manual audit of the repo list.
+
+Default GitHub connectors usually stop at a static repository multiselect. Topic scope plus auto-include future matching repos is the structural difference for fleets that already organize work with Topics.
+
+## How do you assign permanent policy IDs that auditors can trust across deletions?
+
+Policy libraries lose traceability when identifiers are informal document names, spreadsheet columns, or numbers that get reused after a policy is deleted. Auditors then cannot prove which historical version belonged to which identifier.
+
+Scrut Automation adds an optional Policy ID toggle in Policy Settings. Scrut Automation's Policy ID feature assigns a permanent, sequential identifier in the form `[Your Prefix]-[Sequential Number]` after you enable the toggle and define a custom prefix of up to 10 alphanumeric characters (A-Z, 0-9), generates IDs by policy creation date, prevents any user from editing an assigned ID, and never recycles an ID after a policy is deleted. When enabled, a mandatory Policy ID column appears in the policy table and on the policy detail page; disabling the feature permanently deletes assigned IDs from the database and views, and the toggle is off by default.
+
+Many GRC tools leave policy numbering to external document control systems. Immutable, non-reusable platform IDs keep the audit trail inside the same system that stores policy content.
+
+---
+
+## Platform polish included in this release
+
+### Teammates and collaboration
+
+- Support tickets can attach Teammates chat history so resolution starts from the existing conversation context.
+- Questionnaires export with attachments as a ZIP archive, with an email to admins when the export is ready.
+- Teammates is available in Slack and answers from profile data, published policies, enabled Vault documents, and Scrut's Help Center, with sources returned alongside answers.
+
+### Policy workflow and task prioritization
+
+- Policy and evidence tasks can carry effort estimates so owners prioritize work by estimated load inside Scrut.
+- An Enable Policy Autosave toggle in Policy Settings keeps periodic autosave by default; disabling it switches the inline editor to manual Save, creates a revision only on explicit Save, prompts on Cancel, warns on leave-without-save, and keeps editing to one user at a time.
+
+### Vendor inventory bootstrap and vulnerability scan metadata
+
+- New accounts pre-populate Scrut Automation as an editable default vendor with category, tier, inherent risk, and Trust Vault documentation links.
+- Vulnerability scans expose Scanned Resources (count and list) in the Scan History list on the Target Details page; this metadata is not available for older scans.
+
+### Integrations, monitors, people audit logs, and agent diagnostics
+
+- New Access Review integrations: Phished, Bitbucket, Kolide, Linear, MongoDB, Fivetran, and Freshdesk. New Human Resources Information System (HRIS) integration: Paycom HR.
+- New compliance tests cover separate Development, Test, and Production environments; production servers in private subnets on Amazon Web Services (AWS); MongoDB Atlas API key access not publicly available; and MongoDB Atlas multi-cloud enabled. Every app added in Access Overview also auto-creates tests for accounts associated with users and access deprovisioned when employees leave.
+- New Scrut Monitors: AWS list of firewall rules; MongoDB list of firewall rules.
+- Audit logs now cover group create, edit, delete, identity provider (IdP) import, and membership changes, plus checklist create, update, and delete with structured detail capture.
+- Scrut Agent adds Run Diagnostics for VPN configuration, firewall settings, and internet connectivity on initial install, every 3 days, and on demand; expands logging for logout events, application crashes, and uncaught exceptions; and upgrades Electron from 33.2.0 to 39.2.1.
+
+---
+
+*Source release notes:* [*27 Nov 2025*](https://scrutio.notion.site/27-Nov-2025-2b5ae8dbdb5e80b780c3dccf715b0130)*. Published snapshot reference:* [*Scrut innovations November 2025*](https://www.scrut.io/post/product-updates-november-2025)*. Advanced Risk Scoring appears on the published post but is omitted here because it is not on the source Notion page.*

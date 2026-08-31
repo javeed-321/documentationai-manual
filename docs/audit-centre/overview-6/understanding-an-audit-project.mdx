@@ -1,0 +1,121 @@
+---
+title: "Understand Audit Details Page"
+description: "In-depth walkthrough of the Audit Details page in Scrut."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+The Audit Details page presents everything related to a single audit: its key information, review progress, requirements, findings, requests, corrective actions, and audit logs.
+
+## Access the Audit Details Page
+
+1. Sign in to Scrut and click Audit → Audit Center.
+2. Click the audit you want to open.
+
+This opens the Audit Details page for that audit.
+
+Key Information
+
+At the top of the page, you'll see the audit name and its current status (Upcoming, In Progress, or Completed), along with who created the audit and when.
+
+The details cards show:
+
+Audit Date: The date the audit will occur. Audit Type: Internal or External. Audit Team: The auditors and internal stakeholders collaborating on the audit. Framework: The framework the audit is being conducted against. Entities: The entities the audit applies to, such as subsidiaries, business units, or product lines. Observation Period: The date range you're being audited for. Evidence is scoped to these dates.
+
+Use Mark Audit Complete to close out the audit once review is finished, and the Export dropdown to download the audit report or package.
+
+Audit Review Progress
+
+This card tracks how far along the audit is, shown as a count of requirements accepted out of the total, for example 12/89 Requirements Accepted, with a progress bar. Below the count, a breakdown shows how many requirements currently fall into each status:
+
+Accepted Action Required Needs Review
+
+See Audit Requirement Status below for how these are calculated.
+
+Attachments
+
+Use the Attachments section to upload and manage audit scope, audit plans, audit schedules, and other supporting documents related to the audit. Attachments are visible to everyone with access to the audit.
+
+Tabs
+
+The Audit Details page is organized into six tabs.
+
+Dashboard Gives you a snapshot of audit activity across three cards: Findings Status, Requests Status, and Corrective Action Status. Each card shows the current distribution of items by status, so you can spot what needs attention without opening each tab individually.
+
+Requirements Lists every requirement in scope for the audit, grouped by category (for example, Administrative Safeguards). Each category header shows a count of requirements inside it.
+
+Use the search bar to find a requirement by name, code, category, or description. Use the Requirement Scope filter to narrow requirements by scope. Use the Requirement Status filter to narrow requirements by status. Click Export to download the requirement-to-artifact mapping, along with statuses, as a CSV file. Click a requirement to expand it and view every artifact linked to it, including policies, evidence, and tests. From here, you can add a finding or request if you spot a gap, or mark the requirement as Accepted if everything looks good.
+
+Note: Only auditors and audit leads can mark a requirement as Accepted. Admins and contributors cannot perform this action.
+
+Findings Lists all findings raised during the audit.
+
+Requests Lists all requests raised during the audit.
+
+Corrective Actions Lists all corrective actions created in response to findings and requests for this audit.
+
+Audit Logs Shows a chronological record of every change made across the audit, including who made it and when.
+
+Audit Requirement Status
+
+Each requirement's status is calculated automatically from the status of the artifacts, meaning policies, evidence, and tests, linked to it. You don't set this status directly, except by marking a requirement Accepted yourself.
+
+Accepted: Every artifact linked to the requirement is accepted. This happens automatically once all linked artifacts are accepted, or directly when an auditor or audit lead marks the requirement Accepted. Marking a requirement Accepted also updates the status of its linked evidence and artifacts to Accepted. Action Required: One or more linked artifacts have an open finding or request. This means you, as the auditee, need to take action. Needs Review: One or more linked artifacts are still under review. This means the auditor still needs to act on them.
+
+Heads Up! Only auditors and audit leads can mark a requirement as Accepted. Admins and contributors can view requirement status but cannot change it directly.
+
+Next Reads
+
+Audit Center: Walkthrough Mark an Audit Completed Download the Audit Readiness Report Create an Audit Finding
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.
+
+The **Audit Details** page presents all the information related to a specific audit.
+
+## How to Access the Audit Details Page
+
+1. Sign in to Scrut, click **Audit → Audit Center** on the left navigation panel.
+
+2. Click on any audit to view its details.
+
+   <Image src="/images/Click-on-an-audit-in-Audit-Center.png" alt="" />
+
+3. This opens the Audit Details page, which provides all the information about an audit.
+
+   <Image src="/images/Audit-Details-Page.jpg" alt="" />
+
+## Key Information
+
+<Image src="/images/Key-Audit-Details.png" alt="" />
+
+- **Owner**: The person who created the audit.
+- **Audit Date**: The date on which the audit will occur.
+- **Status**: The current status of the audit.
+- **Audit Team**: Represents the auditors and internal stakeholders who collaborate with you to complete audit activities.
+- **Framework**: Shows the framework on which the audit is carried out.
+- **Entities**: Entities represent the multiple entities, such as subsidiaries, business units, or product lines, to which the audit belongs.
+- **Observation Period**: Represents the Audit period for which you are being audited. The evidence you’ve collected will be scoped based on these dates.
+- **Audit Readiness**: Audit readiness is the percentage of controls compliant with the framework and audit. For a completed audit, this percentage reflects the value frozen at the moment the audit was marked complete, not your organization's current live compliance.
+- **Artifacts:** You will find the Policies, Evidence, and Test added for which an audit needs to be conducted.
+
+## Attachments
+
+<Image src="/images/Audit-Attachments.png" alt="" />
+
+Use the Attachments section to upload and manage audit scope, audit plans, audit schedules, and other supporting documents related to the audit. Attachments are visible to everyone with access to the audit. See Add Audit Scope and Other Attachments for the full list of supported document types and how to manage them.
+
+## Tabs
+
+<Image src="/images/Audit-Tabs.png" alt="" />
+
+Discover even deeper insights by navigating through the following tabs:
+
+- **Findings**: Auditors can list their audit findings by adding them, making it easy to manage everything in one place.
+- **Requests**: Auditors can create requests for any data from admins or other users related to the audit.
+- **Corrective Actions**: Corrective actions created for the audits will be listed along with their details.
+- **Controls**: This tab is present for audits created by controls. It shows the list of controls for which the audit is being done.
+- **Audit Logs**: Go to the Audit Logs tab to review all changes made, including who made them and when. The logs provide comprehensive visibility into every action, ensuring a detailed record of the audit lifecycle.

@@ -1,0 +1,163 @@
+---
+title: "Integrate Supabase"
+description: "Connect Supabase to Scrut to sync user access data for Access Reviews and run automated security and compliance tests against applicable frameworks."
+---
+
+Connect your Supabase account to Scrut to pull in user access data for Access Reviews and run automated tests that check your Supabase project against your applicable compliance frameworks.
+
+## What This Integration Does in Scrut
+
+- **User Access Data:** Fetches user details, roles, and permissions from Supabase for Access Reviews.
+- **Automated Tests:** Runs automated checks that continuously evaluate Supabase for security misconfigurations and compliance checks against your applicable compliance frameworks.
+
+## Prerequisites
+
+- An active Supabase account with access to the project you want to connect
+- Permission to generate personal access tokens in Supabase
+
+## Permissions and Access Requirements
+
+#### For Supabase
+
+- A Personal Access Token (PAT)
+
+#### For Scrut
+
+- Admin access to Scrut (or Contributor with access to the Integration module)
+
+## Data Collected
+
+- User Name: Synced from the user's Supabase profile
+- User Email: Used to match and identify users during Access Reviews
+- User Role: Synced from the user's assigned role in the Supabase project
+
+## Sync Frequency
+
+Data is synced automatically once every 24 hours. You can also manually trigger a sync from the integration settings page.
+
+## Integration Setup
+
+### Step 1: Generate a Personal Access Token in Supabase
+
+1. Log in to your Supabase account and click your profile icon in the top right corner.
+
+2. Select **Account** from the dropdown menu.
+
+   <Image src="/images/Screenshot-2026-08-12-at-11.44.42.png" alt="" />
+
+3. In the left sidebar, click **Access Tokens**.
+
+4. Click **Generate new token**.
+
+   <Image src="/images/Screenshot-2026-08-12-at-11.45.25.png" alt="" />
+
+5. Enter a name for the token, for example Scrut Integration.
+
+6. Set an expiration using the Expires in dropdown, or select Custom to choose a specific date.
+
+7. Click **Generate token**.
+
+   <Image src="/images/Screenshot-2026-08-12-at-11.46.05.png" alt="" />
+
+8. Click **Copy** to copy the generated token.
+
+   <Image src="/images/Screenshot-2026-08-12-at-11.46.36.png" alt="" />
+
+**Important:** Store this token securely and avoid sharing it. You will not be able to view the token again once you leave this screen.
+
+### Step 2: Add the Token to Scrut
+
+1. Log in to Scrut and click **Integrations** in the left sidebar.
+
+2. On the **Integrations Library** page, find the Supabase card and click **Integrate**.
+
+   <Image src="/images/Screenshot-2026-08-12-at-11.47.49.png" alt="" />
+
+3. On the Supabase integration page, paste the token you copied from Supabase into the PAT Token field.
+
+4. Click **Submit**.
+
+   <Image src="/images/Screenshot-2026-08-12-at-11.48.13.png" alt="" />
+
+## What Happens Next?
+
+#### Initial data sync
+
+Once you submit the token, Scrut validates the connection and the integration status changes from Not Connected to Connected. The initial sync begins automatically. Monitor the connection by checking the Audit Log tab on the Supabase integration page.
+
+<Image src="/images/Screenshot-2026-08-12-at-11.48.43.png" alt="" />
+
+#### Review synced data
+
+- Navigate to **People → Access Reviews** module in Scrut to view the user records fetched from Supabase, including name, email address, and role.
+- Navigate to **Tests → Automated Tests** to view the compliance checks that Scrut runs for Supabase.
+
+## Common Errors and Troubleshooting
+
+#### Invalid or Expired Personal Access Token
+
+Cause: The token was revoked in Supabase, expired based on the expiration date set during creation, or was copied incorrectly.
+
+Possible solutions:
+
+- Generate a new personal access token in Supabase and submit it again on the Supabase integration page in Scrut.
+- Check the Expires column on the Access Tokens page in Supabase to confirm the token is still valid.
+
+#### Integration still shows Not Connected after submitting the token
+
+Possible solutions:
+
+- Confirm the token was copied in full with no extra spaces before pasting it into the PAT Token field.
+- Regenerate the token in Supabase and submit it again.
+- Reach out to Scrut support if the status does not update after resubmitting.
+
+#### User access data not appearing in Scrut
+
+Possible solutions:
+
+- Confirm the integration status shows Connected on the Supabase integration page.
+- Check the Audit Log tab for failed sync entries.
+- Wait for the next 24-hour sync cycle, or trigger a manual sync from the integration settings page.
+- Contact Scrut support if the data does not appear after a successful sync.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Can I use a legacy access token instead of generating a new token?" default-open="true">
+    Yes. If you already have a legacy token generated before Supabase introduced scoped tokens, it continues to work until it expires or is deleted. Legacy tokens have a Legacy badge on the Access Tokens page.
+
+    <Image src="/images/Screenshot-2026-08-11-at-9.01.59-PM.png" alt="" />
+
+    If you’re using a legacy token, make sure to:
+
+    - Select project or organization, depending on what access you want Scrut to have.
+
+    - Choose accounts and organization and give read permissions to:
+
+      - Organizations
+      - Organization settings
+      - Organization members
+  </Expandable>
+
+  <Expandable title="Can I use an existing Personal Access Token instead of generating a new one?" default-open="true">
+    Yes, as long as the token has read access to users. Scrut recommends generating a dedicated token for the integration so you can track and revoke it independently.
+  </Expandable>
+
+  <Expandable title="What happens if I revoke the Personal Access Token in Supabase?" default-open="true">
+    The integration stops syncing data. Generate a new token in Supabase and submit it in Scrut to restore the connection.
+  </Expandable>
+
+  <Expandable title="How often does Scrut sync data from Supabase?" default-open="true">
+    Scrut syncs data automatically once every 24 hours. You can also trigger a manual sync at any time from the integration settings page.
+  </Expandable>
+
+  <Expandable title="How do I know if the integration is working?" default-open="true">
+    Check the status on the Supabase integration page in Scrut. A Connected status along with Integration successful entries in the Audit Log tab confirms the integration is active.
+  </Expandable>
+
+  <Expandable title="What happens when my Personal Access Token expires?" default-open="true">
+    The integration stops syncing, and the connection status may change. Generate a new token in Supabase and submit it on the Supabase integration page in Scrut.
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

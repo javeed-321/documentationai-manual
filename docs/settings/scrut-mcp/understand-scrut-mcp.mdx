@@ -1,0 +1,60 @@
+---
+title: "Understand Scrut MCP"
+description: "Learn what Scrut MCP is, how it works, and how it helps you securely interact with your GRC and compliance data using AI-powered tools."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Scrut MCP connects your Scrut compliance program to the AI tools your team already works in, like Claude, Cursor, Codex, ChatGPT, Copilot, Gemini, etc. Instead of copying compliance data into prompts or switching back to the Scrut platform for every lookup, you can ask questions, draft answers, and file evidence directly from your AI workspace.
+
+## What Is MCP?
+
+MCP stands for Model Context Protocol, an open standard that enables AI assistants to connect to external systems and securely retrieve structured data. Instead of each AI tool needing its own custom integration with Scrut, MCP gives every supported tool a standardized way to call Scrut's compliance data.
+
+An MCP server acts as an intermediary between your AI assistant and Scrut. When you ask a question in your AI tool, the assistant calls the right Scrut MCP tool, Scrut returns the data, and the assistant uses it to answer you, all without you leaving your AI workspace.
+
+## Why Use Scrut MCP
+
+Compliance work already happens across many surfaces: your AI tools, spreadsheets, questionnaires, code repos, and the Scrut platform itself. Without MCP, keeping your AI tools in sync with Scrut usually means manually copying information back and forth, which is slow and easy to get wrong.
+
+<Image src="/images/base64-converted-image-1783932430212.png" alt="" />
+
+With Scrut MCP, your AI assistant can:
+
+- Answer questions about your compliance posture using plain language, like which controls still need evidence or when your next audit is due.
+- Draft sourced answers to security questionnaires straight from your published policies, Trust Vault, and Vault documents.
+- Read the full text of a specific policy or evidence document when you need to quote or verify it.
+- File evidence, such as an access review or a config export, without saving it somewhere first and uploading it later.
+- Bring failing cloud test details into your engineering workflow so the person fixing the issue has the context they need.
+
+<Image src="/images/base64-converted-image-1783932467452.png" alt="" />
+
+<Callout kind="alert">
+  Scrut remains your source of truth throughout. MCP brings that context into your AI tools; it doesn't move your compliance program anywhere else.
+</Callout>
+
+## Authentication and Access
+
+Scrut MCP uses OAuth through Auth0. When you connect an AI tool to Scrut, the connection is tied to your own Scrut user account and runs at your existing Scrut role, not a shared or elevated permission level.
+
+This means:
+
+- Your AI assistant can only access what you already have access to in Scrut.
+- You don't need to configure separate MCP-specific permissions. Access follows your existing role.
+- Write actions are limited to uploading files and attaching evidence. Scrut MCP cannot delete or overwrite anything that's already in your compliance program.
+
+### Workspace and Entity Access for Partners and Auditors
+
+If you're a partner or auditor with access to more than one workspace, Scrut MCP reflects that same access. You can switch between workspaces within a single session, without disconnecting and reconnecting for each one you need to review.
+
+Within a workspace, if multiple entities are configured, you can filter artifacts by entity the same way you would on the Scrut platform. Scrut MCP doesn't grant access to any workspace or entity you don't already have. It simply carries your existing permissions across every workspace and entity you're already assigned to.
+
+## Skills
+
+Scrut MCP includes Skills and ready-made workflows that package multiple tools into a single finished job, such as generating a leadership-ready compliance digest or drafting a full questionnaire response with citations. Skills are available from the [Scrut MCP GitHub repository](https://github.com/gomigo-labs/scrut-mcp-grc-skills) and work the same way across Claude, Cursor, and Codex.
+
+Contact support@scrut.io or your CSM for further assistance.

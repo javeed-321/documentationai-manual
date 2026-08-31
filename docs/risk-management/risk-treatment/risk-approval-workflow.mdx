@@ -1,0 +1,115 @@
+---
+title: "Risk Approval Workflow"
+description: "Understand how the risk approval workflow works in Scrut."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Growth** and **Scale** plans
+</Callout>
+
+## Overview
+
+The **Risk Approval Workflow** adds a formal approval step to your risk management process. After the Assignee completes their assessment and treatment, the Approver reviews the risk and either approves or declines it before closing it. This ensures proper validation of risk treatments and strengthens governance within your organization.
+
+#### When the approval workflow is toggled ON
+
+When the risk approval flow is ON, an additional approval step for Risk is introduced. In this step, the assigned Approver reviews and approves the risk before it can be closed.
+
+<Image src="/images/image-773.png" alt="" />
+
+## How to Enable the Risk Approval Workflow?
+
+1. Sign in to Scrut and click **Risk → Risk Management** on the left navigation panel.
+
+2. Click the **Settings icon** on the top right.
+
+   <Image src="/images/settings.png" alt="Settings icon" />
+
+   <Image src="/images/Risk-Settings.png" alt="" />
+
+3. Navigate to the **Configurations** tab and turn on the **Risk Approval Flow** toggle.
+
+   <Image src="/images/Risk-Settings---Configurations.png" alt="" />
+
+Once enabled, all risks will require approval before they can be closed.
+
+## How to Assign a Risk Approver
+
+You can assign an Approver at any time during the risk lifecycle.
+
+1. Navigate to **Risk → Risk Management → Risk register.**
+
+2. Click on the risk you want to assign an Approver to.
+
+   <Image src="/images/Selecting-a-Risk.png" alt="" />
+
+3. Select an Approver from the dropdown menu.
+
+   <Image src="/images/Add-Risk-Approver.png" alt="" />
+
+## How to Send a Risk for Approval
+
+Once you complete the risk assessment and add the Residual Risk, you can send it for approval:
+
+1. Click the **Send for Approval** button.
+2. The Approver receives an email notification to review the risk.
+
+<Image src="/images/Send-for-Approval.png" alt="" />
+
+<Callout kind="alert">
+  **Note:**
+
+  The Send for Approval button is disabled for 24 hours after sending to prevent multiple notifications. Post the 24-hour mark, you can use the Notify Approver button to send a reminder notification to the Approver, if required.
+</Callout>
+
+## For Approvers: Reviewing a Risk
+
+When you receive an approval notification:
+
+1. Click **View Details** in the Notification Center to open the risk details page.
+
+   <Image src="/images/Screenshot-2026-01-30-at-12.28.08.png" alt="" />
+
+2. Review the risk assessment and treatment information.
+
+3. You can choose one of the following actions:
+
+   <Image src="/images/Screenshot-2026-01-30-at-12.29.03.png" alt="" />
+
+### Approve & Close the Risk
+
+1. If the risk assessment and treatment are satisfactory, click **Approve** to accept the risk.
+
+2. In the **Select Recurrence** modal that appears:
+
+   - Choose how often this risk should be reassessed (defaults to **Quarterly**)
+   - Click **Save** to confirm and approve the risk, or **Later** to close the modal without saving
+   - If you close the modal without selecting, the recurrence will automatically be set to **Quarterly**
+
+   <Image src="/images/Screenshot-2026-01-30-at-12.33.08.png" alt="" />
+
+3. Once approved, the risk moves to the **Treated** state.
+
+   <Image src="/images/Screenshot-2026-01-30-at-12.36.55.png" alt="" />
+
+### Decline & Request a Revision
+
+1. If the risk assessment needs revision, click **Decline**.
+
+2. Enter a detailed reason for declining. Provide clear, actionable feedback when declining a risk. A good practice is to explain what’s missing and what needs to be done.
+
+   <Image src="/images/Screenshot-2026-01-30-at-12.30.28.png" alt="" />
+
+3. Once declined:
+
+   - The risk returns to the **Treatment in Progress** state, with the status displayed as declined.
+   - The assignee receives a notification to revisit the risk.
+   - The approver's action buttons are hidden until the risk is resubmitted.
+
+   <Image src="/images/Screenshot-2026-01-30-at-12.31.27.png" alt="" />
+
+## What Happens Next?
+
+The assignee makes the necessary changes and resubmits the risk for approval. This process can be repeated as many times as needed until you’re satisfied with the assessment and treatment.

@@ -1,0 +1,118 @@
+---
+title: "Integrate SAP Success Factors"
+description: "Learn how to connect your SAP SuccessFactors account with Scrut."
+---
+
+SAP SuccessFactors is a human resources management system (HRMS) that covers a wide range of HR functions. Through integrating SAP with scrut platform, we can fetch the employee details in the scrut platform, like Employee Name, email, department, reporting manager, joining date, and exit date.
+
+## Integrating SAP SuccessFactors
+
+### Step 1: Integration in Scrut
+
+1. From the left navigation panel, select Integrations.
+2. Click on **Available**.
+
+<Image src="/images/image-9CXHGH6K.png" alt="" />
+
+3. Scroll to the *Human Resource Information Systems* section and find *SAP SuccessFactors*.
+
+4. Click **Integrate**.
+
+   <Image src="/images/image-LTS0BAA6.png" alt="" />
+
+5. Click **Connect**.
+
+   <Image src="/images/image-B2KCZF9Y.png" alt="" />
+
+SAP SuccessFactors window opens.
+
+<Image src="/images/image-5N2QL0B6.png" alt="" />
+
+### Step 2: Find your SAP SuccessFactors API Server URL
+
+1. To find your API Server URL, go to this [link](https://help.sap.com/docs/SAP_SUCCESSFACTORS_PLATFORM/28bc3c8e3f214ab487ec51b1b8709adc/af2b8d5437494b12be88fe374eba75b6.html).
+
+2. In the listed API Server URLs, search for the environment that matches your subdomain. For example, if your domain is https://salesdemo4.successfactors.com, search for salesdemo4.
+
+   <Image src="/images/Untitled-14.png" alt="" />
+
+3. Copy the entire URL.
+
+In this example, it would be: apisalesdemo4.successfactors.com
+
+4. Enter your SAP SuccessFactors API Server URL into scrut's UI Auth component.
+
+   <Image src="/images/image-5BN9ZY84.png" alt="" />
+
+### Step 3: Find your SAP SuccessFactors Username and Company ID
+
+1. To find your SAP SuccessFactors username, go to the upper right-hand side and click on your profile image to view your username.
+
+<Callout kind="alert">
+  **Note**: The username is not your email address.
+</Callout>
+
+<Image src="/images/Untitled-16.png" alt="" />
+
+2. To find your SAP SuccessFactors Company ID, in the same dropdown menu, click "Show version information." Locate Company ID in the modal that pops up:
+
+<Image src="/images/Untitled-17.png" alt="" />
+
+3. Once you obtain your username (not email) and company ID from the previous step, enter them in Scrut's UI component.
+
+   <Image src="/images/image-N6983XGP.png" alt="" />
+
+### Step 4: Find your SAP SuccessFactors API Key and Certificate details\*\*
+
+1. In your Admin Center, go to Tools, and search for *Manage OAuth2 Client Applications* (If your page looks different, search for Manage OAuth2 Client Applications in the search tool on your homepage).
+
+   <Image src="/images/Untitled-19.png" alt="" />
+
+2. Click **Register Client Application**.
+
+   <Image src="/images/Untitled-20.png" alt="" />
+
+3. Fill out Application Name & Application URL (what actually goes in these fields is not important).
+
+   <Image src="/images/Untitled-21.png" alt="" />
+
+4. Click *Generate X.509 Certificate*. Fill out Common Name (name doesn't matter) and click **Generate**.
+
+   <Image src="/images/Untitled-22.png" alt="" />
+
+5. Once the certificate populates, *download and save it*. You will have downloaded a file called *Certificate.pem*.
+
+   <Image src="/images/Untitled-23.png" alt="" />
+
+6. Click Register (it will have replaced the Generate button).
+
+7. Back on your Manage OAuth2 Client Applications, go to the application you just created and click **Edit**.
+
+   <Image src="/images/Untitled-24.png" alt="" />
+
+8. You will now see an API key listed - this is your Client ID. *Copy and Save this Key*.
+
+   <Image src="/images/Untitled-25.png" alt="" />
+
+9. Open up the "Certificate.pem" file that you downloaded previously in a text editor.
+
+10. Copy only the string between —BEGIN ENCRYPTED PRIVATE KEY——- and —-END ENCRYPTED PRIVATE KEY——-.
+
+<Callout kind="alert">
+  **Note**: Do not copy ——BEGIN ENCRYPTED PRIVATE KEY——and —-END ENCRYPTED PRIVATE KEY——.
+</Callout>
+
+This is your SuccessFactors Private Key.
+
+<Image src="/images/Untitled-26.png" alt="" />
+
+11. Enter your API Key and certificate’s private key into scrut's UI Auth component and hit **Submit**.
+
+    <Image src="/images/image-0DUBC2IJ.png" alt="" />
+
+<Callout kind="info">
+  **Info**:
+
+  - Employee data will start syncing immediately. Incremental data will be synced every 24 hours.
+  - Data can also be manually synced by clicking the three dots and choosing the **Sync Now** option.
+</Callout>

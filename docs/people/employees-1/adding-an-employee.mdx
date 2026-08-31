@@ -1,0 +1,180 @@
+---
+title: "Import & Sync Employee Details"
+description: "Discover the different ways to import your employee information into Scrut."
+---
+
+The **Employee** module in Scrut helps you monitor personnel compliance. The first step to using this module is to **import and sync employee information with Scrut**. You can use any of the three methods:
+
+1. [Integrate With Your HRMS/HRIS](/docs/people/employees-1/adding-an-employee#1-integrate-with-your-hrmshris) (**Recommended**)
+
+2. [Integrate With Your IdP](/docs/people/employees-1/adding-an-employee#2-integrate-with-your-idp)
+
+3. [Import Employees Manually](/docs/people/employees-1/adding-an-employee#3-import-employees-manually)
+
+   - [In Bulk](/docs/people/employees-1/adding-an-employee#in-bulk-via-csv)
+   - [Add a Single Employee](/docs/people/employees-1/adding-an-employee#add-a-single-employee-manually)
+
+This article explains how to use each of these methods.
+
+## #1: Integrate With Your HRMS/HRIS
+
+HRMS/HRIS tools are often the single source of truth for employee information in an organization. **We strongly encourage using this method to import employee information.** Scrut integrates with popular HRIS tools, including Zoho, BambooHR, Rippling, Workday, Keka, FreshTeam, and more, to automatically sync employee data into the platform. For a comprehensive overview of available HRIS integrations, see the [complete list here](/docs/integrations/integrations-overview#5-human-resource-information-systems-hris).
+
+<Callout kind="info">
+  Scrut also offers custom integration with other HRIS tools not listed here. You can connect with your CSM to check feasibility.
+</Callout>
+
+Follow these steps to integrate Scrut with your HRIS/HRMS:
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
+
+2. Click the **Integrations Library** tab and **Human Resource Information Systems (HRIS)** in the **Categories** section.
+
+3. Select your HRIS tool from the list and click **Integrate**.
+
+4. Follow the on-screen instructions or refer to our [integration guides](/docs/integrations/integrations-overview#5-human-resource-information-systems-hris) to complete the process.
+
+   <Image src="/images/Screenshot-2025-05-24-at-19.18.36.png" alt="" />
+
+<Callout kind="alert">
+  **Note:**
+
+  If you’re using an HRIS tool to import employees, Scrut fetches the following data into the People module:
+
+  - Employee name
+  - Email
+  - Joining date
+  - Source (HRIS tool name)
+  - Reporting manager’s name and department (if available in the HRIS tool)
+</Callout>
+
+## #2: Integrate With Your IdP
+
+If you don't use an HRIS, you can import employees into Scrut by integrating with your Identity Provider (IdP). Scrut provides several out-of-the-box integrations with popular IdP tools, including Google Workspace, Azure Active Directory, Okta, and more. For a comprehensive overview of available HRIS integrations, see the [complete list here](/docs/integrations/integrations-overview#2-identity-providers).
+
+<Callout kind="info">
+  Scrut also offers custom integration with other IdPs. Connect with your CSM to check feasibility.
+</Callout>
+
+Follow these steps to integrate Scrut with your IdP tool:
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
+2. Click the **Integrations Library** tab and **Identity Provider (IdP)** in the **Categories** section.
+3. Select your IdP from the list, then click **Integrate**.
+4. Follow the on-screen instructions or refer to our [integration guides](/docs/integrations/integrations-overview#2-identity-providers) to complete the process.
+
+<Image src="/images/Screenshot-2025-05-24-at-19.19.59.png" alt="" />
+
+<Callout kind="alert">
+  **Note:**
+
+  If you’re using an IdP tool to import employees, Scrut fetches the following data into the People module:
+
+  - Employee name
+  - Email
+  - Joining date
+  - Source (IdP tool name)
+  - Reporting manager’s name (if assigned in the IdP)
+</Callout>
+
+<Callout kind="danger">
+  **Note:**
+
+  When both your HRIS and IdP are integrated, Scrut prioritizes the employee data in your **HRIS**. For more info, [see here](/docs/integrations/integration-faqs-troubleshooting#hris-faqs).
+</Callout>
+
+## #3: Import Employees Manually
+
+### In Bulk via CSV
+
+You can use this method to import employees in bulk when you don’t have an HRIS or IdP.
+
+1. [Sign in to Scrut](https://app.scrut.io/) and navigate to **People → Employees** using the left navigation panel.
+
+2. Go to the **All Employees** tab, click the **Add Employee** button, and choose **Import (CSV/XLSX)**.
+
+   <Image src="/images/Add-Employee-Button.png" alt="" />
+
+3. Download the template and copy and paste the employee details into it.
+
+   <Callout kind="info">
+     **Pro Tip!**
+
+     Refer to this section for detailed instructions on [adding data to the template](/docs/people/employees-1/adding-an-employee#tips-for-using-the-import-employee-template).
+   </Callout>
+
+4. Drag and drop the template file, or click to upload it manually.
+
+5. Choose **Employee Groups**. You have two options to assign employee groups:
+
+   - **Use Groups from the Import File:** With this option, employees will be assigned to groups based on the values of the Group column in your template. If any employee’s group information is missing, Scrut will automatically assign them to the **default employee group**. You can edit this assignment later if needed.
+   - **Select Group(s) for All:** This allows you to assign one or more groups to all employees in the template. If you choose this option, any group information from the template will be disregarded.
+
+6. Select the “**Notify employees immediately about new task assignments based on group**” checkbox to alert employees about new task assignments.
+
+7. Click **Import.**
+
+<Image src="/images/image-1766994559454.png" alt="" />
+
+Scrut will process the file and email you once the import is complete.
+
+<Callout kind="info">
+  **Pro Tip:**
+
+  When importing employees manually, if you want to include Reporting Manager details, please share it as a CSV file, and our team can upload it for you.
+</Callout>
+
+#### Tips for Using the Import Employee Template
+
+<Image src="/images/Screenshot-2025-05-24-at-19.26.49.png" alt="" />
+
+1. Do NOT remove the first row, as it contains column headers. Scrut requires this information to process employee details accurately.
+2. Delete the sample content in the second row, and add employee details from this row.
+3. Include each employee's information in a separate row.
+4. Name (Column A) and Email (Column B) are mandatory; other fields are optional.
+5. Joining Date (Column C) is an optional field. If you enter a date, ensure it is in the dd-mm-yyyy format. E.g. 15-02-2025.
+6. You can update the names and group details of existing employees using the import CSV method. However, you cannot change the joining date.
+7. Avoid using extra formatting, such as background colors, when entering employee details in the template.
+
+#### Error Report
+
+If you encounter any errors during the employee import, you will receive a detailed error report via email from Scrut once the process is completed. Download it, review the issues, rectify them, and repeat the import process.
+
+<Image src="/images/Screenshot-2025-05-24-at-19.43.44.png" alt="" />
+
+### Add a Single Employee Manually
+
+Ideally, we do not recommend this method as it’s manual and time-consuming. However, this method can be effective when you need to add individual employee information or update specific employee details.
+
+<Callout kind="success">
+  **Note:**
+
+  If you’ve integrated your HRIS or IdP with Scrut, details of newly onboarded employees will automatically reflect in the People module.
+</Callout>
+
+1. [Sign in to Scrut](https://app.scrut.io/) and navigate to **People → Employees** using the left navigation panel.
+
+2. Go to the **All Employees** tab, click the **Add Employee** button, and choose **Add New Employee**.
+
+   <Image src="/images/Add-Employee-Button.png" alt="" />
+
+3. Fill in the following details:
+
+   - **Employee Name:** Enter the employee’s name.
+   - **Email:** Enter the employee's business (company) email address.
+   - **Joining Date:** Choose the date on which the employee joined your organization.
+   - **Group:** Select the employee group.
+
+4. Click **Save**.
+
+   <Image src="/images/image-1766995185636.png" alt="" />
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Why weren’t all employees imported from the CSV?" default-open="true">
+    If you haven't entered the required details or if there are formatting issues, Scrut cannot import employee information. You'll receive an email with an error report that highlights these issues. Click "View Error Report" to identify and resolve the errors.
+  </Expandable>
+</ExpandableGroup>
+
+If problems persist, please contact [support@scrut.io](mailto:support@scrut.io) for assistance.

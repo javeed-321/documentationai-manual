@@ -1,0 +1,44 @@
+---
+title: "Integrating Fleet"
+---
+
+Fleet integration fetches employees' endpoint/device data to Scrut. This data is displayed in the People Dashboard and the People -> Employee module. The following data is fetched from Fleet:
+
+- Device name
+- OS version
+- Serial number
+- Antivirus Installed(Yes/No)
+- HD Encrypted(Yes/No)
+- Screenlock Enabled(Yes/No)
+
+## Integrating Fleet
+
+1. From the left navigation panel, select Integrations.
+2. Click on **Available**.
+
+<Image src="/images/image-9CXHGH6K.png" alt="" />
+
+3. Scroll to *Mobile Device Management Tools* section and find *Fleet*.
+
+<Image src="/images/image-I9BAHU6G.png" alt="" />
+
+4. Click **Integrate**.
+
+   <Image src="/images/image-L1GANCUO.png" alt="" />
+
+Fleet integration page opens.
+
+<Image src="/images/image-OTTVRBSW.png" alt="" />
+
+5. In *URL* field, enter the full url of your fleet instance (e.g. https://fleet.acme.com)
+6. In API Token field, enter the api token.
+
+<Callout kind="info">
+  **How to generate API Token?**
+
+  Read the following [Fleet Guide](https://fleetdm.com/docs/using-fleet/fleetctl-cli#create-an-api-only-user) to generate API token.
+</Callout>
+
+7. Click on **Submit**.
+
+Integration is successful.

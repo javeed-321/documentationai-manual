@@ -1,0 +1,67 @@
+---
+title: "Auto Fetch Vendor Documents"
+description: "Automatically collect vendor security documents, CAIQ questionnaires, Trust Center links, and public security resources with Scrut Teammates. Learn how to"
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Included in the **Scale** plan
+  - Available in the **Vendor Advanced Add-on** for **Foundation** and **Growth** plans
+</Callout>
+
+Scrut Teammates can automatically collect a vendor's security and compliance documentation in one click. It fetches Consensus Assessments Initiative Questionnaire (CAIQ) documents from the public CAIQ database, and it discovers links to the vendor's public Trust Center, Security page, and other security resources. This saves you from manually hunting for a vendor's public-facing security resources during your assessment.
+
+## Use Scrut Teammates to Collect Vendor Documents and Links
+
+1. Navigate to **Risk → Vendors** and open the vendor you want to assess.
+
+2. On the Vendor Assessment Progress bar, find the **Collect Documents** step and click **Collect Now**.
+
+   **Note:** Scrut Teammates needs the vendor's URL to discover public links accurately. Add the Vendor URL on the vendor's profile before starting a collection if one isn't set yet.
+
+   <Image src="/images/Collect-Vendor-Documents.png" alt="" />
+
+3. In the Collect Vendor Documents window, click **Let AI Collect**.
+
+   <Image src="/images/Let-AI-Collect.png" alt="" />
+
+4. Wait for Scrut Teammates to finish fetching CAIQ documents and scanning the vendor's site for public security and privacy pages.
+
+5. Once the run finishes, the Collect Documents step shows a checkmark and a link showing how many items were collected. Click it to review the auto-fetched documents and links.
+
+   <Image src="/images/Screenshot-2026-07-22-at-10.17.42.png" alt="" />
+
+## Review Auto-Fetched Documents and Links
+
+<Image src="/images/Screenshot-2026-07-22-at-10.18.44.png" alt="" />
+
+Navigate to the **Documents** tab to review and approve the resources you'd like to keep.
+
+- Click the external link icon in the Actions column to open the link in a new tab.
+- Click the delete icon to remove an item you don't want to keep.
+- Use More Filters above the table to narrow down the list.
+
+**Note:** If part of a collection fails, for example, link discovery fails, but CAIQ documents are still fetched successfully, Scrut still adds the successful items to the Documents tab so you don't lose what did come through.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Why didn't Scrut Teammates find any links for this vendor?" default-open="true">
+    The vendor's public site may not have a Trust Center, Security page, or similar public resource, or the Vendor URL on the vendor's profile may be missing or incorrect. Check the Vendor URL field and try again.
+
+    **Note:** Upload [relevant documents manually](/docs/vendor-management/working-on-vendor-document/adding-a-document) or request them directly from the vendor.
+  </Expandable>
+
+  <Expandable title="Can I run a collection again for the same vendor?" default-open="true">
+    Yes, but not immediately. After a successful run, Let AI Collect enters a 24-hour cooldown. It stays visible but disabled, with a tooltip showing when you can run it again. Once the cooldown ends, click Let AI Collect to check the vendor's site for anything new.
+
+    <Image src="/images/Screenshot-2026-07-22-at-11.17.44.png" alt="" />
+  </Expandable>
+
+  <Expandable title="Does the AI-document collection replace documents or links I added manually?" default-open="true">
+    No. Manually added documents and links stay in the Documents table alongside anything Scrut Teammates collects.
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

@@ -1,0 +1,379 @@
+---
+title: "Contributor & Auditor Permissions: Reference Table"
+---
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  This feature is currently in closed Beta. To know more, contact your CSM or support@scrut.io.
+</Callout>
+
+This article documents exactly what each role, Admin, Contributor, and Auditor, can see, edit, and download in every module. Use it to decide which permission level to assign when setting up a user or building a custom role.
+
+## Before You Begin
+
+- Contributors don't get access to Dashboard, Reports, or Settings
+- Auditors don't get access to Vulnerabilities, Dashboard, Task Center, Integrations, Settings, Trust Vault, Security Questionnaire, or Teammates Chat
+- Both are noted as No Access, where relevant
+
+## Task Center
+
+#### Admin: All actions
+
+Download: Yes.
+
+#### Contributor
+
+- Onboarding Flow
+
+  - Contributors can't view the onboarding flow.
+
+- Audit Prep tab
+
+  - Visible if the Contributor has full access to at least one of the Policy, Evidence, Test, or Audit modules.
+  - Frameworks dropdown and the Policy tasks, Evidence tasks, Tests, and Audit Center data shown are based on the Contributor's entity and framework access.
+  - Contributors with full audit access can schedule internal or external audits, download the assessment report (also requires download permission in Audit), and request renewal.
+
+- Continuous Compliance tab
+
+  - Same access logic as Audit Prep.
+  - The AI Evidence Review banner shows only if the Contributor has full access to Evidence.
+
+- My Tasks tab
+
+  - Always visible.
+  - Shows modules and tasks assigned to the Contributor, based on their edit or full access in each module.
+
+#### Auditor: No access
+
+## Frameworks
+
+#### Admin: All actions
+
+Download: Yes.
+
+#### Contributor permission levels
+
+- No Access: Can't access the Frameworks module.
+
+- View: Can view all frameworks within assigned entities, read-only.
+
+  - My Frameworks (all frameworks within assigned entities), Frameworks Library (all frameworks in the library, plus Add Framework), Framework Detail → All Requirements (all requirements, all controls within assigned entities linked to those requirements, all artifacts within assigned entities linked to a control, with control and artifact side panels), Framework Detail → SOA tab, and Framework Detail → Audit Logs.
+
+- Full Access: Can create custom frameworks and edit all frameworks within assigned entities.
+
+  - Create Custom Framework, Add Framework in the library, and on Framework Detail → All Requirements: edit framework name, edit entities (only ones the user has access to), add/import (CSV)/edit/delete requirements, mark requirements in or out of scope, edit justification and implementation details, link/unlink controls (if the user has view all or full access in Controls) and link/unlink artifacts (if view all or full access in Policy/Evidence/Test). On the SoA tab: generate new SoA, edit SoA, and delete SoA (all three also require download permission).
+
+- Download: Export Requirements (CSV), Export Framework Compliance Report (within assigned entities), Download Existing SoA, Generate New SoA (also requires full access).
+
+#### Auditor
+
+- View: My Frameworks (frameworks within assigned frameworks), Frameworks Library, Framework Detail → All Requirements (requirements, linked controls, control and artifact side panels), SOA tab, Audit Logs.
+- Edit: No edit permission.
+- Download: Export Requirements (CSV), Export Framework Compliance Report, Download Existing SoA, Generate New SoA.
+
+## Controls
+
+#### Admin: All actions
+
+Download: Yes.
+
+#### Contributor permission levels
+
+Contributor permission levels: No Access: Can't access the Controls module. View Assigned: Can view only controls assigned to them, read-only. View All: Can view all controls within assigned entities, read-only. Edit Assigned: Can view and edit controls they're assigned to, within assigned entities. View All, Edit Assigned: Can view all controls but edit only the ones assigned to them, within assigned entities. Full Access: Can create, edit, and delete all controls within assigned entities.
+
+View shows: Control Dashboard and Control Table (assigned or all controls depending on level), Control Detail Page (full metadata), Artifacts tab (artifacts within assigned entities, with control status determined dynamically by the artifacts the user can access, and artifact side drawer), Linked Requirements tab (requirements within assigned entities, opened in side drawer), Risks tab (linked risks in a table, risk side panel), and Audit Logs.
+
+Edit Assigned / Full Access add: Add Custom Control, Bulk Delete Controls, Bulk Edit Controls (Control Domain, Function Grouping, Control Scope, Assignee, Entities), and on the Control Detail Page: edit control code, name, description, assignee, entity, control question, control domain, function grouping, and mark in/out of scope. Artifacts tab: link/unlink artifact (requires view all or full access in the source module). Linked Requirements tab: link/unlink requirements (requires full access in Frameworks). Full Access scopes entity edits to entities the user has access to; Edit Assigned is otherwise identical in available actions.
+
+Download: Export Control Table, Export Artifact from the artifact side drawer opened from the control detail page.
+
+Auditor: View: Control Dashboard and Control Table (within assigned frameworks), Control Detail Page (full metadata), Artifacts tab (artifacts shown based on entity and framework access, with linked policy/evidence/test/audit request/finding opened in side panel), Linked Requirements tab, Risks tab (linked risks, side panel), Audit Logs. Edit: No edit permission. Download: Export Control Table.
+
+## Policies
+
+Admin: All actions except approving a policy, requesting revision on a policy, and editing the request revision note, all three of which require the Admin to be the policy approver. Download: Yes.
+
+Contributor permission levels: No Access: Can't access the Policies module. View Assigned: Can view only policies where they're assignee or approver, read-only. View All: Can view all policies within assigned entities, read-only. Edit Assigned: Can view and edit policies they're assigned to as assignee or approver, within assigned entities. View All, Edit Assigned: Can view all policies but edit only the ones they're assigned to, within assigned entities. Full Access: Can create, edit, and delete all policies within assigned entities.
+
+Policy Settings: Contributors can't view policy settings at any level.
+
+View shows: Policy Dashboard and Policy List (assigned or all, per level), Policy Detail Page (full metadata, document/attachment), Comments (view all, add, delete own), Controls & Requirements (linked requirements within assigned entities, opened in side panel), Audit Logs, Tickets (JIRA, etc.), and GitHub Issues (all viewable).
+
+Edit Assigned adds: Policy List: Add Policy, Bulk Edit Policies (Assignees, Entities, Relevance, Approvers, Department, Effort Estimate, Recurrence, Next Review Date), Bulk Approve (new), Bulk Delete, Bulk Publish. Policy Detail Page: edit name, requirement, assignee, approver, entity, recurrence, review date, department, effort estimate, submit for approval (new), mark relevant/irrelevant with justification, clone policy (new), renew (current or new version), ask teammates, launch policy editor, upload/delete attachment, sync/re-sync file from SharePoint or Confluence, notify approver, mark done on a policy gap, refresh gaps, edit policy version, approve policy (if approver), edit policy variable, publish. Comments: add, delete own. Controls & Requirements: link/unlink control. Tickets: create or link existing. GitHub: create or link existing issue.
+
+Full Access is nearly identical to Edit Assigned, with two differences: entity edits are limited to entities the user has access to, and the user can delete all comments (not just their own) instead of only their own.
+
+Download: Export Policy Table, Download Policy Attachments, Bulk Export attachments.
+
+Auditor: View: Policy Dashboard and Policy Table (within assigned frameworks and entities), Policy Detail Page (full metadata, document/attachment), Comments (view all, add, delete own), Controls & Requirements, Audit Logs, Tickets. Policy Settings not accessible. Edit: No edit permission. Download: Export Policy Table, Download Policy Attachments, Bulk Export attachments.
+
+## Evidence Tasks
+
+Admin: All actions except approving an evidence task, requesting revision, and editing the request revision note, all three requiring the Admin to be the evidence task approver. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned, View All, Edit Assigned, View All + Edit Assigned, Full Access. Definitions mirror Policies (assignee/approver-based, entity-scoped).
+
+Evidence Settings: Contributors can't view or edit evidence settings at any level.
+
+View shows: Evidence Dashboard and Evidence List (assigned or all, per level), Evidence Detail Page (full metadata, document/attachment), Scrut Monitors tab (all configured monitors), Automated Tests tab (side panel view, export requires test module download permission), Comments, Controls & Requirements, Audit Logs, Tickets, GitHub Issues.
+
+Edit Assigned adds: Evidence List: Add Evidence, Bulk Edit (Assignees, Approver (new), Entities, Relevance, Effort Estimate, Recurrence, Department), Bulk Delete, Bulk Publish (being retired in favor of Approve), Bulk Approve, Bulk Mark as Complete (new), Bulk Send for Approval (new). Evidence Detail Page: edit name, requirement, assignee, approver, entity, recurrence, review date, department, effort estimate, mark relevant/irrelevant with justification, ask teammates, upload/delete/archive attachment, upload/delete evidence link, connect Google Drive and upload evidence, edit "no action needed" justification, publish/approve (if approver), request revision (if approver), mark as complete (new), send for approval (new), duplicate policy (new). Scrut Monitor: configure, fix (requires integration module permission), delete monitor, delete all attachments. Comments: add, delete own. Controls & Requirements: link/unlink control. Tickets and GitHub: create or link.
+
+Full Access mirrors Edit Assigned, adding: Add Evidence requires full access in Controls, entity edits limited to accessible entities, duplicate evidence task (new), and delete all comments instead of only own.
+
+Download: Export Evidence Table, Download Evidence Attachments, Bulk Export attachments.
+
+Auditor: View: Evidence Dashboard and Evidence Table (within assigned frameworks and entities), Evidence Detail Page, Scrut Monitors, Automated Tests (export requires test download permission), Comments, Controls & Requirements, Audit Logs, Tickets. Edit: No edit permission. Download: Export Evidence Table, Download Evidence Attachments, Bulk Export attachments.
+
+## Cloud
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned Tests & Resources, View All Tests & Resources, Edit Assigned Tests & Resources, View All + Edit Assigned, Full Access (all scoped to assigned entities).
+
+View shows: Dashboard (Resource Summary based on accessible resources; Resource Flagged if view all or full access), Tests Table and Resources Table (explicit assignments plus related items if view assigned, or all within entities if view all), Audit Logs (if view all or full access), Test Detail Page (full metadata), Resources tab on test detail (all resources within assigned entities if the user is the test assignee or has view all/full access; only assigned resources if the user is only a resource assignee), History tab (if test assignee or view all/full access), Comments, Controls & Requirements (linked requirements from accessible frameworks), Tickets, GitHub Issues, Risk tab (linked risks in table, side panel).
+
+Edit Assigned / Full Access add: Bulk assign users, bulk ignore or monitor tests, Test Now, Codefix with Teammates, Ignore/Monitor Test, edit assignee at test level, edit assignee at resource level (Edit Assigned requires being the test assignee; Full Access does not), Ignore/Monitor Resource, add comments and delete own (Edit Assigned) or delete all (Full Access), Add Risk (requires full access in Risk), create or link tickets/issues.
+
+Download: Export Test Table, Export Resource Table, Export Test → Resource Table.
+
+Auditor: View: Dashboard (Resource Summary, Resource Flagged), Tests Table (within assigned frameworks), Resources Table (within assigned entities), Audit Logs, Test Detail Page, Resources tab, History tab, Comments, Controls & Requirements, Tickets, Risk tab. Edit: No edit permission. Download: Export Test Table, Export Resource Table, Export Test → Resource Table.
+
+## Automated Tests
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned, View All, Edit Assigned, View All + Edit Assigned, Full Access, each also subject to the user's access in the underlying module (Policy or Evidence).
+
+View shows: Tests Library not viewable at any level. Automated Tests (explicit assignments plus resource-based assignments if view assigned, or all if view all), Policy Tests and Evidence Tests (assigned or all, based on permission in the underlying Policy/Evidence module), Automated Test Detail Page (full metadata), History (if test assignee or view all/full access), Resources tab (all resources if test assignee or view all/full access; only assigned resources otherwise), Comments, Controls & Requirements, Tickets, GitHub Issues, Risk tab, Audit Logs (if test assignee or view all/full access).
+
+Edit Assigned / Full Access add: Bulk assign users, bulk ignore/monitor tests, bulk set effort estimate (each also requiring full access in the underlying Policy or Evidence module for those test types), Test Now, edit notes and effort estimate (Edit Assigned requires being test assignee; Full Access does not), Ignore/Monitor Test, edit assignee at test and resource level, Ignore/Monitor Resource, comments (delete own for Edit Assigned, delete all for Full Access), Add Risk (requires full access in Risk), create or link tickets/issues.
+
+Download: Export Automated Test Data.
+
+Auditor: View: Tests Library not viewable. Automated Tests, Policy Tests, Evidence Tests (all within assigned frameworks), Automated Test Detail Page, History, Resources, Comments, Controls & Requirements, Tickets, Risk tab, Audit Logs. Edit: No edit permission. Download: Export Automated Test Data.
+
+## Vendor
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned Vendors/Questionnaires/Tasks, View All, Edit Assigned, View All + Edit Assigned, Full Access.
+
+Vendor Settings: not viewable at any Contributor level.
+
+View shows: Vendors Timeline (view timeline, assessment summary and archive justification, skip justifications), Vendors List, Questionnaires, and Mitigation Tasks (assigned or all, per level), Vendor Dashboard (metrics, questionnaire donut chart, vendors by assignee, vendor risk comparison, upcoming vendor for review), Onboarding → Discovered from Integration (requires full access), Onboarding → Added by Intake Form (assigned as reviewer, or all with view all), Vendor Detail Page (dashboard, metadata, questionnaires, mitigation tasks, documents, risk hyperlink where assignee, audit logs), Vendor Detail → Risks (AI-suggested risks, linked risks table with side panel), Questionnaire Detail Page (all questions if vendor/questionnaire assignee; specific questions without average risk score if only a question-level assignee), Mitigation Task Detail Page (metadata, comments, audit logs, vendor and questionnaire click-through to side panel).
+
+Edit Assigned adds: Timeline: skip steps, mark vendor as assessed, reopen from completed. Vendors List: Add/Import Vendor, bulk edit vendor details (except assignees and entities), bulk edit assessment status, bulk mark prospective/active, bulk archive/delete. Intake Form: edit vendor details, reviewer, entities, name, approve/decline, add/remove attachments. Discovered from Integration: add vendor. Vendor Detail Page: edit name, description, assignee, entity, category, tier, recurrence, next assessment date, inherent/residual risk, custom fields, add sub-processor (requires full access in Trust Vault), add/edit/delete POC, change assessment status, mark prospective/active, archive/delete vendor, start AI assessment, create/edit/delete questionnaire (AI or manual), send questionnaire, create/edit/delete mitigation task, add/delete documents, add risk (requires full access in Risk). Questionnaire Detail Page: edit details, send reminder, complete assessment, add/edit/delete question, accept/flag question and undo, add mitigation task, add comment, create risk (requires full access in Risk). Mitigation Task Detail Page: base actions (upload/delete attachments, submit for review, add/delete own comments); governance actions if vendor/questionnaire/question assignee (edit title, description, due date, assignee); approval actions if assignee (request revision, close).
+
+Full Access mirrors Edit Assigned, but bulk edits aren't restricted to non-assignee fields, and Mitigation Task actions (edit title/description/due date/assignee, request revision, close) aren't gated by assignee status.
+
+Download: Download Vendor Documents, Question Attachments, Mitigation Task Attachments; Export Questionnaire (CSV/PDF, requires vendor or questionnaire-level assignee); Export Vendor Table, Questionnaire Table, Mitigation Task Table; Export Risks (requires download permission in Risk).
+
+Auditor: View: Vendors Timeline, Vendors List, Questionnaires, Mitigation Tasks, Vendor Dashboard, Onboarding tabs, Vendor Detail Page, Vendor Detail → Risks, Questionnaire Detail Page (all questions), Mitigation Task Detail Page. Vendor Settings not viewable. Edit: No edit permission. Download: Same list as Contributor Download, minus the assignee requirement note on Export Questionnaire.
+
+## Risk
+
+Admin: All actions except approving or declining a risk, and approving or declining a mitigation task, both requiring the Admin to be the respective approver. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned Risks & Tasks, View All, Edit Assigned, View All + Edit Assigned, Full Access.
+
+Risk Settings: not viewable at any Contributor level.
+
+View shows: Risk Register and Mitigation Task Table (assigned or all, per level), Risk Dashboard (heatmap; risk trend if view all or full access; treatment strategy donut, mitigation task donut, inherent vs. residual risk graph, risk by assignee, risk by department), Risk Discovery (requires full access), Risk Detail Page (metadata, custom fields, treatment strategy, inherent/residual risk), Mitigation Tasks tab, Comments, Controls & Requirements, Tickets, GitHub Issues, Audit Logs.
+
+Edit Assigned adds: Risk Register: Add/Import Risk, bulk delete/reset/close/monitor, bulk edit (except assignees and entities). Risk Detail Page: edit name, assignee, category, recurrence, department, entities, application name, link/unlink assets (requires view all or full access in Asset Management), edit approver, custom fields, add inherent risk, link/unlink controls, add/edit treatment strategy, add residual risk, approve (if approver), notify approver, monitor, reset, close. Mitigation Tasks: create, delete. Comments: add, delete own. Controls & Requirements: link/unlink within assigned entities. Tickets/GitHub: create or link. Mitigation Task Detail: base actions available to any user (upload/delete attachments, submit for approval, add/delete own comments); governance actions restricted to the risk assignee or approver (edit title, description, due date, department, assignee, approver, link/unlink controls); approval actions if mitigation task approver (approve, decline).
+
+Full Access mirrors Edit Assigned, with bulk edits covering all fields, entity edits scoped to accessible entities, and deleting all comments instead of only own; governance and approval actions on mitigation tasks aren't gated by assignee/approver status.
+
+Download: Risk Report (shows only risks the user can access), Risk Table Export, Mitigation Task Table Export, Mitigation Task Attachments.
+
+Auditor: View: Risk Register and Mitigation Task Table (within assigned entities), Risk Dashboard (full set, unrestricted by view level), Risk Discovery, Risk Detail Page, Mitigation Tasks tab, Comments, Controls & Requirements, Tickets, GitHub Issues, Audit Logs. Risk Settings not viewable. Edit: No edit permission. Download: Risk Report, Risk Table Export, Mitigation Task Table Export, Mitigation Task Attachments.
+
+## Vulnerabilities
+
+Admin: All actions except the following root-user-only actions: Trigger Scan, Verify PTaaS finding, Discard PTaaS finding, Close PTaaS finding, Reopen PTaaS finding, Upload Reports, Add PTaaS finding. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned Findings, View All Findings, Edit Assigned Findings, View All + Edit Assigned, Full Access (full access also allows adding targets and importing vulnerabilities).
+
+Vulnerability Settings: not viewable at any Contributor level.
+
+View shows: Findings dashboard (view all permission only) and findings list (assigned or all), Findings Detail Page → Scan Findings (metadata and scan findings), Comments, Expert Advisory tab (PTaaS findings only), GitHub Issues, Risks tab, Audit Logs, Targets in left nav (requires view all, full access, or view all + edit assigned), Third-Party Scans (assigned or all vulnerabilities and risks, per the user's Vulnerabilities and Risk module permissions).
+
+Edit Assigned adds: Findings: Create JIRA ticket, Bulk Create JIRA tickets, Bulk Assign Users, Bulk Ignore Findings, Add Risk (requires full access in Risk). Findings Detail Page: edit assignee, ignore finding, create ticket, add risk, submit for verification (PTaaS only). Scan Findings: create ticket, ignore/undo ignore finding resource, add risk. Comments and Expert Advisory: add, delete own. GitHub: create or link. Targets: not viewable in left nav. Third-Party Scans: create tickets, import vulnerabilities, bulk assign, ignore/undo ignore, add risk.
+
+Full Access mirrors Edit Assigned, adding: submit for verification on scan findings, delete all comments instead of only own, Targets: add/edit/delete target and start scan.
+
+Download: Export Vulnerability Report.
+
+Auditor: Auditors can't be given access to this module.
+
+## Vault
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View All Folders and Files, Full Access.
+
+Vault Settings: not viewable at View level.
+
+View shows: All files and folders within assigned entities, audit logs.
+
+Full Access adds: Vault Settings (create/edit/delete tags), create folder, upload file, edit or delete folder/file name (single or bulk), bulk move, enable/disable AI readability, edit entities for files, manage tags.
+
+Download: Download single file/folder, bulk download.
+
+Auditor: View: All files and folders within assigned entities, audit logs. Edit: No edit permission. Download: Download single file/folder, bulk download.
+
+## Trust Vault
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View Only, Manage Access Requests & Subscribers, Full Access.
+
+View shows: Dashboard, Overview content, Access Requests (approved/declined/pending), Subscribers, Customer Activity, Audit Logs, all within assigned entities. Trust Vault Settings not viewable at this level.
+
+Manage Access Requests & Subscribers adds: Approve/decline pending requests, edit/delete approved users, resend invitation email, delete/approve declined users, add user, add/delete subscribers. Trust Vault Settings still not viewable or editable.
+
+Full Access adds: Trust Vault Settings (edit branding, custom domain, NDA template, additional settings, auto-approve, enable/disable multi-entity feature if org-wide access, enable/disable individual entities the user has access to, edit default entity if org-wide access, view audit logs), Overview tab (edit About, add/edit/delete framework, control category, controls, sub-processor, FAQ, updates, enable/disable AI readability).
+
+Download: NDA download (Access tab), download in Overview tab, download Customer Activity.
+
+Auditor: Auditors can't be given access to this module.
+
+## Audit Center
+
+Admin: All actions except, on the Request/Finding tab, creating, importing, editing, or deleting requests/findings, and the governance and approval actions (edit description, assignee, department, nature of finding, entity, link/unlink control; request revision; close), all of which require the Admin to be the audit approver. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned Audits/Requests/Findings, View All, Edit Assigned, View All + Edit Assigned, Full Access.
+
+View shows: Audits, Requests, Finding Table, and Corrective Actions (assigned or all, per level, including cascading access from assigned audits, requests, or findings), Audit Detail Page (metadata, completion graph, requirements and controls with side panel and "Go to Requirement/Control/Artifact" links where accessible, all requests, findings, corrective actions with side drawer, audit logs), Request/Finding Detail Page (metadata, uploaded artifacts, linked items with side panel and "Go to Artifact" link, corrective actions with side drawer, comments, requirements, tickets, audit logs).
+
+Edit Assigned adds: Add Audit (by control or framework), edit audit details, edit attachments, delete audit, clone audit (new). Audit Detail Page: edit audit, audit team, audit approvers, delete audit, mark completed (if audit approver). Controls tab: link/unlink controls. Request/Finding tab (only if audit approver): create, import, edit, delete. Request/Finding Detail Page: base actions for any user (upload/delete artifact, link/unlink artifact from accessible artifacts, create artifact if full access in artifact module, create/delete corrective action if full access in CA module, submit for review, add/delete own comments, create/link JIRA ticket); governance actions restricted to the audit approver (edit description, assignee, department, nature of finding, entity, link/unlink control if full access in Controls); approval actions restricted to the audit approver (request revision, close).
+
+Full Access mirrors Edit Assigned, with entity-scoped additions (Add Audit by control or framework requires view all or full access in the respective module), and deleting all comments instead of only own.
+
+Download: Export Audit Report, Export Audit Package, Export Request/Finding Table, Download Request/Finding Attachments, Download Audit Attachments, Download artifact attachments from the artifact side drawer.
+
+Auditor: View: Audits (assigned as approver, within assigned entities), Requests, Finding Table, Corrective Actions (all within assigned audits), Audit Detail Page (same structure as Contributor, with corrective actions opening in a detail page rather than a side drawer), Request/Finding Detail Page. Edit: Add Audit (by control or framework), edit audit details including assignee, approvers, and team, delete audit, clone audit (new), mark completed, edit audit attachments (if added to the audit project). Controls tab: link/unlink. Request/Finding tab (if added as audit approver): create, import, edit, delete all. Request/Finding Detail Page (if added as audit approver): edit description, assignee, department, nature of finding, entity, link/unlink control (frameworks the user has access to shown in the modal); base actions available to any auditor (upload/delete artifact, link/unlink artifact, create artifact, create/delete corrective action, submit for review, add/delete own comments, create/link ticket); request revision and close (if added as audit approver). Download: Export Audit Report, Export Audit Package, Export Request/Finding Table, Download Request/Finding Attachments, Download Audit Attachments, Download artifact attachments from the side drawer.
+
+## Corrective Action
+
+Admin: All actions except approving or requesting revision, both requiring the Admin to be the CA approver. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned, View All, Edit Assigned, View All + Edit Assigned, Full Access.
+
+Corrective Action Settings: not viewable at any Contributor level.
+
+View shows: Corrective Actions list (assigned or all, including cascading access from assigned audits or requests/findings), CA Detail Page (metadata, audit finding click-through to side panel, attachments, custom fields), Comments, Controls & Requirements, Audit Logs, Tickets.
+
+Edit Assigned adds: Add/Delete Corrective Action. CA Detail Page: edit name, description, non-conformity description, root cause, preventive action, audit notes, entities, assignee, approver, due date, criticality rating, detection date, custom fields, add/delete attachment, submit for review, approve/request revision (if approver). Comments: add, delete own. Controls & Requirements: link/unlink control. Tickets: create or link.
+
+Full Access mirrors Edit Assigned, adding Corrective Action Settings (add/edit/delete custom fields, view audit logs), entity edits scoped to accessible entities, link/unlink control requiring full access in Controls, and deleting all comments instead of only own.
+
+Download: Export CA Table, Download attachment.
+
+Auditor: View: Corrective Actions list (within assigned audits), CA Detail Page, Comments, Controls & Requirements, Audit Logs, Tickets. Settings not viewable. Edit: No edit permission. Download: Export CA Table, Download attachment.
+
+## Employees
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View All, Full Access.
+
+View shows: Dashboard, all employees list, Employee Detail Page (full data). Employee Settings not viewable.
+
+Full Access adds: Employee Settings (view and edit, including groups and checklist), all actions on All Employees and Employee Detail Page (add/import employee, bulk actions, etc.) except Promote to Platform Users, which is Admin-only.
+
+Download: Export Employees.
+
+Auditor: View: Dashboard, all employees, Employee Detail Page. Settings not viewable. Edit: No edit permission. Download: Export Employees.
+
+## Training Campaigns
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View All, Full Access.
+
+View shows: All training campaigns.
+
+Full Access adds: All actions, including add/edit/delete campaigns.
+
+Auditor: Referred to as Security Awareness in the Auditor tab. View: All training campaigns. Edit: No edit permission.
+
+## Access Reviews
+
+Admin: All actions except approving or declining an application review, both requiring the Admin to be the application approver. Download: Yes.
+
+Contributor permission levels: No Access, View Assigned Access Reviews & Applications, View All, Edit Assigned, View All + Edit Assigned, Full Access. The Owner field can also show Contributors, not just Admins.
+
+View shows: Reviews tab (explicit assignments plus reviews of assigned applications if edit assigned, or all if view all), Applications tab (if view all or full access), Access Chart tab (all employees, if view all or full access), Reviews Detail Page (review details, timeline, access overview; all applications and documents if the user is the access review owner or has view all/full access; only their own applications and uploaded documents if they're an application reviewer or approver).
+
+Edit Assigned adds: Reviews tab: add, clone, cancel, archive, delete a review. Review Detail Page, as Access Review Owner: edit details except review name and owner, add/remove applications, add/edit reviewer and approver, send reminder, extend review, conclude review, plus everything a reviewer/approver can do, cancel or archive the review. As Application Reviewer or Approver: add/delete attachment, add new user, upload user access list, add roles, approve/modify/revoke user access, create PMS ticket, send for approval, approve or decline (if approver); in the Applications tab, only apps where the user is reviewer are shown.
+
+Full Access mirrors the Owner-level actions above without the assignee restriction, and the Applications tab additionally allows adding a custom application, deleting an application, marking managed/restricted/ignored (new), updating reviewer (new), and notifying users (new). Review Detail Page edits include the review name and owner.
+
+Download: Export Access Review (requires being the access review owner).
+
+Auditor: View: Reviews (all), Overview (all applications), Access Matrix (all employees), Reviews Detail Page (review details, timeline, access overview, all applications, all documents). Edit: No edit permission. Download: Download Access Review.
+
+## Asset Management
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, View All, Full Access.
+
+View shows: All assets.
+
+Full Access adds: Edit asset details, add/import asset, delete asset, assign asset owner, mark/unmark as critical, ignore/monitor, add risk (requires full access in Risk).
+
+Download: Export assets.
+
+Auditor: View: All assets. Edit: No edit permission. Download: Export assets.
+
+## Integrations
+
+Admin: All actions. Download: Yes.
+
+Contributor permission levels: No Access, Full Access. There's no view-only tier for this module.
+
+Full Access grants all actions: Integrate, Disconnect, Configure Scope, Sync Now.
+
+Auditor: No access.
+
+## CMD + K Search
+
+Admin: All actions. Download: Yes. Contributor: Always shown. Search results are based on the user's underlying module permissions and data access. Auditor: Always shown. Same logic as Contributor.
+
+## Teammates Chat
+
+Admin: All actions. Download: Yes. Contributor: Always shown. Teammates answers based on help center documentation, plus Policy, Trust Vault, and Vault content if the Contributor has view all or full access to those modules. Auditor: No access.
+
+## Security Questionnaire
+
+Admin: All actions. Download: Yes.
+
+Contributor: To get any access to this module, the Contributor must already have View All or Full Access in Policy, Trust Vault, and Vault.
+
+Permission levels once that prerequisite is met: No Access, View Assigned Questionnaire, View All Questionnaires, Edit Assigned Questionnaire, View All + Edit Assigned, Full Access.
+
+Autofill Sources and Answer Library (Admin/Manager) are not viewable at any Contributor level.
+
+View shows: Questionnaire List (assigned, including questions assigned, or all, per level, within assigned entities), Questionnaire Detail Page (all questions if questionnaire-level assignee, specific questions if question-level assignee), Audit Logs tab (if questionnaire-level assignee), Chrome Extension (view and use, requires full access).
+
+Edit Assigned and Full Access (identical action sets): Create in Scrut, import via Chrome extension, edit/delete questionnaire, add/edit/delete question and accept all answers (if questionnaire reviewer), autofill with Scrut AI (if reviewer), update reviewer (if reviewer), add/edit answer, add attachment, accept single answer, regenerate answer, add to Trust Vault FAQ (requires full access in Trust Vault), add to Answer Library. The only difference between the two levels is Chrome Extension access: Edit Assigned can't use it; Full Access can.
+
+Download: Export Questionnaire.
+
+Auditor: No access.
+
+## Dashboard, Reports, Settings
+
+Admin: All actions on all three. Download: Yes. Contributor: No access to any of the three; these stay Admin-only. Auditor: No access to Dashboard or Settings. Reports is visible to Auditors with module-specific gating (see below); Trust Vault, Security Questionnaire, and Teammates Chat also remain No Access for Auditors.
+
+## Reports (Auditor detail)
+
+Always shown to Auditor, but individual reports have their own requirements: Compliance Summary: Admin only. Framework Compliance: requires download permission in Frameworks; the framework dropdown shows only frameworks the user has access to. Cloud Security: requires download permission in Cloud; shows tests the user has access to. Vendor Risk Assessment: requires download permission in Vendor; the vendor dropdown shows only vendors the user has access to. Audit Readiness: requires download permission in Audit; the audit dropdown shows only audits the user has access to. Risk Report: requires download permission in Risk; the entity dropdown shows only entities the user has access to. Application Security Report: Admin and Contributors only, not Auditors.
+
+---
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

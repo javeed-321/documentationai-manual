@@ -1,0 +1,165 @@
+---
+title: "Employees Module: Walkthrough"
+description: "Overview of the People → Employees module and its key features and functionalities."
+---
+
+This guide will help you navigate the **People → Employees** module and understand its key features and functionalities.
+
+## What is the Employee Module?
+
+The **Employee module** in Scrut provides a centralized location to monitor and manage compliance status across your entire workforce. It allows HR, compliance, and security teams to:
+
+- Streamline employee onboarding, offboarding, and training
+- Track the compliance status of all personnel (full-timers, part-timers, interns, contractors, etc.)
+- Identify individuals who require follow-up action
+- Maintain employee-related evidence and compliance data for audits
+
+## Getting Started
+
+To access the Employee module, sign in to Scrut and navigate to **People → Employees** from the left navigation panel. The Employee module has two primary tabs: **Overview** and **All Employees**.
+
+<Image src="/images/People---Employees-Module.png" alt="" />
+
+## Overview Tab
+
+The Overview tab gives you an at-a-glance view of your organization's compliance status across key employee activities.
+
+<Callout kind="alert">
+  **Note:**
+
+  The Overview tab displays data for Active employees only. An employee is considered as **Active** if they meet these criteria:
+
+  - They are Personnel (not a system or bot)
+  - They are part of your organization and have not been offboarded in Scrut
+</Callout>
+
+### Key Metrics
+
+<Image src="/images/image-1767886355072.png" alt="" />
+
+At the top of the page, you'll find status cards showing completion metrics for critical compliance tasks:
+
+- **Employees with Pending Tasks**: Total number of employees with outstanding action items
+- **Install Monitoring Agent**: Count of employees who have installed the recommended monitoring agent on their device
+- **Install Password Manager**: Count of employees who have installed the recommended password manager on their device
+- **Device Security**: Number of employees who meet your required device security requirements (antivirus, hard drive encryption, screen lock)
+- **Background Checks**: Count of employees for whom background checks are completed
+
+**Note:** If the Scrut Agent data has not been synchronized with the platform for more than 15 days, tasks related to Install Monitoring Agent and Device Security will be marked as "Pending."
+
+### Group Filter
+
+Use this filter to check your employees' task completion status by group and metric.
+
+<Image src="/images/Screenshot-2026-01-09-at-12.34.36.png" alt="" />
+
+### Compliance Charts
+
+Two pie charts provide visual insights into your team's compliance performance:
+
+- **Policy Acceptance Rate**: Shows the number of employees who have accepted the company policies
+- **Employee Campaign Completion Rate**: Displays the completion rate for training and awareness campaigns
+
+## All Employees Tab
+
+The **All Employees** tab is your comprehensive workspace for viewing, filtering, and managing your entire workforce.
+
+### Employee Status Cards
+
+You can filter your employee list by these statuses:
+
+<Image src="/images/Employee-Statuses.png" alt="" />
+
+- **Active:** Employees currently employed and active within the organization.
+- **Offboarding Needed:** Employees who have been terminated but haven't completed the offboarding process yet. Scrut automatically notifies admins to upload required documents, such as exit interviews and final paycheck details.
+- **Offboarding Completed:** Employees who have finished all offboarding requirements. You have uploaded all the required documents and clicked the “Complete Offboarding” button. Once you do this, Scrut marks them as ex-employees.
+- **Non-Personnel:** Entities that aren't individuals but still require compliance tracking, such as service accounts or system users.
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  The status cards are interactive. Clicking on them provides a filtered view of employees belonging to a specific status.
+</Callout>
+
+### Employee Table
+
+<Image src="/images/Employee-Table.png" alt="" />
+
+The central table displays detailed information for each employee, including:
+
+- **Name and email address:** The employee's full name and work email address
+- **Employee status:** The current employment state (Active, Offboarding Needed, Offboarding Completed, or Non-Personnel)
+- **Groups:** The organizational groups the employee has been assigned to in Scrut for targeted compliance tasks
+- **Joining date and exit date:** The employee's hire date and, if applicable, the date they left or will leave the organization
+- **Task status:** The number of checklist tasks the employee has completed and the number of those remaining
+- **Department:** The business unit or department where the employee works within the organization
+- **Source:** The origin of the employee's data, indicating whether it was synced from HRIS, IDP (Identity Provider), or entered manually
+- **Last Contact:** The most recent time Scrut connected to the employee’s device.
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  Use the column selector to customize which data points are visible in your table view. You can quickly locate specific employees by typing their name or email address into the search bar at the top of the table.
+</Callout>
+
+### Filters
+
+<Image src="/images/image-1767941171698.png" alt="" />
+
+You can refine the employee table by clicking the **Filters** button at the top and applying these filter criteria:
+
+- **Employee Source**: Filter by data source (integration or manual entry)
+
+- **Department**: View employees from specific departments
+
+- **Task Status**: Filter by task progress:
+
+  - Ongoing tasks due
+  - Ongoing tasks completed
+  - Offboarding tasks due
+  - Offboarding tasks completed
+  - No tasks assigned
+
+- **Employee Groups**: View employees belonging to specific groups
+
+- **Policy Acceptance**: See who has accepted company policies (due/completed)
+
+- **Installed Monitoring Agent**: Check the monitoring agent installation status
+
+- **Installed Password Manager**: Check password manager installation status
+
+- **Device Security**: View employees who have completed all required device checks (antivirus, hard drive encryption, screen lock)
+
+- **Training Campaigns**: Filter by campaign completion status
+
+- **Background Checks**: View background check completion status
+
+- **Installed Required Software**: Check mandatory software installation status
+
+- **Access Removal**: Filter by access removal status for monitored/unmonitored applications
+
+- **On Leave**: Identify employees currently on leave
+
+- **Device Patch Installed**: View employees who have installed the required device patch on their system
+
+### Bulk Actions
+
+<Image src="/images/Bulk-Actions---Employee-Table.png" alt="" />
+
+Manage multiple employees simultaneously with these bulk action tools:
+
+- **Group Actions:** Add or move multiple employees to specific groups in one action.
+
+- **Promote to Platform Users:** Convert one or more employees into Scrut platform users. You'll need to assign their department and role during this process. **Note:** Only employees with "Active" status can be added as Scrut users.
+
+- **Terminate:** Process termination for multiple employees at once. Enter the exit date to complete the action. Scrut automatically updates their status to "Offboarding Needed."
+
+- **Complete Offboarding:** Complete offboarding for multiple employees in a single action.
+
+  **Note:** This option is only available when every selected employee is in the Offboarding Needed status.
+
+- **Mark as Non-Personnel:** Designate multiple entities as non-personnel that don't require compliance tracking.
+
+- **Send Reminder:** Send bulk reminders to selected employees about outstanding tasks and pending actions to help meet important deadlines.
+
+- **Export:** Download detailed information for selected employees to an external file.

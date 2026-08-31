@@ -1,0 +1,100 @@
+---
+title: "Install Scrut Agent for macOS"
+description: "Learn how to install the Scrut Agent for macOS."
+---
+
+## Steps to Install Scrut Agent on macOS
+
+Follow these steps to download and install the Scrut Agent on macOS.
+
+1. Download the Scrut Endpoint Agent app.
+
+   - To download the latest version of the app, log in to the [Scrut Employee Training Portal](https://app.scrut.io/employee-campaign) and click **Get Started.**
+
+     <Image src="/images/Install-Scrut-Agent-in-Training-Portal.png" alt="" />
+
+   - Alternatively, you can also download the app by clicking this link:
+
+     **For macOS**:
+
+     [https://scrut-agent-artifact.s3.ap-south-1.amazonaws.com/Scrut+Endpoint+Agent-1.5.7.dmg](https://scrut-agent-artifact.s3.ap-south-1.amazonaws.com/Scrut+Endpoint+Agent-1.5.7.dmg)
+
+     **For Mac M series:**
+
+     [https://scrut-agent-artifact.s3.ap-south-1.amazonaws.com/Scrut+Endpoint+Agent-1.5.7-arm64.dmg](https://scrut-agent-artifact.s3.ap-south-1.amazonaws.com/Scrut+Endpoint+Agent-1.5.7-arm64.dmg)
+
+   <Callout kind="danger">
+     **Heads Up!**
+
+     We recommend downloading the Scrut Agent from the Employee Training Portal as it contains the latest app version.
+   </Callout>
+
+   <Callout kind="alert">
+     **Note for Admins:**
+
+     Kindly reach out to your Scrut CSM or Scrut Support (support@scrut.io) to learn how to enable the agent download option for employees on the employee training portal.
+   </Callout>
+
+2. Choose your macOS version: M Series or Intel.
+
+   <Image src="/images/Screenshot-2026-02-17-at-12.25.30.png" alt="" />
+
+3. Once the download is complete, open Finder on your Mac.
+
+   <Image src="/images/FinderMacOS.jpg" alt="" />
+
+4. In Finder, go to the **Downloads** folder to find the Scrut Watchdog Agent dmg file. Double-click the file to begin the installation process.
+
+   <Callout kind="alert">
+     **Note:**
+
+     To proceed with the installation, ensure you are logged in with admin privileges or grant admin access as needed.
+   </Callout>
+
+   <Image src="/images/Screenshot-2025-05-02-at-17.51.36.png" alt="" />
+
+5. A pop-up window named **Scrut Endpoint Agent** will appear.
+
+6. Drag the Scrut Endpoint Agent file and drop it into the Applications folder.
+
+   <Image src="/images/Screenshot-2025-04-29-at-20.31.23.png" alt="" />
+
+7. Navigate to the **Applications** folder in Finder, where you will find the Scrut Endpoint Agent app. Double-click on it to open.
+
+   <Image src="/images/MacOs6.jpg" alt="" />
+
+8. Log in using your registered email address (The email you use to log in to Scrut, mostly your work email). Click **Continue**.
+
+   <Image src="/images/Screenshot-2025-05-02-at-17.56.05.png" alt="" />
+
+9. Scrut will send a One-Time Password (OTP) to your email. Check your inbox for the OTP. If you haven't received it, click **Resend**.
+
+10. Once authentication is complete, you can close the browser tab.
+
+    <Image src="/images/Screenshot-2025-04-25-at-12.30.02.png" alt="" />
+
+11. The Scrut Agent is now ready and will start running on your device.
+
+    <Image src="/images/Screenshot-2025-05-02-at-17.59.41.png" alt="" />
+
+## Enabling Default Security Parameters on Your Device
+
+### **HD Encryption**
+
+- Click on the Apple menu in the top-left corner and select **System Settings**.
+- Search **FileVault**.
+- Click the padlock icon in the bottom-left corner to unlock the settings. You might need to enter the administrator password for your system to proceed.
+- Click the **Turn On FileVault** button.
+- You can choose whether to allow your iCloud account to unlock your disk and/or create a recovery key. Make your selection and follow the on-screen prompts.
+- Restart your Mac, and FileVault encryption will begin.
+- For more details, refer to the official Apple support page: [Turn on FileVault](https://support.apple.com/en-gb/guide/mac-help/mh11785/mac).
+
+### **AV Installed**
+
+XProtect is a built-in macOS security feature that helps protect against known malware. It's automatically enabled and updated. You don't need to take any action to enable it. For more information, you can read about XProtect on the official Apple support page: [XProtect - About built-in protections against malware.](https://support.apple.com/en-us/HT202491)
+
+### **ScreenLock Enabled**
+
+- Click on the Apple menu in the top-left corner and select **System Settings**.
+- Search **Lock Screen**.
+- Ensure the display is set to turn off after a period of inactivity. Do not set to **Never**; instead, input any timings to turn off the screen.

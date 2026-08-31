@@ -1,0 +1,136 @@
+---
+title: "Add Policy Header and Footer"
+description: "Learn how to add a header and footer to policies created or edited in Scrut."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+You can customize the header and footer of policies with logos, page numbers, custom text, and images to match your organization’s branding.
+
+## Before You Begin
+
+- The header and footer are automatically applied when policies are exported or previewed in Scrut. However, it doesn’t show up in the [Policy Editor](/docs/policy/editing-policy-content/how-to-use-policy-editor) while you’re editing the policy content.
+- The header and footer do not appear on the first page (cover sheet) of the exported policy PDF.
+- Page numbers include the first page in the total count but are visible from the second page onward.
+- Organization name and logo are fetched from the details you have configured in [Settings → Organization Info](/docs/settings/organization-info/configure-organization-info). However, if you need a different image or logo, you can upload a custom image in the header or footer.
+
+## How to Configure Header and Footer for Policy Documents
+
+### Step 1: Open Policy Header and Footer Settings
+
+1. Navigate to **Compliance → Policies**.
+
+2. Click **Policy Settings** in the top-right area of the Policies page.
+
+   <Image src="/images/Policy-Settings-icon.png" alt="" />
+
+3. Select the **Header & Footer** tab.
+
+   <Image src="/images/Policy-Header-and-Footer-Tab.png" alt="" />
+
+You'll see separate toggle sections for Header and Footer, along with a real-time Preview panel on the right.
+
+### Step 2: Turn On the Header or Footer
+
+Turn on the Header toggle to configure the header, the Footer toggle to configure the footer, or both.
+
+<Image src="/images/Screenshot-2026-05-14-at-11.26.45.png" alt="" />
+
+### Step 3: Customize the Header and Footer
+
+For each section, you can select either:
+
+- **Components:** Select what appears in the left, center, and right positions of the header or footer.
+- **Custom Image:** Upload a single image that spans the full width of the header or footer.
+
+#### Using Components
+
+1. Select **Components**.
+
+2. Use the Left, Center, and Right dropdowns to assign content to each position.
+
+3. Each dropdown lets you select one of the following:
+
+   - None: Select this option if you don’t want to add a component to the left, center, or right positions
+   - Organization Name: Fetched from [Settings → Organization Info](/docs/settings/organization-info/configure-organization-info)
+   - Organization Logo: Fetched from [Settings → Organization Info](/docs/settings/organization-info/configure-organization-info)
+   - Policy Name: Fetched from the policy title
+   - Page Number: Choose a display format from the options that appear below the dropdown
+   - Custom Logo: Upload your own image
+   - Custom Text: Up to 50 characters
+
+   <Image src="/images/Screenshot-2026-05-14-at-11.57.57.png" alt="" />
+
+#### Using a Custom Image
+
+1. Select **Custom Image**.
+
+2. Upload an image file. The image spans the full width of the header or footer.
+
+   Note: Supported image formats: JPEG and PNG. Make sure your image meets the allowed dimensions (595 px or wider) and file size before uploading.
+
+   <Image src="/images/Screenshot-2026-05-14-at-11.58.44.png" alt="" />
+
+### Step 4: Set the Font Family
+
+Scroll to the **Font Family** section at the bottom of the page. Select a font from the dropdown. The selected font applies to all text across both the header and footer.
+
+<Callout kind="alert">
+  **Note:**
+
+  Font size cannot be customized. The system applies a standard size to all components.
+</Callout>
+
+<Image src="/images/Screenshot-2026-05-14-at-11.58.58.png" alt="" />
+
+### Step 5: Preview Your Configuration
+
+The Preview panel on the right updates in real time as you make changes. Review the preview to confirm the layout looks correct before saving.
+
+<Image src="/images/Screenshot-2026-05-14-at-12.01.58.png" alt="" />
+
+### Step 6: Save Your Settings
+
+Click **Save** in the top-right corner to apply your header and footer configuration.
+
+<Image src="/images/Screenshot-2026-05-14-at-12.02.44.png" alt="" />
+
+#### Important:
+
+- If any of your policies are attached to Trust Vault, a confirmation prompt appears asking whether you'd like to update the header and footer on those attachments as well. Review the prompt and confirm your preferred action.
+- Policies attached to Corrective Actions before this feature was released will not update automatically. To apply your configured header and footer to those attachments, remove the existing policy attachment from the Corrective Action and re-add it.
+- Policies linked to a Corrective Action after this feature was released will automatically include your configured header and footer.
+
+Your header and footer settings are now saved and will apply to all future policy exports, downloads, and previews.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="How to reset the header or footer to the default configuration?" default-open="true">
+    Click **Reset To Default** next to the Header or Footer section to restore the pre-set configuration for that section. Resetting one section does not affect the other.
+  </Expandable>
+
+  <Expandable title="Where will the configured header and footer appear?" default-open="true">
+    Once saved, the header and footer will appear in:
+
+    - Bulk policy exports from the Policies table
+    - Downloads from the Policy detail page
+    - Policy previews in the Policies module
+    - Policy previews in linked modules, such as Audit Findings and Requests
+    - Other modules, like Corrective Action, when you link a policy as an attachment
+
+    Additionally, if you confirm to apply changes to Trust Vault, the header and footer will be automatically updated for all policy documents linked in the Trust Vault.
+  </Expandable>
+
+  <Expandable title="Will the header and footer apply to policies already attached to Corrective Actions?" default-open="true">
+    No. Policies linked to a Corrective Action before the header and footer feature was released will not update automatically. To apply your configured header and footer to those attachments, remove the existing policy attachment from the Corrective Action and re-add it.
+
+    However, policies linked to a Corrective Action after the feature was released will automatically include your configured header and footer.
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

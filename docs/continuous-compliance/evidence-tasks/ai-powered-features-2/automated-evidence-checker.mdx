@@ -1,0 +1,79 @@
+---
+title: "Detect Gaps in Evidence with Scrut Teammates"
+description: "Learn how to validate the quality of manual evidences with the help of Scrut Teammates."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Scrut Teammates uses AI to automatically analyze the [manual evidence](/docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/uploading-evidence#how-to-upload-evidence-manually) you upload to the platform. It helps you identify and address gaps before submission by:
+
+- Detecting missing requirements, partial coverage, and inconsistencies in your evidence
+- Providing actionable recommendations to improve evidence quality and audit readiness
+
+## Before You Begin
+
+- Ensure [Scrut Teammates is enabled for your organization](/docs/settings/organization-info-1/scrut-ai#how-to-enable-scrut-teammates)
+
+## How It Works
+
+When you upload or update evidence for the current audit period, **Scrut Teammates automatically runs a gap analysis; no manual trigger needed**. It analyzes your uploaded document, image, or link and provides a detailed AI analysis of the evidence's quality and completeness.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  It might take a few minutes for the AI to thoroughly analyze your evidence and identify any potential gaps. If you do not see results right away, try again after a short while.
+</Callout>
+
+1. [Upload manual evidence](/docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/uploading-evidence#how-to-upload-evidence-manually) by clicking the **Add Attachment** button.
+
+2. Scrut AI will analyze the uploaded evidence and list any gaps detected.
+
+3. Click on the attached evidence to view the AI-identified gaps.
+
+   <Image src="/images/Screenshot-2026-03-07-at-18.54.43.png" alt="" />
+
+4. As you work on fixing the identified gaps, you can click **Mark as Done** or **Ignore** for each gap as needed.
+
+5. Make the necessary changes to your evidence and reupload it for the next round of analysis.
+
+6. You can click the **Refresh** button to manually trigger the next round of analysis.
+
+   <Image src="/images/Screenshot-2026-03-07-at-18.55.44.png" alt="" />
+
+7. \[Optional\] If you have questions about the recommended changes, click the **Ask Teammates** button to ask follow-up questions and get deeper guidance on what adjustments are needed.
+
+<Image src="/images/Screenshot-2026-03-07-at-18.23.05.png" alt="" />
+
+## Troubleshooting
+
+#### I've uploaded the evidence, but the AI detection hasn't triggered automatically
+
+Gap analysis triggers automatically when evidence is uploaded to the **current audit period**.
+
+To get accurate gap detection on screenshot evidence, open the evidence task directly. Scrut Teammates runs gap analysis automatically when you open the evidence and displays results in the gap panel. If the analysis has not run before, it starts automatically on your first visit.
+
+<Image src="/images/Screenshot-2026-04-28-at-13.14.51.png" alt="" />
+
+<Image src="/images/Screenshot-2026-04-28-at-13.15.38.png" alt="" />
+
+Check the following if results are not appearing:
+
+- Confirm the evidence was uploaded to the current audit period and not a past one. Gap analysis does not run automatically on evidence attached to previous periods.
+- Wait a few minutes. Analysis can take some time to complete after upload, especially for larger files.
+- Confirm that Scrut Teammates is enabled for your organization. Navigate to **Settings → Scrut AI** and [verify that Teammates is turned on](/docs/settings/organization-info-1/scrut-ai).
+
+If results still do not appear after waiting, click the **Refresh** button on the evidence task to manually trigger a new round of analysis.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="How do I trigger the gap analysis for all evidence tasks at once?" default-open="true">
+    Click the **Run AI Gap Analysis** button at the top of the All Evidence Tasks page to run the gap analysis for all evidence tasks at once.
+
+    <Image src="/images/Screenshot-2026-08-14-at-11.01.04.png" alt="" />
+  </Expandable>
+</ExpandableGroup>

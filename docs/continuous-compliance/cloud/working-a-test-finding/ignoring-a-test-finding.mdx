@@ -1,0 +1,52 @@
+---
+title: "Ignore a Test"
+description: "Learn how to ignore a test finding."
+---
+
+There may be scenarios where a test finding:
+
+- Is a false positive
+- Pertains to a non-critical issue that poses minimal risk
+- Has been addressed via alternative methods
+
+In such cases, you can mark the test as ignored, so it will not be included in your compliance calculations. In this article, we explain how to ignore a cloud test finding.
+
+## Ignore a Single Test
+
+1. Click **Compliance → Cloud** on the left navigation menu, and click the **Tests** tab.
+
+2. Click the test that you want to mark as ignored.
+
+3. Click the **More Actions (three-dots icon)** and select **Ignore Test**.
+
+   <Image src="/images/Screenshot-2025-11-21-at-21.48.19.png" alt="" />
+
+4. Enter your justification for ignoring the test. This is required for record-keeping purposes.
+
+   <Image src="/images/Screenshot-2025-11-21-at-21.49.49.png" alt="" />
+
+5. The test status changes to Ignored. You can edit the justification reason at any time by clicking the edit icon in the field.
+
+   <Image src="/images/Screenshot-2025-11-21-at-21.53.22.png" alt="" />
+
+#### Key Points to Know
+
+- Once you mark a test as ignored, it won’t be included in compliance calculations, and it won’t affect your compliance progress.
+- Scrut will not include ignored tests in future scans.
+- You can view ignored tests in the Tests tab by clicking the **Ignored** metric card.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  To revert an ignored test back to its previous status, see [monitoring a test finding](/docs/continuous-compliance/cloud/working-a-test-finding/monitoring-a-test-finding).
+</Callout>
+
+## Bulk Ignore Multiple Tests
+
+You can also select multiple tests and ignore them in a single action.
+
+1. Click **Compliance → Cloud** on the left navigation menu, and click the **Tests** tab.
+2. Select the tests that you want to mark as ignored and click **Ignore Selected**.
+3. Enter the justification and click **Save**.
+
+<Image src="/images/image-1764307683517.png" alt="" />

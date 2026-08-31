@@ -1,0 +1,103 @@
+---
+title: "Integrate Endpoint Central"
+description: "Learn how to connect Endpoint Central with Scrut."
+---
+
+The **Scrut-Endpoint Central Integration** enables Scrut to monitor device compliance, security settings, and patch management across your organization. It tracks device configurations and ensures that all endpoints meet your security and compliance requirements.
+
+## Prerequisites
+
+Before starting the integration, ensure you have the following permissions for your Endpoint Central account:
+
+- **Account Information:** Your Endpoint Central login email address
+
+- **Admin Access:** You must be an Endpoint Central admin to grant the following permissions:
+
+  - **Read access:** To allow Scrut to read your inventory data
+
+  <Image src="/images/Screenshot-2025-10-09-at-11.32.56-1.png" alt="" />
+
+<Callout kind="info">
+  **Pro Tip:**
+
+  We recommend logging into your Endpoint Central account before starting the integration to avoid doing so later.
+</Callout>
+
+## How To Integrate Scrut With Endpoint Central
+
+### Step 1: Copy Client ID and Client Secret from Endpoint Central
+
+1. Sign in to your **Zoho API console** and click **Add Client**.
+
+   <Image src="/images/Screenshot-2025-06-25-at-13.49.58.png" alt="" />
+
+2. Choose **Server-based Applications**.
+
+   <Image src="/images/Screenshot-2025-06-25-at-13.50.14.png" alt="" />
+
+3. Enter a name for the integration, such as Scrut Automation.
+
+4. For **homepage URL**, enter: [**https://app.scrut.io/**](https://app.scrut.io)
+
+5. Enter the **Redirect URL**, based on your Scrut region:
+
+   - **India:** [**https://app.scrut.io/settings/integration/endpoint_central**](https://app.scrut.io/settings/integration/endpoint_central)
+   - **US:** [**https://app.us.scrut.io/settings/integration/endpoint_central**](https://app.us.scrut.io/settings/integration/endpoint_central)
+   - **EU:** [**https://app.eu.scrut.io/settings/integration/endpoint_central**](https://app.eu.scrut.io/settings/integration/endpoint_central)
+   - **Australia:** [**https://app.au.scrut.io/settings/integration/endpoint_central**](https://app.au.scrut.io/settings/integration/endpoint_central)
+
+6. Click **Create**.
+
+   <Image src="/images/Screenshot-2025-06-25-at-13.51.03.png" alt="" />
+
+7. Copy the **Client ID** and **Secret** shown on the screen. Make sure to save these credentials carefully, as you’ll need to enter them in Scrut in the next step.
+
+   <Image src="/images/image-1759989188513.png" alt="" />
+
+### Step 2: Connect Your Endpoint Central Account in Scrut
+
+1. Sign in to your Scrut account and click **Integrations** on the left navigation panel.
+
+2. Navigate to the **Integrations Library** tab and choose **Mobile Device Management Tools** in the **Categories** section.
+
+3. Scroll to the **Endpoint Central** tile and click **Integrate**.
+
+   <Image src="/images/Screenshot-2025-10-09-at-11.23.34.png" alt="" />
+
+4. On the Endpoint Central integration page, enter the following details from [Step 1](/docs/integrations/integrating-mobile-device-management-tools/integrating-endpoint-central#step-1-copy-client-id-and-client-secret-from-endpoint-central).
+
+   - **Client ID**
+   - **Client Secret**
+
+5. Click **Submit**.
+
+   <Image src="/images/Screenshot-2025-10-09-at-11.25.03.png" alt="" />
+
+6. Click **Accept** to grant the required permissions.
+
+   <Image src="/images/Screenshot-2025-10-09-at-11.32.56.png" alt="" />
+
+7. Once authorization is done, watch out for the success toast message and the **Connected** status indicator.
+
+   <Image src="/images/Screenshot-2025-10-09-at-11.33.30.png" alt="" />
+
+### Step 3: Configure Devices
+
+The final step of the integration is to configure the devices you sync with Scrut.
+
+1. Go to the Endpoint Central integrations page and click **Configure Devices** on the top right.
+
+   <Image src="/images/Screenshot-2025-10-09-at-11.35.14.png" alt="" />
+
+2. Select the devices you want to sync with Scrut, and click **Save**.
+
+   <Image src="/images/Screenshot2014.24.02.png" alt="" />
+
+3. Watch out for the “**Scope Updated Successfully!**” notification message.
+
+## What Happens Next?
+
+Upon completing the integration, Scrut will display the fetched data in the following modules:
+
+- [Evidence Tasks](/docs/continuous-compliance/evidence-tasks/evidence-tasks-walkthrough)
+- [Tests → Automated Evidence](/docs/continuous-compliance/automated-tests/getting-started-with-tests-in-scrut)

@@ -1,0 +1,170 @@
+---
+title: "Configure Clickwrap NDA"
+description: "Learn how to customize and enable a clickwrap NDA for users accessing sensitive information on your Trust Portal."
+---
+
+Learn how to customize and enable a clickwrap NDA for users accessing sensitive information on your Trust Portal.
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Scrut offers three different NDA (non-disclosure agreement) options for users accessing sensitive information on your Trust Portal:
+
+- **Clickwrap NDA**: Users sign an NDA directly within Scrut before accessing your Trust Portal.
+- **No NDA**: Grant access without requiring any NDA signature
+- **NDA signed outside of Scrut**: Acknowledge that users have already signed an NDA through external channels.
+
+In this article, we walk you through customizing a clickwrap NDA template in Scrut.
+
+## What is a Clickwrap NDA?
+
+Clickwrap NDA is **Scrut's built-in, click-through Non-Disclosure Agreement** that allows you to protect confidential information in your Trust Portal. When enabled, visitors must accept the NDA terms directly within your Trust Portal before they can access sensitive documents and reports. This streamlines your workflow by eliminating the need to manage NDAs outside Scrut.
+
+## How Clickwrap NDA works
+
+When you configure a Clickwrap NDA for your Trust Portal:
+
+- A user requests access to your Trust Portal.
+
+  <Image src="/images/Screenshot-2026-02-12-at-10.58.51.png" alt="" />
+
+- You approve their request and select "**Clickwrap**" as the **NDA Provider**.
+
+  <Image src="/images/Screenshot-2026-02-12-at-10.59.37.png" alt="" />
+
+- The next time the user visits your Trust Portal, they will see the NDA terms.
+
+- The user must accept the agreement before proceeding.
+
+  <Image src="/images/Screenshot-2026-07-20-at-14.30.52.png" alt="" />
+
+- Once accepted, the user gains access to your Trust Portal content.
+
+- The signed NDA is automatically recorded and stored in Scrut. You can download it from the **Access → Approved tab** in Trust Vault.
+
+  <Image src="/images/Screenshot-2026-02-12-at-11.21.49.png" alt="" />
+
+This creates a legally binding agreement without requiring external document management or manual signature collection.
+
+## Customer-Branded NDA Title and Checkbox
+
+<Image src="/images/Screenshot-2026-07-20-at-14.30.52-1.png" alt="" />
+
+The NDA modal automatically displays your organization's name instead of generic labels, so visitors clearly understand they're agreeing to your NDA, not Scrut's:
+
+- The modal title reads NDA Agreement | \[Your Organization Name\].
+- The checkbox reads I agree to \[Your Organization Name\]'s Non-Disclosure Agreement.
+
+Below the checkbox, visitors see a processor disclaimer confirming that Scrut acts solely as a data processor providing the electronic signature and hosting software on your organization's behalf, and that their email and IP address are recorded for audit purposes. This uses the same organization display name shown elsewhere in Trust Vault, such as in the OTP and access request emails.
+
+## Customizing Your Clickwrap NDA Template
+
+Scrut allows you to fully customize the NDA language to match your organization's legal requirements and existing agreements.
+
+**To edit your NDA template:**
+
+1. Click **Trust → Trust Vault** on the left navigation panel and click the **Settings** icon in the top-right corner of the Trust Vault module.
+
+   <Image src="/images/Trust-Vault-Settings-icon.png" alt="" />
+
+2. On the Trust Vault settings page, click the **NDA tab**.
+
+3. Click the **Edit NDA** button.
+
+   <Image src="/images/Screenshot-2026-02-10-at-16.39.00.png" alt="" />
+
+4. An inline editor window will open, displaying the default NDA template.
+
+5. Edit the content to reflect your specific business requirements and legal terms.
+
+6. Use the right panel to insert dynamic variables in the template. [Learn how to use variables to personalize the NDA template](/docs/trust-management/trust-vault/settings-1/clickwrap-nda#using-variables-to-customize-the-nda).
+
+7. Click **Save** to apply your changes.
+
+   <Image src="/images/Screenshot-2026-02-10-at-16.39.42.png" alt="" />
+
+### Using Variables
+
+The Variables panel on the right side of the editor provides placeholders that automatically populate with actual information when a user signs the NDA. This eliminates manual data entry and ensures accuracy across all signed agreements.
+
+**Why use variables?**
+
+Variables transform your static NDA template into a personalized legal agreement for each user. Instead of creating individual NDAs for each access requester, you create a single template that automatically adapts to include the correct party information, dates, and organizational details.
+
+**Available variables:**
+
+- **Organization Name** - `${ORG_NAME}`: Your company's legal name
+- **Organization Address** - `${ORG_ADDRESS}`: Your company's registered address
+- **Company Name** - `${COMPANY_NAME}`: The requester's company name
+- **Company Email** - `${COMPANY_EMAIL}`: The requester's company email address
+- **Company Address** - `${COMPANY_ADDRESS}`: The requester's company address
+- **Company Type** - `${COMPANY_TYPE}`: The type or category of the requester's organization
+- **Location variables** - `${COMPANY_STATE}`: The requester's company’s state and country
+- **Date/Time variables**: `${DATE}`, `${MONTH}`, `${YEAR}`, `${TIME}` - Automatically captures when the agreement is signed
+- **Requester details**: `${FIRSTNAME}`, `${LASTNAME}` - The individual signing the NDA
+
+**How to insert variables:**
+
+1. Click on the desired variable from the variables panel on the right to copy it.
+2. Place your cursor in the NDA text where you want the variable to appear and paste it.
+3. The variable placeholder (e.g., `${COMPANY_NAME}`) will be inserted into your template.
+4. When a user signs the NDA, Scrut automatically replaces the placeholder with the actual information.
+
+**Example:**
+
+**Template:** This Mutual Nondisclosure Agreement is entered into as of $\{DATE\} $\{MONTH\} $\{YEAR\}, at $\{TIME\} (GMT) by and between $\{ORG_NAME\} and $\{COMPANY_NAME\}.
+
+When John Smith from Acme Corp signs the NDA on February 10, 2026, it automatically becomes:
+
+This Mutual Nondisclosure Agreement is entered into as of 10 February 2026, at 14:30 (GMT) by and between Scrut Automation and Acme Corp.
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  Review your completed template to verify all variables are correctly placed and that the resulting text will read naturally when populated with actual data.
+</Callout>
+
+<Callout kind="alert">
+  **Note:**
+
+  The Clickwrap NDA will only be displayed to users when you explicitly [select "Clickwrap" as the NDA provider](/docs/trust-management/trust-vault/manage-user-requests/how-to-grant-access-to-trust-vault#approving-access-to-trust-vault) during the access approval process.
+</Callout>
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Can I use different NDA terms for different users?" default-open="true">
+    Currently, Scrut uses a single NDA template for all Clickwrap agreements. If you need different NDAs for specific users, consider using the "Signed outside Scrut Automation" option.
+  </Expandable>
+
+  <Expandable title="What happens if I update my NDA template after users have already signed?" default-open="true">
+    Users who have previously signed the NDA will not be automatically prompted to sign the updated version. Template updates apply only to new access requests going forward.
+  </Expandable>
+
+  <Expandable title="Where can I view the NDA signed by users?" default-open="true">
+    Navigate to **Trust → Trust Vault → Access → Approved** and download the NDA for specific users, as needed.
+
+    <Image src="/images/Screenshot-2026-02-12-at-11.21.49-1.png" alt="" />
+
+    If required, you can also share it with external stakeholders.
+  </Expandable>
+
+  <Expandable title="Is the Clickwrap NDA legally binding?" default-open="true">
+    Yes, clickwrap agreements are widely recognized as legally binding contracts when properly implemented. However, you should consult your legal team to ensure your NDA language and implementation comply with your jurisdiction's specific requirements.
+  </Expandable>
+
+  <Expandable title="Can I preview how the NDA will appear to users?" default-open="true">
+    After saving your NDA template, you can test the user experience by creating a test access request or asking a colleague to request access (which you can then approve with the Clickwrap option).
+  </Expandable>
+
+  <Expandable title="What's the difference between Clickwrap and &quot;Signed outside Scrut Automation&quot;?" default-open="true">
+    Clickwrap presents the NDA within Scrut for users to accept with a click. "Signed outside Scrut Automation" is used when you've already collected an NDA signature through another method (like DocuSign or a physical signature) and simply want to note in Scrut that an NDA is in place.
+  </Expandable>
+
+  <Expandable title="Do I need to enable Clickwrap for every access request?" default-open="true">
+    No. The "No NDA" option is available if you don't require an NDA for certain users or situations. You can choose the appropriate NDA provider option on a case-by-case basis when approving each access request.
+  </Expandable>
+</ExpandableGroup>

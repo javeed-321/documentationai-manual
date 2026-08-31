@@ -1,0 +1,129 @@
+---
+title: "Effort Estimate for Evidence Tasks"
+description: "Understand the effort required to complete an evidence task using effort estimates."
+---
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  This feature is currently available only for specific evidence tasks for the following frameworks: ISO 27001, SOC 2, GDPR, and HIPAA. To know more, contact your CSM.
+</Callout>
+
+Effort estimate quantifies the amount of work required to complete an evidence task. This helps to:
+
+- **Prioritize and allocate resources** more effectively
+- **Assign appropriate tasks** based on the effort required and team capacities
+- **Balance workload** across team members
+- **Set realistic timelines** for task completion
+- **Report progress** to stakeholders more accurately
+
+By default, **Scrut provides an effort estimate for each evidence task**, helping you prioritize tasks and allocate resources effectively. It's important to keep in mind that these **estimates are benchmark figures** based on the average implementation effort required for each task. If you find that the default estimates do not align with your specific needs or circumstances, [you can modify them](/docs/policy/managing-organizing-policies/set-policy-effort-estimate#how-to-set-policy-effort-estimates), as required.
+
+## Effort Estimate Levels
+
+Scrut categorizes effort into three levels:
+
+- **Low**: Easy to implement, minimal configuration or steps required
+- **Medium**: Moderate complexity, requires multiple steps or configuration across several resources
+- **High**: Complex implementation, extensive configuration, or affects multiple systems
+
+## How To View Effort Estimates for Evidence Tasks
+
+<Tabs>
+  <Tab title="Via the Evidence Task Table">
+    Click on the **Effort Estimate** column on the Evidence Task table in the **All Evidences** page. This allows you to sort tasks by effort level.
+
+    <Image src="/images/Screenshot-2025-11-25-at-23.02.11.png" alt="" />
+  </Tab>
+
+  <Tab title="On the Evidence Details Page">
+    Navigate to a specific evidence task and look for the **Effort Estimate** field on the task details page.
+
+    <Image src="/images/Evidence-Details-Page.png" alt="" />
+  </Tab>
+</Tabs>
+
+## How to Set Evidence Task Effort Estimates
+
+- [For a Single Task](/docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/effort-estimate-for-evidence-tasks#for-a-single-evidence-task)
+- [For Multiple Tasks](/docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/effort-estimate-for-evidence-tasks#for-multiple-evidence-tasks)
+
+### For a Single Evidence Task
+
+1. Sign in to Scrut, and click **Compliance → Evidence Tasks** on the left navigation panel.
+
+2. Go to the **All Evidences** tab and select the task you want to set the effort estimate for.
+
+   <Image src="/images/Selecting-an-individual-Evidence-Task.png" alt="" />
+
+3. Use the **Effort Estimate** dropdown and set the desired level.
+
+   <Image src="/images/Screenshot-2025-11-25-at-23.05.45.png" alt="" />
+
+### For Multiple Evidence Tasks
+
+You can also set effort estimates for multiple tasks simultaneously:
+
+1. Go to the **All Evidences** tab and select the tasks for which you want to set the effort estimate.
+
+2. Click the **Edit** button at the top of the Evidence Tasks table.
+
+   <Image src="/images/image-1764092234117.png" alt="" />
+
+3. Use the dropdown next to the **Effort Estimate** field to select the desired level: Low, Medium, or High.
+
+4. Click **Save** to complete the bulk assignments.
+
+   <Image src="/images/Screenshot-2025-11-25-at-23.07.34.png" alt="" />
+
+<Callout kind="alert">
+  **Note:**
+
+  If you wish to retain the existing values for other fields, simply leave them unchanged. Scrut will only update the fields you've modified in this window, ensuring that the other values remain intact.
+</Callout>
+
+### FAQs
+
+<ExpandableGroup>
+  <Expandable title="Is it mandatory to add the effort estimate for all evidence tasks?" default-open="true">
+    No, it's optional. However, setting effort estimates helps with better planning and prioritization.
+  </Expandable>
+
+  <Expandable title="Can I edit the effort estimate at any time?" default-open="true">
+    Yes, you can edit the effort estimate at any time by opening the task and updating the field.
+  </Expandable>
+
+  <Expandable title="What if I'm unsure which level to choose?" default-open="true">
+    Start with your best estimate. You can always adjust it later. If you're between two levels, consider starting with the higher effort level to avoid underestimating the work required. Use these guidelines to select the appropriate effort estimate:
+
+    #### Choose Low When:
+
+    - Implementation takes less than 30 minutes
+    - Requires 1-3 simple steps
+    - Affects a single system or setting
+    - Can be completed by one person without coordination
+
+    #### Choose Medium When:
+
+    - Implementation takes several hours to a day
+    - Requires 4-10 steps or configuration changes
+    - Affects multiple resources but within a single system
+    - May require coordination with one other team
+
+    #### Choose High When:
+
+    - Implementation takes more than multiple days
+    - Requires complex multi-step processes
+    - Affects multiple systems or requires migration
+    - Requires coordination across multiple teams or vendors
+    - May cause downtime or require careful planning
+  </Expandable>
+
+  <Expandable title="Do effort estimates affect compliance status?" default-open="true">
+    No, effort estimates are purely for planning and do not impact whether an evidence task is compliant or non-compliant.
+  </Expandable>
+
+  <Expandable title="Can I filter or sort evidence tasks by effort level?" default-open="true">
+    Yes. Use the filter and sort icons in the All Evidences table to narrow to tasks with a specific effort level.
+  </Expandable>
+</ExpandableGroup>

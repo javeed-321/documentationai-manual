@@ -1,0 +1,57 @@
+---
+title: "Integrate Auth0"
+description: "Learn how to integrate your Auth0 account with Scrut."
+---
+
+Scrut uses an inbuilt Auth0 Management API to connect with Auth0. To use this API, you must create an authorized machine-to-machine Application in Auth0 before integrating with Scrut.
+
+## Creating Auth0 Application
+
+1. In your Auth0 Dashboard, click **Create Application**.
+
+<Image src="/images/image-39BNTZY8.png" alt="" />
+
+2. Name your new application, choose the *Machine To Machine Applications* click **Create**.
+
+<Image src="/images/image-POYRXU55.png" alt="" />
+
+3. A dropdown with Authorized APIs should appear. Choose the **Auth0 Management API** option.
+
+<Image src="/images/image-KDRNJIXJ.png" alt="" />
+
+4. Enable the following permissions for your application by clicking on the checkboxes under the *Permissions* section:
+
+- read:client_grants
+- read:organizations
+- read:organization_members
+- read:users
+- read:roles
+- read:role_members
+
+5. To create the new application linked to the Auth0 Management API, click **Authorize**.
+
+<Image src="/images/image-Y1F21KUU.png" alt="" />
+
+6. Once done, Auth0 will redirect you to the *Quick Start* tab from your newly created application.
+7. Go to Advanced Settings by navigating to the bottom of the Settings tab.
+8. Check if the *Client Credentials* grant type is enabled under the *Grant types* tab where the Client Credentials grant should be enabled.
+
+<Image src="/images/image-6UP9XAA9.png" alt="" />
+
+10. Navigate to the top of the *Settings* tab in your recently created application.
+11. Copy the **Domain, Client ID**, and **Client Secret** values from your application.
+
+## Integrating Auth0 with Scrut
+
+1. From the left navigation panel, select Integrations.
+2. Click on **Available**.
+
+<Image src="/images/image-9CXHGH6K.png" alt="" />
+
+3. Scroll to the *Identity Providers* section and find *Auth0*. Click **Integrate**.
+
+<Image src="/images/image-JCHR3LJK.png" alt="" />
+
+4. Paste the *Domain, Client ID*, and *Client Secret* values from your application. Click **Submit**.
+
+<Image src="/images/image-T5J069RA.png" alt="" />

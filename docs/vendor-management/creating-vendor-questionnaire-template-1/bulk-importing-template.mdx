@@ -1,0 +1,80 @@
+---
+title: "Import a Vendor Questionnaire Template"
+description: "Import an existing vendor questionnaire into Scrut using a CSV or XLSX file. Learn how to format questions, define answer options and risk scores, add"
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+If you already have a vendor questionnaire in a spreadsheet, you can import it directly into Scrut instead of building a template from scratch.
+
+## How To Import a Template
+
+1. Sign in to Scrut and navigate to **Risk → Vendors** using the left navigation panel.
+
+2. Click the **Settings** icon on the top right of the page.
+
+   <Image src="/images/Screenshot-2025-05-23-at-21.20.00.png" alt="" />
+
+3. In the **Templates** tab, click **Add Template** and select **Import (CSV/XLSX)**.
+
+   <Image src="/images/Add-Vendor-Template.png" alt="" />
+
+4. Enter a name for the template.
+
+5. Download the Scrut import file and paste your questionnaire into it.
+
+   <Callout kind="info">
+     **Pro Tip!**
+
+     Refer to this section for detailed instructions on [adding questions to the template](/docs/vendor-management/creating-vendor-questionnaire-template-1/bulk-importing-template#tips-for-using-the-template).
+   </Callout>
+
+6. Drag and drop the completed file into the upload area, or click to upload it manually.
+
+7. Click **Upload**.
+
+   <Image src="/images/Screenshot-2025-05-27-at-12.37.18.png" alt="" />
+
+8. Scrut will notify you of any questions that weren't imported because of formatting issues. Fix the errors in the file and upload it again.
+
+   <Image src="/images/Screenshot-2025-05-27-at-12.37.38.png" alt="" />
+
+9. Your imported template is available in **Vendor Settings → Templates**.
+
+   <Image src="/images/Screenshot-2025-05-27-at-12.38.13.png" alt="" />
+
+### Tips for Using the Template
+
+<Image src="/images/Screenshot-2026-08-27-at-12.59.18.png" alt="" />
+
+Follow these guidelines when filling in the import file to avoid upload errors.
+
+1. Keep the first row intact. It contains the column headers Scrut needs to process the file.
+2. The description in the second row will guide you in adding questions. Feel free to remove that row once you have incorporated the questions.
+3. If you leave the Question Type column blank, Scrut defaults to Subjective.
+4. If the question type is Objective (Single Select) or Objective (Multi Select), enter the answer options and risk scores in the corresponding columns.
+5. Leave Condition for follow-up question (Column C) blank for main questions.
+6. Avoid extra formatting, such as background colors.
+
+### Add Conditional Follow-up Questions
+
+The import template includes two columns at the front of the sheet: Question number and Condition for follow-up question. Use these to bring conditional follow-up questions into Scrut along with your main questions.
+
+- Question number: Enter a number that reflects the question's place in your hierarchy.
+
+  - Use Q1, Q2, Q3 for main questions.
+  - For a follow-up nested under Q1, use Q1.1 and Q1.2.
+  - For a second-level follow-up nested under Q1.1, use Q1.1.1.
+  - Scrut supports up to two levels of nesting, the same limit that applies when building a template manually.
+
+- Condition for follow-up question: For each follow-up row, enter the parent answer option that should trigger it. Leave this column blank for main questions.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Conditional follow-ups can only be attached to Objective (Single Select) parent questions.
+</Callout>

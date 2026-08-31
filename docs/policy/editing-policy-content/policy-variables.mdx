@@ -1,0 +1,236 @@
+---
+title: "Understand Policy Variables"
+description: "Discover policy variables and how they help maintain and manage policies in Scrut."
+---
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  This feature is currently in limited Beta, and is available to select customers. For more information, please reach out to your Customer Success Manager or contact Scrut Support at support@scrut.io.
+</Callout>
+
+Managing multiple policies can be tedious, especially when updating the same information across several documents. For example, details such as your organization's name, address, product names, and service descriptions are included in multiple policies.
+
+When you have to input this information individually into each policy, it can quickly become repetitive and time-consuming. It also creates complications when updates are needed, as you must search and update the information across all relevant policies. If you miss even one tiny detail, you risk creating conflicting information, which can lead to confusion and potential compliance issues.
+
+**Policy variables** help you overcome these challenges.
+
+## What are Policy Variables?
+
+By defining standard details in a central location, you can simplify the process of entering and updating information across all your policies. When your organization undergoes any changes, such as a rebranding, an update to its legal entity, or modifications to infrastructure, you only need to make the necessary updates on one central page. Scrut will then automatically apply these changes to all policies that utilize those variables.
+
+- Policy variables ensure that your policies reflect the most up-to-date and accurate information, ensuring consistency across all your policy documentation.
+- Moreover, it significantly reduces the time and manual effort needed to maintain and revise policies.
+
+In this guide, we’ll walk you through how to define, edit, and use policy variables in Scrut.
+
+<Callout kind="danger">
+  **Heads Up!**
+
+  Defining or editing a policy variable will change the status of **impacted policies** (policies that use this variable) to **Draft**.
+</Callout>
+
+## Defining the Values for Policy Variables
+
+1. [Sign in to Scrut](https://app.scrut.io/), go to **Compliance** → **Policies** using the left navigation panel.
+
+2. Click the **Settings** icon at the top right.
+
+   <Image src="/images/settings.png" alt="Settings icon" />
+
+   <Image src="/images/Screenshot-2025-04-08-at-14.03.48.png" alt="" />
+
+3. Click the **Policy Variables** tab.
+
+   <Image src="/images/Screenshot-2025-06-16-at-15.05.26.png" alt="" />
+
+4. This page lists all policy variables used across all your policies.
+
+5. Enter the values you want to define for each variable.
+
+6. Use the **Variable Status** filter to identify unanswered questions. The **Reset** icon clears the filter selection.
+
+   <Image src="/images/reset.png" alt="Reset filters icon" />
+
+   <Image src="/images/Screenshot-2025-06-16-at-15.07.50.png" alt="" />
+
+7. Your answers are saved automatically.
+
+   <Image src="/images/Screenshot-2025-06-16-at-15.08.57.png" alt="" />
+
+### How do policy variables affect existing policies?
+
+When enabling policy variables for the first time for your Scrut organization, you will notice a helpful notification for all policies that use variables.
+
+<Image src="/images/image-1761112156214.png" alt="" />
+
+To proceed, click the **Fix Now** button to allow Scrut to add variables at the appropriate locations. You must complete this step to publish the policy or export attachments.
+
+<Image src="/images/One-Time-Action-for-Policy-Variables.gif" alt="" />
+
+**Note:** Once you have completed the above action for all policies, the **Fix Now** button will no longer be visible.
+
+## Impacted Policies
+
+Impacted policies are the list of all policies that utilize a specific policy variable. This means that any changes made to that variable will affect all the policies included in this list.
+
+To view impacted policies:
+
+1. Navigate to the **Policy** module section and click the **Settings** icon on the top right.
+
+   <Image src="/images/settings.png" alt="Settings icon" />
+
+2. Click the **Policy Variables** tab.
+
+3. Click **View impacted policies** to view the list of all policies that use a specific variable.
+
+<Image src="/images/Impacted-Policies---Policy-Variables.gif" alt="" />
+
+## Viewing Variable Values
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Variable values will not be visible in the policy editor. However, Scrut will replace them with the defined values when you download or preview the policy.
+</Callout>
+
+Review any policy that uses these variables to ensure the defined values are accurately reflected in the document.
+
+<Image src="/images/Screenshot-2025-10-22-at-11.21.15.png" alt="" caption="The policy editor displays only the variable's placeholder." />
+
+<Image src="/images/Screenshot-2025-10-22-at-11.22.08.png" alt="" caption="The preview displays the actual value defined for the variable." />
+
+<Image src="/images/Screenshot-2025-10-22-at-11.23.05.png" alt="" caption="The download also shows the actual variable value." />
+
+## Editing Policy Variables
+
+<Callout kind="danger">
+  **Important:**
+
+  Any change you make to a policy variable will automatically reflect across all policies that use it.
+</Callout>
+
+Follow these steps to edit or change the value of any policy variable:
+
+### Method 1: Via the Policy Variables Tab
+
+1. [Sign in to Scrut](https://app.scrut.io/) and navigate to **Compliance** → **Policies** using the left navigation panel.
+
+2. Click the **Settings** icon at the top right.
+
+   <Image src="/images/settings.png" alt="Settings icon" />
+
+3. Click the **Policy Variables** tab.
+
+4. Edit the values for any of the policy variables, and Scrut will update the changes automatically in all impacted policies (Policies that use these variables).
+
+<Image src="/images/Editing-Policy-Variables-VEED.gif" alt="" />
+
+### Method 2: From the Policy Page
+
+An alternative is to update the policy variable directly on the policy that uses it.
+
+1. Open your preferred policy and navigate to the **Attachments** section.
+
+   <Image src="/images/Screenshot-2025-04-08-at-14.28.31.png" alt="" />
+
+2. Click the attachment and click **Edit Policy**.
+
+   <Image src="/images/Screenshot-2025-04-08-at-14.29.06.png" alt="" />
+
+3. Use the **Policy Variables** section on the right panel and click the variable you want to edit.
+
+4. Scrut lists all the policies that will be impacted by this change.
+
+   Note: By proceeding, **Scrut will change the value of the policy variable across all policies that use it.** This change is also captured in the audit log of the individual policies.
+
+5. Click the **Yes, I Want To Proceed** button to confirm your action.
+
+   <Image src="/images/Screenshot-2025-04-08-at-14.31.31.png" alt="" />
+
+6. Watch out for the success notification, “**Answer Saved Successfully**.”
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  Click the **Preview** button to verify if the change you made is reflected in the policy.
+</Callout>
+
+### FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="How does editing policy variables impact policy status?" default-open="false">
+    Changing a policy variable affects all policies that utilize it and changes their status to **Draft**.
+
+    | Old status | New status after updating the Policy Variable |
+    | --- | --- |
+    | Not Uploaded | Draft |
+    | Draft | Draft |
+    | Approved | Draft |
+    | Published | Draft |
+  </Expandable>
+
+  <Expandable title="Can I define a unique value for the variable for just one policy?" default-open="false">
+    No. You cannot define a unique value for a variable for just one policy; it applies to all impacted policies. To use a specific value for a policy, delete the variable and type in the specific answer, wherever needed.
+  </Expandable>
+
+  <Expandable title="How do I identify the policies that use a specific variable?" default-open="false">
+    The **Impacted Policies** section lists all policies that use a specific variable. To check this,
+
+    Navigate to the **Policy** module section and click the **Settings** icon on the top right. Click the **Policy Variables** tab. Click **View impacted policies** to view the list of all policies that use a specific variable.
+
+    <Image src="/images/settings.png" alt="Settings icon" />
+
+    <Image src="/images/Screenshot-2025-06-16-at-17.51.54.png" alt="" />
+  </Expandable>
+
+  <Expandable title="Why is the variable’s value not visible in the policy editor?" default-open="false">
+    The policy editor shows only the placeholder variable. However, the variable value is visible when you preview the policy or download it.
+  </Expandable>
+
+  <Expandable title="I’ve accidentally deleted a variable from a policy. What do I do?" default-open="false">
+    No worries. Click the **Copy** **icon** in the **Policy Variables** tab to paste the variable back into the policy.
+
+    <Image src="/images/Copy-icon.png" alt="Copy icon" />
+
+    <Image src="/images/Screenshot-2025-04-09-at-19.31.56.png" alt="" />
+
+    If you’ve removed all variables from the policy, you can restore them by clicking **Revert To Original Policy**.
+
+    <Image src="/images/Screenshot-2025-04-09-at-19.36.48.png" alt="" />
+  </Expandable>
+
+  <Expandable title="Can I add a policy variable directly into the policy?" default-open="false">
+    Yes. Click the **Copy** **icon** corresponding to the variable you want to use and paste it at the required place in the policy.
+
+    <Image src="/images/Copy-icon.png" alt="Copy icon" />
+
+    <Image src="/images/Screenshot-2025-05-29-at-13.58.13.png" alt="" />
+  </Expandable>
+
+  <Expandable title="Will enabling policy variables impact existing policies in my Scrut account?" default-open="true">
+    Refer to this section to learn [how enabling policy variables will affect existing policies](/docs/policy/editing-policy-content/policy-variables#how-do-policy-variables-affect-existing-policies).
+  </Expandable>
+
+  <Expandable title="Can I add custom variables?" default-open="true">
+    You cannot add custom policy variables; only the default options are available.
+  </Expandable>
+
+  <Expandable title="Can I use nested policy variables (one policy variable inside another variable's value)?" default-open="true">
+    Scrut doesn't currently support nested policy variables. If a variable's value contains a reference to another variable, the inner variable is not resolved in the generated policy document. It appears as plain text instead.
+
+    For example, say you have two variables:
+
+    Variable A: `{{Legal_Entities}}` with the value "Acme Ltd." Variable B: `{{Company_Scope}}` with the value "This policy applies to \{\{Legal_Entities\}\}."
+
+    If you use `{{Company_Scope}}` in your policy template, the generated document renders:
+
+    "This policy applies to \{\{Legal_Entities\}\}"
+
+    instead of the expected:
+
+    "This policy applies to Acme Ltd."
+
+    Workaround: Use both variables directly in the policy template instead of nesting one inside the other. For example, add `{{Company_Scope}} {{Legal_Entities}}` directly in the template content where needed. This produces the same output without requiring nested variable resolution.
+  </Expandable>
+</ExpandableGroup>

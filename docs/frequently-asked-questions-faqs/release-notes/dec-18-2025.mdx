@@ -1,0 +1,69 @@
+---
+title: "December 2025"
+description: "Scrut's December 2025 release adds the 21 CFR Part 11 framework for life sciences, mid-review vendor attachment uploads, Hexnode MDM sync, and template-free"
+---
+
+## In this release
+
+Scrut’s December release adds 21 CFR Part 11 for life sciences teams, removes friction from vendor and asset workflows, and pulls more device and ticketing data into Scrut.
+
+- 21 CFR Part 11 joins the Frameworks module, with validation status tracking and readiness reporting.
+- Vendors can reupload or replace attachments mid-review, so one wrong file no longer restarts the questionnaire.
+- Hexnode MDM inventory syncs into Scrut.
+- Asset imports now accept your CSV or Excel file as-is.
+- Notifications consolidate into one center,
+- OpenProject tickets and Jira attachments now reach evidence and remediation work.
+
+## Key Features & Enhancements
+
+### Support for 21 CFR Part 11 Framework
+
+Life sciences teams preparing for FDA scrutiny often discover that electronic records and electronic signatures requirements live in slide decks, SOPs, and shared drives rather than in one operable control set.
+
+Scrut now supports 21 CFR Part 11 inside the Frameworks module so teams can map Part 11 requirements to policies, risks, and technical documentation in their workspace. The frameworks module also supports evidence and policy suggestions, control owner assignment, validation status tracking, a centralized evidence repository, and readiness reporting for internal and external stakeholders for 21 CFR Part 11.
+
+<Callout kind="info">
+  Learn more: [Supported frameworks](/docs/frameworks-controls/frameworks/framework-overview#21-cfr-part-11)
+</Callout>
+
+### Vendors can reupload attachments without restarting the questionnaire
+
+Vendor assessments regularly hit the same friction point after submission: a reviewer finds an attachment outdated, incomplete, or wrong for the question. Restarting the questionnaire, rejecting the response, or moving the fix to email slows every review and splits the evidence trail.
+
+Vendor assessments on Scrut now allow vendors to reupload or replace attachments after submitting a questionnaire while the question is still under review and the questionnaire is not marked complete. Reviewers can request additional or updated documentation in the platform; vendors update the files against the relevant question, and reviewers see the new attachments without a full resubmit. The questionnaire stays in review until clarifications are addressed, then completes as usual.
+
+<Image src="/images/Reupload-attachments.png" alt="" />
+
+<Callout kind="info">
+  Learn more: [Vendor risk assessment workflow](/docs/vendor-management/vendor-risk-assessment-workflow/steps-to-complete-vendor-risk-assessment)
+</Callout>
+
+### Sync Hexnode MDM device inventory
+
+Endpoint controls fail audits when Mobile Device Manager (MDM) inventory lives only in the MDM console while evidence tasks still expect manual exports. Compliance owners then chase screenshots of device posture instead of a living inventory tied to their GRC tool. Scrut now integrates with Hexnode so teams can pull MDM data into Scrut for stronger device asset visibility.
+
+<Image src="/images/Integrate-Hexnode.png" alt="" />
+
+<Callout kind="info">
+  Learn more: [Integrate Hexnode](/docs/integrations/integrating-mobile-device-management-tools/integrating-hexnode)
+</Callout>
+
+### Import assets flexibly without fixed templates
+
+Teams export from cloud providers, configuration databases, or internal spreadsheets, then spend hours renaming fields and reshaping CSV or Excel files before importing into their GRC asset register.
+
+The Asset Management module in Scrut now accepts CSV or Excel files without a predefined template. Upload the file as-is, then use the import wizard under **Asset Management → Add Asset → Import via CSV/XLSX** to map columns to Scrut fields.
+
+<Image src="/images/Bulk-import-assets.png" alt="" />
+
+<Callout kind="info">
+  Learn more: [Bulk import assets](/docs/asset-management/adding-assets#bulk-import-assets)
+</Callout>
+
+## Other Updates
+
+- The [Family Educational Rights and Privacy Act (FERPA) framework](/docs/frameworks-controls/frameworks/framework-overview#ferpa-family-educational-rights-and-privacy-act) mapping was refreshed to align with recent U.S. Department of Education (DOE) Student Privacy Policy Office (SPPO) guidance.
+- Users now receive notifications from multiple modules in a single [Notification Center](/docs/lighthouse-documentation/onboarding-setup/notification-center), replacing scattered alerts and emails.
+- [Teammates Chat](/docs/settings/scrut-teammates/ask-anything-to-scrut-teammates) now surfaces clickable, context-aware follow-up questions under responses so users can continue the conversation without retyping.
+- Create and view [OpenProject tickets](/docs/integrations/integrating-project-management-platforms/integrating-openproject) directly from Scrut for remediation and compliance work tracking.
+- Scrut can now [sync Jira attachments](/docs/integrations/integrating-project-management-platforms/creating-jira-ticket#sync-jira-attachments-to-evidence-tasks) to linked evidence tasks. This includes attachments embedded in descriptions and comments, including inline images.

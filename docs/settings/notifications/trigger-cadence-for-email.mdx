@@ -1,0 +1,22 @@
+---
+title: "Email Notification Triggers & Recipients"
+---
+
+Scrut sends automated email notifications across modules to keep users informed and help them act on time-sensitive tasks. The table below breaks down each notification by trigger, recipient, and frequency.
+
+| Module | Notification | Description | Recipients | Frequency |
+| --- | --- | --- | --- | --- |
+| Audit | Invitation to Audit Team | Sent when a user is added to an audit team. | User(s) added to the Audit Team | Once |
+| Policy | Policy Review Reminder (7 Days Before Date) | Reminder to review a policy 7 days prior to its scheduled review date. | Policy Primary Assignee | Once |
+| Evidence | Evidence Review Reminder (7 Days Before Date) | Sent 7 days before the evidence review date. | Evidence Primary Assignee | Once |
+| Vendor | Questionnaire Submitted by Vendor | Triggered when a vendor submits a security questionnaire | Questionnaire Reviewer & Vendor Assignee | Once |
+| Vendor | Vendor Reassessment Reminder | Sent 7 days prior to the vendor’s next assessment date | Vendor Assignee | Once |
+| Vendor | Auto-Reminder for Overdue Questionnaire | Daily reminder when a vendor questionnaire is overdue and not yet submitted | Vendor Point of Contact (POC) | Daily |
+| Risk | Overdue Risk Mitigation Task | Triggered when a risk mitigation task passes its due date | Mitigation Task Assignee | As Applicable |
+| Cloud | Cloud Risk Mitigated | Sent when a cloud test status changes from Danger or Warning to Compliant | Cloud Test Assignee | Once |
+| Cloud | Daily Scheduled Cloud Scan | Sent when all daily cloud test scans are completed | All Admins | Daily |
+| Cloud | On-Demand Cloud Scan Completed | Sent when a user manually triggers a cloud test, and it completes successfully | User who triggered the test | Once |
+| People | Reminders for Incomplete Security Tasks | Reminder for incomplete tasks like training, MDM installation, etc | Employee | As applicable |
+| People | Welcome Email with Assigned Security Tasks | Sent when a new employee is assigned to a group or checklist for the first time | Employee | Once |
+| People | Training Certificate Notification | Sent upon successful completion of a security campaign | Employee | Once |
+| Miscellaneous | Weekly Email Digest | Summary of pending tasks across policy, evidence, and other modules | All Admins | Every Monday |

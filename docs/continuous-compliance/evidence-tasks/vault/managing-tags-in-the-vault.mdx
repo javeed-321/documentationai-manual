@@ -1,0 +1,198 @@
+---
+title: "Manage Tags in the Vault"
+description: "Learn how to add tags to Vault content so that you can control which documents and folders Scrut Teammates refers to when autofilling questionnaires."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Learn how to add tags to Vault content so that you can control which documents and folders Scrut Teammates refers to when autofilling questionnaires.
+
+## How Do Tags Work In the Vault?
+
+Tags let you label files and folders in the Vault, so each questionnaire refers only to the documents that are relevant to it. Instead of letting Questionnaire Automation scan your entire Vault, you can scope it to the exact content, such as product documentation for a product security questionnaire and SOC 2 reports for a compliance questionnaire.
+
+## Before You Begin
+
+- Tags are visible and manageable by Admins only.
+- Contributors and Auditors do not see the Tags feature anywhere in the product.
+
+## Limitations
+
+- A workspace supports a maximum of 10 tags.
+- Each tag name can be up to 15 characters, using letters, numbers, spaces, hyphens, and underscores only.
+- Tag names must be unique within a workspace. Names are case-insensitive, so "soc2" and "SOC2" are treated as the same tag.
+
+## Step 1: Create Your Tags
+
+Start by creating your tag library in Vault Settings. You can create up to 10 tags per workspace.
+
+1. Navigate to **Compliance → Vault**.
+
+2. Click **Settings** in the top right corner.
+
+   <Image src="/images/Vault---Settings.png" alt="" />
+
+3. Select the **Tags** tab. The Tags table shows all existing tags, along with who created them, when they were created, and how many items are using each tag.
+
+4. Click **Create Tag**.
+
+   <Image src="/images/Screenshot-2026-04-06-at-10.48.15.png" alt="" />
+
+5. Enter a name for the tag. Use letters, numbers, spaces, hyphens, or underscores only.
+
+6. Click **Save**.
+
+The new tag appears in the table with a count of 0 items. Repeat these steps until you have created all the tags you need.
+
+<Callout kind="info">
+  ****Pro Tip!****
+
+  Plan your tag names before you start. Because you can only have 10 tags per workspace, short, descriptive names work best. For example: "SOC2", "Product Docs", "HR Policy", "Pen Test".
+</Callout>
+
+## Step 2: Assign Tags to Folders
+
+Tagging a folder is the most efficient way to tag your content at scale. When you tag a folder, every file inside it inherits that tag for automation purposes, regardless of whether the individual files are tagged.
+
+1. Navigate to **Compliance → Vault**.
+
+2. Locate the folder you want to tag.
+
+3. Click the three-dot icon on the folder card and select **Manage Tags**.
+
+   <Image src="/images/Screenshot-2026-04-06-at-10.54.26.png" alt="" />
+
+4. Select the tags you want to assign to this folder. Already-assigned tags appear pre-checked.
+
+5. Click **Save**.
+
+Tag badges now appear on the folder card. All files inside the folder are treated as carrying these tags for Questionnaire Automation, even if the individual files have no tags of their own.
+
+<Image src="/images/Screenshot-2026-04-06-at-10.55.12.png" alt="" />
+
+<Callout kind="alert">
+  ****Important:****
+
+  Folder tags apply to all files inside. Files keep their own tags, but they'll also inherit the folder's tags.
+
+  If a folder has Tag A and a file inside it has Tag B, Scrut Teammates treats the file as having both Tags A and B.
+</Callout>
+
+## Step 3: Assign Tags to Individual Files
+
+You can also tag files directly, either when uploading or at any time after upload.
+
+### When Uploading a New File
+
+1. Navigate to the folder where you want to upload the file.
+2. Click **Upload Document**.
+3. Select your file.
+4. In the **Tags** field, select the tags that apply to this file.
+5. Click **Upload**.
+
+<Image src="/images/Screenshot-2026-04-06-at-11.03.49.png" alt="" />
+
+### For an Existing File
+
+1. Navigate to **Compliance → Vault** and open the folder containing the file.
+2. Click the three-dot icon next to the file and select **Manage Tags**.
+3. Select or deselect tags as needed.
+4. Click **Save**.
+
+<Image src="/images/Screenshot-2026-04-06-at-11.05.15.png" alt="" />
+
+## Step 4: Bulk Tag Multiple Files and Folders
+
+If you have several items to tag at once, use the bulk action bar to tag them all at once. Bulk tagging adds the selected tags to each item's existing tags without replacing any already assigned tags.
+
+1. Navigate to **Compliance → Vault**.
+2. Select the checkboxes next to the files and folders you want to tag.
+3. Click **Add Tags** in the bulk action bar that appears at the top.
+4. Select the tags you want to apply. You can also create a new tag from this dropdown if needed.
+5. Click **Apply**.
+
+<Image src="/images/Screenshot-2026-04-06-at-11.06.16.png" alt="" />
+
+## Step 5: \[Optional\] Filter Vault Contents by Tag
+
+Once your files and folders are tagged, you can filter the Vault to see only items with a specific tag.
+
+1. Navigate to **Compliance → Vault**.
+2. Click the **Filters** bar.
+3. Select **Tags** and choose the tags you want to filter by.
+
+The Vault view updates to show only files and folders with those tags directly assigned.
+
+<Image src="/images/Screenshot-2026-04-06-at-11.07.34.png" alt="" />
+
+## Step 6: Use Tags on a Questionnaire
+
+With your tags set up and assigned, you can now scope which Vault content Questionnaire Automation references when generating answers.
+
+1. Navigate to **Trust → Questionnaire**.
+
+2. Click **Add Questionnaire** and select **Create in Scrut**.
+
+3. Fill in the questionnaire details.
+
+4. In the **Tags** selector, choose the tags that define which Vault content should feed this questionnaire. This field is optional.
+
+   **Note:** If you leave it empty, Scrut Teammates considers all Vault content when autofilling the questionnaire.
+
+   <Image src="/images/Screenshot-2026-04-06-at-11.10.22.png" alt="" />
+
+5. If you also select an Entity, Scrut Teammates applies AND logic between tags and entities: only files that match at least one selected tag AND belong to at least one selected entity are considered.
+
+6. Click **Save**.
+
+When Questionnaire Automation runs, it pulls context only from Vault files that carry at least one of the tags you selected. If no matching files exist for the combination of tags and entities you chose, Scrut Teammates shows a "No matching files found" empty state.
+
+**Note:** You can edit the tags on a questionnaire after creation. Changing tags does not re-trigger autofill for questions that are already answered. Only new and unanswered questions will use the updated tag filtering.
+
+## Managing Existing Tags
+
+<Image src="/images/Edit-or-Delete-Tags.png" alt="" />
+
+### Edit a Tag Name
+
+1. Navigate to **Compliance → Vault → Settings → Tags**.
+2. Click the edit icon next to the tag you want to rename.
+3. Enter the new name and click **Save**.
+
+The updated name propagates to all files, folders, and questionnaires referencing this tag.
+
+### Delete a Tag
+
+1. Navigate to **Compliance → Vault → Settings → Tags**.
+2. Click the delete icon next to the tag.
+3. Review the impact summary in the confirmation modal. It shows how many items and questionnaires reference this tag.
+4. Click **Delete** to confirm.
+
+The tag is removed from all assigned files, folders, and questionnaires. Questionnaires with only this tag revert to no-tag filtering and will consider all Vault content on the next autofill run.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Tag deletion and renaming are blocked if any questionnaire referencing the tag has an active autofill running. Wait for autofill to complete before making changes to the tag.
+</Callout>
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="How does tag inheritance work for questionnaire automation?" default-open="true">
+    Understanding inheritance helps you predict which files Scrut Teammates will pick up for a tagged questionnaire.
+
+    - A file with no tags inside a tagged folder inherits the folder's tags.
+    - A file with its own tags inside a tagged folder uses both the folder’s tags and the individual file’s tags.
+    - A file with no tags in an untagged folder has no tag filtering applied. It is accessible to all questionnaires regardless of their tag selection.
+    - A file at the Vault root level (no parent folder) uses its own directly assigned tags.
+  </Expandable>
+
+  <Expandable title="Can I remove tags in bulk?" default-open="true">
+    There is no bulk "remove tags" action. If you tag items by mistake, you can delete the tag from Vault Settings to remove it from all assigned items at once.
+  </Expandable>
+</ExpandableGroup>

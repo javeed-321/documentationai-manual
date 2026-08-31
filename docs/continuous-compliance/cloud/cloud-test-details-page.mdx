@@ -1,0 +1,160 @@
+---
+title: "View Cloud Test Details"
+description: "Detailed walkthrough of the cloud test details page in Scrut."
+---
+
+The **Test Details** page in the Cloud module is your central hub for viewing, analyzing, and managing individual cloud test findings. It provides comprehensive insights and tools to help you assess risks, implement fixes, and track remediation progress.
+
+## How To Access the Test Details Page
+
+1. Sign in to Scrut, click **Compliance → Cloud** on the left navigation panel.
+2. Go to the **Tests** tab and click the test that you want to review.
+3. This takes you directly to the details page of that specific test.
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  Use the search bar and filters at the top of the page to quickly locate specific tests.
+</Callout>
+
+<Image src="/images/Select-an-individual-test.png" alt="" />
+
+## Understanding the Test Details Page
+
+The Test Details page is organized into the following key sections:
+
+### Test Title
+
+<Image src="/images/Screenshot-2026-02-04-at-20.29.34.png" alt="" />
+
+This is the test name, and this section also includes other key details, such as the test status, the frameworks it is mapped to, etc.
+
+### Concerns
+
+<Image src="/images/Screenshot-2025-11-27-at-16.56.47.png" alt="" />
+
+This section provides contextual information about the potential risks or issues associated with the test finding:
+
+- What the test checks for
+- Why this configuration matters for your security posture
+- Relevant framework requirements or best practices
+- Additionally, this section also shows to whom the test is assigned for remediation. You can add or edit assignees from here.
+
+### Remediation Steps
+
+<Image src="/images/AI-powered-remediation-guidelines.png" alt="" />
+
+Scrut provides [AI-powered step-by-step remediation instructions for each test](/docs/continuous-compliance/cloud/working-a-test-finding/remediating-a-test-finding):
+
+- Specific actions needed to fix non-compliant configurations
+- Guidance to help resources become compliant
+- Actionable items you can follow to resolve issues
+
+### Test History
+
+<Image src="/images/Screenshot-2026-02-04-at-20.32.13.png" alt="" />
+
+This chart shows the test's historical status over time. Use the **Date Filter** to refine results for a specific period.
+
+### Flagged Resources
+
+<Image src="/images/Screenshot-2025-11-27-at-16.58.58.png" alt="" />
+
+This section displays all resources associated with the specific finding:
+
+- Lists every asset that failed the test
+- Shows which resources need attention
+
+**Tip:** Use the actions menu next to each resource to [assign it to a user](/docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-resource-in-a-failing-test) or [ignore it](/docs/continuous-compliance/cloud/working-a-test-finding/ignoring-a-resource-of-a-test-finding) if it's not applicable.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  A test moves to "Ok" status only when ALL its resources are either:
+
+  - Fixed and compliant, OR
+  - Manually ignored
+
+  If even one resource remains in "monitoring" status, the entire test stays in "Needs Attention."
+</Callout>
+
+<Callout kind="info">
+  **Pro Tip!**
+
+  Clicking any resource in the table opens a side drawer that provides more contextual information such as [resource metadata](/docs/continuous-compliance/cloud/working-a-test-finding/remediating-a-test-finding#2-metadata), authentication details, configuration settings, and other resource-specific attributes that vary by resource type. This speeds up investigation and remediation by centralizing key information.
+</Callout>
+
+<Image src="/images/Screenshot-2025-11-28-at-10.35.25.png" alt="" />
+
+### Comments
+
+<Image src="/images/Screenshot-2026-02-04-at-22.20.44.png" alt="" />
+
+Use the **Comments section** in the Test Details page to communicate with assignees and other stakeholders.
+
+- Enter your comment in the comment field
+- Once added, comments appear in the comment section below the test details
+- Use comments to provide context, updates, or additional instructions
+
+### Controls & Requirements
+
+This section lists all the controls and requirements associated with a specific test.
+
+<Image src="/images/Screenshot-2026-02-04-at-22.24.23.png" alt="" />
+
+### Risk
+
+<Image src="/images/Screenshot-2026-02-04-at-22.29.17.png" alt="" />
+
+The Risk tab shows the risks you have created for a specific test finding. Clicking on it takes you directly to the risk register in the risk management module.
+
+### Tickets
+
+<Image src="/images/Screenshot-2026-02-04-at-22.25.17.png" alt="" />
+
+This tab shows the project management tickets associated with this test finding. Clicking
+
+## Key Actions
+
+### #1: Assign a Test
+
+Delegate responsibility for test remediation to team members. You can assign at two levels:
+
+- **Test Level:** [Assign the entire test to a team member](/docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-test-finding)
+- **Resource Level:** [Assign individual flagged resources to specific users](/docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-resource-in-a-failing-test)
+
+**Tip:** Filter by assignee to view who is responsible for each test or resource.
+
+### #2: Test Now
+
+<Image src="/images/Screenshot-2025-11-27-at-17.09.57.png" alt="" />
+
+<Callout kind="alert">
+  **Note:**
+
+  By default, Scrut runs all tests on your cloud environment once every 24 hours.
+</Callout>
+
+However, if needed, you can manually trigger an immediate re-scan of the test:
+
+1. Click the **Test Now** button
+2. A scan will be initiated for this specific finding
+3. Results will update automatically once testing completes
+
+**Note:** The Test Now button is grayed out while a scan is in progress.
+
+### #3: More Actions Menu
+
+<Image src="/images/Screenshot-2025-11-27-at-17.08.59.png" alt="" />
+
+Click the **three vertical dots** in the top right corner to access additional options:
+
+- **Create Tasks:** Generate tasks for external teams in integrated applications (JIRA, Monday.com, ClickUp, etc.)
+- **Create Risk:** Document this test as a formal risk by completing the Risk Creation Form
+- **Ignore Test:** Permanently exclude this test from future scans if it's not relevant to your organization
+
+### #4: Export Resources Table
+
+Click the Export button at the top of the resources table to share the details of flagged resources with external stakeholders. Scrut downloads the table as a CSV.
+
+<Image src="/images/image-1770224510522.png" alt="" />

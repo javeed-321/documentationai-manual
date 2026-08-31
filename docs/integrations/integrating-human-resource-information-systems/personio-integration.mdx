@@ -1,0 +1,43 @@
+---
+title: "Integrate Personio"
+---
+
+Personio is a human resources management system (HRMS) that covers a wide range of HR functions. By integrating Personio with scrut platform, we can fetch the employee details in the scrut platform like Employee Name, email, department, reporting manager, joining date and exit date.
+
+## Integrating Personio
+
+1. From the left navigation panel, select Integrations.
+2. Click on **Available**.
+
+<Image src="/images/image-9CXHGH6K.png" alt="" />
+
+3. Scroll to *Human Resource Information Systems* section and find *Personio*.
+4. Click **Integrate**
+
+<Image src="/images/image-A8AEPWUW.png" alt="" />
+
+5. Click **Connect**.
+
+<Image src="/images/image-JHWXX0M6.png" alt="" />
+
+6. Fill in the following details : 
+* **Enter your Personio ClientID**: To generate your API credentials, go to Settings > API credentials. To know more, refer to this [link](https://developer.personio.de/docs/getting-started-with-the-personio-api).
+
+* **Personio ClientSecret**: To generate your API credentials, go to Settings > API credentials. To know more, refer to this [link](https://developer.personio.de/docs/getting-started-with-the-personio-api).
+
+* **Personio Application Identifier**  : While generating the credentials, you need to specify the Application Identifier that is passed to Personio in each app.
+:::(Info) (Note:)
+Values MUST follow the UPPER_JOHN_CASE format. For example MY_APPLICATION, ACME are valid values
+:::
+
+<Image src="/images/image-QO1AJ47Y.png" alt="" />
+
+7. Once the credentials are entered, click Submit.
+
+Congrats! Your **Personio** account is successfully integrated with Scrut.
+
+:::(Info) ()
+**Info**:
+Employee data will start syncing immediately. Incremental data will be synced every 24 hours.
+Data can also be manually synced by clicking the three dots and choosing the Sync Now option.
+:::

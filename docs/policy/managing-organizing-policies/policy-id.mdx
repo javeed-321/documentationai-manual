@@ -1,0 +1,103 @@
+---
+title: "Turn On Policy IDs"
+description: "Learn how Policy IDs work in Scrut and how to enable them for your policies."
+---
+
+<Callout kind="info">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+You can use Policy IDs to assign unique, sequential identifiers to the policies in your Scrut account. These IDs make it easier to search for and reference specific policies across your organization.
+
+## How To Enable Policy IDs
+
+1. Sign in to Scrut, and click **Compliance → Policies** on the left navigation panel.
+
+2. Click the **Settings** (gear ) icon in the top right corner.
+
+   <Image src="/images/settings.png" alt="Settings icon" />
+
+   <Image src="/images/image-1763962365234.png" alt="" />
+
+3. Go to the **Configurations** tab and turn on the **Enable Policy ID** toggle.
+
+   <Image src="/images/image-1763962831028.png" alt="" />
+
+4. In the **Policy ID prefix** field, enter your custom Policy ID.
+
+   <Callout kind="alert">
+     **Note:**
+
+     - Character Limit: Maximum 10 alphanumeric characters
+     - Special characters aren’t permitted.
+     - Examples: POL, POLICY, SEC2025
+     - **Result**: Your IDs will follow the format \[Prefix\] - Number (e.g., POL-1, POL-2)
+   </Callout>
+
+5. Click **Save**.
+
+   <Image src="/images/Screenshot-2025-11-24-at-11.11.15.png" alt="" />
+
+6. Once enabled, the Policy ID becomes the first column in the policy table.
+
+7. Scrut automatically generates Policy IDs for all existing policies in chronological order of policy creation.
+
+   <Image src="/images/Screenshot-2025-11-24-at-11.11.50.png" alt="" />
+
+#### Key Points to Know
+
+- Once assigned, Policy IDs cannot be edited or changed.
+
+- IDs are ordered by policy creation date. This means that older policies have lower numbers than the most recent ones.
+
+- When frameworks are re-added during framework updation, existing policies retain their original IDs.
+
+- The IDs of deleted policies are never reused to maintain the audit trail.
+
+- If a policy is deleted and a similar one is recreated, the next available ID is assigned to it. Example sequence after deletion:
+
+  - POL-001 (existing)
+  - POL-002 (deleted - ID retired and remains unassigned)
+  - POL-003 (existing)
+  - POL-004 (newly created)
+
+## How To Disable Policy IDs
+
+1. Go to **Policy Settings → Configurations** and turn off the **Enable Policy ID toggle**.
+2. All Policy IDs are permanently removed, and previously assigned IDs cannot be recovered. So, proceed with caution.
+
+### FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="I have enabled the toggle. But the IDs are not appearing." default-open="true">
+    Initial ID generation might take a few moments. Check again after a few minutes.
+  </Expandable>
+
+  <Expandable title="Suggest some best practices for choosing Policy IDs." default-open="true">
+    - Keep it short and meaningful (e.g., department codes, policy types)
+    - Use consistent naming conventions across your organization
+    - Consider future scalability when selecting your prefix
+  </Expandable>
+
+  <Expandable title="There are gaps in the policy ID sequence." default-open="true">
+    This is normal and expected:
+
+    - Gaps occur when policies are deleted
+    - IDs are never reused to maintain audit integrity
+    - Gaps preserve the historical record of policy changes
+  </Expandable>
+
+  <Expandable title="I cannot edit the policy ID." default-open="true">
+    This is intended.
+
+    - Policy IDs are permanent once assigned
+    - This ensures consistency across all references and records
+    - To change an ID structure, you can disable and re-enable the Policy ID toggle (which deletes all existing IDs)
+  </Expandable>
+
+  <Expandable title="Can I re-enable the Policy ID toggle after disabling it?" default-open="true">
+    Yes, but you'll start fresh. All previous IDs are permanently deleted when you disable the feature, and new IDs will be generated when you re-enable it.
+  </Expandable>
+</ExpandableGroup>
