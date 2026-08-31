@@ -1,213 +1,77 @@
----
-title: >-
-  Execution of algoQA-generated Test Scripts in TestComplete and Viewing the
-  Report
-description: >-
-  Import algoQA-generated test scripts into TestComplete, execute them, export
-  results, and generate customized MS Word reports.
----
-<Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070020762664/original/oCOBp65TUeBZOi-22bfMLsteayVapLeinw.png?1742795604" width="836" height="1106" alt="File Explorer showing AlgoAFScript_202404261347 folder with TestComplete project file highlighted" caption=" " />
+<ExpandableGroup>
+  <Expandable title="How does editing policy variables impact policy status?" default-open="false">
+    Changing a policy variable affects all policies that utilize it and changes their status to **Draft**.
 
-## Prerequisites
+    | Old status   | New status after updating the Policy Variable |
+    | ------------ | --------------------------------------------- |
+    | Not Uploaded | Draft                                         |
+    | Draft        | Draft                                         |
+    | Approved     | Draft                                         |
+    | Published    | Draft                                         |
+  </Expandable>
 
-<Callout kind="info" collapsed="false">
-  Click [here](https://support.smartbear.com/testcomplete/docs/general-info/installing/index.html) to install TestComplete. Click [here](https://www.google.com/chrome/?brand=CHBF\&ds_kid=43700053265395790\&gclid=8609546f050717633ceb3243fb043f4c\&gclsrc=3p.ds&\&utm_source=bing\&utm_medium=cpc\&utm_campaign=1707332%20%7C%20Chrome%20Win11%20%7C%20DR%20%7C%20ESS01%20%7C%20APAC%20%7C%20IN%20%7C%20en%20%7C%20Desk%20%7C%20SEM%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20%7C%20Bing\&utm_term=chrome%20installation\&utm_content=Desk%20%7C%20BKWS%20-%20EXA%20%7C%20Txt_Install\&gclid=8609546f050717633ceb3243fb043f4c\&gclsrc=3p.ds) to install Chrome browser or the appropriate browser for running web applications on a desktop (optional).
-</Callout>
+  <Expandable title="Can I define a unique value for the variable for just one policy?" default-open="false">
+    No. You cannot define a unique value for a variable for just one policy; it applies to all impacted policies. To use a specific value for a policy, delete the variable and type in the specific answer, wherever needed.
+  </Expandable>
 
-## Downloading the Script
+  <Expandable title="How do I identify the policies that use a specific variable?" default-open="false">
+    The **Impacted Policies** section lists all policies that use a specific variable. To check this,
 
-Perform the following:
+    Navigate to the **Policy** module section and click the **Settings** icon on the top right. Click the **Policy Variables** tab. Click **View impacted policies** to view the list of all policies that use a specific variable.
 
-1. Navigate to the folder where the algoQA-generated scripts are uploaded. A sample script is [attached](https://algoshack1-my.sharepoint.com/personal/kalyan_kumar_algoshack_com/_layouts/15/onedrive.aspx?ga=1\&id=%2Fpersonal%2Fkalyan%5Fkumar%5Falgoshack%5Fcom%2FDocuments%2FeRADPACS%5FAutomationScripts%2FScriptGeneration%5F202404261347%2Ezip\&parent=%2Fpersonal%2Fkalyan%5Fkumar%5Falgoshack%5Fcom%2FDocuments%2FeRADPACS%5FAutomationScripts).
-2. Download the script and extract the contents to your local folder.
+    <Image src="/images/settings.png" alt="settings.png" />
 
-## Uploading the Script onto the TestComplete Tool
+    <Image src="/images/Screenshot-2025-06-16-at-17.51.54.png" alt="" />
+  </Expandable>
 
-Perform the following:
+  <Expandable title="Why is the variable’s value not visible in the policy editor?" default-open="false">
+    The policy editor shows only the placeholder variable. However, the variable value is visible when you preview the policy or download it.
+  </Expandable>
 
-<Steps>
-  <Step title="Navigate to the folder where you have downloaded the algoQA-generated script." title-type="p">
+  <Expandable title="I’ve accidentally deleted a variable from a policy. What do I do?" default-open="false">
+    No worries. Click the **Copy** **icon** in the **Policy Variables** tab to paste the variable back into the policy.
 
-  </Step>
+    <Image src="/images/Copy-icon.png" alt="Copy icon.png" />
 
-  <Step title="Import this script into the TestComplete tool in the respective environment." title-type="p">
-    This algoQA-generated script will work as a TestComplete project.
-  </Step>
+    <Image src="/images/Screenshot-2025-04-09-at-19.31.56.png" alt="" />
 
-  <Step title="Double-click the TestComplete project suite file to open the scripts in the TestComplete tool." title-type="p">
+    If you’ve removed all variables from the policy, you can restore them by clicking **Revert To Original Policy**.
 
-  </Step>
-</Steps>
+    <Image src="/images/Screenshot-2025-04-09-at-19.36.48.png" alt="" />
+  </Expandable>
 
-<Callout kind="tip" collapsed="false">
-  Double-click the project suite file with the extensions, such as .mds and .pjs to open the entire scripts in TestComplete.
-</Callout>
+  <Expandable title="Can I add a policy variable directly into the policy?" default-open="false">
+    Yes. Click the **Copy** **icon** corresponding to the variable you want to use and paste it at the required place in the policy.
 
-After opening the scripts in TestComplete, you can review all the respective files related to TestComplete before execution.
+    <Image src="/images/Copy-icon.png" alt="Copy icon.png" />
 
-## Execution of the Scripts
+    <Image src="/images/Screenshot-2025-05-29-at-13.58.13.png" alt="" />
+  </Expandable>
 
-Perform the following:
+  <Expandable title="Will enabling policy variables impact existing policies in my Scrut account?" default-open="true">
+    Refer to this section to learn [how enabling policy variables will affect existing policies](/docs/policy/editing-policy-content/policy-variables#how-do-policy-variables-affect-existing-policies).
+  </Expandable>
 
-1. You can execute scripts using the Feature Files option. Open the respective Feature File on the left pane that you want to execute in TestComplete. Details of the Feature File will be displayed in the right pane. Note: Images are not added automatically to the ImageRepository folder in TestComplete. If required, you can add them manually in algoQA Customize Script by navigating to Image Repo and using the Upload File option.
-   <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006399884/original/m87QJRSpkzP3m5o7tarP64yXJAVWkrbGwg.png?1714230534" width="524" height="252" alt="TestComplete IDE with Project Explorer and Feature file script open in workspace" caption=" " />
+  <Expandable title="Can I add custom variables?" default-open="true">
+    You cannot add custom policy variables; only the default options are available.
+  </Expandable>
 
-<Callout kind="info" collapsed="false">
-  The YMLUtil file is also available in TestComplete > Script > Base.
-</Callout>
+  <Expandable title="Can I use nested policy variables (one policy variable inside another variable's value)?" default-open="true">
+    Scrut doesn't currently support nested policy variables. If a variable's value contains a reference to another variable, the inner variable is not resolved in the generated policy document. It appears as plain text instead.
 
-<Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070044738360/original/fJyWS7RR_g8j6WYs0HbfXqcv_tJ7yltK3A.png?1782726380" width="535" height="286" alt="TestComplete Project Explorer with YMLUtil file selected and its Python code shown in the editor" caption=" " />
+    For example, say you have two variables:
 
-<Steps>
-  <Step title="Right-click on the respective scenario outline to select the 'Run This Scenario' option." title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006406640/original/ijN-6NCgh8_xM3Y-obSZCPerBPrPRJDVHA.png?1714293067" width="524" height="277" alt="TestComplete script editor context menu with Run This Scenario option highlighted" caption=" " />
-  </Step>
+    Variable A: `{{Legal_Entities}}` with the value "Acme Ltd." Variable B: `{{Company_Scope}}` with the value "This policy applies to \{\{Legal\_Entities}}."
 
-  <Step title="Upon completion of execution, you will be able to see the execution report." title-type="p">
-    The following screen appears. In this screen, click the 'Export Test results' icon to export all the information to the appropriate folder.
+    If you use `{{Company_Scope}}` in your policy template, the generated document renders:
 
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006406641/original/_K6uZzurprLYEBjFKTRm-BCI1CVcRABn9A.png?1714293093" width="524" height="234" alt="TestComplete test log with Export Test results icon highlighted and list of executed steps" caption=" " />
-  </Step>
+    "This policy applies to \{\{Legal\_Entities}}"
 
-  <Step title="'Choose Storage Type and Location' window appears." title-type="p">
-    In this window, select More Menu (three dots) options to choose the appropriate folder path and click OK.
+    instead of the expected:
 
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006404792/original/m-qmRvicXZs6sqEAv1QC-N4azW6S3xR1YQ.png?1714284744" width="535" height="394" alt="Choose Storage Type and Location dialog with Folder field, Export results to HTML Files option and OK button" caption=" " />
-  </Step>
+    "This policy applies to Acme Ltd."
 
-  <Step title="After exporting, navigate to the same folder where you have exported the files in the previous steps and locate the index file to view the results in the required browser." title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006406475/original/PyovV7nwMI92umcg0TI9Bb-pGy7oX2SrBQ.png?1714292422" width="535" height="98" alt="File list showing index and summary Microsoft Edge HTML report files" caption=" " />
-  </Step>
-</Steps>
-
-## Generating Customized MS Word Report using algoQA
-
-### Creating a separate folder to generate the MS Word report in the same folder
-
-Perform the following:
-
-<Steps>
-  <Step title="Navigate to the TestComplete folder structure in the algoQA folder structure." title-type="p">
-
-  </Step>
-
-  <Step title="In this folder, create a folder named 'GenerateWordReport'." title-type="p">
-
-  </Step>
-
-  <Step title="Copy the path and paste it into a notepad for later use." title-type="p">
-
-  </Step>
-</Steps>
-
-### Viewing the report in the algoQA-generated folder structure and copying the report text file to the 'GenerateWordReport' folder
-
-Perform the following:
-
-1. algoQA-generated scripts follow an organized folder structure as shown in the following sample screenshot. In this folder structure, select the TestComplete folder and navigate to the report text file as shown in the secondary screen.
-   <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407670/original/GORv31e1iIBoJ4nlRFsTKD73xhTugkGKxg.png?1714297258" width="490" height="281" alt="File explorer showing TestComplete folder structure with Log folder and pjs files" caption=" " />
-
-Secondary screen
-
-<Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407664/original/-9cfsbCc_1pJ3HVpl9ZbfWMGxrGHYiR_Kg.png?1714297255" width="479" height="42" alt="File explorer row showing a text document report file, 6 KB, modified 4/25/2024" caption=" " />
-
-1. Use the copied path in the notepad from Step 1 to open the 'GenerateWordReport' folder in a separate tab.
-2. Copy the report text file, as shown in the secondary screen, to the 'GenerateWordReport' folder.
-
-### Copying the supporting test execution files from the algoQA script-generated folder structure to 'GenerateWordReport' folder
-
-Perform the following:
-
-<Steps>
-  <Step title="Navigate to the Log folder in the algoQA folder structure to access supporting files, such as screenshots and test execution files as shown in the following screenshot:" title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407668/original/onJG9rdzJamOwVuZN8SlfShmqOBSLIOTOA.png?1714297257" width="488" height="97" alt="File explorer Log folder with TestComplete.mds.tcLogs file and timestamped subfolder highlighted" caption=" " />
-  </Step>
-
-  <Step title="Use the copied path in the notepad from Step 1 to open the 'GenerateWordReport' folder in a separate tab." title-type="p">
-
-  </Step>
-
-  <Step title="Copy all the supporting files from the Log folder and paste them to the 'GenerateWordReport' folder which is opened in a separate tab." title-type="p">
-
-  </Step>
-
-  <Step title="'GenerateWordReport' folder contains the report in text file format and supporting test execution files from the Log folder." title-type="p">
-
-  </Step>
-</Steps>
-
-### Generating Customized MS Word Report using algoQA via Command Prompt
-
-Perform the following:
-
-<Steps>
-  <Step title="In the algoQA script-generated folder structure, navigate to the algoReport folder." title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407665/original/OGTi4qPncrvIHYLy5DKo0wJVQn2JsJSGxA.png?1714297255" width="479" height="124" alt="Windows File Explorer address bar with algoReport folder selected in TestComplete script directory" caption=" " />
-  </Step>
-
-  <Step title="Click the address bar at the top of the folder path to highlight the path." title-type="p">
-
-  </Step>
-
-  <Step title="Type 'cmd' in the address bar to launch Command Prompt." title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407772/original/bZiZ2BC_RzpqIc-ZPOOoOvcYDRdbYERDHQ.gif?1714297678" width="490" height="292" alt="File Explorer showing algoReport application inside AlgoAFScript TestComplete folder" caption=" " />
-  </Step>
-
-  <Step title="Run the following command to generate the MS Word report in the 'GenerateWordReport' folder." title-type="p">
-    ```bash
-    algoreport.exe "wordReport" "reportStoragepath"
-    ```
-
-    This command instructs the algoreport.exe program to generate a report based on the provided Word document configuration and store it in the specified storage path.
-
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407667/original/OMNyBSHsT7HREwAsOgolxKAmHQqxhriNpA.png?1714297257" width="434" height="98" alt="Command prompt with algoReport.exe wordReport command highlighted" caption=" " />
-  </Step>
-
-  <Step title="The MS Word report will be generated in the 'GenerateWordReport' folder as shown:" title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407669/original/8XABpS2MgGhGh_bjbsz51Du2IyrKh_TKig.png?1714297257" width="479" height="207" alt="File Explorer GenerateWordReport folder with WordReport Word document highlighted" caption=" " />
-  </Step>
-
-  <Step title="Double-click the Word report generated in the previous step to view the report details, including the Test Execution Summary (field labels and values), Test Scenario Summary (scenario name, status, execution date and time, and test duration), and Test Step Summary (step number, status, description, expected results, and actual results)." title-type="p">
-    <Image src="https://s3-ap-south-1.amazonaws.com/ind-cdn.freshdesk.com/data/helpdesk/attachments/production/1070006407666/original/T2jrhCw7TfGXOoJ9zDRQiVjcxgLMyZPPUQ.png?1714297257" width="479" height="513" alt="Word report Test Execution Summary, Test Scenario Summary and Test Step Summary tables" caption=" " />
-  </Step>
-</Steps>
-
-## Generating HTML Report using algoQA
-
-Perform the following:
-
-<Steps>
-  <Step title="After executing the script, the test report folder is downloaded. Navigate to the TestComplete folder and copy the path of the .txt report file." title-type="p">
-    <Image src="https://blob-cdn.documentation.ai/org-7103cb8f-cec2-4f32-8d55-25f548363047/doc-bedb2115-f01c-44c8-9c94-3c30b511225b/1787835403102-xp30w1dy69q-pasted-image-1787835399984.png?fm=auto&auto=compress%2Cformat" width="1229" height="940" alt="" />
-  </Step>
-
-  <Step title="Navigate to the algoReport folder, open it in Command Prompt, and run the following command:" title-type="p">
-    ```bash
-    algoReport.exe wordReport "<txt-path>"
-    ```
-
-    <Image src="https://blob-cdn.documentation.ai/org-7103cb8f-cec2-4f32-8d55-25f548363047/doc-bedb2115-f01c-44c8-9c94-3c30b511225b/1787835913109-qi7hte2c4a-pasted-image-1787835910063.png?fm=auto&auto=compress%2Cformat" width="1919" height="254" alt="" />
-  </Step>
-
-  <Step title="The HTML report is generated and stored in the Test Report folder." title-type="p">
-    <Image src="https://blob-cdn.documentation.ai/org-7103cb8f-cec2-4f32-8d55-25f548363047/doc-bedb2115-f01c-44c8-9c94-3c30b511225b/1787835869244-mlctrb1pqtm-pasted-image-1787835866519.png?fm=auto&auto=compress%2Cformat" width="1229" height="940" alt="" />
-  </Step>
-
-  <Step title="Open the Test Report folder and navigate to the timestamp folder. The HTML report is available there." title-type="p">
-    <Image src="https://blob-cdn.documentation.ai/org-7103cb8f-cec2-4f32-8d55-25f548363047/doc-bedb2115-f01c-44c8-9c94-3c30b511225b/1787836161998-jc98iis71bk-pasted-image-1787836159007.png?fm=auto&auto=compress%2Cformat" width="1872" height="955" alt="" />
-  </Step>
-</Steps>
-
-<Callout kind="info" collapsed="false">
-  For all default verify actions without parameters, **Log Message** is replaced with **Log Checkpoint**. This change applies to the following default verify actions:
-
-  - Verify Disabled
-  - Verify Enabled
-  - Verify Text
-  - Verify Image
-  - Verify Not Displayed
-  - Verify Checked
-  - Verify Unchecked
-  - Verify Displayed
-</Callout>
+    Workaround: Use both variables directly in the policy template instead of nesting one inside the other. For example, add `{{Company_Scope}} {{Legal_Entities}}` directly in the template content where needed. This produces the same output without requiring nested variable resolution.
+  </Expandable>
+</ExpandableGroup>
 
