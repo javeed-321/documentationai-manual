@@ -56,7 +56,7 @@ Before you begin the integration, make sure to have the following permissions fo
 
 As part of the integration, you’ll need to copy-paste the following parameters from Workday in Scrut.
 
-#### #1: Workday URL
+#### 1: Workday URL
 
 To find your Workday Web Services URL, follow these steps:
 
@@ -66,7 +66,7 @@ To find your Workday Web Services URL, follow these steps:
 
 3. At the top of the page, click the more options icon ( ) beside Public Web Services.
 
-   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162093101-905wqy9n2e-dots-3-horizontal.svg?rasterize-bypass=true" alt="Three-dots menu icon" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162093101-905wqy9n2e-dots-3-horizontal.svg?rasterize-bypass=true" alt="Three-dots menu icon" width="25" height="25" />
 
 4. Hover over **Web Service** and click **View WSDL**.
 
@@ -74,7 +74,7 @@ To find your Workday Web Services URL, follow these steps:
 
 6. Copy the URL found in the `location` attribute of the `soapbind:address` element until the `/service`. For example, if the XML contains the URL, `soap:address location="https://example.workday.com/ccx/service/tenant/service/version"` the **Web Services URL** is `https://example.workday.com/ccx`.
 
-#### #2: Workday Integration System Username and Password
+#### 2: Workday Integration System Username and Password
 
 To create an **Integration System User (ISU)** in Workday, follow these steps:
 
@@ -135,7 +135,7 @@ For the Security Group, you will need to edit the Domain Security Policy Permiss
 2. This provides a summary of the pending security policy changes awaiting approval.
 3. Review the policies and approve the pending security policy changes to activate them.
 
-#### #3: Workday Tenant Name
+#### 3: Workday Tenant Name
 
 Finding your Workday Tenant Name is easy. For example, if you sign in at`https://example.workday.com/acme`, your tenant name is "**acme**."
 
@@ -145,7 +145,7 @@ Finding your Workday Tenant Name is easy. For example, if you sign in at`https:/
   Workday REST credentials (#4 Client ID and Client Secret, #5) are optional. You need them only to sync Leave APIs and Bank Account Details.
 </Callout>
 
-#### #4: Workday REST Client ID and Client Secret
+#### 4: Workday REST Client ID and Client Secret
 
 1. Log in to Workday and search for and click on "**Register API Client**."
 
@@ -174,7 +174,7 @@ Finding your Workday Tenant Name is easy. For example, if you sign in at`https:/
 
 7. Copy and save them in a safe location, as you’ll need to enter these values in Scrut in the [next step](/docs/integrations/integrating-human-resource-information-systems/integrating-workday#2-workday-integration-system-username-and-password).
 
-#### #5: Workday Refresh Token
+#### 5: Workday Refresh Token
 
 1. Log in to Workday, search for and then click on "**View API Client**."
 2. On the View API Clients page, click the **API Clients for Integrations** tab.

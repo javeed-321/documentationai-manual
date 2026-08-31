@@ -46,7 +46,7 @@ Before setting up the integration, ensure you have:
 
 The Hexnode integration collects device, user, and application data from your MDM instance and maps it to the following areas in Scrut:
 
-#### #1: People → Employees → Technicals
+#### 1: People → Employees → Technicals
 
 Data is synced to the **Technicals** section under each employee's profile. Only devices where `device_type` = `computer` are included here.
 
@@ -67,7 +67,7 @@ Data is synced to the **Technicals** section under each employee's profile. Only
   Smartphones and tablets are excluded from Employee Devices but are captured in Asset Management.
 </Callout>
 
-#### #2: People → Employees → Tasks → Required Software Installed
+#### 2: People → Employees → Tasks → Required Software Installed
 
 Application data is extracted from the `applications[]` array for each device. Each application is stored as a separate record and linked to its associated device and user.
 
@@ -84,7 +84,7 @@ Application data is extracted from the `applications[]` array for each device. E
 - Validate that employees have mandatory security software installed
 - Identify unauthorized or blacklisted applications on managed devices
 
-#### #3: Asset Management → Mobile Devices
+#### 3: Asset Management → Mobile Devices
 
 All devices (computers, smartphones, tablets) in your Hexnode MDM instance are synced to **Asset Management** as mobile device records.
 
