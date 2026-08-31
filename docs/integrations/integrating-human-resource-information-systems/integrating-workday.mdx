@@ -21,7 +21,7 @@ Before you begin the integration, make sure to have the following permissions fo
   - Read: leave_data
 
 <Expandable title="Read Permissions" default-open="false">
-  | Permission Group | Permissions |
+  |   |   |
   | :---: | --- |
   | **Base Permissions** | **Integration** • Integration Build • **Staffing** • Worker Data: Current Staffing Information, • Worker Data: All Positions • Worker Data: Public Worker Reports • Worker Data: Workers • Worker Data: Employment Data |
   | **Profile** | **Contact Information** • Person Data: Name • Person Data: Preferred Name • Person Data: Work Email • Person Data: Legal Name • **Staffing** • Worker Data: Time in Position |
@@ -36,7 +36,7 @@ Before you begin the integration, make sure to have the following permissions fo
 </Expandable>
 
 <Expandable title="Write Permissions" default-open="false">
-  | Permission Group | Permissions |
+  |   |   |
   | :---: | --- |
   | **Update Employee Operations** | Initiate (Change Job (Web Service)) • Initiate (Assign Organization (Web Service)) • Initiate (Change Organization Assignments (Web Service)) • Initiate (Maintain Contact Information (Web Service)) • Initiate (Edit Position (Web Service)) • Initiate (Edit Position Restrictions (Web Service)) • Initiate (Maintain Employee Contracts (Web Service)) • Initiate (Change Home Contact Information (Web Service)) • Initiate (Import Change Home Contact Information (WS Background Process)) • Initiate (Change Legal Name (Web Service)) • Cancel (Web Service) • Initiate (Change Personal Information (Web Service)) • Initiate (Change Business Title (Web Service)) • Initiate (Change Work Contact Information (Web Service)) |
   | **Create Employee Operations** | Cancel (Web Service) • Initiate (Create Position (Web Service)) • Initiate (Hire Employee (Web Service)) |
@@ -66,7 +66,7 @@ To find your Workday Web Services URL, follow these steps:
 
 3. At the top of the page, click the more options icon ( ) beside Public Web Services.
 
-   <Image src="/images/dots-3-horizontal.svg" alt="Three-dots menu icon" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162093101-905wqy9n2e-dots-3-horizontal.svg?rasterize-bypass=true" alt="Three-dots menu icon" />
 
 4. Hover over **Web Service** and click **View WSDL**.
 
@@ -94,7 +94,7 @@ To create an **Integration System User (ISU)** in Workday, follow these steps:
 
    **Note:** Add this user to the list of System Users to prevent the password from expiring.
 
-<Image src="/images/wd-s1-1-create-integration-system-user.png" alt="" />
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166242877-ketiblzbly9-wd-s1-1-create-integration-system-user.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 Ensure that you complete these instructions before proceeding to the next step.
 
@@ -111,7 +111,7 @@ Ensure that you complete these instructions before proceeding to the next step.
 
 4. Click **Ok**.
 
-   <Image src="/images/wd-s1-2-create-security-group-1.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166244128-9eg4fw0uc86-wd-s1-2-create-security-group-1.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 5. In the **Edit Integration System Security Group (Unconstrained)** dialog, enter the following:
 
@@ -119,7 +119,7 @@ Ensure that you complete these instructions before proceeding to the next step.
 
 6. Click **Ok**.
 
-   <Image src="/images/wd-s1-3-edit-integration-system.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166245418-hwlqyyic7ii-wd-s1-3-edit-integration-system.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 #### Configure Domain Security Policy Permissions
 
@@ -195,11 +195,11 @@ Finding your Workday Tenant Name is easy. For example, if you sign in at`https:/
 
 3. Locate the **Workday** card, or use the search bar at the top of the page to find it, and click the **Integrate** button.
 
-   <Image src="/images/Screenshot-2025-07-28-at-20.14.04.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163974448-0xgv08xgi7zp-Screenshot-2025-07-28-at-20-14-04.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 4. On the Workday integration page, click the **Connect** button at the top right.
 
-   <Image src="/images/Screenshot-2025-07-28-at-20.15.43.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163975845-rukwsx99iy-Screenshot-2025-07-28-at-20-15-43.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 5. Enter the details you fetched in Step 1: Workday URL, Integration System Username, Integration System User Password, and Tenant Name. Optionally, paste the REST Client ID, Client Secret, and Refresh Token, if required.
 

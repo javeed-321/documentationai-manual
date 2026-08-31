@@ -75,21 +75,21 @@ The Scrut - AWS integration setup involves the following steps:
 
 2. This redirects you to the **Quick create stack** page on your AWS console.
 
-   <Image src="/images/Screenshot-2023-09-17-at-10.04.29-PM.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163330474-qh4u44g83hq-Screenshot-2023-09-17-at-10-04-29-PM.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 3. In the **Stack name** field, enter the value “**ScrutIntegrationRole**.”
 
 4. Ensure you select the acknowledgment box to allow AWS CloudFormation to create IAM resources.
 
-   <Image src="/images/Screenshot-2023-09-17-at-10.07.28-PM.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163331776-6kgozgnffxo-Screenshot-2023-09-17-at-10-07-28-PM.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 5. Click **Create Stack**.
 
-   <Image src="/images/Screenshot-2023-09-17-at-10.10.52-PM.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163333111-9b9o18xn8q-Screenshot-2023-09-17-at-10-10-52-PM.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 6. Once the stack is created, open it, go to the **Outputs** tab, and copy the ARN value.
 
-   <Image src="/images/image-4J1EZ6C9.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162658904-c4559l1lh8r-image-4J1EZ6C9.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 7. You will need to enter this value in the AWS integration page on Scrut in the next step.
 
@@ -101,7 +101,7 @@ The Scrut - AWS integration setup involves the following steps:
 
 3. Locate the **AWS** integration tile and click **Integrate**.
 
-   <Image src="/images/Screenshot-2025-08-06-at-12.30.01.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163981316-38m48lo5cj-Screenshot-2025-08-06-at-12-30-01.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 4. On the AWS integration page, you must enter the following details:
 
@@ -110,11 +110,11 @@ The Scrut - AWS integration setup involves the following steps:
 
 5. Click **Submit**.
 
-   <Image src="/images/Screenshot-2025-08-06-at-12.55.35-1.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163982817-kg8jqygfjzd-Screenshot-2025-08-06-at-12-55-35-1.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 6. Watch out for the successfully connected notification and the Connected flag.
 
-   <Image src="/images/image-1757916396955.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162136199-sexao6xwm2-image-1757916396955.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 ### Step 3: Configure Scope
 
@@ -149,27 +149,27 @@ After connecting your account, configure the AWS services, regions, and resource
 
 1. On the AWS integration page, click the **Configure** icon in your connected AWS integration.
 
-   <Image src="/images/image-1757916684712.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162140177-x1bxg3khgjk-image-1757916684712.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 2. Select the **AWS services** you want Scrut to monitor (e.g., ACM, EC2, IAM, S3, VPC). You can select any number of services as required.
 
 3. Select the **AWS regions** where you want Scrut to monitor resources.
 
-   <Image src="/images/Screenshot-2026-02-04-at-14.42.42.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165095176-64u38jqgo6t-Screenshot-2026-02-04-at-14-42-42.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 4. Based on your selections, Scrut will fetch relevant tags, allowing you to select the ones needed to filter resources. To get the latest tags, click the **Refresh Tags** button (available once every 24 hours).
 
-   <Image src="/images/Screenshot-2026-02-04-at-14.43.23.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165096625-3g5e7p6cykm-Screenshot-2026-02-04-at-14-43-23.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 5. If you want to include resources without tags, check the **Include Untagged Resources** checkbox.
 
 6. Click **Save** to apply your scope configuration.
 
-   <Image src="/images/Screenshot-2025-10-06-at-19.00.00-1.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164339405-7ytu5vhhka9-Screenshot-2025-10-06-at-19-00-00-1.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 7. Watch for the success notification.
 
-   <Image src="/images/image-1757916709257.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162141490-ll1vzoy4joq-image-1757916709257.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 Scrut will automatically trigger a resource discovery job to apply your new scope.
 
@@ -189,15 +189,15 @@ Follow these steps to integrate another AWS account with Scrut:
 
 3. Locate the **AWS** tile and click **Configure**.
 
-   <Image src="/images/Screenshot-2025-08-06-at-14.16.09.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163985838-r3yrguzro1c-Screenshot-2025-08-06-at-14-16-09.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 4. Click the **Add** button.
 
-   <Image src="/images/image-1757916421445.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162137528-jwt1n0whi8k-image-1757916421445.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 5. The remaining steps are the same as those for connecting your first AWS account. Enter the account nickname and Role ARN and click **Save & Close**.
 
-   <Image src="/images/image-1757916450653.png" alt="" />
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162138847-ozyqp380tol-image-1757916450653.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 <Callout kind="success">
   **Note:**
@@ -211,7 +211,7 @@ Follow these steps to integrate another AWS account with Scrut:
 
 The initial sync begins automatically after setup. It may take up to 24 hours for Scrut to populate the first scan results. Check the Audit Logs tab on the AWS integration page to track the sync status.
 
-<Image src="/images/Screenshot-2025-08-06-at-13.02.32.png" alt="" />
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163984247-1f3t7nm1okg-Screenshot-2025-08-06-at-13-02-32.png?fm=auto&auto=compress%2Cformat" alt="" />
 
 **Note:** If results are not available after 24 hours, contact [support@scrut.io](mailto:support@scrut.io) for help.
 
@@ -257,7 +257,7 @@ Possible solutions:
   <Expandable title="Where can I view the full list of automated tests and evidence collected for AWS?" default-open="true">
     Sign in to Scrut, click **Integrations** on the left navigation panel, and click the AWS integration tile to expand it. The expanded view lists all Automated Tests and Automated Evidence collected via Scrut Monitor for your connected AWS account.
 
-    <Image src="/images/Screenshot-2026-03-11-at-16.51.03.png" alt="" />
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165315214-e8iw6xf9mr7-Screenshot-2026-03-11-at-16-51-03.png?fm=auto&auto=compress%2Cformat" alt="" />
   </Expandable>
 
   <Expandable title="What AWS API calls does Scrut perform during evidence collection?" default-open="true">
