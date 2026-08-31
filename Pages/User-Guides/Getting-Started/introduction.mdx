@@ -1,77 +1,121 @@
+---
+title: View the Effort Estimate to Complete Tests
+description: Estimate the effort required to fix a failing test.
+---
+<Callout kind="alert" collapsed="false">
+  **Heads Up!**
+
+  This feature is currently available only for specific tests for the following frameworks: ISO 27001, SOC 2, GDPR, and HIPAA. To know more, contact your CSM.
+</Callout>
+
+The effort estimate quantifies the amount of effort required to fix a failing test. This helps to:
+
+- **Prioritize and allocate resources** more effectively
+- **Assign appropriate tasks** based on the effort required and team capacities
+- **Balance workload** across team members
+- **Set realistic timelines** for test completion
+- **Report progress** to stakeholders more accurately
+
+By default, **Scrut provides an effort estimate for each automated test**, helping you prioritize tasks and allocate resources effectively. It's important to keep in mind that these **estimates are benchmark figures** based on the average implementation effort required for each test. If you find that the default estimates do not align with your specific needs or circumstances, [you can modify them](/docs/policy/managing-organizing-policies/set-policy-effort-estimate#how-to-set-policy-effort-estimates), as required.
+
+## Effort Estimate Levels
+
+Scrut categorizes effort into three levels:
+
+- **Low**: Easy to implement, minimal configuration or steps required
+- **Medium**: Moderate complexity, requires multiple steps or configuration across several resources
+- **High**: Complex implementation, extensive configuration, or affects multiple systems
+
+## How To View Effort Estimates for Tests
+
+<Tabs>
+  <Tab title="Via the Test Table">
+    Click on the **Effort Estimate** column on the Automated Tests tab in the **Tests** module. This allows you to sort tests by effort level.
+
+    <Image src="/images/Screenshot-2025-11-25-at-23.24.05.png" alt="" />
+  </Tab>
+
+  <Tab title="On the Test Details Page">
+    Navigate to a specific test and look for the **Effort Estimate** field on the test details page.
+
+    <Image src="/images/Screenshot-2025-11-25-at-23.22.06.png" alt="" />
+  </Tab>
+</Tabs>
+
+## How to Set Test Effort Estimates
+
+- [For a Single Test](/docs/continuous-compliance/automated-tests/effort-estimate-for-tests#for-a-single-test)
+- [For Multiple Tests](/docs/continuous-compliance/automated-tests/effort-estimate-for-tests#for-multiple-tests)
+
+### For a Single Test
+
+1. Sign in to Scrut, and click **Tests** on the left navigation panel.
+2. Go to the **Automated Tests** tab and select the test you want to set the effort estimate for.
+   <Image src="/images/Screenshot-2025-11-25-at-23.28.24.png" alt="" />
+3. Use the **Effort Estimate** dropdown and set the desired level.
+   <Image src="/images/Screenshot-2025-11-25-at-23.28.48.png" alt="" />
+
+### For Multiple Tests
+
+You can also set effort estimates for multiple tests simultaneously:
+
+1. Go to **Tests → Automated Tests** and select the tests you want to set the effort estimate for.
+2. Click the **Set Effort Estimate** button at the top of the Automated Tests table.
+   <Image src="/images/Screenshot-2025-11-25-at-23.30.02.png" alt="" />
+3. Choose the desired level from Low, Medium, or High.
+4. Click **Save** to complete the bulk assignments.
+   <Image src="/images/Screenshot-2025-11-25-at-23.30.29.png" alt="" />
+   <Callout kind="alert" collapsed="false">
+     **Heads Up!**
+
+     This action overrides any existing effort estimates for selected tests.
+   </Callout>
+
+### FAQs
+
 <ExpandableGroup>
-  <Expandable title="How does editing policy variables impact policy status?" default-open="false">
-    Changing a policy variable affects all policies that utilize it and changes their status to **Draft**.
-
-    | Old status   | New status after updating the Policy Variable |
-    | ------------ | --------------------------------------------- |
-    | Not Uploaded | Draft                                         |
-    | Draft        | Draft                                         |
-    | Approved     | Draft                                         |
-    | Published    | Draft                                         |
+  <Expandable title="Is it mandatory to add the effort estimate for all tests?" default-open="true">
+    No, it's optional. However, setting effort estimates helps with better planning and prioritization.
   </Expandable>
 
-  <Expandable title="Can I define a unique value for the variable for just one policy?" default-open="false">
-    No. You cannot define a unique value for a variable for just one policy; it applies to all impacted policies. To use a specific value for a policy, delete the variable and type in the specific answer, wherever needed.
+  <Expandable title="Can I edit the effort estimate at any time?" default-open="true">
+    Yes, you can edit the effort estimate at any time by opening the test and updating the field.
   </Expandable>
 
-  <Expandable title="How do I identify the policies that use a specific variable?" default-open="false">
-    The **Impacted Policies** section lists all policies that use a specific variable. To check this,
+  <Expandable title="What if I'm unsure which level to choose?" default-open="false">
+    Start with your best estimate. You can always adjust it later. If you're between two levels, consider starting with the higher effort level to avoid underestimating the work required. Use these guidelines to select the appropriate effort estimate:
 
-    Navigate to the **Policy** module section and click the **Settings** icon on the top right. Click the **Policy Variables** tab. Click **View impacted policies** to view the list of all policies that use a specific variable.
 
-    <Image src="/images/settings.png" alt="settings.png" />
 
-    <Image src="/images/Screenshot-2025-06-16-at-17.51.54.png" alt="" />
+    #### Choose Low When:
+
+    - mplementation takes less than 30 minutes
+    - Requires 1-3 simple steps
+    - Affects a single system or setting
+    - Can be completed by one person without coordination
+
+    #### Choose Medium When:
+
+    - Implementation takes several hours
+    - Requires 4-10 steps or configuration changes
+    - Affects multiple resources but within a single system
+    - May require coordination with one other team
+
+    #### Choose High When:
+
+    - Implementation takes more than multiple days
+    - Requires complex multi-step processes
+    - Affects multiple systems or requires migration
+    - Requires coordination across multiple teams or vendors
+    - May cause downtime or require careful planning
   </Expandable>
 
-  <Expandable title="Why is the variable’s value not visible in the policy editor?" default-open="false">
-    The policy editor shows only the placeholder variable. However, the variable value is visible when you preview the policy or download it.
+  <Expandable title="Do effort estimates affect compliance status?" default-open="true">
+    No, effort estimates are purely for planning and do not impact whether a test is compliant or non-compliant.
   </Expandable>
 
-  <Expandable title="I’ve accidentally deleted a variable from a policy. What do I do?" default-open="false">
-    No worries. Click the **Copy** **icon** in the **Policy Variables** tab to paste the variable back into the policy.
-
-    <Image src="/images/Copy-icon.png" alt="Copy icon.png" />
-
-    <Image src="/images/Screenshot-2025-04-09-at-19.31.56.png" alt="" />
-
-    If you’ve removed all variables from the policy, you can restore them by clicking **Revert To Original Policy**.
-
-    <Image src="/images/Screenshot-2025-04-09-at-19.36.48.png" alt="" />
-  </Expandable>
-
-  <Expandable title="Can I add a policy variable directly into the policy?" default-open="false">
-    Yes. Click the **Copy** **icon** corresponding to the variable you want to use and paste it at the required place in the policy.
-
-    <Image src="/images/Copy-icon.png" alt="Copy icon.png" />
-
-    <Image src="/images/Screenshot-2025-05-29-at-13.58.13.png" alt="" />
-  </Expandable>
-
-  <Expandable title="Will enabling policy variables impact existing policies in my Scrut account?" default-open="true">
-    Refer to this section to learn [how enabling policy variables will affect existing policies](/docs/policy/editing-policy-content/policy-variables#how-do-policy-variables-affect-existing-policies).
-  </Expandable>
-
-  <Expandable title="Can I add custom variables?" default-open="true">
-    You cannot add custom policy variables; only the default options are available.
-  </Expandable>
-
-  <Expandable title="Can I use nested policy variables (one policy variable inside another variable's value)?" default-open="true">
-    Scrut doesn't currently support nested policy variables. If a variable's value contains a reference to another variable, the inner variable is not resolved in the generated policy document. It appears as plain text instead.
-
-    For example, say you have two variables:
-
-    Variable A: `{{Legal_Entities}}` with the value "Acme Ltd." Variable B: `{{Company_Scope}}` with the value "This policy applies to \{\{Legal\_Entities}}."
-
-    If you use `{{Company_Scope}}` in your policy template, the generated document renders:
-
-    "This policy applies to \{\{Legal\_Entities}}"
-
-    instead of the expected:
-
-    "This policy applies to Acme Ltd."
-
-    Workaround: Use both variables directly in the policy template instead of nesting one inside the other. For example, add `{{Company_Scope}} {{Legal_Entities}}` directly in the template content where needed. This produces the same output without requiring nested variable resolution.
+  <Expandable title="Can I filter or sort tests by effort level?" default-open="true">
+    Yes. Use the filter and sort icons in the Automated Tests table to narrow to tests with a specific effort level.
   </Expandable>
 </ExpandableGroup>
 
