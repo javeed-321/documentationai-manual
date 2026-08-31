@@ -105,11 +105,11 @@ Scrut captures all changes to the **Settings → Administration** module in the 
 ## FAQs & Troubleshooting
 
 <ExpandableGroup>
-  <Expandable title="Why can't I see the Google Workspace / Microsoft Entra (Azure AD) toggles under Enterprise SSO?" default-open="true">
+  <Expandable title="Why can’t I see the Google Workspace / Microsoft Entra (Azure AD) toggles under Enterprise SSO?" default-open="true">
     The Google and Microsoft toggles in the Social SSO section support both social logins and enterprise Single Sign-On (SSO). This means that to enable Google Workspace login for your users, simply activate the Google toggle in the Social SSO section. Likewise, to enable login through Microsoft Entra (Azure AD), switch on the Microsoft toggle in the same section.
   </Expandable>
 
-  <Expandable title="An external user (such as an auditor or contractor) can't see the OTP login option. How do they log in?" default-open="true">
+  <Expandable title="An external user (such as an auditor or contractor) can’t see the OTP login option. How do they log in?" default-open="true">
     This is expected behavior. When your organization has only one SSO option enabled, that SSO becomes the default and the only login method shown. The Get Verification Code (OTP) option is a fallback that becomes available when two or more SSO options are enabled.
 
     If you have external users (such as auditors or contractors) who are not on your SSO domain and need OTP access, enable a second SSO option in Settings → Administration. This unlocks the OTP login option for all users on the login page.
