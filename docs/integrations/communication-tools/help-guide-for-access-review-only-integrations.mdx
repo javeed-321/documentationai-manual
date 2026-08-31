@@ -1,7 +1,6 @@
 ---
-title: "Integrate Zoom"
+title: Integrate Zoom
 ---
-
 The **Scrut-Zoom** integration fetches user access data, permissions, and role assignments from your Zoom account and sends them to Scrut’s **Access Review** module. This integration enables your organization to maintain comprehensive visibility over user access rights and streamline periodic access reviews for compliance and security.
 
 ## How To Connect Zoom With Scrut
@@ -11,16 +10,13 @@ The **Scrut-Zoom** integration fetches user access data, permissions, and role a
 Before starting the integration, ensure you have the following permissions for your Zoom account:
 
 - **Account Information**: Login credentials
-
 - **Access Level**: Admin access
-
 - **Permissions**: Scrut requires the following permissions to fetch access review details:
-
   - View users
   - View a user’s permissions
   - View a user’s tokens
 
-<Callout kind="info">
+<Callout kind="info" collapsed="false">
   **Pro Tip!**
 
   We recommend logging into your Zoom account before starting the integration to avoid doing so later.
@@ -29,35 +25,23 @@ Before starting the integration, ensure you have the following permissions for y
 ### Step 1: Navigate to Integrations in Scrut
 
 1. Sign in to your Scrut account and click **Integrations** on the left navigation panel.
-
 2. Go to the **Integrations Library** tab, and in the **Categories** section, click **Communications Tools**.
-
 3. Look for the **Zoom** tile and click **Integrate**.
-
    <Image src="/images/Screenshot-2025-06-10-at-19.16.51.png" alt="" />
-
 4. Once you’re on the Zoom integrations page, click the **Connect** button at the top right.
-
    <Image src="/images/Screenshot-2025-06-10-at-19.17.34.png" alt="" />
-
 5. Click **Allow** to grant the required permissions.
-
-1. Log in to your Zoom account and navigate to \[SPECIFIC LOCATION - e.g., **Admin Console → Security → API Management**\].
-
-2. Create a new API key or service account specifically for Scrut integration.
-
-3. Configure the API permissions to include:
-
+6. Log in to your Zoom account and navigate to \[SPECIFIC LOCATION - e.g., **Admin Console → Security → API Management**].
+7. Create a new API key or service account specifically for Scrut integration.
+8. Configure the API permissions to include:
    - User read permissions
    - Role and group read permissions
    - Directory read permissions
    - Audit log read permissions
+9. Copy and securely store the generated API key and credentials.
+10. \[ADDITIONAL STEPS AS NEEDED - e.g., whitelist Scrut IP addresses, configure rate limits]
 
-4. Copy and securely store the generated API key and credentials.
-
-5. \[ADDITIONAL STEPS AS NEEDED - e.g., whitelist Scrut IP addresses, configure rate limits\]
-
-<Callout kind="alert">
+<Callout kind="alert" collapsed="false">
   **Note:**
 
   Ensure the API key has read-only permissions to maintain security. Write permissions are not required for access review functionality.
@@ -66,25 +50,19 @@ Before starting the integration, ensure you have the following permissions for y
 ### Step 2: Connect Your Zoom Account in Scrut
 
 1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
-
-2. Navigate to the **Integrations Library** tab, and choose **\[Category Name\]** in the **Categories** section.
-
+2. Navigate to the **Integrations Library** tab, and choose **\[Category Name]** in the **Categories** section.
 3. Scroll to the **Zoom** tile and click **Integrate**.
 
-   \[ss\]
-
+   \[ss]
 4. On the integration setup page:
-
    - Enter the Tenant ID, instance URL, domain, etc.
    - Copy and paste the API key or credentials obtained in Step 1
-
 5. Click **Submit**.
 
-   \[ss\]
-
+   \[ss]
 6. Once authorization is done, you’ll see the “**Connected Successfully**” message and the **Connected** status indicator.
 
-   \[ss\]
+   \[ss]
 
 ## Synchronization Details
 
@@ -128,7 +106,7 @@ Refer to this guide for step-by-step instructions on [creating an access review]
 ## FAQs & Troubleshooting
 
 <ExpandableGroup>
-  <Expandable title="Issue #1: Integration fails with &quot;Insufficient Permissions&quot; error" default-open="false">
+  <Expandable title="Issue #1: Integration fails with Insufficient Permissions error" default-open="false">
     Verify that your API key or service account has all required permissions listed in the Prerequisites section. Contact your Zoom administrator to ensure proper access levels are granted.
   </Expandable>
 
@@ -147,4 +125,4 @@ Refer to this guide for step-by-step instructions on [creating an access review]
 
 ---
 
-If you face any difficulties connecting Zoom with Scrut, please contact the Scrut support team at support@scrut.io.
+If you face any difficulties connecting Zoom with Scrut, please contact the Scrut support team at [support@scrut.io](mailto:support@scrut.io).
