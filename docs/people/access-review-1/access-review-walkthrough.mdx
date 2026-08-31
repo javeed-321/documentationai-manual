@@ -236,23 +236,23 @@ Use the search bar at the top to filter employees by name or email.
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Can I edit the role for a user from the Access Chart table?" default-open="true">
+  <Expandable title="Can I edit the role for a user from the Access Chart table?" default-open="false">
     No, the **Access Chart table is read-only**. To change user roles or permissions, go to the specific application and make the necessary adjustments. Changes automatically update in the Access Chart after the next sync.
   </Expandable>
 
-  <Expandable title="Why are some applications missing from the table?" default-open="true">
+  <Expandable title="Why are some applications missing from the table?" default-open="false">
     Check the column customization settings. Check if the missing application is selected.
   </Expandable>
 
-  <Expandable title="Why are some employees missing from the table?" default-open="true">
+  <Expandable title="Why are some employees missing from the table?" default-open="false">
     The matrix only shows employees mapped to Owners in Scrut. Unmapped users don't appear. Click the unresolved icon to map the missing employee to their corresponding email (owner).
   </Expandable>
 
-  <Expandable title="Will employees be displayed in multiple rows for each application?" default-open="true">
+  <Expandable title="Will employees be displayed in multiple rows for each application?" default-open="false">
     No. The Access Chart table automatically consolidates accounts belonging to the same person. For example, John Smith has accounts in both Salesforce and Google Workspace, both mapped to [john.smith@company.com](mailto:john.smith@company.com). They appear as a single row, with Salesforce roles in the Salesforce column and Google Workspace roles in the Google Workspace column. If the person has multiple roles within Salesforce, all roles appear in the Salesforce cell.
   </Expandable>
 
-  <Expandable title="The access matrix shows a user whom I don’t recognize. Why?" default-open="true">
+  <Expandable title="The access matrix shows a user whom I don’t recognize. Why?" default-open="false">
     If you don’t recognize a user, it’s probably a malicious user. Make sure to revoke their access quickly in the application and update your authentication mechanisms as needed.
   </Expandable>
 </ExpandableGroup>

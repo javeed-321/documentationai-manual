@@ -332,7 +332,7 @@ Possible solutions: Azure client secrets have a defined expiry period. If your i
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Can I modify the scope of a connected Azure integration?" default-open="true">
+  <Expandable title="Can I modify the scope of a connected Azure integration?" default-open="false">
     Yes. You can update the Azure subscriptions Scrut monitors at any time. Click the edit icon on your connected Azure integration, update the subscription selection or nicknames, and click Finish.
 
     1. Click the edit icon in your connected Azure integration.
@@ -372,27 +372,27 @@ Possible solutions: Azure client secrets have a defined expiry period. If your i
     Watch out for the connected status flag.
   </Expandable>
 
-  <Expandable title="Can I integrate multiple Azure accounts with Scrut?" default-open="true">
+  <Expandable title="Can I integrate multiple Azure accounts with Scrut?" default-open="false">
     Yes. Scrut supports multiple Azure accounts. Each account requires its own app registration and client secret in Azure.
   </Expandable>
 
-  <Expandable title="What happens if I deselect a subscription from my scope?" default-open="true">
+  <Expandable title="What happens if I deselect a subscription from my scope?" default-open="false">
     Deselecting a subscription removes all associated tests from the Cloud module, decreases overall compliant and non-compliant test counts, and removes the subscription from the account selection dropdown in the Cloud module.
   </Expandable>
 
-  <Expandable title="What happens if I rotate my Azure client secret?" default-open="true">
+  <Expandable title="What happens if I rotate my Azure client secret?" default-open="false">
     If the client secret expires or is rotated, your integration stops syncing. Generate a new client secret in Azure, then update the value in your Scrut integration settings before the expiry date to avoid a coverage gap.
   </Expandable>
 
-  <Expandable title="Can I restrict the integration to a specific Resource Group instead of an entire subscription?" default-open="true">
+  <Expandable title="Can I restrict the integration to a specific Resource Group instead of an entire subscription?" default-open="false">
     Yes. To limit access to a specific Resource Group, follow the [IAM role assignment steps (Step 4)](/docs/integrations/integrating-cloud-providers/integrating-azure#step-4-create-iam-role) at the Resource Group level instead of the subscription level. Note that Scrut recommends configuring scope at the subscription level in Scrut for broader coverage.
   </Expandable>
 
-  <Expandable title="Where can I view the full list of automated tests and evidence collected for Azure?" default-open="true">
+  <Expandable title="Where can I view the full list of automated tests and evidence collected for Azure?" default-open="false">
     Sign in to Scrut, click Integrations on the left navigation panel, and click the Microsoft Azure tile to expand it. The expanded view lists all Automated Tests and Automated Evidence collected via Scrut Monitor for your connected Azure account.
   </Expandable>
 
-  <Expandable title="Does Scrut support Azure GovCloud?" default-open="true">
+  <Expandable title="Does Scrut support Azure GovCloud?" default-open="false">
     Yes. To connect an Azure GovCloud account, turn on the GovCloud account toggle in the [Credentials step](/docs/integrations/integrating-cloud-providers/integrating-azure#step-5-connect-azure-with-scrut) and select your GovCloud region when setting up your Microsoft Azure integration.
 
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163007087-yxgbf7oluzp-image-MWEFB9FA.png?fm=auto&auto=compress%2Cformat" alt="" />

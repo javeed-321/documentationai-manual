@@ -70,18 +70,18 @@ The following details carry over from the source policy:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Is the cloned policy linked to the source policy after creation?" default-open="true">
+  <Expandable title="Is the cloned policy linked to the source policy after creation?" default-open="false">
     No. Once created, the clone is a fully independent policy with its own artifact ID. Editing, publishing, or deleting the source policy does not affect the clone, and changes to the clone do not carry back to the source. The two are only related by the data that was copied at the moment of cloning.
   </Expandable>
 
-  <Expandable title="Why clone a policy?" default-open="true">
+  <Expandable title="Why clone a policy?" default-open="false">
     Cloning helps in two common situations:
 
     - **Per-entity policies:** If your organization uses Entities, you can clone a policy to assign it to a different entity with its own attachment and lifecycle, while keeping the same control mappings as the source policy.
     - **Splitting merged policies:** Some policies in Scrut's catalog are merged to reduce duplication in framework mappings. If your governance model needs these as separate documents, cloning splits them into individually titled policies without remapping controls from scratch.
   </Expandable>
 
-  <Expandable title="What happens if I clone a policy that has an unresolved policy variable?" default-open="true">
+  <Expandable title="What happens if I clone a policy that has an unresolved policy variable?" default-open="false">
     The cloning action completes. The new policy has no attachment or variables until you add content to it.
   </Expandable>
 </ExpandableGroup>

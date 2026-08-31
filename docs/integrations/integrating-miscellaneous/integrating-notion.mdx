@@ -108,15 +108,15 @@ Possible solutions: This is expected behavior. The Role column will always be bl
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Does Scrut pull data from all pages in my Notion workspace?" default-open="true">
+  <Expandable title="Does Scrut pull data from all pages in my Notion workspace?" default-open="false">
     Not by default. During the OAuth flow, you select which pages Scrut can access. For access reviews, Scrut uses the workspace user list, not page content. Page access is optional and recommended only for future feature expansion.
   </Expandable>
 
-  <Expandable title="Why is the Role column blank for all Notion users?" default-open="true">
+  <Expandable title="Why is the Role column blank for all Notion users?" default-open="false">
     Notion's API does not currently support fetching user roles. This is a platform limitation and not something that can be resolved in Scrut. The Role field will remain empty for all Notion access reviews.
   </Expandable>
 
-  <Expandable title="What happens if a user is removed from Notion after the sync?" default-open="true">
+  <Expandable title="What happens if a user is removed from Notion after the sync?" default-open="false">
     Scrut reflects the current state of your Notion workspace on every sync. If a user is removed from Notion, they will no longer appear in subsequent synced user lists.
   </Expandable>
 </ExpandableGroup>

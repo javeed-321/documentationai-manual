@@ -100,11 +100,11 @@ Scrut will automatically trigger a resource discovery job to apply your new scop
 ### FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens when AWS resources enter/exit the scope of the Scrut integration?" default-open="true">
+  <Expandable title="What happens when AWS resources enter/exit the scope of the Scrut integration?" default-open="false">
     When you add a resource, Scrut will start monitoring it at the next sync. Similarly, when you move a resource out of scope for the integration, Scrut will stop monitoring it at the next sync. Risks linked to this resource receive an “Asset out-of-scope” badge.
   </Expandable>
 
-  <Expandable title="How do I scan all my AWS resources?" default-open="true">
+  <Expandable title="How do I scan all my AWS resources?" default-open="false">
     To scan all your AWS resources, click the configure button on the integration page and unselect all resources, regions, and tags. Scrut will then scan your entire AWS infrastructure.
   </Expandable>
 </ExpandableGroup>

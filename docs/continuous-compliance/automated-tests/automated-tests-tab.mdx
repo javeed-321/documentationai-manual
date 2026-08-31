@@ -93,19 +93,19 @@ We recommend following this workflow as you work towards compliance and to get a
 ## Further Insights
 
 <ExpandableGroup>
-  <Expandable title="How does Scrut run the Pass By Default tests?" default-open="true">
+  <Expandable title="How does Scrut run the Pass By Default tests?" default-open="false">
     Scrut checks the configurations of integrated services for compliance using APIs. If an API isn't available, Scrut does the assessment based on the service's security documentation. This approach ensures comprehensive coverage and reliable evaluation of your integrated services.
   </Expandable>
 
-  <Expandable title="Why do I see more items in Fix Required than before?" default-open="true">
+  <Expandable title="Why do I see more items in Fix Required than before?" default-open="false">
     Scrut categorizes **Danger** and **Warning** items as **Needs Attention** in the Tests Module. This ensures that all compliance issues are brought to your attention, and you can take the steps to resolve them.
   </Expandable>
 
-  <Expandable title="How do I know when a test was run?" default-open="true">
+  <Expandable title="How do I know when a test was run?" default-open="false">
     The test details page shows a **Last Checked** timestamp in the top-right area of the test header, indicating when Scrut last ran the test. For scheduled tests, you'll also see the **Next Scan** time. For real-time tests, a **Continuous Monitoring** label appears in place of the next scan time. If a test hasn't run in more than 24 hours, Scrut flags it with a stale test warning and displays the reason, such as a sync error or integration error. Click the warning to view the last successful scan details.
   </Expandable>
 
-  <Expandable title="Why does the total number of tests keep changing?" default-open="true">
+  <Expandable title="Why does the total number of tests keep changing?" default-open="false">
     The total number of tests can change due to various actions:
 
     - **Integration Changes:** Adding or removing integrations can add or remove associated tests. For example, integrating GitHub Dependabot adds tests related to monitoring and tracking vulnerabilities.
@@ -113,7 +113,7 @@ We recommend following this workflow as you work towards compliance and to get a
     - **Test Updates:** Scrut periodically updates tests to enhance accuracy and coverage. During these updates, new tests may be added.
   </Expandable>
 
-  <Expandable title="Why should I assign tests to specific users?" default-open="true">
+  <Expandable title="Why should I assign tests to specific users?" default-open="false">
     To efficiently manage tasks across your team, you can assign tests to specific individuals. Assigning tasks ensures clear responsibility and accountability.
   </Expandable>
 </ExpandableGroup>

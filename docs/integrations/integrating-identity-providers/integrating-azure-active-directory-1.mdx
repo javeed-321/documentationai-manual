@@ -18,7 +18,7 @@ In this guide, we walk you through the process of connecting your Microsoft Entr
 - An active Microsoft Entra (Azure AD) account with Global Administrator access.
 - Users in your Microsoft Entra (Azure AD) account have email addresses assigned.
 
-<Expandable title="Why is administrator access required?" default-open="true">
+<Expandable title="Why is administrator access required?" default-open="false">
   For the Scrut integration to work, it requires an administrator-level role (Global, Application, or Cloud Application Administrator) to grant the required tenant-wide, read-only permissions.
 </Expandable>
 
@@ -193,27 +193,27 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens when an employee is deleted from Microsoft Entra (Azure AD)?" default-open="true">
+  <Expandable title="What happens when an employee is deleted from Microsoft Entra (Azure AD)?" default-open="false">
     The deletion date is captured as the employee's exit date in Scrut. The employee record is not removed from Scrut, but the employee’s status changes to Offboarding Needed in Scrut.
   </Expandable>
 
-  <Expandable title="Can I control which employees are synced into Scrut?" default-open="true">
+  <Expandable title="Can I control which employees are synced into Scrut?" default-open="false">
     Yes. Use the Configure Scope option on the integration page to select which Office 365 licenses Scrut should sync. Only employees assigned to the selected licenses are pulled into the People module.
   </Expandable>
 
-  <Expandable title="How do I trigger a sync before the next scheduled run?" default-open="true">
+  <Expandable title="How do I trigger a sync before the next scheduled run?" default-open="false">
     Click Sync Now on the Microsoft Entra (Azure AD) integration page. Select the appropriate sync option based on the data you want to refresh.
   </Expandable>
 
-  <Expandable title="What if I need to change the administrator account used for this integration?" default-open="true">
+  <Expandable title="What if I need to change the administrator account used for this integration?" default-open="false">
     Disconnect the existing integration and reconnect using the updated administrator account.
   </Expandable>
 
-  <Expandable title="Does this integration support Single Sign-On (SSO)?" default-open="true">
+  <Expandable title="Does this integration support Single Sign-On (SSO)?" default-open="false">
     Yes. Once the integration is connected, admins and employees can log in to Scrut and the Employee Portal using their Microsoft Entra (Azure AD) accounts.
   </Expandable>
 
-  <Expandable title="Where in Scrut are the employee administrative unit details displayed?" default-open="true">
+  <Expandable title="Where in Scrut are the employee administrative unit details displayed?" default-open="false">
     When employees are synced into Scrut via Microsoft Entra (Azure AD), Scrut will display their assigned Administrative Unit on the individual employee details page.
 
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163036583-rbnhdcfyv2d-image-OQOT4PQV.png?fm=auto&auto=compress%2Cformat" alt="" />

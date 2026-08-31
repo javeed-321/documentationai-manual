@@ -143,15 +143,15 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens if I rotate my Datadog API Key or Application Key?" default-open="true">
+  <Expandable title="What happens if I rotate my Datadog API Key or Application Key?" default-open="false">
     The integration will stop syncing data. Go to Integrations in Scrut, open the Datadog integration settings, and update the credentials with your new keys. Click Submit to reconnect.
   </Expandable>
 
-  <Expandable title="What data does Scrut pull from Datadog?" default-open="true">
+  <Expandable title="What data does Scrut pull from Datadog?" default-open="false">
     Scrut collects user details, roles, and permissions for Access Reviews, and hosts data for Automated Tests. Data is synced every 24 hours.
   </Expandable>
 
-  <Expandable title="What happens if a user or host is removed from Datadog?" default-open="true">
+  <Expandable title="What happens if a user or host is removed from Datadog?" default-open="false">
     Scrut reflects changes from Datadog on the next scheduled sync or when a manual sync is triggered. Removed records are updated accordingly in Scrut.
   </Expandable>
 </ExpandableGroup>

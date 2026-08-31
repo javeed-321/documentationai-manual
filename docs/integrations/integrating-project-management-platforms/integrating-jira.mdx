@@ -155,27 +155,27 @@ Possible solutions: Confirm that all required OAuth scopes were accepted during 
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens if I revoke Scrut’s access from my Atlassian account?" default-open="true">
+  <Expandable title="What happens if I revoke Scrut’s access from my Atlassian account?" default-open="false">
     The integration will stop syncing data and automated tests will no longer run. To restore the connection, go to the Jira integration page in Scrut and click Connect again to reauthorize.
   </Expandable>
 
-  <Expandable title="Can I link more than one Jira account to Scrut?" default-open="true">
+  <Expandable title="Can I link more than one Jira account to Scrut?" default-open="false">
     Scrut currently supports one Jira connection per workspace. If you need to change the connected account, disconnect the existing integration and reconnect with the new account.
   </Expandable>
 
-  <Expandable title="How do I disconnect the Jira integration?" default-open="true">
+  <Expandable title="How do I disconnect the Jira integration?" default-open="false">
     Go to **Integrations → Jira** in Scrut and click **Disconnect** in the top right corner. Disconnecting stops all future syncs and removes the active connection, but does not delete data already collected in Scrut.
   </Expandable>
 
-  <Expandable title="What happens to existing Scrut Monitors if I disconnect Jira?" default-open="true">
+  <Expandable title="What happens to existing Scrut Monitors if I disconnect Jira?" default-open="false">
     Existing data already collected remain in Scrut. Future syncs and new ticket creation from Scrut will stop until the integration is reconnected.
   </Expandable>
 
-  <Expandable title="Can I manually trigger a sync outside the 24-hour window?" default-open="true">
+  <Expandable title="Can I manually trigger a sync outside the 24-hour window?" default-open="false">
     Yes. Navigate to the Jira integration settings page and use the manual sync option to pull the latest data from Jira on demand.
   </Expandable>
 
-  <Expandable title="How do I set up automated compliance evidence collection using Jira?" default-open="true">
+  <Expandable title="How do I set up automated compliance evidence collection using Jira?" default-open="false">
     After connecting the integration, set up a [Scrut Monitor for Jira](/docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/setting-up-scrut-monitor-for-jira). This lets Scrut automatically fetch Jira issues and attach them as compliance evidence, removing the need for manual collection.
   </Expandable>
 </ExpandableGroup>

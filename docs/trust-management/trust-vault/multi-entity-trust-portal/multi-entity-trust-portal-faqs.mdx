@@ -14,23 +14,23 @@ Find answers to common queries on multi-entity trust portals.
 ### FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens when I transition from a single entity to multiple entities on the Trust Portal?" default-open="true">
+  <Expandable title="What happens when I transition from a single entity to multiple entities on the Trust Portal?" default-open="false">
     - All previously approved users automatically gain access to all newly enabled entities.
     - Your Trust Portal now displays an entity dropdown with all enabled entities. Content is organized by entity, with content tagged to organization-wide appearing on all entities.
   </Expandable>
 
-  <Expandable title="What happens when I disable a previously enabled entity?" default-open="true">
+  <Expandable title="What happens when I disable a previously enabled entity?" default-open="false">
     - Users with access to the disabled entity lose access to its content. However, they retain access to other enabled entities to which they were granted access.
     - Only the remaining enabled entities display in the dropdown.
   </Expandable>
 
-  <Expandable title="What happens if I disable all entities?" default-open="true">
+  <Expandable title="What happens if I disable all entities?" default-open="false">
     - Access for users with entity-specific access is revoked, and they are automatically logged out of the Trust Portal.
     - Users with organization-wide access are retained and can continue accessing the portal.
     - The portal reverts to single-entity mode, displaying all content without an entity dropdown.
   </Expandable>
 
-  <Expandable title="Share a few best practices for using the multi-entity feature in Trust Portal." default-open="true">
+  <Expandable title="Share a few best practices for using the multi-entity feature in Trust Portal." default-open="false">
     - **Plan Your Entity Structure:** Clearly define which business units or product lines will have separate Trust Portal content before enabling Multi-Entity mode.
     - **Use Organization-wide Content Strategically:** Tag content as Organization-wide if it applies to your entire organization. This content will automatically appear alongside entity-specific information.
     - **Preview Before Publishing:** Use the View Trust Portal button to preview and verify how each entity's view will appear to visitors, especially after tagging new content.
@@ -38,7 +38,7 @@ Find answers to common queries on multi-entity trust portals.
     - **Clear Communication:** Inform stakeholders which entities they should expect to see in the portal dropdown and how to navigate between entity-specific views.
   </Expandable>
 
-  <Expandable title="Why is the content I tagged to an entity not appearing in the Trust Portal?" default-open="true">
+  <Expandable title="Why is the content I tagged to an entity not appearing in the Trust Portal?" default-open="false">
     Here are a few possible causes why this might happen:
 
     - The entity isn't enabled in Trust Vault settings
@@ -48,7 +48,7 @@ Find answers to common queries on multi-entity trust portals.
     Solution: Verify that the [entity is enabled in the Trust Vault settings](/docs/trust-management/trust-vault/multi-entity-trust-portal/enable-multi-entity-trust-portal) and that the content is correctly tagged to that entity.
   </Expandable>
 
-  <Expandable title="A user is seeing a 404 error for an entity they should have access to." default-open="true">
+  <Expandable title="A user is seeing a 404 error for an entity they should have access to." default-open="false">
     Here are a few reasons why this might happen:
 
     - The entity was disabled in the Trust Vault settings after the user was granted access.
@@ -57,15 +57,15 @@ Find answers to common queries on multi-entity trust portals.
     Solution: [Re-enable the entity in Trust Vault settings](/docs/trust-management/trust-vault/multi-entity-trust-portal/enable-multi-entity-trust-portal) or grant the user access to an alternative entity. Either way, the visitor still sees your Trust Portal's branded 404 page rather than a generic error, so they can navigate back to a valid section of your portal while you resolve the access issue.
   </Expandable>
 
-  <Expandable title="Can I switch from multi-entity back to single-entity mode?" default-open="true">
+  <Expandable title="Can I switch from multi-entity back to single-entity mode?" default-open="false">
     Yes. Go to Trust Vault settings and [toggle Multi-Entity to Off](/docs/trust-management/trust-vault/multi-entity-trust-portal/enable-multi-entity-trust-portal). The Trust Portal will display all content together without a dropdown.
   </Expandable>
 
-  <Expandable title="When adding a user manually, if I select “Organization-wide,” will the user get access to all entities?" default-open="true">
+  <Expandable title="When adding a user manually, if I select “Organization-wide,” will the user get access to all entities?" default-open="false">
     Yes. They get access to all entities enabled in the Trust Portal.
   </Expandable>
 
-  <Expandable title="Does the audit log capture entity-specific action?" default-open="true">
+  <Expandable title="Does the audit log capture entity-specific action?" default-open="false">
     Yes. The audit log displays all activities across all entities.
 
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166158211-vy2a94ce8q-Trust-Vault-Audit-Logs-1.png?fm=auto&auto=compress%2Cformat" alt="" />

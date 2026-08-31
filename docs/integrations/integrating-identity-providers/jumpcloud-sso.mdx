@@ -104,15 +104,15 @@ After the integration is connected, Scrut begins syncing user data automatically
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What is the difference between JumpCloud SSO and JumpCloud as an IDP or MDM in Scrut?" default-open="true">
+  <Expandable title="What is the difference between JumpCloud SSO and JumpCloud as an IDP or MDM in Scrut?" default-open="false">
     The SSO integration is used only for authentication. It permits users to log in to Scrut using their JumpCloud credentials. The IDP and MDM integrations serve different purposes, such as syncing device data and running compliance checks. See [JumpCloud MDM/IDP help guide](/docs/integrations/integrating-mobile-device-management-tools/integrating-jumpcloud) for those setup steps.
   </Expandable>
 
-  <Expandable title="What happens if a user is removed from JumpCloud?" default-open="true">
+  <Expandable title="What happens if a user is removed from JumpCloud?" default-open="false">
     If a user is removed from JumpCloud, they will no longer be able to log in to Scrut via SSO. Their record in Scrut is not automatically deleted.
   </Expandable>
 
-  <Expandable title="What happens if I update the Client Secret in JumpCloud?" default-open="true">
+  <Expandable title="What happens if I update the Client Secret in JumpCloud?" default-open="false">
     If you rotate or update the Client Secret in JumpCloud, you must update it in Scrut as well. Go to Integrations, open the JumpCloud (SSO) integration, enter the new Client Secret in the Credentials section, and click Submit.
   </Expandable>
 </ExpandableGroup>

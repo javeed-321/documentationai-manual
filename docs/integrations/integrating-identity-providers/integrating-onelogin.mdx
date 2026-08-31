@@ -139,21 +139,21 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Why does Scrut require Manage All permission in OneLogin?" default-open="true">
+  <Expandable title="Why does Scrut require Manage All permission in OneLogin?" default-open="false">
     Scrut uses this scope for two purposes: syncing employee data and automatically creating the OIDC application in your OneLogin portal that enables SSO.
 
     OneLogin's API does not offer a narrower scope for programmatically creating and configuring applications, so Manage All is currently required for the automated setup flow. Scrut uses this access only to create and configure the SSO app and does not modify users, roles, or other applications.
   </Expandable>
 
-  <Expandable title="What data does Scrut access using Manage All?" default-open="true">
+  <Expandable title="What data does Scrut access using Manage All?" default-open="false">
     Scrut uses the Manage All scope exclusively to create and configure the OIDC application for SSO and to fetch employee and access data. Scrut does not modify users, change roles or permissions, or access unrelated applications or secrets in your OneLogin account.
   </Expandable>
 
-  <Expandable title="What happens if an employee is removed from OneLogin?" default-open="true">
+  <Expandable title="What happens if an employee is removed from OneLogin?" default-open="false">
     If a user is removed from OneLogin, they will no longer be able to log in to Scrut via SSO. Their record in Scrut's People module changes to offboarding needed after the next sync.
   </Expandable>
 
-  <Expandable title="Can I use OneLogin for SSO without syncing employee data?" default-open="true">
+  <Expandable title="Can I use OneLogin for SSO without syncing employee data?" default-open="false">
     No. The current integration enables both SSO and employee/access data sync together. A future update will allow configuring these independently.
   </Expandable>
 </ExpandableGroup>

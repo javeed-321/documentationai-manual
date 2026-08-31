@@ -33,7 +33,7 @@ Find answers to common integration questions and issues.
     Yes. Scrut automatically collects cloud-required evidence, such as IAM configurations, audit logs, resource settings, and activity reports, enabling continuous compliance monitoring and reducing manual evidence collection.
   </Expandable>
 
-  <Expandable title="How often are the scans run?" default-open="true">
+  <Expandable title="How often are the scans run?" default-open="false">
     Scans run automatically every 24 hours. You can also initiate on-demand rescans as needed for supported integrations.
   </Expandable>
 
@@ -87,7 +87,7 @@ Find answers to common integration questions and issues.
     Scrut requires read-only access to repository metadata, including permissions, branch protection settings, commit history, pull requests, and configuration details. It does not access actual code content.
   </Expandable>
 
-  <Expandable title="How often does Scrut sync with my version control system?" default-open="true">
+  <Expandable title="How often does Scrut sync with my version control system?" default-open="false">
     Code review results are uploaded bi-monthly. Other tests run once every 24 hours.
   </Expandable>
 
@@ -143,7 +143,7 @@ Find answers to common integration questions and issues.
     Scrut should be integrated with production environments, as these are most relevant for compliance audits and data protection.
   </Expandable>
 
-  <Expandable title="Why doesn’t Scrut automatically detect my default branch name?" default-open="true">
+  <Expandable title="Why doesn’t Scrut automatically detect my default branch name?" default-open="false">
     Auto-detecting the default branch requires code read access to your repositories. Scrut integrations are designed to access only the metadata needed for compliance. The `scrut_branch_name` custom property gives Scrut the branch information it needs while keeping your codebase completely private.
   </Expandable>
 </ExpandableGroup>
@@ -218,7 +218,7 @@ Find answers to common integration questions and issues.
     You can move contractors to a separate group using the group functionality.
   </Expandable>
 
-  <Expandable title="Does Scrut automatically offboard employees when they are deleted or deactivated in my HRIS/IDP?" default-open="true">
+  <Expandable title="Does Scrut automatically offboard employees when they are deleted or deactivated in my HRIS/IDP?" default-open="false">
     Scrut does not automatically delete or mark employees as Offboarded when they are deactivated in the HRIS/IDP. Instead, when an employee is deleted or marked as inactive in your HRIS/IDP, Scrut captures this on the next sync and moves the employee automatically to the **Offboarding Needed** status, using their deactivation or exit date as the recorded exit date in Scrut.
   </Expandable>
 </ExpandableGroup>
@@ -250,7 +250,7 @@ Find answers to common integration questions and issues.
     All employees sync to Scrut after integration. To exclude service accounts from the audit scope, mark them as 'non-personnel' within Scrut.
   </Expandable>
 
-  <Expandable title="How are employees offboarded if only the IdP is connected?" default-open="true">
+  <Expandable title="How are employees offboarded if only the IdP is connected?" default-open="false">
     When an employee is deleted or suspended in your IdP, Scrut captures this on the next sync and moves the employee automatically to the **Offboarding Needed** status, using their deactivation or exit date as the recorded exit date in Scrut.
   </Expandable>
 
@@ -290,7 +290,7 @@ Find answers to common integration questions and issues.
     It is not mandatory, but an MDM tool helps in centrally monitoring endpoint security.
   </Expandable>
 
-  <Expandable title="Can I connect multiple MDM tools in a single Scrut workspace?" default-open="true">
+  <Expandable title="Can I connect multiple MDM tools in a single Scrut workspace?" default-open="false">
     Yes, you can connect multiple MDM tools in a single Scrut workspace. Employee Checklists support multi-select, so you can assign an employee more than one MDM tool to install. Once assigned, their device data appears separately for each tool under People → Employees → Technicals, and their specific action items appear under Employee Tasks based on exactly what they've been assigned.
   </Expandable>
 </ExpandableGroup>

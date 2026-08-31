@@ -161,23 +161,23 @@ Possible solutions: check the Audit Log for error entries; confirm the integrati
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Which authentication method should I use, API Key or OAuth?" default-open="true">
+  <Expandable title="Which authentication method should I use, API Key or OAuth?" default-open="false">
     Use the API Key method for a quick setup with a single Personal Access Token. Use OAuth if your organization prefers centrally managed app connections without a long-lived token tied to one user.
   </Expandable>
 
-  <Expandable title="Do I need to enter a Client Secret for the OAuth method?" default-open="true">
+  <Expandable title="Do I need to enter a Client Secret for the OAuth method?" default-open="false">
     No. Databricks OAuth uses PKCE, which doesn't require or generate a client secret. Leave that field blank in Scrut.
   </Expandable>
 
-  <Expandable title="What happens if my Personal Access Token expires or is revoked?" default-open="true">
+  <Expandable title="What happens if my Personal Access Token expires or is revoked?" default-open="false">
     The integration will show an authentication error. Generate a new token in Databricks and update it on the Databricks integration settings page in Scrut.
   </Expandable>
 
-  <Expandable title="Can I switch from one authentication method to another later?" default-open="true">
+  <Expandable title="Can I switch from one authentication method to another later?" default-open="false">
     Yes. Fill in the fields for the new method on the integration settings page, leave the other method's fields blank, and click Submit.
   </Expandable>
 
-  <Expandable title="What access does Scrut need in my Databricks account?" default-open="true">
+  <Expandable title="What access does Scrut need in my Databricks account?" default-open="false">
     Read-only access to user records - name, email, and role - for either the token or the app connection you create.
   </Expandable>
 </ExpandableGroup>

@@ -263,31 +263,31 @@ The integration between Scrut and Jira is bidirectional and syncs in real time. 
 ## FAQs and Troubleshooting
 
 <ExpandableGroup>
-  <Expandable title="How do I unlink a Jira ticket in Scrut?" default-open="true">
+  <Expandable title="How do I unlink a Jira ticket in Scrut?" default-open="false">
     Open the artifact, scroll to the Tickets (Jira) tab, and click the unlink icon next to the ticket you want to disconnect. The ticket remains in Jira but is no longer associated with the artifact in Scrut.
 
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163526466-3p1z42pv1m2-Screenshot-2025-05-14-at-19-25-09.png?fm=auto&auto=compress%2Cformat" alt="" />
   </Expandable>
 
-  <Expandable title="Can I add multiple Jira tickets to the same artifact?" default-open="true">
+  <Expandable title="Can I add multiple Jira tickets to the same artifact?" default-open="false">
     Yes. You can link as many tickets as needed to a single artifact. If you create tickets with identical names, Scrut automatically appends a counter, for example, "Privacy Policy 1" and "Privacy Policy 2".
   </Expandable>
 
-  <Expandable title="Why isn’t the due date visible in Jira?" default-open="true">
+  <Expandable title="Why isn’t the due date visible in Jira?" default-open="false">
     If you set a due date when creating the ticket, Scrut sends it to Jira. However, for it to appear in the Jira ticket view, the Due Date field must be enabled in your Jira screen settings. Refer to [Jira's documentation on how to enable this field](https://confluence.atlassian.com/jirakb/due-date-field-not-showing-when-i-create-or-view-a-jira-cloud-issue-189431917.html).
   </Expandable>
 
-  <Expandable title="Can I edit the ticket title and description when creating multiple tickets at once?" default-open="true">
+  <Expandable title="Can I edit the ticket title and description when creating multiple tickets at once?" default-open="false">
     No. Titles and descriptions are auto-generated in bulk mode and cannot be edited before the tickets are created. You can update them individually in Jira after creation.
   </Expandable>
 
-  <Expandable title="Will Scrut sync images embedded in Jira descriptions and comments?" default-open="true">
+  <Expandable title="Will Scrut sync images embedded in Jira descriptions and comments?" default-open="false">
     Not by default. Scrut automatically syncs files uploaded via the Add Attachment button in Jira for tickets linked to Evidence Tasks.
 
     To also sync inline images and files embedded in descriptions and comments, select the Also sync attachments embedded in descriptions and comments checkbox when creating the ticket in Scrut.
   </Expandable>
 
-  <Expandable title="Does enabling Ticket Automation affect tickets that are already linked?" default-open="true">
+  <Expandable title="Does enabling Ticket Automation affect tickets that are already linked?" default-open="false">
     No. Automation applies going forward. A new Jira ticket is created each time the artifact's status changes to non-compliant.
   </Expandable>
 </ExpandableGroup>

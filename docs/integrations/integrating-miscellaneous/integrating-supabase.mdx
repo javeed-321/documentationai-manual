@@ -123,7 +123,7 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Can I use a legacy access token instead of generating a new token?" default-open="true">
+  <Expandable title="Can I use a legacy access token instead of generating a new token?" default-open="false">
     Yes. If you already have a legacy token generated before Supabase introduced scoped tokens, it continues to work until it expires or is deleted. Legacy tokens have a Legacy badge on the Access Tokens page.
 
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165970479-tpsm9wo3v1-Screenshot-2026-08-11-at-9-01-59-PM.png?fm=auto&auto=compress%2Cformat" alt="" />
@@ -139,23 +139,23 @@ Possible solutions:
       - Organization members
   </Expandable>
 
-  <Expandable title="Can I use an existing Personal Access Token instead of generating a new one?" default-open="true">
+  <Expandable title="Can I use an existing Personal Access Token instead of generating a new one?" default-open="false">
     Yes, as long as the token has read access to users. Scrut recommends generating a dedicated token for the integration so you can track and revoke it independently.
   </Expandable>
 
-  <Expandable title="What happens if I revoke the Personal Access Token in Supabase?" default-open="true">
+  <Expandable title="What happens if I revoke the Personal Access Token in Supabase?" default-open="false">
     The integration stops syncing data. Generate a new token in Supabase and submit it in Scrut to restore the connection.
   </Expandable>
 
-  <Expandable title="How often does Scrut sync data from Supabase?" default-open="true">
+  <Expandable title="How often does Scrut sync data from Supabase?" default-open="false">
     Scrut syncs data automatically once every 24 hours. You can also trigger a manual sync at any time from the integration settings page.
   </Expandable>
 
-  <Expandable title="How do I know if the integration is working?" default-open="true">
+  <Expandable title="How do I know if the integration is working?" default-open="false">
     Check the status on the Supabase integration page in Scrut. A Connected status along with Integration successful entries in the Audit Log tab confirms the integration is active.
   </Expandable>
 
-  <Expandable title="What happens when my Personal Access Token expires?" default-open="true">
+  <Expandable title="What happens when my Personal Access Token expires?" default-open="false">
     The integration stops syncing, and the connection status may change. Generate a new token in Supabase and submit it on the Supabase integration page in Scrut.
   </Expandable>
 </ExpandableGroup>

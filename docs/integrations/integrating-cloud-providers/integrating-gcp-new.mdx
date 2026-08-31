@@ -141,7 +141,7 @@ This completes your GCP integration with Scrut.
 ## FAQs & Troubleshooting
 
 <ExpandableGroup>
-  <Expandable title="How secure is this script?" default-open="true">
+  <Expandable title="How secure is this script?" default-open="false">
     To protect your configuration data, **Scrut uses a two-layer (hybrid) encryption approach**. This ensures the data remains secure even if it is shared or stored outside your environment.
 
     **Why a Hybrid Approach?**
@@ -168,15 +168,15 @@ This completes your GCP integration with Scrut.
     At the end of the process, you'll get one encrypted file: `scrut_config.json.enc`This is the only file you need to provide to Scrut.
   </Expandable>
 
-  <Expandable title="Can I connect multiple projects to Scrut?" default-open="true">
+  <Expandable title="Can I connect multiple projects to Scrut?" default-open="false">
     Yes. Once you run the script, you’ll be prompted to choose the projects you want to connect to Scrut. Enter the corresponding project numbers. Alternatively, you can enter ALL to connect all your existing GCP projects to Scrut in one go.
   </Expandable>
 
-  <Expandable title="How do I add a new GCP project to connect to Scrut?" default-open="true">
+  <Expandable title="How do I add a new GCP project to connect to Scrut?" default-open="false">
     To add a new GCP project to your existing **Scrut ↔ GCP** integration, you must repeat the steps mentioned above. In the step where you select the GCP projects, enter the number corresponding to the new project. Complete the remaining integration steps as instructed above.
   </Expandable>
 
-  <Expandable title="What happens after I disconnect the integration?" default-open="true">
+  <Expandable title="What happens after I disconnect the integration?" default-open="false">
     Scrut deletes all the credentials and data stored on our end and disintegrates the integration from our platform. Currently, service accounts created during this process persist in the customer environment and must be manually deleted if no longer required.
   </Expandable>
 </ExpandableGroup>

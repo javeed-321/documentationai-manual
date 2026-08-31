@@ -122,19 +122,19 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What BGV statuses does Scrut display for ZincWork checks?" default-open="true">
+  <Expandable title="What BGV statuses does Scrut display for ZincWork checks?" default-open="false">
     Scrut displays three statuses: Pass, Fail, and Pending. A ZincWork result of `clear` maps to Pass, `consider` maps to Fail, and no result returned maps to Pending.
   </Expandable>
 
-  <Expandable title="How does Scrut match background check results for employees?" default-open="true">
+  <Expandable title="How does Scrut match background check results for employees?" default-open="false">
     Scrut uses the candidate's or user's email address to look up records in ZincWork. Make sure email addresses in Scrut employee profiles match those used in ZincWork.
   </Expandable>
 
-  <Expandable title="How does Scrut determine which employees to run background checks for?" default-open="true">
+  <Expandable title="How does Scrut determine which employees to run background checks for?" default-open="false">
     Scrut fetches background verification results only for employees marked as BGV Required in their checklist configuration. Employees without this flag are not included.
   </Expandable>
 
-  <Expandable title="What happens if I regenerate my ZincWork API key?" default-open="true">
+  <Expandable title="What happens if I regenerate my ZincWork API key?" default-open="false">
     The integration will stop syncing until the new key is updated in Scrut. Go to the ZincWork integration settings in Scrut and replace the existing key with the new one.
   </Expandable>
 </ExpandableGroup>

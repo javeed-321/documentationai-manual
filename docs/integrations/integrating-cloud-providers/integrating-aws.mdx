@@ -254,13 +254,13 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Where can I view the full list of automated tests and evidence collected for AWS?" default-open="true">
+  <Expandable title="Where can I view the full list of automated tests and evidence collected for AWS?" default-open="false">
     Sign in to Scrut, click **Integrations** on the left navigation panel, and click the AWS integration tile to expand it. The expanded view lists all Automated Tests and Automated Evidence collected via Scrut Monitor for your connected AWS account.
 
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165315214-e8iw6xf9mr7-Screenshot-2026-03-11-at-16-51-03.png?fm=auto&auto=compress%2Cformat" alt="" />
   </Expandable>
 
-  <Expandable title="What AWS API calls does Scrut perform during evidence collection?" default-open="true">
+  <Expandable title="What AWS API calls does Scrut perform during evidence collection?" default-open="false">
     Scrut uses `Describe`, `List`, and `Get` Configuration calls across AWS services. Examples include:
 
     - **S3**: `list_buckets`, `get_bucket_policy`, `get_bucket_encryption`
@@ -270,11 +270,11 @@ Possible solutions:
     For a comprehensive list of all API calls, refer to the [Cloud API calls documentation](https://scrutio.notion.site/Cloud-API-calls-2b0ae8dbdb5e80c08765c67f8f1cb645).
   </Expandable>
 
-  <Expandable title="Does the Scrut - AWS integration access or require data-plane actions (e.g., GetObject, GetSecretValue, or DynamoDB reads)?" default-open="true">
+  <Expandable title="Does the Scrut - AWS integration access or require data-plane actions (e.g., GetObject, GetSecretValue, or DynamoDB reads)?" default-open="false">
     No. Our integration does not access or require data-plane actions such as GetObject (S3), GetSecretValue (Secrets Manager), or DynamoDB reads. The integration is designed to function strictly on the Control/Management Plane, reading only metadata and configuration settings.
   </Expandable>
 
-  <Expandable title="What are the minimum IAM permissions required for the ScrutIntegrationRole?" default-open="true">
+  <Expandable title="What are the minimum IAM permissions required for the ScrutIntegrationRole?" default-open="false">
     The `ScrutIntegrationRole` requires two AWS Managed Policies:
 
     1. `arn:aws:iam::aws:policy/SecurityAudit` - Grants access to read security configuration metadata (e.g., Config, CloudTrail, IAM, S3 bucket policies)
@@ -285,11 +285,11 @@ Possible solutions:
     [iam-role-based-access.yaml](https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788171806018-limll3i4ru-iam-role-based-access.yaml)
   </Expandable>
 
-  <Expandable title="How can I review all Scrut-initiated AWS API activity?" default-open="true">
+  <Expandable title="How can I review all Scrut-initiated AWS API activity?" default-open="false">
     All Scrut-initiated AWS API calls are visible through your **CloudTrail logs**. Scrut does not display these API calls on our platform. Customers maintain full audit visibility of our integration's activity through their own AWS CloudTrail logs.
   </Expandable>
 
-  <Expandable title="Does Scrut support AWS GovCloud?" default-open="true">
+  <Expandable title="Does Scrut support AWS GovCloud?" default-open="false">
     Scrut does not currently support AWS GovCloud. To submit a feature request, reach out to your CSM.
   </Expandable>
 </ExpandableGroup>

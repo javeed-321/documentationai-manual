@@ -174,19 +174,19 @@ Possible solutions: Generate a new API token in Kandji and copy it. In Scrut, go
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Which devices does Kandji sync to Scrut?" default-open="true">
+  <Expandable title="Which devices does Kandji sync to Scrut?" default-open="false">
     Scrut pulls all devices currently enrolled in your Kandji instance. Only active devices with available API data are synced.
   </Expandable>
 
-  <Expandable title="Why is the Antivirus Installed field blank or showing Unknown?" default-open="true">
+  <Expandable title="Why is the Antivirus Installed field blank or showing Unknown?" default-open="false">
     This field requires the Prism-Gatekeeper and XProtect API permissions to be enabled on your Kandji API token. This permission is not on by default. Go to Settings → Access in Kandji, open the token's permissions, and enable it under the Prism section.
   </Expandable>
 
-  <Expandable title="How do I trigger a manual sync?" default-open="true">
+  <Expandable title="How do I trigger a manual sync?" default-open="false">
     Go to Integrations in Scrut, select Kandji, and click Sync Now. This triggers an on-demand data pull outside the scheduled 24-hour cycle.
   </Expandable>
 
-  <Expandable title="What happens if I rotate or revoke my Kandji API token?" default-open="true">
+  <Expandable title="What happens if I rotate or revoke my Kandji API token?" default-open="false">
     Scrut loses access to Kandji data until a new valid token is entered. Update the token in Scrut by going to Integrations → Kandji → Edit.
   </Expandable>
 </ExpandableGroup>

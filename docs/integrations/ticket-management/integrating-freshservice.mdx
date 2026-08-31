@@ -344,23 +344,23 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="Which agents are included in Access Reviews?" default-open="true">
+  <Expandable title="Which agents are included in Access Reviews?" default-open="false">
     Only active agents are included in the Access Review dataset. Inactive or deactivated agents are excluded. If an agent is deactivated in Freshservice after a sync has run, they will be removed from the next synced dataset.
   </Expandable>
 
-  <Expandable title="Can I use multiple tags in a single Scrut Monitor?" default-open="true">
+  <Expandable title="Can I use multiple tags in a single Scrut Monitor?" default-open="false">
     Yes. You can add multiple tags when configuring a Scrut Monitor. Scrut validates each tag individually against Freshservice. Only tags that return matching tickets are accepted.
   </Expandable>
 
-  <Expandable title="What does the Scrut Monitor evidence CSV include?" default-open="true">
+  <Expandable title="What does the Scrut Monitor evidence CSV include?" default-open="false">
     Each monitor run generates a CSV with the following columns: ticket ID, ticket URL, subject, category, requester email, responder email, priority, status, creation date, and last updated date. You can download the CSV from the monitor's evidence page.
   </Expandable>
 
-  <Expandable title="What happens if my Freshservice API key changes?" default-open="true">
+  <Expandable title="What happens if my Freshservice API key changes?" default-open="false">
     If your API key is rotated or expires, the integration stops syncing and logs authentication errors in the Audit Log. Go to Integrations, open the Freshservice integration settings, enter the new API key, and click Submit to reconnect.
   </Expandable>
 
-  <Expandable title="Can I assign the ticket to a team member from Scrut?" default-open="true">
+  <Expandable title="Can I assign the ticket to a team member from Scrut?" default-open="false">
     No. You can set the assignee, due date, and priority directly in Freshservice after the ticket is created.
   </Expandable>
 </ExpandableGroup>

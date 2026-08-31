@@ -17,7 +17,7 @@ Connect your Microsoft Intune (MS Intune) account with Scrut to automatically pu
 - An active Microsoft Intune account with administrator access
 - Devices enrolled and managed in Microsoft Intune
 
-<Expandable title="Why is administrator access required?" default-open="true">
+<Expandable title="Why is administrator access required?" default-open="false">
   For the Scrut integration to work, it requires an administrator-level role (Global, Application, or Cloud Application Administrator) to grant the necessary tenant-wide, read-only permissions.
 </Expandable>
 
@@ -139,19 +139,19 @@ Possible solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens if a device is removed from Microsoft Intune?" default-open="true">
+  <Expandable title="What happens if a device is removed from Microsoft Intune?" default-open="false">
     Devices removed from Intune are no longer synced to Scrut after the next scheduled sync. Existing records in Scrut are not automatically deleted.
   </Expandable>
 
-  <Expandable title="Can I sync data more frequently than every 24 hours?" default-open="true">
+  <Expandable title="Can I sync data more frequently than every 24 hours?" default-open="false">
     Scrut syncs device data every 24 hours on a recurring schedule. For an immediate update, click **Sync Now** on the MS Intune integration page to trigger a manual sync.
   </Expandable>
 
-  <Expandable title="What does “Consent on behalf of your organization” mean?" default-open="true">
+  <Expandable title="What does “Consent on behalf of your organization” mean?" default-open="false">
     Selecting this grants Scrut read-only access to device and user data across your entire organization, not just your own account. Administrator-level access in Microsoft Entra ID is required to grant this consent.
   </Expandable>
 
-  <Expandable title="How do I find the synced device data in Scrut?" default-open="true">
+  <Expandable title="How do I find the synced device data in Scrut?" default-open="false">
     Device data appears in **People → Employees → Technical** within each employee's profile. Asset-level data is available in the **Asset Management** module.
   </Expandable>
 </ExpandableGroup>

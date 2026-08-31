@@ -120,19 +120,19 @@ Possible solutions: Confirm the resources exist in your DigitalOcean account and
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What DigitalOcean resources does Scrut collect?" default-open="true">
+  <Expandable title="What DigitalOcean resources does Scrut collect?" default-open="false">
     Scrut collects Droplets, Load Balancers, Kubernetes Clusters, Block Storage Volumes, Database Clusters, Alert Policies, and Firewalls. All data is read-only.
   </Expandable>
 
-  <Expandable title="Can I control which resources Scrut monitors?" default-open="true">
+  <Expandable title="Can I control which resources Scrut monitors?" default-open="false">
     Yes. Use the Configure Scope option on the DigitalOcean integration page to toggle resource types on or off. Changes take effect on the next sync.
   </Expandable>
 
-  <Expandable title="What happens if I change my DigitalOcean credentials or revoke access?" default-open="true">
+  <Expandable title="What happens if I change my DigitalOcean credentials or revoke access?" default-open="false">
     If Scrut's access is revoked in DigitalOcean, the integration will stop syncing and may show a connection error. Disconnect and reconnect the integration using updated credentials to restore it.
   </Expandable>
 
-  <Expandable title="Will Scrut make any changes to my DigitalOcean resources?" default-open="true">
+  <Expandable title="Will Scrut make any changes to my DigitalOcean resources?" default-open="false">
     No. Scrut only requests read-only OAuth scopes and does not modify any resources in your DigitalOcean account.
   </Expandable>
 </ExpandableGroup>

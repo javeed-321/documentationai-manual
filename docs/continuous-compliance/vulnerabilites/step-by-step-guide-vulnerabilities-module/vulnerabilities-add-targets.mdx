@@ -79,7 +79,7 @@ Choose this authentication mechanism when the application or API requires an aut
 
 - Token Value: The actual token string provided by your authentication system.
 
-<Expandable title="Examples" default-open="true">
+<Expandable title="Examples" default-open="false">
   **Bearer Token**
 
   - Token Type: Bearer
@@ -91,14 +91,14 @@ Choose this authentication mechanism when the application or API requires an aut
   - Token Value:
 </Expandable>
 
-<Expandable title="Best Practices When Using Tokens" default-open="true">
+<Expandable title="Best Practices When Using Tokens" default-open="false">
   - Use Test Tokens with the same permissions as the role you want to scan (e.g., standard user, admin).
   - Avoid production tokens unless absolutely necessary.
   - Ensure tokens are valid for the entire scan duration. Short-lived tokens may cause incomplete scans.
   - If the application refreshes tokens automatically, configure ZAP scripts or the automation framework to handle token renewal before they expire.
 </Expandable>
 
-<Expandable title="How To Find Tokens" default-open="true">
+<Expandable title="How To Find Tokens" default-open="false">
   - **For browser-based apps**: Log in manually, then check the DevTools → Network tab and inspect any request to view the Authorization header or token in the cookies.
   - **For APIs**: Check the authentication documentation or your API gateway configuration.
 </Expandable>
@@ -128,7 +128,7 @@ Once you add values for all fields, click **Save** to add the target.
 ### FAQs & Troubleshooting
 
 <ExpandableGroup>
-  <Expandable title="Which authentication mechanism should I choose while adding a target?" default-open="true">
+  <Expandable title="Which authentication mechanism should I choose while adding a target?" default-open="false">
     The authentication mechanism depends on your target. Here are a few ways to help you determine which one to use:
 
     1. **Check your browser's developer tools** after logging in. Review the Network tab to view the authentication data being sent, and select the authentication mechanism accordingly.
@@ -138,7 +138,7 @@ Once you add values for all fields, click **Save** to add the target.
     The choice you make affects how thoroughly the scanner tests authenticated areas of your target. Therefore, ensure that you select the correct authentication method for comprehensive vulnerability detection.
   </Expandable>
 
-  <Expandable title="What are the different scan statuses?" default-open="true">
+  <Expandable title="What are the different scan statuses?" default-open="false">
     - **Initializing Scan:** Setting up scanner
     - **Discovering Pages:** Crawling the site to map all pages and endpoints
     - **Quick Scan in Progress:** Running quick vulnerability checks on discovered pages
@@ -147,7 +147,7 @@ Once you add values for all fields, click **Save** to add the target.
     - **Scan Failed**: Scan encountered errors (check logs)
   </Expandable>
 
-  <Expandable title="How to edit a target?" default-open="true">
+  <Expandable title="How to edit a target?" default-open="false">
     <Callout kind="danger">
       **Heads Up!**
 
@@ -162,7 +162,7 @@ Once you add values for all fields, click **Save** to add the target.
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788171229127-s3vbulpvreb-Screenshot-2025-09-16-at-19-15-10.png?fm=auto&auto=compress%2Cformat" alt="" />
   </Expandable>
 
-  <Expandable title="How to delete a target?" default-open="true">
+  <Expandable title="How to delete a target?" default-open="false">
     <Callout kind="danger">
       **Heads Up!**
 
@@ -178,22 +178,22 @@ Once you add values for all fields, click **Save** to add the target.
     <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788171353353-txufa2rq6mr-Screenshot-2025-09-24-at-14-35-35.png?fm=auto&auto=compress%2Cformat" alt="" />
   </Expandable>
 
-  <Expandable title="What happens to findings that are remediated?" default-open="true">
+  <Expandable title="What happens to findings that are remediated?" default-open="false">
     If fixed correctly, Scrut will not resurface the vulnerability as a finding in subsequent scans.
   </Expandable>
 
-  <Expandable title="What is a DAST scan?" default-open="true">
+  <Expandable title="What is a DAST scan?" default-open="false">
     DAST (Dynamic Application Security Testing) scans for vulnerabilities in a running application. It's like a hacker trying to break in. It tests the application by simulating attacks on its user interface, APIs, and other exposed components. It's best for finding runtime issues, such as configuration errors and authentication flaws.
 
     - Ideal for: Applications that are already running (in a testing, staging, or production environment), live websites, etc.
     - What it finds: Vulnerabilities such as broken links, authentication issues, and server misconfigurations
   </Expandable>
 
-  <Expandable title="Can I add a Shopify website as a target in DAST?" default-open="true">
+  <Expandable title="Can I add a Shopify website as a target in DAST?" default-open="false">
     Yes, there are no restrictions, unless the Shopify website has any explicit blockers or WAF rules in place.
   </Expandable>
 
-  <Expandable title="Does the DAST scan follow deep links and test dynamically generated endpoints?" default-open="true">
+  <Expandable title="Does the DAST scan follow deep links and test dynamically generated endpoints?" default-open="false">
     Yes, the DAST implementation uses both traditional and AJAX-based crawling to ensure comprehensive coverage of dynamically generated and client-side endpoints. The configuration includes AJAX Spider functionality, which leverages a headless browser to:
 
     - Execute client-side JavaScript
@@ -204,7 +204,7 @@ Once you add values for all fields, click **Save** to add the target.
     This approach ensures that dynamic content and endpoints generated through client-side scripts are properly tested during the scan.
   </Expandable>
 
-  <Expandable title="What’s the difference between quick and full scans?" default-open="true">
+  <Expandable title="What’s the difference between quick and full scans?" default-open="false">
     Quick Scans:
 
     - They are non-intrusive, low-impact checks designed for **safe use in production environments**.
@@ -218,7 +218,7 @@ Once you add values for all fields, click **Save** to add the target.
     - They simulate common attacker techniques.
   </Expandable>
 
-  <Expandable title="Can Scrut scan an application that is behind a VPN?" default-open="true">
+  <Expandable title="Can Scrut scan an application that is behind a VPN?" default-open="false">
     Yes. If your application restricts inbound traffic through a VPN, you can still run DAST scans by whitelisting Scrut's scanner IP address for inbound traffic. This allows the scanner to reach your application without changes to your VPN configuration. Contact your CSM or reach out to [support@scrut.io](mailto:support@scrut.io) to get the specific IP address to add to your allowlist.
   </Expandable>
 </ExpandableGroup>

@@ -222,15 +222,15 @@ Cause: Scrut derives the joining date from when a user was added to Google Works
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens when an employee is removed from Google Workspace?" default-open="true">
+  <Expandable title="What happens when an employee is removed from Google Workspace?" default-open="false">
     When a user is deleted from Google Workspace, Scrut records the deletion date as their exit date in the People module. However, the employee record is not automatically deleted from Scrut. Its status changes to **Offboarding Needed**.
   </Expandable>
 
-  <Expandable title="Can I use the Google Workspace integration without enabling employee directory sync?" default-open="true">
+  <Expandable title="Can I use the Google Workspace integration without enabling employee directory sync?" default-open="false">
     Yes. The SSO, Automated Tests, Scrut Monitor, and Vendor Management features work independently of the Enable Google Workspace to populate the Employees toggle. Turn on only the toggles that apply to your use case.
   </Expandable>
 
-  <Expandable title="How does the Enable Vendor Discovery toggle work?" default-open="true">
+  <Expandable title="How does the Enable Vendor Discovery toggle work?" default-open="false">
     Turn on the **Enable Vendor Discovery toggle** to automatically identify potential vendors that your organization is using. Here's how it works:
 
     When your employees sign into external applications or websites using their work Google accounts (through "Sign in with Google"), Scrut tracks these sign-ins across your entire organization. It then:
@@ -246,7 +246,7 @@ Cause: Scrut derives the joining date from when a user was added to Google Works
     **How does this help?** Even if just one employee has signed into a service using their work email, that vendor will be discovered and made available for you to review and import into the Vendor module in Scrut. This ensures you don't miss any third-party services your organization is actually using, providing better visibility into your vendor ecosystem and comprehensive compliance coverage.
   </Expandable>
 
-  <Expandable title="What if my Google Workspace credentials or admin account changes?" default-open="true">
+  <Expandable title="What if my Google Workspace credentials or admin account changes?" default-open="false">
     If the Google account used to authorize the integration loses admin access or is deactivated, the integration may stop syncing. Reconnect the integration using an active admin account.
   </Expandable>
 </ExpandableGroup>

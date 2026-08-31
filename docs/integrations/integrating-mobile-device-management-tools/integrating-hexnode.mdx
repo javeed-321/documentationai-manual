@@ -204,27 +204,27 @@ Possible Solutions:
 ## FAQs
 
 <ExpandableGroup>
-  <Expandable title="What happens if a device is removed from Hexnode?" default-open="true">
+  <Expandable title="What happens if a device is removed from Hexnode?" default-open="false">
     The device record will be marked as inactive or removed from Scrut during the next sync.
   </Expandable>
 
-  <Expandable title="Can I sync historical data?" default-open="true">
+  <Expandable title="Can I sync historical data?" default-open="false">
     The integration syncs the current device state as reported by Hexnode. Historical data is not available through the API.
   </Expandable>
 
-  <Expandable title="What if an employee has multiple devices?" default-open="true">
+  <Expandable title="What if an employee has multiple devices?" default-open="false">
     All devices associated with a user's email address will be linked to that employee's record in Scrut. Each device appears as a separate entry.
   </Expandable>
 
-  <Expandable title="Will Scrut fetch BYOD (Bring Your Own Device) data?" default-open="true">
+  <Expandable title="Will Scrut fetch BYOD (Bring Your Own Device) data?" default-open="false">
     Yes, any device enrolled in Hexnode will be synced to Scrut, including personal devices enrolled under BYOD policies.
   </Expandable>
 
-  <Expandable title="What happens if the API key is regenerated?" default-open="true">
+  <Expandable title="What happens if the API key is regenerated?" default-open="false">
     You'll need to update the API key in Scrut's integration settings. The old key will stop working, and syncs will fail until you provide the new key.
   </Expandable>
 
-  <Expandable title="How do I disconnect the integration?" default-open="true">
+  <Expandable title="How do I disconnect the integration?" default-open="false">
     Navigate to **Settings** → **Integrations** in Scrut, locate the Hexnode integration, and click **Disconnect**. Existing data will be retained but no longer updated.
   </Expandable>
 </ExpandableGroup>
