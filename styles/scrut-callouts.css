@@ -1,49 +1,50 @@
 /* ==========================================================================
    Scrut callout colours.
 
-   Restores the two Document360 callout styles that the migration flattened
-   into one grey `kind="info"`. Values are lifted verbatim from the export's
-   own data attributes, e.g.
+   Scoped to the platform's own `data-kind` attribute, NOT to individual pages
+   or callouts. That means any callout an author writes later — in the repo or
+   in the web editor — picks these up automatically just by using the kind:
 
-     <blockquote class="infoBox" data-background="#ddf7ff" data-border="#006a8a">
+       <Callout kind="success">   -> Scrut green
+       <Callout kind="plan">      -> Scrut lavender (plan badge)
 
-   Selector strategy: the platform stamps `data-kind` on every Callout, so the
-   two groups were re-kinded in the MDX to make them addressable —
-   "Pro Tip" -> tip, "Who can use this feature" -> custom. Plain `kind="info"`
-   callouts are deliberately NOT touched and keep the platform's grey.
+   Nothing in the platform's own code or theme tokens is modified. We override
+   the rendered background only, so `--success-muted` keeps its platform value
+   for ParamField badges and the diff checker, which share that token.
 
-   `background-color` is set with !important because the component ships a
-   Tailwind `bg-*-muted` class; the 4px inset ring reproduces the source's
-   `border-left: 4px solid`, using a shadow so it sits inside the existing
-   rounded corners instead of fighting the border-radius.
+   Only two kinds are listed here. The others are close enough to Scrut's
+   source palette to be left alone (dE = perceptual difference):
+
+       infoBox    #ddf7ff  -> kind="tip"    platform #e9f2ff  dE  6.4  built-in
+       warningBox #fdf2ce  -> kind="alert"  platform #fff6e4  dE  9.4  built-in
+       successBox #c4f2d4  -> kind="success" platform #e9f2e9 dE 17.4  BELOW
+       infoBox    #F5F4FF  -> no purple kind exists                    BELOW
+
+   Source values come from the Document360 export's own attributes, e.g.
+       <blockquote class="successBox" data-background="#c4f2d4">
    ========================================================================== */
 
-/* -- "Pro Tip!" — source infoBox: bg #ddf7ff, border #006a8a -------------- */
-[data-component='Callout'][data-kind='tip'] {
-  background-color: #ddf7ff !important;
-  box-shadow: inset 4px 0 0 0 #006a8a;
-}
-[data-component='Callout'][data-kind='tip'] .dai-callout-icon svg {
-  color: #006a8a !important;
+/* -- successBox — source #c4f2d4 ----------------------------------------- */
+[data-component='Callout'][data-kind='success'] {
+  background-color: #c4f2d4 !important;
 }
 
-/* -- "Who can use this feature" — source infoBox: bg #F5F4FF, border #695ACC
-      (#695ACC is Scrut brand purple, same value as --scr-purple) ---------- */
-[data-component='Callout'][data-kind='custom'] {
+/* -- "Who can use this feature" plan badge — source #F5F4FF --------------
+      #695ACC is Scrut brand purple (same value as --scr-purple); no built-in
+      kind is purple, so this is the one case the platform cannot express. */
+[data-component='Callout'][data-kind='plan'] {
   background-color: #f5f4ff !important;
-  box-shadow: inset 4px 0 0 0 #695acc;
-}
-[data-component='Callout'][data-kind='custom'] .dai-callout-icon svg {
-  color: #695acc !important;
 }
 
-/* Dark mode: the source palette is light-only, so keep the hues but drop the
-   fills to a tint that reads on a dark ground. The left rule stays exact. */
-:root.dark [data-component='Callout'][data-kind='tip'],
-:root[data-theme='dark'] [data-component='Callout'][data-kind='tip'] {
-  background-color: color-mix(in srgb, #006a8a 18%, transparent) !important;
+/* Dark mode. The source palette is light-only, so these pale fills would be
+   unreadable on a dark ground. Mirror how the platform darkens its own muted
+   tokens: a low-alpha tint of the same hue. */
+:root.dark [data-component='Callout'][data-kind='success'],
+:root[data-theme='dark'] [data-component='Callout'][data-kind='success'] {
+  background-color: color-mix(in srgb, #029e38 18%, transparent) !important;
 }
-:root.dark [data-component='Callout'][data-kind='custom'],
-:root[data-theme='dark'] [data-component='Callout'][data-kind='custom'] {
+
+:root.dark [data-component='Callout'][data-kind='plan'],
+:root[data-theme='dark'] [data-component='Callout'][data-kind='plan'] {
   background-color: color-mix(in srgb, #695acc 18%, transparent) !important;
 }
