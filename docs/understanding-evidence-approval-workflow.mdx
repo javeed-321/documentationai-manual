@@ -1,0 +1,71 @@
+---
+title: "Evidence Approval Workflow"
+metaDescription: "Understand how the evidence approval workflow works in Scrut."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+The evidence approval workflow adds an extra layer of oversight to evidence management. When it is turned on, an approver must review and approve any evidence submitted by an assignee before it counts as accepted evidence.
+
+## Turn the Evidence Approval Workflow On or Off
+
+1. Navigate to **Compliance → Evidence Tasks**.
+
+2. Click the **Settings** icon in the top right corner.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162040562-di5bos9ko7n-Evidence-Settings.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Turn the **Evidence Approval** toggle on or off.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162032205-jsykois9jxj-Evidence-Approval-toggle.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## How the Workflow Works When Turned On
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162030839-2txq8jj9qbe-Evidence-Approval-ON.png?fm=auto&auto=compress%2Cformat" alt="Evidence Approval ON" caption=" " />
+
+When the Evidence Approval Workflow is on, an evidence task moves through the following stages before it is accepted.
+
+1. When no attachments (current or past) are present for an evidence task, the task is in **Not Uploaded** status.
+
+2. An assignee uploads an attachment for the current period. The task moves to **Draft**.
+
+3. The assignee clicks Send for Approval. The task moves to **Pending Approval**.
+
+4. The approver reviews the submission.
+
+   - Approving it moves the task to **Uploaded**.
+   - Requesting a revision moves the task to **Needs Revision**.
+
+5. If a revision is requested, the assignee updates the attachment and clicks Send for Approval again. The task moves back to Pending Approval.
+
+6. When the evidence is renewed for the next cycle, it moves to **Needs Attention**.
+
+**Note:**
+
+- Adding or replacing an attachment while a task is in Needs Revision does not automatically resend it for approval. You still need to click Send for Approval to move the task back to Pending Approval.
+- Adding a new attachment to the current period while a task is in Pending Approval or Uploaded reverts it to Draft, since the evidence needs to be reviewed again.
+
+## How the Workflow Works When Turned Off
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162029546-7al0v0eiicc-Evidence-Approval-OFF.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+When the Evidence Approval Workflow is off, evidence does not need an approver review.
+
+1. When no attachments (current or past) are present for an evidence task, the task is in **Not Uploaded** status.
+2. An assignee uploads an attachment for the current period. The task moves to **Draft**.
+3. The assignee clicks Mark as Completed. The task moves to **Uploaded**.
+4. When the evidence is renewed for the next cycle, it moves to **Needs Attention**.
+
+This lets evidence become available faster, though it removes the additional layer of oversight.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Turning off the workflow after you've enabled it affects tasks already in progress. See [What Happens When You Turn the Workflow Off](/docs/evidence-statuses#when-the-approval-workflow-is-turned-off) for details.
+</Callout>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

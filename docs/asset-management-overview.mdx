@@ -1,0 +1,149 @@
+---
+title: "Which Asset Types Does Scrut Support?"
+metaDescription: "List of all the supported asset types in Scrut's Asset Management module."
+---
+
+The **Asset Management** module supports the following asset categories:
+
+## **🖥️** Compute Instances
+
+The asset management module retrieves critical metadata, including resource ID, name, provider, region, and ownership, from virtual machines and compute resources across cloud providers.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| AWS | EC2 Instances, EMR Clusters, AMIs (Images) |
+| Azure | Virtual Machines, Managed Disks, Snapshots, VM Images |
+| GCP | Compute Engine Instances, Snapshots |
+
+## **📦** Container Platforms
+
+Track your container orchestration platforms, container registries, and containerized application deployments. Ensure your container infrastructure meets security and compliance requirements.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| AWS | ECS Clusters, EKS Clusters, ECR Repositories, ECR Images |
+| Azure | App Service Web Apps |
+| GCP | Kubernetes Engine (GKE) Clusters |
+
+## **💾** Storage & Databases
+
+Track the encryption status, backup configurations, access controls, and geographical locations of your storage and database assets to ensure compliance with data protection requirements.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | S3 Buckets, DynamoDB Tables, RDS Instances, RDS Snapshots, DocumentDB Clusters, Redshift Clusters, EFS File Systems |
+| **Azure** | Storage Accounts, SQL Database Servers, PostgreSQL Servers, MySQL Servers, Redis Cache |
+| **GCP** | Cloud Storage Buckets, Cloud SQL Instances, BigQuery Datasets, Cloud Memorystore (Redis) |
+
+## **🌐** Virtual Networks (VPCs)
+
+By tracking the configurations of virtual private clouds (VPCs) and virtual networks (VNets), including IP ranges, subnets, and gateways, the asset management module helps maintain a secure network architecture.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | VPCs, Subnets, VPC Peering Connections, Network Interfaces |
+| **Azure** | Virtual Networks, Application Gateways |
+| **GCP** | VPC Networks, Subnetworks, DNS Managed Zones |
+
+## **⚡** Serverless Functions
+
+By tracking the configurations, triggers, and permissions of event-driven compute resources, this module helps maintain security and operational visibility across your serverless infrastructure.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | Lambda Functions |
+| **GCP** | Cloud Functions (v1), Cloud Functions (v2) |
+
+## **📊** Monitoring & Logging
+
+Tracking monitoring and logging resources ensures critical systems have appropriate coverage for incident response and compliance requirements.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | CloudTrail Trails, CloudWatch Alarms, CloudWatch Metric Filters |
+| **Azure** | Logging & Monitoring Resources |
+| **GCP** | Stackdriver Logging Sinks, Stackdriver Metrics, Stackdriver Uptime Checks, Alert Policies |
+
+## **🔐** Key Management
+
+Track your key management services to manage key rotation and access permissions, maintain data confidentiality, and meet encryption compliance requirements.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | KMS Keys, Secrets Manager Secrets, SSM Parameters |
+| **Azure** | Key Vaults |
+| **GCP** | KMS Key Rings |
+
+## **📱** Mobile Devices
+
+The asset management module collates all the different devices tracked and monitored via Mobile Device Management (MDM) tools and [Scrut Agent](/docs/scrut-agent-walkthrough#what-is-scrut-agent), including smartphones, tablets, laptops, desktops, and other mobile endpoints.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **MDM Integration / Scrut Agent** | MDM Devices, Smartphones, Tablets, Laptops, Desktops |
+
+## **👤** Identity Users
+
+Tracking user identities ensures proper authorization, adheres to least-privilege principles, and supports compliance with various security frameworks.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | IAM Users, Cognito Identity Pools, Cognito User Pools |
+| **Azure** | Azure AD Users |
+| **GCP** | IAM Users |
+
+## **🎭** Identity Roles
+
+Track role configurations to ensure proper authorization and access patterns, supporting least-privilege access and compliance requirements.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | IAM Roles |
+| **Azure** | RBAC Roles, Custom Roles |
+
+## **👥** Identity Groups
+
+Track group configurations to manage collective permissions and ensure proper access controls across your organization.
+
+**Supported Services**
+
+| Provider | Services |
+| --- | --- |
+| **AWS** | IAM Groups |
+| **Azure** | Azure AD Groups |
+| **GCP** | IAM Groups |
+
+## **📂** Code Repos
+
+Tracking code repository configurations and access permissions ensures secure development practices and compliance with SDLC (Software Development Lifecycle) security requirements.
+
+**Supported Platforms**
+
+| Platform | Description |
+| --- | --- |
+| **GitHub** | Code repositories |
+| **GitLab** | Code repositories |
+| **BitBucket** | Code repositories |
+| **Azure DevOps** | Code repositories |
+
+By categorizing and organizing these assets, the asset management module provides comprehensive visibility and management of infrastructure resources across your organization.

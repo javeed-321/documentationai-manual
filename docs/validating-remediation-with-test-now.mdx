@@ -1,0 +1,28 @@
+---
+title: "Validate Test Remediation"
+metaDescription: "Learn how to validate if the test fix you've applied has resolved the issue."
+---
+
+After you've applied the remediation steps, verify that the fix is working as intended. Most scheduled tests run once every 24 hours by default. Real-time tests run on a **Continuous Monitoring** cadence and do not follow a fixed schedule. For either test type, you can trigger an immediate scan by clicking the **Test Now** button on the test details page.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  It might take a few moments for the test to complete as Scrut runs all associated services to validate.
+</Callout>
+
+1. Click **Compliance → Cloud** on the left navigation menu, and click the **Tests** tab.
+
+2. Click the test that you want to validate.
+
+3. Click the **Test Now** button.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162244021-06ul2xqn9y5m-image-1763741129277.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+   **Note**: The button will be grayed out while a scan is in progress.
+
+<Callout kind="success">
+  **Heads Up!**
+
+  If the fix you've applied is correct and the issue is fixed, the test status will change to Compliant.
+</Callout>

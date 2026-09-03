@@ -1,0 +1,46 @@
+---
+title: "Populate Vulnerabilities Via Third-Party Tools"
+metaDescription: "Learn how to populate vulnerability findings from third-party tools into Scrut."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Besides running Scrut’s built-in scanners to detect vulnerabilities, you can also import vulnerabilities directly via third-party tool integrations.
+
+## Supported Third-Party Integrations
+
+Scrut supports integrations with the following tools to sync vulnerabilities:
+
+- [AWS](/docs/integrating-aws) (AWS Inspector)
+- [GitHub](/docs/integrating-github) (GitHub Dependabot)
+- [Microsoft Defender Endpoint](/docs/integrating-microsoft-defender-endpoint)
+- [Qualys](/docs/integrating-qualys)
+- [SentinelOne](/docs/integrating-sentinelone)
+- [Snyk](/docs/integrating-snyk)
+- [SonarCloud](/docs/integrating-sonarcloud)
+
+## How To Set Up Third-Party Vulnerability Scanning
+
+### Step 1: Set Up Integrations
+
+1. Click **Integrations** on the left navigation panel in Scrut.
+
+2. Search for your desired security tool (AWS, GitHub, MS Defender Endpoint, Qualys, SentinelOne, Snyk, SonarCloud)
+
+3. Follow the integration setup process for your chosen tool. Refer to these [step-by-step integration guides](/docs/integrations-overview) for more information.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788171354649-kmaoguybj7-Screenshot-2025-09-24-at-14-46-21.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 2: Access Third-Party Scan Results
+
+Once the integrations are done and the data sync is completed:
+
+1. Go to **Vulnerabilities → Third Party Scans**.
+
+2. Scrut will automatically fetch and list the vulnerabilities identified by your integrated tools in the table on this page.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788171355985-ult62ln3ykf-Screenshot-2025-09-24-at-14-47-04.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />

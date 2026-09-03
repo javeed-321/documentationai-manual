@@ -1,0 +1,345 @@
+---
+title: "Conduct an Access Review"
+metaDescription: "Learn how to conduct an access review in Scrut. Discover the various actions you can take."
+---
+
+This guide outlines the steps to conduct an access review in Scrut.
+
+## Step 1: User Data Collection
+
+#### Automated
+
+If your application is of the types **Integration**, **SSO,** or **Native**, Scrut automatically fetches user names, emails, roles, and other details.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164967723-1o1tn6jgm5q-Screenshot-2026-01-20-at-16-04-43-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### Manual
+
+For vendors and manual apps, you must upload a file that contains a list of application users and their details.
+
+1. Go to **People → Access Reviews → Reviews** and open your preferred review.
+
+2. Click on the required application.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164969111-ad4b4rysrda-Screenshot-2026-01-20-at-16-05-06.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Click **Upload File**. Alternatively, click **Add New User** to add user details individually.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164970449-0yzk72a2e0oc-Screenshot-2026-01-20-at-16-05-25.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Export a file with user details from the application. Scrut can accurately scan it and add the user access details for you.
+
+5. If the file is not readily available, you can prepare a file (XLSX/CSV) with the user list and ensure it includes the following details for each user:
+
+   - **Name:** The first and last name of the user.
+   - **Account Identifier\*:** This field is mandatory and is usually the user’s email address.
+   - **Role:** Specify the role assigned to each user in the app.
+   - **MFA (Multifactor Authentication):** Yes or No. Indicate whether MFA is enabled for that user.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164971769-shyrdyerjdb-Screenshot-2026-01-20-at-16-11-02.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+6. Map each column in your file to the corresponding field in Scrut.
+
+7. Once you’ve mapped all fields in your file to corresponding fields in Scrut, click **Confirm Mapping**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164973079-c2003z9pbu-Screenshot-2026-01-20-at-16-39-24.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+8. Review the mapped data and click **Import User Access Data**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164974593-ovcweouddp-Screenshot-2026-01-20-at-16-39-56.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+9. Scrut imports the application's user access data from your uploaded file.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164975932-le1g35lg8ba-Screenshot-2026-01-20-at-16-41-56.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="alert">
+  Note (For Review Owners):
+
+  Once a review goes into Active state, you can click the **Send Reminder** button at the top right of the page to send emails reminding reviewers and approvers to complete their pending tasks.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162326175-rxsm2us3el-image-1768915098896.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Step 2: (For Reviewers) Verify Users and Roles
+
+In this step, the **reviewer** must systematically evaluate each user account within the application to make informed access decisions.
+
+Once the Access Review is **Active**, go to **People → Access → Reviews**, and open the Access Review for which you’re assigned as a reviewer. Click the application you want to review user access for.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164977260-6ru7ugz35av-Screenshot-2026-01-20-at-16-46-23-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="info">
+  Pro Tip!
+
+  The **Checklist** provides the number of tasks you need to complete.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166129629-74dh056kau-To-do-list-for-Access-Reviews.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Assign Account Identity
+
+Assigning an Account Identity to each application user is a key step in performing the access review. It links each user account to the corresponding employee record in Scrut, which is essential to pass associated automated tests and maintain your compliance posture.
+
+#### How Account Identity Mapping Works
+
+Scrut automatically maps users from connected applications to employee records using email-based matching:
+
+- **Auto-mapped users:** When a user's email in the external application exactly matches an email in Scrut's employee table, the Account Identity is automatically assigned.
+
+- **Unmapped users:** When no exact email match is found, the user remains unmapped and requires manual assignment.
+
+  Common reasons for unmapped users:
+
+**Common reasons for unmapped users:**
+
+- Email address discrepancies (e.g., `john.doe@company.com` in the app vs. `jdoe@company.com` in Scrut)
+- Non-employee accounts (contractors, service accounts, shared accounts)
+- Employees not yet added to Scrut's employee records
+
+#### Why Account Identity Mapping Matters
+
+Unmapped users impact your compliance posture:
+
+- **User Accounts Associated test:** This Automated Test fails if users are not properly mapped in Scrut.
+- **Eliminate Security Risks:** Unmapped users can indicate malicious accounts in your application and pose a security risk.
+- **Audit readiness:** Auditors require clear ownership attribution for all user accounts.
+
+#### How to Assign Account Identity
+
+You can assign an Account Identity to users one at a time, or update multiple users in bulk.
+
+**To assign Account Identity to a single user:**
+
+1. Click the **edit icon** for the unmapped user.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165652325-rpbevom4em-Screenshot-2026-05-08-at-20-15-54.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Choose the appropriate mapping:
+
+   - **For Employee accounts:** Select the corresponding employee from the Account Identity dropdown.
+   - **For Non-Personnel accounts:** Mark the account as "Non-Personnel" (e.g., service accounts, system accounts).
+   - **For External Contractors:** Mark the account as "External Contractor."
+
+3. **Save** your changes.
+
+4. Repeat for each remaining unmapped user.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165653725-rl8ldka6zs-Screenshot-2026-05-08-at-20-17-37.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+**To assign Account Identity to multiple users at once:**
+
+1. Select the checkboxes next to the users you want to update.
+
+2. Click **Update Account Identity** in the bulk action bar that appears.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165655193-htm9rsbdli6-Screenshot-2026-05-08-at-20-19-36.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Select the appropriate Account Identity from the dropdown, or mark the users as Non-Personnel or External Contractor.
+
+4. Save your changes.
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Regularly review Applications to identify and map new users as they're added to your connected applications. This helps maintain continuous compliance and prevents test failures during audits.
+</Callout>
+
+### \[Optional\] Add Privileged Roles
+
+A privileged role is a special user role within an application that has been marked as having elevated or sensitive permissions. These roles typically have access to critical system functions, sensitive data, or administrative capabilities that require additional oversight and documentation.
+
+<Callout kind="alert">
+  **Note:**
+
+  Once you mark a role as privileged, Scrut will enforce additional compliance requirements. Any changes to user access for these roles will require you to provide mandatory justifications.
+</Callout>
+
+To mark a role as privileged, open an access review and click **Add Roles**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161836120-x22johgrs9q-Add-Privileged-Role.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Review Each User Account
+
+Once you’ve established ownership, proceed to review each user account individually. Examine their access permissions in relation to their job responsibilities. For each account, you can take one of the following decisions:
+
+- **Approve access:** If a user’s permissions align with their role and demonstrate ongoing business need, maintain current access.
+- **Modify access:** If a user requires elevated or reduced access based on their job responsibilities, adjust their access as necessary. You’ll need to provide a justification for modifying user access.
+- **Revoke access:** If a user no longer requires access to the application due to role changes, departure, or other reasons, revoke their access. You’ll need to enter the justification for removing user access.
+
+Use the **Review Status** filter to quickly filter users by review status.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161798582-yda9at39w4d-Access-Decision.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Ensure all decisions follow the principle of least privilege (users only get the minimum access they need). Document each change with clear reasons, noting any risk factors or compliance considerations that influenced it.
+</Callout>
+
+## Step 3: \[Optional\] Create Tickets for Access Changes
+
+Follow these steps to create project management tickets to track access changes:
+
+1. Go to **People → Access Review → Reviews**, and open your preferred review.
+
+2. Click the application you want to create tickets for.
+
+3. Select one or more users for whom you’ve modified the access.
+
+4. Click **Create Ticket** and select your connected project management tool to track these tickets.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165656507-f7l7leaua3q-Screenshot-2026-05-08-at-20-24-37.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Select if you want to:
+
+   - Create **multiple tickets (one for each user whose access was modified)** or
+   - Create a **consolidated ticket**
+
+6. Scrut fills in the ticket name automatically. Edit it if needed.
+
+7. Fill in the other details, such as board, workspace, project, etc., depending on your project management tool.
+
+8. Select ticket assignees, and optionally, include a description.
+
+9. Enter the ticket due date in days (1, 3, 7, 15, or 30 days).
+
+10. Click **Create Ticket**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164978576-z8q0e4gp1t8-Screenshot-2026-01-20-at-18-59-05.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Scrut automatically creates the tickets in your connected project management platform.
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Complete the required access changes in the respective applications.
+</Callout>
+
+## Step 4: (For Reviewers) Send for Approval
+
+The reviewer is responsible for completing the review of their application. Once the review is complete, the reviewer submits it to the approver, who will provide final approval for the application. This process ensures a clear distinction between the roles of reviewing and approving, promoting an organized approval workflow.
+
+**Heads Up!**
+
+- The **Send for Approval** is visible only when the reviewer and approver are different individuals.
+- If you are both the reviewer and approver, you will see the **Approve Review** button instead.
+- Additionally, the **Send for Approval** button is only visible if the reviewer has the **Contributor** role in Scrut. If the Reviewer is an admin, they won’t see this button.
+
+#### How to Send for Approval
+
+1. Click **Send for Approval** once you've completed reviewing all users. You can also click this button even if you still have pending users.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162327490-ocxya6sp42-image-1769072314436.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Click **Send** to proceed, or **Cancel** to go back.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164985959-7peb3fzkc7a-Screenshot-2026-01-22-at-14-29-52.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### What Happens After You Send for Approval
+
+Once you submit:
+
+- You cannot make any further edits to your user-level decisions until the approver reviews them. All fields and actions are locked.
+
+- The application review status changes to **Pending Approval**.
+
+- The approver receives notifications via email, Slack, and in the Notifications Center.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164987300-9z2lgwgsjyt-Screenshot-2026-01-22-at-14-30-55-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### If the Approver Declines Your Review
+
+The approver may decline your review and request changes. If this happens:
+
+1. You'll receive notifications via email, Slack, and in the Notifications Center.
+
+2. The application review status changes back to **In Progress**.
+
+3. When you open the review, you'll see a banner explaining why the approver has declined it.
+
+4. You can now edit your previous decisions, make necessary adjustments, and resubmit using the **Send for Approval** button.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164992676-ujchdovk8e-Screenshot-2026-01-22-at-14-46-13-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Upon re-submission, the status reverts to **Pending Approval**, and the approver is notified.
+
+## Step 5: (For Approvers) Approve & Validate Review
+
+### Approve or Decline Review
+
+When you receive a notification that a review is **Pending Approval**:
+
+1. Navigate to **People → Access → Reviews**, and open the review.
+
+2. Click the application marked as **Pending Approval**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164990039-ff1rb8w7k0k-Screenshot-2026-01-22-at-14-39-31.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. You'll see two options:
+
+   - **Approve**: Proceed with final approval
+   - **Decline**: Send the review back to the reviewer with feedback
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164988707-rjtipmn553-Screenshot-2026-01-22-at-14-38-54.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### To Approve the Review
+
+1. Click the **Approve Review** button in the top right corner.
+
+2. Optionally, include a justification for the action, and click **Yes, Approve**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164994031-t917d7azx5d-Screenshot-2026-01-22-at-14-52-23.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### To Decline and Request Re-Review
+
+1. Click the **Decline Review** button.
+
+2. Enter your reason for declining it.
+
+3. Click **Submit** to send the review back to the reviewer.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164991356-mhq9fyqje6l-Screenshot-2026-01-22-at-14-41-11.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+After you submit a decline:
+
+- The application status changes from **Pending Approval** to **In Progress**.
+- The reviewer receives notifications via email, Slack, and in the Notifications Center with your feedback message.
+- The reviewer can make changes and resubmit for approval.
+
+### Validate Review
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Check if all of these tasks are completed before validation:
+
+  - Verify that you’ve completed all tasks in the checklist.
+  - Ensure ownership assignments have been modified in the application
+  - Confirm all access decisions have been documented with proper justification
+</Callout>
+
+Once you've made the necessary access changes in the application and validated user access:
+
+1. Click the **Validate Review** button in the top right of the page.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162322187-uekoiqvt04f-image-1768889842523.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Watch out for the success notification. Once validated, Scrut displays the validation time on the page.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162323471-xccugilz6zh-image-1768889861617.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Step 6: Conclude Review
+
+Repeat **steps 2, 3, 4, and 5** for all other applications included in the Access Review.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162324838-av8kdlgtlui-image-1768889882014.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+1. Once done, click the **Conclude Review** button at the top right of the page.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162413725-ibo56av3hy-image-1773154290519.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Click **Yes, Conclude** to complete the action.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162415048-os8tkerpmsh-image-1773154346909.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+You have now completed the access review. Scrut will automatically generate evidence of this review and attach it to the control test as proof of completed access review for all in-scope applications.

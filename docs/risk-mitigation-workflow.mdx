@@ -1,0 +1,78 @@
+---
+title: "Understand the Risk Mitigation Workflow"
+metaDescription: "Understand the recommended workflow for risk mitigation tasks in Scrut."
+---
+
+## What are Risk Mitigation Tasks?
+
+A risk mitigation task is a concrete, assignable action taken to reduce the impact or likelihood of an identified risk. While a risk captures what could go wrong, a mitigation task captures what your team will do about it. In Scrut, mitigation tasks are directly linked to specific risks, keeping your risk management process connected and auditable.
+
+## Recommended Workflow
+
+A mitigation task follows a defined lifecycle from creation to completion. Here is how the full workflow looks:
+
+### Step 1: Create a Mitigation Task
+
+A mitigation task can be created in two ways:
+
+- [Manually from the Risk Register](/docs/add-a-mitigation-task) (or)
+- During the [risk assessment process](/docs/risk-assessment-workflow#step-4-mitigation-task-optional), after you select a treatment strategy.
+
+### Step 2: Work on the Task & Upload an Attachment
+
+**Who owns it: Assignee**
+
+Once a mitigation task is assigned, the Assignee is responsible for carrying out the remediation work and documenting their efforts. The Assignee works on the task and uploads supporting artifacts as evidence of completion. Attachments can be uploaded as files or linked externally. At least one attachment is required for each task.
+
+See: [Upload an Attachment to a Mitigation Task](/docs/uploading-a-mitigation-task-document)
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Steps 3, 4, and 5 are applicable only when the [risk mitigation task approval workflow is turned on](/docs/mitigation-task-approval-workflow#how-to-enable-the-mitigation-task-approval-workflow).
+</Callout>
+
+### Step 3: Submit for Review
+
+**Who owns it: Assignee**
+
+Once the work is complete and an attachment is uploaded, the Assignee submits the task for approval. The task status changes to **Under Review,** and the Approver receives an email notification.
+
+### Step 4: Approve or Request a Revision
+
+**Who owns it: Approver**
+
+The Approver reviews the task details and uploaded artifacts, then takes one of two actions:
+
+- **Approve**: The task is marked as **Completed**. No further edits can be made.
+- **Request Revision**: The Approver provides a reason for the revision. The task status changes to **Needs Revision,** and the Assignee is notified to revisit it.
+
+### Step 5: Revise and Resubmit
+
+**Who owns it: Assignee**
+
+If a revision is requested, the Assignee updates the task and resubmits it for review. This cycle repeats until the Approver is satisfied and approves the task.
+
+See: [Mitigation Task Approval Workflow](/docs/mitigation-task-approval-workflow)
+
+### Step 6: Approve
+
+**Who owns it: Approver**
+
+Once you’re satisfied with the task, approve it to move it to the Completed status.
+
+## Mitigation Task Statuses
+
+| Status | Description |
+| --- | --- |
+| Open | The task is within the due date and has not been submitted for review |
+| Overdue | The task is past its due date and has not been submitted for review |
+| Under Review | Task has been submitted and is awaiting the Approver's decision |
+| Needs Revision | The approver has requested changes; the task is back with the Assignee |
+| Completed | Task has been approved; no further edits are possible |
+
+<Callout kind="alert">
+  **Note:**
+
+  The **Under Review** and **Needs Revision** statuses are only available when the Mitigation Task Approval Workflow is enabled. When the workflow is disabled, tasks move directly from **Open** or **Overdue** to **Completed**.
+</Callout>

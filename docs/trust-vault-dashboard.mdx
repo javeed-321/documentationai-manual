@@ -1,0 +1,115 @@
+---
+title: "Understand Trust Vault Dashboard"
+metaDescription: "Learn how to navigate and use the trust vault dashboard, customer activity, and audit logs tabs."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Learn how to navigate and use the Trust Vault Dashboard to monitor portal views, track access requests, and identify your most engaged documents and users.
+
+## Accessing the Trust Vault Dashboard
+
+To access the dashboard, select **Trust → Trust Vault** on the left navigation panel. This brings you to the **Dashboard** tab, where you can view all insights.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161988666-ed7v8256yfo-Dashboard.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Filtering Dashboard Data
+
+The Insights Dashboard provides a consolidated view of your Trust Vault's performance through interactive charts and metrics. All components update simultaneously when you adjust the time period filter, giving you a comprehensive snapshot of activity during your selected timeframe.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165026271-gvnietdvasq-Screenshot-2026-01-28-at-12-09-19.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### Time Period Filter
+
+A time period filter at the top of the dashboard controls all charts and metrics. Available options include:
+
+- **Last 7 days**: View activity from the past week
+- **Last 30 days**: View activity from the past month
+- **Last 90 days**: View activity from the past quarter
+- **Custom Range**: Select specific start and end dates
+
+<Callout kind="alert">
+  **Note:**
+
+  By default, the dashboard displays all data from the day your tenant was created through the current date, providing a complete historical view of your Trust Vault's performance.
+</Callout>
+
+#### By Entities
+
+If you manage multiple entities, you can filter all dashboard components by entity. When you select an entity, all graphs and metrics update accordingly, and any drill-down navigation to detailed views will maintain the entity filter.
+
+## Charts
+
+### Total Portal Views
+
+This chart displays the total number of Trust Portal views for the selected period. Each data point represents the total number of times users visited your Trust Vault portal.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165027609-zqutfs5yxrj-Screenshot-2026-01-28-at-12-10-18.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tips!**
+
+  - Hover over any point on the chart to see the date and exact visit count.
+  - Click on the **Total Views** count to navigate to the **Customer Activity** tab, where the data will be filtered to show only Trust Vault portal visits for your selected time period.
+</Callout>
+
+### Access Requests Processed
+
+This chart shows the complete breakdown of all access requests over time. Each bar represents a time bucket based on your selected period and displays:
+
+- **Automatically Approved**: Requests approved automatically based on your approval rules, such as Salesforce contacts
+- **Manually Approved**: Requests approved manually by your team
+- **Declined**: Requests that were declined
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165028935-v9dw2sk60ys-Screenshot-2026-01-28-at-12-13-13.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tips!**
+
+  - Hover over any bar segment to see the exact count for a specific day.
+
+  - Clicking the counts at the top of the chart redirects to the respective tabs.
+
+    - Auto Approved redirects to Access → Approved with filtered results showing only automatically approved users within the selected time period
+    - Manually Approved count redirects to Access → Approved with filtered results showing only manually approved users within the selected time period
+    - Clicking the Declined count redirects to Access → Declined with filtered results showing declined users within the selected time period
+</Callout>
+
+### Top Engaged Documents
+
+This section displays the documents receiving the highest engagement, combining data from both public and private documents. Each entry shows:
+
+- **Document Name**: The name of the document
+- **Total Views** (count): Number of times users have viewed the document (for private documents, only users with access are counted; anonymous users clicking private documents are not included)
+- **Total Downloads** (count): Number of times the document has been downloaded
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165030335-t0oef5xwb6r-Screenshot-2026-01-28-at-16-15-51.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Use the filter to toggle between viewing documents sorted by **Views** or **Downloads**.
+</Callout>
+
+### Most Active Accounts & Users
+
+This bar chart displays the accounts or users with the highest engagement in your Trust Vault. Engagement is calculated based on the total number of page views, with each page load counting as one view.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165031753-8svufoipqt4-Screenshot-2026-01-28-at-16-16-53.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Use the filter to toggle between viewing **Top Engaged Accounts** or **Top Engaged Users**. The chart updates to show the five most active accounts or users based on your selection.
+</Callout>
+
+## Best Practices
+
+- **All dashboard components are interactive.** Click metrics and chart elements to drill down into detailed views with pre-applied filters that match your dashboard selections.
+- **Use the time filter strategically.** Use broader time ranges (E.g., the Last 90 days) to identify trends. Narrow to specific periods (Last 7 days) to investigate recent activity.
+- **Hover over info icons** next to each component to see explanations of what each metric measures.
+- **When managing multiple entities,** remember that entity filters apply across all dashboard charts.

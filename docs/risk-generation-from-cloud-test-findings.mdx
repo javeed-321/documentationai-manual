@@ -1,0 +1,83 @@
+---
+title: "Create a Risk from a Test Finding"
+metaDescription: "Learn how to create a risk from a test finding."
+---
+
+There may be scenarios when:
+
+- A test finding requires formal acceptance or executive review before it can be remediated
+- Remediation will be delayed due to business constraints, resource limitations, or technical dependencies
+
+In such cases, creating a risk directly from the test finding ensures that the finding is formally documented in your organization’s [risk register](/docs/understanding-risk-register), and you can manage it appropriately from the [risk management module](/docs/risk-trend-graph). In this article, we explain how to create a risk from a cloud test finding.
+
+## How To Create a Risk from a Cloud Test Finding
+
+1. Click **Compliance → Cloud** on the left navigation panel.
+
+2. Go to the **Tests** tab, and click on the specific test for which you want to create the risk.
+
+   **Pro Tip!** Use the search bar and filters at the top to quickly locate specific tests.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166040736-lhunuz5j8v-Select-an-individual-test.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Click the **three-dots icon** on the top-right corner of the test findings page.
+
+4. Select **Create Risk**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164791452-mkgb5wbdge-Screenshot-2025-11-27-at-14-37-03.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. The create risk form will be pre-filled with specific details from the test finding, such as Risk Name and Description.
+
+6. Enter the details for the other fields manually.
+
+7. Click **Save**. The test creation details are captured in the audit logs.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164792849-i3sn9upxq9-Screenshot-2025-11-27-at-14-38-32.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+8. Scroll to the **Risk** tab in the test finding page to view the risk details.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164794248-btnia3c1i7o-Screenshot-2025-11-27-at-14-39-22.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+9. Clicking on the risk details takes you directly to the Risk Register. The risk's **Source Type** is set to “Test,” and **Source** is set to the test name.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164795573-6ds82rqe80k-Screenshot-2025-11-27-at-14-40-47.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Once created, the test will appear in your Risk Register with the source and source type auto-populated from the test finding.
+
+## Best Practices
+
+When ignoring entire tests (especially due to default configurations that cannot be modified), it's recommended to create a Risk and link it to the ignored test. This provides:
+
+- Proper documentation for auditors
+- Justification for why the test was ignored
+- Context through comments and screenshots
+- Audit trail for compliance purposes
+
+**Example Use Case:** AWS servers with default internal policies that were configured at creation time and cannot be modified without recreating the server. Since recreating production servers is not feasible, creating a Risk with proper justification provides a compliant way to document why the test is ignored.
+
+While not mandatory, this is the recommended approach for maintaining audit readiness.
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Should I mark the test as “Ignored” after creating a risk for it?" default-open="false">
+    The decision to mark a test as "Ignored" after creating a risk depends on your organization's risk management process. Mark the test as "Ignored" when:
+
+    - A **formal risk acceptance decision** has been documented
+    - A **remediation ticket has already been raised** for the same finding
+    - The risk is being **actively tracked** through your risk management workflow
+
+    Marking it as ignored indicates the finding is acknowledged and prevents duplicate or redundant alerts in your compliance dashboard.
+
+    #### Best Practices
+
+    **Always include a clear justification** when marking a test as ignored, such as:
+
+    - Link to the remediation ticket or risk entry
+    - Risk acceptance reason and approver
+    - Timeline for planned remediation
+    - Reference to the formal risk decision
+
+    **Only mark tests as ignored when the risk is being actively managed** through an alternative process. This ensures accountability while reducing noise in your compliance reporting.
+  </Expandable>
+</ExpandableGroup>

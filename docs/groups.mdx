@@ -1,0 +1,134 @@
+---
+title: "Manage Employee Groups"
+metaDescription: "Learn how to use groups in Scrut to manage the security and compliance requirements of your employees."
+---
+
+Groups and Checklists within the People module allow for efficient management of employee onboarding and offboarding. Using these features, you can create employee groups and assign checklists with specific tasks to each group, enhancing workflow and security compliance.
+
+## What Are Groups?
+
+You can use Groups to organize employees based on their roles, responsibilities, departments, or any other criteria as required. This makes it easy to assign specific tasks, training, and security checks to particular employee groups. For example, full-time employees might have more extensive security checks, while contractors may have fewer. You can also set security checks based on different departments and any other criteria as required.
+
+To access the groups page:
+
+- Sign in to your Scrut account, click **People → Employees** on the left navigation panel
+
+- Click the **Settings** icon on the top-right
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162227869-yiit43ny0c8-image-1763444848297.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+- Navigate to the Groups tab
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162073686-vkxll6qn95r-Groups-Tab-in-Settings.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## What Is the Default Group?
+
+All employees added to Scrut, whether imported from your HRIS or IDP or manually, are automatically assigned to the default Scrut group. You cannot delete the default group, but you can:
+
+- Change the group name
+- Add or remove employees from the group
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162073686-vkxll6qn95r-Groups-Tab-in-Settings.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  We recommend using the default group for tasks and trainings that all employees must complete, regardless of their role or department. This creates a consistent security baseline across your organization. You can then create additional groups for specific employee subsets that require additional training or specialized security tasks.
+</Callout>
+
+<Callout kind="alert">
+  **Note:**
+
+  Employees can belong to multiple groups simultaneously. There are no restrictions.
+</Callout>
+
+## Creating a New Group
+
+<Callout kind="danger">
+  **Important:**
+
+  Make sure to [set up checklists](/docs/checklist-tasks) before creating new groups, as you’ll need to assign a checklist for the new group you create.
+</Callout>
+
+You can create a new group in two ways.
+
+### Method 1: Manually
+
+1. Sign in to Scrut, navigate to **People → Employees → Settings → Groups**, and click the **Add Group** button.
+
+2. Click **Add Manually**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161833473-0zqi19yrvvmn-Add-Group-Button.png?fm=auto&auto=compress%2Cformat" alt="Add Group Button" caption=" " />
+
+3. Enter the group name, choose a checklist, and click **Save**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164694826-3p4adf4y5lw-Screenshot-2025-11-18-at-11-26-53.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Method 2: Import a Group from Your IDP
+
+Scrut also allows you to import groups from your connected Identity Providers (IdPs). For this method, first [connect an IdP to Scrut](/docs/integrations-overview#9-identity-providers), then follow the steps below.
+
+1. Sign in to Scrut, navigate to **People → Employees → Settings → Groups**, and click the **Add Group** button.
+
+2. Click **Import**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161833473-0zqi19yrvvmn-Add-Group-Button.png?fm=auto&auto=compress%2Cformat" alt="Add Group Button" caption=" " />
+
+3. Select a group from your IdP, choose the checklist and click **Save**.
+
+Once you’ve created a new group, the next step is to add employees to it.
+
+## Adding Employees to a Group
+
+To add users to a group:
+
+1. Go to **People → Employees** and click the **All Employees** tab.
+
+2. Select the employees you want to add to the newly created group.
+
+3. Click **Edit** and select **Group Actions**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164696208-8etd6dbwerk-Screenshot-2025-11-18-at-11-28-38-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Select if you want to:
+
+   - **Add to Group:** Adds the selected employee(s) to the specified group(s).
+   - **Move to Group:** Removes employee(s) from existing group(s) and moves them to the specified group(s).
+
+   **Note:** Adding or moving employees to specific groups will automatically update their tasks based on the checklists assigned to the individual groups. They will begin to see these tasks in the Employee portal and will need to complete them.
+
+5. Select one or more groups to which you want to add/move the selected employees.
+
+6. Enable the **Notify employees about new task assignments** checkbox to send notifications to employees about new tasks assigned to them as part of their new group.
+
+7. Click **Save**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164697626-zpdi8p78qpe-Screenshot-2025-11-18-at-11-29-27.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Edit Employee Group Assignment
+
+1. Go to **People → Employees** and click the **All Employees** tab.
+
+2. Search for and select the employee whose group assignments you want to change.
+
+3. Once you’re on the employee detail page, click the **pencil icon** next to the Group field.
+
+4. Add or remove groups as needed.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164902480-77v1qv9h6ov-Screenshot-2025-12-31-at-13-23-23.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="alert">
+  **Note:**
+
+  At least one group must be assigned to each employee. If you attempt to remove all groups, the changes cannot be saved. This safeguard ensures proper employee categorization and prevents compliance tracking issues.
+</Callout>
+
+## Wrapping Up
+
+By using the default group for overall security and training and forming smaller groups for specific requirements, you can create a strong security plan that scales with your organization while meeting each group's compliance needs.
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Remember to periodically review and update your group configurations to ensure they continue to meet your evolving security needs and organizational structure.
+</Callout>

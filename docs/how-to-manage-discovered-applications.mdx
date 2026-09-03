@@ -1,0 +1,218 @@
+---
+title: "How To Manage Discovered Applications"
+metaDescription: "Learn how to manage discovered applications in Scrut by marking apps as Managed or Restricted, ignoring duplicates, assigning reviewers, and governing Shadow"
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+The **Discovered** tab shows every application detected through your SSO and MDM integrations that hasn't been classified yet. From here, you can move apps to Managed, flag them as Restricted, or hide them.
+
+## Before You Begin
+
+Applications appear in the Discovered tab automatically after your SSO or MDM integration syncs. No manual action is needed to populate the list.
+
+## Mark an Application as Managed
+
+Use this action when you want to bring an application into your formal governance workflow and include it in access reviews.
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Locate the application you want to manage.
+
+3. Click the **Mark as Managed** icon in the Actions column.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162529222-8fmq22ue5vs-Mark-as-Managed-icon-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Alternatively, open the app and click **Mark as Managed**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165820355-ixld0feto9a-Screenshot-2026-06-25-at-18-49-56.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. In the modal that appears, optionally select a **Reviewer** from the dropdown. The Reviewer handles the access reviews for this app. You can change it later, if needed.
+
+6. Click **Mark as Managed**. The application moves to the Managed tab and retains all user data.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162473364-c6rd8ap2tx5-image-1782395029852.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Mark Multiple Applications as Managed
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Select the checkbox next to each application you want to manage, or select the header checkbox to select all.
+
+3. Click **Mark as Managed** on the bulk actions bar.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165825640-bhhr1q24hbe-Screenshot-2026-06-30-at-11-40-22.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. In the modal, review the list of selected applications. Optionally, assign a Reviewer to each app individually.
+
+5. Click **Mark as Managed**. All selected apps move to the **Managed** tab.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165821630-e7ztfukd5k6-Screenshot-2026-06-25-at-18-59-58.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Mark an Application as Restricted
+
+You can mark an application as Restricted when it's not approved for use in your organization. For example, if it poses a security risk, handles sensitive data outside sanctioned tools, violates your acceptable use policy, or for any other reason. Once you mark it as restricted, you can send app removal instructions to all users of the app. Here's how:
+
+<Callout kind="danger">
+  **Heads Up!**
+
+  Scrut does not automatically block access to these apps; However, it tracks usage and allows you to directly send app removal notifications to employees who actively use them.
+</Callout>
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Locate the application.
+
+3. Click **Move to Restricted** in the actions column.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162532099-2oliq2sxrxu-Mark-as-Restricted-icon-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Alternatively, open the app and click **Mark as Restricted**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165823006-jd1ak5z0qo8-Screenshot-2026-06-25-at-19-04-57.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Enter a justification. This field is required (up to 500 characters). Some examples:
+
+   - _Not compliant with our data security policy_
+   - _Unapproved file-sharing tool; potential data exfiltration risk_
+   - _Free consumer app with no enterprise data controls_
+   - _Replaced by an approved alternative; use \[approved tool\] instead_
+   - _Not reviewed or vetted by IT_
+
+6. Click **Mark as Restricted**.
+
+The application moves to the **Restricted** tab. The justification is recorded and visible in the app's detail view, along with the name of the person who restricted it and the date. See here for step-by-step instructions to send removal instructions to app users.
+
+**Note:** You can move a previously restricted app to the Managed tab by clicking **Mark as Managed** here.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163300971-prfyxe20fdk-Restricted-App-Details-Page.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Mark Multiple Applications as Restricted
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Select the checkbox next to each application you want to restrict, or select the header checkbox to select all.
+
+3. Click **Mark as Restricted** on the bulk actions bar.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165824322-y496753zmu-Screenshot-2026-06-30-at-11-39-15.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Enter the justification and click **Mark as Restricted**. All selected apps move to the **Restricted** tab.
+
+## Ignore an Application
+
+Use this action to hide an application from the Discovered list. Ignored apps are not deleted; you can bring them back anytime.
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Locate the application.
+
+3. Click the **Ignore** icon in the Actions column.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165826979-k975bw0eu6g-Screenshot-2026-06-30-at-11-50-24.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Alternatively, open the app and select **Ignore** from the three-dot menu.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165829673-f46zwbvzmcn-Screenshot-2026-06-30-at-11-57-45.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. In the confirmation modal, enter a justification. This field is required.
+
+6. Click **Ignore**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165828337-tal84ycp9s-Screenshot-2026-06-30-at-11-51-03.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The application is hidden from the Discovered list, and its count is removed from the Discovered metric.
+
+**Note:** To view ignored apps, use the **Ignored** filter.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165831057-gbsurne6y87-Screenshot-2026-06-30-at-11-58-21.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Hover over the icon to see the justification entered at the time of ignoring.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165835088-xfz5vi10xmo-Screenshot-2026-06-30-at-12-02-07.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+To revert the action, click **Undo Ignore**. This makes the app visible in the **Discovered** tab.
+
+## Ignore Multiple Applications
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Select the checkbox next to each application you want to ignore.
+
+3. Click **Ignore** on the bulk actions bar.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165833729-s687eoyf75-Screenshot-2026-06-30-at-11-59-10.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Enter a justification in the confirmation modal. The same justification applies to all selected apps.
+
+5. Click Confirm.
+
+## Restore an Ignored Application to Discovered
+
+1. Navigate to **Access Review → Applications → Discovered**.
+
+2. Click the Ignored filter.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165831057-gbsurne6y87-Screenshot-2026-06-30-at-11-58-21.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Locate the ignored application.
+
+4. Click **Undo Ignore** in the Actions column.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165832369-tyzpcmuao-Screenshot-2026-06-30-at-11-58-39.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The application returns to the standard Discovered list.
+
+## Potential Duplicate Indicator
+
+If a Discovered application has the same or a similar name as an existing Managed application, a duplicate indicator icon appears next to the app name. Hover over the icon to see the message "**Potential duplicate found in Managed apps**" along with the matching app names.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165836504-kptsjg362op-Screenshot-2026-06-30-at-12-07-00.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Click the icon to open the matching app's detail page in the Managed tab.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165837889-89jusjk9qgh-Screenshot-2026-06-30-at-12-07-31.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+**Pro Tip!** For a confirmed duplicate, the recommended action is to **ignore it with an appropriate justification**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165839215-0h2c2smj9ph-Screenshot-2026-06-30-at-12-07-53.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Filtering and Sorting
+
+Use the **Source** filter to narrow the list by app source.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165840526-xsqywx32ih-Screenshot-2026-06-30-at-12-09-17.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Use the **App Type** filter to narrow the list by:
+
+- Standard Applications, which includes SaaS and Desktop apps
+- AI Applications, which include AI Apps (such as ChatGPT, Claude, Perplexity, etc.) and AI Builder apps (such as Cursor, Codex, etc.)
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161881583-5br3d3z8daf-App-Type-filter-in-Shadow-IT.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Can I delete apps from the Managed tab?" default-open="false">
+    No. The current version does not support deleting applications from the Managed tab.
+  </Expandable>
+
+  <Expandable title="Why do some discovered apps move automatically to the Managed tab?" default-open="false">
+    Completing an access review for a Discovered or Restricted SaaS app automatically moves it to Managed. The reviewer assigned to the review is saved as the App Reviewer.
+  </Expandable>
+
+  <Expandable title="How do I quickly find all AI applications my employees are using?" default-open="false">
+    Use the **App Type** filter and select the AI Applications group. This shows every AI app (such as ChatGPT, Claude, Perplexity, etc.) and AI Builder (such as Cursor, Codex, etc.) detected across your SSO and MDM integrations in one view, across the Managed, Discovered, and Restricted tabs.
+
+    From the Discovered tab, classify each one:
+
+    1. Click **Mark as Managed** for AI tools you want to formally track and include in access reviews.
+    2. Click **Mark as Restricted** for AI tools that pose a data privacy or security risk, or that violate your acceptable use policy.
+  </Expandable>
+</ExpandableGroup>
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

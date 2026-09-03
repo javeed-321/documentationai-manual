@@ -1,0 +1,145 @@
+---
+title: "Integrate Cloudflare"
+metaDescription: "Learn how to connect your Cloudflare account with Scrut."
+---
+
+This article explains how to connect your Cloudflare account with Scrut.
+
+## What This Integration Does in Scrut
+
+The Scrut - Cloudflare integration performs the following functions in Scrut:
+
+- **Automated Tests:** Scrut runs automated compliance checks on your Cloudflare account. These tests evaluate firewall settings, rulesets, and zone configurations against applicable compliance frameworks.
+- **User Access Data:** Scrut fetches user access information from your Cloudflare account for **Access Reviews**. This helps you monitor who has access to your domain zones and related configurations.
+- **Scrut Monitor:** This integration automatically fetches evidence from your Cloudflare account via Scrut Monitors. This helps automate evidence gathering and significantly speeds up compliance workflows.
+
+## Access Requirements
+
+To integrate with Cloudflare with Scrut, you need:
+
+#### For Cloudflare
+
+- Administrator access to generate API tokens
+
+#### For Scrut
+
+- Administrator (Or Contributor with access to the Integrations module)
+
+## Permissions
+
+#### For Cloudflare
+
+- Read all resources
+
+<Callout kind="alert">
+  **Important:**
+
+  Do not modify the default permissions under the "Read all resources" template. Altering permissions may cause the integration to fail.
+</Callout>
+
+## Data Collected
+
+This integration collects the following data from your Cloudflare account:
+
+- **Users** – User access and membership information
+- **Domain Zones** – Zone-level configuration data
+- **Rulesets** – Security and traffic management rules
+- **Firewalls** – Firewall configuration and related policies
+
+## Sync Frequency
+
+- Data is synced automatically from your Cloudflare account to Scrut **once every 24 hours**
+- You can also trigger a manual sync as required
+
+## How to Connect Cloudflare With Scrut
+
+### Step 1: Generate an API Token in Cloudflare
+
+Follow these steps in your Cloudflare dashboard:
+
+1. Log in to your Cloudflare account.
+
+2. Click the **user icon** (top-right corner) and navigate to your **Profile**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165256942-2h2glyk4xvp-Screenshot-2026-03-02-at-21-22-45.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. From the left-hand menu, select **API Tokens** and click **Create Token**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165258350-2lpdedds0b9-Screenshot-2026-03-02-at-21-23-43.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Under API Token Templates, click **Use template** next to **Read all resources**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165259676-x376sibngup-Screenshot-2026-03-02-at-21-24-37.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Edit the **Token Name** (for example: `Scrut Integration`). Note the token name in a safe location, as you’ll need to enter it in Scrut in the next step.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165260982-ypq9rzburve-Screenshot-2026-03-02-at-21-25-44.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+6. Scroll to the bottom and leave all default permissions unchanged.
+
+   <Callout kind="danger">
+     **Important:**
+
+     Do not modify the default permissions, as it may cause the integration to fail.
+   </Callout>
+
+7. Click **Continue to Summary**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165262443-76j2c3x7ozj-Screenshot-2026-03-02-at-21-26-01.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+8. Review the permissions summary.
+
+9. Click **Create Token**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165263768-embth4l2utf-Screenshot-2026-03-02-at-21-26-19.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+10. Copy the generated API token immediately.
+
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165265098-t3qntz04tv-Screenshot-2026-03-02-at-21-26-45.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="alert">
+  **Important:**
+
+  The API token cannot be retrieved again after you leave the page. Make sure you copy and store it securely.
+</Callout>
+
+### Step 2: Add Cloudflare Credentials in Scrut
+
+1. Log in to Scrut and click Integrations on the left navigation panel.
+
+2. Go to the Integrations Library tab, and scroll to the **Web Security & CDN** section.
+
+3. Click **Integrate** on the Cloudflare tile.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165266399-rh3av72668e-Screenshot-2026-03-02-at-21-27-48.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Enter the following details on the Cloudflare integration page:
+
+   - **API Token Name**
+   - **API Token**
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165267788-eeoxgzhwe6g-Screenshot-2026-03-02-at-21-28-34.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Click **Configure Zone** to retrieve available domain zones.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165269097-1r5x9fa6wba-Screenshot-2026-03-02-at-21-29-00.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+6. Select the appropriate **Zones** from the dropdown.
+
+7. Click **Submit**.
+
+## What Happens Next?
+
+### Initial Data Sync
+
+- The initial data sync starts automatically.
+- Depending on the number of domain zones and configurations, this may take a few minutes.
+- You can monitor sync activity in the Audit Logs section of the Cloudflare integration page.
+
+### After Sync Completion
+
+Once the sync is complete, Scrut will:
+
+- Run **automated tests** against firewall and ruleset configurations
+- Fetch evidence automatically via **Scrut Monitors**
+- You can create Access Reviews for user access data validation

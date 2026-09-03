@@ -1,0 +1,54 @@
+---
+title: "Understand Policy Approval Workflow"
+metaDescription: "Understand how policy approval works in Scrut."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+By default, an assignee or admin can directly publish a policy in Scrut when it’s in the Draft status. However, enabling the policy approval workflow adds a required review step: one or more designated approvers must review and approve the policy first, before you can publish it.
+
+Policy approval is especially useful for policies that affect multiple stakeholders. For example, a code deployment policy at a software company might need sign-off from the Quality Assurance Lead, the Chief Technology Officer, and the Chief Information Security Officer before it goes live. Requiring all three ensures the policy reflects input from everyone who owns a piece of the outcome, not just the person who drafted it.
+
+The approval workflow also gives you an audit trail. Every approval is timestamped and tied to a named approver, so you can show exactly who reviewed a policy and when.
+
+## How does Policy Approval Work?
+
+You can assign up to five approvers to any policy and arrange them in a specific order. Scrut notifies approvers one at a time, in that order: the first approver gets notified, and once they approve, the next approver in line is notified, and so on until everyone has signed off.
+
+Every assigned approver must approve the policy before it can move forward. Scrut doesn't support partial sign-off. If even one approver hasn't acted yet, the policy stays in the approval chain.
+
+<Callout kind="alert">
+  **Note:**
+
+  Editing a policy while it's in the approval process clears all previous approvals. The policy needs to go through approval again from the start.
+</Callout>
+
+## How to Turn On/Off Policy Approval Workflow
+
+Follow these steps to turn the policy approval workflow on or off:
+
+1. Click **Compliance → Policies** on the left navigation panel.
+
+2. Click **Settings** on the top-right.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163268398-clx16menwl5-Policy-Settings-icon.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. In the **Configurations** tab, turn on/off the **Policy Approval** toggle as needed.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163269756-fsjnoob1rm5-Policy-Settings.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="What happens if I turn the toggle off after enabling it?" default-open="false">
+    Existing approvers stay assigned to their policies, but Scrut stops enforcing sign-off before publishing.
+  </Expandable>
+
+  <Expandable title="How do policy statuses change with the approval workflow?" default-open="false">
+    See [how policy statuses are impacted by the approval workflow](/docs/policy-statuses#how-policy-approval-workflow-impacts-policy-status).
+  </Expandable>
+</ExpandableGroup>

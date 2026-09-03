@@ -1,0 +1,150 @@
+---
+title: "Integrate Zoom"
+---
+
+The **Scrut-Zoom** integration fetches user access data, permissions, and role assignments from your Zoom account and sends them to Scrut’s **Access Review** module. This integration enables your organization to maintain comprehensive visibility over user access rights and streamline periodic access reviews for compliance and security.
+
+## How To Connect Zoom With Scrut
+
+### Prerequisites
+
+Before starting the integration, ensure you have the following permissions for your Zoom account:
+
+- **Account Information**: Login credentials
+
+- **Access Level**: Admin access
+
+- **Permissions**: Scrut requires the following permissions to fetch access review details:
+
+  - View users
+  - View a user’s permissions
+  - View a user’s tokens
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  We recommend logging into your Zoom account before starting the integration to avoid doing so later.
+</Callout>
+
+### Step 1: Navigate to Integrations in Scrut
+
+1. Sign in to your Scrut account and click **Integrations** on the left navigation panel.
+
+2. Go to the **Integrations Library** tab, and in the **Categories** section, click **Communications Tools**.
+
+3. Look for the **Zoom** tile and click **Integrate**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163618629-pzhc29zcphp-Screenshot-2025-06-10-at-19-16-51.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Once you’re on the Zoom integrations page, click the **Connect** button at the top right.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163619882-z0fx5gy6ssp-Screenshot-2025-06-10-at-19-17-34.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Click **Allow** to grant the required permissions.
+
+1. Log in to your Zoom account and navigate to \[SPECIFIC LOCATION - e.g., **Admin Console → Security → API Management**\].
+
+2. Create a new API key or service account specifically for Scrut integration.
+
+3. Configure the API permissions to include:
+
+   - User read permissions
+   - Role and group read permissions
+   - Directory read permissions
+   - Audit log read permissions
+
+4. Copy and securely store the generated API key and credentials.
+
+5. \[ADDITIONAL STEPS AS NEEDED - e.g., whitelist Scrut IP addresses, configure rate limits\]
+
+<Callout kind="alert">
+  **Note:**
+
+  Ensure the API key has read-only permissions to maintain security. Write permissions are not required for access review functionality.
+</Callout>
+
+### Step 2: Connect Your Zoom Account in Scrut
+
+1. [Sign in to Scrut](https://app.scrut.io/) and click **Integrations** on the left navigation panel.
+
+2. Navigate to the **Integrations Library** tab, and choose **\[Category Name\]** in the **Categories** section.
+
+3. Scroll to the **Zoom** tile and click **Integrate**.
+
+   \[ss\]
+
+4. On the integration setup page:
+
+   - Enter the Tenant ID, instance URL, domain, etc.
+   - Copy and paste the API key or credentials obtained in Step 1
+
+5. Click **Submit**.
+
+   \[ss\]
+
+6. Once authorization is done, you’ll see the “**Connected Successfully**” message and the **Connected** status indicator.
+
+   \[ss\]
+
+## Synchronization Details
+
+- **Initial Sync**: Complete synchronization of all users, roles, permissions, and access assignments. This process typically takes 2-6 hours, depending on organization size.
+- **Recurring Sync**: Automatic synchronization every 24 hours to capture new users, role changes, and permission updates.
+- **Manual Sync**: Available on-demand through the integration settings page. Click the **Sync Now** button to trigger an immediate data refresh.
+- **Real-time Updates**: Critical access changes (privileged role assignments, administrative access grants) are synchronized within 15 minutes.
+
+## Limitations
+
+When using Zoom with Scrut for access review, please be aware of the following limitations:
+
+- **Historical Data**: Only the last 12 months of access change history are imported during initial sync.
+- **Custom Attributes**: Organization-specific custom user attributes may require additional configuration.
+- **Nested Groups**: Complex nested group structures may require up to 24 hours for complete mapping.
+- **API Rate Limits**: Synchronization speed is subject to Zoom API rate limiting policies.
+- **Deleted Users**: Access data for permanently deleted users is retained for 90 days only.
+- **Third-party Applications**: Access to external applications integrated with Zoom may have limited visibility.
+
+## Data Fetched from Zoom
+
+Scrut fetches the following access-related data points from Zoom:
+
+- **User Accounts**: Active and inactive user profiles, including personal information and employment status
+- **Role Assignments**: All roles assigned to users, including inherited and direct assignments
+- **Permission Grants**: Detailed permissions associated with each role and direct user grants
+- **Group Memberships**: Security groups, distribution lists, and organizational units
+- **Administrative Privileges**: Elevated access rights and administrative role assignments
+- **Application Access**: Access to integrated applications and services
+- **Resource Permissions**: Access rights to files, folders, databases, and other resources
+- **Last Login Data**: User activity timestamps and login patterns
+- **Access Request History**: Records of access requests, approvals, and denials
+- **Audit Trail**: Changes to user access rights and permission modifications
+
+## Viewing Zoom Data in Scrut
+
+To view the data fetched from your Zoom account, you’ll need to create an Access Review and include the Zoom application in scope.
+
+Refer to this guide for step-by-step instructions on [creating an access review](/docs/creating-a-new-access-review).
+
+## FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Issue #1: Integration fails with “Insufficient Permissions” error" default-open="false">
+    Verify that your API key or service account has all required permissions listed in the Prerequisites section. Contact your Zoom administrator to ensure proper access levels are granted.
+  </Expandable>
+
+  <Expandable title="Issue #2: User data appears incomplete or outdated" default-open="false">
+    Check the last synchronization timestamp in the integration settings. If sync is failing, verify your API credentials are still valid and that there are no network connectivity issues between Scrut and Zoom.
+  </Expandable>
+
+  <Expandable title="Issue #3: Access review notifications are not being sent" default-open="false">
+    Ensure that notification settings are configured correctly in both Scrut and Zoom. Verify that email addresses for access review owners are current and that emails are not being filtered as spam.
+  </Expandable>
+
+  <Expandable title="Issue #4: Permission mapping appears incorrect" default-open="false">
+    Review the role and permission mapping configuration in the integration settings. Custom mappings may need to be adjusted to accurately reflect your organization's access structure.
+  </Expandable>
+</ExpandableGroup>
+
+---
+
+If you face any difficulties connecting Zoom with Scrut, please contact the Scrut support team at support@scrut.io.

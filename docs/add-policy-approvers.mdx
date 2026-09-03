@@ -1,0 +1,87 @@
+---
+title: "Add Policy Approvers"
+metaDescription: "Learn how to add approvers for a policy in Scrut."
+---
+
+## Before You Begin
+
+- Make sure that the [Policy Approval toggle is enabled in Policy Settings](/docs/understanding-policy-approval-workflow#how-to-turn-onoff-policy-approval-workflow).
+
+## How to Add Policy Approvers
+
+1. Click **Compliance → Policies** on the left navigation panel, and go to the **All Policies** tab.
+
+2. Click on the policy to which you want to add approver(s).
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163932155-p2324uk1da8-Screenshot-2025-07-24-at-11-58-46.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. On the policy detail page, click **+** in the Approver(s) section.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163934085-5k6w04v66w5-Screenshot-2025-07-24-at-12-04-08.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+4. Select the Approver(s) from the dropdown.
+
+<Callout kind="success">
+  **Note:**
+
+  You can add up to a **maximum of 5 approvers per policy**.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163935505-dfzzu17q8co-Screenshot-2025-07-24-at-13-42-49.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Adjust the hierarchy of approvers by dragging and arranging the names as required.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163936855-iamnbyjycx-Screenshot-2025-07-24-at-13-44-19.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+6. Click **Save**.
+7. Once preferences are saved, you can view the approvers and their order on the Approval Timeline.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163939671-b4u78oz1v2n-Screenshot-2025-07-24-at-13-57-57.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="danger">
+  **Note:**
+
+  All approvers must approve the policy for it to be published by the admin/assignee. We do not support the use case where at least one approval is sufficient for publication; instead, we ensure a unified and comprehensive endorsement from all approvers.
+</Callout>
+
+8. When you add approvers, Scrut will automatically send them email notifications based on the order you set. The first approver receives the email first. After the first approver approves the policy, the next approver in line will be notified, and this process continues until all approvers have been notified.
+
+9. Additionally, you can escalate the approval flow by sending manual reminders to the next approver. Click the **Send for Approval** button on the policy details page to remind the next approver in line to complete the task.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163938195-brykfbtueqk-Screenshot-2025-07-24-at-13-49-49.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+10. After reviewing the policy, the approver needs to click the **Approve** button to complete the action.
+
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163941033-bu1a06gn2il-Screenshot-2025-07-24-at-14-10-19.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+11. Use the approval timeline to track who has approved the policy and the date of approval.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163942427-zjck1ht3hbj-Screenshot-2025-07-24-at-14-15-03.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+12. Once all approvals are completed, the policy will move to the **Approved** status, and the **Publish** button will become available.
+
+13. Admins or Policy Assignee(s) can publish it.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163943788-1it5fz33d7d-Screenshot-2025-07-24-at-14-17-28.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+14. Once published, the policy moves to the **Published** status.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163945200-gvp602xjbm-Screenshot-2025-07-24-at-14-19-08.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="alert">
+  **Note:**
+
+  When it’s time to renew the policy, the progress bar will be reset, and you will need to go through the same workflow again.
+</Callout>
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Why is the Send for Approval button disabled?" default-open="false">
+    The button is disabled if less than 24 hours have passed since the last approval notification was sent. Scrut will enable it 24 hours after the previous notification, and you can send a manual reminder to the next person in line.
+  </Expandable>
+
+  <Expandable title="My approvals disappeared. What should I do?" default-open="false">
+    If a policy is edited during the approval process, all previous approvals are cleared for security. You’ll need to go through the approval process again.
+  </Expandable>
+</ExpandableGroup>

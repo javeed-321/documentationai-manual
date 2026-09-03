@@ -1,0 +1,52 @@
+---
+title: "Check Your Evidence Automation Coverage"
+metaDescription: "Learn how to use the Evidence Collection metric in Scrut to measure compliance automation coverage, filter evidence tasks by automation status, identify gaps"
+---
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  This feature is currently available only for organizations with at least one of the following frameworks: ISO 27001, SOC 2, GDPR, or HIPAA. To know more, contact your CSM.
+</Callout>
+
+The Evidence Collection metric on the Evidence Dashboard and the All Evidences page gives you a real-time snapshot of how much of your evidence collection is automated. Use it to track progress, identify gaps, and filter evidence tasks by automation status.
+
+## Evidence Collection Metric
+
+1. Navigate to **Compliance → Evidence Tasks → Dashboard** or **Compliance → Evidence Tasks → All Evidences**.
+
+2. Check the Evidence Collection card at the top of the page.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162033523-xb89fsb0dor-Evidence-Collection-Status.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. This card shows a fraction (93/1059), where:
+
+   - Numerator: The total count of Fully Automated and Partially Automated evidence tasks.
+   - Denominator: The total number of evidence tasks required across all your active compliance frameworks.
+   - Example: 93 / 1059 indicates that 93 evidence tasks have some level of active automation (Fully Automated or Partially Automated) out of the total 1059 required tasks. That represents approximately 9% automation coverage.
+
+4. Below the number, a color-coded bar shows the distribution across all four automation statuses: Fully Automated, Partially Automated, Automation Ready, and Manual Only.
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  The graph is interactive. Click one or more statuses in the legend to instantly filter the evidence list to show only tasks matching the selected statuses.
+</Callout>
+
+## Filter Evidence Tasks by Evidence Collection Status
+
+Use filters to focus on the evidence tasks that need attention.
+
+- Filter by **Automation Ready** to see evidence tasks that Scrut can automate once you connect the right integrations or configure Scrut Monitors. These are your quickest wins.
+
+  **Pro Tip:** Identify the integrations these tasks require and prioritize connecting those that unlock the most tasks at once.
+
+- Filter by **Partially Automated** to see evidence tasks where automation is active but manual uploads are still needed. Open each task to review what's automated, then upload any additional proof for systems not covered by automation.
+
+- Filter by **Fully Automated** to review evidence tasks that are fully handled by automation. No action is needed unless a test fails or an integration becomes unhealthy.
+
+- Filter by **Manual Only** to see evidence tasks that always require manual uploads. Set reminders to keep these documents current, especially before audits.
+
+---
+
+Reach out to [support@scrut.io](mailto:support@scrut.io) or contact your CSM for further assistance.

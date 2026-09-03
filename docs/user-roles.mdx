@@ -1,0 +1,61 @@
+---
+title: "Understand User Roles in Scrut"
+metaDescription: "Understand the different user roles in Scrut."
+---
+
+Scrut offers **three distinct user roles**, each with specific access levels and capabilities:
+
+### Admin
+
+Admins have **full platform access**. They can access all Scrut modules and features. They can:
+
+- **Full Platform Access:** No restrictions on modules, departments, or frameworks
+- **Unrestricted Actions:** Perform any action within the platform
+- **User Management:** Create, edit, and delete other users
+- **System Configuration:** Access to all settings and configuration options
+
+### Contributor
+
+Contributors have **selective module access**. Their access is limited to modules they’ve been specifically granted permission to use. Additionally, they’re also **department-restricted**. They can only perform tasks and view data within their assigned departments. For example, a contributor with access to the HR department can only view HR policies and evidence tasks. They can:
+
+- **Selective Module Access**: Limited to modules they've explicitly been granted access to
+- **Department-Restricted**: Can only perform tasks and view data within their assigned department(s)
+- **Task Execution:** Can complete assigned tasks, but cannot access artifacts without proper department assignments
+- **Collaborative Functions:** Can participate in workflows within their scope
+
+### Auditor
+
+Auditors have **view-only access** in Scrut. They can only view assigned modules. They do not have any editing capabilities. Additionally, you can restrict auditor access to specific compliance frameworks. For example, an ISO 27001 Auditor sees only ISO 27001 policies, evidence, and related artifacts.
+
+- **View-Only Access:** Can review and audit within their designated scope
+- **Read-Only Permissions:** Cannot create or modify platform content
+- **No Internal Tasks:** Cannot perform any internal Scrut tasks
+- **Framework-Based Filtering:** Views only data relevant to assigned frameworks
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Besides these three Scrut roles, you can also add other teammates to the [People module as Employees](/docs/employees-module). Employees have access exclusively to the [employee training portal](/docs/employee-portal-overview), where they can accept policies, complete training campaigns, and complete other checklist items. **They cannot access any other modules or Scrut platform features.**
+</Callout>
+
+## User Role Comparison Chart
+
+Here’s a side-by-side comparison of the admin, contributor, and auditor roles.
+
+| Admin | Contributor | Auditor |
+| :---: | :---: | :---: |
+| **Full Platform Access**: Complete access to all Scrut modules and features • **Unrestricted Actions**: Can perform any action within the platform • **User Management**: Can create, edit, and delete other users • **System Configuration**: Access to all settings and configuration options | **Selective Module Access**: Limited to modules they've been specifically granted access to • **Department-Restricted**: Can only perform tasks and view data within their assigned department(s) • **Task Execution**: Can complete assigned tasks, but cannot access artifacts without department assignments • **Collaborative Functions**: Can participate in workflows within their scope | **View-Only Access**: Limited to viewing assigned modules without editing capabilities • **Read-Only Permissions**: Cannot create or modify platform content • **No Internal Tasks**: Cannot perform any internal Scrut tasks • **Assessment Functions**: Can review and audit within their designated scope |
+
+<Callout kind="alert">
+  **Note:**
+
+  See here for step-by-step instructions on [selecting the role while adding a new user](/docs/adding-users).
+</Callout>
+
+### Examples
+
+**Scenario 1: Department-Based Contributor** A Contributor from the HR department is granted access only to HR Policies, preventing them from viewing or modifying data from other departments.
+
+**Scenario 2: Framework-Specific Auditor** An Auditor assigned to ISO 27001 can access only ISO 27001-related policies, evidence, and artifacts, thereby maintaining a clear separation between different compliance frameworks.
+
+**Scenario 3: Module-Restricted Contributor** A Contributor working on policy management receives access only to the Policy Module, preventing unnecessary access to other platform areas.

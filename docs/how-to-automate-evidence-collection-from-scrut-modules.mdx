@@ -1,0 +1,133 @@
+---
+title: "Set up a Scrut Monitor for Scrut Modules"
+metaDescription: "Learn how to use the Scrut Monitor to automate evidence collection from Scrut's internal modules."
+---
+
+The [Scrut Monitor](/docs/scrut-monitor) is a powerful tool designed to download audit-ready evidence from connected third-party applications at scheduled intervals automatically. It then attaches the downloads to Evidence Tasks, reducing the time and effort required for manually collecting and uploading evidence into Scrut.
+
+Besides collecting evidence from your integrated tools, the **Scrut Monitor can also automatically collect compliance-ready reports from various Scrut modules and attach them to relevant Evidence Tasks**.
+
+Instead of manually downloading a report from a Scrut module and attaching it to an Evidence Task, the Scrut Monitor automates the process. You can configure it to automatically download relevant Scrut reports at predefined intervals and seamlessly upload them as attachments to designated Evidence Tasks.
+
+In simple terms, the Scrut Monitor automates evidence collection from both external connected tools and your organization’s data within Scrut, reducing the need for manual intervention.
+
+## How It Works
+
+- **Automated Internal Evidence Generation:** Scrut Monitor can automatically collect compliance reports from Scrut’s native modules, including:
+
+  - [Risk → Risk Register](/docs/understanding-risk-register)
+  - [Vendors](/docs/steps-to-complete-vendor-risk-assessment)
+  - [People → Employees](/docs/step-by-step-tutorial-for-employee-module)
+  - [Asset Management](/docs/asset-management-overview)
+  - [Audit Center](/docs/understanding-an-audit-project)
+
+- **Flexible Scheduling:** You can customize the evidence collection cadence (once, daily, weekly, monthly, or annually) per your requirements.
+
+## Available Internal Reports
+
+You can configure the Monitor to download the following internal reports from Scrut and attach them to specific Evidence Tasks:
+
+#### 1: Risk Register Report
+
+Captures the risks available in your risk register at the time of report generation. The report mirrors the data you would get by clicking the [Export button on the Risk Register page](/docs/exporting-risk-register). It includes all active risks with their current status, ratings, and associated metadata.
+
+**Customization:** You can select the risk register columns to include in the report.
+
+**Format:** CSV (single sheet)
+
+**Cadence:** Once, daily, weekly, monthly, or annually
+
+#### 2: Vendor Compliance Report
+
+Captures your vendor compliance assessment status. On the cadence date, the Scrut Monitor checks vendor compliance status. If all vendors are compliant (**with the status Assessed**), it automatically generates and attaches the report as evidence. If not all vendors are compliant, the Monitor initiates daily monitoring until the next cadence period. The report is attached as evidence on the first day when all vendors become compliant.
+
+**Format:** CSV (single sheet)
+
+**Cadence:** Once, daily, weekly, monthly, or annually
+
+#### 3: Employee Directory Report
+
+Exports employee information from Scrut’s People module, showing employee compliance status and other details. It pulls employee data from your selected sources: IdP and HRIS tools. All employee records are consolidated into one sheet.
+
+**Customization:** You can select the data sources from which to retrieve employee information, including connected HRIS and IdP tools.
+
+**Format:** CSV (single sheet)
+
+**Cadence:** Once, daily, weekly, monthly, or annually
+
+#### 4: Asset Inventory Report
+
+Generates a comprehensive inventory of assets in your organization. Each asset type is populated in a separate sheet with complete asset details based on Scrut's asset table schema.
+
+**Customization:** You can select the asset types to include in the report.
+
+**Format:** CSV (multi-sheet, one for each asset type)
+
+**Cadence:** Once, daily, weekly, monthly, or annually
+
+#### 5: Internal Audit Report
+
+Captures and compiles findings from all closed internal audits. It includes detailed information about internal audit findings, their status, and outcomes.
+
+**Note:** This attachment uses pro-rata logic to export only new or status-changed audits since the last monitoring to avoid duplicate attachments.
+
+**Format:** CSV (multi-sheet, one for each audit)
+
+**Cadence:** Once, daily, weekly, monthly, or annually
+
+## How To Use Scrut Monitor To Automate Internal Evidence Collection
+
+### Step 1: Access Evidence Tasks
+
+1. [Sign in to Scrut](https://app.scrut.io/) and navigate to **Compliance → Evidence Tasks** using the left navigation panel.
+2. Click the **All Evidences** tab.
+3. Select an evidence task that you want to automate using Scrut’s Monitor’s native Scrut application.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163925186-frnz4x2609v-Screenshot-2025-07-23-at-21-19-35.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 2: Configure Scrut Monitor Workflow
+
+1. On the Evidence detail page, click the **Upload Attachment** button.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164454665-v2rvbl72xpd-Screenshot-2025-10-15-at-12-08-34.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Navigate to the **Scrut Monitor** tab, and click the **Configure** button next to the Scrut application.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163926516-t4q6v3sg5v-Screenshot-2025-07-23-at-21-21-30.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Set up the automated workflow by entering the following details:
+
+   - **Evidence Name**: Enter a descriptive name for the evidence collection workflow.
+   - **Evidence Type**: Select from the available internal evidence types listed above.
+   - **Cadence**: Select how often you want the Scrut Monitor to generate and attach the report: Once, daily, weekly, monthly, or annually
+
+4. Select the **Auto-publish evidence task** checkbox if you want to auto-publish the evidence task.
+
+   **Note:** If left unselected, the task status will change to draft whenever the Scrut Monitor attaches new evidence, and you’ll need to publish it manually. Leave it unchecked if you want to review the evidence before publishing.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163927919-9cxfanlux0r-Screenshot-2025-07-23-at-22-25-40.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Click **Save**.
+
+## FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Which Evidence Tasks can be automated using Scrut Internal Monitor?" default-open="false">
+    Here’s a list of evidence tasks that can be automated by [following the steps mentioned above](/docs/how-to-automate-evidence-collection-from-scrut-modules#how-to-use-scrut-monitor-to-automate-internal-evidence-collection):
+
+    | Evidence Task Name | Report to Attach |
+    | --- | --- |
+    | Documented Asset Inventory and Review Dates | Asset Inventory Report |
+    | Geolocation Requirements for Processing, Storage and Service Locations | Asset Inventory Report |
+    | Onboarding - Date of Joining/Date of Hire - Evidence can be from HRMS screenshot (Tool/Email) | Employee Directory Report |
+    | Onboarding - Email ID Creation - Notification Evidence/Email Notification | Employee Directory Report |
+    | Risk Register | Risk Register Report |
+    | Technical Compliance Review/Internal Audit Report | Internal Audit Report |
+    | Vendor Compliance | Vendor Compliance Report |
+    | Review of Vendor Audit Reports | Vendor Compliance Report |
+  </Expandable>
+
+  <Expandable title="How many Scrut Monitor evidence workflows can I attach to a single artifact?" default-open="false">
+    Currently, you can add up to three Scrut Monitor workflows to any artifact.
+  </Expandable>
+</ExpandableGroup>

@@ -1,0 +1,122 @@
+---
+title: "Auto-Populate Controls in Mitigation Tasks"
+metaDescription: "Understand how Scrut automatically populates the controls linked to a risk to its associated mitigation task."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+This feature streamlines the risk management process by automatically populating the controls from the risk to its associated mitigation task. This helps ensure accurate and efficient task tracking while maintaining consistency between risk controls and mitigation efforts.
+
+1. [Sign in to Scrut](https://app.scrut.io/) and go to **Risk → Risk Management** using the left navigation panel.
+
+2. Go to the **Risk Register** tab and click on the risk that you want to assess.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164077650-dszw05ujmbi-Screenshot-2025-08-21-at-11-25-39.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Click **Start Assessment**. This opens the Risk Assessment window.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164079028-opr7gmx8gth-Screenshot-2025-08-21-at-11-27-07.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 1: Risk Score
+
+Drag the slider for each risk factor to modify its value. Scrut will automatically calculate the inherent risk score based on the [risk formula](/docs/configuring-custom-risk-score-formula) you have configured. Click **Next**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164080443-lo6a9sm0hji-Screenshot-2025-08-21-at-11-28-11.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="success">
+  **Note:**
+
+  The risk status changes from Open to Assessed once you complete this step.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164081783-m232vas4kuj-Screenshot-2025-08-21-at-11-29-52.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 2: Select Controls & Requirements
+
+In this step, you will select controls that are specific actions or measures designed to mitigate the identified risk according to the chosen treatment strategy.
+
+- Use the **Frameworks** panel to view controls relevant to your frameworks.
+
+- Expand a specific requirement to view all controls associated with it.
+
+  - When you select a requirement, all controls within it will be selected by default.
+  - If needed, you can then select/unselect specific controls, as required.
+
+- Select the checkboxes next to the controls you want to link.
+
+  **Note:** Any not applicable requirement will appear grayed out.
+
+- Optionally, use the search bar at the top to quickly locate controls by name or code.
+
+- Once you’ve made the selections, enable the Show Linked Controls toggle to review and verify which controls you’ve chosen to link.
+
+Click **Next**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164083297-vbx12suwx6e-Screenshot-2025-08-21-at-11-35-38.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 3: Select Treatment Strategy
+
+Once you have linked the controls and requirements, the next step is to determine the appropriate treatment strategy. The treatment strategy outlines how your organization plans to address the identified risk.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164084669-oegl9asoo3t-Screenshot-2025-08-21-at-11-37-28.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Choose an appropriate risk treatment strategy.
+
+- **Accept**: Choose this option if you are satisfied with the residual risk score and are prepared to keep monitoring it over time. It indicates a willingness to accept the risk as it stands.
+- **Avoid**: Opting for this means you have managed to avoid the risk completely, so there are no further actions required from your side. It shows that you don’t anticipate any negative impacts from this risk.
+- **Transfer**: This option is relevant when a risk can be shifted to a third-party vendor. By selecting this, you indicate that you can pass the responsibility of managing this risk to someone else.
+- **Mitigate**: Select this option if the risk still poses a significant threat and additional measures are necessary to reduce its impact or likelihood. It indicates that you will implement specific remediation strategies to lessen it further.
+
+Note \[Optional\]: Provide a brief description of why you chose this particular risk treatment strategy.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164087478-fc404cc0qb-Screenshot-2025-08-21-at-11-57-29.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 4: Create a Mitigation Task
+
+Optionally, you can create a mitigation task for the risk. Enter the task name, due date, assignee, and department. Include an optional description to provide more context about the task.
+
+<Callout kind="success">
+  **Note:**
+
+  The controls linked in the previous step will automatically populate under the Controls tab of the new mitigation task.
+</Callout>
+
+Click **Save**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164086032-o1xtqjrvorf-Screenshot-2025-08-21-at-11-56-46.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="success">
+  **Note:**
+
+  The risk status changes from Assessed to Treatment in Progress once you complete this step.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164088946-72nt8it2oa9-Screenshot-2025-08-21-at-11-58-52.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## How to View the Mitigation Task
+
+If you created a mitigation task during risk assessment, it will be available in the **Mitigation Tasks** tab on the risk page. Click on it to view its details.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164090366-dpgijuhel1-Screenshot-2025-08-21-at-12-00-25.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="success">
+  **Note**
+
+  The controls linked to the risk will automatically reflect in the Mitigation Task.
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164152020-j2om5yhlem8-Screenshot-2025-08-22-at-19-41-56.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Impact of Linking/Unlinking Controls from Risks & Mitigation Tasks
+
+#### Key Points to Note
+
+- If you remove controls from the Risk details page, they will also be removed from the corresponding mitigation tasks.
+- However, adding new controls to a risk will not automatically update existing mitigation tasks.
+- But if you create a new mitigation task after linking new controls, the newly created task will include the new controls.
+- If a control is removed from the mitigation task, it doesn’t impact the risk.
+- But if you add new controls to a mitigation task, it will also be linked to the corresponding risk.

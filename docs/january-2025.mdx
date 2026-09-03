@@ -1,0 +1,102 @@
+---
+title: "January 2025"
+---
+
+## In this release
+
+Scrut's January 2025 release adds two new compliance frameworks, scopes auditor access to the frameworks they're assigned to, and trims manual work from policy, risk, and questionnaire workflows.
+
+- Quebec's Law 25 and two new NIST SP 800-53 baselines, Low and Privacy, join Scrut's framework library with pre-built controls and mappings.
+- The Policy Editor now autosaves your edits and shows live draft status, so refreshing the page or switching modules no longer means losing work.
+- Auditors see only the controls tied to the frameworks they're assigned to, and the Controls module stays hidden until that access is explicitly granted.
+- Creating a risk factor or score is now a two-step flow that separates definition from range configuration.
+- Questionnaire Autofill checks a prioritized Answer Library before searching elsewhere, keeping responses consistent across concurrent reviews.
+- Bulk edit now covers department, recurrence, and other fields across selected policies and evidence tasks, and employees can be bulk-promoted to platform users from the Employee table.
+- Code repositories are now tracked in Asset Management with owner and monitoring status, and vendor discovery via Azure AD and Google Workspace SSO prepopulates third-party app data for access reviews.
+
+## Key Features & Enhancements
+
+## Manage Quebec Law 25 compliance in Scrut
+
+Businesses operating in Quebec or processing data of Quebec residents must adhere to Law 25, a privacy regime built for stronger transparency, accountability, and consent than most provincial baselines require. Mapping Law 25's obligations into an existing control program by hand takes time. Gap tracking also ends up inconsistent across teams when there's no shared framework to work from.
+
+Scrut now includes a pre-built Law 25 framework with out-of-the-box controls and mappings for Quebec's privacy modernization requirements.
+
+<Callout kind="info">
+  Learn more: [Law 25](/docs/framework-overview#law-25)
+</Callout>
+
+### Enable NIST 800-53 Low and Privacy baselines separately
+
+Federal-aligned and privacy-sensitive programs need a starting control set that matches system impact and privacy risk. Teams that only need low-impact security controls, or only need a privacy-focused baseline, end up carrying an oversized control library to begin structured readiness work.
+
+Scrut now offers the NIST SP 800-53 Low Baseline and Privacy Baseline as separate frameworks. You can enable just the baseline you need, instead of taking on both as a combined package. This gives program owners a clearer on-ramp for low-impact systems and for privacy control work grounded in NIST's baseline model.
+
+<Callout kind="info">
+  Learn more: [NIST 800-53 (Low Baseline)](/docs/framework-overview#nist-800-53-rev5-low-baseline) and [NIST 800-53 (Privacy Baseline)](/docs/framework-overview#nist-800-53-rev5-privacy-baseline)
+</Callout>
+
+### Autosave and preview policies directly in the Policy Editor
+
+Compliance teams often lose their work, especially when multiple people are working on the same policy at the same time. If you accidentally refresh the page, hit back, or switch modules before saving, your policy edits disappear. Naming a version for every small edit slows you down, so you delay saving and risk losing more. Previewing an attachment can also drop you straight into edit mode, causing accidental changes.
+
+Scrut’s Policy Editor now saves your edits automatically. It shows you whether your draft is saving, unsaved, or saved, so you always know your work is safe. A version name is added by default, but you can still edit it. Comments are easier to manage, and attachments now open in preview instead of edit mode, so you don't make changes by accident.
+
+<Video src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788167870470-86vwapr0pak-Policy-Editor-Enhancements-Overview-1.mp4" />
+
+<Callout kind="info">
+  Learn more: [Autosave policies](/docs/policy-autosave)
+</Callout>
+
+### Scope auditor access to assigned frameworks only
+
+Security and compliance teams bringing auditors into a multi-framework program run into the same tension every time. Auditors need visibility into the frameworks they were engaged for, but full control-library access by default raises customer concern and slows access reviews. Without a way to scope that visibility in-app, least-privilege promises get harder to defend.
+
+Scrut now limits auditor visibility in the Controls module to only the frameworks assigned to that auditor. Admins assign framework access under **Settings → Manage Users**, and once **Controls** module access is also enabled, the auditor's Controls list shows only controls linked to their assigned frameworks. Linked controls still open in a side drawer from policies and other artifacts, and the "Go to control page" action only appears when the auditor actually has Controls module access.
+
+<Video src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788167881146-33dk5jyoai2-RBAC-in-controls-module-Enhanced-Navigation.mp4" />
+
+<Callout kind="info">
+  Learn more: [Manage user access](/docs/adding-users)
+</Callout>
+
+### Build risk factors and scores in two steps
+
+Risk and compliance owners, when defining a new factor or score, fill out the details such as title, criteria, description, ranges, colors, and formulas on one long form. With many ranges and scoring rules to configure, that single-page format could lead to several mistakes.
+
+Creating a factor or score is now a two-step flow in Scrut.
+
+- Step one captures the title, criteria, and description, or for scores, the field criteria, formula, and rounding options.
+- Step two configures ranges: add them in any order and assign each a color from low, moderate, high, or critical groupings.
+- You review the full setup before saving, and once saved, range values stay locked in place.
+
+<Video src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788167856239-ba650tjtmuw-Enhanced-Factor-and-Score-Creation-Process-in-Risk-Management-Module.mp4" />
+
+<Callout kind="info">
+  Learn more: [Configure Risk Scores and Factors](/docs/configuring-custom-risk-score-formula)
+</Callout>
+
+### Autofill questionnaires from a reusable answer library
+
+Every new security questionnaire tends to start from scratch, even when the answer to a question already exists in a past response, a policy, or someone's inbox. Teams end up re-verifying facts they've already confirmed elsewhere. Replies drift across buyers as a result, and two questionnaires can end up disagreeing on the same control topic.
+
+Questionnaire Autofill now includes an Answer Library, a prioritized set of question-and-answer pairs that acts as your source of truth for recurring answers. During autofill, Scrut Teammates checks the Answer Library first before searching anywhere else, and recognizes variations of a question to find the right stored answer.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788161880238-bdtsuiqxnts-Answer-Library.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="info">
+  Learn more: [Answer Library](/docs/quick-start-guide-questionnaire-autofill#adding-answers-to-the-answer-library)
+</Callout>
+
+## Other Updates
+
+- Bulk promote employees to platform users from the Employee table.
+- [Bulk edit policies](/docs/bulk-action-feature) and evidence tasks.
+- Increased character limits on relevant fields across the platform; for example, Framework Name moves from 20 to 50 characters.
+- Updated mapping for [ISO 27001](/docs/framework-overview#iso-270012022) and [SOC 2](/docs/framework-overview#soc-2-service-organization-control-2), including more comprehensive evidence descriptions and instructions for uploading each evidence item.
+- Azure AD Administrative Units shown on employee detail pages for synced users.
+- [Slack personal task reminders](/docs/configuring-slack-reminders) for overdue, due soon, and pending approval items;
+- [Code repositories added in Asset Management](/docs/asset-management-overview#📂-code-repos) with link, owner, source (for example GitHub or GitLab), critical-data marking, monitoring status, and edit/lock/delete actions.
+- Vendor discovery via [Azure AD](/docs/azure-ad-integration-to-discover-vendors) and [Google Workspace SSO](/docs/google-workspace-integration-to-discover-vendors) for third-party applications, with prepopulated user data to support access reviews.
+- [Trust Vault user acceptance workflow](/docs/how-to-grant-access-to-trust-vault) adds NDA selection and access expiry controls.
+- Audit logs on each nonconformity in the Corrective Actions module so actions inside a corrective action can be tracked in place.

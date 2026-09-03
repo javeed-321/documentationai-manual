@@ -1,6 +1,5 @@
 {
   "name": "Scrut Help Center",
-  "initialRoute": "docs/lighthouse-documentation/onboarding-setup/how-to-log-into-scrut",
   "colors": {
     "light": {
       "brand": "#695acc",
@@ -22,6 +21,9 @@
     },
     {
       "src": "styles/scrut-home-cards.css"
+    },
+    {
+      "src": "styles/scrut-callouts.css"
     }
   ],
   "scripts": [
@@ -29,6 +31,7 @@
       "src": "scripts/help-center.js"
     }
   ],
+  "redirects": [],
   "navigation": {
     "tabs": [
       {
@@ -39,7 +42,9 @@
         "pages": [
           {
             "title": "Home",
-            "path": "home"
+            "path": "home",
+            "show-sidebar": false,
+            "show-toc": false
           }
         ]
       },
@@ -58,27 +63,27 @@
                 "pages": [
                   {
                     "title": "Log In to Scrut",
-                    "path": "docs/lighthouse-documentation/onboarding-setup/how-to-log-into-scrut"
+                    "path": "docs/how-to-log-into-scrut"
                   },
                   {
                     "title": "Complete Onboarding Tasks",
-                    "path": "docs/lighthouse-documentation/onboarding-setup/onboarding-tasks"
+                    "path": "docs/onboarding-tasks"
                   },
                   {
                     "title": "Notification Center: Walkthrough",
-                    "path": "docs/lighthouse-documentation/onboarding-setup/notification-center"
+                    "path": "docs/notification-center"
                   },
                   {
                     "title": "Quick Start Guide: Setup Wizard",
-                    "path": "docs/lighthouse-documentation/onboarding-setup/setup-wizard"
+                    "path": "docs/setup-wizard"
                   },
                   {
                     "title": "Download Framework Certificates",
-                    "path": "docs/lighthouse-documentation/onboarding-setup/download-framework-certificates"
+                    "path": "docs/download-framework-certificates"
                   },
                   {
                     "title": "Initiate Certification Renewal",
-                    "path": "docs/lighthouse-documentation/onboarding-setup/initiate-certification-renewal"
+                    "path": "docs/initiate-certification-renewal"
                   }
                 ]
               },
@@ -89,19 +94,19 @@
                 "pages": [
                   {
                     "title": "Task Center: Walkthrough",
-                    "path": "docs/lighthouse-documentation/task-center/task-center-walkthrough"
+                    "path": "docs/task-center-walkthrough"
                   },
                   {
                     "title": "Track & Complete Audit Prep Tasks",
-                    "path": "docs/lighthouse-documentation/task-center/task-center-audit-prep"
+                    "path": "docs/task-center-audit-prep"
                   },
                   {
                     "title": "Track & Complete Your Tasks in Scrut",
-                    "path": "docs/lighthouse-documentation/task-center/my-tasks-task-center"
+                    "path": "docs/my-tasks-task-center"
                   },
                   {
                     "title": "Track & Complete Continuous Compliance Tasks",
-                    "path": "docs/lighthouse-documentation/task-center/continuous-compliance-task-center"
+                    "path": "docs/continuous-compliance-task-center"
                   }
                 ]
               },
@@ -112,7 +117,7 @@
                 "pages": [
                   {
                     "title": "Understand the Compliance Dashboard",
-                    "path": "docs/lighthouse-documentation/dashboards-navigation/understanding-compliance-progress"
+                    "path": "docs/understanding-compliance-progress"
                   }
                 ]
               },
@@ -123,11 +128,11 @@
                 "pages": [
                   {
                     "title": "Customize Table Data",
-                    "path": "docs/lighthouse-documentation/getting-around-scrut/customizing-rows"
+                    "path": "docs/customizing-rows"
                   },
                   {
                     "title": "Search Within Scrut",
-                    "path": "docs/lighthouse-documentation/getting-around-scrut/how-to-search-within-scrut"
+                    "path": "docs/how-to-search-within-scrut"
                   }
                 ]
               },
@@ -138,15 +143,15 @@
                 "pages": [
                   {
                     "title": "Contact Scrut Support",
-                    "path": "docs/lighthouse-documentation/account-access-support/how-to-contact-scrut-support"
+                    "path": "docs/how-to-contact-scrut-support"
                   },
                   {
                     "title": "Can I Access Scrut on Mobile or Tablet?",
-                    "path": "docs/lighthouse-documentation/account-access-support/supported-devices-and-browsers"
+                    "path": "docs/supported-devices-and-browsers"
                   },
                   {
                     "title": "Understand Scrut's Data Security Measures",
-                    "path": "docs/lighthouse-documentation/account-access-support/data-security-measures"
+                    "path": "docs/data-security-measures"
                   }
                 ]
               }
@@ -163,15 +168,15 @@
                 "pages": [
                   {
                     "title": "Frameworks: Walkthrough",
-                    "path": "docs/frameworks-controls/frameworks/understanding-framework-dashboard"
+                    "path": "docs/understanding-framework-dashboard"
                   },
                   {
                     "title": "Quick Start Guide: Frameworks",
-                    "path": "docs/frameworks-controls/frameworks/quick-start-guide-frameworks"
+                    "path": "docs/quick-start-guide-frameworks"
                   },
                   {
                     "title": "Which Frameworks Does Scrut Support?",
-                    "path": "docs/frameworks-controls/frameworks/framework-overview"
+                    "path": "docs/framework-overview"
                   },
                   {
                     "group": "Manage Frameworks",
@@ -180,35 +185,35 @@
                     "pages": [
                       {
                         "title": "Add a New Framework",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/framework"
+                        "path": "docs/framework"
                       },
                       {
                         "title": "Add a Framework Requirement",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/adding-framework-requirements"
+                        "path": "docs/adding-framework-requirements"
                       },
                       {
                         "title": "Create a Custom Framework",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/creating-your-own-framework"
+                        "path": "docs/creating-your-own-framework"
                       },
                       {
                         "title": "Edit Custom Framework Name",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/editing-custom-framework-name"
+                        "path": "docs/editing-custom-framework-name"
                       },
                       {
                         "title": "Edit or Delete a Framework Requirement",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/editing-and-deleting-framework-requirement"
+                        "path": "docs/editing-and-deleting-framework-requirement"
                       },
                       {
                         "title": "Mark a Framework Requirement as Out of Scope",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/marking-framework-requirements-as-out-of-scope"
+                        "path": "docs/marking-framework-requirements-as-out-of-scope"
                       },
                       {
                         "title": "Link and Unlink Framework Requirements to a Control",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/linking-controls-and-framework-requirements"
+                        "path": "docs/linking-controls-and-framework-requirements"
                       },
                       {
                         "title": "Link and Unlink Controls to a Framework Requirement",
-                        "path": "docs/frameworks-controls/frameworks/manage-frameworks/linking-framework-requirement-to-a-control"
+                        "path": "docs/linking-framework-requirement-to-a-control"
                       }
                     ]
                   },
@@ -219,19 +224,19 @@
                     "pages": [
                       {
                         "title": "Download SoA for ISO Frameworks",
-                        "path": "docs/frameworks-controls/frameworks/documents-and-downloads/download-soa-for-iso-frameworks"
+                        "path": "docs/download-soa-for-iso-frameworks"
                       },
                       {
                         "title": "Create a System Description",
-                        "path": "docs/frameworks-controls/frameworks/documents-and-downloads/create-a-system-description"
+                        "path": "docs/create-a-system-description"
                       },
                       {
                         "title": "Download Framework Compliance Report",
-                        "path": "docs/frameworks-controls/frameworks/documents-and-downloads/downloading-framework-compliance-report"
+                        "path": "docs/downloading-framework-compliance-report"
                       },
                       {
                         "title": "Export Framework Requirements",
-                        "path": "docs/frameworks-controls/frameworks/documents-and-downloads/exporting-inout-scope-framework-requirements"
+                        "path": "docs/exporting-inout-scope-framework-requirements"
                       }
                     ]
                   }
@@ -244,27 +249,27 @@
                 "pages": [
                   {
                     "title": "Controls: Walkthrough",
-                    "path": "docs/frameworks-controls/controls-1/understanding-controls"
+                    "path": "docs/understanding-controls"
                   },
                   {
                     "title": "Create a Custom Control",
-                    "path": "docs/frameworks-controls/controls-1/creating-custom-controls"
+                    "path": "docs/creating-custom-controls"
                   },
                   {
                     "title": "View Risks Linked to a Control",
-                    "path": "docs/frameworks-controls/controls-1/viewing-risks-linked-to-a-control"
+                    "path": "docs/viewing-risks-linked-to-a-control"
                   },
                   {
                     "title": "Edit, Delete or Mark a Control Out of Scope",
-                    "path": "docs/frameworks-controls/controls-1/editing-and-deleting-control"
+                    "path": "docs/editing-and-deleting-control"
                   },
                   {
                     "title": "Export Controls",
-                    "path": "docs/frameworks-controls/controls-1/exporting-controls"
+                    "path": "docs/exporting-controls"
                   },
                   {
                     "title": "Link and Unlink Artifacts to a Control",
-                    "path": "docs/frameworks-controls/controls-1/linking-controls-and-artifacts"
+                    "path": "docs/linking-controls-and-artifacts"
                   }
                 ]
               }
@@ -276,11 +281,11 @@
             "pages": [
               {
                 "title": "Policies: Walkthrough",
-                "path": "docs/policy/policy-module-walkthrough"
+                "path": "docs/policy-module-walkthrough"
               },
               {
                 "title": "Quick Start Guide: Policies",
-                "path": "docs/policy/quick-start-guide-policies"
+                "path": "docs/quick-start-guide-policies"
               },
               {
                 "group": "Create & Import Policies",
@@ -289,19 +294,19 @@
                 "pages": [
                   {
                     "title": "Create, Upload, or Link Policy Content",
-                    "path": "docs/policy/working-with-policies/uploading-policy"
+                    "path": "docs/uploading-policy"
                   },
                   {
                     "title": "Import a Policy from Google Drive",
-                    "path": "docs/policy/working-with-policies/import-a-policy-from-google-drive"
+                    "path": "docs/import-a-policy-from-google-drive"
                   },
                   {
                     "title": "Create a Custom Policy",
-                    "path": "docs/policy/working-with-policies/creating-policy"
+                    "path": "docs/creating-policy"
                   },
                   {
                     "title": "Edit Policy Name & Details",
-                    "path": "docs/policy/working-with-policies/editing-policy"
+                    "path": "docs/editing-policy"
                   }
                 ]
               },
@@ -312,19 +317,19 @@
                 "pages": [
                   {
                     "title": "Edit Policy Content in Scrut's Editor",
-                    "path": "docs/policy/editing-policy-content/how-to-use-policy-editor"
+                    "path": "docs/how-to-use-policy-editor"
                   },
                   {
                     "title": "Auto Save a Policy",
-                    "path": "docs/policy/editing-policy-content/policy-autosave"
+                    "path": "docs/policy-autosave"
                   },
                   {
                     "title": "Add Policy Header and Footer",
-                    "path": "docs/policy/editing-policy-content/policy-header-and-footer"
+                    "path": "docs/policy-header-and-footer"
                   },
                   {
                     "title": "Understand Policy Variables",
-                    "path": "docs/policy/editing-policy-content/policy-variables"
+                    "path": "docs/policy-variables"
                   }
                 ]
               },
@@ -335,39 +340,39 @@
                 "pages": [
                   {
                     "title": "Bulk Manage Policies",
-                    "path": "docs/policy/managing-organizing-policies/bulk-action-feature"
+                    "path": "docs/bulk-action-feature"
                   },
                   {
                     "title": "Clone a Policy",
-                    "path": "docs/policy/managing-organizing-policies/clone-a-policy"
+                    "path": "docs/clone-a-policy"
                   },
                   {
                     "title": "Delete a Policy",
-                    "path": "docs/policy/managing-organizing-policies/delete-a-policy"
+                    "path": "docs/delete-a-policy"
                   },
                   {
                     "title": "Link and Unlink Controls to a Policy",
-                    "path": "docs/policy/managing-organizing-policies/linking-policy-to-a-control"
+                    "path": "docs/linking-policy-to-a-control"
                   },
                   {
                     "title": "View the Policy Effort Estimate",
-                    "path": "docs/policy/managing-organizing-policies/set-policy-effort-estimate"
+                    "path": "docs/set-policy-effort-estimate"
                   },
                   {
                     "title": "Turn On Policy IDs",
-                    "path": "docs/policy/managing-organizing-policies/policy-id"
+                    "path": "docs/policy-id"
                   },
                   {
                     "title": "Manage Policy Versions",
-                    "path": "docs/policy/managing-organizing-policies/editing-a-policy-version"
+                    "path": "docs/editing-a-policy-version"
                   },
                   {
                     "title": "Mark a Policy as Not Relevant",
-                    "path": "docs/policy/managing-organizing-policies/marking-a-policy-not-relevant"
+                    "path": "docs/marking-a-policy-not-relevant"
                   },
                   {
                     "title": "Mark a Policy as Relevant",
-                    "path": "docs/policy/managing-organizing-policies/marking-a-policy-not-relevant-1"
+                    "path": "docs/marking-a-policy-not-relevant-1"
                   }
                 ]
               },
@@ -378,19 +383,19 @@
                 "pages": [
                   {
                     "title": "Understand Policy Approval Workflow",
-                    "path": "docs/policy/policy-review/understanding-policy-approval-workflow"
+                    "path": "docs/understanding-policy-approval-workflow"
                   },
                   {
                     "title": "Add Policy Approvers",
-                    "path": "docs/policy/policy-review/add-policy-approvers"
+                    "path": "docs/add-policy-approvers"
                   },
                   {
                     "title": "Add Policy Assignees",
-                    "path": "docs/policy/policy-review/marking-a-policy-not-relevant-2"
+                    "path": "docs/marking-a-policy-not-relevant-2"
                   },
                   {
                     "title": "Set a Policy Review Cycle",
-                    "path": "docs/policy/policy-review/settings-a-policy-review-cycle"
+                    "path": "docs/settings-a-policy-review-cycle"
                   }
                 ]
               },
@@ -401,7 +406,7 @@
                 "pages": [
                   {
                     "title": "Understand Policy Statuses",
-                    "path": "docs/policy/overview/policy-statuses"
+                    "path": "docs/policy-statuses"
                   }
                 ]
               },
@@ -412,11 +417,11 @@
                 "pages": [
                   {
                     "title": "Export Policies & Attachments",
-                    "path": "docs/policy/export-policies/exporting-policies"
+                    "path": "docs/exporting-policies"
                   },
                   {
                     "title": "Delete Policy Attachment",
-                    "path": "docs/policy/export-policies/removing-policy-content"
+                    "path": "docs/removing-policy-content"
                   }
                 ]
               },
@@ -427,11 +432,11 @@
                 "pages": [
                   {
                     "title": "Map Controls to Policies Using Scrut Teammates",
-                    "path": "docs/policy/ai-powered-features-1/ai-suggested-policy-control-mapping"
+                    "path": "docs/ai-suggested-policy-control-mapping"
                   },
                   {
                     "title": "Review AI-Detected Policy Gaps",
-                    "path": "docs/policy/ai-powered-features-1/ai-detected-policy-gaps"
+                    "path": "docs/ai-detected-policy-gaps"
                   }
                 ]
               },
@@ -442,11 +447,11 @@
                 "pages": [
                   {
                     "title": "Impact of Policy Variables on Existing Policies",
-                    "path": "docs/policy/faqs/impact-of-policy-variables-on-existing-policies"
+                    "path": "docs/impact-of-policy-variables-on-existing-policies"
                   },
                   {
                     "title": "Access Policy Settings",
-                    "path": "docs/policy/faqs/how-to-access-policy-settings"
+                    "path": "docs/how-to-access-policy-settings"
                   }
                 ]
               }
@@ -458,15 +463,15 @@
             "pages": [
               {
                 "title": "Which Integrations Does Scrut Support?",
-                "path": "docs/integrations/integrations-overview"
+                "path": "docs/integrations-overview"
               },
               {
                 "title": "Troubleshoot Integration Issues",
-                "path": "docs/integrations/integration-troubleshooting"
+                "path": "docs/integration-troubleshooting"
               },
               {
                 "title": "Additional FAQs: Integrations",
-                "path": "docs/integrations/integration-faqs-troubleshooting"
+                "path": "docs/integration-faqs-troubleshooting"
               },
               {
                 "group": "Background Check",
@@ -475,19 +480,19 @@
                 "pages": [
                   {
                     "title": "Integrate Certn",
-                    "path": "docs/integrations/background-check/integrating-certn"
+                    "path": "docs/integrating-certn"
                   },
                   {
                     "title": "Integrate Checkr",
-                    "path": "docs/integrations/background-check/checkr-integration-sync-employee-bgv-data-to-scrut"
+                    "path": "docs/checkr-integration-sync-employee-bgv-data-to-scrut"
                   },
                   {
                     "title": "Integrate Zinc Work",
-                    "path": "docs/integrations/background-check/integrating-zinc-work"
+                    "path": "docs/integrating-zinc-work"
                   },
                   {
                     "title": "Integrate SpringVerify",
-                    "path": "docs/integrations/background-check/integrating-springverify"
+                    "path": "docs/integrating-springverify"
                   }
                 ]
               },
@@ -498,19 +503,19 @@
                 "pages": [
                   {
                     "title": "Integrate KnowBe4",
-                    "path": "docs/integrations/campaigns-trainings/integrating-knowbe4"
+                    "path": "docs/integrating-knowbe4"
                   },
                   {
                     "title": "Integrate ThreatCop",
-                    "path": "docs/integrations/campaigns-trainings/integrating-threatcop"
+                    "path": "docs/integrating-threatcop"
                   },
                   {
                     "title": "Integrate EC Council",
-                    "path": "docs/integrations/campaigns-trainings/integrating-ec-council"
+                    "path": "docs/integrating-ec-council"
                   },
                   {
                     "title": "Integrate Phished",
-                    "path": "docs/integrations/campaigns-trainings/integrating-phished"
+                    "path": "docs/integrating-phished"
                   }
                 ]
               },
@@ -521,23 +526,23 @@
                 "pages": [
                   {
                     "title": "Integrate Datadog",
-                    "path": "docs/integrations/capacity-usage-monitoring/integrating-datadog"
+                    "path": "docs/integrating-datadog"
                   },
                   {
                     "title": "Integrate New Relic",
-                    "path": "docs/integrations/capacity-usage-monitoring/integrating-new-relic"
+                    "path": "docs/integrating-new-relic"
                   },
                   {
                     "title": "Integrate Sumo Logic",
-                    "path": "docs/integrations/capacity-usage-monitoring/integrating-sumo-logic"
+                    "path": "docs/integrating-sumo-logic"
                   },
                   {
                     "title": "Integrate Tableau",
-                    "path": "docs/integrations/capacity-usage-monitoring/integrating-tableau"
+                    "path": "docs/integrating-tableau"
                   },
                   {
                     "title": "Integrate Google Analytics",
-                    "path": "docs/integrations/capacity-usage-monitoring/integrating-google-analytics"
+                    "path": "docs/integrating-google-analytics"
                   }
                 ]
               },
@@ -548,43 +553,43 @@
                 "pages": [
                   {
                     "title": "Integrate AWS",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-aws"
+                    "path": "docs/integrating-aws"
                   },
                   {
                     "title": "Integrate Microsoft Azure",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-azure"
+                    "path": "docs/integrating-azure"
                   },
                   {
                     "title": "Integrate GCP",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-gcp-using-service-account-impersonation"
+                    "path": "docs/integrating-gcp-using-service-account-impersonation"
                   },
                   {
                     "title": "Integrate GCP (Multi-Project) [BETA]",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-gcp-new"
+                    "path": "docs/integrating-gcp-new"
                   },
                   {
                     "title": "Integrate DigitalOcean",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-digitalocean"
+                    "path": "docs/integrating-digitalocean"
                   },
                   {
                     "title": "Integrate Heroku",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-heroku"
+                    "path": "docs/integrating-heroku"
                   },
                   {
                     "title": "Integrate Vercel",
-                    "path": "docs/integrations/integrating-cloud-providers/integrating-vercel"
+                    "path": "docs/integrating-vercel"
                   },
                   {
                     "title": "Configure Scope for AWS Integration",
-                    "path": "docs/integrations/integrating-cloud-providers/aws-integration-enhancement"
+                    "path": "docs/aws-integration-enhancement"
                   },
                   {
                     "title": "Configure Scope for Azure Integration",
-                    "path": "docs/integrations/integrating-cloud-providers/azure-integration-enhancement"
+                    "path": "docs/azure-integration-enhancement"
                   },
                   {
                     "title": "Rebind GCP - Service Account",
-                    "path": "docs/integrations/integrating-cloud-providers/gcpserviceaccountrebinding"
+                    "path": "docs/gcpserviceaccountrebinding"
                   }
                 ]
               },
@@ -595,27 +600,27 @@
                 "pages": [
                   {
                     "title": "Integrate Dialpad",
-                    "path": "docs/integrations/communication-tools/integrating-dialpad"
+                    "path": "docs/integrating-dialpad"
                   },
                   {
                     "title": "Integrate Fireflies",
-                    "path": "docs/integrations/communication-tools/integrating-fireflies"
+                    "path": "docs/integrating-fireflies"
                   },
                   {
                     "title": "Integrate SendGrid",
-                    "path": "docs/integrations/communication-tools/integrating-sendgrid"
+                    "path": "docs/integrating-sendgrid"
                   },
                   {
                     "title": "Integrate Slack",
-                    "path": "docs/integrations/communication-tools/integrating-slack"
+                    "path": "docs/integrating-slack"
                   },
                   {
                     "title": "Integrate Zoom",
-                    "path": "docs/integrations/communication-tools/help-guide-for-access-review-only-integrations"
+                    "path": "docs/help-guide-for-access-review-only-integrations"
                   },
                   {
                     "title": "Integrating Microsoft Teams",
-                    "path": "docs/integrations/communication-tools/integrating-microsoft-teams"
+                    "path": "docs/integrating-microsoft-teams"
                   }
                 ]
               },
@@ -626,47 +631,47 @@
                 "pages": [
                   {
                     "title": "Integrate Active Campaign",
-                    "path": "docs/integrations/customer-relationship-management/integrating-active-campaign"
+                    "path": "docs/integrating-active-campaign"
                   },
                   {
                     "title": "Integrate Close CRM",
-                    "path": "docs/integrations/customer-relationship-management/integrating-close-crm"
+                    "path": "docs/integrating-close-crm"
                   },
                   {
                     "title": "Integrate Copper",
-                    "path": "docs/integrations/customer-relationship-management/integrating-copper"
+                    "path": "docs/integrating-copper"
                   },
                   {
                     "title": "Integrate Freshdesk",
-                    "path": "docs/integrations/customer-relationship-management/integrating-freshdesk"
+                    "path": "docs/integrating-freshdesk"
                   },
                   {
                     "title": "Integrate HubSpot",
-                    "path": "docs/integrations/customer-relationship-management/integrating-hubspot"
+                    "path": "docs/integrating-hubspot"
                   },
                   {
                     "title": "Integrate Insightly",
-                    "path": "docs/integrations/customer-relationship-management/integrating-insightly"
+                    "path": "docs/integrating-insightly"
                   },
                   {
                     "title": "Integrate Less Annoying CRM",
-                    "path": "docs/integrations/customer-relationship-management/integrating-less-annoying-crm"
+                    "path": "docs/integrating-less-annoying-crm"
                   },
                   {
                     "title": "Integrate NetSuite",
-                    "path": "docs/integrations/customer-relationship-management/integrating-netsuite"
+                    "path": "docs/integrating-netsuite"
                   },
                   {
                     "title": "Integrate Oracle Cloud HCM",
-                    "path": "docs/integrations/customer-relationship-management/integrating-oracle-cloud-hcm"
+                    "path": "docs/integrating-oracle-cloud-hcm"
                   },
                   {
                     "title": "Integrate Oracle Sales & Fusion Service",
-                    "path": "docs/integrations/customer-relationship-management/integrating-oracle-sales-fusion-service"
+                    "path": "docs/integrating-oracle-sales-fusion-service"
                   },
                   {
                     "title": "Integrate Salesforce",
-                    "path": "docs/integrations/customer-relationship-management/salesforce-integration"
+                    "path": "docs/salesforce-integration"
                   }
                 ]
               },
@@ -677,19 +682,19 @@
                 "pages": [
                   {
                     "title": "Integrate Databricks",
-                    "path": "docs/integrations/database/integrating-databricks"
+                    "path": "docs/integrating-databricks"
                   },
                   {
                     "title": "Integrate Fivetran",
-                    "path": "docs/integrations/database/integrating-fivetran"
+                    "path": "docs/integrating-fivetran"
                   },
                   {
                     "title": "Integrate MongoDB",
-                    "path": "docs/integrations/database/integrating-mongodb"
+                    "path": "docs/integrating-mongodb"
                   },
                   {
                     "title": "Integrate Snowflake",
-                    "path": "docs/integrations/database/integrating-snowflake"
+                    "path": "docs/integrating-snowflake"
                   }
                 ]
               },
@@ -700,107 +705,107 @@
                 "pages": [
                   {
                     "title": "Integrate ADP",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-adp"
+                    "path": "docs/integrating-adp"
                   },
                   {
                     "title": "Integrate AlexisHR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-alexishr"
+                    "path": "docs/integrating-alexishr"
                   },
                   {
                     "title": "Integrate Bamboo HR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-bamboo-hr"
+                    "path": "docs/integrating-bamboo-hr"
                   },
                   {
                     "title": "Integrate Breathe HR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-breathehr"
+                    "path": "docs/integrating-breathehr"
                   },
                   {
                     "title": "Integrate BreezyHR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-breezyhr"
+                    "path": "docs/integrating-breezyhr"
                   },
                   {
                     "title": "Integrate Charlie HR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-charlie-hr"
+                    "path": "docs/integrating-charlie-hr"
                   },
                   {
                     "title": "Integrate CyberArk",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/cyberark-integration"
+                    "path": "docs/cyberark-integration"
                   },
                   {
                     "title": "Integrate Darwinbox",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-darwinbox"
+                    "path": "docs/integrating-darwinbox"
                   },
                   {
                     "title": "Integrate Deel",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-deel"
+                    "path": "docs/integrating-deel"
                   },
                   {
                     "title": "Integrate Employment Hero",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-employment-hero"
+                    "path": "docs/integrating-employment-hero"
                   },
                   {
                     "title": "Integrate Freshteam",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-freshteam"
+                    "path": "docs/integrating-freshteam"
                   },
                   {
                     "title": "Integrate greytHR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-greythr"
+                    "path": "docs/integrating-greythr"
                   },
                   {
                     "title": "Integrate HiBob",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-hibob"
+                    "path": "docs/integrating-hibob"
                   },
                   {
                     "title": "Integrate HR Works",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-hr-works"
+                    "path": "docs/integrating-hr-works"
                   },
                   {
                     "title": "Integrate Jibble",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-jibble"
+                    "path": "docs/integrating-jibble"
                   },
                   {
                     "title": "Integrate Keka",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-keka-hr"
+                    "path": "docs/integrating-keka-hr"
                   },
                   {
                     "title": "Integrate Paycom",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-paycom"
+                    "path": "docs/integrating-paycom"
                   },
                   {
                     "title": "Integrate Paylocity",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-paylocity"
+                    "path": "docs/integrating-paylocity"
                   },
                   {
                     "title": "Integrate Personio",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/personio-integration"
+                    "path": "docs/personio-integration"
                   },
                   {
                     "title": "Integrate Rippling",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-rippling"
+                    "path": "docs/integrating-rippling"
                   },
                   {
                     "title": "Integrate Sage HR",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-sage-hr"
+                    "path": "docs/integrating-sage-hr"
                   },
                   {
                     "title": "Integrate SAP Success Factors",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-sap-success-factor"
+                    "path": "docs/integrating-sap-success-factor"
                   },
                   {
                     "title": "Integrate UKG Pro",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-ukg-pro"
+                    "path": "docs/integrating-ukg-pro"
                   },
                   {
                     "title": "Integrate Workday",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-workday"
+                    "path": "docs/integrating-workday"
                   },
                   {
                     "title": "Integrate Zenefits",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-zenefits"
+                    "path": "docs/integrating-zenefits"
                   },
                   {
                     "title": "Integrate Zoho",
-                    "path": "docs/integrations/integrating-human-resource-information-systems/integrating-zoho-people"
+                    "path": "docs/integrating-zoho-people"
                   }
                 ]
               },
@@ -811,35 +816,35 @@
                 "pages": [
                   {
                     "title": "Integrate Google Workspace",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-google-workspace"
+                    "path": "docs/integrating-google-workspace"
                   },
                   {
                     "title": "Integrate Microsoft Entra (Azure AD)",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-azure-active-directory-1"
+                    "path": "docs/integrating-azure-active-directory-1"
                   },
                   {
                     "title": "Integrate Okta (IDP)",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-okta-idp"
+                    "path": "docs/integrating-okta-idp"
                   },
                   {
                     "title": "Integrate Okta (SSO)",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-okta"
+                    "path": "docs/integrating-okta"
                   },
                   {
                     "title": "Integrate OneLogin",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-onelogin"
+                    "path": "docs/integrating-onelogin"
                   },
                   {
                     "title": "Integrate JumpCloud SSO",
-                    "path": "docs/integrations/integrating-identity-providers/jumpcloud-sso"
+                    "path": "docs/jumpcloud-sso"
                   },
                   {
                     "title": "Integrate Auth0",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-autho-1"
+                    "path": "docs/integrating-autho-1"
                   },
                   {
                     "title": "Integrate PingOne (Beta)",
-                    "path": "docs/integrations/integrating-identity-providers/integrating-pingidentity"
+                    "path": "docs/integrating-pingidentity"
                   }
                 ]
               },
@@ -850,83 +855,83 @@
                 "pages": [
                   {
                     "title": "Integrate 15Five",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-15five"
+                    "path": "docs/integrating-15five"
                   },
                   {
                     "title": "Integrate Adyen",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-adyen"
+                    "path": "docs/integrating-adyen"
                   },
                   {
                     "title": "Integrate Aircall",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-aircall"
+                    "path": "docs/integrating-aircall"
                   },
                   {
                     "title": "Integrate Amplitude",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-amplitude"
+                    "path": "docs/integrating-amplitude"
                   },
                   {
                     "title": "Integrate Anthropic Claude",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-anthropic-claude"
+                    "path": "docs/integrating-anthropic-claude"
                   },
                   {
                     "title": "Integrate Apollo.io",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-apollo-io"
+                    "path": "docs/integrating-apollo-io"
                   },
                   {
                     "title": "Integrate AppDirect",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-appdirect"
+                    "path": "docs/integrating-appdirect"
                   },
                   {
                     "title": "Integrate Cal.com",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-cal-com"
+                    "path": "docs/integrating-cal-com"
                   },
                   {
                     "title": "Integrate Calendly",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-calendly"
+                    "path": "docs/integrating-calendly"
                   },
                   {
                     "title": "Integrate Collibra",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-collibra"
+                    "path": "docs/integrating-collibra"
                   },
                   {
                     "title": "Integrate Gainsight PX",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-gainsight-px"
+                    "path": "docs/integrating-gainsight-px"
                   },
                   {
                     "title": "Integrate Gong",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-gong"
+                    "path": "docs/integrating-gong"
                   },
                   {
                     "title": "Integrate Harvest",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-harvest"
+                    "path": "docs/integrating-harvest"
                   },
                   {
                     "title": "Integrate Hunter",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-hunter"
+                    "path": "docs/integrating-hunter"
                   },
                   {
                     "title": "Integrate Notion",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-notion"
+                    "path": "docs/integrating-notion"
                   },
                   {
                     "title": "Integrate OpenAI",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-openai"
+                    "path": "docs/integrating-openai"
                   },
                   {
                     "title": "Integrate Stripe",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-stripe"
+                    "path": "docs/integrating-stripe"
                   },
                   {
                     "title": "Integrate Supabase",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-supabase"
+                    "path": "docs/integrating-supabase"
                   },
                   {
                     "title": "Integrate Xero",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-xero"
+                    "path": "docs/integrating-xero"
                   },
                   {
                     "title": "Integrate Airtable",
-                    "path": "docs/integrations/integrating-miscellaneous/integrating-airtable"
+                    "path": "docs/integrating-airtable"
                   }
                 ]
               },
@@ -937,47 +942,47 @@
                 "pages": [
                   {
                     "title": "Integrate Jamf Pro",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-jamf-pro"
+                    "path": "docs/integrating-jamf-pro"
                   },
                   {
                     "title": "Integrate JumpCloud",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-jumpcloud"
+                    "path": "docs/integrating-jumpcloud"
                   },
                   {
                     "title": "Integrate Kandji (Iru)",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-kandji"
+                    "path": "docs/integrating-kandji"
                   },
                   {
                     "title": "Integrate MS Intune",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/microsoft-intune"
+                    "path": "docs/microsoft-intune"
                   },
                   {
                     "title": "Integrate Endpoint Central",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-endpoint-central"
+                    "path": "docs/integrating-endpoint-central"
                   },
                   {
                     "title": "Integrating Fleet",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-fleet"
+                    "path": "docs/integrating-fleet"
                   },
                   {
                     "title": "Integrate KiteCyber",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-kitecyber"
+                    "path": "docs/integrating-kitecyber"
                   },
                   {
                     "title": "Integrate NinjaOne",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-ninjaone"
+                    "path": "docs/integrating-ninjaone"
                   },
                   {
                     "title": "Integrate Sophos",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-sophos"
+                    "path": "docs/integrating-sophos"
                   },
                   {
                     "title": "Integrate Kolide",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-kolide"
+                    "path": "docs/integrating-kolide"
                   },
                   {
                     "title": "Integrate Hexnode",
-                    "path": "docs/integrations/integrating-mobile-device-management-tools/integrating-hexnode"
+                    "path": "docs/integrating-hexnode"
                   }
                 ]
               },
@@ -988,15 +993,15 @@
                 "pages": [
                   {
                     "title": "Integrate Confluence",
-                    "path": "docs/integrations/policy-management/integrating-confluence"
+                    "path": "docs/integrating-confluence"
                   },
                   {
                     "title": "Integrate SharePoint",
-                    "path": "docs/integrations/policy-management/integrating-sharepoint"
+                    "path": "docs/integrating-sharepoint"
                   },
                   {
                     "title": "Integrate PandaDoc",
-                    "path": "docs/integrations/policy-management/integrating-pandadoc"
+                    "path": "docs/integrating-pandadoc"
                   }
                 ]
               },
@@ -1007,83 +1012,83 @@
                 "pages": [
                   {
                     "title": "Understand Task Management Integration Capabilities",
-                    "path": "docs/integrations/integrating-project-management-platforms/task-management-integration-capabilities"
+                    "path": "docs/task-management-integration-capabilities"
                   },
                   {
                     "title": "Integrate Jira",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-jira"
+                    "path": "docs/integrating-jira"
                   },
                   {
                     "title": "Manage Jira Tickets",
-                    "path": "docs/integrations/integrating-project-management-platforms/creating-jira-ticket"
+                    "path": "docs/creating-jira-ticket"
                   },
                   {
                     "title": "Integrate Monday.com",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-mondaycom"
+                    "path": "docs/integrating-mondaycom"
                   },
                   {
                     "title": "Integrate ClickUp",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-click-up"
+                    "path": "docs/integrating-click-up"
                   },
                   {
                     "title": "Integrate Shortcut",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-shortcut"
+                    "path": "docs/integrating-shortcut"
                   },
                   {
                     "title": "Create Shortcut Story",
-                    "path": "docs/integrations/integrating-project-management-platforms/creating-a-shortcut-story"
+                    "path": "docs/creating-a-shortcut-story"
                   },
                   {
                     "title": "Integrate Linear",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-linear"
+                    "path": "docs/integrating-linear"
                   },
                   {
                     "title": "Create Linear Issue",
-                    "path": "docs/integrations/integrating-project-management-platforms/creating-linear-issue"
+                    "path": "docs/creating-linear-issue"
                   },
                   {
                     "title": "Integrate Asana",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-asana"
+                    "path": "docs/integrating-asana"
                   },
                   {
                     "title": "Create Asana Tasks",
-                    "path": "docs/integrations/integrating-project-management-platforms/creating-asana-ticket"
+                    "path": "docs/creating-asana-ticket"
                   },
                   {
                     "title": "Integrate Azure DevOps (Create Tickets)",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-azure-devops-1"
+                    "path": "docs/integrating-azure-devops-1"
                   },
                   {
                     "title": "Integrate ServiceNow",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-servicenow"
+                    "path": "docs/integrating-servicenow"
                   },
                   {
                     "title": "Integrate Basecamp",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-basecamp"
+                    "path": "docs/integrating-basecamp"
                   },
                   {
                     "title": "Integrate Trello",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-trello"
+                    "path": "docs/integrating-trello"
                   },
                   {
                     "title": "Integrate Miro",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-miro"
+                    "path": "docs/integrating-miro"
                   },
                   {
                     "title": "Integrate Figma",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-figma"
+                    "path": "docs/integrating-figma"
                   },
                   {
                     "title": "Integrate Hive",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-hive"
+                    "path": "docs/integrating-hive"
                   },
                   {
                     "title": "Integrate Canny",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-canny"
+                    "path": "docs/integrating-canny"
                   },
                   {
                     "title": "Integrate OpenProject",
-                    "path": "docs/integrations/integrating-project-management-platforms/integrating-openproject"
+                    "path": "docs/integrating-openproject"
                   }
                 ]
               },
@@ -1094,7 +1099,7 @@
                 "pages": [
                   {
                     "title": "Integrate SentinelOne",
-                    "path": "docs/integrations/threat-intelligence/integrating-sentinelone"
+                    "path": "docs/integrating-sentinelone"
                   }
                 ]
               },
@@ -1105,15 +1110,15 @@
                 "pages": [
                   {
                     "title": "Integrate Freshservice",
-                    "path": "docs/integrations/ticket-management/integrating-freshservice"
+                    "path": "docs/integrating-freshservice"
                   },
                   {
                     "title": "Integrate ServiceDesk Plus",
-                    "path": "docs/integrations/ticket-management/integrating-servicedesk-plus"
+                    "path": "docs/integrating-servicedesk-plus"
                   },
                   {
                     "title": "Integrate Zendesk",
-                    "path": "docs/integrations/ticket-management/integrating-zendesk"
+                    "path": "docs/integrating-zendesk"
                   }
                 ]
               },
@@ -1124,23 +1129,23 @@
                 "pages": [
                   {
                     "title": "Integrate Azure DevOps",
-                    "path": "docs/integrations/integrating-version-control/integrating-azure-devops"
+                    "path": "docs/integrating-azure-devops"
                   },
                   {
                     "title": "Integrate Bitbucket",
-                    "path": "docs/integrations/integrating-version-control/integrating-bitbucket"
+                    "path": "docs/integrating-bitbucket"
                   },
                   {
                     "title": "Integrate GitHub",
-                    "path": "docs/integrations/integrating-version-control/integrating-github"
+                    "path": "docs/integrating-github"
                   },
                   {
                     "title": "Create GitHub Issues",
-                    "path": "docs/integrations/integrating-version-control/create-github-issues"
+                    "path": "docs/create-github-issues"
                   },
                   {
                     "title": "Integrate GitLab",
-                    "path": "docs/integrations/integrating-version-control/adding-gitlab"
+                    "path": "docs/adding-gitlab"
                   }
                 ]
               },
@@ -1151,31 +1156,31 @@
                 "pages": [
                   {
                     "title": "Integrating Aikido",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-aikido"
+                    "path": "docs/integrating-aikido"
                   },
                   {
                     "title": "Integrate Microsoft Defender Endpoint",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-microsoft-defender-endpoint"
+                    "path": "docs/integrating-microsoft-defender-endpoint"
                   },
                   {
                     "title": "Integrate Qualys",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-qualys"
+                    "path": "docs/integrating-qualys"
                   },
                   {
                     "title": "Integrate Sentry",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-sentry"
+                    "path": "docs/integrating-sentry"
                   },
                   {
                     "title": "Integrate Snyk",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-snyk"
+                    "path": "docs/integrating-snyk"
                   },
                   {
                     "title": "Integrate SonarCloud",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-sonarcloud"
+                    "path": "docs/integrating-sonarcloud"
                   },
                   {
                     "title": "Integrate Tenable",
-                    "path": "docs/integrations/vulnerability-scanners/integrating-tenable"
+                    "path": "docs/integrating-tenable"
                   }
                 ]
               },
@@ -1186,7 +1191,7 @@
                 "pages": [
                   {
                     "title": "Integrate Cloudflare",
-                    "path": "docs/integrations/web-security-cdn/integrating-cloudflare"
+                    "path": "docs/integrating-cloudflare"
                   }
                 ]
               }
@@ -1203,7 +1208,7 @@
                 "pages": [
                   {
                     "title": "Evidence Tasks: Walkthrough",
-                    "path": "docs/continuous-compliance/evidence-tasks/evidence-tasks-walkthrough"
+                    "path": "docs/evidence-tasks-walkthrough"
                   },
                   {
                     "group": "Evidence Task Statuses",
@@ -1212,7 +1217,7 @@
                     "pages": [
                       {
                         "title": "Understand Evidence Statuses",
-                        "path": "docs/continuous-compliance/evidence-tasks/overview-1/evidence-statuses"
+                        "path": "docs/evidence-statuses"
                       }
                     ]
                   },
@@ -1223,55 +1228,55 @@
                     "pages": [
                       {
                         "title": "Add Assignees to Evidence Tasks",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/assigning-an-evidence"
+                        "path": "docs/assigning-an-evidence"
                       },
                       {
                         "title": "Archive Evidence Attachments",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/archiving-for-evidence-attachments"
+                        "path": "docs/archiving-for-evidence-attachments"
                       },
                       {
                         "title": "Create a Custom Evidence Task",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/how-to-create-evidence-tasks"
+                        "path": "docs/how-to-create-evidence-tasks"
                       },
                       {
                         "title": "Clone an Evidence Task",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/clone-an-evidence-task"
+                        "path": "docs/clone-an-evidence-task"
                       },
                       {
                         "title": "Edit and Delete Evidence Tasks",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/editing-and-deleting-an-evidence-task"
+                        "path": "docs/editing-and-deleting-an-evidence-task"
                       },
                       {
                         "title": "Effort Estimate for Evidence Tasks",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/effort-estimate-for-evidence-tasks"
+                        "path": "docs/effort-estimate-for-evidence-tasks"
                       },
                       {
                         "title": "Export Evidence",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/exporting-evidences"
+                        "path": "docs/exporting-evidences"
                       },
                       {
                         "title": "Link and Unlink Controls to an Evidence Task",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/linking-and-unlinking-an-evidence-task-to-controls"
+                        "path": "docs/linking-and-unlinking-an-evidence-task-to-controls"
                       },
                       {
                         "title": "Mark an Evidence Task as Not Relevant",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/marking-an-evidence-task-not-relevant"
+                        "path": "docs/marking-an-evidence-task-not-relevant"
                       },
                       {
                         "title": "Mark an Evidence Task as Relevant",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/marking-a-policy-not-relevant-1-1"
+                        "path": "docs/marking-a-policy-not-relevant-1-1"
                       },
                       {
                         "title": "Remove an Evidence Attachment",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/removing-an-evidence"
+                        "path": "docs/removing-an-evidence"
                       },
                       {
                         "title": "Review Evidence Audit Logs",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/evidence-audit-logs"
+                        "path": "docs/evidence-audit-logs"
                       },
                       {
                         "title": "Setup Bi-Directional Sync With Jira for Evidence Management",
-                        "path": "docs/continuous-compliance/evidence-tasks/working-with-evidence-tasks/syncing-scrut-with-jira-for-evidence-management"
+                        "path": "docs/syncing-scrut-with-jira-for-evidence-management"
                       }
                     ]
                   },
@@ -1282,11 +1287,11 @@
                     "pages": [
                       {
                         "title": "Evidence Approval Workflow",
-                        "path": "docs/continuous-compliance/evidence-tasks/review-approval/understanding-evidence-approval-workflow"
+                        "path": "docs/understanding-evidence-approval-workflow"
                       },
                       {
                         "title": "Set Recurrence and Review Date for Evidence Tasks",
-                        "path": "docs/continuous-compliance/evidence-tasks/review-approval/setting-an-evidence-review-cycle"
+                        "path": "docs/setting-an-evidence-review-cycle"
                       }
                     ]
                   },
@@ -1297,27 +1302,27 @@
                     "pages": [
                       {
                         "title": "Vault: Walkthrough",
-                        "path": "docs/continuous-compliance/evidence-tasks/vault/vault-walkthrough"
+                        "path": "docs/vault-walkthrough"
                       },
                       {
                         "title": "Add and Manage Documents and Folders",
-                        "path": "docs/continuous-compliance/evidence-tasks/vault/exploring-the-vault-module"
+                        "path": "docs/exploring-the-vault-module"
                       },
                       {
                         "title": "Enable AI Readability for Vault Files",
-                        "path": "docs/continuous-compliance/evidence-tasks/vault/enabling-ai-readability"
+                        "path": "docs/enabling-ai-readability"
                       },
                       {
                         "title": "Switch between List and Grid Layouts in Vault",
-                        "path": "docs/continuous-compliance/evidence-tasks/vault/change-between-list-and-grid-layout"
+                        "path": "docs/change-between-list-and-grid-layout"
                       },
                       {
                         "title": "Manage Tags in the Vault",
-                        "path": "docs/continuous-compliance/evidence-tasks/vault/managing-tags-in-the-vault"
+                        "path": "docs/managing-tags-in-the-vault"
                       },
                       {
                         "title": "Search for Files in the Vault",
-                        "path": "docs/continuous-compliance/evidence-tasks/vault/searching-in-the-vault"
+                        "path": "docs/searching-in-the-vault"
                       }
                     ]
                   },
@@ -1328,31 +1333,31 @@
                     "pages": [
                       {
                         "title": "Quick Start Guide: Evidence Automation",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/evidence-automation-workflow"
+                        "path": "docs/evidence-automation-workflow"
                       },
                       {
                         "title": "Understand Evidence Automation & Statuses",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/understanding-evidence-collection-statuses"
+                        "path": "docs/understanding-evidence-collection-statuses"
                       },
                       {
                         "title": "Check Your Evidence Automation Coverage",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/check-your-evidence-automation-coverage"
+                        "path": "docs/check-your-evidence-automation-coverage"
                       },
                       {
                         "title": "Mark an Evidence as Fully or Partially Automated",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/mark-an-evidence-as-fully-or-partially-automated"
+                        "path": "docs/mark-an-evidence-as-fully-or-partially-automated"
                       },
                       {
                         "title": "Complete Pending Scrut Monitor Setup",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/complete-a-pending-scrut-monitor-setup"
+                        "path": "docs/complete-a-pending-scrut-monitor-setup"
                       },
                       {
                         "title": "Link/Unlink Automated Tests to Evidence Tasks",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/manage-automated-tests-on-evidence-tasks"
+                        "path": "docs/manage-automated-tests-on-evidence-tasks"
                       },
                       {
                         "title": "FAQs: Evidence Automation",
-                        "path": "docs/continuous-compliance/evidence-tasks/evidence-automation/evidence-automation-faqs"
+                        "path": "docs/evidence-automation-faqs"
                       }
                     ]
                   },
@@ -1363,19 +1368,19 @@
                     "pages": [
                       {
                         "title": "Upload Evidence",
-                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/how-to-upload-evidence"
+                        "path": "docs/how-to-upload-evidence"
                       },
                       {
                         "title": "Upload Evidence from Google Drive",
-                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/google-drive-integration-upload-evidences-from-google-drive"
+                        "path": "docs/google-drive-integration-upload-evidences-from-google-drive"
                       },
                       {
                         "title": "Upload Evidence Manually",
-                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/uploading-evidence"
+                        "path": "docs/uploading-evidence"
                       },
                       {
                         "title": "Use Sample Templates for Evidence",
-                        "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/using-evidence-templates"
+                        "path": "docs/using-evidence-templates"
                       },
                       {
                         "group": "Scrut Monitor",
@@ -1384,19 +1389,19 @@
                         "pages": [
                           {
                             "title": "Scrut Monitor",
-                            "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/scrut-monitor"
+                            "path": "docs/scrut-monitor"
                           },
                           {
                             "title": "Set up a Scrut Monitor",
-                            "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/how-to-set-up-scrut-monitor"
+                            "path": "docs/how-to-set-up-scrut-monitor"
                           },
                           {
                             "title": "Set up a Scrut Monitor for Scrut Modules",
-                            "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/how-to-automate-evidence-collection-from-scrut-modules"
+                            "path": "docs/how-to-automate-evidence-collection-from-scrut-modules"
                           },
                           {
                             "title": "Set up a Scrut Monitor for Jira",
-                            "path": "docs/continuous-compliance/evidence-tasks/upload-attachments-to-an-evidence-task/scrut-monitor/setting-up-scrut-monitor-for-jira"
+                            "path": "docs/setting-up-scrut-monitor-for-jira"
                           }
                         ]
                       }
@@ -1409,7 +1414,7 @@
                     "pages": [
                       {
                         "title": "Detect Gaps in Evidence with Scrut Teammates",
-                        "path": "docs/continuous-compliance/evidence-tasks/ai-powered-features-2/automated-evidence-checker"
+                        "path": "docs/automated-evidence-checker"
                       }
                     ]
                   }
@@ -1422,19 +1427,19 @@
                 "pages": [
                   {
                     "title": "Cloud Tests: Walkthrough",
-                    "path": "docs/continuous-compliance/cloud/accessing-the-cloud-module"
+                    "path": "docs/accessing-the-cloud-module"
                   },
                   {
                     "title": "Quick Start Guide: Cloud Tests",
-                    "path": "docs/continuous-compliance/cloud/cloud-quick-start-guide"
+                    "path": "docs/cloud-quick-start-guide"
                   },
                   {
                     "title": "View Cloud Test Details",
-                    "path": "docs/continuous-compliance/cloud/cloud-test-details-page"
+                    "path": "docs/cloud-test-details-page"
                   },
                   {
                     "title": "Cloud Test Statuses",
-                    "path": "docs/continuous-compliance/cloud/understanding-cloud-test-statuses"
+                    "path": "docs/understanding-cloud-test-statuses"
                   },
                   {
                     "group": "Working on a Test Finding",
@@ -1443,39 +1448,39 @@
                     "pages": [
                       {
                         "title": "Fix Failing Tests",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/how-to-fix-failing-tests"
+                        "path": "docs/how-to-fix-failing-tests"
                       },
                       {
                         "title": "Assign a Test Finding",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-test-finding"
+                        "path": "docs/assigning-a-test-finding"
                       },
                       {
                         "title": "Assign a Flagged Resource",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/assigning-a-resource-in-a-failing-test"
+                        "path": "docs/assigning-a-resource-in-a-failing-test"
                       },
                       {
                         "title": "Remediate a Test Finding",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/remediating-a-test-finding"
+                        "path": "docs/remediating-a-test-finding"
                       },
                       {
                         "title": "Validate Test Remediation",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/validating-remediation-with-test-now"
+                        "path": "docs/validating-remediation-with-test-now"
                       },
                       {
                         "title": "Ignore a Test",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/ignoring-a-test-finding"
+                        "path": "docs/ignoring-a-test-finding"
                       },
                       {
                         "title": "Ignore a Resource Within a Test Finding",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/ignoring-a-resource-of-a-test-finding"
+                        "path": "docs/ignoring-a-resource-of-a-test-finding"
                       },
                       {
                         "title": "Monitor an Ignored Test",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/monitoring-a-test-finding"
+                        "path": "docs/monitoring-a-test-finding"
                       },
                       {
                         "title": "Create a Risk from a Test Finding",
-                        "path": "docs/continuous-compliance/cloud/working-a-test-finding/risk-generation-from-cloud-test-findings"
+                        "path": "docs/risk-generation-from-cloud-test-findings"
                       }
                     ]
                   },
@@ -1486,11 +1491,11 @@
                     "pages": [
                       {
                         "title": "Cloud vs. Automated Tests",
-                        "path": "docs/continuous-compliance/cloud/faqs-1/cloud-vs-automated-tests"
+                        "path": "docs/cloud-vs-automated-tests"
                       },
                       {
                         "title": "Supported Services for Each Cloud Provider",
-                        "path": "docs/continuous-compliance/cloud/faqs-1/cloud-faqs"
+                        "path": "docs/cloud-faqs"
                       }
                     ]
                   }
@@ -1503,31 +1508,31 @@
                 "pages": [
                   {
                     "title": "Tests: Walkthrough",
-                    "path": "docs/continuous-compliance/automated-tests/getting-started-with-tests-in-scrut"
+                    "path": "docs/getting-started-with-tests-in-scrut"
                   },
                   {
                     "title": "Import Tests from the Test Library",
-                    "path": "docs/continuous-compliance/automated-tests/test-library"
+                    "path": "docs/test-library"
                   },
                   {
                     "title": "View Test Details",
-                    "path": "docs/continuous-compliance/automated-tests/automated-tests-tab"
+                    "path": "docs/automated-tests-tab"
                   },
                   {
                     "title": "Link and Unlink Controls to a Test",
-                    "path": "docs/continuous-compliance/automated-tests/linking-test-to-a-control"
+                    "path": "docs/linking-test-to-a-control"
                   },
                   {
                     "title": "Check Test Run Status & Next Scheduled Scan",
-                    "path": "docs/continuous-compliance/automated-tests/understanding-scan-status-in-the-tests-module"
+                    "path": "docs/understanding-scan-status-in-the-tests-module"
                   },
                   {
                     "title": "View the Effort Estimate to Complete Tests",
-                    "path": "docs/continuous-compliance/automated-tests/effort-estimate-for-tests"
+                    "path": "docs/effort-estimate-for-tests"
                   },
                   {
                     "title": "Understand Deprecated Tests",
-                    "path": "docs/continuous-compliance/automated-tests/deprecated-tests-in-scrut"
+                    "path": "docs/deprecated-tests-in-scrut"
                   }
                 ]
               },
@@ -1538,31 +1543,31 @@
                 "pages": [
                   {
                     "title": "Vulnerabilities: Walkthrough",
-                    "path": "docs/continuous-compliance/vulnerabilites/vulnerabilities-walkthrough"
+                    "path": "docs/vulnerabilities-walkthrough"
                   },
                   {
                     "title": "Define SLAs for Vulnerability Findings",
-                    "path": "docs/continuous-compliance/vulnerabilites/defining-sla-for-vulnerability-findings"
+                    "path": "docs/defining-sla-for-vulnerability-findings"
                   },
                   {
                     "title": "Populate Vulnerabilities Via Third-Party Tools",
-                    "path": "docs/continuous-compliance/vulnerabilites/populating-vulnerabilities-via-third-party-scans"
+                    "path": "docs/populating-vulnerabilities-via-third-party-scans"
                   },
                   {
                     "title": "Import Vulnerabilities From External Reports",
-                    "path": "docs/continuous-compliance/vulnerabilites/importing-vulnerabilities-from-external-reports"
+                    "path": "docs/importing-vulnerabilities-from-external-reports"
                   },
                   {
                     "title": "Add Custom Fields to Vulnerability Findings",
-                    "path": "docs/continuous-compliance/vulnerabilites/custom-fields-vulnerabilities"
+                    "path": "docs/custom-fields-vulnerabilities"
                   },
                   {
                     "title": "View Vulnerability Details in Third-Party Scans",
-                    "path": "docs/continuous-compliance/vulnerabilites/understanding-vulnerability-details-page"
+                    "path": "docs/understanding-vulnerability-details-page"
                   },
                   {
                     "title": "Download the Vulnerability Report",
-                    "path": "docs/continuous-compliance/vulnerabilites/application-security-assessment-report"
+                    "path": "docs/application-security-assessment-report"
                   },
                   {
                     "group": "Quick Start Guide: Vulnerabilities",
@@ -1571,23 +1576,23 @@
                     "pages": [
                       {
                         "title": "Step 1: Add Targets",
-                        "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/vulnerabilities-add-targets"
+                        "path": "docs/vulnerabilities-add-targets"
                       },
                       {
                         "title": "Step 2: Run Scans",
-                        "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/vulnerabilities-run-scans"
+                        "path": "docs/vulnerabilities-run-scans"
                       },
                       {
                         "title": "Step 3: Review Scan Results",
-                        "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/review-scan-results"
+                        "path": "docs/review-scan-results"
                       },
                       {
                         "title": "Step 4: Take Actions on Scan Findings",
-                        "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/take-actions-on-scan-findings"
+                        "path": "docs/take-actions-on-scan-findings"
                       },
                       {
                         "title": "Step 5: Get Expert Assistance",
-                        "path": "docs/continuous-compliance/vulnerabilites/step-by-step-guide-vulnerabilities-module/get-expert-assistance"
+                        "path": "docs/get-expert-assistance"
                       }
                     ]
                   },
@@ -1598,23 +1603,23 @@
                     "pages": [
                       {
                         "title": "Understand PTaaS",
-                        "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/what-is-scrut-ptaas"
+                        "path": "docs/what-is-scrut-ptaas"
                       },
                       {
                         "title": "Know PTaaS Scope & Coverage",
-                        "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/ptaas-scope-coverage"
+                        "path": "docs/ptaas-scope-coverage"
                       },
                       {
                         "title": "Step-by-Step Guide to Run Your PTaaS Program",
-                        "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/getting-started-with-ptaas"
+                        "path": "docs/getting-started-with-ptaas"
                       },
                       {
                         "title": "Understand Your PTaaS Program Calendar",
-                        "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/understand-your-ptaas-program-calendar"
+                        "path": "docs/understand-your-ptaas-program-calendar"
                       },
                       {
                         "title": "What's Included in Your PTaaS Reports",
-                        "path": "docs/continuous-compliance/vulnerabilites/ptaas-pen-testing-as-a-service/what-s-included-in-your-ptaas-reports"
+                        "path": "docs/what-s-included-in-your-ptaas-reports"
                       }
                     ]
                   }
@@ -1628,11 +1633,11 @@
             "pages": [
               {
                 "title": "Risks: Walkthrough",
-                "path": "docs/risk-management/how-to-use-the-risk-dashboard"
+                "path": "docs/how-to-use-the-risk-dashboard"
               },
               {
                 "title": "Quick Start Guide: Risk Management",
-                "path": "docs/risk-management/quick-start-guide-risk-management"
+                "path": "docs/quick-start-guide-risk-management"
               },
               {
                 "group": "Create and Edit Risks",
@@ -1641,31 +1646,31 @@
                 "pages": [
                   {
                     "title": "What is the Risk Register",
-                    "path": "docs/risk-management/overview-5/understanding-risk-register"
+                    "path": "docs/understanding-risk-register"
                   },
                   {
                     "title": "Add a Risk",
-                    "path": "docs/risk-management/overview-5/adding-a-new-risk"
+                    "path": "docs/adding-a-new-risk"
                   },
                   {
                     "title": "Edit Risk Details",
-                    "path": "docs/risk-management/overview-5/editing-risk-details"
+                    "path": "docs/editing-risk-details"
                   },
                   {
                     "title": "Edit Risk Score",
-                    "path": "docs/risk-management/overview-5/editing-risk-score"
+                    "path": "docs/editing-risk-score"
                   },
                   {
                     "title": "Delete a Risk",
-                    "path": "docs/risk-management/overview-5/deleting-a-risk"
+                    "path": "docs/deleting-a-risk"
                   },
                   {
                     "title": "Link and Unlink Controls to a Risk",
-                    "path": "docs/risk-management/overview-5/risk-assessment"
+                    "path": "docs/risk-assessment"
                   },
                   {
                     "title": "Link Assets to a Risk",
-                    "path": "docs/risk-management/overview-5/linking-assets-to-a-risk"
+                    "path": "docs/linking-assets-to-a-risk"
                   }
                 ]
               },
@@ -1676,35 +1681,35 @@
                 "pages": [
                   {
                     "title": "Understand Risk Statuses",
-                    "path": "docs/risk-management/risk-treatment/understand-risk-statuses"
+                    "path": "docs/understand-risk-statuses"
                   },
                   {
                     "title": "Understand Risk Treatment Strategies",
-                    "path": "docs/risk-management/risk-treatment/risk-treatment-workflow"
+                    "path": "docs/risk-treatment-workflow"
                   },
                   {
                     "title": "Risk Assessment Workflow",
-                    "path": "docs/risk-management/risk-treatment/risk-assessment-workflow"
+                    "path": "docs/risk-assessment-workflow"
                   },
                   {
                     "title": "Risk Approval Workflow",
-                    "path": "docs/risk-management/risk-treatment/risk-approval-workflow"
+                    "path": "docs/risk-approval-workflow"
                   },
                   {
                     "title": "Monitor a Risk",
-                    "path": "docs/risk-management/risk-treatment/risk-monitor-state-improved-risk-lifecycle"
+                    "path": "docs/risk-monitor-state-improved-risk-lifecycle"
                   },
                   {
                     "title": "Add Residual Risk",
-                    "path": "docs/risk-management/risk-treatment/closing-or-adding-a-residual-risk"
+                    "path": "docs/closing-or-adding-a-residual-risk"
                   },
                   {
                     "title": "Reset a Risk",
-                    "path": "docs/risk-management/risk-treatment/reseting-a-risk"
+                    "path": "docs/reseting-a-risk"
                   },
                   {
                     "title": "Close a Risk",
-                    "path": "docs/risk-management/risk-treatment/closing-a-risk"
+                    "path": "docs/closing-a-risk"
                   }
                 ]
               },
@@ -1715,15 +1720,15 @@
                 "pages": [
                   {
                     "title": "Understand the Risk Trend Graph",
-                    "path": "docs/risk-management/understanding-risk-dashboard/risk-trend-graph"
+                    "path": "docs/risk-trend-graph"
                   },
                   {
                     "title": "Export the Risk Register",
-                    "path": "docs/risk-management/understanding-risk-dashboard/exporting-risk-register"
+                    "path": "docs/exporting-risk-register"
                   },
                   {
                     "title": "Download the Risk Report",
-                    "path": "docs/risk-management/understanding-risk-dashboard/risk-report"
+                    "path": "docs/risk-report"
                   }
                 ]
               },
@@ -1734,35 +1739,35 @@
                 "pages": [
                   {
                     "title": "Understand the Risk Mitigation Workflow",
-                    "path": "docs/risk-management/mitigation-task/risk-mitigation-workflow"
+                    "path": "docs/risk-mitigation-workflow"
                   },
                   {
                     "title": "Mitigation Tasks: Walkthrough",
-                    "path": "docs/risk-management/mitigation-task/unified-mitigation-task-tab"
+                    "path": "docs/unified-mitigation-task-tab"
                   },
                   {
                     "title": "Create a Mitigation Task for a Specific Risk",
-                    "path": "docs/risk-management/mitigation-task/add-a-mitigation-task"
+                    "path": "docs/add-a-mitigation-task"
                   },
                   {
                     "title": "Upload a Document To a Mitigation Task",
-                    "path": "docs/risk-management/mitigation-task/uploading-a-mitigation-task-document"
+                    "path": "docs/uploading-a-mitigation-task-document"
                   },
                   {
                     "title": "Mitigation Task Approval Workflow",
-                    "path": "docs/risk-management/mitigation-task/mitigation-task-approval-workflow"
+                    "path": "docs/mitigation-task-approval-workflow"
                   },
                   {
                     "title": "Edit and Delete Mitigation Tasks",
-                    "path": "docs/risk-management/mitigation-task/editing-and-deleting-a-mitigation-task"
+                    "path": "docs/editing-and-deleting-a-mitigation-task"
                   },
                   {
                     "title": "Link and Unlink Controls to a Mitigation Task",
-                    "path": "docs/risk-management/mitigation-task/linking-unlinking-controls-to-a-mitigation-task"
+                    "path": "docs/linking-unlinking-controls-to-a-mitigation-task"
                   },
                   {
                     "title": "Auto-Populate Controls in Mitigation Tasks",
-                    "path": "docs/risk-management/mitigation-task/automatic-population-of-controls"
+                    "path": "docs/automatic-population-of-controls"
                   }
                 ]
               },
@@ -1773,31 +1778,31 @@
                 "pages": [
                   {
                     "title": "Configure Risk Scores & Factors",
-                    "path": "docs/risk-management/configuring-risk-register/configuring-custom-risk-score-formula"
+                    "path": "docs/configuring-custom-risk-score-formula"
                   },
                   {
                     "title": "Create Custom Risk Categories",
-                    "path": "docs/risk-management/configuring-risk-register/configuring-custom-risk-categories"
+                    "path": "docs/configuring-custom-risk-categories"
                   },
                   {
                     "title": "Create Custom Risk Fields",
-                    "path": "docs/risk-management/configuring-risk-register/configuring-custom-fields-for-risks"
+                    "path": "docs/configuring-custom-fields-for-risks"
                   },
                   {
                     "title": "Rename System Risk Fields",
-                    "path": "docs/risk-management/configuring-risk-register/rename-system-risk-fields"
+                    "path": "docs/rename-system-risk-fields"
                   },
                   {
                     "title": "Customize Risk Register Layout",
-                    "path": "docs/risk-management/configuring-risk-register/customize-risk-register-layout"
+                    "path": "docs/customize-risk-register-layout"
                   },
                   {
                     "title": "Configure the Add Risk Form",
-                    "path": "docs/risk-management/configuring-risk-register/configure-add-risk-form"
+                    "path": "docs/configure-add-risk-form"
                   },
                   {
                     "title": "Turn on Risk IDs",
-                    "path": "docs/risk-management/configuring-risk-register/configuring-risk-id-for-risk"
+                    "path": "docs/configuring-risk-id-for-risk"
                   }
                 ]
               }
@@ -1809,27 +1814,27 @@
             "pages": [
               {
                 "title": "Asset Management: Walkthrough",
-                "path": "docs/asset-management/asset-management-walkthrough"
+                "path": "docs/asset-management-walkthrough"
               },
               {
                 "title": "Quick Start Guide: Asset Management",
-                "path": "docs/asset-management/adding-assets"
+                "path": "docs/adding-assets"
               },
               {
                 "title": "Which Asset Types Does Scrut Support?",
-                "path": "docs/asset-management/asset-management-overview"
+                "path": "docs/asset-management-overview"
               },
               {
                 "title": "Perform Actions on Assets",
-                "path": "docs/asset-management/asset-actions"
+                "path": "docs/asset-actions"
               },
               {
                 "title": "Create Risks From Assets",
-                "path": "docs/asset-management/add-risk-to-an-asset"
+                "path": "docs/add-risk-to-an-asset"
               },
               {
                 "title": "Additional FAQs: Asset Management",
-                "path": "docs/asset-management/asset-management-faqs"
+                "path": "docs/asset-management-faqs"
               }
             ]
           },
@@ -1844,59 +1849,59 @@
                 "pages": [
                   {
                     "title": "Employees Module: Walkthrough",
-                    "path": "docs/people/employees-1/employees-module"
+                    "path": "docs/employees-module"
                   },
                   {
                     "title": "Quick Start Guide: Employees Module",
-                    "path": "docs/people/employees-1/step-by-step-tutorial-for-employee-module"
+                    "path": "docs/step-by-step-tutorial-for-employee-module"
                   },
                   {
                     "title": "Import & Sync Employee Details",
-                    "path": "docs/people/employees-1/adding-an-employee"
+                    "path": "docs/adding-an-employee"
                   },
                   {
                     "title": "Manage Employee Groups",
-                    "path": "docs/people/employees-1/groups"
+                    "path": "docs/groups"
                   },
                   {
                     "title": "View an Individual Employee Record",
-                    "path": "docs/people/employees-1/managing-employees"
+                    "path": "docs/managing-employees"
                   },
                   {
                     "title": "Mark an Employee On leave",
-                    "path": "docs/people/employees-1/marking-an-employee-on-leave"
+                    "path": "docs/marking-an-employee-on-leave"
                   },
                   {
                     "title": "Upload Onboarding & Offboarding Documents",
-                    "path": "docs/people/employees-1/uploading-onboarding-documents-of-an-employee"
+                    "path": "docs/uploading-onboarding-documents-of-an-employee"
                   },
                   {
                     "title": "How To Offboard an Employee",
-                    "path": "docs/people/employees-1/terminating-and-offboarding-an-employee"
+                    "path": "docs/terminating-and-offboarding-an-employee"
                   },
                   {
                     "title": "Reset Terminated Employee",
-                    "path": "docs/people/employees-1/resetting-terminated-employee"
+                    "path": "docs/resetting-terminated-employee"
                   },
                   {
                     "title": "Reset Employee Offboarding",
-                    "path": "docs/people/employees-1/resetting-an-offboarded-employee"
+                    "path": "docs/resetting-an-offboarded-employee"
                   },
                   {
                     "title": "Mark an Employee as Non-Personnel",
-                    "path": "docs/people/employees-1/marking-an-employee-not-a-person"
+                    "path": "docs/marking-an-employee-not-a-person"
                   },
                   {
                     "title": "Revert Non-Personnel Status",
-                    "path": "docs/people/employees-1/marking-an-employee-person"
+                    "path": "docs/marking-an-employee-person"
                   },
                   {
                     "title": "Send Task Reminders",
-                    "path": "docs/people/employees-1/sending-training-reminders"
+                    "path": "docs/sending-training-reminders"
                   },
                   {
                     "title": "View Audit Logs in Employee Module",
-                    "path": "docs/people/employees-1/audit-logs-for-employee-section"
+                    "path": "docs/audit-logs-for-employee-section"
                   },
                   {
                     "group": "Checklists",
@@ -1905,31 +1910,31 @@
                     "pages": [
                       {
                         "title": "What are Checklists in Scrut?",
-                        "path": "docs/people/employees-1/checklists/checklist-tasks"
+                        "path": "docs/checklist-tasks"
                       },
                       {
                         "title": "Recommended Checklist Workflow",
-                        "path": "docs/people/employees-1/checklists/step-by-step-guide-to-using-checklists"
+                        "path": "docs/step-by-step-guide-to-using-checklists"
                       },
                       {
                         "title": "Customize Checklist Tasks",
-                        "path": "docs/people/employees-1/checklists/customizing-checklist-tasks"
+                        "path": "docs/customizing-checklist-tasks"
                       },
                       {
                         "title": "Create a New Checklist",
-                        "path": "docs/people/employees-1/checklists/create-a-new-checklist"
+                        "path": "docs/create-a-new-checklist"
                       },
                       {
                         "title": "Exclude Specific Tasks for Employees",
-                        "path": "docs/people/employees-1/checklists/disabling-specific-tasks-for-employees"
+                        "path": "docs/disabling-specific-tasks-for-employees"
                       },
                       {
                         "title": "Create an Empty Checklist",
-                        "path": "docs/people/employees-1/checklists/empty-checklists"
+                        "path": "docs/empty-checklists"
                       },
                       {
                         "title": "Additional FAQs: Checklists",
-                        "path": "docs/people/employees-1/checklists/checklist-faqs"
+                        "path": "docs/checklist-faqs"
                       }
                     ]
                   }
@@ -1942,19 +1947,19 @@
                 "pages": [
                   {
                     "title": "Employee Portal: Walkthrough",
-                    "path": "docs/people/employee-portal/employee-portal-overview"
+                    "path": "docs/employee-portal-overview"
                   },
                   {
                     "title": "Login to the Employee Portal",
-                    "path": "docs/people/employee-portal/employee-portal-login-guide"
+                    "path": "docs/employee-portal-login-guide"
                   },
                   {
                     "title": "Accept Policies in the Employee Portal",
-                    "path": "docs/people/employee-portal/accepting-policies-in-the-employee-portal"
+                    "path": "docs/accepting-policies-in-the-employee-portal"
                   },
                   {
                     "title": "Complete Security Training",
-                    "path": "docs/people/employee-portal/completing-assigned-security-campaigns"
+                    "path": "docs/completing-assigned-security-campaigns"
                   }
                 ]
               },
@@ -1965,55 +1970,55 @@
                 "pages": [
                   {
                     "title": "Training Campaigns: Walkthrough",
-                    "path": "docs/people/training-campaigns/understanding-security-awareness"
+                    "path": "docs/understanding-security-awareness"
                   },
                   {
                     "title": "Create a Training Campaign",
-                    "path": "docs/people/training-campaigns/create-security-awareness-campaign"
+                    "path": "docs/create-security-awareness-campaign"
                   },
                   {
                     "title": "Understand Training Campaign Details",
-                    "path": "docs/people/training-campaigns/viewing-a-training-campaign"
+                    "path": "docs/viewing-a-training-campaign"
                   },
                   {
                     "title": "Customize a Training Quiz",
-                    "path": "docs/people/training-campaigns/configure-quiz"
+                    "path": "docs/configure-quiz"
                   },
                   {
                     "title": "Assign and Manage Employees to Training Campaigns",
-                    "path": "docs/people/training-campaigns/assigning-and-removing-employee-from-a-campaign"
+                    "path": "docs/assigning-and-removing-employee-from-a-campaign"
                   },
                   {
                     "title": "Edit a Training Campaign",
-                    "path": "docs/people/training-campaigns/editing-security-awareness-campaign"
+                    "path": "docs/editing-security-awareness-campaign"
                   },
                   {
                     "title": "Reschedule a Training Campaign",
-                    "path": "docs/people/training-campaigns/extending-a-training-campaign"
+                    "path": "docs/extending-a-training-campaign"
                   },
                   {
                     "title": "End a Training Campaign",
-                    "path": "docs/people/training-campaigns/end-a-training-campaign"
+                    "path": "docs/end-a-training-campaign"
                   },
                   {
                     "title": "Delete a Training Campaign",
-                    "path": "docs/people/training-campaigns/deleting-a-training-campaign"
+                    "path": "docs/deleting-a-training-campaign"
                   },
                   {
                     "title": "Clone a Training Campaign",
-                    "path": "docs/people/training-campaigns/cloning-a-campaign"
+                    "path": "docs/cloning-a-campaign"
                   },
                   {
                     "title": "Send Manual Reminders",
-                    "path": "docs/people/training-campaigns/send-manual-reminders-for-training-campaigns"
+                    "path": "docs/send-manual-reminders-for-training-campaigns"
                   },
                   {
                     "title": "Turn On Automated Evidence Collection for Training Campaigns",
-                    "path": "docs/people/training-campaigns/automated-evidence-collection-for-completed-training-campaigns"
+                    "path": "docs/automated-evidence-collection-for-completed-training-campaigns"
                   },
                   {
                     "title": "View Audit Logs in Training Campaigns",
-                    "path": "docs/people/training-campaigns/audit-logs-for-training-campaigns"
+                    "path": "docs/audit-logs-for-training-campaigns"
                   }
                 ]
               },
@@ -2024,27 +2029,27 @@
                 "pages": [
                   {
                     "title": "Access Reviews: Walkthrough",
-                    "path": "docs/people/access-review-1/access-review-walkthrough"
+                    "path": "docs/access-review-walkthrough"
                   },
                   {
                     "title": "Quick Start Guide: Access Reviews",
-                    "path": "docs/people/access-review-1/quick-start-guide-access-review"
+                    "path": "docs/quick-start-guide-access-review"
                   },
                   {
                     "title": "Create a New Access Review",
-                    "path": "docs/people/access-review-1/creating-a-new-access-review"
+                    "path": "docs/creating-a-new-access-review"
                   },
                   {
                     "title": "Conduct an Access Review",
-                    "path": "docs/people/access-review-1/lifecycle-of-an-access-review"
+                    "path": "docs/lifecycle-of-an-access-review"
                   },
                   {
                     "title": "Additional FAQs: Access Reviews",
-                    "path": "docs/people/access-review-1/access-review-faqs"
+                    "path": "docs/access-review-faqs"
                   },
                   {
                     "title": "What to Do After Completing an Access Review",
-                    "path": "docs/people/access-review-1/post-review-actions"
+                    "path": "docs/post-review-actions"
                   },
                   {
                     "group": "Shadow IT",
@@ -2053,27 +2058,27 @@
                     "pages": [
                       {
                         "title": "Shadow IT: Walkthrough",
-                        "path": "docs/people/access-review-1/shadow-it/shadow-it-walkthrough"
+                        "path": "docs/shadow-it-walkthrough"
                       },
                       {
                         "title": "Quick Start Guide: Shadow IT",
-                        "path": "docs/people/access-review-1/shadow-it/quick-start-guide-shadow-it"
+                        "path": "docs/quick-start-guide-shadow-it"
                       },
                       {
                         "title": "How To Manage Discovered Applications",
-                        "path": "docs/people/access-review-1/shadow-it/how-to-manage-discovered-applications"
+                        "path": "docs/how-to-manage-discovered-applications"
                       },
                       {
                         "title": "How to Notify Users About Restricted Applications",
-                        "path": "docs/people/access-review-1/shadow-it/how-to-notify-users-about-restricted-applications"
+                        "path": "docs/how-to-notify-users-about-restricted-applications"
                       },
                       {
                         "title": "How to Set a Reviewer for an App",
-                        "path": "docs/people/access-review-1/shadow-it/how-to-set-an-app-reviewer"
+                        "path": "docs/how-to-set-an-app-reviewer"
                       },
                       {
                         "title": "Shadow AI Governance: Review & Manage AI Apps",
-                        "path": "docs/people/access-review-1/shadow-it/shadow-ai-governance-review-manage-ai-applications"
+                        "path": "docs/shadow-ai-governance-review-manage-ai-applications"
                       }
                     ]
                   }
@@ -2086,23 +2091,23 @@
                 "pages": [
                   {
                     "title": "Scrut Agent: Walkthrough",
-                    "path": "docs/people/scrut-agent/scrut-agent-walkthrough"
+                    "path": "docs/scrut-agent-walkthrough"
                   },
                   {
                     "title": "Quick Start Guide: Scrut Agent",
-                    "path": "docs/people/scrut-agent/how-to-use-the-scrut-agent"
+                    "path": "docs/how-to-use-the-scrut-agent"
                   },
                   {
                     "title": "View Data Collected by Scrut Agent",
-                    "path": "docs/people/scrut-agent/viewing-collected-agent-data"
+                    "path": "docs/viewing-collected-agent-data"
                   },
                   {
                     "title": "Scrut Agent: Supported Operating Systems",
-                    "path": "docs/people/scrut-agent/scrut-agent-supported-operating-systems"
+                    "path": "docs/scrut-agent-supported-operating-systems"
                   },
                   {
                     "title": "Additional FAQs: Scrut Agent",
-                    "path": "docs/people/scrut-agent/scrut-agent-faqs-troubleshooting"
+                    "path": "docs/scrut-agent-faqs-troubleshooting"
                   },
                   {
                     "group": "Install Scrut Agent",
@@ -2111,23 +2116,23 @@
                     "pages": [
                       {
                         "title": "How can Employees Install Scrut Agent",
-                        "path": "docs/people/scrut-agent/how-to-install-scrut-agent/how-to-install-scrut-agent-1"
+                        "path": "docs/how-to-install-scrut-agent-1"
                       },
                       {
                         "title": "Install Scrut Agent for macOS",
-                        "path": "docs/people/scrut-agent/how-to-install-scrut-agent/scrut-agent-installation-guide-for-macos"
+                        "path": "docs/scrut-agent-installation-guide-for-macos"
                       },
                       {
                         "title": "Install Scrut Agent for Windows",
-                        "path": "docs/people/scrut-agent/how-to-install-scrut-agent/scrut-agent-installation-for-windows"
+                        "path": "docs/scrut-agent-installation-for-windows"
                       },
                       {
                         "title": "Install Scrut Agent for Debian Linux/Ubuntu",
-                        "path": "docs/people/scrut-agent/how-to-install-scrut-agent/installing-scrut-agent-for-linux-and-ubuntu"
+                        "path": "docs/installing-scrut-agent-for-linux-and-ubuntu"
                       },
                       {
                         "title": "Install Scrut Agent for Fedora Linux/RPM",
-                        "path": "docs/people/scrut-agent/how-to-install-scrut-agent/install-scrut-agent-for-fedora-linux"
+                        "path": "docs/install-scrut-agent-for-fedora-linux"
                       }
                     ]
                   },
@@ -2138,11 +2143,11 @@
                     "pages": [
                       {
                         "title": "Uninstall Scrut Agent for Windows",
-                        "path": "docs/people/scrut-agent/uninstall-scrut-agent/uninstalling-scrut-agent-for-mac-os"
+                        "path": "docs/uninstalling-scrut-agent-for-mac-os"
                       },
                       {
                         "title": "Uninstall Scrut Agent for MAC OS",
-                        "path": "docs/people/scrut-agent/uninstall-scrut-agent/uninstalling-scrut-agent-for-mac-os-1"
+                        "path": "docs/uninstalling-scrut-agent-for-mac-os-1"
                       }
                     ]
                   }
@@ -2156,15 +2161,15 @@
             "pages": [
               {
                 "title": "Vendors: Walkthrough",
-                "path": "docs/vendor-management/understanding-vendor-management"
+                "path": "docs/understanding-vendor-management"
               },
               {
                 "title": "Vendor Dashboard: Walkthrough",
-                "path": "docs/vendor-management/understanding-vendor-dashboard"
+                "path": "docs/understanding-vendor-dashboard"
               },
               {
                 "title": "Quick Start Guide: Vendor Management",
-                "path": "docs/vendor-management/quick-start-guide-vendor-management"
+                "path": "docs/quick-start-guide-vendor-management"
               },
               {
                 "group": "Add Vendors",
@@ -2173,19 +2178,19 @@
                 "pages": [
                   {
                     "title": "How to Add a Vendor",
-                    "path": "docs/vendor-management/managing-your-vendors/how-to-add-a-vendor"
+                    "path": "docs/how-to-add-a-vendor"
                   },
                   {
                     "title": "Auto-Populate Vendors from Integrations",
-                    "path": "docs/vendor-management/managing-your-vendors/added-via-integrations"
+                    "path": "docs/added-via-integrations"
                   },
                   {
                     "title": "Add Vendors Manually",
-                    "path": "docs/vendor-management/managing-your-vendors/adding-a-single-vendor"
+                    "path": "docs/adding-a-single-vendor"
                   },
                   {
                     "title": "Understand the Pre-Added Scrut Automation Vendor",
-                    "path": "docs/vendor-management/managing-your-vendors/pre-added-scrut-vendor"
+                    "path": "docs/pre-added-scrut-vendor"
                   },
                   {
                     "group": "Via SSO",
@@ -2194,15 +2199,15 @@
                     "pages": [
                       {
                         "title": "Discover Vendors via SSO Integrations",
-                        "path": "docs/vendor-management/managing-your-vendors/discover-vendors-through-integrations/discover-vendors-through-sso-integration"
+                        "path": "docs/discover-vendors-through-sso-integration"
                       },
                       {
                         "title": "Discover Vendors via Google Workspace",
-                        "path": "docs/vendor-management/managing-your-vendors/discover-vendors-through-integrations/google-workspace-integration-to-discover-vendors"
+                        "path": "docs/google-workspace-integration-to-discover-vendors"
                       },
                       {
                         "title": "Discover Vendors via Azure AD",
-                        "path": "docs/vendor-management/managing-your-vendors/discover-vendors-through-integrations/azure-ad-integration-to-discover-vendors"
+                        "path": "docs/azure-ad-integration-to-discover-vendors"
                       }
                     ]
                   },
@@ -2213,19 +2218,19 @@
                     "pages": [
                       {
                         "title": "Onboard Vendors using an Intake Form",
-                        "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/how-to-onboard-vendors-using-an-intake-form"
+                        "path": "docs/how-to-onboard-vendors-using-an-intake-form"
                       },
                       {
                         "title": "Create a Vendor Intake Form",
-                        "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/vendor-onboarding-via-vendor-intake-form"
+                        "path": "docs/vendor-onboarding-via-vendor-intake-form"
                       },
                       {
                         "title": "Submit a Vendor Procurement Request",
-                        "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/employee-submission-form"
+                        "path": "docs/employee-submission-form"
                       },
                       {
                         "title": "Review Vendor Procurement Requests",
-                        "path": "docs/vendor-management/managing-your-vendors/vendor-onboarding-intake-form/grc-team-evaluation-and-approvaldecline"
+                        "path": "docs/grc-team-evaluation-and-approvaldecline"
                       }
                     ]
                   }
@@ -2238,19 +2243,19 @@
                 "pages": [
                   {
                     "title": "How to Change Vendor Status",
-                    "path": "docs/vendor-management/change-vendor-status/how-to-change-vendor-status"
+                    "path": "docs/how-to-change-vendor-status"
                   },
                   {
                     "title": "Mark a Vendor as Active",
-                    "path": "docs/vendor-management/change-vendor-status/mark-a-vendor-as-active"
+                    "path": "docs/mark-a-vendor-as-active"
                   },
                   {
                     "title": "Mark a Vendor as Prospective",
-                    "path": "docs/vendor-management/change-vendor-status/mark-a-vendor-as-prospective"
+                    "path": "docs/mark-a-vendor-as-prospective"
                   },
                   {
                     "title": "Archive or Unarchive a Vendor",
-                    "path": "docs/vendor-management/change-vendor-status/archive-a-vendor"
+                    "path": "docs/archive-a-vendor"
                   }
                 ]
               },
@@ -2261,19 +2266,19 @@
                 "pages": [
                   {
                     "title": "Understand the Vendor Details Page",
-                    "path": "docs/vendor-management/editing-vendor-details/understanding-vendor-details-page"
+                    "path": "docs/understanding-vendor-details-page"
                   },
                   {
                     "title": "Edit Vendor Details",
-                    "path": "docs/vendor-management/editing-vendor-details/editing-and-deleting-a-vendor"
+                    "path": "docs/editing-and-deleting-a-vendor"
                   },
                   {
                     "title": "Add & Edit Vendor POC Details",
-                    "path": "docs/vendor-management/editing-vendor-details/editing-poc-details"
+                    "path": "docs/editing-poc-details"
                   },
                   {
                     "title": "Delete a Vendor",
-                    "path": "docs/vendor-management/editing-vendor-details/delete-a-vendor"
+                    "path": "docs/delete-a-vendor"
                   }
                 ]
               },
@@ -2284,27 +2289,27 @@
                 "pages": [
                   {
                     "title": "What are Vendor Documents?",
-                    "path": "docs/vendor-management/working-on-vendor-document/what-are-vendor-documents"
+                    "path": "docs/what-are-vendor-documents"
                   },
                   {
                     "title": "Auto Fetch Vendor Documents",
-                    "path": "docs/vendor-management/working-on-vendor-document/auto-fetch-documents-via-scrut-teammates"
+                    "path": "docs/auto-fetch-documents-via-scrut-teammates"
                   },
                   {
                     "title": "Add Vendor Documents",
-                    "path": "docs/vendor-management/working-on-vendor-document/adding-a-document"
+                    "path": "docs/adding-a-document"
                   },
                   {
                     "title": "Delete Vendor Documents",
-                    "path": "docs/vendor-management/working-on-vendor-document/deleting-a-document"
+                    "path": "docs/deleting-a-document"
                   },
                   {
                     "title": "Download Vendor Documents",
-                    "path": "docs/vendor-management/working-on-vendor-document/downloading-a-document"
+                    "path": "docs/downloading-a-document"
                   },
                   {
                     "title": "Export Vendor Documents",
-                    "path": "docs/vendor-management/working-on-vendor-document/export-vendor-documents"
+                    "path": "docs/export-vendor-documents"
                   }
                 ]
               },
@@ -2315,27 +2320,27 @@
                 "pages": [
                   {
                     "title": "What are Vendor Questionnaire Templates?",
-                    "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/what-are-vendor-questionnaire-templates"
+                    "path": "docs/what-are-vendor-questionnaire-templates"
                   },
                   {
                     "title": "Use the VSA Template",
-                    "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/using-the-vsa-template-for-vendor-questionnaire"
+                    "path": "docs/using-the-vsa-template-for-vendor-questionnaire"
                   },
                   {
                     "title": "Create a Vendor Questionnaire Template Manually",
-                    "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/adding-vendor-questionnaire-manually"
+                    "path": "docs/adding-vendor-questionnaire-manually"
                   },
                   {
                     "title": "Import a Vendor Questionnaire Template",
-                    "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/bulk-importing-template"
+                    "path": "docs/bulk-importing-template"
                   },
                   {
                     "title": "Edit a Vendor Questionnaire Template",
-                    "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/editing-vendor-template"
+                    "path": "docs/editing-vendor-template"
                   },
                   {
                     "title": "Delete a Vendor Questionnaire Template",
-                    "path": "docs/vendor-management/creating-vendor-questionnaire-template-1/deleting-vendor-template"
+                    "path": "docs/deleting-vendor-template"
                   }
                 ]
               },
@@ -2346,39 +2351,39 @@
                 "pages": [
                   {
                     "title": "Complete a Vendor Risk Assessment",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/steps-to-complete-vendor-risk-assessment"
+                    "path": "docs/steps-to-complete-vendor-risk-assessment"
                   },
                   {
                     "title": "Assess Vendors with Scrut Teammates",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/ai-enhanced-vendor-assessment"
+                    "path": "docs/ai-enhanced-vendor-assessment"
                   },
                   {
                     "title": "Track Vendor Assessment Progress",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/vendor-assessment-progress-timeline"
+                    "path": "docs/vendor-assessment-progress-timeline"
                   },
                   {
                     "title": "Create a Vendor Questionnaire Manually",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/sending-vendor-questionnaire"
+                    "path": "docs/sending-vendor-questionnaire"
                   },
                   {
                     "title": "Evaluate Vendor Responses",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/evaluating-vendor-questionnaire"
+                    "path": "docs/evaluating-vendor-questionnaire"
                   },
                   {
                     "title": "Create Risks from Vendor Questionnaires",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/risk-creation-from-vendor-questionnaires"
+                    "path": "docs/risk-creation-from-vendor-questionnaires"
                   },
                   {
                     "title": "Reassess a Vendor",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/vendor-reassessment"
+                    "path": "docs/vendor-reassessment"
                   },
                   {
                     "title": "Export Vendor Risk Assessment Report",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/exporting-vendor-risk-assessment-report"
+                    "path": "docs/exporting-vendor-risk-assessment-report"
                   },
                   {
                     "title": "Change Vendor Assessment Status Manually",
-                    "path": "docs/vendor-management/vendor-risk-assessment-workflow/change-vendor-assessment-status-manually"
+                    "path": "docs/change-vendor-assessment-status-manually"
                   }
                 ]
               },
@@ -2389,23 +2394,23 @@
                 "pages": [
                   {
                     "title": "Vendor Mitigation Task Approval Workflow",
-                    "path": "docs/vendor-management/working-on-mitigation-task-1/understanding-vendor-mitigation-task-approval-workflow"
+                    "path": "docs/understanding-vendor-mitigation-task-approval-workflow"
                   },
                   {
                     "title": "Create a Vendor Mitigation Task",
-                    "path": "docs/vendor-management/working-on-mitigation-task-1/creating-mitigation-task"
+                    "path": "docs/creating-mitigation-task"
                   },
                   {
                     "title": "Upload a Mitigation Task Document",
-                    "path": "docs/vendor-management/working-on-mitigation-task-1/uploading-attachments-and-adding-comments"
+                    "path": "docs/uploading-attachments-and-adding-comments"
                   },
                   {
                     "title": "Edit or Delete Vendor Mitigation Tasks",
-                    "path": "docs/vendor-management/working-on-mitigation-task-1/editing-and-deleting-a-mitigation-task-1"
+                    "path": "docs/editing-and-deleting-a-mitigation-task-1"
                   },
                   {
                     "title": "Approve a Vendor Mitigation Task",
-                    "path": "docs/vendor-management/working-on-mitigation-task-1/approving-vendor-mitigation-task"
+                    "path": "docs/approving-vendor-mitigation-task"
                   }
                 ]
               },
@@ -2416,23 +2421,23 @@
                 "pages": [
                   {
                     "title": "How to Access Vendor Settings",
-                    "path": "docs/vendor-management/vendor-settings/how-to-access-vendor-settings"
+                    "path": "docs/how-to-access-vendor-settings"
                   },
                   {
                     "title": "Configure Custom Vendor Fields",
-                    "path": "docs/vendor-management/vendor-settings/customizing-vendor-fields"
+                    "path": "docs/customizing-vendor-fields"
                   },
                   {
                     "title": "Configure Custom Vendor Categories",
-                    "path": "docs/vendor-management/vendor-settings/configuring-vendor-custom-categories"
+                    "path": "docs/configuring-vendor-custom-categories"
                   },
                   {
                     "title": "Configure Vendor Questionnaire Domains",
-                    "path": "docs/vendor-management/vendor-settings/configuring-vendor-questionnaire-domains"
+                    "path": "docs/configuring-vendor-questionnaire-domains"
                   },
                   {
                     "title": "View Audit Logs in Vendor Settings",
-                    "path": "docs/vendor-management/vendor-settings/vendor-settings-audit-logs"
+                    "path": "docs/vendor-settings-audit-logs"
                   }
                 ]
               },
@@ -2443,7 +2448,7 @@
                 "pages": [
                   {
                     "title": "How To Use the Vendor Portal",
-                    "path": "docs/vendor-management/overview-2/centralised-vendor-portal"
+                    "path": "docs/centralised-vendor-portal"
                   }
                 ]
               }
@@ -2460,15 +2465,15 @@
                 "pages": [
                   {
                     "title": "Trust Portal: Walkthrough",
-                    "path": "docs/trust-management/trust-vault/trust-vault-user-navigation"
+                    "path": "docs/trust-vault-user-navigation"
                   },
                   {
                     "title": "Quick Start Guide: Trust Vault & Trust Portal",
-                    "path": "docs/trust-management/trust-vault/quick-start-guide-trust-vault"
+                    "path": "docs/quick-start-guide-trust-vault"
                   },
                   {
                     "title": "Additional FAQs: Trust Vault",
-                    "path": "docs/trust-management/trust-vault/additional-faqs-trust-vault"
+                    "path": "docs/additional-faqs-trust-vault"
                   },
                   {
                     "group": "Add & Manage Content",
@@ -2477,27 +2482,27 @@
                     "pages": [
                       {
                         "title": "Add Organization Description",
-                        "path": "docs/trust-management/trust-vault/adding-managing-content/organization-description"
+                        "path": "docs/organization-description"
                       },
                       {
                         "title": "Add Compliance Frameworks",
-                        "path": "docs/trust-management/trust-vault/adding-managing-content/how-to-add-compliance"
+                        "path": "docs/how-to-add-compliance"
                       },
                       {
                         "title": "Add Sub-Processors",
-                        "path": "docs/trust-management/trust-vault/adding-managing-content/how-to-add-subprocessors"
+                        "path": "docs/how-to-add-subprocessors"
                       },
                       {
                         "title": "Add FAQs in Trust Vault",
-                        "path": "docs/trust-management/trust-vault/adding-managing-content/adding-faqs-and-updates"
+                        "path": "docs/adding-faqs-and-updates"
                       },
                       {
                         "title": "Add Updates in Trust Vault",
-                        "path": "docs/trust-management/trust-vault/adding-managing-content/updates"
+                        "path": "docs/updates"
                       },
                       {
                         "title": "How to Keep Trust Vault Policy Attachments Up to Date",
-                        "path": "docs/trust-management/trust-vault/adding-managing-content/keeping-trust-vault-policy-attachments-up-to-date"
+                        "path": "docs/keeping-trust-vault-policy-attachments-up-to-date"
                       },
                       {
                         "group": "Manage Controls & Categories",
@@ -2506,23 +2511,23 @@
                         "pages": [
                           {
                             "title": "Understand Controls & Categories in Trust Vault",
-                            "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/what-are-controls-categories-in-trust-vault"
+                            "path": "docs/what-are-controls-categories-in-trust-vault"
                           },
                           {
                             "title": "Add Controls",
-                            "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/how-to-add-security-items"
+                            "path": "docs/how-to-add-security-items"
                           },
                           {
                             "title": "Rename a Category",
-                            "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/edit-category-names"
+                            "path": "docs/edit-category-names"
                           },
                           {
                             "title": "Create a Custom Category",
-                            "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/creating-custom-controls-in-trust-vault"
+                            "path": "docs/creating-custom-controls-in-trust-vault"
                           },
                           {
                             "title": "Delete Controls & Categories",
-                            "path": "docs/trust-management/trust-vault/adding-managing-content/creating-and-editing-controls-in-trust-vault/delete-categories-controls"
+                            "path": "docs/delete-categories-controls"
                           }
                         ]
                       }
@@ -2535,7 +2540,7 @@
                     "pages": [
                       {
                         "title": "Customize Your Trust Portal's Branding",
-                        "path": "docs/trust-management/trust-vault/branding/branding-your-trust-vault"
+                        "path": "docs/branding-your-trust-vault"
                       }
                     ]
                   },
@@ -2546,35 +2551,35 @@
                     "pages": [
                       {
                         "title": "Add Custom Domain",
-                        "path": "docs/trust-management/trust-vault/settings-1/add-custom-domain"
+                        "path": "docs/add-custom-domain"
                       },
                       {
                         "title": "Configure Clickwrap NDA",
-                        "path": "docs/trust-management/trust-vault/settings-1/clickwrap-nda"
+                        "path": "docs/clickwrap-nda"
                       },
                       {
                         "title": "Add Terms of Service and Privacy Policy",
-                        "path": "docs/trust-management/trust-vault/settings-1/add-terms-of-service-tos-and-privacy-policy"
+                        "path": "docs/add-terms-of-service-tos-and-privacy-policy"
                       },
                       {
                         "title": "Turn on Subscriptions to Trust Portal Updates",
-                        "path": "docs/trust-management/trust-vault/settings-1/turn-on-subscriptions-to-trust-portal-updates"
+                        "path": "docs/turn-on-subscriptions-to-trust-portal-updates"
                       },
                       {
                         "title": "Enable Reports Download",
-                        "path": "docs/trust-management/trust-vault/settings-1/enable-downloading-of-reports"
+                        "path": "docs/enable-downloading-of-reports"
                       },
                       {
                         "title": "Add Watermark to Downloads",
-                        "path": "docs/trust-management/trust-vault/settings-1/enable-watermarking-on-trust-vault-downloads"
+                        "path": "docs/enable-watermarking-on-trust-vault-downloads"
                       },
                       {
                         "title": "Customize the Display Order of Your Trust Portal",
-                        "path": "docs/trust-management/trust-vault/settings-1/customize-the-display-order-of-your-trust-portal"
+                        "path": "docs/customize-the-display-order-of-your-trust-portal"
                       },
                       {
                         "title": "View Audit Logs in Trust Vault Settings",
-                        "path": "docs/trust-management/trust-vault/settings-1/audit-logs-trust-vault-settings"
+                        "path": "docs/audit-logs-trust-vault-settings"
                       }
                     ]
                   },
@@ -2585,31 +2590,31 @@
                     "pages": [
                       {
                         "title": "Access Request Workflow: Walkthrough",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/how-will-customers-request-access-to-trust-vault"
+                        "path": "docs/how-will-customers-request-access-to-trust-vault"
                       },
                       {
                         "title": "Approve or Decline Access Requests",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/how-to-grant-access-to-trust-vault"
+                        "path": "docs/how-to-grant-access-to-trust-vault"
                       },
                       {
                         "title": "Configure Auto Approval via Salesforce Integration",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/configuring-auto-approval-in-trust-vault-via-salesforce-integration"
+                        "path": "docs/configuring-auto-approval-in-trust-vault-via-salesforce-integration"
                       },
                       {
                         "title": "Configure Auto Approval for Specific Domains",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/configure-auto-approval-for-specific-domains"
+                        "path": "docs/configure-auto-approval-for-specific-domains"
                       },
                       {
                         "title": "Grant Partial or Full Access to Your Trust Portal",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/granular-access-in-trust-vault"
+                        "path": "docs/granular-access-in-trust-vault"
                       },
                       {
                         "title": "Customize Download Permissions in Trust Portal",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/granular-download-permissions-in-trust-vault"
+                        "path": "docs/granular-download-permissions-in-trust-vault"
                       },
                       {
                         "title": "Send Direct Links to Specific Trust Portal Items",
-                        "path": "docs/trust-management/trust-vault/manage-user-requests/how-to-share-granular-links-for-specific-trust-vault-items"
+                        "path": "docs/how-to-share-granular-links-for-specific-trust-vault-items"
                       }
                     ]
                   },
@@ -2620,15 +2625,15 @@
                     "pages": [
                       {
                         "title": "Understand Trust Vault Dashboard",
-                        "path": "docs/trust-management/trust-vault/dashboard-analytics/trust-vault-dashboard"
+                        "path": "docs/trust-vault-dashboard"
                       },
                       {
                         "title": "Review Customer Activity",
-                        "path": "docs/trust-management/trust-vault/dashboard-analytics/customer-activity"
+                        "path": "docs/customer-activity"
                       },
                       {
                         "title": "View Trust Vault Audit Logs",
-                        "path": "docs/trust-management/trust-vault/dashboard-analytics/audit-logs-trust-vault"
+                        "path": "docs/audit-logs-trust-vault"
                       }
                     ]
                   },
@@ -2639,11 +2644,11 @@
                     "pages": [
                       {
                         "title": "Enable AI Readability for Trust Vault Sections",
-                        "path": "docs/trust-management/trust-vault/ai-powered-features/turn-on-ai-readability"
+                        "path": "docs/turn-on-ai-readability"
                       },
                       {
                         "title": "Enable Teammates Chat on Trust Portal",
-                        "path": "docs/trust-management/trust-vault/ai-powered-features/enable-scrut-teammates-on-trust-portal"
+                        "path": "docs/enable-scrut-teammates-on-trust-portal"
                       }
                     ]
                   },
@@ -2654,27 +2659,27 @@
                     "pages": [
                       {
                         "title": "What is a Multi-Entity Trust Portal?",
-                        "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/what-is-a-multi-entity-trust-portal"
+                        "path": "docs/what-is-a-multi-entity-trust-portal"
                       },
                       {
                         "title": "Enable Multiple Entities on Your Trust Portal",
-                        "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/enable-multi-entity-trust-portal"
+                        "path": "docs/enable-multi-entity-trust-portal"
                       },
                       {
                         "title": "Tag Content to Entities",
-                        "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/tagging-content-to-entities"
+                        "path": "docs/tagging-content-to-entities"
                       },
                       {
                         "title": "Manage Access Requests",
-                        "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/managing-access-for-multi-entity-trust-portals"
+                        "path": "docs/managing-access-for-multi-entity-trust-portals"
                       },
                       {
                         "title": "Track Activity by Entity",
-                        "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/track-user-activity-by-entity"
+                        "path": "docs/track-user-activity-by-entity"
                       },
                       {
                         "title": "FAQs on Multi-Entity Trust Portals",
-                        "path": "docs/trust-management/trust-vault/multi-entity-trust-portal/multi-entity-trust-portal-faqs"
+                        "path": "docs/multi-entity-trust-portal-faqs"
                       }
                     ]
                   }
@@ -2687,15 +2692,15 @@
                 "pages": [
                   {
                     "title": "AI-Powered Questionnaire Autofill: Walkthrough",
-                    "path": "docs/trust-management/questionnaires/ai-powered-questionnaire-autofill-walkthrough"
+                    "path": "docs/ai-powered-questionnaire-autofill-walkthrough"
                   },
                   {
                     "title": "Quick Start Guide: Questionnaire Autofill",
-                    "path": "docs/trust-management/questionnaires/quick-start-guide-questionnaire-autofill"
+                    "path": "docs/quick-start-guide-questionnaire-autofill"
                   },
                   {
                     "title": "Additional FAQs: Questionnaires",
-                    "path": "docs/trust-management/questionnaires/questionnaires-troubleshooting-and-faq"
+                    "path": "docs/questionnaires-troubleshooting-and-faq"
                   }
                 ]
               }
@@ -2707,7 +2712,7 @@
             "pages": [
               {
                 "title": "Audit Center: Walkthrough",
-                "path": "docs/audit-centre/understanding-audit-center"
+                "path": "docs/understanding-audit-center"
               },
               {
                 "group": "Create an Audit",
@@ -2716,51 +2721,51 @@
                 "pages": [
                   {
                     "title": "Create an Audit By Framework",
-                    "path": "docs/audit-centre/overview-6/creating-an-audit-by-framework"
+                    "path": "docs/creating-an-audit-by-framework"
                   },
                   {
                     "title": "Create an Audit By Control",
-                    "path": "docs/audit-centre/overview-6/creating-an-audit-by-control"
+                    "path": "docs/creating-an-audit-by-control"
                   },
                   {
                     "title": "Understand Audit Details Page",
-                    "path": "docs/audit-centre/overview-6/understanding-an-audit-project"
+                    "path": "docs/understanding-an-audit-project"
                   },
                   {
                     "title": "Add an Auditor to an Audit",
-                    "path": "docs/audit-centre/overview-6/managing-audit-team"
+                    "path": "docs/managing-audit-team"
                   },
                   {
                     "title": "Add Audit Scope and Other Attachments",
-                    "path": "docs/audit-centre/overview-6/add-audit-scope-and-plan-attachments"
+                    "path": "docs/add-audit-scope-and-plan-attachments"
                   },
                   {
                     "title": "Download the Audit Readiness Report",
-                    "path": "docs/audit-centre/overview-6/downloading-audit-readiness-report"
+                    "path": "docs/downloading-audit-readiness-report"
                   },
                   {
                     "title": "Grant Access to Auditors to Your Audits",
-                    "path": "docs/audit-centre/overview-6/auditor-access-in-audit-center"
+                    "path": "docs/auditor-access-in-audit-center"
                   },
                   {
                     "title": "Clone an Audit",
-                    "path": "docs/audit-centre/overview-6/clone-an-audit"
+                    "path": "docs/clone-an-audit"
                   },
                   {
                     "title": "Edit and Delete an Audit",
-                    "path": "docs/audit-centre/overview-6/editing-and-deleting-an-audit"
+                    "path": "docs/editing-and-deleting-an-audit"
                   },
                   {
                     "title": "Mark an Audit Completed",
-                    "path": "docs/audit-centre/overview-6/marking-audit-project-completed"
+                    "path": "docs/marking-audit-project-completed"
                   },
                   {
                     "title": "View Audit Logs for an Audit",
-                    "path": "docs/audit-centre/overview-6/audit-logs-audit-center"
+                    "path": "docs/audit-logs-audit-center"
                   },
                   {
                     "title": "Export an Audit Package",
-                    "path": "docs/audit-centre/overview-6/export-an-audit-package"
+                    "path": "docs/export-an-audit-package"
                   }
                 ]
               },
@@ -2771,43 +2776,43 @@
                 "pages": [
                   {
                     "title": "Audit Finding Closure Workflow",
-                    "path": "docs/audit-centre/managing-audit-findings/closing-an-audit-finding"
+                    "path": "docs/closing-an-audit-finding"
                   },
                   {
                     "title": "How to View an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/how-to-view-an-audit-finding"
+                    "path": "docs/how-to-view-an-audit-finding"
                   },
                   {
                     "title": "Create an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/reporting-an-audit-finding"
+                    "path": "docs/reporting-an-audit-finding"
                   },
                   {
                     "title": "Add Artifacts to an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/uploading-the-attachments-for-audit-findings"
+                    "path": "docs/uploading-the-attachments-for-audit-findings"
                   },
                   {
                     "title": "Create a Corrective Action from an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/creating-corrective-action-from-audit-finding"
+                    "path": "docs/creating-corrective-action-from-audit-finding"
                   },
                   {
                     "title": "Create a Risk from an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/creating-risk-from-audit-finding"
+                    "path": "docs/creating-risk-from-audit-finding"
                   },
                   {
                     "title": "Link and Unlink Controls to an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/linking-controls-to-audit-findings"
+                    "path": "docs/linking-controls-to-audit-findings"
                   },
                   {
                     "title": "Edit and Delete an Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/editing-and-deleting-an-audit-findings"
+                    "path": "docs/editing-and-deleting-an-audit-findings"
                   },
                   {
                     "title": "Export Audit Findings",
-                    "path": "docs/audit-centre/managing-audit-findings/export-audit-center-findings"
+                    "path": "docs/export-audit-center-findings"
                   },
                   {
                     "title": "Reopen a Closed Audit Finding",
-                    "path": "docs/audit-centre/managing-audit-findings/open-closed-findings"
+                    "path": "docs/open-closed-findings"
                   }
                 ]
               },
@@ -2818,39 +2823,39 @@
                 "pages": [
                   {
                     "title": "Audit Requests Closure Workflow",
-                    "path": "docs/audit-centre/managing-audit-requests/closing-an-audit-request"
+                    "path": "docs/closing-an-audit-request"
                   },
                   {
                     "title": "How to View an Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/how-to-view-an-audit-request"
+                    "path": "docs/how-to-view-an-audit-request"
                   },
                   {
                     "title": "Create an Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/creating-a-request-in-audit-centre"
+                    "path": "docs/creating-a-request-in-audit-centre"
                   },
                   {
                     "title": "Add Artifacts to an Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/uploading-the-attachments-for-requests"
+                    "path": "docs/uploading-the-attachments-for-requests"
                   },
                   {
                     "title": "Create a Corrective Action from an Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/creating-corrective-action-from-audit-request"
+                    "path": "docs/creating-corrective-action-from-audit-request"
                   },
                   {
                     "title": "Link and Unlink Controls to an Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/linking-controls-to-audit-request"
+                    "path": "docs/linking-controls-to-audit-request"
                   },
                   {
                     "title": "Edit and Delete an Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/editing-and-deleting-an-audit-request"
+                    "path": "docs/editing-and-deleting-an-audit-request"
                   },
                   {
                     "title": "Export Audit Center Requests",
-                    "path": "docs/audit-centre/managing-audit-requests/export-audit-center-requests"
+                    "path": "docs/export-audit-center-requests"
                   },
                   {
                     "title": "Reopen a Closed Audit Request",
-                    "path": "docs/audit-centre/managing-audit-requests/open-closed-request"
+                    "path": "docs/open-closed-request"
                   }
                 ]
               },
@@ -2861,35 +2866,35 @@
                 "pages": [
                   {
                     "title": "Corrective Action Workflow",
-                    "path": "docs/audit-centre/corrective-action/corrective-action-workflow"
+                    "path": "docs/corrective-action-workflow"
                   },
                   {
                     "title": "How to Create a Corrective Action",
-                    "path": "docs/audit-centre/corrective-action/how-to-create-a-corrective-action"
+                    "path": "docs/how-to-create-a-corrective-action"
                   },
                   {
                     "title": "Create a Standalone Corrective Action",
-                    "path": "docs/audit-centre/corrective-action/creating-a-corrective-action"
+                    "path": "docs/creating-a-corrective-action"
                   },
                   {
                     "title": "Create a Ticket for a Corrective Action",
-                    "path": "docs/audit-centre/corrective-action/create-a-ticket-for-a-corrective-action"
+                    "path": "docs/create-a-ticket-for-a-corrective-action"
                   },
                   {
                     "title": "Custom Fields in Corrective Actions",
-                    "path": "docs/audit-centre/corrective-action/custom-fields-in-corrective-actions"
+                    "path": "docs/custom-fields-in-corrective-actions"
                   },
                   {
                     "title": "Link and Unlink Controls to a Corrective Action",
-                    "path": "docs/audit-centre/corrective-action/link-and-unlink-controls-to-a-corrective-action"
+                    "path": "docs/link-and-unlink-controls-to-a-corrective-action"
                   },
                   {
                     "title": "Export Corrective Actions",
-                    "path": "docs/audit-centre/corrective-action/export-corrective-actions"
+                    "path": "docs/export-corrective-actions"
                   },
                   {
                     "title": "View Audit Logs for Corrective Action",
-                    "path": "docs/audit-centre/corrective-action/audit-logs-for-corrective-actions"
+                    "path": "docs/audit-logs-for-corrective-actions"
                   }
                 ]
               }
@@ -2906,19 +2911,19 @@
                 "pages": [
                   {
                     "title": "What Is Scrut Teammates?",
-                    "path": "docs/settings/scrut-teammates/what-is-scrut-teammates"
+                    "path": "docs/what-is-scrut-teammates"
                   },
                   {
                     "title": "What Can Scrut Teammates Do?",
-                    "path": "docs/settings/scrut-teammates/getting-started-with-scrut-teammates"
+                    "path": "docs/getting-started-with-scrut-teammates"
                   },
                   {
                     "title": "Chat with Scrut Teammates",
-                    "path": "docs/settings/scrut-teammates/ask-anything-to-scrut-teammates"
+                    "path": "docs/ask-anything-to-scrut-teammates"
                   },
                   {
                     "title": "Install Scrut Teammates for Slack",
-                    "path": "docs/settings/scrut-teammates/scrut-teammates-slack-app"
+                    "path": "docs/scrut-teammates-slack-app"
                   }
                 ]
               },
@@ -2929,23 +2934,23 @@
                 "pages": [
                   {
                     "title": "Understand Scrut MCP",
-                    "path": "docs/settings/scrut-mcp/understand-scrut-mcp"
+                    "path": "docs/understand-scrut-mcp"
                   },
                   {
                     "title": "Connect Scrut MCP",
-                    "path": "docs/settings/scrut-mcp/connect-scrut-mcp"
+                    "path": "docs/connect-scrut-mcp"
                   },
                   {
                     "title": "Supported Scrut MCP Tools",
-                    "path": "docs/settings/scrut-mcp/supported-scrut-mcp-tools"
+                    "path": "docs/supported-scrut-mcp-tools"
                   },
                   {
                     "title": "Use Scrut MCP Skills",
-                    "path": "docs/settings/scrut-mcp/use-scrut-mcp-skills"
+                    "path": "docs/use-scrut-mcp-skills"
                   },
                   {
                     "title": "FAQs: Scrut MCP",
-                    "path": "docs/settings/scrut-mcp/faqs-scrut-mcp"
+                    "path": "docs/faqs-scrut-mcp"
                   }
                 ]
               },
@@ -2956,27 +2961,27 @@
                 "pages": [
                   {
                     "title": "View Outstanding Payments & Invoice History",
-                    "path": "docs/settings/organization-info-1/view-your-scrut-invoices"
+                    "path": "docs/view-your-scrut-invoices"
                   },
                   {
                     "title": "Enable Scrut AI",
-                    "path": "docs/settings/organization-info-1/scrut-ai"
+                    "path": "docs/scrut-ai"
                   },
                   {
                     "title": "Manage Departments",
-                    "path": "docs/settings/organization-info-1/manage-departments"
+                    "path": "docs/manage-departments"
                   },
                   {
                     "title": "Manage Entities",
-                    "path": "docs/settings/organization-info-1/manage-entities"
+                    "path": "docs/manage-entities"
                   },
                   {
                     "title": "Manage Evidence Attachment",
-                    "path": "docs/settings/organization-info-1/manage-evidence-attachment"
+                    "path": "docs/manage-evidence-attachment"
                   },
                   {
                     "title": "Manage VAPT",
-                    "path": "docs/settings/organization-info-1/manage-vapt"
+                    "path": "docs/manage-vapt"
                   }
                 ]
               },
@@ -2987,11 +2992,11 @@
                 "pages": [
                   {
                     "title": "Configure Organization Info",
-                    "path": "docs/settings/organization-info/configure-organization-info"
+                    "path": "docs/configure-organization-info"
                   },
                   {
                     "title": "Set Fiscal Year Format",
-                    "path": "docs/settings/organization-info/set-fiscal-year-format"
+                    "path": "docs/set-fiscal-year-format"
                   }
                 ]
               },
@@ -3002,7 +3007,7 @@
                 "pages": [
                   {
                     "title": "Configure SSO Login Methods",
-                    "path": "docs/settings/administration/configuring-sso-login-methods"
+                    "path": "docs/configuring-sso-login-methods"
                   }
                 ]
               },
@@ -3013,43 +3018,43 @@
                 "pages": [
                   {
                     "title": "Manage Users: Walkthrough",
-                    "path": "docs/settings/managing-users-roles/managing-users-settings"
+                    "path": "docs/managing-users-settings"
                   },
                   {
                     "title": "Understand User Roles in Scrut",
-                    "path": "docs/settings/managing-users-roles/user-roles"
+                    "path": "docs/user-roles"
                   },
                   {
                     "title": "Add Users",
-                    "path": "docs/settings/managing-users-roles/adding-users"
+                    "path": "docs/adding-users"
                   },
                   {
                     "title": "Edit Users",
-                    "path": "docs/settings/managing-users-roles/editing-users"
+                    "path": "docs/editing-users"
                   },
                   {
                     "title": "Deactivate & Reactivate Users",
-                    "path": "docs/settings/managing-users-roles/deactivating-users"
+                    "path": "docs/deactivating-users"
                   },
                   {
                     "title": "Delete Users",
-                    "path": "docs/settings/managing-users-roles/deleting-users"
+                    "path": "docs/deleting-users"
                   },
                   {
                     "title": "Additional FAQs: Managing Users",
-                    "path": "docs/settings/managing-users-roles/faqs-on-managing-users"
+                    "path": "docs/faqs-on-managing-users"
                   },
                   {
                     "title": "Understand Roles & Permissions in Scrut",
-                    "path": "docs/settings/managing-users-roles/granular-roles-permissions-in-scrut"
+                    "path": "docs/granular-roles-permissions-in-scrut"
                   },
                   {
                     "title": "Create Custom Roles",
-                    "path": "docs/settings/managing-users-roles/create-custom-roles"
+                    "path": "docs/create-custom-roles"
                   },
                   {
                     "title": "Contributor & Auditor Permissions: Reference Table",
-                    "path": "docs/settings/managing-users-roles/contributor-auditor-permissions-reference-table"
+                    "path": "docs/contributor-auditor-permissions-reference-table"
                   }
                 ]
               },
@@ -3060,23 +3065,23 @@
                 "pages": [
                   {
                     "title": "Configure Email Notifications",
-                    "path": "docs/settings/notifications/email-notifications"
+                    "path": "docs/email-notifications"
                   },
                   {
                     "title": "Configure Slack Notifications",
-                    "path": "docs/settings/notifications/configuring-slack-reminders"
+                    "path": "docs/configuring-slack-reminders"
                   },
                   {
                     "title": "Understand the Trigger Cadence for Slack Alerts",
-                    "path": "docs/settings/notifications/trigger-cadence-for-slack-alerts-1"
+                    "path": "docs/trigger-cadence-for-slack-alerts-1"
                   },
                   {
                     "title": "Understand the Trigger Cadence for Slack Personalized Tasks",
-                    "path": "docs/settings/notifications/trigger-cadence-for-slack-alerts"
+                    "path": "docs/trigger-cadence-for-slack-alerts"
                   },
                   {
                     "title": "Email Notification Triggers & Recipients",
-                    "path": "docs/settings/notifications/trigger-cadence-for-email"
+                    "path": "docs/trigger-cadence-for-email"
                   }
                 ]
               }
@@ -3088,11 +3093,11 @@
             "pages": [
               {
                 "title": "Reports Module: Walkthrough",
-                "path": "docs/reports/reports-walkthrough"
+                "path": "docs/reports-walkthrough"
               },
               {
                 "title": "Types of Compliance Reports in Scrut",
-                "path": "docs/reports/types-of-reports"
+                "path": "docs/types-of-reports"
               }
             ]
           },
@@ -3102,39 +3107,39 @@
             "pages": [
               {
                 "title": "Partner Portal: Walkthrough",
-                "path": "docs/for-scrut-partners/partner-portal-walkthrough"
+                "path": "docs/partner-portal-walkthrough"
               },
               {
                 "title": "Log in to the Partner Portal",
-                "path": "docs/for-scrut-partners/log-into-scrut-partner-portal"
+                "path": "docs/log-into-scrut-partner-portal"
               },
               {
                 "title": "Create and Manage Workspaces",
-                "path": "docs/for-scrut-partners/creating-and-managing-workspaces"
+                "path": "docs/creating-and-managing-workspaces"
               },
               {
                 "title": "Add Frameworks",
-                "path": "docs/for-scrut-partners/add-frameworks"
+                "path": "docs/add-frameworks"
               },
               {
                 "title": "Add Users",
-                "path": "docs/for-scrut-partners/add-users-scrut-partner-portal"
+                "path": "docs/add-users-scrut-partner-portal"
               },
               {
                 "title": "Set Up Your Sandbox (NFR) Account",
-                "path": "docs/for-scrut-partners/set-up-your-sandbox-nfr-account"
+                "path": "docs/set-up-your-sandbox-nfr-account"
               },
               {
                 "title": "Log in to a Workspace",
-                "path": "docs/for-scrut-partners/login-to-workspaces"
+                "path": "docs/login-to-workspaces"
               },
               {
                 "title": "View Invoices & Payments",
-                "path": "docs/for-scrut-partners/view-partner-invoices-payments"
+                "path": "docs/view-partner-invoices-payments"
               },
               {
                 "title": "Upgrade Plan & Add-Ons",
-                "path": "docs/for-scrut-partners/upgrade-plan-add-ons-partner-portal"
+                "path": "docs/upgrade-plan-add-ons-partner-portal"
               }
             ]
           },
@@ -3146,54 +3151,55 @@
                 "group": "Release Notes",
                 "icon": "megaphone",
                 "expandable": true,
+                "path": "docs/release-notes",
                 "pages": [
                   {
                     "title": "August 2026",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/august-2026"
+                    "path": "docs/august-2026"
                   },
                   {
                     "title": "July 2026",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/july-2026"
+                    "path": "docs/july-2026"
                   },
                   {
                     "title": "May 2026",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/may-2026"
+                    "path": "docs/may-2026"
                   },
                   {
                     "title": "March 2026",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/march-2026"
+                    "path": "docs/march-2026"
                   },
                   {
                     "title": "February 2026",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/february-2026"
+                    "path": "docs/february-2026"
                   },
                   {
                     "title": "January 2026",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/january-2026"
+                    "path": "docs/january-2026"
                   },
                   {
                     "title": "December 2025",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/dec-18-2025"
+                    "path": "docs/dec-18-2025"
                   },
                   {
                     "title": "November 2025",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/nov-27-2025"
+                    "path": "docs/nov-27-2025"
                   },
                   {
                     "title": "May 2025",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/may-2025"
+                    "path": "docs/may-2025"
                   },
                   {
                     "title": "March 2025",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/march-2025"
+                    "path": "docs/march-2025"
                   },
                   {
                     "title": "February 2025",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/february-2025"
+                    "path": "docs/february-2025"
                   },
                   {
                     "title": "January 2025",
-                    "path": "docs/frequently-asked-questions-faqs/release-notes/january-2025"
+                    "path": "docs/january-2025"
                   }
                 ]
               },
@@ -3204,27 +3210,27 @@
                 "pages": [
                   {
                     "title": "Scheduled Maintenance: 11-12 July 2026",
-                    "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scheduled-maintenance-11-12-july-2026"
+                    "path": "docs/scheduled-maintenance-11-12-july-2026"
                   },
                   {
                     "title": "Task Center Replaces Setup Wizard",
-                    "path": "docs/frequently-asked-questions-faqs/maintenance-notices/task-center-replaces-setup-wizard"
+                    "path": "docs/task-center-replaces-setup-wizard"
                   },
                   {
                     "title": "Email Notification Changes for March 2026",
-                    "path": "docs/frequently-asked-questions-faqs/maintenance-notices/email-notification-changes-for-march-2026"
+                    "path": "docs/email-notification-changes-for-march-2026"
                   },
                   {
                     "title": "Scheduled Maintenance: 3-4 January 2026",
-                    "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scheduled-platform-maintenance-january-2026"
+                    "path": "docs/scheduled-platform-maintenance-january-2026"
                   },
                   {
                     "title": "Scheduled Maintenance on 5 July 2025",
-                    "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scheduled-maintenance-5-july-25"
+                    "path": "docs/scheduled-maintenance-5-july-25"
                   },
                   {
                     "title": "Scrut Authentication System Migration",
-                    "path": "docs/frequently-asked-questions-faqs/maintenance-notices/scrut-authentication-system-migration"
+                    "path": "docs/scrut-authentication-system-migration"
                   }
                 ]
               },
@@ -3235,67 +3241,67 @@
                 "pages": [
                   {
                     "title": "internal testing article 81",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-8"
+                    "path": "docs/internal-testing-article-8"
                   },
                   {
                     "title": "Test_artical_for sendbox",
-                    "path": "docs/frequently-asked-questions-faqs/test/test-artical-for-sendbox"
+                    "path": "docs/test-artical-for-sendbox"
                   },
                   {
                     "title": "Internal testing artical 82",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-artical-82"
+                    "path": "docs/internal-testing-artical-82"
                   },
                   {
                     "title": "Test_artical11",
-                    "path": "docs/frequently-asked-questions-faqs/test/test-artical11"
+                    "path": "docs/test-artical11"
                   },
                   {
                     "title": "Test_artical10",
-                    "path": "docs/frequently-asked-questions-faqs/test/test-artical10"
+                    "path": "docs/test-artical10"
                   },
                   {
                     "title": "internal testing article 6",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-6"
+                    "path": "docs/internal-testing-article-6"
                   },
                   {
                     "title": "internal testing article 5",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-5"
+                    "path": "docs/internal-testing-article-5"
                   },
                   {
                     "title": "internal testing article 4",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-4"
+                    "path": "docs/internal-testing-article-4"
                   },
                   {
                     "title": "internal testing article 3",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-3"
+                    "path": "docs/internal-testing-article-3"
                   },
                   {
                     "title": "Test_artical_rename_13",
-                    "path": "docs/frequently-asked-questions-faqs/test/test-artical12-1"
+                    "path": "docs/test-artical12-1"
                   },
                   {
                     "title": "internal testing article 1",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-1221"
+                    "path": "docs/internal-testing-article-1221"
                   },
                   {
                     "title": "Test_newartical_131",
-                    "path": "docs/frequently-asked-questions-faqs/test/test-newartical-13"
+                    "path": "docs/test-newartical-13"
                   },
                   {
                     "title": "internal testing article 212",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-2"
+                    "path": "docs/internal-testing-article-2"
                   },
                   {
                     "title": "Test_artical12",
-                    "path": "docs/frequently-asked-questions-faqs/test/test-artical12"
+                    "path": "docs/test-artical12"
                   },
                   {
                     "title": "internal testing article 7",
-                    "path": "docs/frequently-asked-questions-faqs/test/internal-testing-article-7-1"
+                    "path": "docs/internal-testing-article-7-1"
                   },
                   {
                     "title": "July 2026",
-                    "path": "docs/frequently-asked-questions-faqs/test/july-2026-1"
+                    "path": "docs/july-2026-1"
                   }
                 ]
               }
@@ -3309,9 +3315,10 @@
   "logo-dark": "https://cdn.document360.io/logo/8e8877e6-4593-427e-8cd8-588b3226c39a/32b7648617eb44a89f44f21cda9fb596-logo%20scrut.svg",
   "favicon": "https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1786353134353-t8e4aazj8w-scrut_favicon.png?fm=auto&auto=compress%2Cformat",
   "seo": {
-    "robots:index": true,
-    "robots:follow": true,
+    "robots:index": false,
+    "robots:follow": false,
     "sitemap:enabled": true,
     "llms-txt:enabled": true
-  }
+  },
+  "initialRoute": "home"
 }

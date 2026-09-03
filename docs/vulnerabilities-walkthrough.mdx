@@ -1,0 +1,177 @@
+---
+title: "Vulnerabilities: Walkthrough"
+metaDescription: "Walkthrough and overview of the vulnerabilities module in Scrut."
+---
+
+Scrut's **Vulnerabilities module** provides comprehensive application security capabilities, combining powerful, **automated DAST scans** with expert insights. This unified approach addresses the critical gaps in traditional application security programs by offering continuous visibility and centralized vulnerability management.
+
+Crucially, **Scrut DAST complements penetration testing** (pen-testing). While pen-tests provide deep, periodic insights, DAST (Dynamic Application Security Testing) continuously and automatically tests the live application to catch vulnerabilities in between pen-tests. This rapid, repeatable process fills coverage gaps, ensuring that deployed applications are continuously tested for exploitable weaknesses and helping teams discover and remediate issues faster and earlier.
+
+The module can discover vulnerabilities on your **websites** and **web applications** and help manage and remediate them from a single location within the Scrut platform.
+
+## What are Vulnerabilities?
+
+Vulnerabilities are the first step in detecting threats to your organization’s digital assets. Identifying and remediating them is critical in safeguarding your organization’s digital infrastructure. In the context of the Vulnerabilities module, a **vulnerability is any security weakness** in applications discovered through:
+
+- Dynamic Application Security Testing (DAST)
+- Software Composition Analysis (SCA)
+- Manual penetration testing
+- Third-party security scanners
+
+## Key Capabilities
+
+- **Continuous Automated Scanning:** Continuously scans applications on a pre-determined cadence or on-demand runs to detect new vulnerabilities introduced with every release.
+- **Quick & Full Scan Modes:** Flexible scan options to balance speed in production and depth in staging environments.
+- **Authenticated Scanning:** Tests both public and protected areas for comprehensive coverage of application risks.
+- **Curated, Risk-Ranked Findings:** Filters and prioritizes results with fewer false positives so teams focus only on critical vulnerabilities.
+- **Expert Validation:** Expert assistance from Scrut’s security analysts to validate scans and add contextual intelligence.
+- **Workflow Integration:** Create Jira tickets directly from the vulnerabilities module.
+- **SLA Tracking:** Stay on track and ensure timely resolutions for every finding.
+- **Ingest Third-Party Scan Findings:** Ingest findings from other third-party scanners for all your vulnerabilities into Scrut.
+- **Compliance Unification:** Flow findings automatically into your compliance and risk workflow. Also provides continuous, audit-ready evidence of testing.
+- **End-to-End Vulnerability Management:** Tracks vulnerabilities from discovery to remediation from a single location within Scrut.
+
+## Understanding the Third-Party Scans Page
+
+The **Vulnerabilities → Third-Party Scans** page consolidates all vulnerabilities detected by your integrated scanning tools. Use the:
+
+- **Findings** tab to triage individual vulnerabilities
+- **Resources** tab to identify assets that carry the most exposure across your infrastructure
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165441142-jmwadmbiw6g-Screenshot-2026-03-31-at-16-23-21.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Findings Tab
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166119163-36x6snepxgi-Third-Party-Scans---findings-status-charts.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+When you open **Vulnerabilities → Third Party Scans**, you land on the **Findings** tab. Two summary charts at the top give you an immediate read of your vulnerability posture before you go into the table.
+
+- **Scan Findings** shows the total number of detected vulnerabilities broken down by severity: Critical, High, Medium, and Low.
+
+- **Findings Status** shows how those vulnerabilities are distributed across five states:
+
+  - **Open**: Default status for newly detected vulnerabilities
+  - **Closed**: Vulnerability remediated or is no longer present
+  - **Acknowledged**: Marked as noted and acknowledged
+  - **Ignored**: Marked as not requiring action
+  - **Risk Created**: Added as a risk to the Risk Register
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  The charts are interactive. Click any severity or status segment to instantly filter the findings table to that selection.
+</Callout>
+
+### Zero in on a Finding
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166223371-0z3320uqjeo-Vulnerabilities-table-in-Third-Party-Scans.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The findings table lists every vulnerability synced from your connected tools. Each row shows the:
+
+- **Vulnerability** **Name**: The specific name/title of each vulnerability
+- **Status**: Current state of the vulnerability
+- **Severity**: Indicates the criticality level of the vulnerability (Critical, High, Medium, Low)
+- **Source**: Identifies which integration/tool detected the vulnerability
+- **Fix Available**: Shows whether a fix or mitigation is available for the vulnerability
+- **CVE ID**: Common Vulnerabilities and Exposures identifier when available
+- **Owner**: The user responsible for managing the vulnerability
+- **First Seen**: Date when the vulnerability was first detected
+- **Number of Assets**: Indicates the number of assets affected by the vulnerability
+- **SLA**: Shows the SLA status for vulnerability remediation
+
+To narrow your view:
+
+- Use the search bar to look up a specific vulnerability by name.
+- Click Filters to refine results by severity, fix availability, or source.
+- Click Columns to add or remove table columns. Your selection applies immediately.
+
+### Take Action on a Finding
+
+Use the Actions column to triage findings directly from the table. To act on multiple findings at once, select them using the checkboxes, then choose your action.
+
+#### Create a Jira Ticket
+
+Track a finding through remediation by connecting it to your Jira workflow.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162328907-o25g885d27j-image-1769769621406.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+1. Click the Create Jira Ticket icon next to the finding.
+2. Enter the ticket details and click Create.
+
+Scrut creates the ticket in Jira and assigns it to the selected assignee. Ticket status syncs back to Scrut automatically. To view all linked tickets for a finding, open its [detail page](/docs/understanding-vulnerability-details-page) and go to the Tickets tab.
+
+**Note:** Select multiple findings to create Jira tickets in bulk.
+
+You can generate tracking tickets in your connected Jira account for vulnerability remediation. This helps integrate vulnerability management into your existing workflow. Click the **Create Jira Ticket** icon next to the vulnerability you want to add a tracking ticket to.
+
+#### Add to the Risk Register
+
+Escalate a finding with broader business impact by adding it as a risk to your [Risk Register](/docs/understanding-risk-register).
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162330276-n9w1p1ph5s-image-1769769677869.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+1. Click the **Create Risk** icon next to the finding.
+2. Review the auto-filled risk name and description. Edit if needed.
+3. Set the assignees, risk category, department, and entities.
+4. Enter the application name and select the affected assets.
+5. Click **Save**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165063353-zxxldnrbm2-Screenshot-2026-01-30-at-16-12-30.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Scrut adds the risk directly into the [risk register](/docs/understanding-risk-register), and you can manage it from the Risk module. Once you create a risk, the vulnerability's status changes from Open to **Risk Created**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162331607-c4obyydg7np-image-1769769795146.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### Ignore a Finding
+
+Mark false positives or accepted risks as ignored so they stop surfacing in future scans.
+
+1. Click the Ignore icon next to the finding.
+2. Click Ignore to confirm.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162332961-h6b0pbh6hws-image-1769769814406.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The status changes to Ignored.
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Once a finding is marked Ignored, Scrut will not surface it again in future scans of that target. Make sure the finding genuinely requires no further action before ignoring it.
+</Callout>
+
+## Resources Tab
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166116252-a0a7ztztus7-Third-Party-Scans---Resources-Tab.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The Resources tab flips the view from individual vulnerabilities (CVEs) to the assets that carry them. Instead of clicking through findings one by one to identify impacted hosts or packages, you get a consolidated resource-first view that shows which assets are most exposed and which findings are attached to each.
+
+### Navigate to the Resources Tab
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166114814-89zlm44ii7t-Third-Party-Scans---Resources---Status-Charts.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Two summary cards at the top keep you oriented:
+
+- **Scan Findings** shows the total number of findings across all resources, by severity (Critical, High, Medium, or Low).
+- **Resource Status** shows the total number of resources and their distribution across statuses: Open, Closed, Acknowledged, Ignored, and Risk Created.
+
+### Browse and Filter Your Resources
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166117755-dgu9by4ts5-Third-Party-Scans---Resources-Table.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The resources table lists each affected asset alongside its associated findings. Each row shows the resource name, its current status, the linked finding, finding severity, type, date first seen, and tags.
+
+To focus your view:
+
+- Use the search bar to look up a specific resource by name.
+- Click Filters to narrow results by severity, source, or other attributes.
+- Click Columns to add or remove columns. First Seen is available as an optional column and is hidden by default.
+
+### Drill Into a Resource
+
+Click any row to open the full detail page for that resource. The detail page shows all findings tied to that resource in one place, so you can assess its full exposure without navigating between individual CVEs.
+
+### Take Action from the Resources Tab
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165442688-solp8hbi81-Screenshot-2026-03-31-at-17-03-53.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+The same actions available on the Findings tab are also available here. Use the Create Jira Ticket, Create Risk, and Ignore icons in the Actions column to triage findings directly from the resources table.

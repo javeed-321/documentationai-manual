@@ -1,0 +1,130 @@
+---
+title: "View the Policy Effort Estimate"
+---
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  This feature is currently available only specific policies for the following frameworks: ISO 27001, SOC 2, GDPR, and HIPAA. To know more, contact your CSM.
+</Callout>
+
+The **effort estimate** quantifies the amount of effort required to implement or complete a policy. This helps to:
+
+- **Prioritize and allocate resources** more effectively
+- **Assign appropriate tasks** based on the effort required and team capacities
+- **Balance workload** across team members
+- **Set realistic timelines** for compliance projects
+- **Report progress** to stakeholders more accurately
+
+By default, **Scrut provides an effort estimate for each policy**, helping you prioritize tasks and allocate resources effectively. It's important to keep in mind that these estimates are benchmark figures based on the average implementation effort required for each policy. If you find that the default estimates do not align with your specific needs or circumstances, [you can modify them](/docs/set-policy-effort-estimate#how-to-set-policy-effort-estimates), as required.
+
+## Effort Estimate Levels
+
+Scrut categorizes effort into three levels:
+
+- **Low**: Easy to implement, minimal configuration or steps required
+- **Medium**: Moderate complexity, requires multiple steps or configuration across several resources
+- **High**: Complex implementation, extensive configuration, or affects multiple systems
+
+## How To View Effort Estimates for Policies
+
+<Tabs>
+  <Tab title="Via the Policy Table">
+    Click on the **Effort Estimate** column on the Policy table in the **All Policies** page. This allows you to sort your policies by effort level.
+
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164766427-vlwrgrnn21-Screenshot-2025-11-25-at-23-15-18.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+  </Tab>
+
+  <Tab title="On the Policy Details Page">
+    Navigate to your desired policy and look for the **Effort Estimate** field on the policy details page.
+
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164752805-subgfdo37-Screenshot-2025-11-24-at-14-47-36.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+  </Tab>
+</Tabs>
+
+## How to Set Policy Effort Estimates
+
+- [For a Single Policy](/docs/set-policy-effort-estimate#for-a-single-policy)
+- [For Multiple Policies](/docs/set-policy-effort-estimate#for-multiple-policies)
+
+### For a Single Policy
+
+1. Sign in to Scrut, and click **Compliance → Policies** on the left navigation panel.
+
+2. Go to the **All Policies** tab and select the policy you want to set the effort estimate for.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166057929-5pxgcevjwwg-Selecting-an-Individual-Policy.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Use the **Effort Estimate** dropdown and set the desired level.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164749960-lgpjrjdqhvq-Screenshot-2025-11-24-at-14-31-39.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### For Multiple Policies
+
+You can also set effort estimates for multiple policies simultaneously:
+
+1. Go to the **All Policies** tab and select the policies you want to set the effort estimate for.
+
+2. Click the **Edit** button at the top of the Policies table.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166042032-ze4jfcg0hb-Selecting-Multiple-Policies.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Click the dropdown next to the **Effort Estimate** field.
+
+4. Choose the desired level from Low, Medium, or High.
+
+5. Click **Save** to complete the bulk assignments.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164751455-57z0qw1w9yk-Screenshot-2025-11-24-at-14-35-43.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="alert">
+  **Note:**
+
+  If you wish to retain the existing values for fields like Department, Recurrence, Entities, and Relevance, simply leave them unchanged. Scrut will only update the fields you've modified in this window, ensuring that the other values remain intact.
+</Callout>
+
+### FAQs
+
+<ExpandableGroup>
+  <Expandable title="Is it mandatory to add the effort estimate for all policies?" default-open="false">
+    No, it's optional. However, setting effort estimates helps with better planning and prioritization.
+  </Expandable>
+
+  <Expandable title="Can I edit the effort estimate at any time?" default-open="false">
+    Yes, you can edit the effort estimate at any time by opening the policy and updating the field.
+  </Expandable>
+
+  <Expandable title="What if I’m unsure which level to choose?" default-open="false">
+    Start with your best estimate. You can always adjust it later. If you're between two levels, consider starting with the higher effort level to avoid underestimating the work required. Use these guidelines to select the appropriate effort estimate:
+
+    #### Choose Low When:
+
+    - Implementation takes less than 30 minutes
+    - Requires 1-3 simple steps
+    - Affects a single system or setting
+    - Can be completed by one person without coordination
+
+    #### Choose Medium When:
+
+    - Implementation takes several hours
+    - Requires 4-10 steps or configuration changes
+    - Affects multiple resources but within a single system
+    - May require coordination with one other team
+
+    #### Choose High When:
+
+    - Implementation takes more than multiple days
+    - Requires complex multi-step processes
+    - Affects multiple systems or requires migration
+    - Requires coordination across multiple teams or vendors
+    - May cause downtime or require careful planning
+  </Expandable>
+
+  <Expandable title="Do effort estimates affect compliance status?" default-open="false">
+    No, effort estimates are purely for planning and do not impact whether a policy is compliant or non-compliant.
+  </Expandable>
+
+  <Expandable title="Can I filter or sort policies by effort level?" default-open="false">
+    Yes. Use the filter and sort icons in the policy table to narrow to policies with a specific effort level.
+  </Expandable>
+</ExpandableGroup>

@@ -1,0 +1,119 @@
+---
+title: "Configure SSO Login Methods"
+metaDescription: "Customize the SSO login options available to your users for signing into Scrut."
+---
+
+Scrut allows you to customize the Single Sign-On (SSO) login methods available to your organization’s users. This feature allows you to select which specific SSO providers are active and visible on [Scrut’s login page](https://app.scrut.io/). This guide explains how to configure these settings.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163674262-enkjnoo5pgo-Screenshot-2025-06-17-at-18-23-44.png?fm=auto&auto=compress%2Cformat" alt="" caption="Customizable login options" />
+
+## Available SSO Login Options
+
+Scrut offers the following SSO login options:
+
+### Social SSO
+
+When you use a social login, users don’t need to set or remember passwords. The login provider (Google or Microsoft) will authenticate the user and pass the information to Scrut. Supported social logins include:
+
+- Google (Google Workspace)
+- Microsoft
+
+<Callout kind="success">
+  **Note:**
+
+  If enabled, social SSO options are available immediately on the login page. No integration is needed.
+</Callout>
+
+### Enterprise SSO
+
+When you enable enterprise SSO login, users don’t need to set or remember passwords specifically for Scrut. Instead, your chosen SSO provider handles authentication and securely passes the verified user information to Scrut. Supported enterprise SSOs include:
+
+- Google Workspace
+- Microsoft Entra (Azure AD)
+- Okta (SSO)
+- OneLogin
+- JumpCloud
+- PingOne
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  To enable enterprise SSO options, you must first complete the corresponding integration. Refer to the [step-by-step guides](/docs/integrations-overview#9-identity-providers) for assistance with the integration process.
+</Callout>
+
+<Callout kind="danger">
+  **Limitations**
+
+  Currently, Single Sign-On (SSO) login is only available through the Scrut login page. Users cannot directly log in via their SSO provider’s page and must go to the Scrut login page for authentication.
+</Callout>
+
+## How To Customize SSO Login Options
+
+1. [Sign in to your Scrut account](https://app.scrut.io/) and click **Settings → Administration**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163552451-f4wt22wvpe8-Screenshot-2025-05-19-at-17-43-58.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Turn on the toggle button for your desired SSO providers.
+
+   **Note:** The **Enable** toggle will be available only after you’ve completed the integration for enterprise SSOs. Click the **Integrate** button to begin integrating with the corresponding SSO provider.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163588081-524psc0kxkj-Screenshot-2025-05-27-at-19-40-27.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Scrut will display the SSO options you’ve enabled on the login page, allowing users to sign in using their preferred method.
+
+## Things To Note
+
+### Default Behavior
+
+By default, the login page shows:
+
+- Both social SSOs (Google and Microsoft) and
+- All integrated enterprise SSOs
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163675672-ngx21le2y6-Screenshot-2025-06-17-at-18-27-52.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+If you don’t want any of these options to be available on the login page, you’ll have to disable them in the **Settings → Administration** module.
+
+### User Impact
+
+When you change login methods:
+
+- **Current sessions:** Existing user sessions will continue to work regardless of the login method.
+- **Next login attempt:** Changes will apply when users log in again after their session expires.
+- **Direct links:** If users try to log in via a bookmarked login page, they’ll be automatically redirected to the available SSO options.
+
+### Email Login
+
+In addition to SSO login options, Scrut provides email login via OTP as a fallback. This approach prevents users from getting locked out if the SSO login options encounter issues. Users can click **Get Verification Code** to log in via the one-time password sent to their email.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163677241-9konjl214at-Screenshot-2025-06-17-at-18-29-16.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Make sure to inform users before changing login methods. This will help them easily log in next time via the chosen SSO providers.
+</Callout>
+
+## Audit Logs
+
+Scrut captures all changes to the **Settings → Administration** module in the corresponding audit log. Review the logs to gain insights into who made what changes and when they occurred.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163553826-s10wgfz6qu-Screenshot-2025-05-19-at-18-54-59.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+---
+
+## FAQs & Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Why can’t I see the Google Workspace / Microsoft Entra (Azure AD) toggles under Enterprise SSO?" default-open="false">
+    The Google and Microsoft toggles in the Social SSO section support both social logins and enterprise Single Sign-On (SSO). This means that to enable Google Workspace login for your users, simply activate the Google toggle in the Social SSO section. Likewise, to enable login through Microsoft Entra (Azure AD), switch on the Microsoft toggle in the same section.
+  </Expandable>
+
+  <Expandable title="An external user (such as an auditor or contractor) can’t see the OTP login option. How do they log in?" default-open="false">
+    This is expected behavior. When your organization has only one SSO option enabled, that SSO becomes the default and the only login method shown. The Get Verification Code (OTP) option is a fallback that becomes available when two or more SSO options are enabled.
+
+    If you have external users (such as auditors or contractors) who are not on your SSO domain and need OTP access, enable a second SSO option in Settings → Administration. This unlocks the OTP login option for all users on the login page.
+  </Expandable>
+</ExpandableGroup>
+
+Need more help? Contact Scrut Support at support@scrut.io.

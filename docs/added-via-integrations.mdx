@@ -1,0 +1,54 @@
+---
+title: "Auto-Populate Vendors from Integrations"
+metaDescription: "Learn how vendors are automatically fetched from integrations you connect with Scrut."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+**When you connect a third-party tool to Scrut through the** [**Integrations**](/docs/integrations-overview) **module, Scrut automatically adds it as a vendor in your Vendor table.** This keeps your vendor list up to date without requiring manual entries each time a new tool is onboarded.
+
+## How It Works
+
+### Automatic Detection of Vendors from Integrations
+
+When an integration is connected, Scrut pulls vendor data from that tool and creates an entry in your Vendor table.
+
+**Note:** Before creating a new entry, Scrut checks for an exact name match — if a vendor with the same name already exists in your vendor table, a duplicate entry is not created. In this case, the Vendor Source will remain as Manual.
+
+You can identify automatically added vendors in two ways:
+
+- **Source column:** Any vendor added via an integration will show **Integration** as its source, making it easy to distinguish from vendors you've added manually and SSO vendors.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165194548-9rci8qphpih-Screenshot-2026-02-19-at-18-37-32.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+- **Filters:** To view only integration-sourced vendors, click **Filters** at the top of the vendor table and set **Source** as **Integration**.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165195947-gwsrgi750y9-Screenshot-2026-02-19-at-18-39-23.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## What Next?
+
+#### Edit vendor details
+
+You can update vendor URL, assignee, category, inherent risk, residual risk, entities, POC and other fields as needed. You have complete control to edit any field.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165197365-raj772c116s-Screenshot-2026-02-19-at-19-04-11.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### Assess when ready
+
+The vendor starts with "Not Assessed" status, giving you flexibility to conduct your evaluation when it fits your schedule. Learn more about the [vendor risk assessment workflow](/docs/steps-to-complete-vendor-risk-assessment) here.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165198930-6uqgd8r2cyi-Screenshot-2026-02-19-at-19-04-35.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### Cannot delete vendors added via integration
+
+Unlike a vendor added manually, you cannot delete a vendor added via integration. If you attempt to delete one, the delete action will be disabled.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162360063-wn554c9vu48-image-1771508222726.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+However, you can archive integration-sourced vendors. Archiving removes the vendor from your active Vendor table.
+
+**Note:** Scrut will not recreate or reactivate an archived vendor on subsequent integration syncs.

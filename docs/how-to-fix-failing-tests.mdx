@@ -1,0 +1,32 @@
+---
+title: "Fix Failing Tests"
+metaDescription: "Step-by-step guide to fix failing compliance tests in Scrut."
+---
+
+When a cloud test fails, it moves to the “**Fix Required**” status. In this guide, we walk you through the complete workflow of addressing test findings and making your cloud infrastructure compliant.
+
+When a test has the “Fix Required” status, it indicates that one or more resources in your cloud environment don’t meet the requirements defined by a specific test. A failed test represents a compliance, security, or configuration issue that needs to be resolved.
+
+<Callout kind="success">
+  **Note:**
+
+  When all resources within a test become compliant, the test automatically transitions to **OK status**.
+</Callout>
+
+## What to Do When a Test Fails?
+
+We recommend following this workflow to fix failing tests:
+
+1. [**Assign**](/docs/assigning-a-test-finding): Start by assigning the test finding to the appropriate team member or resource owner. This establishes accountability and ensures the finding gets proper attention. Alternatively, you can [assign flagged resources](/docs/assigning-a-resource-in-a-failing-test) to specific team members for more granular responsibility.
+
+2. [**Remediate**](/docs/remediating-a-test-finding): Review the failing resources and take corrective action to bring them into compliance. This may involve configuration changes, policy updates, or infrastructure modifications. Scrut provides in-depth remediation guidance to assist you.
+
+3. [**Validate**](/docs/validating-remediation-with-test-now): Confirm if the remediation was successful. Scrut will re-evaluate the resources against the test criteria.
+
+4. **Monitor**: Continue monitoring the test to ensure resources remain compliant over time. New resources or configuration changes may cause previously passing tests to fail again.
+
+5. **Alternative Actions**: Not all test findings require immediate remediation. You have additional options:
+
+   - [**Ignore a Test Finding**](/docs/ignoring-a-test-finding): If a test is not applicable to your environment or you've accepted the risk, you can ignore it. Tests marked as ignored do not impact your compliance calculations.
+   - [**Ignore Resources within a Test**](/docs/ignoring-a-resource-of-a-test-finding): For resources that don't need to comply with a specific test, you can create exceptions by marking them as ignored. Instead of ignoring the entire test, this gives you the flexibility to mark specific resources as ignored for specific tests.
+   - [**Create a Risk**](/docs/risk-generation-from-cloud-test-findings): Review the potential impact and create an associated risk.

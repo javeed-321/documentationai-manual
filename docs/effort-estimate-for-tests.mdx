@@ -1,0 +1,129 @@
+---
+title: "View the Effort Estimate to Complete Tests"
+metaDescription: "Estimate the effort required to fix a failing test."
+---
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  This feature is currently available only for specific tests for the following frameworks: ISO 27001, SOC 2, GDPR, and HIPAA. To know more, contact your CSM.
+</Callout>
+
+The effort estimate quantifies the amount of effort required to fix a failing test. This helps to:
+
+- **Prioritize and allocate resources** more effectively
+- **Assign appropriate tasks** based on the effort required and team capacities
+- **Balance workload** across team members
+- **Set realistic timelines** for test completion
+- **Report progress** to stakeholders more accurately
+
+By default, **Scrut provides an effort estimate for each automated test**, helping you prioritize tasks and allocate resources effectively. It's important to keep in mind that these **estimates are benchmark figures** based on the average implementation effort required for each test. If you find that the default estimates do not align with your specific needs or circumstances, [you can modify them](/docs/set-policy-effort-estimate#how-to-set-policy-effort-estimates), as required.
+
+## Effort Estimate Levels
+
+Scrut categorizes effort into three levels:
+
+- **Low**: Easy to implement, minimal configuration or steps required
+- **Medium**: Moderate complexity, requires multiple steps or configuration across several resources
+- **High**: Complex implementation, extensive configuration, or affects multiple systems
+
+## How To View Effort Estimates for Tests
+
+<Tabs>
+  <Tab title="Via the Test Table">
+    Click on the **Effort Estimate** column on the Automated Tests tab in the **Tests** module. This allows you to sort tests by effort level.
+
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164769145-cc353xtxipf-Screenshot-2025-11-25-at-23-24-05.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+  </Tab>
+
+  <Tab title="On the Test Details Page">
+    Navigate to a specific test and look for the **Effort Estimate** field on the test details page.
+
+    <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164767788-eninei7ec27-Screenshot-2025-11-25-at-23-22-06.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+  </Tab>
+</Tabs>
+
+## How to Set Test Effort Estimates
+
+- [For a Single Test](/docs/effort-estimate-for-tests#for-a-single-test)
+- [For Multiple Tests](/docs/effort-estimate-for-tests#for-multiple-tests)
+
+### For a Single Test
+
+1. Sign in to Scrut, and click **Tests** on the left navigation panel.
+
+2. Go to the **Automated Tests** tab and select the test you want to set the effort estimate for.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164770495-hk9d8u1huq8-Screenshot-2025-11-25-at-23-28-24.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Use the **Effort Estimate** dropdown and set the desired level.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164771824-8f0wjx4d70g-Screenshot-2025-11-25-at-23-28-48.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### For Multiple Tests
+
+You can also set effort estimates for multiple tests simultaneously:
+
+1. Go to **Tests → Automated Tests** and select the tests you want to set the effort estimate for.
+
+2. Click the **Set Effort Estimate** button at the top of the Automated Tests table.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164773148-8ue3p3w7ida-Screenshot-2025-11-25-at-23-30-02.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Choose the desired level from Low, Medium, or High.
+
+4. Click **Save** to complete the bulk assignments.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164774485-oh7yftm7ydg-Screenshot-2025-11-25-at-23-30-29.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+   <Callout kind="alert">
+     **Heads Up!**
+
+     This action overrides any existing effort estimates for selected tests.
+   </Callout>
+
+### FAQs
+
+<ExpandableGroup>
+  <Expandable title="Is it mandatory to add the effort estimate for all tests?" default-open="false">
+    No, it's optional. However, setting effort estimates helps with better planning and prioritization.
+  </Expandable>
+
+  <Expandable title="Can I edit the effort estimate at any time?" default-open="false">
+    Yes, you can edit the effort estimate at any time by opening the test and updating the field.
+  </Expandable>
+
+  <Expandable title="What if I’m unsure which level to choose?" default-open="false">
+    Start with your best estimate. You can always adjust it later. If you're between two levels, consider starting with the higher effort level to avoid underestimating the work required. Use these guidelines to select the appropriate effort estimate:
+
+    #### Choose Low When:
+
+    - Implementation takes less than 30 minutes
+    - Requires 1-3 simple steps
+    - Affects a single system or setting
+    - Can be completed by one person without coordination
+
+    #### Choose Medium When:
+
+    - Implementation takes several hours
+    - Requires 4-10 steps or configuration changes
+    - Affects multiple resources but within a single system
+    - May require coordination with one other team
+
+    #### Choose High When:
+
+    - Implementation takes more than multiple days
+    - Requires complex multi-step processes
+    - Affects multiple systems or requires migration
+    - Requires coordination across multiple teams or vendors
+    - May cause downtime or require careful planning
+  </Expandable>
+
+  <Expandable title="Do effort estimates affect compliance status?" default-open="false">
+    No, effort estimates are purely for planning and do not impact whether a test is compliant or non-compliant.
+  </Expandable>
+
+  <Expandable title="Can I filter or sort tests by effort level?" default-open="false">
+    Yes. Use the filter and sort icons in the Automated Tests table to narrow to tests with a specific effort level.
+  </Expandable>
+</ExpandableGroup>

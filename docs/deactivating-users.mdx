@@ -1,0 +1,120 @@
+---
+title: "Deactivate & Reactivate Users"
+metaDescription: "Learn how to deactivate a user in Scrut, reassign their task, and reactivate them."
+---
+
+Scrut makes it easy to safely remove users from the platform while preserving audit history and managing their assigned tasks.
+
+## How To Deactivate a User
+
+There may be situations where you might need to remove a user from Scrut temporarily. For example, if an employee goes on extended leave or a contractor's work ends. In these cases, deactivate the user and reassign their pending tasks to other team members. Once they resume work, you can reactivate them.
+
+To deactivate a user:
+
+1. Navigate to **Settings → Manage Users**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166078739-lgetvt8pe9-Settings-Page.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Find the user you want to deactivate, and click the **Deactivate User** icon in the Actions column.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162392063-jz0r18iixa-image-1773121672715.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Click **Deactivate Account** in the confirmation modal.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162393394-967qbvlf37i-image-1773121837368.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162394705-79brsb99l4h-image-1773121868013.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### What Happens on User Deactivation
+
+- The user will not be able to log into Scrut, and if they’re logged in, their session will end immediately.
+
+- They will no longer receive notifications from Scrut, including reminder emails and messages on Slack and Teams.
+
+- The user is marked as “**Inactive**” in the Users table.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162396053-lctuecfcopk-image-1773122188567.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+- Scrut will email all workspace admins to notify them of the user’s deactivation and remind them to reassign tasks to active users.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162397444-yh64x1czoej-image-1773122209778.png?fm=auto&auto=compress%2Cformat" alt="" caption="Scrut email on user deactivation" />
+
+- The audit log records who deactivated the user and when.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162398782-dkz2qzewn1b-image-1773122251386.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="tip">
+  **Pro Tip!**
+
+  Scrut recommends reassigning tasks of deactivated users immediately to avoid workflow disruption and to ensure timely completion of these tasks.
+</Callout>
+
+## Reassigning Tasks
+
+Once you deactivate a user, Scrut allows you to reassign all their existing tasks in a single click. This ensures that all pending tasks are reassigned to another active user for proper completion.
+
+To reassign tasks:
+
+1. Navigate to **Settings → Manage Users**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166078739-lgetvt8pe9-Settings-Page.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Find the deactivated user, and click the **Reassign Tasks** icon in the Actions column.
+
+3. Select the user to whom you want to reassign the tasks.
+
+   **Note:** The new assignee will inherit all the access permissions of the deactivated user in addition to their existing permissions. However, the department of the new assignee will remain unchanged. You can modify these settings by editing the user later, if required.
+
+4. Click **Save**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164044616-i1prad7g7ki-Screenshot-2025-08-16-at-19-01-19.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162400155-eqo4hrpemss-image-1773122323680.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### What Happens on Reassigning Tasks
+
+- The new assignee receives an email notification stating that they’ve been assigned additional tasks.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164046049-syaffvx9rgn-Screenshot-2025-08-16-at-19-06-10.png?fm=auto&auto=compress%2Cformat" alt="" caption="Sample email sent to the new assignee" />
+
+- An audit log entry is created specifying who reassigned the tasks and to whom.
+
+  <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162401699-0f03xsl4jn1p-image-1773122376057.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## How To Reactivate a User
+
+When an employee returns from their leave or a contractor’s engagement is renewed, you can reactivate them by following these steps:
+
+1. Navigate to **Settings → Manage Users**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788166078739-lgetvt8pe9-Settings-Page.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+2. Find the user you want to deactivate, and click the **Reactivate User** icon in the Actions column.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162403040-c37r0l9r1nj-image-1773122426254.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Click **Reactivate User** in the confirmation modal.
+
+   <Callout kind="alert">
+     **Note:**
+
+     - The user’s previous tasks remain with the new owners. It will NOT be reassigned to them.
+     - However, tasks not reassigned will be restored to the reactivated user.
+   </Callout>
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164043234-7my8o8foinw-Screenshot-2025-08-15-at-12-25-23.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+#### What Happens on User Reactivation
+
+- The user’s login access to Scrut is restored, and they will resume receiving emails and notifications on Slack and Teams.
+- User returns to **Active** status in the Users table.
+- Audit log captures the user reactivation action.
+- **Previously reassigned tasks will remain with their new owners.**
+- However, tasks not reassigned will be restored to the reactivated user.
+
+## Key Points to Remember
+
+- Deactivated users cannot use the Scrut platform. However, deactivating a user doesn’t impact their employee status.
+- Employee status changes cascade to user accounts. Offboarding or marking as non-personal will automatically deactivate associated user accounts.
+- Reactivation restores the previous state. Users regain their previous permissions and roles when reactivated. But their previous tasks will remain with the new owners.
+- Employees who are offboarded or marked non-personal cannot be given user accounts later.

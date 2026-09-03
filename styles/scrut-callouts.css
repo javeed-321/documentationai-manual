@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Scrut callout colours.
+
+   Restores the two Document360 callout styles that the migration flattened
+   into one grey `kind="info"`. Values are lifted verbatim from the export's
+   own data attributes, e.g.
+
+     <blockquote class="infoBox" data-background="#ddf7ff" data-border="#006a8a">
+
+   Selector strategy: the platform stamps `data-kind` on every Callout, so the
+   two groups were re-kinded in the MDX to make them addressable —
+   "Pro Tip" -> tip, "Who can use this feature" -> custom. Plain `kind="info"`
+   callouts are deliberately NOT touched and keep the platform's grey.
+
+   `background-color` is set with !important because the component ships a
+   Tailwind `bg-*-muted` class; the 4px inset ring reproduces the source's
+   `border-left: 4px solid`, using a shadow so it sits inside the existing
+   rounded corners instead of fighting the border-radius.
+   ========================================================================== */
+
+/* -- "Pro Tip!" — source infoBox: bg #ddf7ff, border #006a8a -------------- */
+[data-component='Callout'][data-kind='tip'] {
+  background-color: #ddf7ff !important;
+  box-shadow: inset 4px 0 0 0 #006a8a;
+}
+[data-component='Callout'][data-kind='tip'] .dai-callout-icon svg {
+  color: #006a8a !important;
+}
+
+/* -- "Who can use this feature" — source infoBox: bg #F5F4FF, border #695ACC
+      (#695ACC is Scrut brand purple, same value as --scr-purple) ---------- */
+[data-component='Callout'][data-kind='custom'] {
+  background-color: #f5f4ff !important;
+  box-shadow: inset 4px 0 0 0 #695acc;
+}
+[data-component='Callout'][data-kind='custom'] .dai-callout-icon svg {
+  color: #695acc !important;
+}
+
+/* Dark mode: the source palette is light-only, so keep the hues but drop the
+   fills to a tint that reads on a dark ground. The left rule stays exact. */
+:root.dark [data-component='Callout'][data-kind='tip'],
+:root[data-theme='dark'] [data-component='Callout'][data-kind='tip'] {
+  background-color: color-mix(in srgb, #006a8a 18%, transparent) !important;
+}
+:root.dark [data-component='Callout'][data-kind='custom'],
+:root[data-theme='dark'] [data-component='Callout'][data-kind='custom'] {
+  background-color: color-mix(in srgb, #695acc 18%, transparent) !important;
+}

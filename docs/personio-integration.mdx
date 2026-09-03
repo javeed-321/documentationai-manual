@@ -1,0 +1,45 @@
+---
+title: "Integrate Personio"
+---
+
+Personio is a human resources management system (HRMS) that covers a wide range of HR functions. By integrating Personio with scrut platform, we can fetch the employee details in the scrut platform like Employee Name, email, department, reporting manager, joining date and exit date.
+
+## Integrating Personio
+
+1. From the left navigation panel, select Integrations.
+2. Click on **Available**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162735854-jq0i4zso6ld-image-9CXHGH6K.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+3. Scroll to _Human Resource Information Systems_ section and find _Personio_.
+4. Click **Integrate**
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162747777-6kd3gjrvcug-image-A8AEPWUW.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. Click **Connect**.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162944091-h8rppdg1zhn-image-JHWXX0M6.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+6. Fill in the following details : 
+- **Enter your Personio ClientID**: To generate your API credentials, go to Settings > API credentials. To know more, refer to this [link](https://developer.personio.de/docs/getting-started-with-the-personio-api).
+
+- **Personio ClientSecret**: To generate your API credentials, go to Settings > API credentials. To know more, refer to this [link](https://developer.personio.de/docs/getting-started-with-the-personio-api).
+
+- **Personio Application Identifier**  : While generating the credentials, you need to specify the Application Identifier that is passed to Personio in each app.
+
+<Callout kind="info">
+  **Note**
+
+  Values MUST follow the UPPER_JOHN_CASE format. For example MY_APPLICATION, ACME are valid values
+</Callout>
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788163076929-j1mf2nm96a-image-QO1AJ47Y.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+7. Once the credentials are entered, click Submit.
+
+Congrats! Your **Personio** account is successfully integrated with Scrut.
+
+<Callout kind="info">
+  Employee data will start syncing immediately. Incremental data will be synced every 24 hours.
+  Data can also be manually synced by clicking the three dots and choosing the Sync Now option.
+</Callout>

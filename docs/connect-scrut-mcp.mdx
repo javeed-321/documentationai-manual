@@ -1,0 +1,290 @@
+---
+title: "Connect Scrut MCP"
+metaDescription: "Learn how to connect Scrut MCP to your AI client with step-by-step setup instructions."
+---
+
+<Callout kind="custom">
+  **Who can use this feature**
+
+  - Supported on **Foundation, Growth,** and **Scale** plans
+</Callout>
+
+Connect Scrut to Claude, Cursor, Codex, or any MCP-compatible AI tool.
+
+## Prerequisites
+
+- An active Scrut account
+- Scrut MCP works for all Scrut roles: Admin, Contributor, and Auditor. It doesn’t require any additional access beyond what you already have in Scrut.
+- An MCP-compatible AI tool, such as Claude, Claude Code, Cursor, ChatGPT, or Codex.
+
+## Before You Begin
+
+<Callout kind="alert">
+  **Important:**
+
+  Make sure you're logged in to the Scrut platform in your browser before you try to connect. The OAuth flow redirects you to Scrut to sign in and approve the connection, so having an active session helps this go smoothly.
+</Callout>
+
+## Step 1: Find Your Region-Specific Scrut MCP Server URL
+
+Copy and save the Scrut MCP server URL that matches your Scrut tenant's region. For example, if your Scrut tenant is hosted in India, use the India row. You'll need this URL, along with the Client ID from Step 2, in Step 3.
+
+| Region | MCP Server URL |
+| --- | --- |
+| India | `https://mcp.scrut.io/mcp` |
+| US | `https://mcp.us.scrut.io/mcp` |
+| EU | `https://mcp.eu.scrut.io/mcp` |
+| Australia | `https://mcp.au.scrut.io/mcp` |
+
+<Callout kind="danger">
+  **Important:**
+
+  Connecting with the wrong region's URL won't return your compliance data. If you’re unsure of your Scrut region, connect with your CSM or contact support@scrut.io
+</Callout>
+
+## Step 2: Copy the Client ID
+
+Copy and save the Scrut MCP Client ID below. This value is the same across all regions and organizations. You'll need it, along with your region's server URL, in Step 3.
+
+**Scrut Client ID:** **vpubmKiuV6hrcQLBwMLyo4aVWgheoH8U**
+
+## Step 3: Connect Scrut MCP to Your AI Assistant
+
+Once you have your region's MCP URL and Client ID, add them to your AI tool's MCP configuration. The steps below cover Claude, Claude Code, Cursor, ChatGPT, and Codex.
+
+### How to Connect Scrut MCP in ChatGPT
+
+**Note:** You need a ChatGPT Business, Enterprise, or Edu plan to use MCP.
+
+1. Open ChatGPT and click your profile icon. Go to **Settings → Apps & Connectors → Advanced Settings** and turn on **Developer Mode**.
+
+2. Return to **Apps & Connectors** and click **Create Connector** or **Add Custom Connector**.
+
+3. Fill in the required information:
+
+   - **Name:** For example, Scrut MCP.
+   - **MCP Server URL:** Enter the HTTPS URL for your region from the table above.
+   - **Authentication method:** Select OAuth.
+
+4. Click **Connect**. Complete the OAuth authentication when prompted.
+
+5. You'll be redirected to Scrut to review the connection request.
+
+6. Click **Continue**. You'll be redirected back to ChatGPT.
+
+7. The connector should appear as **Connected**.
+
+ChatGPT can now call Scrut MCP tools in your conversations.
+
+### How to Connect Scrut MCP in Claude (Desktop and Claude.ai Web)
+
+For Claude, the setup depends on how your Claude account is managed:
+
+- **Individual users:** You can add and connect the Scrut MCP connector directly from your own Claude settings.
+- **Team or Enterprise users:** An organization admin must add the Scrut MCP connector once under **Admin settings → Connectors**. Each team member then connects the available connector individually from their own Claude settings.
+
+#### For Individual Users
+
+1. Open Claude and click your profile, then go to **Settings → Connectors**.
+
+2. Click **Add → Add custom connector**.
+
+3. Enter the required details:
+
+   - **Name:** Enter a label, for example, Scrut MCP.
+   - **MCP Server URL:** Enter the HTTPS URL for your region from the table above.
+   - **Advanced settings → OAuth Client ID:** Enter your region's Client ID from the table above.
+   - Leave **OAuth Client Secret** **blank**.
+
+4. Click **Add**.
+
+5. Navigate to settings and find the connector you just added.
+
+6. Click **Connect**. After creating the connection, you'll be redirected to Scrut to complete the authentication.
+
+7. Select the confirmation checkbox (**I understand and trust this URL**).
+
+8. Click **Continue**.
+
+9. Go to **Settings → Connectors → Connected** in Claude to confirm the Scrut MCP shows as connected.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165987871-7ksbkyo1ath-Screenshot-2026-08-14-at-11-43-17.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+Claude can now call Scrut MCP tools directly in your conversations.
+
+#### Team or Enterprise Users
+
+If you're using Claude through a **Team or Enterprise plan**, your organization admin must add the Scrut MCP connector before you can connect it.
+
+**For the organization admin:**
+
+1. In Claude, go to **Admin settings → Connectors**.
+2. Follow the [steps above](/docs/connect-scrut-mcp#how-to-connect-scrut-mcp-in-claude-desktop-and-claudeai-web) to add the Scrut MCP connector once for the organization.
+
+**For each team member:**
+
+1. Open Claude and click your **profile**.
+
+2. Go to **Settings → Connectors**.
+
+3. Find the Scrut connector that your admin added.
+
+4. Click **Connect**.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165985046-0zpxnkcjmc2-Screenshot-2026-08-14-at-11-39-48.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+5. You'll be redirected to Scrut to complete the authentication.
+
+6. Select the **I understand and trust this URL** checkbox.
+
+7. Click **Continue**.
+
+8. Return to **Settings → Connectors** and confirm that the Scrut connector shows as connected. Start a new Claude chat.
+
+   <Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788165986412-0osu1949gq8-Screenshot-2026-08-14-at-11-43-17-1.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+<Callout kind="alert">
+  **Heads Up!**
+
+  Each team member must connect the connector individually using their own Scrut account. The admin only needs to add the connector once under **Admin settings → Connectors**.
+</Callout>
+
+### How to Connect Scrut MCP in Claude Code (CLI)
+
+1. Open your terminal.
+2. Run the following, replacing the URL with your region's values from the table above:
+
+```text
+claude mcp add --transport http scrut https://mcp.us.scrut.io/mcp \
+  --client-id vpubmKiuV6hrcQLBwMLyo4aVWgheoH8U \
+  --callback-port 8787
+```
+
+3. A browser window opens for authentication. Sign in to Scrut and approve the connection.
+4. Return to your terminal. Claude Code confirms the connection is active.
+
+Claude Code can now call Scrut MCP tools directly in your sessions.
+
+<Callout kind="alert">
+  ****Note:****
+
+  Claude Code requires port 8787 to be free on your machine for the OAuth callback to complete.
+</Callout>
+
+### How to Connect Scrut MCP in Cursor IDE
+
+1. Open Cursor **Settings**. Navigate to **Tools & MCP**.
+
+2. Click **+ New MCP Server** (or **Add New MCP Server**).
+
+3. Fill in the fields:
+
+   - **Name:** Enter a label, for example, Scrut MCP.
+   - **MCP Server URL:** Enter the HTTPS URL for your region from the table above.
+   - **Client ID:** Enter your region's Client ID from the table above.
+
+4. Click **Save**.
+
+5. After saving, return to Cursor's Settings, then **Tools & MCP**.
+
+6. Find the Scrut MCP server entry you just added.
+
+7. Once authentication is available, click **Connect**.
+
+8. After creating the connection, you'll be redirected to Scrut.
+
+9. Select the confirmation checkbox (**I understand and trust this URL**).
+
+10. Click **Continue**.
+
+You can now use Scrut MCP directly within Cursor while you work.
+
+<Callout kind="alert">
+  **Note:**
+
+  A blank browser tab right after you approve the connection is normal. Check Cursor's MCP panel for the connected state instead.
+</Callout>
+
+### How to Connect Scrut MCP in Codex
+
+Codex requires a fixed OAuth callback port, separate from Claude Code's, so both tools can connect at the same time without conflict.
+
+1. Enable the RMCP client in Codex if it isn't already. Open (or create) `~/.codex/config.toml` and add:
+
+   ```ini
+   [
+   features
+   ]
+   experimental_use_rmcp_client = true
+   ```
+
+   This is required for Codex to connect to remote, OAuth-based MCP servers like Scrut's. Skipping this step will cause the next steps to fail or misconfigure the connection.
+
+   **Heads up!** Some older Codex CLI versions use the key `rmcp_client = true` instead. If the next steps don't work, check which key your installed version expects and update accordingly.
+
+2. In the same `~/.codex/config.toml` file, set a fixed callback port for OAuth (this only needs to be added once, and applies to all MCP servers you connect to in Codex):
+
+   ```ini
+   mcp_oauth_callback_port = 8788
+   ```
+
+   **Note:** Codex uses port 8788 so it doesn't conflict with Claude Code, which uses 8787. If you connect both tools on the same machine, make sure each port is free.
+
+3. Launch your preferred terminal (Terminal, PowerShell, iTerm, etc.).
+
+4. Run the following, replacing the placeholders with your region's MCP URL and Client ID from the tables above. Use the same URL for both `--url` and `--oauth-resource`:
+
+```text
+codex mcp add scrut --url https://mcp.us.scrut.io/mcp \
+  --oauth-client-id vpubmKiuV6hrcQLBwMLyo4aVWgheoH8U \
+  --oauth-resource https://mcp.us.scrut.io/mcp
+```
+
+**Note:** Only use `--oauth-resource` if Codex doesn't already include a `resource` parameter in the Auth0 URL it generates. If you see the error `resource parameter must be a string` during login, remove the server and re-add it without `--oauth-resource`, then run login again:
+
+```text
+codex mcp remove scrut
+codex mcp add scrut --url https://mcp.us.scrut.io/mcp \
+  --oauth-client-id vpubmKiuV6hrcQLBwMLyo4aVWgheoH8U
+codex mcp login scrut
+```
+
+5. Complete authentication:
+
+```text
+codex mcp login scrut
+```
+
+6. A browser opens for authentication. After you sign in and grant permissions for Scrut, return to the terminal.
+7. Verify the connection:
+
+```text
+codex mcp get scrut
+```
+
+8. Launch Codex normally:
+
+```text
+codex
+```
+
+Codex can now call Scrut MCP tools in your sessions.
+
+## How Sign-in and Access Work
+
+Scrut MCP uses OAuth through Auth0. When you sign in, the connection is tied to your own Scrut user account. Your AI assistant acts in your existing Scrut role, so it can only reach what you can already reach on the Scrut platform. You don't need to configure any additional permissions for MCP access.
+
+## Verify the Connection
+
+Open your AI tool and ask something specific to your compliance program, for example: _Which SOC 2 controls don't have evidence mapped yet?_
+
+If the connection is working, your AI assistant returns an answer sourced from Scrut. If it doesn't:
+
+- Confirm you used the MCP server URL and Client ID for your own region.
+- Confirm you completed the sign-in and approval steps with Scrut.
+- Confirm your Scrut account is active. Check with your admin if you're not sure.
+- Disconnect and reconnect the connector in your AI tool, then start a new chat and try again.
+
+**Important:** Scrut MCP only ever accesses what your Scrut account already has permission to see. It doesn't grant broader access through your AI tool.
+
+Reach out to support@scrut.io or contact your CSM for further assistance.

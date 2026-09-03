@@ -1,0 +1,50 @@
+---
+title: "Recommended Checklist Workflow"
+metaDescription: "Refer to this sample workflow for using checklists in Scrut."
+---
+
+For organizations new to compliance, we recommend this simple workflow for using checklists:
+
+### Step 1: Assign Core Tasks
+
+Add these fundamental [tasks to the default Scrut checklist](/docs/customizing-checklist-tasks#how-to-customize-the-default-scrut-checklist):
+
+- **Policy Acknowledgments**: Assign all company policies (auditors typically require personnel to acknowledge all policies).
+- **Security Training**: Assign all available training modules (Scrut automatically includes training for your compliance frameworks).
+- **Device Compliance**: Require Scrut Agent installation or MDM enrollment.
+- **Background Verification**: Set the effective date to the current date (this applies to future hires only; retroactive checks are typically not required).
+
+### Step 2: Use the Default Group
+
+Initially, keep all personnel in the default group for full coverage. Assign the default checklist to this group and select the “**Notify employees immediately about new task assignments**” checkbox to receive timely reminders about new tasks.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788164693488-l8r5lyxxkt-Screenshot-2025-11-18-at-11-06-21.png?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+### Step 3: Enable Notifications
+
+Turn on personnel notifications to ensure your team stays informed about their compliance requirements.
+
+- [Configuring Slack and Microsoft Teams Notifications](/docs/configuring-slack-reminders)
+- [Configuring Email Notifications](/docs/email-notifications)
+
+Additionally, you can also:
+
+- [Send manual or bulk task reminders to employees to complete their pending tasks](/docs/sending-training-reminders)
+- [Send manual or bulk campaign reminders](/docs/send-manual-reminders-for-training-campaigns)
+
+### Step 4: Monitor Employee Compliance
+
+When employees begin working on the tasks you've assigned in a checklist, the results will automatically sync to Scrut. Navigate to **People → Employees → All Employees**, and select a specific employee to view their details. Once you’re on their profile, you can check the following sections:
+
+- Tasks: This tab shows the status of task completion.
+- Training: This tab shows the training results for each employee.
+- Technicals: This section provides details about the security status of the employee's device, as captured by the Mobile Device Management (MDM) system.
+
+<Image src="https://blob-cdn.documentation.ai/org-be800fa3-4146-42bb-a54c-66f35fe883a5/doc-4eeb4bca-def5-4b53-9be4-c510946b0c05/1788162019742-mnf1mwrktb9-Employee-Details.gif?fm=auto&auto=compress%2Cformat" alt="" caption=" " />
+
+## Best Practices
+
+- Start simple with the default group and core tasks.
+- Use HRIS or IdP integrations to quickly import all your employees into Scrut.
+- Leverage Scrut's built-in training content for comprehensive coverage.
+- Monitor task completion rates and follow up with non-compliant employees as needed.

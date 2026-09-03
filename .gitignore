@@ -1,8 +1,8 @@
-# Audit output — site scan results, not documentation content
-local-path-audit/
-
-# Local image staging — these are already uploaded to blob-cdn
-downloaded-images/
-
-# Original Document360 export (1.5 GB source material)
 Scrut-Help-Center-2026-Aug-28-02-47-25/
+
+# Migration scratch artifacts (sitemap dumps, sidebar maps)
+*.md
+*.txt
+ 
+# Keep ignore rules local to this clone
+.gitignore

@@ -1,0 +1,24 @@
+---
+title: "Understand the Trigger Cadence for Slack Alerts"
+metaDescription: "Understand the different types of Slack notifications that Scrut sends."
+---
+
+## Understanding Slack Alerts in Scrut
+
+Scrut’s Slack alerts will help notify the right stakeholders in real-time about important activities across different modules.
+
+The notifications included in this cadence will cover key areas such as Trust Center access requests, security report readiness, important mentions in comments, changes in test or monitor statuses, integration sync failures, and vendor questionnaire submissions.
+
+Each alert is designed to ensure that the right individuals are promptly informed and can take necessary actions without delay, thereby improving our overall responsiveness and operational efficiency.
+
+This will encourage everyone to stay attentive to these alerts and act upon them as required to maintain smooth workflows.
+
+| Module | Notification | Notification Name | Description | Recipient | Frequency |
+| --- | --- | --- | --- | --- | --- |
+| Trust Vault | Trust Vault Access Request Notification | Trust vault access request | Triggered when someone requests access to the Trust Vault | Admin, Primary Assignee | Real Time |
+| Reports | Security Reports Notification | The security report is ready | Notification sent when a requested security report has been generated and is available | Requester | As Requested |
+| Across Platform | Comment Mentions Notification | Comment mentions | Triggered when a user is mentioned in a comment across any module | Mentioned User | As Requested |
+| Tests | Test Status Change Notification | Test changes status from OK to Needs Attention | A notification is sent when a test status changes from “OK” to “Needs Attention.” | Primary Assignee, Other Assignees | Real Time |
+| Evidence Tasks | Scrut Monitor Notification | Scrut monitor changes status from Healthy to Unhealthy | Notification sent when a Scrut monitor transitions from a healthy to an unhealthy state | Primary Assignee, Other Assignees | Real Time |
+| Integrations | Integration Auto Sync Failure Notification | Integration failures during daily sync | Triggered when the integration sync fails during the daily scheduled jobs | Admin | Daily |
+| Vendor Assessment | Submitted Vendor Questionnaire Notification | The vendor questionnaire is submitted by the vendor | Sent when a vendor completes and submits their security questionnaire | Primary Reviewer | Real Time |
